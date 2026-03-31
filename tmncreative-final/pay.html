@@ -6,126 +6,142 @@
   <title>Pay Invoice | TMN Creative</title>
   <meta name="description" content="Look up and pay your TMN Creative invoice." />
   <meta name="robots" content="noindex, nofollow" />
-  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="theme-color" content="#ffffff" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet" />
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
     :root{
-      --dk:#111111;--dk3:#0A0A0A;
-      --ac:#A68B5B;--ac2:#BFA06C;
-      --ti:#F8F7F4;--ti2:rgba(248,247,244,0.5);--ti3:rgba(248,247,244,0.25);
-      --ln2:rgba(248,247,244,0.07);--ln3:rgba(248,247,244,0.12);
-      --sf2:'Instrument Serif',Georgia,serif;--sn:'DM Sans',system-ui,sans-serif;
+      --bg:#fff;--bg2:#F7F8FA;--bg3:#F0F2F5;
+      --dk:#0F172A;--dk2:#1E293B;--dk3:#0B1120;
+      --ac:#C6A24A;--ac2:#D4B04E;--ac3:rgba(198,162,74,0.08);
+      --tx:#1E293B;--tx2:#64748B;--tx3:#94A3B8;
+      --ln:#E2E8F0;
+      --fn:'Plus Jakarta Sans',system-ui,sans-serif;
+      --fs:'Fraunces',Georgia,serif;
       --e:cubic-bezier(0.16,1,0.3,1);
-      --green:#6BCB77;--green2:rgba(107,203,119,0.1);
+      --green:#22C55E;--green2:rgba(34,197,94,0.08);
     }
     html{scroll-behavior:smooth}
-    body{font-family:var(--sn);background:var(--dk3);color:var(--ti);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.018;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") repeat;background-size:256px}
+    body{font-family:var(--fn);color:var(--tx);background:var(--bg2);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
+    body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.012;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") repeat;background-size:256px}
+    ::selection{background:rgba(198,162,74,0.15);color:var(--dk)}
+    a,button{cursor:pointer;-webkit-tap-highlight-color:transparent}
+    :focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+    :focus:not(:focus-visible){outline:none}
 
-    nav{padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--ln2)}
-    .nl{text-decoration:none;display:flex;align-items:center;height:36px;transition:opacity 0.3s}
+    /* NAV */
+    nav{background:rgba(255,255,255,0.92);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid rgba(226,232,240,0.7);padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 2px rgba(15,23,42,0.04)}
+    .nl{text-decoration:none;display:flex;align-items:center;height:40px;transition:opacity 0.3s}
     .nl:hover{opacity:0.7}
-    .nav-logo{height:28px;width:auto;mix-blend-mode:lighten}
-    .nav-back{font-size:0.68rem;font-weight:400;letter-spacing:0.1em;color:var(--ti2);text-decoration:none;display:flex;align-items:center;gap:0.5rem;transition:color 0.3s}
-    .nav-back:hover{color:var(--ti)}
-    .nav-back svg{width:14px;height:14px;stroke:currentColor;stroke-width:1.5;fill:none}
-    @media(max-width:600px){nav{padding:1rem 1.25rem}}
+    .nav-logo{height:30px;width:auto}
+    .nav-back{font-size:0.78rem;font-weight:500;color:var(--tx2);text-decoration:none;display:flex;align-items:center;gap:0.4rem;border:1px solid var(--ln);border-radius:8px;padding:0.5rem 1rem;transition:all 0.2s var(--e)}
+    .nav-back:hover{color:var(--dk);border-color:var(--tx3);background:var(--bg2)}
+    .nav-back svg{width:13px;height:13px;stroke:currentColor;stroke-width:2;fill:none}
+    @media(max-width:600px){nav{padding:0.9rem 1.25rem}.nav-logo{height:26px}.nav-back span{display:none}}
 
-    main{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:4rem 1.5rem}
-    .wrap{width:100%;max-width:560px}
+    /* MAIN */
+    main{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:4rem 1.5rem 5rem}
+    .wrap{width:100%;max-width:520px}
 
-    .ph{text-align:center;margin-bottom:2.5rem;animation:fu 0.9s var(--e) 0.1s both}
-    .eyebrow{font-size:0.58rem;font-weight:500;letter-spacing:0.4em;text-transform:uppercase;color:var(--ac);margin-bottom:1.25rem;display:flex;align-items:center;justify-content:center;gap:0.75rem}
-    .eyebrow::before,.eyebrow::after{content:'';width:20px;height:1px;background:var(--ac)}
-    .ph h1{font-family:var(--sf2);font-weight:400;font-size:2.2rem;color:var(--ti);line-height:1.1;margin-bottom:0.6rem}
-    .ph p{font-size:0.88rem;font-weight:300;color:var(--ti2);line-height:1.7}
+    /* HEADER */
+    .ph{text-align:center;margin-bottom:1.75rem}
+    .badge{display:inline-flex;font-size:0.58rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--ac);padding:0.35rem 0.85rem;background:var(--ac3);border-radius:100px;margin-bottom:1rem}
+    .ph h1{font-family:var(--fn);font-size:2rem;font-weight:800;letter-spacing:-0.04em;line-height:1.1;color:var(--dk);margin-bottom:0.5rem}
+    .ph p{font-size:0.9rem;color:var(--tx2);line-height:1.7}
 
-    .card{background:rgba(248,247,244,0.03);border:1px solid var(--ln2);padding:2.25rem;animation:fu 0.9s var(--e) 0.2s both}
-    .field{margin-bottom:0}
-    .field label{display:block;font-size:0.58rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--ti2);margin-bottom:0.45rem}
-    .input-row{display:flex;gap:0.75rem}
-    .field input{flex:1;padding:0.9rem 1rem;font-family:var(--sn);font-size:0.9rem;color:var(--ti);background:rgba(248,247,244,0.05);border:1px solid var(--ln2);outline:none;transition:all 0.3s var(--e);min-width:0}
-    .field input::placeholder{color:rgba(248,247,244,0.2)}
-    .field input:focus{border-color:var(--ac);background:rgba(248,247,244,0.08);box-shadow:0 0 0 3px rgba(166,139,91,0.12)}
-    .sbtn{flex-shrink:0;font-family:var(--sn);font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--dk);background:var(--ac);border:none;padding:0.9rem 1.5rem;cursor:pointer;transition:all 0.35s var(--e);position:relative;overflow:hidden;white-space:nowrap}
-    .sbtn::before{content:'';position:absolute;inset:0;background:var(--ac2);transform:translateY(101%);transition:transform 0.4s var(--e)}
-    .sbtn span{position:relative;z-index:1}
-    .sbtn:hover::before{transform:translateY(0)}
-    .sbtn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(166,139,91,0.2)}
-    .sbtn:disabled{opacity:0.5;cursor:not-allowed;transform:none;box-shadow:none}
-    .sbtn:disabled::before{display:none}
+    /* SEARCH CARD */
+    .card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:1.75rem;box-shadow:0 1px 4px rgba(15,23,42,0.05)}
+    .field label{display:block;font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tx2);margin-bottom:0.5rem}
+    .input-row{display:flex;gap:0.6rem}
+    .field input{flex:1;padding:0.8rem 1rem;font-family:var(--fn);font-size:0.9rem;color:var(--dk);background:var(--bg2);border:1px solid var(--ln);border-radius:10px;outline:none;transition:all 0.2s var(--e);min-width:0}
+    .field input::placeholder{color:var(--tx3)}
+    .field input:focus{border-color:var(--ac);background:var(--bg);box-shadow:0 0 0 3px var(--ac3)}
+    .sbtn{flex-shrink:0;font-family:var(--fn);font-size:0.78rem;font-weight:700;color:#fff;background:var(--dk);border:none;border-radius:10px;padding:0.8rem 1.35rem;cursor:pointer;transition:all 0.25s var(--e);white-space:nowrap;box-shadow:0 2px 6px rgba(15,23,42,0.1)}
+    .sbtn:hover{background:var(--dk2);transform:translateY(-1px);box-shadow:0 6px 18px rgba(15,23,42,0.18)}
+    .sbtn:active{transform:none}
+    .sbtn:disabled{opacity:0.4;cursor:not-allowed;transform:none;box-shadow:none}
 
     /* STATES */
-    .state{display:none;margin-top:1.75rem;animation:fu 0.5s var(--e) both}
+    .state{display:none;margin-top:1rem}
     .state.show{display:block}
 
     /* LOADING */
-    .loading-state{display:flex;align-items:center;gap:0.75rem;padding:1.5rem;justify-content:center}
-    .spinner{width:16px;height:16px;border:1.5px solid var(--ln2);border-top-color:var(--ac);border-radius:50%;animation:spin 0.7s linear infinite}
-    .loading-state span{font-size:0.82rem;font-weight:300;color:var(--ti2)}
+    .loading-wrap{display:flex;align-items:center;gap:0.65rem;justify-content:center;padding:1.75rem;background:var(--bg);border:1px solid var(--ln);border-radius:16px;animation:fu 0.35s var(--e)}
+    .spinner{width:16px;height:16px;border:2px solid var(--ln);border-top-color:var(--ac);border-radius:50%;animation:spin 0.65s linear infinite;flex-shrink:0}
+    .loading-wrap span{font-size:0.85rem;font-weight:500;color:var(--tx2)}
 
-    /* INVOICE LIST */
-    .inv-header{font-size:0.6rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--ac);margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid var(--ln2)}
-    .inv-item{border:1px solid var(--ln2);padding:1.5rem;margin-bottom:0.75rem;transition:border-color 0.3s}
+    /* RESULT HEADER */
+    .results-header{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--tx3);margin-bottom:0.65rem;padding:0 0.25rem;animation:fu 0.35s var(--e)}
+
+    /* INVOICE CARDS */
+    .inv-item{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:1.5rem;margin-bottom:0.65rem;transition:box-shadow 0.3s,border-color 0.3s;animation:fu 0.4s var(--e)}
     .inv-item:last-child{margin-bottom:0}
-    .inv-item.is-open{border-color:rgba(166,139,91,0.2)}
-    .inv-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;gap:1rem}
-    .inv-meta{}
-    .inv-number{font-size:0.7rem;font-weight:500;letter-spacing:0.06em;color:var(--ti2);margin-bottom:0.2rem}
-    .inv-desc{font-size:0.92rem;font-weight:400;color:var(--ti);line-height:1.35}
-    .inv-amount{font-family:var(--sf2);font-size:1.4rem;color:var(--ac);white-space:nowrap}
-    .inv-bottom{display:flex;justify-content:space-between;align-items:center;gap:1rem}
-    .inv-due{font-size:0.72rem;font-weight:300;color:var(--ti3)}
-    .badge{display:inline-flex;align-items:center;gap:0.35rem;font-size:0.55rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:0.25rem 0.55rem}
-    .badge-open{background:var(--green2);color:var(--green)}
-    .badge-paid{background:rgba(248,247,244,0.05);color:rgba(248,247,244,0.3)}
-    .badge-dot{width:4px;height:4px;border-radius:50%;background:currentColor}
-    .badge-open .badge-dot{box-shadow:0 0 5px currentColor;animation:pulse 2s ease-in-out infinite}
-    .pay-link{display:inline-block;font-size:0.65rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--dk);background:var(--ac);padding:0.55rem 1.25rem;text-decoration:none;transition:all 0.3s var(--e);position:relative;overflow:hidden;white-space:nowrap}
-    .pay-link::before{content:'';position:absolute;inset:0;background:var(--ac2);transform:translateY(101%);transition:transform 0.4s var(--e)}
-    .pay-link span{position:relative;z-index:1}
-    .pay-link:hover::before{transform:translateY(0)}
-    .pay-link:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(166,139,91,0.2)}
-    .paid-note{font-size:0.72rem;font-weight:300;color:rgba(248,247,244,0.25)}
+    .inv-item.is-open{border-color:rgba(198,162,74,0.4);box-shadow:0 4px 16px rgba(198,162,74,0.06)}
 
-    /* NOT FOUND / ERROR */
-    .msg-card{border:1px solid var(--ln2);padding:2rem;text-align:center}
-    .msg-icon{font-size:1.5rem;margin-bottom:0.75rem}
-    .msg-card h3{font-family:var(--sf2);font-size:1.2rem;font-weight:400;color:var(--ti);margin-bottom:0.4rem}
-    .msg-card p{font-size:0.82rem;font-weight:300;color:var(--ti2);line-height:1.7;margin-bottom:0.75rem}
-    .msg-card a{color:var(--ac);text-decoration:none;font-weight:500;font-size:0.82rem}
+    .inv-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1rem}
+    .inv-number{font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--tx3);margin-bottom:0.25rem}
+    .inv-desc{font-size:0.95rem;font-weight:600;color:var(--dk);line-height:1.3;letter-spacing:-0.01em}
+    .inv-amount{font-family:var(--fs);font-size:1.5rem;font-weight:700;color:var(--ac);white-space:nowrap;letter-spacing:-0.02em;line-height:1}
 
-    footer{padding:1.5rem 3rem;border-top:1px solid var(--ln2);display:flex;justify-content:space-between;align-items:center}
-    .fl{font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(248,247,244,0.15)}
-    .fr{font-size:0.62rem;color:rgba(248,247,244,0.15)}.fr a{color:var(--ac);text-decoration:none;opacity:0.6;transition:opacity 0.3s}.fr a:hover{opacity:1}
+    .inv-bottom{display:flex;justify-content:space-between;align-items:center;gap:0.75rem;padding-top:1rem;border-top:1px solid var(--ln)}
+    .inv-due{font-size:0.75rem;font-weight:500;color:var(--tx3)}
+    .inv-right{display:flex;align-items:center;gap:0.6rem}
+
+    .status-badge{display:inline-flex;align-items:center;gap:0.3rem;font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.28rem 0.65rem;border-radius:100px}
+    .status-open{background:var(--green2);color:var(--green)}
+    .status-paid{background:var(--bg3);color:var(--tx3)}
+    .status-dot{width:5px;height:5px;border-radius:50%;background:currentColor;flex-shrink:0}
+    .status-open .status-dot{box-shadow:0 0 6px currentColor;animation:pulse 2s ease-in-out infinite}
+
+    .pay-link{display:inline-flex;align-items:center;gap:0.3rem;font-size:0.75rem;font-weight:700;color:#fff;background:var(--dk);padding:0.5rem 1.1rem;border-radius:8px;text-decoration:none;transition:all 0.25s var(--e);box-shadow:0 2px 6px rgba(15,23,42,0.1)}
+    .pay-link:hover{background:var(--dk2);transform:translateY(-1px);box-shadow:0 6px 18px rgba(15,23,42,0.18)}
+    .paid-note{font-size:0.72rem;font-weight:500;color:var(--tx3)}
+
+    /* MSG CARDS */
+    .msg-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:2.5rem;text-align:center;animation:fu 0.35s var(--e)}
+    .msg-icon{font-size:1.75rem;margin-bottom:0.75rem}
+    .msg-card h3{font-size:1.05rem;font-weight:700;color:var(--dk);letter-spacing:-0.02em;margin-bottom:0.4rem}
+    .msg-card p{font-size:0.85rem;color:var(--tx2);line-height:1.7;margin-bottom:1rem}
+    .msg-card a{color:var(--ac);text-decoration:none;font-weight:600;font-size:0.85rem}
+    .msg-card a:hover{opacity:0.75}
+
+    /* FOOTER */
+    footer{background:var(--dk3);padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center}
+    .fl{font-size:0.62rem;font-weight:500;letter-spacing:0.06em;color:rgba(255,255,255,0.25)}
+    .fl a{color:var(--ac);text-decoration:none;opacity:0.65;transition:opacity 0.2s}.fl a:hover{opacity:1}
+    .fr{font-size:0.62rem;color:rgba(255,255,255,0.2)}.fr a{color:var(--ac);text-decoration:none;opacity:0.6;transition:opacity 0.2s}.fr a:hover{opacity:1}
 
     @media(max-width:600px){
       footer{flex-direction:column;gap:0.5rem;text-align:center;padding:1.25rem}
-      main{padding:2.5rem 1.25rem;align-items:flex-start}
-      .card{padding:1.5rem}
+      main{padding:2.5rem 1.25rem 4rem}
+      .card{padding:1.25rem}
       .input-row{flex-direction:column}
-      .sbtn{width:100%;padding:1rem}
-      .inv-top{flex-direction:column;gap:0.5rem}
-      .inv-amount{font-size:1.2rem}
-      .inv-bottom{flex-direction:column;align-items:flex-start;gap:0.75rem}
+      .sbtn{width:100%;padding:0.9rem;border-radius:10px}
+      .inv-top{flex-direction:column;gap:0.3rem}
+      .inv-amount{font-size:1.3rem}
+      .inv-bottom{flex-direction:column;align-items:flex-start;gap:0.65rem}
+      .inv-right{width:100%;justify-content:space-between}
+      .ph h1{font-size:1.75rem}
     }
 
-    @keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
     @keyframes spin{to{transform:rotate(360deg)}}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.35}}
+    @keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
   </style>
 </head>
 <body>
+
   <nav>
-    <a href="/" class="nl"><img src="images/logo-light.png" alt="TMN Creative" class="nav-logo" /></a>
+    <a href="/" class="nl">
+      <img src="images/logo-dark.png" alt="TMN Creative" class="nav-logo" />
+    </a>
     <a href="/" class="nav-back">
       <svg viewBox="0 0 16 16"><polyline points="10,3 5,8 10,13"/></svg>
-      Back to site
+      <span>Back to site</span>
     </a>
   </nav>
 
@@ -133,9 +149,9 @@
     <div class="wrap">
 
       <div class="ph">
-        <div class="eyebrow">Client Portal</div>
+        <div class="badge">Client Portal</div>
         <h1>Pay Your Invoice</h1>
-        <p>Enter the email address on your account to see your open invoices.</p>
+        <p>Enter the email address on your account to pull up your invoices.</p>
       </div>
 
       <div class="card">
@@ -143,41 +159,37 @@
           <label for="email-input">Email Address</label>
           <div class="input-row">
             <input type="email" id="email-input" placeholder="you@yourcompany.com" autocomplete="email" />
-            <button class="sbtn" id="lookup-btn" onclick="lookupInvoices()"><span>Look Up</span></button>
+            <button class="sbtn" id="lookup-btn" onclick="lookupInvoices()">Look Up</button>
           </div>
         </div>
       </div>
 
-      <!-- LOADING -->
       <div class="state" id="state-loading">
-        <div class="loading-state">
+        <div class="loading-wrap">
           <div class="spinner"></div>
           <span>Looking up your invoices...</span>
         </div>
       </div>
 
-      <!-- RESULTS -->
       <div class="state" id="state-results">
-        <div class="inv-header" id="results-header"></div>
+        <div class="results-header" id="results-header"></div>
         <div id="inv-list"></div>
       </div>
 
-      <!-- NOT FOUND -->
       <div class="state" id="state-notfound">
         <div class="msg-card">
-          <div class="msg-icon">&#9744;</div>
+          <div class="msg-icon">&#128274;</div>
           <h3>No invoices found</h3>
-          <p>We could not find any invoices for that email. Make sure you're using the email address on your account, or reach out directly.</p>
+          <p>We could not find any invoices for that email. Make sure you are using the address your invoice was sent to, or reach out directly.</p>
           <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a>
         </div>
       </div>
 
-      <!-- ERROR -->
       <div class="state" id="state-error">
         <div class="msg-card">
-          <div class="msg-icon">&#9888;</div>
+          <div class="msg-icon">&#9888;&#65039;</div>
           <h3>Something went wrong</h3>
-          <p id="error-text">Could not retrieve invoices. Please try again or contact us.</p>
+          <p id="error-text">Could not retrieve invoices. Please try again or contact us directly.</p>
           <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a>
         </div>
       </div>
@@ -186,102 +198,57 @@
   </main>
 
   <footer>
-    <div class="fl">TMN Creative &nbsp;&middot;&nbsp; Secure Payment Portal</div>
-    <div class="fr">&copy; 2026 True Margin North LLC &middot; <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></div>
+    <div class="fl">TMN Creative &nbsp;&middot;&nbsp; <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></div>
+    <div class="fr">&copy; 2026 True Margin North LLC &middot; <a href="https://truemarginnorth.com" target="_blank" rel="noopener">truemarginnorth.com</a></div>
   </footer>
 
   <script>
-    function hideAll(){
-      document.querySelectorAll('.state').forEach(function(el){ el.classList.remove('show') });
-    }
-    function show(id){ document.getElementById(id).classList.add('show') }
+    function hideAll(){document.querySelectorAll('.state').forEach(function(el){el.classList.remove('show')})}
+    function show(id){var el=document.getElementById(id);if(el)el.classList.add('show')}
 
     function lookupInvoices(){
-      var email = document.getElementById('email-input').value.trim();
-      if(!email || !email.includes('@')){
-        document.getElementById('email-input').focus();
-        return;
-      }
+      var email=document.getElementById('email-input').value.trim();
+      if(!email||!email.includes('@')){document.getElementById('email-input').focus();return}
+      hideAll();show('state-loading');
+      document.getElementById('lookup-btn').disabled=true;
 
-      hideAll();
-      show('state-loading');
-      document.getElementById('lookup-btn').disabled = true;
-
-      fetch('/.netlify/functions/lookup-invoice?email=' + encodeURIComponent(email))
-        .then(function(r){ return r.json(); })
+      fetch('/.netlify/functions/lookup-invoice?email='+encodeURIComponent(email))
+        .then(function(r){return r.json()})
         .then(function(data){
-          hideAll();
-          document.getElementById('lookup-btn').disabled = false;
-
-          if(data.error){
-            document.getElementById('error-text').textContent = data.error;
-            show('state-error');
-            return;
-          }
-
-          if(!data.found || !data.invoices || data.invoices.length === 0){
-            show('state-notfound');
-            return;
-          }
-
-          renderInvoices(data.invoices);
-          show('state-results');
+          hideAll();document.getElementById('lookup-btn').disabled=false;
+          if(data.error){document.getElementById('error-text').textContent=data.error;show('state-error');return}
+          if(!data.found||!data.invoices||data.invoices.length===0){show('state-notfound');return}
+          renderInvoices(data.invoices);show('state-results');
         })
-        .catch(function(){
-          hideAll();
-          document.getElementById('lookup-btn').disabled = false;
-          show('state-error');
-        });
+        .catch(function(){hideAll();document.getElementById('lookup-btn').disabled=false;show('state-error')});
     }
 
     function renderInvoices(invoices){
-      var open = invoices.filter(function(i){ return i.status === 'open' }).length;
-      var header = invoices.length + ' invoice' + (invoices.length !== 1 ? 's' : '') + ' found';
-      if(open > 0) header += ' &nbsp;&middot;&nbsp; ' + open + ' open';
-      document.getElementById('results-header').innerHTML = header;
+      var open=invoices.filter(function(i){return i.status==='open'}).length;
+      var label=invoices.length+' invoice'+(invoices.length!==1?'s':'')+' found';
+      if(open>0)label+=' &nbsp;&middot;&nbsp; '+open+' open';
+      document.getElementById('results-header').innerHTML=label;
 
-      var html = '';
+      var html='';
       invoices.forEach(function(inv){
-        var isPaid = inv.status === 'paid';
-        html += '<div class="inv-item' + (isPaid ? '' : ' is-open') + '">';
-        html += '<div class="inv-top">';
-        html += '<div class="inv-meta"><div class="inv-number">' + e(inv.number) + '</div><div class="inv-desc">' + e(inv.description) + '</div></div>';
-        html += '<div class="inv-amount">' + e(inv.amount) + '</div>';
-        html += '</div>';
-        html += '<div class="inv-bottom">';
-
-        var dueText = '';
-        if(inv.due) dueText = 'Due ' + fmtDate(inv.due);
-        else if(inv.created) dueText = 'Issued ' + fmtDate(inv.created);
-        html += '<span class="inv-due">' + dueText + '</span>';
-
-        html += '<div style="display:flex;align-items:center;gap:0.75rem">';
-        html += '<span class="badge badge-' + e(inv.status) + '"><span class="badge-dot"></span>' + (isPaid ? 'Paid' : 'Open') + '</span>';
-
-        if(!isPaid && inv.url){
-          html += '<a href="' + e(inv.url) + '" target="_blank" rel="noopener" class="pay-link"><span>Pay Now &rarr;</span></a>';
-        } else if(isPaid){
-          html += '<span class="paid-note">No balance due</span>';
-        }
-        html += '</div>';
-
-        html += '</div></div>';
+        var isPaid=inv.status==='paid';
+        var dueText=inv.due?'Due '+fmtDate(inv.due):(inv.created?'Issued '+fmtDate(inv.created):'');
+        html+='<div class="inv-item'+(isPaid?'':' is-open')+'">';
+        html+='<div class="inv-top"><div><div class="inv-number">'+e(inv.number)+'</div><div class="inv-desc">'+e(inv.description)+'</div></div>';
+        html+='<div class="inv-amount">'+e(inv.amount)+'</div></div>';
+        html+='<div class="inv-bottom"><span class="inv-due">'+dueText+'</span><div class="inv-right">';
+        html+='<span class="status-badge status-'+(isPaid?'paid':'open')+'"><span class="status-dot"></span>'+(isPaid?'Paid':'Open')+'</span>';
+        if(!isPaid&&inv.url)html+='<a href="'+e(inv.url)+'" target="_blank" rel="noopener" class="pay-link">Pay Now &rarr;</a>';
+        else if(isPaid)html+='<span class="paid-note">No balance due</span>';
+        html+='</div></div></div>';
       });
-
-      document.getElementById('inv-list').innerHTML = html;
+      document.getElementById('inv-list').innerHTML=html;
     }
 
-    function fmtDate(s){
-      if(!s) return '';
-      try{ return new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) }
-      catch(err){ return s }
-    }
+    function fmtDate(s){if(!s)return'';try{return new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}catch(err){return s}}
+    function e(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 
-    function e(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;') }
-
-    document.addEventListener('keydown', function(ev){
-      if(ev.key === 'Enter' && document.activeElement.id === 'email-input') lookupInvoices();
-    });
+    document.addEventListener('keydown',function(ev){if(ev.key==='Enter'&&document.activeElement.id==='email-input')lookupInvoices()});
   </script>
 </body>
 </html>
