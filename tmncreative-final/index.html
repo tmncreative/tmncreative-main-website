@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TMN Creative | Premium Websites for Operators &amp; Service Businesses</title>
+  <meta name="description" content="TMN Creative builds premium, high-trust websites for operators and service businesses. Fast turnaround. No agency bloat. Sites that convert." />
+  <meta property="og:title" content="TMN Creative | Your business outgrew your website." />
+  <meta property="og:description" content="Premium websites for businesses that have outgrown their current look. First draft in 72 hours. No agency bloat." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tmncreative.com" />
+  <meta property="og:image" content="https://tmncreative.com/images/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tmncreative.com/images/og.jpg" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#F8F7F4;--bg2:#F0EEEA;--sf:#FFFFFF;--dk:#111111;--dk2:#1A1A1A;--dk3:#0A0A0A;
+      --ac:#A68B5B;--ac2:#BFA06C;--ac3:rgba(166,139,91,0.08);
+      --tx:#2C2C2C;--tx2:#6B6B64;--tx3:#9A9A92;
+      --ti:#F8F7F4;--ti2:rgba(248,247,244,0.5);--ti3:rgba(248,247,244,0.25);
+      --ln:#E2E0DB;--ln2:rgba(248,247,244,0.07);
+      --sf2:'Instrument Serif',Georgia,serif;--sn:'DM Sans',system-ui,sans-serif;
+      --e:cubic-bezier(0.16,1,0.3,1);--es:cubic-bezier(0.4,0,0.2,1);
+    }
+    html{scroll-behavior:smooth}
+    html.lenis,html.lenis body{height:auto}
+    .lenis.lenis-smooth{scroll-behavior:auto}
+    body{font-family:var(--sn);color:var(--tx);background:var(--dk3);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    ::selection{background:var(--ac3);color:var(--dk)}
+    /* Grain */
+    body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.018;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") repeat;background-size:256px}
+
+    /* Interactive elements */
+    a,button,.flq{cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.75rem 4rem;display:flex;justify-content:space-between;align-items:center;transition:all 0.6s var(--e)}
+    nav.s{padding:1rem 4rem;background:rgba(248,247,244,0.9);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);border-bottom:1px solid rgba(226,224,219,0.5)}
+    .nl{text-decoration:none;transition:opacity 0.5s;display:flex;align-items:center;position:relative;height:40px}
+    .nl:hover{opacity:0.7}
+    .nav-logo-img{height:36px;width:auto;position:absolute;top:50%;transform:translateY(-50%);transition:opacity 0.5s}
+    .logo-for-dark{opacity:1;mix-blend-mode:lighten}
+    .logo-for-light{opacity:0;mix-blend-mode:multiply}
+    nav.s .logo-for-dark{opacity:0}
+    nav.s .logo-for-light{opacity:1}
+    .nr{display:flex;align-items:center;gap:3rem}
+    .nk{font-size:0.76rem;font-weight:400;letter-spacing:0.04em;color:rgba(248,247,244,0.45);text-decoration:none;transition:color 0.3s;position:relative}
+    .nk::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--ac);transition:width 0.3s var(--e)}
+    .nk:hover{color:var(--ti)}.nk:hover::after{width:100%}
+    nav.s .nk{color:var(--tx3)}nav.s .nk:hover{color:var(--dk)}nav.s .nk::after{background:var(--dk)}
+    .nb{font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;padding:0.7rem 1.5rem;transition:all 0.3s var(--e);background:transparent;color:var(--ti);border:1px solid rgba(248,247,244,0.2)}
+    .nb:hover{background:var(--ac);color:var(--dk);border-color:var(--ac)}
+    nav.s .nb{background:var(--dk);color:var(--ti);border-color:var(--dk)}nav.s .nb:hover{background:var(--ac);color:var(--dk);border-color:var(--ac)}
+    @media(max-width:768px){
+      nav{padding:1rem 1.25rem;padding-top:calc(1rem + env(safe-area-inset-top, 0px))}
+      nav.s{padding:0.75rem 1.25rem;padding-top:calc(0.75rem + env(safe-area-inset-top, 0px))}
+      .nk{display:none}
+      .nr{gap:0}
+      .nl{font-size:0.72rem;letter-spacing:0.18em}
+      .nav-logo-img{height:30px}
+      .nb{font-size:0.65rem;padding:0.6rem 1.2rem;min-height:44px;display:flex;align-items:center}
+    }
+
+    /* HERO */
+    .hero{background:var(--dk3);min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:0 2rem;text-align:center;position:relative;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;overflow:hidden}
+    .hero-orb{position:absolute;border-radius:50%;filter:blur(120px);opacity:0;animation:orbIn 2s var(--e) forwards}
+    .hero-orb-1{width:600px;height:600px;top:20%;left:50%;transform:translate(-50%,-50%);background:rgba(166,139,91,0.07);animation-delay:0.3s}
+    .hero-orb-2{width:400px;height:400px;top:60%;left:30%;background:rgba(166,139,91,0.04);animation-delay:0.5s}
+    .hero-orb-3{width:300px;height:300px;top:40%;right:20%;background:rgba(200,180,140,0.03);animation-delay:0.7s}
+    /* Grid lines */
+    .hero-lines{position:absolute;inset:0;opacity:0.03}
+    .hero-lines::before,.hero-lines::after{content:'';position:absolute;background:var(--ti)}
+    .hero-lines::before{left:25%;top:0;bottom:0;width:1px}
+    .hero-lines::after{left:75%;top:0;bottom:0;width:1px}
+    .hero-line-h{position:absolute;left:0;right:0;height:1px;background:var(--ti);opacity:0.03}
+
+    .hc{position:relative;max-width:850px;z-index:2}
+    .he{font-size:0.62rem;font-weight:500;letter-spacing:0.4em;text-transform:uppercase;color:var(--ac);margin-bottom:3rem;opacity:0;animation:fu 1.2s var(--e) 0.3s forwards}
+    .hero h1{font-family:var(--sf2);font-weight:400;font-size:clamp(3.2rem,7vw,5.5rem);line-height:1.05;letter-spacing:-0.025em;color:var(--ti);margin-bottom:2rem}
+    .hero h1 .hw{display:inline-block;opacity:0;transform:translateY(40px);animation:wordUp 0.8s var(--e) forwards}
+    .hero h1 i{font-style:italic;color:var(--ac)}
+    .hs{font-size:1.15rem;font-weight:300;line-height:1.8;color:var(--ti2);max-width:500px;margin:0 auto 3.5rem;opacity:0;animation:fu 1.2s var(--e) 1.4s forwards}
+    .hb{display:flex;gap:1.25rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fu 1.2s var(--e) 1.6s forwards}
+    .hp{font-size:0.78rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--dk);background:var(--ac);padding:1.1rem 2.75rem;text-decoration:none;transition:all 0.4s var(--e);position:relative;overflow:hidden}
+    .hp::before{content:'';position:absolute;inset:0;background:var(--ac2);transform:translateY(101%);transition:transform 0.4s var(--e)}
+    .hp:hover::before{transform:translateY(0)}
+    .hp span{position:relative;z-index:1}
+    .hp:hover{transform:translateY(-2px);box-shadow:0 16px 50px rgba(166,139,91,0.25)}
+    .hg{font-size:0.78rem;font-weight:400;letter-spacing:0.06em;color:rgba(248,247,244,0.5);padding:1.1rem 2rem;text-decoration:none;border:1px solid rgba(248,247,244,0.12);transition:all 0.3s var(--e)}
+    .hg:hover{border-color:rgba(248,247,244,0.4);color:var(--ti)}
+    .av{display:inline-flex;align-items:center;gap:0.6rem;margin-top:3.5rem;font-size:0.7rem;font-weight:400;letter-spacing:0.08em;color:rgba(248,247,244,0.3);opacity:0;animation:fu 1.2s var(--e) 1.8s forwards}
+    .avd{width:6px;height:6px;border-radius:50%;background:#6BCB77;box-shadow:0 0 10px rgba(107,203,119,0.5);animation:pulse 2.5s ease-in-out infinite}
+    .hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.6rem;opacity:0;animation:fu 1s var(--e) 2s forwards}
+    .hero-scroll span{font-size:0.58rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:rgba(248,247,244,0.2)}
+    .scroll-bar{width:1px;height:50px;background:rgba(248,247,244,0.06);position:relative;overflow:hidden}
+    .scroll-bar::after{content:'';position:absolute;top:-100%;left:0;width:100%;height:100%;background:var(--ac);animation:scrollDown 2.5s ease-in-out infinite}
+    @media(max-width:768px){
+      .hero{padding:0 1.5rem}.hero-scroll{display:none}
+      .hero h1{font-size:2.6rem;line-height:1.1;margin-bottom:1.5rem}
+      .hero h1 .hw{display:inline;opacity:1;transform:none;animation:none}
+      .hero h1{opacity:0;animation:fu 1s var(--e) 0.5s forwards}
+      .he{margin-bottom:2rem;font-size:0.58rem}
+      .hs{font-size:1rem;margin-bottom:2.5rem;max-width:100%}
+      .hb{gap:0.75rem;flex-direction:column;align-items:center;width:100%;max-width:320px;margin:0 auto}
+      .hp,.hg{width:100%;text-align:center;padding:1rem 1.5rem}
+      .av{margin-top:2.5rem;font-size:0.65rem}
+    }
+
+    /* TRANSITION STRIP */
+    .trans{height:1px;background:linear-gradient(90deg,transparent,var(--ac),transparent);opacity:0.2}
+
+    /* PROOF BAR */
+    .pb{background:var(--dk);padding:3rem 4rem;position:relative;overflow:hidden}
+    .pb::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(166,139,91,0.03) 0%,transparent 60%)}
+    .pbi{max-width:950px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:4rem;flex-wrap:wrap;position:relative}
+    .pi{text-align:center}
+    .pn{font-family:var(--sf2);font-size:2rem;font-weight:400;color:var(--ti);line-height:1}
+    .pn .count{display:inline}
+    .pl{font-size:0.6rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,244,0.2);margin-top:0.4rem}
+    .ps{width:1px;height:32px;background:rgba(248,247,244,0.06)}
+    @media(max-width:600px){
+      .ps{display:none}
+      .pbi{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 0;justify-items:center}
+      .pb{padding:2.5rem 1.5rem}
+      .pn{font-size:1.6rem}
+    }
+
+    /* CONTENT WRAP */
+    .content-wrap{background:var(--bg);position:relative}
+
+    /* UTILS */
+    .pad{padding:9rem 4rem}.pads{padding:6.5rem 4rem}.alt{background:var(--bg2)}.dks{background:var(--dk)}
+    .w{max-width:1120px;margin:0 auto}
+    .lb{font-size:0.58rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:var(--ac);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem}
+    .lb::before{content:'';width:24px;height:1px;background:var(--ac)}
+    .hd{font-family:var(--sf2);font-weight:400;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1.1;letter-spacing:-0.015em;margin-bottom:1.25rem}
+    .st{font-size:1.05rem;font-weight:300;color:var(--tx2);line-height:1.75;max-width:480px}
+    .sh{margin-bottom:5rem}
+    @media(max-width:768px){
+      .pad{padding:4.5rem 1.25rem}
+      .pads{padding:3.5rem 1.25rem}
+      .hd{font-size:1.8rem}
+      .sh{margin-bottom:3rem}
+      .lb{font-size:0.55rem;gap:0.75rem}
+      .lb::before{width:16px}
+      .st{font-size:0.95rem}
+    }
+
+    /* PAIN */
+    .plyt{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
+    .pls{display:flex;flex-direction:column}
+    .pli{padding:2rem 0;border-bottom:1px solid var(--ln);position:relative;overflow:hidden}
+    .pli:first-child{border-top:1px solid var(--ln)}
+    .pli::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--ac);transform:scaleY(0);transform-origin:top;transition:transform 0.5s var(--e)}
+    .pli:hover::before{transform:scaleY(1)}
+    .pli:hover{padding-left:1.25rem}
+    .pli{transition:padding-left 0.4s var(--e)}
+    .pln{font-family:var(--sf2);font-size:1rem;color:var(--ac);margin-bottom:0.5rem}
+    .pli h3{font-family:var(--sn);font-size:1rem;font-weight:500;color:var(--dk);margin-bottom:0.5rem;line-height:1.35}
+    .pli p{font-size:0.88rem;font-weight:300;color:var(--tx2);line-height:1.7}
+    @media(max-width:900px){.plyt{grid-template-columns:1fr;gap:3.5rem}}
+
+    /* PORTFOLIO SHOWCASE */
+    .bai{text-align:center;max-width:600px;margin:0 auto 5rem}
+    .port-grid{display:flex;flex-direction:column;gap:2.5rem}
+    .port-card{background:var(--sf);border:1px solid var(--ln);overflow:hidden;display:grid;grid-template-columns:1.2fr 1fr;transition:all 0.5s var(--e)}
+    .port-card:hover{transform:translateY(-5px);box-shadow:0 30px 80px rgba(20,20,20,0.07);border-color:transparent}
+    .port-card:nth-child(even){grid-template-columns:1fr 1.2fr}
+    .port-card:nth-child(even) .port-img{order:2}
+    .port-card:nth-child(even) .port-body{order:1}
+    .port-img{position:relative;overflow:hidden}
+    .port-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform 0.7s var(--e)}
+    .port-card:hover .port-img img{transform:scale(1.04)}
+    .port-img-overlay{position:absolute;inset:0;background:rgba(17,17,17,0.45);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.4s var(--e)}
+    .port-card:hover .port-img-overlay{opacity:1}
+    .port-img-overlay span{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ti);border:1px solid rgba(248,247,244,0.4);padding:0.7rem 1.5rem;transition:all 0.3s var(--e)}
+    .port-card:hover .port-img-overlay span{background:var(--ac);color:var(--dk);border-color:var(--ac)}
+    .port-body{padding:3rem;display:flex;flex-direction:column;justify-content:center}
+    .port-type{font-size:0.58rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--tx3);margin-bottom:0.6rem}
+    .port-body h3{font-family:var(--sf2);font-size:1.65rem;font-weight:400;color:var(--dk);margin-bottom:0.75rem;line-height:1.2}
+    .port-body p{font-size:0.9rem;font-weight:300;color:var(--tx2);line-height:1.7;margin-bottom:1.25rem}
+    .port-link{font-size:0.72rem;font-weight:500;letter-spacing:0.06em;color:var(--dk);text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;transition:gap 0.3s var(--e),color 0.3s}
+    .port-link:hover{gap:0.75rem;color:var(--ac)}
+    @media(max-width:900px){
+      .port-card,.port-card:nth-child(even){grid-template-columns:1fr}
+      .port-card:nth-child(even) .port-img{order:0}
+      .port-card:nth-child(even) .port-body{order:0}
+      .port-img{aspect-ratio:16/9}
+      .port-body{padding:1.75rem}
+      .port-body h3{font-size:1.35rem;margin-bottom:0.5rem}
+      .port-body p{font-size:0.85rem;margin-bottom:1rem;line-height:1.65}
+      .port-grid{gap:2rem}
+      .port-img-overlay{opacity:1;background:linear-gradient(0deg,rgba(17,17,17,0.6) 0%,transparent 50%);align-items:flex-end;padding:1rem}
+      .port-img-overlay span{font-size:0.6rem;padding:0.5rem 1rem;background:rgba(17,17,17,0.6);backdrop-filter:blur(8px);border:1px solid rgba(248,247,244,0.2)}
+      .port-card:hover{transform:none;box-shadow:none}
+      .port-card:active{transform:scale(0.985);transition-duration:0.1s}
+    }
+
+
+    /* WHO FOR */
+    .fg{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--ln)}
+    .fc{padding:3rem;border-right:1px solid var(--ln);transition:all 0.4s var(--e);position:relative}
+    .fc:last-child{border-right:none}
+    .fc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--ac);transform:scaleX(0);transition:transform 0.5s var(--e)}
+    .fc:hover::after{transform:scaleX(1)}
+    .fc:hover{background:var(--sf)}
+    .fi{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:1.25rem}
+    .fc h3{font-family:var(--sn);font-size:0.95rem;font-weight:500;color:var(--dk);margin-bottom:0.6rem;line-height:1.35}
+    .fc p{font-size:0.85rem;font-weight:300;color:var(--tx2);line-height:1.65}
+    @media(max-width:768px){
+      .fg{grid-template-columns:1fr;border:none;gap:0.75rem}
+      .fc{border-right:none;border:1px solid var(--ln);padding:2rem}
+      .fc:last-child{border-bottom:1px solid var(--ln)}
+      .fc::after{display:none}
+      .fc h3{font-size:0.9rem}
+    }
+
+    /* SERVICES */
+    .sg{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+    .sv{border:1px solid var(--ln2);padding:3rem;position:relative;transition:all 0.4s var(--e)}
+    .sv:hover{border-color:rgba(248,247,244,0.15);transform:translateY(-3px)}
+    .sv.pop{border-color:var(--ac);background:rgba(166,139,91,0.03)}
+    .svt{position:absolute;top:-0.6rem;right:2.5rem;background:var(--ac);color:var(--dk);font-size:0.55rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;padding:0.3rem 0.8rem}
+    .sv h3{font-family:var(--sf2);font-size:1.75rem;font-weight:400;color:var(--ti);margin-bottom:0.3rem}
+    .svp{font-size:1.1rem;font-weight:500;color:var(--ac);margin-bottom:1.75rem}
+    .svl{list-style:none;margin-bottom:2.25rem}
+    .svl li{font-size:0.88rem;font-weight:300;color:var(--ti2);padding:0.45rem 0 0.45rem 1.25rem;position:relative;line-height:1.5}
+    .svl li::before{content:'';position:absolute;left:0;top:0.82rem;width:6px;height:1px;background:var(--ac)}
+    .svc{display:inline-block;font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:0.9rem 2.25rem;text-decoration:none;transition:all 0.3s var(--e);position:relative;overflow:hidden}
+    .svga{background:var(--ac);color:var(--dk)}
+    .svga::before{content:'';position:absolute;inset:0;background:var(--ac2);transform:translateY(101%);transition:transform 0.4s var(--e)}
+    .svga:hover::before{transform:translateY(0)}.svga span{position:relative;z-index:1}
+    .svga:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(166,139,91,0.2)}
+    .svna{border:1px solid rgba(248,247,244,0.12);color:rgba(248,247,244,0.6)}
+    .svna:hover{border-color:var(--ac);color:var(--ac);transform:translateY(-2px)}
+    @media(max-width:768px){
+      .sg{grid-template-columns:1fr;gap:1.5rem}
+      .sv{padding:2rem}
+      .sv h3{font-size:1.4rem}
+      .svl li{font-size:0.85rem}
+      .sv.pop{order:-1}
+    }
+
+    /* PROCESS */
+    .prr{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--ln)}
+    .prc{padding:2.75rem 2.25rem;border-right:1px solid var(--ln);transition:all 0.4s var(--e);position:relative;overflow:hidden}
+    .prc:last-child{border-right:none}
+    .prc::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--ac);transform:scaleX(0);transform-origin:left;transition:transform 0.5s var(--e)}
+    .prc:hover::after{transform:scaleX(1)}
+    .prc:hover{background:var(--sf)}
+    .prn{font-family:var(--sf2);font-size:3rem;font-weight:400;color:var(--ac);line-height:1;margin-bottom:1rem;opacity:0.5;transition:opacity 0.3s}
+    .prc:hover .prn{opacity:1}
+    .prc h3{font-size:0.95rem;font-weight:500;color:var(--dk);margin-bottom:0.6rem}
+    .prc p{font-size:0.85rem;font-weight:300;color:var(--tx2);line-height:1.65}
+    @media(max-width:900px){.prr{grid-template-columns:1fr 1fr}.prc{border-bottom:1px solid var(--ln)}.prc:nth-child(2){border-right:none}.prc:nth-last-child(-n+2){border-bottom:none}}
+    @media(max-width:500px){.prr{grid-template-columns:1fr}.prc{border-right:none;border-bottom:1px solid var(--ln)}.prc:last-child{border-bottom:none}}
+
+    /* FAQ */
+    .fql{display:grid;grid-template-columns:1fr 1.4fr;gap:6rem;align-items:start}
+    .fls{display:flex;flex-direction:column}
+    .fli{border-bottom:1px solid var(--ln);padding:1.65rem 0;transition:padding-left 0.3s var(--e)}
+    .fli:first-child{border-top:1px solid var(--ln)}
+    .fli.o{padding-left:0.5rem}
+    .flq{display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:1.5rem;-webkit-user-select:none;user-select:none}
+    .flq h4{font-size:0.95rem;font-weight:500;color:var(--dk);line-height:1.4;transition:color 0.3s}
+    .fli.o .flq h4{color:var(--ac)}
+    .flt{width:28px;height:28px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:transform 0.4s var(--e);border:1px solid var(--ln);border-radius:50%}
+    .flt svg{width:10px;height:10px;stroke:var(--tx3);stroke-width:1.5}
+    .fla{max-height:0;overflow:hidden;transition:max-height 0.5s var(--es)}
+    .fla p{font-size:0.88rem;font-weight:300;color:var(--tx2);line-height:1.75;padding-top:1rem}
+    .fli.o .flt{transform:rotate(45deg);border-color:var(--ac)}.fli.o .flt svg{stroke:var(--ac)}
+    .fli.o .fla{max-height:300px}
+    @media(max-width:900px){.fql{grid-template-columns:1fr;gap:3.5rem}}
+
+    /* CONTACT */
+    .cl{display:grid;grid-template-columns:1fr 1.1fr;gap:6rem;align-items:start}
+    .ct .hd{color:var(--dk)}.ct>p{font-size:1.05rem;font-weight:300;color:var(--tx2);line-height:1.75;margin-bottom:2.75rem}
+    .tp{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:1rem}
+    .tc{width:20px;height:20px;flex-shrink:0;border:1px solid var(--ln);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
+    .tc svg{width:9px;height:9px;stroke:var(--ac);stroke-width:2;fill:none}
+    .tp span{font-size:0.88rem;font-weight:300;color:var(--tx2)}
+    .fw{background:var(--sf);border:1px solid var(--ln);padding:3rem}
+    .fr{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .ff{margin-bottom:1.15rem}.ff.full{grid-column:1/-1}
+    .ff label{display:block;font-size:0.62rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--tx2);margin-bottom:0.45rem}
+    .ff input,.ff select,.ff textarea{width:100%;padding:0.85rem 1rem;font-family:var(--sn);font-size:0.9rem;color:var(--dk);background:var(--bg);border:1px solid var(--ln);outline:none;transition:all 0.3s var(--e)}
+    .ff input::placeholder,.ff textarea::placeholder{color:var(--tx3)}
+    .ff input:focus,.ff select:focus,.ff textarea:focus{border-color:var(--ac);background:var(--sf);box-shadow:0 0 0 3px var(--ac3)}
+    .ff select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23A68B5B' stroke-width='1.2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
+    .ff select option{background:var(--sf)}.ff textarea{min-height:90px;resize:vertical}
+    .hidden{display:none}
+    .fs{width:100%;font-family:var(--sn);font-size:0.78rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sf);background:var(--dk);border:none;padding:1.1rem;cursor:pointer;transition:all 0.4s var(--e);margin-top:0.5rem;position:relative;overflow:hidden}
+    .fs::before{content:'';position:absolute;inset:0;background:var(--ac);transform:translateY(101%);transition:transform 0.4s var(--e)}
+    .fs:hover::before{transform:translateY(0)}
+    .fs span{position:relative;z-index:1}
+    .fs:hover{transform:translateY(-1px);color:var(--dk)}
+    @media(max-width:900px){
+      .cl{grid-template-columns:1fr;gap:3rem}
+      .fr{grid-template-columns:1fr}
+      .fw{padding:2rem}
+      .ff input,.ff select,.ff textarea{font-size:16px;padding:0.9rem 1rem}
+      .ct>p{font-size:0.95rem;margin-bottom:2rem}
+    }
+
+    /* FINAL CTA */
+    .fcta{background:var(--dk3);padding:7rem 4rem;text-align:center;position:relative;overflow:hidden}
+    .fcta::before{content:'';position:absolute;width:500px;height:500px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(166,139,91,0.06) 0%,transparent 70%);pointer-events:none}
+    .fcta h2{font-family:var(--sf2);font-weight:400;font-size:clamp(1.8rem,3.2vw,2.6rem);color:var(--ti);margin-bottom:1.5rem;line-height:1.2;position:relative}
+    .fcta p{font-size:0.95rem;font-weight:300;color:var(--ti2);margin-bottom:2.5rem;position:relative}
+    .fctab{display:inline-block;font-size:0.78rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--dk);background:var(--ac);padding:1.1rem 3.5rem;text-decoration:none;transition:all 0.4s var(--e);position:relative;overflow:hidden}
+    .fctab::before{content:'';position:absolute;inset:0;background:var(--ac2);transform:translateY(101%);transition:transform 0.4s var(--e)}
+    .fctab span{position:relative;z-index:1}
+    .fctab:hover::before{transform:translateY(0)}
+    .fctab:hover{transform:translateY(-3px);box-shadow:0 16px 50px rgba(166,139,91,0.25)}
+
+    /* FOOTER */
+    footer{background:var(--dk3);padding:2.5rem 4rem;border-top:1px solid rgba(248,247,244,0.04);display:flex;justify-content:space-between;align-items:center}
+    .fl{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,244,0.2)}
+    .frt{font-size:0.72rem;color:rgba(248,247,244,0.2)}.frt a{color:var(--ac);text-decoration:none;opacity:0.6;transition:opacity 0.3s}.frt a:hover{opacity:1}
+    @media(max-width:600px){footer{flex-direction:column;gap:0.75rem;text-align:center;padding:2rem 1.5rem}}
+
+    /* MOBILE STICKY */
+    .stk{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;padding:0.75rem 1rem;padding-bottom:calc(0.75rem + env(safe-area-inset-bottom, 0px));background:var(--dk3);transform:translateY(100%);transition:transform 0.4s var(--e)}
+    .stk.show{transform:translateY(0)}
+    .stk a{display:block;text-align:center;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--dk);background:var(--ac);padding:0.9rem;text-decoration:none;border-radius:2px}
+    @media(max-width:768px){
+      .stk{display:block}
+      .fcta{padding:4.5rem 1.25rem;padding-bottom:calc(5rem + env(safe-area-inset-bottom, 0px))}
+      .fcta h2{font-size:1.6rem}
+      .fcta h2 br{display:none}
+      .fcta p{font-size:0.88rem}
+      footer{padding:2rem 1.25rem;padding-bottom:calc(5rem + env(safe-area-inset-bottom, 0px))}
+    }
+
+    /* ANIMATIONS */
+    @keyframes fu{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes wordUp{to{opacity:1;transform:translateY(0)}}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.35}}
+    @keyframes scrollDown{0%{top:-100%}40%{top:100%}100%{top:100%}}
+    @keyframes orbIn{to{opacity:1}}
+    .r{opacity:0;transform:translateY(28px);transition:opacity 1s var(--e),transform 1s var(--e)}
+    .r.v{opacity:1;transform:translateY(0)}
+    .rd1{transition-delay:0.1s}.rd2{transition-delay:0.2s}.rd3{transition-delay:0.3s}
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#" class="nl"><img src="images/logo-light.png" alt="TMN Creative" class="nav-logo-img logo-for-dark" /><img src="images/logo-dark.png" alt="TMN Creative" class="nav-logo-img logo-for-light" /></a>
+    <div class="nr">
+      <a href="#proof" class="nk">Work</a>
+      <a href="#services" class="nk">Services</a>
+      <a href="#faq" class="nk">FAQ</a>
+      <a href="#contact" class="nb">Start a Project</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" id="heroBg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+      <div class="hero-lines">
+        <div class="hero-line-h" style="top:33%"></div>
+        <div class="hero-line-h" style="top:66%"></div>
+      </div>
+    </div>
+    <div class="hc">
+      <div class="he">A True Margin North Company</div>
+      <h1>
+        <span class="hw" style="animation-delay:0.5s">Your</span>
+        <span class="hw" style="animation-delay:0.58s">business</span>
+        <span class="hw" style="animation-delay:0.66s">deserves</span>
+        <span class="hw" style="animation-delay:0.74s">a</span>
+        <span class="hw" style="animation-delay:0.82s">website</span><br/>
+        <span class="hw" style="animation-delay:0.9s">that</span>
+        <span class="hw" style="animation-delay:0.98s"><i>closes.</i></span>
+      </h1>
+      <p class="hs">We build premium, high-trust websites for operators and service businesses. Fast turnaround. No agency bloat. Sites that make people take you seriously before you pick up the phone.</p>
+      <div class="hb">
+        <a href="#contact" class="hp"><span>Start Your Project</span></a>
+        <a href="#proof" class="hg">See the Work</a>
+      </div>
+      <div class="av">
+        <span class="avd"></span>
+        Currently accepting 2 new projects for April
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-bar"></div>
+    </div>
+  </section>
+
+  <div class="trans"></div>
+
+  <!-- PROOF BAR -->
+  <div class="pb">
+    <div class="pbi">
+      <div class="pi"><div class="pn"><span class="count" data-target="15">0</span></div><div class="pl">Sites Launched</div></div>
+      <div class="ps"></div>
+      <div class="pi"><div class="pn"><span class="count" data-target="3">0</span> Days</div><div class="pl">Avg. Delivery</div></div>
+      <div class="ps"></div>
+      <div class="pi"><div class="pn">$<span class="count" data-target="0">0</span></div><div class="pl">Agency Retainers</div></div>
+      <div class="ps"></div>
+      <div class="pi"><div class="pn"><span class="count" data-target="100">0</span>%</div><div class="pl">On-Time Delivery</div></div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content-wrap">
+
+  <!-- PAIN -->
+  <section class="pad">
+    <div class="w">
+      <div class="plyt">
+        <div class="r">
+          <div class="lb">The Problem</div>
+          <h2 class="hd">Your website is the most expensive thing you are not fixing.</h2>
+          <p class="st" style="margin-top:1.25rem">Every day your site looks dated, you lose prospects you never knew existed. They searched you, judged you, and moved on in 3 seconds.</p>
+        </div>
+        <div class="pls">
+          <div class="pli r rd1"><div class="pln">01</div><h3>Clients research you before they call. Your site is losing that race.</h3><p>If your site feels outdated, unclear, or unprofessional, prospects leave before you ever get a chance to sell them. You never even know it happened.</p></div>
+          <div class="pli r rd2"><div class="pln">02</div><h3>Competitors with half your skill look twice as credible online.</h3><p>You are losing business to operators who invested in their web presence while you were busy actually running the business. That gap is costing real money.</p></div>
+          <div class="pli r rd3"><div class="pln">03</div><h3>Every agency you talked to quoted $15K and 3 months.</h3><p>So you delayed. Again. Meanwhile, every month that passes is another month of lost credibility and missed leads you cannot measure.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="pad alt" id="proof">
+    <div class="w">
+      <div class="bai r"><div class="lb" style="justify-content:center">Our Work</div><h2 class="hd">Built by us. Live right now.</h2><p class="st" style="margin:0 auto">Click any project to see it for yourself.</p></div>
+
+      <div class="port-grid">
+
+        <a href="https://www.diamondhirrigation.com" target="_blank" rel="noopener" class="port-card r">
+          <div class="port-img">
+            <img src="images/dh.jpg" alt="Diamond H Irrigation website" width="900" height="562" loading="lazy" />
+            <div class="port-img-overlay"><span>View Live Site &rarr;</span></div>
+          </div>
+          <div class="port-body">
+            <div class="port-type">Home Services</div>
+            <h3>Diamond H Irrigation</h3>
+            <p>Fort Worth irrigation company went from a generic Wix template to the most professional site in their market. 15+ pages, local SEO, FAQ schema, review integration, service area targeting, and conversion-optimized CTAs throughout.</p>
+            <div class="port-link">diamondhirrigation.com &rarr;</div>
+          </div>
+        </a>
+
+        <a href="https://truemarginnorth.com" target="_blank" rel="noopener" class="port-card r">
+          <div class="port-img">
+            <img src="images/tmn.jpg" alt="True Margin North website" width="900" height="562" loading="lazy" />
+            <div class="port-img-overlay"><span>View Live Site &rarr;</span></div>
+          </div>
+          <div class="port-body">
+            <div class="port-type">Pricing Consultancy</div>
+            <h3>True Margin North</h3>
+            <p>Multi-page site for a pricing strategy consultancy targeting PE-backed service businesses. Interactive calculator tools, 7 industry-specific landing pages, animated explainer walkthroughs, and a content hub built for executive-level credibility.</p>
+            <div class="port-link">truemarginnorth.com &rarr;</div>
+          </div>
+        </a>
+
+        <a href="https://noteserv.netlify.app" target="_blank" rel="noopener" class="port-card r">
+          <div class="port-img">
+            <img src="images/ns.jpg" alt="NoteServ website" width="900" height="562" loading="lazy" />
+            <div class="port-img-overlay"><span>View Live Site &rarr;</span></div>
+          </div>
+          <div class="port-body">
+            <div class="port-type">Financial Services</div>
+            <h3>NoteServ</h3>
+            <p>Full brand and site build for a private loan servicing platform. Clean light-mode design, branded intake flows, clear 3-tier pricing architecture, borrower/lender portal integration, and trust-forward positioning for a niche financial vertical.</p>
+            <div class="port-link">noteserv.netlify.app &rarr;</div>
+          </div>
+        </a>
+
+        <a href="https://marchlifeusa.netlify.app" target="_blank" rel="noopener" class="port-card r">
+          <div class="port-img">
+            <img src="images/ml.jpg" alt="MarchLife USA website" width="900" height="562" loading="lazy" />
+            <div class="port-img-overlay"><span>View Live Site &rarr;</span></div>
+          </div>
+          <div class="port-body">
+            <div class="port-type">Healthcare Development</div>
+            <h3>MarchLife USA</h3>
+            <p>Digital presence for a $3.5B master-planned medical campus in Riverside County, CA. Transformed an outdated WordPress site into a cinematic editorial experience with campus photography, stat-driven layout, and institutional-grade design across 236 acres and 3 hospital towers.</p>
+            <div class="port-link">marchlifeusa.netlify.app &rarr;</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO FOR -->
+  <section class="pad">
+    <div class="w">
+      <div class="sh r"><div class="lb">Who This Is For</div><h2 class="hd">We work with a specific type of business.</h2><p class="st">If any of these sound like you, we should talk.</p></div>
+      <div class="fg r">
+        <div class="fc"><div class="fi" style="background:#E8F0E9">&#127793;</div><h3>Service businesses with strong operations and a weak web presence.</h3><p>Irrigation, HVAC, plumbing, dental, med spa, pest control, fitness. You do great work. Your site does not reflect it.</p></div>
+        <div class="fc"><div class="fi" style="background:#E8ECF0">&#128188;</div><h3>Operators and consultants who sell on credibility.</h3><p>Advisory firms, consultants, niche lenders, brokers. Your website is your first handshake. It needs to command respect.</p></div>
+        <div class="fc"><div class="fi" style="background:#F0ECE8">&#128200;</div><h3>Businesses that have never invested in their site.</h3><p>You are generating real revenue with a website built 5 years ago or thrown together in a weekend. Time to match your online presence to your actual business.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="pad dks" id="services">
+    <div class="w">
+      <div class="sh r"><div class="lb">Services</div><h2 class="hd" style="color:var(--ti)">Two ways to start.</h2><p class="st" style="color:var(--ti2)">Both designed to be fast, focused, and high-impact. No retainers. No drawn-out timelines.</p></div>
+      <div class="sg r">
+        <div class="sv"><h3>Premium Site Audit</h3><div class="svp">$500</div><ul class="svl"><li>Full homepage and conversion teardown</li><li>Trust and credibility analysis</li><li>3 priority fixes with business rationale</li><li>Personalized Loom video walkthrough</li><li>Delivered in 48 hours</li></ul><a href="#contact" class="svc svna">Book an Audit</a></div>
+        <div class="sv pop"><div class="svt">Most Popular</div><h3>Full Site Rebuild</h3><div class="svp">Starting at $2,500</div><ul class="svl"><li>Complete homepage or multi-page redesign</li><li>Messaging and positioning cleanup</li><li>Mobile-first, fast-loading build</li><li>CTA and conversion flow optimization</li><li>SEO foundations built in</li><li>First draft in 72 hours</li></ul><a href="#contact" class="svc svga"><span>Start a Rebuild</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="pad" id="process">
+    <div class="w">
+      <div class="sh r"><div class="lb">How It Works</div><h2 class="hd">Four steps. One week. Done.</h2></div>
+      <div class="prr r">
+        <div class="prc"><div class="prn">01</div><h3>Submit</h3><p>Fill out the form with your current site and what you need. We review and respond within 24 hours.</p></div>
+        <div class="prc"><div class="prn">02</div><h3>Strategy</h3><p>30-minute call. We align on goals, audience, and what "premium" looks like for your business specifically.</p></div>
+        <div class="prc"><div class="prn">03</div><h3>Build</h3><p>We design and develop fast. First draft in 72 hours or less. Final version guaranteed within 7 days.</p></div>
+        <div class="prc"><div class="prn">04</div><h3>Launch</h3><p>Your new site goes live. Fast, polished, conversion-ready. A site you are proud to send prospects to.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="pad alt" id="faq">
+    <div class="w">
+      <div class="fql">
+        <div class="r"><div class="lb">Common Questions</div><h2 class="hd">You are probably wondering.</h2><p class="st" style="margin-top:1rem">Every question we get asked before someone says yes.</p></div>
+        <div class="fls r">
+          <div class="fli"><div class="flq"><h4>How do you build sites this fast?</h4><div class="flt"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="fla"><p>We use modern tooling that eliminates the bloated agency process. No layers of account managers, no 47-slide discovery decks. We talk to you directly, build directly, and iterate fast. Most clients see their first draft within 72 hours. Final site guaranteed within 7 days. The speed comes from cutting waste, not cutting corners.</p></div></div>
+          <div class="fli"><div class="flq"><h4>What if my site just needs a refresh, not a full rebuild?</h4><div class="flt"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="fla"><p>Start with the audit. For $500 we will tell you exactly what is working, what is not, and what the 3 highest-impact changes would be. If you want us to execute, we credit the full audit fee toward a rebuild.</p></div></div>
+          <div class="fli"><div class="flq"><h4>Will I be able to update the site myself?</h4><div class="flt"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="fla"><p>Yes. We also offer a monthly retainer ($150-300/mo) for ongoing updates, content changes, and support if you would rather not touch it yourself.</p></div></div>
+          <div class="fli"><div class="flq"><h4>What is included in $2,500? What pushes the price higher?</h4><div class="flt"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="fla"><p>$2,500 covers a full homepage redesign with messaging, mobile optimization, CTA flow, and SEO foundations. First draft in 72 hours, final delivery within 7 days. Multi-page sites (5+), custom interactive features, or brand identity work push the price up. We scope everything on the strategy call. No surprises.</p></div></div>
+          <div class="fli"><div class="flq"><h4>Why you instead of an agency?</h4><div class="flt"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="fla"><p>Agencies are built for scale, not speed. You talk to an account manager who talks to a designer who talks to a developer. We talk to you, then we build it. Better work, faster, for less. And we understand business positioning, not just pixels.</p></div></div>
+          <div class="fli"><div class="flq"><h4>Do you only work with service businesses?</h4><div class="flt"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="fla"><p>Service businesses and operators are our sweet spot, but we have built across financial services, healthcare, and advisory. If your business needs a premium web presence and you are tired of looking like you do not take yourself seriously, we can help.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="pad" id="contact">
+    <div class="w">
+      <div class="cl">
+        <div class="ct r">
+          <div class="lb">Get Started</div>
+          <h2 class="hd">Ready to stop losing business to your own website?</h2>
+          <p>Tell us about your business. We will look at your current site and respond within 24 hours with our honest assessment and what we would change.</p>
+          <div class="tp"><div class="tc"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div><span>We review your site before we respond</span></div>
+          <div class="tp"><div class="tc"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div><span>24-hour response time</span></div>
+          <div class="tp"><div class="tc"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div><span>No commitment, no pressure</span></div>
+          <div class="tp"><div class="tc"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div><span>Audit fee credits toward a rebuild</span></div>
+          <div style="margin-top:2rem;font-size:0.82rem;font-weight:300;color:var(--tx3)">Or email us directly at <a href="mailto:hello@tmncreative.com" style="color:var(--ac);text-decoration:none;font-weight:500">hello@tmncreative.com</a></div>
+        </div>
+        <div class="fw r rd1">
+          <form name="tmn-creative-intake" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="tmn-creative-intake" />
+            <p class="hidden"><label>Ignore:<input name="bot-field" /></label></p>
+            <div class="fr"><div class="ff"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="John Smith" required /></div><div class="ff"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="john@company.com" required /></div></div>
+            <div class="fr"><div class="ff"><label for="business">Business Name</label><input type="text" id="business" name="business" placeholder="Smith Plumbing" required /></div><div class="ff"><label for="website">Current Website</label><input type="url" id="website" name="website" placeholder="https://yoursite.com" /></div></div>
+            <div class="ff full"><label for="service">What Are You Looking For?</label><select id="service" name="service" required><option value="" disabled selected>Select a service</option><option value="audit">Premium Site Audit ($500)</option><option value="rebuild">Full Site Rebuild (Starting at $2,500)</option><option value="not-sure">Not sure yet, just want to talk</option></select></div>
+            <div class="ff full"><label for="details">What is not working about your current site?</label><textarea id="details" name="details" placeholder="Tell us about your business and what you are hoping to fix or improve."></textarea></div>
+            <button type="submit" class="fs"><span>Send It Over</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /content-wrap -->
+
+  <!-- FINAL CTA -->
+  <div class="fcta">
+    <h2>Every day you wait is another day your<br/>competition looks better than you online.</h2>
+    <p>2 spots open for April. Let us fix this.</p>
+    <a href="#contact" class="fctab"><span>Start Your Project</span></a>
+  </div>
+
+  <footer>
+    <div class="fl"><img src="images/logo-light.png" alt="TMN Creative" style="height:22px;width:auto;vertical-align:middle;margin-right:0.5rem;mix-blend-mode:lighten" />TMN Creative &nbsp;&middot;&nbsp; <a href="mailto:hello@tmncreative.com" style="color:var(--ac);text-decoration:none;opacity:0.6;letter-spacing:0.05em;text-transform:none;font-weight:400">hello@tmncreative.com</a></div>
+    <div class="frt">&copy; 2026 True Margin North LLC &middot; <a href="https://truemarginnorth.com" target="_blank" rel="noopener">truemarginnorth.com</a></div>
+  </footer>
+
+  <div class="stk" id="stk"><a href="#contact">Start Your Project</a></div>
+
+  <script>
+    // Smooth scroll (Lenis) - optional enhancement, page works without it
+    (function(){try{
+      var s=document.createElement('script');
+      s.src='https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js';
+      s.onload=function(){
+        try{
+          var l=new Lenis({duration:1.2,easing:function(t){return Math.min(1,1.001-Math.pow(2,-10*t))},touchMultiplier:2});
+          function r(t){l.raf(t);requestAnimationFrame(r)}requestAnimationFrame(r);
+          document.querySelectorAll('a[href^="#"]').forEach(function(a){
+            a.addEventListener('click',function(e){
+              var t=document.querySelector(a.getAttribute('href'));
+              if(t){e.preventDefault();l.scrollTo(t,{offset:-60})}
+            });
+          });
+        }catch(e){console.log('Lenis init skipped',e)}
+      };
+      s.onerror=function(){console.log('Lenis CDN unavailable, using native scroll')};
+      document.head.appendChild(s);
+    }catch(e){}})();
+
+    // Nav scroll
+    try{
+      var nav=document.getElementById('nav'),stk=document.getElementById('stk');
+      window.addEventListener('scroll',function(){
+        var y=window.scrollY;
+        nav.classList.toggle('s',y>100);
+        if(window.innerWidth<=768)stk.classList.toggle('show',y>window.innerHeight*0.7);
+      });
+    }catch(e){}
+
+    // Hero parallax
+    try{
+      var heroBg=document.getElementById('heroBg');
+      var heroEl=document.getElementById('hero');
+      if(heroBg&&heroEl){
+        heroEl.addEventListener('mousemove',function(e){
+          var x=(e.clientX/window.innerWidth-0.5)*20;
+          var y=(e.clientY/window.innerHeight-0.5)*20;
+          heroBg.style.transform='translate('+x+'px,'+y+'px)';
+        });
+      }
+    }catch(e){}
+
+    // Reveal animations
+    try{
+      var obs=new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting){en.target.classList.add('v');obs.unobserve(en.target)}
+        });
+      },{threshold:0.06,rootMargin:'0px 0px -30px 0px'});
+      document.querySelectorAll('.r').forEach(function(el){obs.observe(el)});
+    }catch(e){
+      // Fallback: just show everything
+      document.querySelectorAll('.r').forEach(function(el){el.classList.add('v')});
+    }
+
+    // Counter animation
+    try{
+      var countObs=new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            document.querySelectorAll('.count').forEach(function(c){
+              var target=+c.dataset.target,dur=1200,start=performance.now();
+              (function step(now){
+                var p=Math.min((now-start)/dur,1);
+                var ease=1-Math.pow(1-p,4);
+                c.textContent=Math.round(target*ease);
+                if(p<1)requestAnimationFrame(step);
+              })(start);
+            });
+            countObs.unobserve(entry.target);
+          }
+        });
+      },{threshold:0.3});
+      var pbEl=document.querySelector('.pb');
+      if(pbEl)countObs.observe(pbEl);
+    }catch(e){
+      // Fallback: just show final values
+      document.querySelectorAll('.count').forEach(function(c){c.textContent=c.dataset.target});
+    }
+
+    // FAQ toggles
+    try{
+      document.querySelectorAll('.flq').forEach(function(q){
+        q.addEventListener('click',function(){q.parentElement.classList.toggle('o')});
+      });
+    }catch(e){}
+  </script>
+</body>
+</html>
