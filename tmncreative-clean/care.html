@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Care Plans | TMN Creative</title>
+  <meta name="description" content="Keep your site fast, secure, and up to date. TMN Creative site care plans starting at $25/mo." />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#fff;--bg2:#F7F8FA;--bg3:#F0F2F5;
+      --dk:#0F172A;--dk2:#1E293B;--dk3:#0B1120;
+      --ac:#C6A24A;--ac2:#D4B04E;--ac3:rgba(198,162,74,0.08);--ac4:rgba(198,162,74,0.15);
+      --tx:#1E293B;--tx2:#64748B;--tx3:#94A3B8;
+      --ln:#E2E8F0;--ln2:rgba(226,232,240,0.6);
+      --fn:'Plus Jakarta Sans',system-ui,sans-serif;
+      --fs:'Fraunces',Georgia,serif;
+      --e:cubic-bezier(0.16,1,0.3,1);
+      --green:#22C55E;--green2:rgba(34,197,94,0.08);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:var(--fn);color:var(--tx);background:var(--bg);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
+    body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.012;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") repeat;background-size:256px}
+    ::selection{background:rgba(198,162,74,0.15);color:var(--dk)}
+    a,button{cursor:pointer;-webkit-tap-highlight-color:transparent}
+    :focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+    :focus:not(:focus-visible){outline:none}
+    img{max-width:100%;display:block}
+
+    /* NAV */
+    nav{background:rgba(255,255,255,0.92);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid var(--ln2);padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 2px rgba(15,23,42,0.04);position:sticky;top:0;z-index:100}
+    .nl{text-decoration:none;display:flex;align-items:center;height:40px;transition:opacity 0.3s}
+    .nl:hover{opacity:0.7}
+    .nav-logo{height:30px;width:auto}
+    .nr{display:flex;align-items:center;gap:1.5rem}
+    .nav-back{font-size:0.78rem;font-weight:500;color:var(--tx2);text-decoration:none;display:flex;align-items:center;gap:0.4rem;border:1px solid var(--ln);border-radius:8px;padding:0.5rem 1rem;transition:all 0.2s var(--e)}
+    .nav-back:hover{color:var(--dk);border-color:var(--tx3);background:var(--bg2)}
+    .nav-back svg{width:13px;height:13px;stroke:currentColor;stroke-width:2;fill:none}
+    .nav-cta{font-size:0.78rem;font-weight:600;color:#fff;background:var(--dk);padding:0.6rem 1.4rem;text-decoration:none;border-radius:8px;transition:all 0.25s var(--e);box-shadow:0 2px 6px rgba(15,23,42,0.08)}
+    .nav-cta:hover{background:var(--dk2);transform:translateY(-1px);box-shadow:0 6px 18px rgba(15,23,42,0.18)}
+    @media(max-width:600px){nav{padding:0.9rem 1.25rem}.nav-logo{height:26px}.nav-back span{display:none}}
+
+    /* HERO */
+    .hero{background:var(--bg);padding:6rem 2rem 5rem;text-align:center;position:relative;overflow:hidden;border-bottom:1px solid var(--ln)}
+    .hero-orb{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none}
+    .hero-orb-1{width:500px;height:500px;top:-100px;left:50%;transform:translateX(-50%);background:rgba(198,162,74,0.05)}
+    .hc{max-width:680px;margin:0 auto;position:relative;z-index:1}
+    .badge{display:inline-flex;font-size:0.58rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--ac);padding:0.35rem 0.85rem;background:var(--ac3);border-radius:100px;margin-bottom:1.25rem}
+    .hero h1{font-family:var(--fn);font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-0.04em;line-height:1.06;color:var(--dk);margin-bottom:1rem}
+    .hero h1 .ac{color:var(--ac)}
+    .hero-sub{font-size:1rem;font-weight:400;color:var(--tx2);line-height:1.75;max-width:500px;margin:0 auto}
+    @media(max-width:600px){.hero{padding:4.5rem 1.5rem 3.5rem}.hero h1{font-size:2rem}}
+
+    /* MAIN */
+    main{flex:1;background:var(--bg2)}
+
+    /* PRICING SECTION */
+    .pricing-sec{padding:5rem 2rem}
+    .wrap{max-width:1060px;margin:0 auto}
+
+    /* PLAN GRID */
+    .plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:3rem}
+
+    .plan{background:var(--bg);border:1px solid var(--ln);border-radius:20px;padding:2.25rem;display:flex;flex-direction:column;position:relative;transition:all 0.4s var(--e);box-shadow:0 1px 3px rgba(15,23,42,0.04)}
+    .plan:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(15,23,42,0.08);border-color:rgba(226,232,240,0.8)}
+    .plan.featured{border-color:var(--ac);box-shadow:0 4px 20px rgba(198,162,74,0.12)}
+    .plan.featured:hover{box-shadow:0 20px 50px rgba(198,162,74,0.15)}
+
+    .plan-tag{position:absolute;top:-0.65rem;left:50%;transform:translateX(-50%);background:var(--ac);color:var(--dk);font-size:0.55rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:100px;white-space:nowrap}
+
+    .plan-name{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--tx3);margin-bottom:0.75rem}
+    .plan-price{display:flex;align-items:baseline;gap:0.25rem;margin-bottom:0.35rem}
+    .plan-price .amt{font-family:var(--fs);font-size:3rem;font-weight:700;color:var(--dk);letter-spacing:-0.03em;line-height:1}
+    .plan-price .per{font-size:0.82rem;font-weight:500;color:var(--tx3)}
+    .plan-desc{font-size:0.82rem;font-weight:400;color:var(--tx2);line-height:1.6;margin-bottom:1.75rem;min-height:2.5rem}
+
+    .plan-divider{height:1px;background:var(--ln);margin-bottom:1.75rem}
+
+    .plan-features{list-style:none;margin-bottom:2rem;flex:1}
+    .plan-features li{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.85rem;font-weight:400;color:var(--tx2);padding:0.4rem 0;line-height:1.45}
+    .plan-features li .chk{width:16px;height:16px;border-radius:50%;background:var(--ac3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+    .plan-features li .chk svg{width:8px;height:8px;stroke:var(--ac);stroke-width:2.5;fill:none}
+
+    .plan-btn{display:block;width:100%;text-align:center;font-size:0.8rem;font-weight:700;padding:0.85rem;border-radius:10px;text-decoration:none;transition:all 0.25s var(--e);letter-spacing:0.01em}
+    .plan-btn-primary{background:var(--dk);color:#fff;box-shadow:0 2px 6px rgba(15,23,42,0.1)}
+    .plan-btn-primary:hover{background:var(--dk2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(15,23,42,0.18)}
+    .plan-btn-outline{background:transparent;color:var(--dk);border:1px solid var(--ln)}
+    .plan-btn-outline:hover{border-color:var(--tx3);background:var(--bg2);transform:translateY(-1px)}
+    .plan-btn-gold{background:var(--ac);color:var(--dk);box-shadow:0 2px 6px rgba(198,162,74,0.2)}
+    .plan-btn-gold:hover{background:var(--ac2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(198,162,74,0.25)}
+
+    @media(max-width:900px){.plan-grid{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}}
+    @media(max-width:600px){.pricing-sec{padding:3.5rem 1.25rem}.plan{padding:1.75rem}}
+
+    /* ADHOC SECTION */
+    .adhoc-wrap{max-width:1060px;margin:0 auto;padding:0 2rem 5rem}
+    .adhoc{background:var(--dk3);border-radius:20px;padding:3rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;position:relative;overflow:hidden}
+    .adhoc::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(198,162,74,0.06) 0%,transparent 70%);pointer-events:none}
+    .adhoc-left{position:relative}
+    .adhoc-eyebrow{font-size:0.58rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--ac);margin-bottom:0.75rem}
+    .adhoc h2{font-family:var(--fn);font-size:1.5rem;font-weight:800;letter-spacing:-0.03em;color:#fff;line-height:1.2;margin-bottom:0.6rem}
+    .adhoc p{font-size:0.88rem;font-weight:400;color:rgba(255,255,255,0.45);line-height:1.7}
+    .adhoc-price{text-align:center;position:relative;flex-shrink:0}
+    .adhoc-price .amt{font-family:var(--fs);font-size:3.5rem;font-weight:700;color:var(--ac);line-height:1;letter-spacing:-0.03em}
+    .adhoc-price .per{font-size:0.72rem;font-weight:500;color:rgba(255,255,255,0.3);margin-top:0.2rem}
+    .adhoc-btn{display:inline-block;margin-top:1.5rem;font-size:0.78rem;font-weight:700;color:var(--dk);background:var(--ac);padding:0.75rem 2rem;border-radius:10px;text-decoration:none;transition:all 0.25s var(--e)}
+    .adhoc-btn:hover{background:var(--ac2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(198,162,74,0.25)}
+    @media(max-width:700px){
+      .adhoc{grid-template-columns:1fr;padding:2rem}
+      .adhoc-price{text-align:left}
+      .adhoc-price .amt{font-size:2.75rem}
+      .adhoc-wrap{padding:0 1.25rem 3.5rem}
+    }
+
+    /* COMPARE TABLE */
+    .compare-sec{padding:0 2rem 5rem}
+    .compare-wrap{max-width:1060px;margin:0 auto}
+    .compare-head{margin-bottom:2.5rem;text-align:center}
+    .compare-head h2{font-family:var(--fn);font-size:1.6rem;font-weight:800;letter-spacing:-0.03em;color:var(--dk);margin-bottom:0.4rem}
+    .compare-head p{font-size:0.88rem;color:var(--tx2)}
+
+    .compare-table{width:100%;border-collapse:collapse;background:var(--bg);border:1px solid var(--ln);border-radius:16px;overflow:hidden}
+    .compare-table th{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--tx3);padding:1rem 1.25rem;text-align:center;background:var(--bg2);border-bottom:1px solid var(--ln)}
+    .compare-table th:first-child{text-align:left}
+    .compare-table th.featured-col{background:var(--ac3);color:var(--ac)}
+    .compare-table td{padding:0.9rem 1.25rem;font-size:0.85rem;color:var(--tx2);border-bottom:1px solid rgba(226,232,240,0.5);text-align:center;vertical-align:middle}
+    .compare-table td:first-child{text-align:left;font-weight:500;color:var(--dk)}
+    .compare-table td.featured-col{background:rgba(198,162,74,0.03)}
+    .compare-table tr:last-child td{border-bottom:none}
+    .compare-table tr:hover td{background:var(--bg2)}
+    .compare-table tr:hover td.featured-col{background:var(--ac3)}
+    .chk-yes{color:var(--green);font-size:1rem}
+    .chk-no{color:var(--tx3);font-size:0.9rem}
+    .chk-amt{font-size:0.82rem;font-weight:600;color:var(--dk)}
+    @media(max-width:700px){.compare-sec{display:none}}
+
+    /* FAQ */
+    .faq-sec{padding:0 2rem 5rem}
+    .faq-wrap{max-width:680px;margin:0 auto}
+    .faq-head{text-align:center;margin-bottom:2.5rem}
+    .faq-head h2{font-family:var(--fn);font-size:1.6rem;font-weight:800;letter-spacing:-0.03em;color:var(--dk);margin-bottom:0.4rem}
+    .faq-item{border-bottom:1px solid var(--ln);padding:1.25rem 0}
+    .faq-item:first-of-type{border-top:1px solid var(--ln)}
+    .faq-q{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;cursor:pointer;-webkit-user-select:none;user-select:none}
+    .faq-q h4{font-size:0.92rem;font-weight:600;color:var(--dk);line-height:1.4;transition:color 0.2s}
+    .faq-item.open .faq-q h4{color:var(--ac)}
+    .faq-tog{width:26px;height:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border:1px solid var(--ln);border-radius:50%;transition:all 0.35s var(--e)}
+    .faq-tog svg{width:10px;height:10px;stroke:var(--tx3);stroke-width:1.5;fill:none;transition:transform 0.35s var(--e)}
+    .faq-item.open .faq-tog{border-color:var(--ac);background:var(--ac3)}
+    .faq-item.open .faq-tog svg{stroke:var(--ac);transform:rotate(45deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.45s cubic-bezier(0.4,0,0.2,1)}
+    .faq-a p{font-size:0.85rem;font-weight:400;color:var(--tx2);line-height:1.75;padding-top:0.75rem}
+    .faq-item.open .faq-a{max-height:200px}
+    @media(max-width:600px){.faq-sec{padding:0 1.25rem 3.5rem}}
+
+    /* CTA */
+    .cta-sec{padding:0 2rem 5rem}
+    .cta-inner{max-width:1060px;margin:0 auto;background:var(--dk3);border-radius:20px;padding:4rem 3rem;text-align:center;position:relative;overflow:hidden}
+    .cta-inner::before{content:'';position:absolute;width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(198,162,74,0.06) 0%,transparent 70%);pointer-events:none}
+    .cta-inner h2{font-family:var(--fn);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-0.03em;color:#fff;margin-bottom:0.75rem;position:relative}
+    .cta-inner p{font-size:0.92rem;color:rgba(255,255,255,0.4);margin-bottom:2rem;position:relative}
+    .cta-btns{display:flex;gap:0.85rem;justify-content:center;flex-wrap:wrap;position:relative}
+    .cta-btn-p{font-size:0.82rem;font-weight:700;color:var(--dk);background:var(--ac);padding:0.9rem 2.25rem;text-decoration:none;border-radius:10px;transition:all 0.25s var(--e)}
+    .cta-btn-p:hover{background:var(--ac2);transform:translateY(-2px);box-shadow:0 12px 35px rgba(198,162,74,0.25)}
+    .cta-btn-s{font-size:0.82rem;font-weight:500;color:rgba(255,255,255,0.6);padding:0.9rem 2.25rem;text-decoration:none;border:1px solid rgba(255,255,255,0.12);border-radius:10px;transition:all 0.25s var(--e)}
+    .cta-btn-s:hover{color:#fff;border-color:rgba(255,255,255,0.3);transform:translateY(-2px)}
+    @media(max-width:600px){.cta-sec{padding:0 1.25rem 3.5rem}.cta-inner{padding:2.5rem 1.5rem}.cta-btns{flex-direction:column;align-items:center}}
+
+    /* FOOTER */
+    footer{background:var(--dk3);padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.04)}
+    .fl{font-size:0.62rem;font-weight:500;letter-spacing:0.06em;color:rgba(255,255,255,0.25)}
+    .fl a{color:var(--ac);text-decoration:none;opacity:0.65;transition:opacity 0.2s}.fl a:hover{opacity:1}
+    .fr{font-size:0.62rem;color:rgba(255,255,255,0.2)}.fr a{color:var(--ac);text-decoration:none;opacity:0.6;transition:opacity 0.2s}.fr a:hover{opacity:1}
+    @media(max-width:600px){footer{flex-direction:column;gap:0.5rem;text-align:center;padding:1.25rem}}
+
+    /* REVEAL */
+    .r{opacity:0;transform:translateY(20px);transition:opacity 0.7s var(--e),transform 0.7s var(--e)}
+    .r.v{opacity:1;transform:none}
+    .rd1{transition-delay:0.08s}.rd2{transition-delay:0.16s}.rd3{transition-delay:0.24s}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nl"><img src="images/logo-dark.png" alt="TMN Creative" class="nav-logo" /></a>
+    <div class="nr">
+      <a href="/" class="nav-back"><svg viewBox="0 0 16 16"><polyline points="10,3 5,8 10,13"/></svg><span>Back to site</span></a>
+      <a href="/#contact" class="nav-cta">Start a Project</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hc">
+      <div class="badge">Site Care Plans</div>
+      <h1>Your site should <span class="ac">work</span> after we launch it.</h1>
+      <p class="hero-sub">Keep your site fast, secure, and up to date without thinking about it. Pick the plan that fits how much you need us.</p>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- PRICING -->
+    <section class="pricing-sec">
+      <div class="wrap">
+        <div class="plan-grid">
+
+          <!-- BASIC -->
+          <div class="plan r">
+            <div class="plan-name">Basic</div>
+            <div class="plan-price"><span class="amt">$25</span><span class="per">/mo</span></div>
+            <p class="plan-desc">Hosting and peace of mind. Nothing more, nothing less.</p>
+            <div class="plan-divider"></div>
+            <ul class="plan-features">
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Fast, reliable hosting</li>
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Security monitoring</li>
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Uptime monitoring</li>
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Site updates billed separately at $100/hr</li>
+            </ul>
+            <a href="/#contact" class="plan-btn plan-btn-outline">Get Started</a>
+          </div>
+
+          <!-- STANDARD -->
+          <div class="plan featured r rd1">
+            <div class="plan-tag">Most Popular</div>
+            <div class="plan-name">Standard</div>
+            <div class="plan-price"><span class="amt">$60</span><span class="per">/mo</span></div>
+            <p class="plan-desc">Hosting plus hands-on support. We handle the updates so you don't have to.</p>
+            <div class="plan-divider"></div>
+            <ul class="plan-features">
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Fast, reliable hosting</li>
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Security monitoring</li>
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Uptime monitoring</li>
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Up to 2 hrs of content and copy updates per month</li>
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Priority email support</li>
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Monthly backup</li>
+            </ul>
+            <a href="/#contact" class="plan-btn plan-btn-gold">Get Started</a>
+          </div>
+
+          <!-- PRO -->
+          <div class="plan r rd2">
+            <div class="plan-name">Pro</div>
+            <div class="plan-price"><span class="amt">$100</span><span class="per">/mo</span></div>
+            <p class="plan-desc">Full-service care for businesses that want their site actively maintained.</p>
+            <div class="plan-divider"></div>
+            <ul class="plan-features">
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Fast, reliable hosting</li>
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Security monitoring</li>
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Uptime monitoring</li>
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Up to 4 hrs of updates per month</li>
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Priority email support</li>
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Monthly backup</li>
+              <li><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span>Minor SEO tweaks included</li>
+            </ul>
+            <a href="/#contact" class="plan-btn plan-btn-primary">Get Started</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- AD HOC -->
+    <div class="adhoc-wrap r">
+      <div class="adhoc">
+        <div class="adhoc-left">
+          <div class="adhoc-eyebrow">No Plan? No Problem.</div>
+          <h2>Need a quick update or change?</h2>
+          <p>Not on a care plan, or on the Basic plan and need something done? We handle one-off updates, fixes, and changes billed at a flat hourly rate. Just reach out and we will get it done.</p>
+          <a href="/#contact" class="adhoc-btn">Request a Change</a>
+        </div>
+        <div class="adhoc-price">
+          <div class="amt">$100</div>
+          <div class="per">per hour</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPARE TABLE -->
+    <section class="compare-sec r">
+      <div class="compare-wrap">
+        <div class="compare-head">
+          <h2>Compare plans</h2>
+          <p>Everything side by side.</p>
+        </div>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Basic</th>
+              <th class="featured-col">Standard</th>
+              <th>Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Hosting</td><td><span class="chk-yes">&#10003;</span></td><td class="featured-col"><span class="chk-yes">&#10003;</span></td><td><span class="chk-yes">&#10003;</span></td></tr>
+            <tr><td>Security monitoring</td><td><span class="chk-yes">&#10003;</span></td><td class="featured-col"><span class="chk-yes">&#10003;</span></td><td><span class="chk-yes">&#10003;</span></td></tr>
+            <tr><td>Uptime monitoring</td><td><span class="chk-yes">&#10003;</span></td><td class="featured-col"><span class="chk-yes">&#10003;</span></td><td><span class="chk-yes">&#10003;</span></td></tr>
+            <tr><td>Monthly backup</td><td><span class="chk-no">&#8212;</span></td><td class="featured-col"><span class="chk-yes">&#10003;</span></td><td><span class="chk-yes">&#10003;</span></td></tr>
+            <tr><td>Priority email support</td><td><span class="chk-no">&#8212;</span></td><td class="featured-col"><span class="chk-yes">&#10003;</span></td><td><span class="chk-yes">&#10003;</span></td></tr>
+            <tr><td>Content and copy updates</td><td><span class="chk-amt">$100/hr</span></td><td class="featured-col"><span class="chk-amt">2 hrs/mo</span></td><td><span class="chk-amt">4 hrs/mo</span></td></tr>
+            <tr><td>SEO tweaks</td><td><span class="chk-no">&#8212;</span></td><td class="featured-col"><span class="chk-no">&#8212;</span></td><td><span class="chk-yes">&#10003;</span></td></tr>
+            <tr><td>Monthly price</td><td><span class="chk-amt">$25</span></td><td class="featured-col"><span class="chk-amt">$60</span></td><td><span class="chk-amt">$100</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-sec">
+      <div class="faq-wrap">
+        <div class="faq-head r">
+          <h2>Common questions</h2>
+          <p>A few things people ask before signing up.</p>
+        </div>
+        <div class="faq-item r">
+          <div class="faq-q"><h4>How do I request an update?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div>
+          <div class="faq-a"><p>Just email or text us what you need changed. We handle it and let you know when it's live. No tickets, no portals, no back and forth.</p></div>
+        </div>
+        <div class="faq-item r">
+          <div class="faq-q"><h4>What counts as an update?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div>
+          <div class="faq-a"><p>Text changes, photo swaps, adding a team member, updating hours or pricing, tweaking a headline. Anything that doesn't require building a new section or page from scratch.</p></div>
+        </div>
+        <div class="faq-item r">
+          <div class="faq-q"><h4>What if I need more than my plan includes?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div>
+          <div class="faq-a"><p>Anything beyond your monthly hours is billed at $100/hr. We will always let you know before we go over so there are no surprises.</p></div>
+        </div>
+        <div class="faq-item r">
+          <div class="faq-q"><h4>Can I cancel anytime?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div>
+          <div class="faq-a"><p>Yes. No contracts, no cancellation fees. Just let us know and we will wrap things up cleanly.</p></div>
+        </div>
+        <div class="faq-item r">
+          <div class="faq-q"><h4>Do I have to be on a care plan?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div>
+          <div class="faq-a"><p>No. You can host your site anywhere and own it outright. If you ever need something changed down the road, we are available at $100/hr.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-sec r">
+      <div class="cta-inner">
+        <h2>Ready to get your site off your plate?</h2>
+        <p>Pick a plan or just reach out and we will figure out what makes sense.</p>
+        <div class="cta-btns">
+          <a href="/#contact" class="cta-btn-p">Get Started</a>
+          <a href="mailto:hello@tmncreative.com" class="cta-btn-s">Email Us</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="fl">TMN Creative &nbsp;&middot;&nbsp; <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></div>
+    <div class="fr">&copy; 2026 True Margin North LLC &middot; <a href="https://truemarginnorth.com" target="_blank" rel="noopener">truemarginnorth.com</a></div>
+  </footer>
+
+  <script>
+    // Reveal
+    try{
+      var obs=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('v');obs.unobserve(en.target)}})},{threshold:0.06,rootMargin:'0px 0px -30px 0px'});
+      document.querySelectorAll('.r').forEach(function(el){obs.observe(el)});
+    }catch(e){document.querySelectorAll('.r').forEach(function(el){el.classList.add('v')})}
+
+    // FAQ
+    try{
+      document.querySelectorAll('.faq-q').forEach(function(q){
+        q.addEventListener('click',function(){q.parentElement.classList.toggle('open')});
+      });
+    }catch(e){}
+  </script>
+</body>
+</html>

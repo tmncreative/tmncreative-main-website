@@ -1,0 +1,5 @@
+# Redirect www to non-www
+https://www.tmncreative.com/* https://tmncreative.com/:splat 301!
+
+# Redirect any 404 back to index
+/*    /index.html   200
