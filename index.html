@@ -105,14 +105,7 @@
     .btn-s{font-size:0.85rem;font-weight:500;color:var(--tx);padding:0.9rem 2.25rem;text-decoration:none;border:1px solid var(--ln);border-radius:10px;transition:all 0.3s var(--e)}
     .btn-s:hover{border-color:var(--tx3);background:var(--bg2);transform:translateY(-2px)}
     /* Floating mockup */
-    .hero-mockup{margin-top:4rem;opacity:0;animation:fu 1s var(--e) 0.85s forwards;position:relative;max-width:800px;width:100%}
-    .hero-mockup::before{content:'';position:absolute;inset:-20px;border-radius:30px;background:radial-gradient(ellipse at 50% 50%,rgba(198,162,74,0.05) 0%,transparent 70%);z-index:-1;filter:blur(30px)}
-    .hero-mockup-browser{background:var(--dk2);border-radius:16px;overflow:hidden;box-shadow:0 40px 80px rgba(15,23,42,0.18),0 0 0 1px rgba(15,23,42,0.08)}
-    .hero-mockup-bar{display:flex;align-items:center;gap:5px;padding:0.7rem 1rem;background:var(--dk3)}
-    .hero-mockup-bar .pd{width:8px;height:8px;border-radius:50%}
-    .hero-mockup-bar .pd:nth-child(1){background:#EF4444}.hero-mockup-bar .pd:nth-child(2){background:#F59E0B}.hero-mockup-bar .pd:nth-child(3){background:#22C55E}
-    .hero-mockup-bar .mu{margin-left:0.75rem;font-size:0.62rem;color:#64748B;background:var(--dk2);padding:0.25rem 0.8rem;border-radius:5px;flex:1}
-    .hero-mockup img{width:100%;display:block}
+    .hero-mockup{display:none}
     @media(max-width:768px){
       .hero{padding:7.5rem 1.5rem 3.5rem;min-height:auto;align-items:center;text-align:center}
       .hero h1{font-size:1.85rem;margin-bottom:1rem;letter-spacing:-0.03em;line-height:1.12}
@@ -124,7 +117,6 @@
       .btn-p{width:100%;text-align:center;padding:1rem 2rem;font-size:0.88rem;border-radius:12px}
       .btn-s{width:100%;text-align:center;padding:1rem 2rem;font-size:0.88rem;border-radius:12px}
       .hero-pill{margin-bottom:2rem;font-size:0.68rem;padding:0.45rem 1.1rem 0.45rem 0.6rem;align-self:center}
-      .hero-mockup{display:none}
       .hero-fade{background:radial-gradient(ellipse 90% 90% at 50% 50%,transparent 15%,var(--bg) 65%)}
     }
 
@@ -292,24 +284,51 @@
     @media(max-width:900px){.faq-layout{grid-template-columns:1fr;gap:1.5rem}}
     @media(max-width:768px){.faq-item{padding:1.1rem 0}.faq-q h4{font-size:0.86rem;line-height:1.45}.faq-a p{font-size:0.84rem;line-height:1.7}.faq-tog{width:24px;height:24px;border-radius:7px}}
 
-    /* BEFORE/AFTER */
+    /* BEFORE/AFTER SLIDER */
     .ba-sec{padding:6.5rem 0;background:var(--bg);overflow:hidden}
     .ba-header{text-align:center;padding:0 2rem;margin-bottom:3rem}
-    .ba-track{display:flex;gap:2rem;padding:0 3rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none}
-    .ba-track::-webkit-scrollbar{display:none}
-    .ba-card{flex-shrink:0;width:520px;scroll-snap-align:start;position:relative}
+    .ba-wrap{max-width:620px;margin:0 auto;padding:0 2rem;position:relative}
+    .ba-slider{position:relative;overflow:hidden}
+    .ba-track{display:flex;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1)}
+    .ba-card{flex-shrink:0;width:100%;position:relative}
     .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:3px;border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(15,23,42,0.08);border:1px solid var(--ln)}
     .ba-side{position:relative;overflow:hidden}
-    .ba-side img{width:100%;height:280px;object-fit:cover;object-position:top;display:block}
+    .ba-side img{width:100%;height:320px;object-fit:cover;object-position:top;display:block}
     .ba-label{position:absolute;top:0.6rem;left:0.6rem;font-size:0.5rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:0.2rem 0.55rem;border-radius:5px;z-index:1}
     .ba-label-b{background:rgba(15,23,42,0.7);color:rgba(255,255,255,0.7);backdrop-filter:blur(8px)}
     .ba-label-a{background:var(--ac);color:var(--dk3)}
-    .ba-info{padding:1rem 0.25rem 0;display:flex;justify-content:space-between;align-items:center}
-    .ba-name{font-size:0.85rem;font-weight:700;color:var(--dk);letter-spacing:-0.01em}
+    .ba-info{padding:1.25rem 0.25rem 0;display:flex;justify-content:space-between;align-items:center}
+    .ba-name{font-size:0.88rem;font-weight:700;color:var(--dk);letter-spacing:-0.01em}
     .ba-type{font-size:0.58rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--tx3)}
     .ba-link{font-size:0.68rem;font-weight:600;color:var(--ac);text-decoration:none;opacity:0.7;transition:opacity 0.2s}
     .ba-link:hover{opacity:1}
-    @media(max-width:768px){.ba-sec{padding:4.5rem 0}.ba-track{padding:0 1.25rem;gap:1.25rem}.ba-card{width:min(340px,85vw)}.ba-side img{height:200px}.ba-header{margin-bottom:2rem;text-align:left;padding:0 1.25rem}}
+    /* Arrows */
+    .ba-arrow{position:absolute;top:50%;transform:translateY(calc(-50% - 20px));width:40px;height:40px;border-radius:50%;background:var(--bg);border:1px solid var(--ln);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;transition:all 0.2s var(--e);box-shadow:0 2px 8px rgba(15,23,42,0.06)}
+    .ba-arrow:hover{background:var(--bg2);border-color:var(--tx3);box-shadow:0 4px 16px rgba(15,23,42,0.1);transform:translateY(calc(-50% - 20px)) scale(1.05)}
+    .ba-arrow svg{width:14px;height:14px;stroke:var(--tx2);stroke-width:2;fill:none}
+    .ba-arrow:hover svg{stroke:var(--dk)}
+    .ba-prev{left:-20px}
+    .ba-next{right:-20px}
+    .ba-arrow.disabled{opacity:0.3;pointer-events:none}
+    /* Dots */
+    .ba-dots{display:flex;justify-content:center;gap:0.5rem;margin-top:1.75rem}
+    .ba-dot{width:8px;height:8px;border-radius:50%;background:var(--ln);cursor:pointer;transition:all 0.3s var(--e)}
+    .ba-dot.active{background:var(--ac);transform:scale(1.2)}
+    .ba-dot:hover:not(.active){background:var(--tx3)}
+    /* Counter */
+    .ba-counter{text-align:center;margin-top:0.75rem;font-size:0.65rem;font-weight:600;color:var(--tx3);letter-spacing:0.05em}
+    @media(max-width:768px){
+      .ba-sec{padding:4.5rem 0}
+      .ba-wrap{max-width:100%;padding:0 1.25rem}
+      .ba-header{margin-bottom:2rem;text-align:left;padding:0 1.25rem}
+      .ba-side img{height:220px}
+      .ba-prev{left:0.5rem;width:36px;height:36px}
+      .ba-next{right:0.5rem;width:36px;height:36px}
+      .ba-arrow{transform:translateY(calc(-50% - 16px))}
+      .ba-arrow:hover{transform:translateY(calc(-50% - 16px)) scale(1.05)}
+      .ba-arrow svg{width:12px;height:12px}
+    }
+    @media(max-width:400px){.ba-side img{height:180px}}
 
     /* PHONE CTA */
     .phone-cta{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:600;color:var(--ac);text-decoration:none;margin-top:0.5rem;transition:opacity 0.2s}
@@ -418,11 +437,6 @@
         <a href="#contact" class="btn-p">Get My Free Site Review</a>
         <a href="#proof" class="btn-s">See the Work</a>
       </div>
-      <div class="hero-mockup">
-        <div class="hero-mockup-browser">
-          <div class="hero-mockup-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="mu">diamondhirrigation.com</span></div>
-          <img src="images/dh.jpg" alt="Diamond H Irrigation - built by TMN Creative" width="900" height="562" />
-        </div>
       </div>
     </div>
   </section>
@@ -471,43 +485,51 @@
 
   <!-- BEFORE & AFTER -->
   <section class="ba-sec">
-    <div class="ba-header r"><span class="badge">Before &amp; After</span><h2 class="stl">The difference is immediate.</h2><p class="sdsc" style="margin:0 auto">Swipe to see what a TMN Creative rebuild looks like next to the original.</p></div>
-    <div class="ba-track">
-      <div class="ba-card r">
-        <div class="ba-pair">
-          <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-jack-before.jpg" alt="Jack Ciapciak old site" loading="lazy" width="800" height="720" /></div>
-          <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-jack-after.jpg" alt="Jack Ciapciak TMN rebuild" loading="lazy" width="800" height="720" /></div>
+    <div class="ba-header r"><span class="badge">Before &amp; After</span><h2 class="stl">The difference is immediate.</h2><p class="sdsc" style="margin:0 auto">Real sites we rebuilt. Slide through to see the transformation.</p></div>
+    <div class="ba-wrap r">
+      <div class="ba-slider" id="baSlider">
+        <div class="ba-track" id="baTrack">
+          <div class="ba-card">
+            <div class="ba-pair">
+              <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-jack-before.jpg" alt="Jack Ciapciak old site" loading="lazy" width="800" height="720" /></div>
+              <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-jack-after.jpg" alt="Jack Ciapciak TMN rebuild" loading="lazy" width="800" height="720" /></div>
+            </div>
+            <div class="ba-info"><div><div class="ba-name">Jack Ciapciak</div><div class="ba-type">Writer / Producer</div></div><a href="https://jackciapciak.netlify.app/" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
+          </div>
+          <div class="ba-card">
+            <div class="ba-pair">
+              <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-wolfpack-before.jpg" alt="Wolfpack S&C old site" loading="lazy" width="800" height="720" /></div>
+              <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-wolfpack-after.jpg" alt="Wolfpack S&C TMN rebuild" loading="lazy" width="800" height="720" /></div>
+            </div>
+            <div class="ba-info"><div><div class="ba-name">Wolfpack Strength &amp; Conditioning</div><div class="ba-type">Fitness / Camps</div></div><a href="https://coachcristi.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
+          </div>
+          <div class="ba-card">
+            <div class="ba-pair">
+              <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-pools-before.jpg" alt="Pleasant Pools old site" loading="lazy" width="800" height="720" /></div>
+              <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-pools-after.jpg" alt="Pleasant Pools TMN rebuild" loading="lazy" width="800" height="720" /></div>
+            </div>
+            <div class="ba-info"><div><div class="ba-name">Pleasant Pools</div><div class="ba-type">Pool Service / Scottsdale</div></div><a href="https://pleasantpools.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
+          </div>
+          <div class="ba-card">
+            <div class="ba-pair">
+              <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-rehab-before.jpg" alt="Property Rehab old site" loading="lazy" width="800" height="720" /></div>
+              <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-rehab-after.jpg" alt="Property Rehab TMN rebuild" loading="lazy" width="800" height="720" /></div>
+            </div>
+            <div class="ba-info"><div><div class="ba-name">Property Rehab Services</div><div class="ba-type">Remodeling / Fort Worth</div></div><a href="https://propertyrehab.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
+          </div>
+          <div class="ba-card">
+            <div class="ba-pair">
+              <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-trailer-before.jpg" alt="Trailer Builder old site" loading="lazy" width="800" height="720" /></div>
+              <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-trailer-after.jpg" alt="Trailer Builder TMN rebuild" loading="lazy" width="800" height="720" /></div>
+            </div>
+            <div class="ba-info"><div><div class="ba-name">Trailer Builder</div><div class="ba-type">Custom Food Trailers / DFW</div></div><a href="https://newdesign4pepe.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
+          </div>
         </div>
-        <div class="ba-info"><div><div class="ba-name">Jack Ciapciak</div><div class="ba-type">Writer / Producer</div></div><a href="https://jackciapciak.netlify.app/" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
+        <button class="ba-arrow ba-prev disabled" id="baPrev" aria-label="Previous"><svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/></svg></button>
+        <button class="ba-arrow ba-next" id="baNext" aria-label="Next"><svg viewBox="0 0 24 24"><polyline points="9,6 15,12 9,18"/></svg></button>
       </div>
-      <div class="ba-card r">
-        <div class="ba-pair">
-          <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-wolfpack-before.jpg" alt="Wolfpack S&C old site" loading="lazy" width="800" height="720" /></div>
-          <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-wolfpack-after.jpg" alt="Wolfpack S&C TMN rebuild" loading="lazy" width="800" height="720" /></div>
-        </div>
-        <div class="ba-info"><div><div class="ba-name">Wolfpack Strength &amp; Conditioning</div><div class="ba-type">Fitness / Camps</div></div><a href="https://coachcristi.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
-      </div>
-      <div class="ba-card r">
-        <div class="ba-pair">
-          <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-pools-before.jpg" alt="Pleasant Pools old site" loading="lazy" width="800" height="720" /></div>
-          <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-pools-after.jpg" alt="Pleasant Pools TMN rebuild" loading="lazy" width="800" height="720" /></div>
-        </div>
-        <div class="ba-info"><div><div class="ba-name">Pleasant Pools</div><div class="ba-type">Pool Service / Scottsdale</div></div><a href="https://pleasantpools.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
-      </div>
-      <div class="ba-card r">
-        <div class="ba-pair">
-          <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-rehab-before.jpg" alt="Property Rehab old site" loading="lazy" width="800" height="720" /></div>
-          <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-rehab-after.jpg" alt="Property Rehab TMN rebuild" loading="lazy" width="800" height="720" /></div>
-        </div>
-        <div class="ba-info"><div><div class="ba-name">Property Rehab Services</div><div class="ba-type">Remodeling / Fort Worth</div></div><a href="https://propertyrehab.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
-      </div>
-      <div class="ba-card r">
-        <div class="ba-pair">
-          <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-trailer-before.jpg" alt="Trailer Builder old site" loading="lazy" width="800" height="720" /></div>
-          <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-trailer-after.jpg" alt="Trailer Builder TMN rebuild" loading="lazy" width="800" height="720" /></div>
-        </div>
-        <div class="ba-info"><div><div class="ba-name">Trailer Builder</div><div class="ba-type">Custom Food Trailers / DFW</div></div><a href="https://newdesign4pepe.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
-      </div>
+      <div class="ba-dots" id="baDots"></div>
+      <div class="ba-counter" id="baCounter">1 of 5</div>
     </div>
   </section>
 
@@ -694,6 +716,29 @@
     try{document.querySelectorAll('.svc-tab').forEach(function(tab){tab.addEventListener('click',function(){document.querySelectorAll('.svc-tab').forEach(function(t){t.classList.remove('active')});document.querySelectorAll('.svc-panel').forEach(function(p){p.classList.remove('active')});tab.classList.add('active');var panel=document.getElementById('panel-'+tab.dataset.tab);if(panel)panel.classList.add('active')})})}catch(e){}
     try{document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){q.parentElement.classList.toggle('o')})})}catch(e){}
     try{var menuBtn=document.getElementById('menuBtn'),mobMenu=document.getElementById('mobMenu');menuBtn.addEventListener('click',function(){var opening=!mobMenu.classList.contains('open');menuBtn.classList.toggle('active');mobMenu.classList.toggle('open');nav.classList.toggle('mob-open',opening);document.body.style.overflow=opening?'hidden':''});document.querySelectorAll('.mob-link').forEach(function(a){a.addEventListener('click',function(){menuBtn.classList.remove('active');mobMenu.classList.remove('open');nav.classList.remove('mob-open');document.body.style.overflow=''})})}catch(e){}
+    // Before/After Slider
+    try{
+      var baTrack=document.getElementById('baTrack'),baPrev=document.getElementById('baPrev'),baNext=document.getElementById('baNext'),baDots=document.getElementById('baDots'),baCounter=document.getElementById('baCounter');
+      var baCards=baTrack.querySelectorAll('.ba-card'),baIdx=0,baTotal=baCards.length;
+      // Build dots
+      for(var i=0;i<baTotal;i++){var dot=document.createElement('div');dot.className='ba-dot'+(i===0?' active':'');dot.dataset.idx=i;baDots.appendChild(dot)}
+      function baGo(idx){
+        if(idx<0||idx>=baTotal)return;
+        baIdx=idx;
+        baTrack.style.transform='translateX(-'+baIdx*100+'%)';
+        baPrev.classList.toggle('disabled',baIdx===0);
+        baNext.classList.toggle('disabled',baIdx===baTotal-1);
+        baDots.querySelectorAll('.ba-dot').forEach(function(d,j){d.classList.toggle('active',j===baIdx)});
+        baCounter.textContent=(baIdx+1)+' of '+baTotal;
+      }
+      baPrev.addEventListener('click',function(){baGo(baIdx-1)});
+      baNext.addEventListener('click',function(){baGo(baIdx+1)});
+      baDots.addEventListener('click',function(e){var d=e.target.closest('.ba-dot');if(d)baGo(+d.dataset.idx)});
+      // Touch swipe
+      var baTouch={x:0,y:0,t:0,swiping:false};
+      baTrack.addEventListener('touchstart',function(e){var t=e.touches[0];baTouch.x=t.clientX;baTouch.y=t.clientY;baTouch.t=Date.now();baTouch.swiping=true},{passive:true});
+      baTrack.addEventListener('touchend',function(e){if(!baTouch.swiping)return;baTouch.swiping=false;var dx=e.changedTouches[0].clientX-baTouch.x,dy=e.changedTouches[0].clientY-baTouch.y,dt=Date.now()-baTouch.t;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)&&dt<400){if(dx<0)baGo(baIdx+1);else baGo(baIdx-1)}},{passive:true});
+    }catch(e){}
   </script>
 </body>
 </html>
