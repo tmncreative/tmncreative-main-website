@@ -292,12 +292,12 @@
     .ba-slide-track{display:flex;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1)}
     .ba-slide{flex-shrink:0;width:100%}
     .ba-compare{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(15,23,42,0.08);border:1px solid var(--ln);cursor:col-resize;-webkit-user-select:none;user-select:none;touch-action:pan-y}
-    .ba-compare img{display:block;width:100%;height:380px;object-fit:cover;object-position:top}
+    .ba-compare img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
     .ba-img-after{position:absolute;inset:0}
-    .ba-img-after img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:top}
+    .ba-img-after img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
     .ba-clip{position:absolute;inset:0;overflow:hidden;width:50%}
     .ba-divider{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%);z-index:3;box-shadow:0 0 12px rgba(0,0,0,0.3)}
-    .ba-handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.25);z-index:4;display:flex;align-items:center;justify-content:center;transition:transform 0.15s}
+    .ba-handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.25);z-index:4;display:flex;align-items:center;justify-content:center}
     .ba-handle:active{transform:translate(-50%,-50%) scale(1.1)}
     .ba-handle svg{width:18px;height:18px;stroke:var(--dk);stroke-width:2;fill:none}
     .ba-tag{position:absolute;bottom:0.75rem;font-size:0.52rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:0.22rem 0.6rem;border-radius:5px;z-index:2;pointer-events:none}
@@ -321,8 +321,8 @@
     .ba-dot.active{background:var(--ac);transform:scale(1.2)}
     .ba-dot:hover:not(.active){background:var(--tx3)}
     .ba-counter{text-align:center;margin-top:0.75rem;font-size:0.65rem;font-weight:600;color:var(--tx3);letter-spacing:0.05em}
-    @media(max-width:768px){.ba-sec{padding:4.5rem 0}.ba-wrap{max-width:100%;padding:0 1.25rem}.ba-header{margin-bottom:2rem;text-align:left;padding:0 1.25rem}.ba-compare img,.ba-img-after img{height:260px}.ba-prev{left:0.5rem;width:36px;height:36px}.ba-next{right:0.5rem;width:36px;height:36px}.ba-arrow{transform:translateY(calc(-50% - 20px))}.ba-arrow:hover{transform:translateY(calc(-50% - 20px)) scale(1.05)}.ba-arrow svg{width:12px;height:12px}.ba-handle{width:36px;height:36px}.ba-handle svg{width:14px;height:14px}}
-    @media(max-width:400px){.ba-compare img,.ba-img-after img{height:200px}}
+    @media(max-width:768px){.ba-sec{padding:4.5rem 0}.ba-wrap{max-width:100%;padding:0 1.25rem}.ba-header{margin-bottom:2rem;text-align:left;padding:0 1.25rem}.ba-compare img{aspect-ratio:16/10}.ba-prev{left:0.5rem;width:36px;height:36px}.ba-next{right:0.5rem;width:36px;height:36px}.ba-arrow{transform:translateY(calc(-50% - 20px))}.ba-arrow:hover{transform:translateY(calc(-50% - 20px)) scale(1.05)}.ba-arrow svg{width:12px;height:12px}.ba-handle{width:36px;height:36px}.ba-handle svg{width:14px;height:14px}}
+    @media(max-width:400px){.ba-compare img{aspect-ratio:16/9}}
 
     /* PHONE CTA */
     .phone-cta{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:600;color:var(--ac);text-decoration:none;margin-top:0.5rem;transition:opacity 0.2s}
@@ -701,7 +701,7 @@
           </div>
         </div>
         <div class="form-card r rd1">
-          <form name="tmn-creative-intake" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field">
+          <form action='/success' method='POST' name='tmn-creative-intake'>
             <input type="hidden" name="form-name" value="tmn-creative-intake" />
             <p class="hidden"><label>Ignore:<input name="bot-field" /></label></p>
             <div class="form-row"><div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="John Smith" required /></div><div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="john@company.com" required /></div></div>
@@ -748,7 +748,7 @@
       for(var i=0;i<baTotal;i++){var dot=document.createElement('div');dot.className='ba-dot'+(i===0?' active':'');dot.dataset.idx=i;baDots.appendChild(dot)}
       function baGo(idx){if(idx<0||idx>=baTotal)return;baIdx=idx;baTrack.style.transform='translateX(-'+baIdx*100+'%)';baPrev.classList.toggle('disabled',baIdx===0);baNext.classList.toggle('disabled',baIdx===baTotal-1);baDots.querySelectorAll('.ba-dot').forEach(function(d,j){d.classList.toggle('active',j===baIdx)});baCounter.textContent=(baIdx+1)+' of '+baTotal}
       baPrev.addEventListener('click',function(){baGo(baIdx-1)});baNext.addEventListener('click',function(){baGo(baIdx+1)});baDots.addEventListener('click',function(e){var d=e.target.closest('.ba-dot');if(d)baGo(+d.dataset.idx)});
-      document.querySelectorAll('.ba-compare').forEach(function(comp){var clip=comp.querySelector('.ba-clip'),divider=comp.querySelector('.ba-divider'),handle=comp.querySelector('.ba-handle'),dragging=false;function setPos(x){var rect=comp.getBoundingClientRect();var pct=Math.max(0,Math.min(1,(x-rect.left)/rect.width));var s=(pct*100)+'%';clip.style.width=s;divider.style.left=s;handle.style.left=s;comp.classList.add('dragged')}comp.addEventListener('mousedown',function(e){e.preventDefault();dragging=true;setPos(e.clientX)});window.addEventListener('mousemove',function(e){if(dragging)setPos(e.clientX)});window.addEventListener('mouseup',function(){dragging=false});comp.addEventListener('touchstart',function(e){dragging=true;setPos(e.touches[0].clientX)},{passive:true});comp.addEventListener('touchmove',function(e){if(dragging){e.preventDefault();setPos(e.touches[0].clientX)}},{passive:false});comp.addEventListener('touchend',function(){dragging=false},{passive:true})});
+      document.querySelectorAll('.ba-compare').forEach(function(comp){var clip=comp.querySelector('.ba-clip'),divider=comp.querySelector('.ba-divider'),handle=comp.querySelector('.ba-handle'),dragging=false,rafId=null;function setPos(x){if(rafId)cancelAnimationFrame(rafId);rafId=requestAnimationFrame(function(){var rect=comp.getBoundingClientRect();var pct=Math.max(0.02,Math.min(0.98,(x-rect.left)/rect.width));var s=(pct*100)+'%';clip.style.width=s;divider.style.left=s;handle.style.left=s;comp.classList.add('dragged');rafId=null})}comp.addEventListener('mousedown',function(e){e.preventDefault();dragging=true;setPos(e.clientX)});document.addEventListener('mousemove',function(e){if(dragging){e.preventDefault();setPos(e.clientX)}});document.addEventListener('mouseup',function(){dragging=false});comp.addEventListener('touchstart',function(e){var t=e.touches[0];dragging=true;comp.style.touchAction='none';setPos(t.clientX)},{passive:true});document.addEventListener('touchmove',function(e){if(dragging&&e.touches.length===1){e.preventDefault();setPos(e.touches[0].clientX)}},{passive:false});comp.addEventListener('touchend',function(){dragging=false;comp.style.touchAction='pan-y'},{passive:true})});
       var swX=0,swT=0,baWrap=document.querySelector('.ba-wrap');baWrap.addEventListener('touchstart',function(e){if(e.target.closest('.ba-compare'))return;swX=e.touches[0].clientX;swT=Date.now()},{passive:true});baWrap.addEventListener('touchend',function(e){if(e.target.closest('.ba-compare'))return;var dx=e.changedTouches[0].clientX-swX;if(Math.abs(dx)>50&&Date.now()-swT<400){if(dx<0)baGo(baIdx+1);else baGo(baIdx-1)}},{passive:true});
     }catch(e){}
   </script>
