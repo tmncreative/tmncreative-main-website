@@ -350,7 +350,7 @@
         <p>Pick a plan or just reach out and we will figure out what makes sense.</p>
         <div class="cta-btns">
           <a href="/#contact" class="cta-btn-p">Get Started</a>
-          <a href="/cdn-cgi/l/email-protection#c8a0ada4a4a788bca5a6abbaada9bca1beade6aba7a5" class="cta-btn-s">Email Us</a>
+          <a href="mailto:hello@tmncreative.com" class="cta-btn-s">Email Us</a>
         </div>
       </div>
     </section>
@@ -358,13 +358,23 @@
   </main>
 
   <footer>
-    <div class="fl">TMN Creative &nbsp;&middot;&nbsp; <a href="/cdn-cgi/l/email-protection#7018151c1c1f30041d1e13021511041906155e131f1d"><span class="__cf_email__" data-cfemail="ddb5b8b1b1b29da9b0b3beafb8bca9b4abb8f3beb2b0">[email&#160;protected]</span></a></div>
+    <div class="fl">TMN Creative &nbsp;&middot;&nbsp; <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></div>
     <div class="fr">&copy; 2026 True Margin North LLC &middot; <a href="https://truemarginnorth.com" target="_blank" rel="noopener">truemarginnorth.com</a></div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     // Reveal
     try{
       var obs=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('v');obs.unobserve(en.target)}})},{threshold:0.06,rootMargin:'0px 0px -30px 0px'});
       document.querySelectorAll('.r').forEach(function(el){obs.observe(el)});
-    }catch(e){document.queryS
+    }catch(e){document.querySelectorAll('.r').forEach(function(el){el.classList.add('v')})}
+
+    // FAQ
+    try{
+      document.querySelectorAll('.faq-q').forEach(function(q){
+        q.addEventListener('click',function(){q.parentElement.classList.toggle('open')});
+      });
+    }catch(e){}
+  </script>
+</body>
+</html>
