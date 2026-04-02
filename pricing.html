@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | TMN Creative</title>
+  <meta name="description" content="TMN Creative pricing for premium websites, lead conversion systems, and ongoing site care. Scoped on a call, delivered in days." />
+  <meta name="theme-color" content="#0B1120" />
+  <link rel="canonical" href="https://tmncreative.com/pricing" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#FFFFFF;--bg2:#F8F9FB;--bg3:#F1F3F6;
+      --dk:#0F172A;--dk2:#1E293B;--dk3:#0B1120;
+      --ac:#C6A24A;--ac2:#D4B04E;--ac3:rgba(198,162,74,0.08);
+      --tx:#1E293B;--tx2:#64748B;--tx3:#94A3B8;
+      --ln:#E2E8F0;
+      --fn:'Plus Jakarta Sans',system-ui,sans-serif;
+      --fs:'Fraunces',Georgia,serif;
+      --e:cubic-bezier(0.16,1,0.3,1);
+      --g:#22C55E;--gbg:rgba(34,197,94,0.08);
+      --nav-h:60px;--tab-h:52px;
+    }
+    html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + var(--tab-h) + 24px)}
+    body{font-family:var(--fn);color:var(--tx);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
+    body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.012;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") repeat;background-size:256px}
+    ::selection{background:rgba(198,162,74,0.15);color:var(--dk)}
+    a,button{cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+    :focus-visible{outline:2px solid var(--ac);outline-offset:3px}:focus:not(:focus-visible){outline:none}
+    img{max-width:100%;display:block}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:200;height:var(--nav-h);background:rgba(255,255,255,0.94);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(226,232,240,0.6);padding:0 3rem;display:flex;justify-content:space-between;align-items:center}
+    .nl{text-decoration:none;display:flex;align-items:center;height:40px;transition:opacity 0.3s}.nl:hover{opacity:0.7}
+    .nav-logo{height:28px;width:auto}
+    .nr{display:flex;align-items:center;gap:1.25rem}
+    .nav-back{font-size:0.76rem;font-weight:500;color:var(--tx2);text-decoration:none;display:flex;align-items:center;gap:0.35rem;transition:color 0.2s}
+    .nav-back:hover{color:var(--dk)}
+    .nav-back svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none}
+    .nav-cta{font-size:0.76rem;font-weight:600;color:#fff;background:var(--dk);padding:0.55rem 1.25rem;text-decoration:none;border-radius:8px;transition:all 0.2s var(--e)}
+    .nav-cta:hover{background:var(--dk2);transform:translateY(-1px);box-shadow:0 4px 12px rgba(15,23,42,0.15)}
+    @media(max-width:600px){nav{padding:0 1.25rem}.nav-logo{height:24px}.nav-back span{display:none}.nav-cta{font-size:0.72rem;padding:0.5rem 1rem}}
+
+    /* HERO */
+    .hero{background:var(--dk3);padding:5.5rem 2rem 3.5rem;text-align:center;position:relative;overflow:hidden}
+    .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 10%,rgba(198,162,74,0.2) 50%,transparent 90%)}
+    .hero-glow{position:absolute;width:800px;height:500px;top:-180px;left:50%;transform:translateX(-50%);background:radial-gradient(ellipse 60% 50%,rgba(198,162,74,0.06) 0%,transparent 70%);pointer-events:none}
+    .hc{max-width:600px;margin:0 auto;position:relative;z-index:1}
+    .hero h1{font-family:var(--fn);font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;letter-spacing:-0.04em;line-height:1.08;color:#fff;margin-bottom:1rem}
+    .hero h1 em{font-style:normal;color:var(--ac)}
+    .hero p{font-size:0.95rem;font-weight:400;color:rgba(255,255,255,0.4);line-height:1.7;max-width:440px;margin:0 auto}
+    @media(max-width:600px){.hero{padding:4.5rem 1.5rem 2.5rem}.hero h1{font-size:1.85rem}}
+
+    /* VALUE PROOF STRIP */
+    .vstrip{background:var(--dk3);border-bottom:1px solid rgba(198,162,74,0.1);padding:1.5rem 2rem}
+    .vstrip-inner{max-width:800px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:2.5rem}
+    .vstat{text-align:center}
+    .vstat-num{font-family:var(--fs);font-size:1.5rem;font-weight:700;color:var(--ac);line-height:1;letter-spacing:-0.02em}
+    .vstat-label{font-size:0.58rem;font-weight:500;letter-spacing:0.04em;color:rgba(255,255,255,0.25);margin-top:0.3rem}
+    .vdiv{width:1px;height:28px;background:rgba(255,255,255,0.06)}
+    @media(max-width:700px){.vstrip-inner{gap:1.5rem}.vstat-num{font-size:1.2rem}.vstat-label{font-size:0.52rem}}
+    @media(max-width:480px){.vdiv{display:none}.vstrip-inner{display:grid;grid-template-columns:1fr 1fr;gap:1rem 0}.vstrip{padding:1.25rem 1.5rem}}
+
+    /* STICKY TAB BAR */
+    .tab-bar{position:sticky;top:var(--nav-h);z-index:150;background:var(--bg);border-bottom:1px solid var(--ln);height:var(--tab-h);display:flex;align-items:center;justify-content:center;gap:0.25rem;padding:0 1rem}
+    .tab{font-size:0.8rem;font-weight:600;color:var(--tx3);padding:0.5rem 1.25rem;border-radius:8px;cursor:pointer;transition:all 0.2s var(--e);-webkit-user-select:none;user-select:none;position:relative;white-space:nowrap}
+    .tab:hover{color:var(--tx2);background:var(--bg2)}
+    .tab.active{color:var(--dk);background:var(--bg2)}
+    .tab.active::after{content:'';position:absolute;bottom:-9px;left:50%;transform:translateX(-50%);width:28px;height:2px;background:var(--ac);border-radius:2px}
+    @media(max-width:600px){.tab{font-size:0.72rem;padding:0.45rem 0.75rem}.tab-bar{gap:0.1rem;padding:0 0.5rem}}
+    @media(max-width:360px){.tab{font-size:0.65rem;padding:0.4rem 0.6rem}}
+
+    /* SECTIONS */
+    .psec{padding:4.5rem 2rem 5rem;display:none}
+    .psec.active{display:block}
+    .wrap{max-width:1060px;margin:0 auto}
+    .sh{text-align:center;margin-bottom:3.5rem}
+    .sh h2{font-family:var(--fn);font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;letter-spacing:-0.03em;color:var(--dk);margin-bottom:0.5rem;line-height:1.1}
+    .sh p{font-size:0.9rem;color:var(--tx2);line-height:1.7;max-width:440px;margin:0 auto}
+    @media(max-width:600px){.psec{padding:3rem 1.25rem 3.5rem}.sh{margin-bottom:2.5rem;text-align:left}.sh p{margin:0}.sh h2{font-size:1.5rem}}
+
+    /* CARDS */
+    .cards{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:3.5rem}
+    .card{background:var(--bg);border:1px solid var(--ln);border-radius:18px;padding:2.25rem;display:flex;flex-direction:column;position:relative;transition:all 0.35s var(--e)}
+    .card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(15,23,42,0.07)}
+    .card.pop{border-color:transparent;box-shadow:0 2px 16px rgba(198,162,74,0.1);background:var(--bg);position:relative}
+    .card.pop::before{content:'';position:absolute;inset:-1px;border-radius:19px;padding:1px;background:linear-gradient(135deg,var(--ac),rgba(198,162,74,0.25),var(--ac2),rgba(198,162,74,0.25));background-size:300% 300%;animation:shimBorder 6s ease infinite;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:0}
+    .card.pop:hover{box-shadow:0 24px 60px rgba(198,162,74,0.14);transform:translateY(-5px)}
+    @keyframes shimBorder{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .card-tag{position:absolute;top:-0.55rem;left:50%;transform:translateX(-50%);background:var(--ac);color:var(--dk3);font-size:0.5rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.22rem 0.75rem;border-radius:100px;white-space:nowrap}
+    .card-label{font-size:0.58rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--tx3);margin-bottom:0.5rem}
+    .card h3{font-family:var(--fs);font-size:1.45rem;font-weight:700;color:var(--dk);letter-spacing:-0.02em;margin-bottom:0.15rem;line-height:1.15}
+    .card-price{font-size:1rem;font-weight:600;color:var(--ac);margin-bottom:1.25rem}
+    .card-desc{font-size:0.84rem;color:var(--tx2);line-height:1.6;margin-bottom:1.25rem}
+    .card-list{list-style:none;margin-bottom:1.75rem;flex:1}
+    .card-list li{display:flex;align-items:flex-start;gap:0.55rem;font-size:0.82rem;color:var(--tx2);padding:0.3rem 0;line-height:1.5}
+    .card-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--ac);flex-shrink:0;margin-top:7px;opacity:0.5}
+    .cbtn{display:flex;align-items:center;justify-content:center;width:100%;text-align:center;font-size:0.78rem;font-weight:700;padding:0.85rem;border-radius:10px;text-decoration:none;transition:all 0.2s var(--e);min-height:48px}
+    .cbtn-g{background:var(--ac);color:var(--dk3);position:relative;overflow:hidden}
+    .cbtn-g::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);transition:left 0.5s var(--e)}
+    .cbtn-g:hover::after{left:120%}
+    .cbtn-g:hover{background:var(--ac2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(198,162,74,0.22)}
+    .cbtn-dk{background:var(--dk);color:#fff}.cbtn-dk:hover{background:var(--dk2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(15,23,42,0.18)}
+    .cbtn-o{border:1px solid var(--ln);color:var(--tx2);background:transparent}.cbtn-o:hover{border-color:var(--tx3);color:var(--dk);background:var(--bg2)}
+    @media(max-width:900px){.cards{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto}}
+    @media(max-width:600px){.card{padding:1.75rem;border-radius:14px}.card h3{font-size:1.3rem}.cards{gap:1rem}}
+
+    /* BUNDLE */
+    .bundle{background:var(--dk3);border-radius:18px;padding:2.75rem;display:grid;grid-template-columns:1.3fr 1fr;gap:2.5rem;align-items:center;position:relative;overflow:hidden;margin-bottom:3.5rem}
+    .bundle::before{content:'';position:absolute;top:-50%;right:-20%;width:400px;height:400px;background:radial-gradient(ellipse,rgba(198,162,74,0.08) 0%,transparent 70%);pointer-events:none}
+    .bundle-tag{position:absolute;top:1.25rem;right:1.25rem;background:var(--ac);color:var(--dk3);font-size:0.5rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.22rem 0.75rem;border-radius:100px}
+    .bundle h3{font-family:var(--fs);font-size:1.45rem;font-weight:700;color:#fff;letter-spacing:-0.02em;margin-bottom:0.1rem;position:relative}
+    .bundle .card-price{margin-bottom:0.75rem;position:relative}
+    .bundle p{font-size:0.84rem;color:rgba(255,255,255,0.4);line-height:1.65;margin-bottom:1.25rem;position:relative}
+    .bundle-feats{list-style:none;position:relative}
+    .bundle-feats li{font-size:0.8rem;color:rgba(255,255,255,0.45);padding:0.25rem 0 0.25rem 1.1rem;position:relative;line-height:1.45}
+    .bundle-feats li::before{content:'\2713';position:absolute;left:0;color:var(--ac);font-size:0.6rem;top:0.3rem}
+    .bundle .cbtn{width:auto;display:inline-flex;margin-top:1.25rem;padding:0.85rem 2rem;position:relative}
+    @media(max-width:900px){.bundle{grid-template-columns:1fr;gap:1.25rem;padding:2rem}}
+    @media(max-width:600px){.bundle{border-radius:14px;padding:1.75rem}}
+
+    /* COMPARISON TABLE */
+    .cmp{margin-bottom:4rem}
+    .cmp .sh{margin-bottom:2rem}
+    .tw{background:var(--bg);border:1px solid var(--ln);border-radius:16px;overflow:hidden}
+    table.t{width:100%;border-collapse:collapse}
+    .t th{background:var(--bg2);font-size:0.58rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--tx3);padding:0.9rem 1rem;text-align:center;border-bottom:1px solid var(--ln)}
+    .t th:first-child{text-align:left;padding-left:1.5rem;width:40%}
+    .t th.hi{background:var(--ac3);color:var(--ac);position:relative}
+    .t th.hi::after{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:var(--ac);border-radius:0 0 2px 2px}
+    .t td{padding:0.75rem 1rem;font-size:0.82rem;color:var(--tx2);border-bottom:1px solid rgba(226,232,240,0.45);text-align:center;vertical-align:middle}
+    .t td:first-child{text-align:left;font-weight:500;color:var(--dk);padding-left:1.5rem}
+    .t td.hi{background:rgba(198,162,74,0.02)}
+    .t tr:last-child td{border-bottom:none}
+    .t tr:hover td{background:var(--bg2)}.t tr:hover td.hi{background:var(--ac3)}
+    .t .sep td{background:var(--bg3);font-size:0.55rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--tx3);padding:0.55rem 1rem;border-bottom:1px solid var(--ln)}
+    .t .sep td:first-child{padding-left:1.5rem}
+    .t .sep:hover td{background:var(--bg3)}
+    .y{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--gbg)}
+    .y svg{width:9px;height:9px;stroke:var(--g);stroke-width:2.5;fill:none}
+    .n{color:var(--ln);font-size:1.1rem}
+    .val{font-size:0.8rem;font-weight:600;color:var(--dk)}
+    .t .cta-r td{padding:1rem;border-bottom:none;background:var(--bg)}
+    .t .cta-r:hover td{background:var(--bg)}
+    .tcta{display:inline-flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;padding:0.55rem 1.25rem;border-radius:8px;text-decoration:none;transition:all 0.2s var(--e);min-height:36px}
+    .tcta-g{background:var(--ac);color:var(--dk3)}.tcta-g:hover{background:var(--ac2)}
+    .tcta-dk{background:var(--dk);color:#fff}.tcta-dk:hover{background:var(--dk2)}
+    .tcta-o{border:1px solid var(--ln);color:var(--tx3)}.tcta-o:hover{border-color:var(--tx3);color:var(--dk)}
+    @media(max-width:600px){.tcta{min-height:44px;padding:0.65rem 1rem;font-size:0.68rem}}
+    @media(max-width:700px){
+      .cmp{margin-left:-0.25rem;margin-right:-0.25rem}
+      .tw{border-radius:12px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+      table.t{min-width:520px}
+      .t th,.t td{padding:0.65rem 0.65rem;font-size:0.75rem}
+      .t th:first-child,.t td:first-child{padding-left:1rem;min-width:160px;position:sticky;left:0;background:inherit;z-index:2}
+      .t tr:hover td:first-child{background:var(--bg2)}
+      .t .sep td:first-child{background:var(--bg3)}
+    }
+
+    /* CARE CARDS (3-col) */
+    .care-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:2.5rem}
+    .care-card{background:var(--bg);border:1px solid var(--ln);border-radius:18px;padding:2rem;display:flex;flex-direction:column;position:relative;transition:all 0.35s var(--e)}
+    .care-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(15,23,42,0.07)}
+    .care-card.pop{border-color:transparent;box-shadow:0 2px 16px rgba(198,162,74,0.1)}
+    .care-card.pop::before{content:'';position:absolute;inset:-1px;border-radius:19px;padding:1px;background:linear-gradient(135deg,var(--ac),rgba(198,162,74,0.25),var(--ac2),rgba(198,162,74,0.25));background-size:300% 300%;animation:shimBorder 6s ease infinite;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:0}
+    .care-card.pop:hover{box-shadow:0 20px 50px rgba(198,162,74,0.13);transform:translateY(-5px)}
+    .care-label{font-size:0.58rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--tx3);margin-bottom:0.6rem}
+    .care-price{display:flex;align-items:baseline;gap:0.2rem;margin-bottom:0.25rem}
+    .care-amt{font-family:var(--fs);font-size:2.5rem;font-weight:700;color:var(--dk);letter-spacing:-0.03em;line-height:1}
+    .care-per{font-size:0.78rem;font-weight:500;color:var(--tx3)}
+    .care-desc{font-size:0.8rem;color:var(--tx2);line-height:1.55;margin-bottom:1.25rem}
+    .care-div{height:1px;background:var(--ln);margin-bottom:1.25rem}
+    .care-feats{list-style:none;margin-bottom:1.5rem;flex:1}
+    .care-feats li{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.82rem;color:var(--tx2);padding:0.3rem 0;line-height:1.45}
+    .care-feats li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--ac);flex-shrink:0;margin-top:7px;opacity:0.5}
+    @media(max-width:900px){.care-cards{grid-template-columns:1fr;max-width:400px;margin-left:auto;margin-right:auto}}
+    @media(max-width:600px){.care-card{padding:1.5rem;border-radius:14px}.care-cards{gap:1rem}}
+
+    /* Adhoc strip */
+    .adhoc{background:var(--dk3);border-radius:14px;padding:1.75rem 2rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;margin-bottom:3rem}
+    .adhoc h4{font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:0.15rem}
+    .adhoc p{font-size:0.8rem;color:rgba(255,255,255,0.35);line-height:1.5}
+    .adhoc-price{font-family:var(--fs);font-size:2rem;font-weight:700;color:var(--ac);white-space:nowrap;line-height:1}
+    .adhoc-unit{font-size:0.65rem;font-weight:500;color:rgba(255,255,255,0.25);display:block;text-align:right;margin-top:0.1rem}
+    @media(max-width:600px){.adhoc{flex-direction:column;text-align:center;padding:1.5rem;gap:0.75rem;border-radius:12px}.adhoc-unit{text-align:center}}
+
+    /* FAQ */
+    .faq-sec{padding:0 2rem 4.5rem}
+    .faq-wrap{max-width:660px;margin:0 auto}
+    .faq-head{text-align:center;margin-bottom:2.25rem}
+    .faq-head h2{font-size:1.4rem;font-weight:800;letter-spacing:-0.03em;color:var(--dk);margin-bottom:0.3rem}
+    .faq-head p{font-size:0.85rem;color:var(--tx2)}
+    .faq-item{border-bottom:1px solid var(--ln);padding:1.15rem 0}
+    .faq-item:first-of-type{border-top:1px solid var(--ln)}
+    .faq-q{display:flex;justify-content:space-between;align-items:center;gap:1.25rem;cursor:pointer;-webkit-user-select:none;user-select:none}
+    .faq-q h4{font-size:0.88rem;font-weight:600;color:var(--dk);line-height:1.4}
+    .faq-item.open .faq-q h4{color:var(--ac)}
+    .faq-tog{width:24px;height:24px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border:1px solid var(--ln);border-radius:50%;transition:all 0.3s var(--e)}
+    .faq-tog svg{width:9px;height:9px;stroke:var(--tx3);stroke-width:1.5;fill:none;transition:transform 0.3s var(--e)}
+    .faq-item.open .faq-tog{border-color:var(--ac);background:var(--ac3)}
+    .faq-item.open .faq-tog svg{stroke:var(--ac);transform:rotate(45deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1)}
+    .faq-a p{font-size:0.84rem;color:var(--tx2);line-height:1.7;padding-top:0.65rem}
+    .faq-item.open .faq-a{max-height:280px}
+    @media(max-width:600px){.faq-sec{padding:0 1.25rem 3.5rem}.faq-head{text-align:left}}
+
+    /* BOTTOM CTA */
+    .bcta{padding:0 2rem 4.5rem}
+    .bcta-inner{max-width:1060px;margin:0 auto;background:var(--dk3);border-radius:18px;padding:3.5rem 2.5rem;text-align:center;position:relative;overflow:hidden}
+    .bcta-inner::before{content:'';position:absolute;width:500px;height:500px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(198,162,74,0.05) 0%,transparent 70%);pointer-events:none}
+    .bcta-inner h2{font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:800;letter-spacing:-0.03em;color:#fff;margin-bottom:0.6rem;position:relative}
+    .bcta-inner p{font-size:0.88rem;color:rgba(255,255,255,0.35);margin-bottom:1.75rem;position:relative}
+    .bcta-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;position:relative}
+    .bcta-p{font-size:0.8rem;font-weight:700;color:var(--dk3);background:var(--ac);padding:0.8rem 2rem;text-decoration:none;border-radius:10px;transition:all 0.2s var(--e)}
+    .bcta-p:hover{background:var(--ac2);transform:translateY(-1px);box-shadow:0 8px 28px rgba(198,162,74,0.25)}
+    .bcta-s{font-size:0.8rem;font-weight:500;color:rgba(255,255,255,0.5);padding:0.8rem 2rem;text-decoration:none;border:1px solid rgba(255,255,255,0.1);border-radius:10px;transition:all 0.2s var(--e)}
+    .bcta-s:hover{color:#fff;border-color:rgba(255,255,255,0.25)}
+    @media(max-width:600px){.bcta{padding:0 1.25rem 3rem}.bcta-inner{padding:2.5rem 1.5rem;border-radius:14px}.bcta-btns{flex-direction:column;align-items:center;gap:0.5rem}.bcta-p,.bcta-s{width:100%;text-align:center}}
+
+    /* FOOTER */
+    footer{background:var(--dk3);padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.04)}
+    .fl{font-size:0.6rem;font-weight:500;letter-spacing:0.05em;color:rgba(255,255,255,0.2)}
+    .fl a{color:var(--ac);text-decoration:none;opacity:0.6}.fl a:hover{opacity:1}
+    .fr{font-size:0.6rem;color:rgba(255,255,255,0.18)}.fr a{color:var(--ac);text-decoration:none;opacity:0.5}.fr a:hover{opacity:1}
+    @media(max-width:600px){footer{flex-direction:column;gap:0.4rem;text-align:center;padding:1.25rem}}
+
+    /* ANIMATIONS */
+    .r{opacity:0;transform:translateY(18px);transition:opacity 0.7s var(--e),transform 0.7s var(--e)}.r.vis{opacity:1;transform:none}
+    .rd1{transition-delay:0.06s}.rd2{transition-delay:0.12s}.rd3{transition-delay:0.18s}
+    @media(prefers-reduced-motion:reduce){.r{opacity:1;transform:none;transition:none}}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nl"><img src="images/logo-dark.png" alt="TMN Creative" class="nav-logo" /></a>
+    <div class="nr">
+      <a href="/" class="nav-back"><svg viewBox="0 0 16 16"><polyline points="10,3 5,8 10,13"/></svg><span>Back</span></a>
+      <a href="/#contact" class="nav-cta">Start a Project</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-glow"></div>
+    <div class="hc">
+      <h1>Agency-grade work.<br/>A fraction of the <em>cost and timeline.</em></h1>
+      <p>What used to take 3 months and $10K+ now ships in days. Every project is scoped on a call first.</p>
+    </div>
+  </div>
+
+  <!-- VALUE PROOF STRIP -->
+  <div class="vstrip">
+    <div class="vstrip-inner">
+      <div class="vstat"><div class="vstat-num">72h</div><div class="vstat-label">First review</div></div>
+      <div class="vdiv"></div>
+      <div class="vstat"><div class="vstat-num">80%</div><div class="vstat-label">Less than typical agency cost</div></div>
+      <div class="vdiv"></div>
+      <div class="vstat"><div class="vstat-num">10x</div><div class="vstat-label">Faster turnaround</div></div>
+      <div class="vdiv"></div>
+      <div class="vstat"><div class="vstat-num">Direct</div><div class="vstat-label">Founder collaboration</div></div>
+    </div>
+  </div>
+
+  <!-- TRUST LINE -->
+  <div style="background:var(--dk3);padding:0.75rem 2rem;text-align:center;border-bottom:1px solid rgba(255,255,255,0.04)">
+    <p style="font-size:0.65rem;font-weight:500;letter-spacing:0.04em;color:rgba(255,255,255,0.2);margin:0">5.0 &#9733; on Google &middot; 100% client satisfaction &middot; Full refund if you are not happy with the work &middot; <a href="https://maps.app.goo.gl/hf37L4ca44xjHiKe8" target="_blank" rel="noopener" style="color:var(--ac);text-decoration:none;opacity:0.6;transition:opacity 0.2s">Read reviews &rarr;</a></p>
+  </div>
+
+  <div class="tab-bar" id="tabBar">
+    <div class="tab active" data-sec="websites">Websites</div>
+    <div class="tab" data-sec="care">Site Care</div>
+    <div class="tab" data-sec="conversion">Lead Conversion</div>
+  </div>
+
+  <!-- WEBSITES -->
+  <section class="psec active" id="sec-websites">
+    <div class="wrap">
+      <div class="sh r"><h2>A site that earns trust before you pick up the phone.</h2><p>Fast turnaround, sharp positioning, built to convert.</p></div>
+      <div class="cards r">
+        <div class="card">
+          <div class="card-label">Starter Refresh</div>
+          <h3>Starter Refresh</h3>
+          <div class="card-price">$1,500</div>
+          <p class="card-desc">A focused homepage upgrade for businesses that need to look credible now.</p>
+          <ul class="card-list"><li>Homepage redesign</li><li>Mobile-optimized, fast-loading build</li><li>Copy cleanup and CTA structure</li><li>First review within 72 hours</li></ul>
+          <a href="/#contact" class="cbtn cbtn-o">Get a Refresh</a>
+        </div>
+        <div class="card pop">
+          <div class="card-tag">Flagship</div>
+          <div class="card-label">Full Site Rebuild</div>
+          <h3>Full Site Rebuild</h3>
+          <div class="card-price">Starting at $2,500</div>
+          <p class="card-desc">Complete redesign with messaging, conversion strategy, and SEO foundations.</p>
+          <ul class="card-list"><li>Strategic homepage or multi-page redesign</li><li>Messaging and positioning refinement</li><li>Mobile-first, high-performance build</li><li>Conversion flow and CTA optimization</li><li>SEO foundations and schema markup</li><li>First review within 72 hours</li></ul>
+          <a href="/#contact" class="cbtn cbtn-g">Start a Rebuild</a>
+        </div>
+      </div>
+      <div class="cmp r">
+        <div class="sh"><h2>Side by side.</h2><p>See exactly what each package includes.</p></div>
+        <div class="tw"><table class="t"><thead><tr><th>Feature</th><th>Starter</th><th class="hi">Full Rebuild</th></tr></thead><tbody>
+          <tr class="sep"><td colspan="3">Design and Build</td></tr>
+          <tr><td>Homepage redesign</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Multi-page design</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Mobile optimization</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Performance-tuned build</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr class="sep"><td colspan="3">Strategy and Positioning</td></tr>
+          <tr><td>Copy cleanup</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Full messaging refinement</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Conversion flow strategy</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>CTA optimization</td><td><span class="val">Basic</span></td><td class="hi"><span class="val">Advanced</span></td></tr>
+          <tr class="sep"><td colspan="3">SEO and Delivery</td></tr>
+          <tr><td>SEO foundations</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Schema markup</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>First review</td><td><span class="val">72 hours</span></td><td class="hi"><span class="val">72 hours</span></td></tr>
+          <tr><td>Price</td><td><span class="val">$1,500</span></td><td class="hi"><span class="val">From $2,500</span></td></tr>
+          <tr class="cta-r"><td></td><td><a href="/#contact" class="tcta tcta-o">Get a Refresh</a></td><td class="hi"><a href="/#contact" class="tcta tcta-g">Start a Rebuild</a></td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD CONVERSION -->
+  <section class="psec" id="sec-conversion">
+    <div class="wrap">
+      <div class="sh r"><h2>Stop losing the leads your site already generates.</h2><p>Respond faster, follow up automatically, close more.</p></div>
+      <div class="cards r">
+        <div class="card">
+          <div class="card-label">Essentials</div>
+          <h3>Conversion Essentials</h3>
+          <div class="card-price">$1,500 + $297/mo</div>
+          <p class="card-desc">Catch the leads your current setup is dropping.</p>
+          <ul class="card-list"><li>Missed-call text back in 60 seconds</li><li>Instant form reply</li><li>Lead routing and team notifications</li><li>Simple CRM pipeline</li><li>Monthly performance report</li></ul>
+          <a href="/#contact" class="cbtn cbtn-o">Get Essentials</a>
+        </div>
+        <div class="card pop">
+          <div class="card-tag">Most Popular</div>
+          <div class="card-label">Full System</div>
+          <h3>Full Conversion System</h3>
+          <div class="card-price">$3,500 + $497/mo</div>
+          <p class="card-desc">Your entire lead-to-booked-job process, handled.</p>
+          <ul class="card-list"><li>Everything in Essentials</li><li>14-day automated follow-up sequences</li><li>Automatic post-job review requests</li><li>Chat widget for lead capture</li><li>Win-back campaigns for old leads</li><li>Full reporting dashboard</li></ul>
+          <a href="/#contact" class="cbtn cbtn-g">Get the Full System</a>
+        </div>
+      </div>
+      <div class="bundle r">
+        <div class="bundle-tag">Best Value</div>
+        <div>
+          <h3>The Full Build</h3>
+          <div class="card-price">$5,000 to $7,500 + $497/mo</div>
+          <p>Premium website plus the full conversion system. Bundled at a lower setup cost than buying separately.</p>
+          <a href="/#contact" class="cbtn cbtn-g">Start the Full Build</a>
+        </div>
+        <div>
+          <ul class="bundle-feats"><li>Complete site redesign with messaging refinement</li><li>Missed-call text back and instant form replies</li><li>Automated follow-up, review requests, chat widget</li><li>Lead tracking, team notifications, reporting</li><li>First review within 72 hours</li></ul>
+        </div>
+      </div>
+      <div class="cmp r">
+        <div class="sh"><h2>Side by side.</h2><p>See exactly what each tier includes.</p></div>
+        <div class="tw"><table class="t"><thead><tr><th>Feature</th><th>Essentials</th><th class="hi">Full System</th></tr></thead><tbody>
+          <tr class="sep"><td colspan="3">Response and Capture</td></tr>
+          <tr><td>Missed-call text back</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Instant form reply</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Lead routing and team alerts</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Website chat widget</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr class="sep"><td colspan="3">Follow-up and Automation</td></tr>
+          <tr><td>CRM pipeline</td><td><span class="val">Basic</span></td><td class="hi"><span class="val">Full</span></td></tr>
+          <tr><td>14-day lead nurture sequence</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Automatic review requests</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Win-back campaigns</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr class="sep"><td colspan="3">Reporting</td></tr>
+          <tr><td>Monthly performance report</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Full reporting dashboard</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Ongoing optimization</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Setup</td><td><span class="val">$1,500</span></td><td class="hi"><span class="val">$3,500</span></td></tr>
+          <tr><td>Monthly</td><td><span class="val">$297/mo</span></td><td class="hi"><span class="val">$497/mo</span></td></tr>
+          <tr class="cta-r"><td></td><td><a href="/#contact" class="tcta tcta-o">Get Essentials</a></td><td class="hi"><a href="/#contact" class="tcta tcta-g">Get Full System</a></td></tr>
+        </tbody></table></div>
+        <p style="text-align:center;font-size:0.78rem;color:var(--tx3);margin-top:1.25rem">Works with your existing website. 90-day minimum, then month-to-month.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SITE CARE -->
+  <section class="psec" id="sec-care">
+    <div class="wrap">
+      <div class="sh r"><h2>Your site, maintained. Without thinking about it.</h2><p>Hosting, security, backups, and updates handled for you.</p></div>
+      <div class="care-cards r">
+        <div class="care-card">
+          <div class="care-label">Basic</div>
+          <div class="care-price"><span class="care-amt">$25</span><span class="care-per">/mo</span></div>
+          <p class="care-desc">Hosting and peace of mind.</p>
+          <div class="care-div"></div>
+          <ul class="care-feats"><li>Fast, reliable hosting</li><li>Security monitoring</li><li>Uptime monitoring</li><li>Updates billed at $100/hr</li></ul>
+          <a href="/#contact" class="cbtn cbtn-o">Get Started</a>
+        </div>
+        <div class="care-card pop">
+          <div class="card-tag">Most Popular</div>
+          <div class="care-label">Standard</div>
+          <div class="care-price"><span class="care-amt">$60</span><span class="care-per">/mo</span></div>
+          <p class="care-desc">Hosting plus hands-on support.</p>
+          <div class="care-div"></div>
+          <ul class="care-feats"><li>Fast, reliable hosting</li><li>Security monitoring</li><li>Uptime monitoring</li><li>2 hrs/mo content and copy updates (unused hours roll over, up to 12 hrs)</li><li>Priority email support</li><li>Monthly backup</li></ul>
+          <a href="/#contact" class="cbtn cbtn-g">Get Started</a>
+        </div>
+        <div class="care-card">
+          <div class="care-label">Pro</div>
+          <div class="care-price"><span class="care-amt">$100</span><span class="care-per">/mo</span></div>
+          <p class="care-desc">Full-service, actively maintained.</p>
+          <div class="care-div"></div>
+          <ul class="care-feats"><li>Fast, reliable hosting</li><li>Security monitoring</li><li>Uptime monitoring</li><li>4 hrs/mo updates (unused hours roll over, up to 24 hrs)</li><li>Priority email support</li><li>Monthly backup</li><li>SEO tweaks included</li></ul>
+          <a href="/#contact" class="cbtn cbtn-dk">Get Started</a>
+        </div>
+      </div>
+      <div class="adhoc r">
+        <div><h4>Need a one-off change?</h4><p>Not on a plan? We handle updates at a flat hourly rate.</p></div>
+        <div><div class="adhoc-price">$100</div><span class="adhoc-unit">per hour</span></div>
+      </div>
+      <div class="cmp r">
+        <div class="sh"><h2>Compare care plans.</h2><p>Everything side by side.</p></div>
+        <div class="tw"><table class="t"><thead><tr><th>Feature</th><th>Basic</th><th class="hi">Standard</th><th>Pro</th></tr></thead><tbody>
+          <tr><td>Hosting</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Security monitoring</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Uptime monitoring</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Monthly backup</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Priority email support</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Content updates</td><td><span class="val">$100/hr</span></td><td class="hi"><span class="val">2 hrs/mo</span></td><td><span class="val">4 hrs/mo</span></td></tr>
+          <tr><td>Unused hours roll over</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="val">Up to 12 hrs</span></td><td><span class="val">Up to 24 hrs</span></td></tr>
+          <tr><td>SEO tweaks</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="n">&mdash;</span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Monthly price</td><td><span class="val">$25</span></td><td class="hi"><span class="val">$60</span></td><td><span class="val">$100</span></td></tr>
+          <tr class="cta-r"><td></td><td><a href="/#contact" class="tcta tcta-o">Get Started</a></td><td class="hi"><a href="/#contact" class="tcta tcta-g">Get Started</a></td><td><a href="/#contact" class="tcta tcta-dk">Get Started</a></td></tr>
+        </tbody></table></div>
+        <p style="text-align:center;font-size:0.78rem;color:var(--tx3);margin-top:1.25rem">No contracts. Cancel anytime. You own your site outright.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-sec">
+    <div class="faq-wrap">
+      <div class="faq-head r"><h2>Common questions</h2><p>What people ask before saying yes.</p></div>
+      <div class="faq-item r"><div class="faq-q"><h4>How do you build sites this fast?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Modern tooling and a lean workflow. You talk directly to the people building your site. No account managers, no layers. Most clients see their first review within 72 hours.</p></div></div>
+      <div class="faq-item r"><div class="faq-q"><h4>What if my site just needs a refresh, not a full rebuild?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>That is what the $1,500 Starter Refresh is for. We redesign your homepage, clean up the copy and CTAs, and make it look sharp on mobile. If you later want a full rebuild, everything carries forward.</p></div></div>
+      <div class="faq-item r"><div class="faq-q"><h4>Do I need a new website to use the conversion system?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>No. The conversion system plugs into your existing site. We connect it to your current forms and phone number. A strong site paired with strong follow-up is where the results compound, which is why the bundle exists.</p></div></div>
+      <div class="faq-item r"><div class="faq-q"><h4>What is the monthly fee for on the conversion plans?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>It covers the platform that powers your texts, emails, and automations, plus ongoing optimization and monthly reporting. 90-day minimum, then month-to-month. No long-term contracts.</p></div></div>
+      <div class="faq-item r"><div class="faq-q"><h4>Can I cancel site care anytime?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Yes. No contracts, no cancellation fees. You own your site outright regardless of whether you stay on a care plan.</p></div></div>
+      <div class="faq-item r"><div class="faq-q"><h4>Do unused site care hours roll over?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Yes. On Standard, unused hours accumulate up to 12 total. On Pro, up to 24. So if you have a quiet few months and then need a bigger update, you have the hours banked. Anything beyond your balance is billed at $100/hr, and we always let you know before going over.</p></div></div>
+      <div class="faq-item r"><div class="faq-q"><h4>Why a boutique studio instead of an agency?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Speed and direct access. You work with the founders, not account managers. That keeps projects focused and timelines short.</p></div></div>
+    </div>
+  </section>
+
+  <section class="bcta r">
+    <div class="bcta-inner">
+      <h2>Ready to see what your website is costing you?</h2>
+      <p>Get a clear, honest review and what we would change.</p>
+      <div class="bcta-btns">
+        <a href="/#contact" class="bcta-p">Get My Free Site Review</a>
+        <a href="mailto:hello@tmncreative.com" class="bcta-s">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fl">TMN Creative &middot; <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></div>
+    <div class="fr">&copy; 2026 True Margin North LLC &middot; <a href="https://truemarginnorth.com" target="_blank" rel="noopener">truemarginnorth.com</a></div>
+  </footer>
+
+  <script>
+    (function(){
+      var tabs=document.querySelectorAll('.tab');
+      var secs=document.querySelectorAll('.psec');
+      function activate(id){
+        tabs.forEach(function(t){t.classList.toggle('active',t.dataset.sec===id)});
+        secs.forEach(function(s){s.classList.toggle('active',s.id==='sec-'+id)});
+        var sec=document.getElementById('sec-'+id);
+        if(sec&&obs)sec.querySelectorAll('.r:not(.vis)').forEach(function(el){obs.observe(el)});
+      }
+      tabs.forEach(function(tab){
+        tab.addEventListener('click',function(){
+          var id=tab.dataset.sec;
+          activate(id);
+          try{history.replaceState(null,null,'#'+id)}catch(e){}
+          var sec=document.getElementById('sec-'+id);
+          if(sec)sec.scrollIntoView({behavior:'smooth',block:'start'});
+        });
+      });
+      var hash=location.hash.replace('#','');
+      if(hash==='care'||hash==='conversion'||hash==='websites')activate(hash);
+    })();
+    var obs;
+    try{
+      obs=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('vis');obs.unobserve(en.target)}})},{threshold:0.06,rootMargin:'0px 0px -30px 0px'});
+      document.querySelectorAll('.r').forEach(function(el){obs.observe(el)});
+    }catch(e){document.querySelectorAll('.r').forEach(function(el){el.classList.add('vis')})}
+    try{document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){q.parentElement.classList.toggle('open')})})}catch(e){}
+  </script>
+</body>
+</html>

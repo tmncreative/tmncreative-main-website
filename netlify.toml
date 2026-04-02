@@ -11,6 +11,11 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
 [[redirects]]
+  from = "/pricing"
+  to = "/pricing.html"
+  status = 200
+
+[[redirects]]
   from = "/pay"
   to = "/pay.html"
   status = 200

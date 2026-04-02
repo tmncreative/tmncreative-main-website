@@ -213,9 +213,13 @@
     .test-role{font-size:0.68rem;font-weight:500;color:var(--tx3);margin-top:0.15rem}
     .r.v .test-card{opacity:0;animation:fu 0.6s var(--e) forwards}
     .r.v .test-card:nth-child(1){animation-delay:0.05s}
-    .r.v .test-card:nth-child(2){animation-delay:0.12s}
-    .r.v .test-card:nth-child(3){animation-delay:0.19s}
-    @media(max-width:768px){.test-grid{grid-template-columns:1fr;gap:0.85rem}.test-card{padding:1.75rem;border-radius:14px}.test-quote{font-size:0.84rem}}
+    .r.v .test-card:nth-child(2){animation-delay:0.1s}
+    .r.v .test-card:nth-child(3){animation-delay:0.15s}
+    .r.v .test-card:nth-child(4){animation-delay:0.2s}
+    .r.v .test-card:nth-child(5){animation-delay:0.25s}
+    .r.v .test-card:nth-child(6){animation-delay:0.3s}
+    @media(max-width:900px){.test-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.test-grid{grid-template-columns:1fr;gap:0.85rem}.test-card{padding:1.75rem;border-radius:14px}.test-quote{font-size:0.84rem}}
 
     /* SERVICES - TABBED */
     .svc-tabs{display:flex;gap:0.35rem;margin-bottom:2.5rem;background:rgba(255,255,255,0.04);border-radius:12px;padding:0.3rem;border:1px solid rgba(255,255,255,0.06)}
@@ -288,6 +292,34 @@
     @media(max-width:900px){.faq-layout{grid-template-columns:1fr;gap:1.5rem}}
     @media(max-width:768px){.faq-item{padding:1.1rem 0}.faq-q h4{font-size:0.86rem;line-height:1.45}.faq-a p{font-size:0.84rem;line-height:1.7}.faq-tog{width:24px;height:24px;border-radius:7px}}
 
+    /* BEFORE/AFTER */
+    .ba-sec{padding:6.5rem 0;background:var(--bg);overflow:hidden}
+    .ba-header{text-align:center;padding:0 2rem;margin-bottom:3rem}
+    .ba-track{display:flex;gap:2rem;padding:0 3rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none}
+    .ba-track::-webkit-scrollbar{display:none}
+    .ba-card{flex-shrink:0;width:520px;scroll-snap-align:start;position:relative}
+    .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:3px;border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(15,23,42,0.08);border:1px solid var(--ln)}
+    .ba-side{position:relative;overflow:hidden}
+    .ba-side img{width:100%;height:280px;object-fit:cover;object-position:top;display:block}
+    .ba-label{position:absolute;top:0.6rem;left:0.6rem;font-size:0.5rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:0.2rem 0.55rem;border-radius:5px;z-index:1}
+    .ba-label-b{background:rgba(15,23,42,0.7);color:rgba(255,255,255,0.7);backdrop-filter:blur(8px)}
+    .ba-label-a{background:var(--ac);color:var(--dk3)}
+    .ba-info{padding:1rem 0.25rem 0;display:flex;justify-content:space-between;align-items:center}
+    .ba-name{font-size:0.85rem;font-weight:700;color:var(--dk);letter-spacing:-0.01em}
+    .ba-type{font-size:0.58rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--tx3)}
+    .ba-link{font-size:0.68rem;font-weight:600;color:var(--ac);text-decoration:none;opacity:0.7;transition:opacity 0.2s}
+    .ba-link:hover{opacity:1}
+    @media(max-width:768px){.ba-sec{padding:4.5rem 0}.ba-track{padding:0 1.25rem;gap:1.25rem}.ba-card{width:min(340px,85vw)}.ba-side img{height:200px}.ba-header{margin-bottom:2rem;text-align:left;padding:0 1.25rem}}
+
+    /* PHONE CTA */
+    .phone-cta{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:600;color:var(--ac);text-decoration:none;margin-top:0.5rem;transition:opacity 0.2s}
+    .phone-cta:hover{opacity:0.7}
+    .phone-cta svg{width:14px;height:14px;stroke:var(--ac);stroke-width:2;fill:none}
+    .contact-links{margin-top:1.25rem;font-size:0.8rem;color:var(--tx3);display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap}
+    .contact-links a{color:var(--ac);text-decoration:none;font-weight:600}
+    .contact-links .sep{color:var(--tx3)}
+    @media(max-width:600px){.contact-links{flex-direction:column;align-items:flex-start;gap:0.4rem}.contact-links .sep{display:none}}
+
     /* CONTACT */
     .contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:4rem;align-items:start}
     .ct-text h2{color:var(--dk);font-family:var(--fs)}
@@ -309,7 +341,7 @@
     .hidden{display:none}
     .form-sub{width:100%;font-family:var(--fn);font-size:0.82rem;font-weight:600;color:#fff;background:var(--dk);border:none;padding:0.9rem;cursor:pointer;border-radius:10px;transition:all 0.3s var(--e);margin-top:0.25rem;box-shadow:0 2px 8px rgba(15,23,42,0.1)}
     .form-sub:hover{background:var(--dk2);transform:translateY(-2px);box-shadow:0 12px 35px rgba(15,23,42,0.18)}
-    @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:2.5rem}.form-row{grid-template-columns:1fr;gap:0}.form-card{padding:1.75rem;border-radius:14px}.fg input,.fg select,.fg textarea{font-size:16px;padding:0.8rem 0.9rem;border-radius:10px}.ct-text>p{font-size:0.9rem;margin-bottom:1.5rem;line-height:1.7}.form-sub{padding:0.9rem;border-radius:10px;font-size:0.84rem}}
+    @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:2.5rem}.form-row{grid-template-columns:1fr;gap:0}.form-card{padding:1.75rem;border-radius:14px}.fg input,.fg select,.fg textarea{font-size:16px;padding:0.8rem 0.9rem;border-radius:10px}.ct-text>p{font-size:0.9rem;margin-bottom:1.5rem;line-height:1.7}.form-sub{padding:1rem;border-radius:12px;font-size:0.86rem;min-height:48px}}
 
     /* CTA */
     .cta{background:var(--dk3);padding:6rem 3rem;text-align:center;position:relative;overflow:hidden}
@@ -359,9 +391,8 @@
     <a href="#" class="nl"><img src="images/logo-dark.png" alt="TMN Creative" class="nav-logo" /></a>
     <div class="nr">
       <a href="#proof" class="nk">Work</a>
-      <a href="#services" class="nk">Services</a>
+      <a href="/pricing" class="nk">Pricing</a>
       <a href="#faq" class="nk">FAQ</a>
-      <a href="/care" class="nk">Site Care</a>
       <a href="/pay" class="nk">Client Portal</a>
       <a href="#contact" class="nb">Start a Project</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span></button>
@@ -369,9 +400,8 @@
   </nav>
   <div class="mob-menu" id="mobMenu">
     <a href="#proof" class="mob-link">Work</a>
-    <a href="#services" class="mob-link">Services</a>
+    <a href="/pricing" class="mob-link">Pricing</a>
     <a href="#faq" class="mob-link">FAQ</a>
-    <a href="/care" class="mob-link">Site Care</a>
     <a href="/pay" class="mob-link">Client Portal</a>
     <a href="#contact" class="mob-link mob-cta">Start a Project</a>
   </div>
@@ -415,19 +445,19 @@
     <div class="port-header r"><span class="badge">Selected Work</span><h2 class="stl" style="color:#fff">Built by us. Live right&nbsp;now.</h2><p class="sdsc" style="color:rgba(255,255,255,0.4);margin:0 auto">Real sites. Real businesses. Click to see them live.</p></div>
     <div class="port-wrap">
       <div class="port-track">
-        <a href="https://qcatlantic.com" target="_blank" rel="noopener" class="port-item"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">qcatlantic.com</span></div><img src="images/qca.jpg" alt="QC Atlantic" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">B2B / Car Wash Chemistry</div><h3>QC Atlantic</h3><div class="port-tag">Full brand and site build</div></div><span class="port-arrow">→</span></div></a>
         <a href="https://truemarginnorth.com" target="_blank" rel="noopener" class="port-item"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">truemarginnorth.com</span></div><img src="images/tmn.jpg" alt="True Margin North" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Consultancy</div><h3>True Margin North</h3><div class="port-tag">Credibility upgrade</div></div><span class="port-arrow">→</span></div></a>
-        <a href="https://elmorehomeservices.netlify.app" target="_blank" rel="noopener" class="port-item"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">elmorehomeservices.com</span></div><img src="images/ehs.jpg" alt="Elmore Home Services" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Home Services</div><h3>Elmore Home Services</h3><div class="port-tag">Trust and credibility update</div></div><span class="port-arrow">→</span></div></a>
-        <a href="https://www.diamondhirrigation.com" target="_blank" rel="noopener" class="port-item"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">diamondhirrigation.com</span></div><img src="images/dh.jpg" alt="Diamond H Irrigation" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Home Services</div><h3>Diamond H Irrigation</h3><div class="port-tag">Lead-gen rebuild</div></div><span class="port-arrow">→</span></div></a>
         <a href="https://tonyslawntree.com" target="_blank" rel="noopener" class="port-item"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">tonyslawntree.com</span></div><img src="images/tlt.jpg" alt="Tony's Lawn & Tree" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Landscaping</div><h3>Tony's Lawn &amp; Tree</h3><div class="port-tag">Conversion-focused redesign</div></div><span class="port-arrow">→</span></div></a>
+        <a href="https://qcatlantic.com" target="_blank" rel="noopener" class="port-item"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">qcatlantic.com</span></div><img src="images/qca.jpg" alt="QC Atlantic" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">B2B / Car Wash Chemistry</div><h3>QC Atlantic</h3><div class="port-tag">Full brand and site build</div></div><span class="port-arrow">→</span></div></a>
+        <a href="https://www.diamondhirrigation.com" target="_blank" rel="noopener" class="port-item"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">diamondhirrigation.com</span></div><img src="images/dh.jpg" alt="Diamond H Irrigation" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Home Services</div><h3>Diamond H Irrigation</h3><div class="port-tag">Lead-gen rebuild</div></div><span class="port-arrow">→</span></div></a>
+        <a href="https://elmorehomeservices.netlify.app" target="_blank" rel="noopener" class="port-item"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">elmorehomeservices.com</span></div><img src="images/ehs.jpg" alt="Elmore Home Services" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Home Services</div><h3>Elmore Home Services</h3><div class="port-tag">Trust and credibility update</div></div><span class="port-arrow">→</span></div></a>
         <a href="https://noteserv.netlify.app" target="_blank" rel="noopener" class="port-item"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">noteserv.netlify.app</span></div><img src="images/ns.jpg" alt="NoteServ" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Financial Services</div><h3>NoteServ</h3><div class="port-tag">Positioning refresh</div></div><span class="port-arrow">→</span></div></a>
         <a href="https://marchlifeusa.netlify.app" target="_blank" rel="noopener" class="port-item"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">marchlifeusa.netlify.app</span></div><img src="images/ml.jpg" alt="MarchLife USA" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Healthcare</div><h3>MarchLife USA</h3><div class="port-tag">Premium brand update</div></div><span class="port-arrow">→</span></div></a>
-        <!-- Duplicate set -->
-        <a href="https://qcatlantic.com" target="_blank" rel="noopener" class="port-item" aria-hidden="true"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">qcatlantic.com</span></div><img src="images/qca.jpg" alt="QC Atlantic" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">B2B / Car Wash Chemistry</div><h3>QC Atlantic</h3><div class="port-tag">Full brand and site build</div></div><span class="port-arrow">→</span></div></a>
+        <!-- Duplicate set for infinite scroll -->
         <a href="https://truemarginnorth.com" target="_blank" rel="noopener" class="port-item" aria-hidden="true"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">truemarginnorth.com</span></div><img src="images/tmn.jpg" alt="True Margin North" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Consultancy</div><h3>True Margin North</h3><div class="port-tag">Credibility upgrade</div></div><span class="port-arrow">→</span></div></a>
-        <a href="https://elmorehomeservices.netlify.app" target="_blank" rel="noopener" class="port-item" aria-hidden="true"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">elmorehomeservices.com</span></div><img src="images/ehs.jpg" alt="Elmore Home Services" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Home Services</div><h3>Elmore Home Services</h3><div class="port-tag">Trust and credibility update</div></div><span class="port-arrow">→</span></div></a>
-        <a href="https://www.diamondhirrigation.com" target="_blank" rel="noopener" class="port-item" aria-hidden="true"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">diamondhirrigation.com</span></div><img src="images/dh.jpg" alt="Diamond H Irrigation" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Home Services</div><h3>Diamond H Irrigation</h3><div class="port-tag">Lead-gen rebuild</div></div><span class="port-arrow">→</span></div></a>
         <a href="https://tonyslawntree.com" target="_blank" rel="noopener" class="port-item" aria-hidden="true"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">tonyslawntree.com</span></div><img src="images/tlt.jpg" alt="Tony's Lawn & Tree" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Landscaping</div><h3>Tony's Lawn &amp; Tree</h3><div class="port-tag">Conversion-focused redesign</div></div><span class="port-arrow">→</span></div></a>
+        <a href="https://qcatlantic.com" target="_blank" rel="noopener" class="port-item" aria-hidden="true"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">qcatlantic.com</span></div><img src="images/qca.jpg" alt="QC Atlantic" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">B2B / Car Wash Chemistry</div><h3>QC Atlantic</h3><div class="port-tag">Full brand and site build</div></div><span class="port-arrow">→</span></div></a>
+        <a href="https://www.diamondhirrigation.com" target="_blank" rel="noopener" class="port-item" aria-hidden="true"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">diamondhirrigation.com</span></div><img src="images/dh.jpg" alt="Diamond H Irrigation" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Home Services</div><h3>Diamond H Irrigation</h3><div class="port-tag">Lead-gen rebuild</div></div><span class="port-arrow">→</span></div></a>
+        <a href="https://elmorehomeservices.netlify.app" target="_blank" rel="noopener" class="port-item" aria-hidden="true"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">elmorehomeservices.com</span></div><img src="images/ehs.jpg" alt="Elmore Home Services" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Home Services</div><h3>Elmore Home Services</h3><div class="port-tag">Trust and credibility update</div></div><span class="port-arrow">→</span></div></a>
         <a href="https://noteserv.netlify.app" target="_blank" rel="noopener" class="port-item" aria-hidden="true"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">noteserv.netlify.app</span></div><img src="images/ns.jpg" alt="NoteServ" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Financial Services</div><h3>NoteServ</h3><div class="port-tag">Positioning refresh</div></div><span class="port-arrow">→</span></div></a>
         <a href="https://marchlifeusa.netlify.app" target="_blank" rel="noopener" class="port-item" aria-hidden="true"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">marchlifeusa.netlify.app</span></div><img src="images/ml.jpg" alt="MarchLife USA" loading="lazy" /></div><div class="port-meta"><div><div class="port-type">Healthcare</div><h3>MarchLife USA</h3><div class="port-tag">Premium brand update</div></div><span class="port-arrow">→</span></div></a>
       </div>
@@ -439,10 +469,52 @@
     </div>
   </section>
 
+  <!-- BEFORE & AFTER -->
+  <section class="ba-sec">
+    <div class="ba-header r"><span class="badge">Before &amp; After</span><h2 class="stl">The difference is immediate.</h2><p class="sdsc" style="margin:0 auto">Swipe to see what a TMN Creative rebuild looks like next to the original.</p></div>
+    <div class="ba-track">
+      <div class="ba-card r">
+        <div class="ba-pair">
+          <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-jack-before.jpg" alt="Jack Ciapciak old site" loading="lazy" /></div>
+          <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-jack-after.jpg" alt="Jack Ciapciak TMN rebuild" loading="lazy" /></div>
+        </div>
+        <div class="ba-info"><div><div class="ba-name">Jack Ciapciak</div><div class="ba-type">Writer / Producer</div></div><a href="https://jackciapciak.netlify.app/" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
+      </div>
+      <div class="ba-card r">
+        <div class="ba-pair">
+          <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-wolfpack-before.jpg" alt="Wolfpack S&C old site" loading="lazy" /></div>
+          <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-wolfpack-after.jpg" alt="Wolfpack S&C TMN rebuild" loading="lazy" /></div>
+        </div>
+        <div class="ba-info"><div><div class="ba-name">Wolfpack Strength &amp; Conditioning</div><div class="ba-type">Fitness / Camps</div></div><a href="https://coachcristi.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
+      </div>
+      <div class="ba-card r">
+        <div class="ba-pair">
+          <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-pools-before.jpg" alt="Pleasant Pools old site" loading="lazy" /></div>
+          <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-pools-after.jpg" alt="Pleasant Pools TMN rebuild" loading="lazy" /></div>
+        </div>
+        <div class="ba-info"><div><div class="ba-name">Pleasant Pools</div><div class="ba-type">Pool Service / Scottsdale</div></div><a href="https://pleasantpools.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
+      </div>
+      <div class="ba-card r">
+        <div class="ba-pair">
+          <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-rehab-before.jpg" alt="Property Rehab old site" loading="lazy" /></div>
+          <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-rehab-after.jpg" alt="Property Rehab TMN rebuild" loading="lazy" /></div>
+        </div>
+        <div class="ba-info"><div><div class="ba-name">Property Rehab Services</div><div class="ba-type">Remodeling / Fort Worth</div></div><a href="https://propertyrehab.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
+      </div>
+      <div class="ba-card r">
+        <div class="ba-pair">
+          <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-trailer-before.jpg" alt="Trailer Builder old site" loading="lazy" /></div>
+          <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-trailer-after.jpg" alt="Trailer Builder TMN rebuild" loading="lazy" /></div>
+        </div>
+        <div class="ba-info"><div><div class="ba-name">Trailer Builder</div><div class="ba-type">Custom Food Trailers / DFW</div></div><a href="https://newdesign4pepe.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
+      </div>
+    </div>
+  </section>
+
   <!-- TESTIMONIALS -->
   <section class="sec">
     <div class="wrap">
-      <div class="sec-header center r"><span class="badge">What Clients Say</span><h2 class="stl">Real feedback from real projects.</h2></div>
+      <div class="sec-header center r"><span class="badge">What Clients Say</span><h2 class="stl">Real feedback from real projects.</h2><p class="sdsc" style="margin:0 auto">5.0 &#9733; on <a href="https://maps.app.goo.gl/hf37L4ca44xjHiKe8" target="_blank" rel="noopener" style="color:var(--ac);text-decoration:none;font-weight:600">Google</a></p></div>
       <div class="test-grid r">
         <div class="test-card">
           <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
@@ -451,13 +523,28 @@
         </div>
         <div class="test-card">
           <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="test-quote">I am not a tech person. I just needed something that looked clean and made my business look legit. Trevor and Taylor handled everything, explained what they were doing in plain English, and had us live in under a week. Easiest vendor experience I have had in years.</p>
-          <div class="test-author"><div class="test-name">Jose M.</div><div class="test-role">Tony's Lawn &amp; Tree, Fort Worth</div></div>
+          <p class="test-quote">Really great experience working with Trevor and Taylor. They got what we needed right away and made the whole site feel cleaner, more modern, and credible. Insanely huge step up from where we were before. 10000% recommend.</p>
+          <div class="test-author"><div class="test-name">Michael M.</div><div class="test-role">Google Review</div></div>
         </div>
         <div class="test-card">
           <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p class="test-quote">I talked to 3 agencies before finding TMN. Every one of them quoted 8 to 12 weeks and $10K+. Trevor had something in my inbox in 48 hours that was better than anything they showed me. The whole process was painless and the final product actually looks like us.</p>
           <div class="test-author"><div class="test-name">Cody E.</div><div class="test-role">Elmore Home Services, Dallas</div></div>
+        </div>
+        <div class="test-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-quote">I showed Winston the site and his exact words were "like he couldn't have nailed it any more." That is the reaction you want your customers to have. Trevor and Taylor deliver at a level that makes you look like a much bigger operation than you are.</p>
+          <div class="test-author"><div class="test-name">Jonathan T.</div><div class="test-role">Client Referral, QC Atlantic</div></div>
+        </div>
+        <div class="test-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-quote">Straightforward process. I appreciated that they actually looked at my business before the call instead of asking me 40 questions I already answered in the form. Site looks clean and professional. Exactly what I asked for and in record fast time.</p>
+          <div class="test-author"><div class="test-name">Ryan O.</div><div class="test-role">Google Review</div></div>
+        </div>
+        <div class="test-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-quote">I am not a tech person. I just needed something that looked clean and made my business look legit. Trevor and Taylor handled everything, explained what they were doing in plain English, and had us live in under a week. Easiest vendor experience I have had in years.</p>
+          <div class="test-author"><div class="test-name">Jose M.</div><div class="test-role">Tony's Lawn &amp; Tree, Fort Worth</div></div>
         </div>
       </div>
     </div>
@@ -488,10 +575,10 @@
         <!-- WEBSITE TAB -->
         <div class="svc-panel active" id="panel-website">
           <div class="svc-grid-2">
-            <div class="svc-card"><h3>Starter Refresh</h3><div class="svc-price">$1,500</div><div class="svc-desc">A fast, focused upgrade for businesses that need to look sharp now.</div><ul class="svc-list"><li>One high-impact homepage redesign</li><li>Clean, mobile-optimized build</li><li>Light copy cleanup and CTA structure</li><li>Delivered within 5 business days</li></ul><a href="#contact" class="svc-btn svc-btn-s">Get a Refresh</a></div>
+            <div class="svc-card"><h3>Starter Refresh</h3><div class="svc-price">$1,500</div><div class="svc-desc">A fast, focused upgrade for businesses that need to look sharp now.</div><ul class="svc-list"><li>One high-impact homepage redesign</li><li>Clean, mobile-optimized build</li><li>Light copy cleanup and CTA structure</li><li>First review within 72 hours</li></ul><a href="#contact" class="svc-btn svc-btn-s">Get a Refresh</a></div>
             <div class="svc-card pop"><div class="svc-tag">Flagship</div><h3>Full Site Rebuild</h3><div class="svc-price">Starting at $2,500</div><ul class="svc-list"><li>Strategic homepage or multi-page redesign</li><li>Messaging and positioning refinement</li><li>Mobile-first, high-performance build</li><li>Conversion flow and CTA optimization</li><li>Core SEO foundations included</li><li>Most clients see their first review within 72 hours</li></ul><a href="#contact" class="svc-btn svc-btn-p">Start a Rebuild</a></div>
           </div>
-          <p class="svc-note">Optional website support plans from $25/mo. <a href="/care">Learn more</a></p>
+          <p class="svc-note">Optional website support plans from $25/mo. <a href="/pricing#care">Learn more</a></p>
         </div>
 
         <!-- CONVERSION TAB -->
@@ -555,21 +642,27 @@
           <div class="chk"><div class="chk-dot"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div><span>Honest assessment of what we would change</span></div>
           <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--ln)">
             <p style="font-size:0.85rem;color:var(--tx2);line-height:1.65;margin-bottom:0.75rem">We are operators first, designers second. Based in Fort Worth, Texas, we think about trust, speed, margins, and booked jobs. Not just pixels. When you work with us, you get direct collaboration from day one. No agency layers. No handoffs.</p>
-            <div style="display:flex;gap:1rem;align-items:center">
+            <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
               <a href="https://www.linkedin.com/in/taylor-niemann-ab86033aa/" target="_blank" rel="noopener" style="font-size:0.72rem;font-weight:600;color:var(--ac);text-decoration:none;display:inline-flex;align-items:center;gap:0.35rem;opacity:0.7;transition:opacity 0.2s"><svg width="13" height="13" viewBox="0 0 24 24" fill="var(--ac)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Taylor</a>
               <a href="https://www.linkedin.com/in/niemann29/" target="_blank" rel="noopener" style="font-size:0.72rem;font-weight:600;color:var(--ac);text-decoration:none;display:inline-flex;align-items:center;gap:0.35rem;opacity:0.7;transition:opacity 0.2s"><svg width="13" height="13" viewBox="0 0 24 24" fill="var(--ac)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Trevor</a>
             </div>
           </div>
-          <div style="margin-top:1.25rem;font-size:0.8rem;color:var(--tx3)">Or <a href="https://calendly.com/tmn-pricing-conversation/websitereview" target="_blank" rel="noopener" style="color:var(--ac);text-decoration:none;font-weight:600">book a call directly</a> &middot; <a href="mailto:hello@tmncreative.com" style="color:var(--ac);text-decoration:none;font-weight:600">hello@tmncreative.com</a></div>
+          <div class="contact-links">
+            <a href="tel:6822313202" class="phone-cta"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>(682) 231-3202</a>
+            <span class="sep">&middot;</span>
+            <a href="https://calendly.com/tmn-pricing-conversation/websitereview" target="_blank" rel="noopener">Book a call</a>
+            <span class="sep">&middot;</span>
+            <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a>
+          </div>
         </div>
         <div class="form-card r rd1">
           <form name="tmn-creative-intake" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="tmn-creative-intake" />
             <p class="hidden"><label>Ignore:<input name="bot-field" /></label></p>
             <div class="form-row"><div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="John Smith" required /></div><div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="john@company.com" required /></div></div>
-            <div class="form-row"><div class="fg"><label for="business">Business Name</label><input type="text" id="business" name="business" placeholder="Smith Plumbing" required /></div><div class="fg"><label for="website">Current Website</label><input type="text" id="website" name="website" placeholder="https://yoursite.com (optional)" /></div></div>
-            <div class="fg full"><label for="service">What do you need help with?</label><select id="service" name="service" required><option value="" disabled selected>Select a service</option><option value="starter">Starter Refresh ($1,500)</option><option value="rebuild">Full Site Rebuild (Starting at $2,500)</option><option value="conversion-essentials">Conversion Essentials ($1,500 + $297/mo)</option><option value="conversion-full">Full Conversion System ($3,500 + $497/mo)</option><option value="full-build">The Full Build: Site + Conversion System</option><option value="not-sure">Not sure yet, just want to talk</option></select></div>
-            <div class="fg full"><label for="details">What would you like to improve?</label><textarea id="details" name="details" placeholder="Tell us about your business and what you are hoping to fix or improve."></textarea></div>
+            <div class="fg"><label for="website">Current Website (if you have one)</label><input type="text" id="website" name="website" placeholder="https://yoursite.com" /></div>
+            <div class="fg"><label for="service">What do you need help with?</label><select id="service" name="service" required><option value="" disabled selected>Select a service</option><option value="starter">Starter Refresh ($1,500)</option><option value="rebuild">Full Site Rebuild (Starting at $2,500)</option><option value="conversion-essentials">Conversion Essentials ($1,500 + $297/mo)</option><option value="conversion-full">Full Conversion System ($3,500 + $497/mo)</option><option value="full-build">The Full Build: Site + Conversion System</option><option value="site-care">Site Care Plan</option><option value="not-sure">Not sure yet, just want to talk</option></select></div>
+            <div class="fg"><label for="details">Anything else we should know?</label><textarea id="details" name="details" placeholder="Tell us about your business and what you are hoping to fix or improve."></textarea></div>
             <button type="submit" class="form-sub">Get My Free Site Review</button>
           </form>
         </div>
