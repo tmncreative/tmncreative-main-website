@@ -284,51 +284,61 @@
     @media(max-width:900px){.faq-layout{grid-template-columns:1fr;gap:1.5rem}}
     @media(max-width:768px){.faq-item{padding:1.1rem 0}.faq-q h4{font-size:0.86rem;line-height:1.45}.faq-a p{font-size:0.84rem;line-height:1.7}.faq-tog{width:24px;height:24px;border-radius:7px}}
 
-    /* BEFORE/AFTER SLIDER */
+    /* BEFORE/AFTER COMPARISON SLIDER */
     .ba-sec{padding:6.5rem 0;background:var(--bg);overflow:hidden}
     .ba-header{text-align:center;padding:0 2rem;margin-bottom:3rem}
-    .ba-wrap{max-width:620px;margin:0 auto;padding:0 2rem;position:relative}
+    .ba-wrap{max-width:680px;margin:0 auto;padding:0 2rem;position:relative}
     .ba-slider{position:relative;overflow:hidden}
-    .ba-track{display:flex;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1)}
-    .ba-card{flex-shrink:0;width:100%;position:relative}
-    .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:3px;border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(15,23,42,0.08);border:1px solid var(--ln)}
-    .ba-side{position:relative;overflow:hidden}
-    .ba-side img{width:100%;height:320px;object-fit:cover;object-position:top;display:block}
-    .ba-label{position:absolute;top:0.6rem;left:0.6rem;font-size:0.5rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:0.2rem 0.55rem;border-radius:5px;z-index:1}
-    .ba-label-b{background:rgba(15,23,42,0.7);color:rgba(255,255,255,0.7);backdrop-filter:blur(8px)}
-    .ba-label-a{background:var(--ac);color:var(--dk3)}
+    .ba-slide-track{display:flex;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1)}
+    .ba-slide{flex-shrink:0;width:100%}
+    /* Comparison viewer */
+    .ba-compare{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(15,23,42,0.08);border:1px solid var(--ln);cursor:col-resize;-webkit-user-select:none;user-select:none;touch-action:pan-y}
+    .ba-compare img{display:block;width:100%;height:380px;object-fit:cover;object-position:top}
+    .ba-img-after{position:absolute;inset:0}
+    .ba-img-after img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:top}
+    .ba-clip{position:absolute;inset:0;overflow:hidden;width:50%}
+    .ba-divider{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%);z-index:3;box-shadow:0 0 12px rgba(0,0,0,0.3)}
+    .ba-handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.25);z-index:4;display:flex;align-items:center;justify-content:center;transition:transform 0.15s}
+    .ba-handle:active{transform:translate(-50%,-50%) scale(1.1)}
+    .ba-handle svg{width:18px;height:18px;stroke:var(--dk);stroke-width:2;fill:none}
+    .ba-tag{position:absolute;bottom:0.75rem;font-size:0.52rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:0.22rem 0.6rem;border-radius:5px;z-index:2;pointer-events:none}
+    .ba-tag-b{left:0.75rem;background:rgba(15,23,42,0.75);color:rgba(255,255,255,0.8);backdrop-filter:blur(8px)}
+    .ba-tag-a{right:0.75rem;background:var(--ac);color:var(--dk3)}
     .ba-info{padding:1.25rem 0.25rem 0;display:flex;justify-content:space-between;align-items:center}
     .ba-name{font-size:0.88rem;font-weight:700;color:var(--dk);letter-spacing:-0.01em}
     .ba-type{font-size:0.58rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--tx3)}
     .ba-link{font-size:0.68rem;font-weight:600;color:var(--ac);text-decoration:none;opacity:0.7;transition:opacity 0.2s}
     .ba-link:hover{opacity:1}
-    /* Arrows */
-    .ba-arrow{position:absolute;top:50%;transform:translateY(calc(-50% - 20px));width:40px;height:40px;border-radius:50%;background:var(--bg);border:1px solid var(--ln);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;transition:all 0.2s var(--e);box-shadow:0 2px 8px rgba(15,23,42,0.06)}
-    .ba-arrow:hover{background:var(--bg2);border-color:var(--tx3);box-shadow:0 4px 16px rgba(15,23,42,0.1);transform:translateY(calc(-50% - 20px)) scale(1.05)}
+    .ba-hint{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:0.6rem;font-weight:600;color:#fff;background:rgba(15,23,42,0.6);backdrop-filter:blur(8px);padding:0.35rem 0.85rem;border-radius:100px;z-index:5;pointer-events:none;opacity:1;transition:opacity 0.4s;letter-spacing:0.03em}
+    .ba-compare.dragged .ba-hint{opacity:0}
+    /* Nav arrows */
+    .ba-arrow{position:absolute;top:50%;transform:translateY(calc(-50% - 24px));width:40px;height:40px;border-radius:50%;background:var(--bg);border:1px solid var(--ln);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;transition:all 0.2s var(--e);box-shadow:0 2px 8px rgba(15,23,42,0.06)}
+    .ba-arrow:hover{background:var(--bg2);border-color:var(--tx3);box-shadow:0 4px 16px rgba(15,23,42,0.1);transform:translateY(calc(-50% - 24px)) scale(1.05)}
     .ba-arrow svg{width:14px;height:14px;stroke:var(--tx2);stroke-width:2;fill:none}
     .ba-arrow:hover svg{stroke:var(--dk)}
     .ba-prev{left:-20px}
     .ba-next{right:-20px}
     .ba-arrow.disabled{opacity:0.3;pointer-events:none}
-    /* Dots */
+    /* Dots + counter */
     .ba-dots{display:flex;justify-content:center;gap:0.5rem;margin-top:1.75rem}
     .ba-dot{width:8px;height:8px;border-radius:50%;background:var(--ln);cursor:pointer;transition:all 0.3s var(--e)}
     .ba-dot.active{background:var(--ac);transform:scale(1.2)}
     .ba-dot:hover:not(.active){background:var(--tx3)}
-    /* Counter */
     .ba-counter{text-align:center;margin-top:0.75rem;font-size:0.65rem;font-weight:600;color:var(--tx3);letter-spacing:0.05em}
     @media(max-width:768px){
       .ba-sec{padding:4.5rem 0}
       .ba-wrap{max-width:100%;padding:0 1.25rem}
       .ba-header{margin-bottom:2rem;text-align:left;padding:0 1.25rem}
-      .ba-side img{height:220px}
+      .ba-compare img,.ba-img-after img{height:260px}
       .ba-prev{left:0.5rem;width:36px;height:36px}
       .ba-next{right:0.5rem;width:36px;height:36px}
-      .ba-arrow{transform:translateY(calc(-50% - 16px))}
-      .ba-arrow:hover{transform:translateY(calc(-50% - 16px)) scale(1.05)}
+      .ba-arrow{transform:translateY(calc(-50% - 20px))}
+      .ba-arrow:hover{transform:translateY(calc(-50% - 20px)) scale(1.05)}
       .ba-arrow svg{width:12px;height:12px}
+      .ba-handle{width:36px;height:36px}
+      .ba-handle svg{width:14px;height:14px}
     }
-    @media(max-width:400px){.ba-side img{height:180px}}
+    @media(max-width:400px){.ba-compare img,.ba-img-after img{height:200px}}
 
     /* PHONE CTA */
     .phone-cta{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:600;color:var(--ac);text-decoration:none;margin-top:0.5rem;transition:opacity 0.2s}
@@ -485,45 +495,76 @@
 
   <!-- BEFORE & AFTER -->
   <section class="ba-sec">
-    <div class="ba-header r"><span class="badge">Before &amp; After</span><h2 class="stl">The difference is immediate.</h2><p class="sdsc" style="margin:0 auto">Real sites we rebuilt. Slide through to see the transformation.</p></div>
+    <div class="ba-header r"><span class="badge">Before &amp; After</span><h2 class="stl">The difference is immediate.</h2><p class="sdsc" style="margin:0 auto">Drag the handle to compare. Slide between projects with the arrows.</p></div>
     <div class="ba-wrap r">
       <div class="ba-slider" id="baSlider">
-        <div class="ba-track" id="baTrack">
-          <div class="ba-card">
-            <div class="ba-pair">
-              <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-jack-before.jpg" alt="Jack Ciapciak old site" loading="lazy" width="800" height="720" /></div>
-              <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-jack-after.jpg" alt="Jack Ciapciak TMN rebuild" loading="lazy" width="800" height="720" /></div>
+        <div class="ba-slide-track" id="baTrack">
+
+          <div class="ba-slide">
+            <div class="ba-compare" data-before="images/ba-jack-before.jpg" data-after="images/ba-jack-after.jpg">
+              <img src="images/ba-jack-before.jpg" alt="Jack Ciapciak before" width="800" height="720" />
+              <div class="ba-img-after"><div class="ba-clip"><img src="images/ba-jack-after.jpg" alt="Jack Ciapciak after" width="800" height="720" /></div></div>
+              <div class="ba-divider"></div>
+              <div class="ba-handle"><svg viewBox="0 0 24 24"><polyline points="8,4 4,12 8,20"/><polyline points="16,4 20,12 16,20"/></svg></div>
+              <div class="ba-tag ba-tag-b">Before</div>
+              <div class="ba-tag ba-tag-a">After</div>
+              <div class="ba-hint">Drag to compare</div>
             </div>
             <div class="ba-info"><div><div class="ba-name">Jack Ciapciak</div><div class="ba-type">Writer / Producer</div></div><a href="https://jackciapciak.netlify.app/" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
           </div>
-          <div class="ba-card">
-            <div class="ba-pair">
-              <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-wolfpack-before.jpg" alt="Wolfpack S&C old site" loading="lazy" width="800" height="720" /></div>
-              <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-wolfpack-after.jpg" alt="Wolfpack S&C TMN rebuild" loading="lazy" width="800" height="720" /></div>
+
+          <div class="ba-slide">
+            <div class="ba-compare">
+              <img src="images/ba-wolfpack-before.jpg" alt="Wolfpack S&C before" width="800" height="720" />
+              <div class="ba-img-after"><div class="ba-clip"><img src="images/ba-wolfpack-after.jpg" alt="Wolfpack S&C after" width="800" height="720" /></div></div>
+              <div class="ba-divider"></div>
+              <div class="ba-handle"><svg viewBox="0 0 24 24"><polyline points="8,4 4,12 8,20"/><polyline points="16,4 20,12 16,20"/></svg></div>
+              <div class="ba-tag ba-tag-b">Before</div>
+              <div class="ba-tag ba-tag-a">After</div>
+              <div class="ba-hint">Drag to compare</div>
             </div>
             <div class="ba-info"><div><div class="ba-name">Wolfpack Strength &amp; Conditioning</div><div class="ba-type">Fitness / Camps</div></div><a href="https://coachcristi.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
           </div>
-          <div class="ba-card">
-            <div class="ba-pair">
-              <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-pools-before.jpg" alt="Pleasant Pools old site" loading="lazy" width="800" height="720" /></div>
-              <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-pools-after.jpg" alt="Pleasant Pools TMN rebuild" loading="lazy" width="800" height="720" /></div>
+
+          <div class="ba-slide">
+            <div class="ba-compare">
+              <img src="images/ba-pools-before.jpg" alt="Pleasant Pools before" width="800" height="720" />
+              <div class="ba-img-after"><div class="ba-clip"><img src="images/ba-pools-after.jpg" alt="Pleasant Pools after" width="800" height="720" /></div></div>
+              <div class="ba-divider"></div>
+              <div class="ba-handle"><svg viewBox="0 0 24 24"><polyline points="8,4 4,12 8,20"/><polyline points="16,4 20,12 16,20"/></svg></div>
+              <div class="ba-tag ba-tag-b">Before</div>
+              <div class="ba-tag ba-tag-a">After</div>
+              <div class="ba-hint">Drag to compare</div>
             </div>
             <div class="ba-info"><div><div class="ba-name">Pleasant Pools</div><div class="ba-type">Pool Service / Scottsdale</div></div><a href="https://pleasantpools.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
           </div>
-          <div class="ba-card">
-            <div class="ba-pair">
-              <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-rehab-before.jpg" alt="Property Rehab old site" loading="lazy" width="800" height="720" /></div>
-              <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-rehab-after.jpg" alt="Property Rehab TMN rebuild" loading="lazy" width="800" height="720" /></div>
+
+          <div class="ba-slide">
+            <div class="ba-compare">
+              <img src="images/ba-rehab-before.jpg" alt="Property Rehab before" width="800" height="720" />
+              <div class="ba-img-after"><div class="ba-clip"><img src="images/ba-rehab-after.jpg" alt="Property Rehab after" width="800" height="720" /></div></div>
+              <div class="ba-divider"></div>
+              <div class="ba-handle"><svg viewBox="0 0 24 24"><polyline points="8,4 4,12 8,20"/><polyline points="16,4 20,12 16,20"/></svg></div>
+              <div class="ba-tag ba-tag-b">Before</div>
+              <div class="ba-tag ba-tag-a">After</div>
+              <div class="ba-hint">Drag to compare</div>
             </div>
             <div class="ba-info"><div><div class="ba-name">Property Rehab Services</div><div class="ba-type">Remodeling / Fort Worth</div></div><a href="https://propertyrehab.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
           </div>
-          <div class="ba-card">
-            <div class="ba-pair">
-              <div class="ba-side"><div class="ba-label ba-label-b">Before</div><img src="images/ba-trailer-before.jpg" alt="Trailer Builder old site" loading="lazy" width="800" height="720" /></div>
-              <div class="ba-side"><div class="ba-label ba-label-a">After</div><img src="images/ba-trailer-after.jpg" alt="Trailer Builder TMN rebuild" loading="lazy" width="800" height="720" /></div>
+
+          <div class="ba-slide">
+            <div class="ba-compare">
+              <img src="images/ba-trailer-before.jpg" alt="Trailer Builder before" width="800" height="720" />
+              <div class="ba-img-after"><div class="ba-clip"><img src="images/ba-trailer-after.jpg" alt="Trailer Builder after" width="800" height="720" /></div></div>
+              <div class="ba-divider"></div>
+              <div class="ba-handle"><svg viewBox="0 0 24 24"><polyline points="8,4 4,12 8,20"/><polyline points="16,4 20,12 16,20"/></svg></div>
+              <div class="ba-tag ba-tag-b">Before</div>
+              <div class="ba-tag ba-tag-a">After</div>
+              <div class="ba-hint">Drag to compare</div>
             </div>
             <div class="ba-info"><div><div class="ba-name">Trailer Builder</div><div class="ba-type">Custom Food Trailers / DFW</div></div><a href="https://newdesign4pepe.netlify.app" target="_blank" rel="noopener" class="ba-link">View live &rarr;</a></div>
           </div>
+
         </div>
         <button class="ba-arrow ba-prev disabled" id="baPrev" aria-label="Previous"><svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/></svg></button>
         <button class="ba-arrow ba-next" id="baNext" aria-label="Next"><svg viewBox="0 0 24 24"><polyline points="9,6 15,12 9,18"/></svg></button>
@@ -674,7 +715,7 @@
             <span class="sep">&middot;</span>
             <a href="https://calendly.com/tmn-pricing-conversation/websitereview" target="_blank" rel="noopener">Book a call</a>
             <span class="sep">&middot;</span>
-            <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a>
+            <a href="/cdn-cgi/l/email-protection#7b131e1717143b0f161518091e1a0f120d1e55181416"><span class="__cf_email__" data-cfemail="f098959c9c9fb0849d9e9382959184998695de939f9d">[email&#160;protected]</span></a>
           </div>
         </div>
         <div class="form-card r rd1">
@@ -701,13 +742,13 @@
   </div>
 
   <footer>
-    <div class="foot-l"><img src="images/logo-dark.png" alt="TMN Creative" style="filter:brightness(10)" /> TMN Creative &middot; <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></div>
+    <div class="foot-l"><img src="images/logo-dark.png" alt="TMN Creative" style="filter:brightness(10)" /> TMN Creative &middot; <a href="/cdn-cgi/l/email-protection#6109040d0d0e21150c0f02130400150817044f020e0c"><span class="__cf_email__" data-cfemail="7b131e1717143b0f161518091e1a0f120d1e55181416">[email&#160;protected]</span></a></div>
     <div class="foot-r">&copy; 2026 True Margin North LLC &middot; <a href="https://truemarginnorth.com" target="_blank" rel="noopener">truemarginnorth.com</a></div>
   </footer>
 
   <div class="stk" id="stk"><a href="#contact">Get My Free Site Review</a></div>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     (function(){try{var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js';s.onload=function(){try{var l=new Lenis({duration:1.1,easing:function(t){return Math.min(1,1.001-Math.pow(2,-10*t))},touchMultiplier:2});function r(t){l.raf(t);requestAnimationFrame(r)}requestAnimationFrame(r);document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();l.scrollTo(t,{offset:-50})}});})}catch(e){}};s.onerror=function(){};document.head.appendChild(s)}catch(e){}})();
     try{var nav=document.getElementById('nav'),stk=document.getElementById('stk');var paraSecs=document.querySelectorAll('.port-sec,.cta');window.addEventListener('scroll',function(){var y=window.scrollY;nav.classList.toggle('s',y>60);if(window.innerWidth<=768)stk.classList.toggle('show',y>window.innerHeight*0.5);paraSecs.forEach(function(s){var r=s.getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0){var offset=((r.top/window.innerHeight)-0.5)*-25;s.style.setProperty('--para-y',offset+'px')}})})}catch(e){}
     try{var obs=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('v');obs.unobserve(en.target)}})},{threshold:0.06,rootMargin:'0px 0px -20px 0px'});document.querySelectorAll('.r').forEach(function(el){obs.observe(el)})}catch(e){document.querySelectorAll('.r').forEach(function(el){el.classList.add('v')})}
@@ -716,10 +757,10 @@
     try{document.querySelectorAll('.svc-tab').forEach(function(tab){tab.addEventListener('click',function(){document.querySelectorAll('.svc-tab').forEach(function(t){t.classList.remove('active')});document.querySelectorAll('.svc-panel').forEach(function(p){p.classList.remove('active')});tab.classList.add('active');var panel=document.getElementById('panel-'+tab.dataset.tab);if(panel)panel.classList.add('active')})})}catch(e){}
     try{document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){q.parentElement.classList.toggle('o')})})}catch(e){}
     try{var menuBtn=document.getElementById('menuBtn'),mobMenu=document.getElementById('mobMenu');menuBtn.addEventListener('click',function(){var opening=!mobMenu.classList.contains('open');menuBtn.classList.toggle('active');mobMenu.classList.toggle('open');nav.classList.toggle('mob-open',opening);document.body.style.overflow=opening?'hidden':''});document.querySelectorAll('.mob-link').forEach(function(a){a.addEventListener('click',function(){menuBtn.classList.remove('active');mobMenu.classList.remove('open');nav.classList.remove('mob-open');document.body.style.overflow=''})})}catch(e){}
-    // Before/After Slider
+    // Before/After Comparison Slider
     try{
       var baTrack=document.getElementById('baTrack'),baPrev=document.getElementById('baPrev'),baNext=document.getElementById('baNext'),baDots=document.getElementById('baDots'),baCounter=document.getElementById('baCounter');
-      var baCards=baTrack.querySelectorAll('.ba-card'),baIdx=0,baTotal=baCards.length;
+      var baSlides=baTrack.querySelectorAll('.ba-slide'),baIdx=0,baTotal=baSlides.length;
       // Build dots
       for(var i=0;i<baTotal;i++){var dot=document.createElement('div');dot.className='ba-dot'+(i===0?' active':'');dot.dataset.idx=i;baDots.appendChild(dot)}
       function baGo(idx){
@@ -734,11 +775,34 @@
       baPrev.addEventListener('click',function(){baGo(baIdx-1)});
       baNext.addEventListener('click',function(){baGo(baIdx+1)});
       baDots.addEventListener('click',function(e){var d=e.target.closest('.ba-dot');if(d)baGo(+d.dataset.idx)});
-      // Touch swipe
-      var baTouch={x:0,y:0,t:0,swiping:false};
-      baTrack.addEventListener('touchstart',function(e){var t=e.touches[0];baTouch.x=t.clientX;baTouch.y=t.clientY;baTouch.t=Date.now();baTouch.swiping=true},{passive:true});
-      baTrack.addEventListener('touchend',function(e){if(!baTouch.swiping)return;baTouch.swiping=false;var dx=e.changedTouches[0].clientX-baTouch.x,dy=e.changedTouches[0].clientY-baTouch.y,dt=Date.now()-baTouch.t;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)&&dt<400){if(dx<0)baGo(baIdx+1);else baGo(baIdx-1)}},{passive:true});
-    }catch(e){}
-  </script>
-</body>
-</html>
+
+      // Comparison drag for each .ba-compare
+      document.querySelectorAll('.ba-compare').forEach(function(comp){
+        var clip=comp.querySelector('.ba-clip');
+        var divider=comp.querySelector('.ba-divider');
+        var handle=comp.querySelector('.ba-handle');
+        var dragging=false;
+
+        function setPos(x){
+          var rect=comp.getBoundingClientRect();
+          var pct=Math.max(0,Math.min(1,(x-rect.left)/rect.width));
+          var pctStr=(pct*100)+'%';
+          clip.style.width=pctStr;
+          divider.style.left=pctStr;
+          handle.style.left=pctStr;
+          comp.classList.add('dragged');
+        }
+
+        comp.addEventListener('mousedown',function(e){e.preventDefault();dragging=true;setPos(e.clientX)});
+        window.addEventListener('mousemove',function(e){if(dragging)setPos(e.clientX)});
+        window.addEventListener('mouseup',function(){dragging=false});
+
+        comp.addEventListener('touchstart',function(e){dragging=true;setPos(e.touches[0].clientX)},{passive:true});
+        comp.addEventListener('touchmove',function(e){if(dragging){e.preventDefault();setPos(e.touches[0].clientX)}},{passive:false});
+        comp.addEventListener('touchend',function(){dragging=false},{passive:true});
+      });
+
+      // Swipe between slides (on the wrapper, not on the compare)
+      var swX=0,swT=0;
+      var baWrap=document.querySelector('.ba-wrap');
+      baWrap.addEventListener('touchstart',func

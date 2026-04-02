@@ -181,7 +181,7 @@
           <div class="msg-icon">&#128274;</div>
           <h3>No invoices found</h3>
           <p>We could not find any invoices for that email. Make sure you are using the address your invoice was sent to, or reach out directly.</p>
-          <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a>
+          <a href="/cdn-cgi/l/email-protection#bdd5d8d1d1d2fdc9d0d3decfd8dcc9d4cbd893ded2d0"><span class="__cf_email__" data-cfemail="93fbf6fffffcd3e7fefdf0e1f6f2e7fae5f6bdf0fcfe">[email&#160;protected]</span></a>
         </div>
       </div>
 
@@ -190,7 +190,7 @@
           <div class="msg-icon">&#9888;&#65039;</div>
           <h3>Something went wrong</h3>
           <p id="error-text">Could not retrieve invoices. Please try again or contact us directly.</p>
-          <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a>
+          <a href="/cdn-cgi/l/email-protection#e189848d8d8ea1958c8f8293848095889784cf828e8c"><span class="__cf_email__" data-cfemail="aec6cbc2c2c1eedac3c0cddccbcfdac7d8cb80cdc1c3">[email&#160;protected]</span></a>
         </div>
       </div>
 
@@ -198,11 +198,11 @@
   </main>
 
   <footer>
-    <div class="fl">TMN Creative &nbsp;&middot;&nbsp; <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></div>
+    <div class="fl">TMN Creative &nbsp;&middot;&nbsp; <a href="/cdn-cgi/l/email-protection#b4dcd1d8d8dbf4c0d9dad7c6d1d5c0ddc2d19ad7dbd9"><span class="__cf_email__" data-cfemail="422a272e2e2d02362f2c21302723362b34276c212d2f">[email&#160;protected]</span></a></div>
     <div class="fr">&copy; 2026 True Margin North LLC &middot; <a href="https://truemarginnorth.com" target="_blank" rel="noopener">truemarginnorth.com</a></div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function hideAll(){document.querySelectorAll('.state').forEach(function(el){el.classList.remove('show')})}
     function show(id){var el=document.getElementById(id);if(el)el.classList.add('show')}
 
@@ -242,13 +242,4 @@
         else if(isPaid)html+='<span class="paid-note">No balance due</span>';
         html+='</div></div></div>';
       });
-      document.getElementById('inv-list').innerHTML=html;
-    }
-
-    function fmtDate(s){if(!s)return'';try{return new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}catch(err){return s}}
-    function e(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
-
-    document.addEventListener('keydown',function(ev){if(ev.key==='Enter'&&document.activeElement.id==='email-input')lookupInvoices()});
-  </script>
-</body>
-</html>
+ 
