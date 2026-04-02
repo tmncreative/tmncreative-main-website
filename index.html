@@ -98,6 +98,7 @@
     .hero-sub{font-size:1.1rem;font-weight:400;color:var(--tx2);line-height:1.75;max-width:540px;margin:0 auto 1.5rem;opacity:0;animation:fu 0.8s var(--e) 0.5s forwards;text-wrap:balance}
     .hero-pills{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;opacity:0;animation:fu 0.8s var(--e) 0.58s forwards}
     .hp-tag{font-size:0.72rem;font-weight:600;color:var(--tx);padding:0.4rem 0.9rem;background:var(--bg2);border:1px solid var(--ln);border-radius:100px;letter-spacing:0.01em}
+    .hp-sep{color:var(--ln);font-size:0.6rem;line-height:1}
     .hero h1 br{display:none}
     .hero-btns{display:flex;gap:0.85rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fu 0.8s var(--e) 0.65s forwards}
     .btn-p{font-size:0.85rem;font-weight:600;color:#fff;background:var(--dk);padding:0.9rem 2.25rem;text-decoration:none;border-radius:10px;transition:all 0.3s var(--e);box-shadow:0 2px 8px rgba(15,23,42,0.1)}
@@ -112,7 +113,7 @@
       .hero h1 br{display:block}
       .hero-sub{font-size:0.95rem;margin-bottom:1.25rem;line-height:1.65;max-width:340px;margin-left:auto;margin-right:auto;text-wrap:balance}
       .hero-pills{justify-content:center;margin-bottom:2.5rem;gap:0.4rem;max-width:300px;margin-left:auto;margin-right:auto}
-      .hp-tag{font-size:0.65rem;padding:0.35rem 0.75rem}
+      .hp-tag{font-size:0.65rem;padding:0.35rem 0.75rem}.hp-sep{display:none}
       .hero-btns{flex-direction:column;align-items:center;width:100%;max-width:320px;margin:0 auto;gap:0.65rem}
       .btn-p{width:100%;text-align:center;padding:1rem 2rem;font-size:0.88rem;border-radius:12px}
       .btn-s{width:100%;text-align:center;padding:1rem 2rem;font-size:0.88rem;border-radius:12px}
@@ -122,9 +123,9 @@
 
     /* TRUST BAR */
     .stats{background:var(--bg2);border-bottom:1px solid var(--ln);padding:1.75rem 3rem}
-    .stats-inner{max-width:900px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:0.5rem;flex-wrap:wrap}
+    .stats-inner{max-width:900px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:0.6rem;flex-wrap:wrap}
     .trust-label{font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--tx3);margin-right:0.5rem}
-    .trust-tag{font-size:0.68rem;font-weight:500;color:var(--tx2);padding:0.35rem 0.85rem;background:var(--bg);border:1px solid var(--ln);border-radius:100px}
+    .trust-tag{font-size:0.68rem;font-weight:500;color:var(--tx2);padding:0.4rem 0.95rem;background:var(--bg);border:1px solid var(--ln);border-radius:100px;white-space:nowrap}
     @media(max-width:600px){.stats{padding:1.5rem 1.25rem}.stats-inner{gap:0.4rem;max-width:360px}.trust-label{width:100%;text-align:center;margin-right:0;margin-bottom:0.35rem}.trust-tag{font-size:0.62rem;padding:0.3rem 0.7rem}}
 
     /* SECTIONS */
@@ -251,7 +252,7 @@
     .svc-bundle-list li{font-size:0.78rem;color:rgba(255,255,255,0.4);padding:0.3rem 0 0.3rem 1.1rem;position:relative;line-height:1.5}
     .svc-bundle-list li::before{content:'\2713';position:absolute;left:0;color:var(--ac);font-size:0.65rem;top:0.35rem}
     @media(max-width:900px){.svc-grid-2{grid-template-columns:1fr;gap:1rem}.svc-bundle{grid-template-columns:1fr;gap:1.5rem;padding:2.25rem;border-radius:14px}}
-    @media(max-width:768px){.svc-tabs{gap:0.2rem;padding:0.25rem}.svc-tab{font-size:0.7rem;padding:0.65rem 0.5rem}.svc-card{padding:1.75rem;border-radius:14px}.svc-card h3{font-size:1.3rem}.svc-desc{font-size:0.8rem;margin-bottom:1rem}.svc-list li{font-size:0.85rem;line-height:1.55}.svc-btn{padding:0.85rem 1.75rem;border-radius:10px;font-size:0.8rem}.svc-note{font-size:0.7rem;margin-top:0.85rem}.svc-bundle{padding:1.75rem}.svc-bundle h3{font-size:1.3rem}.svc-bundle p{font-size:0.8rem}}
+    @media(max-width:768px){.svc-tabs{gap:0.2rem;padding:0.25rem}.svc-tab{font-size:0.7rem;padding:0.65rem 0.5rem}.svc-card{padding:1.75rem;border-radius:14px}.svc-card h3{font-size:1.3rem}.svc-desc{font-size:0.8rem;margin-bottom:1rem}.svc-btn{padding:0.85rem 1.75rem;border-radius:10px;font-size:0.8rem}.svc-note{font-size:0.7rem;margin-top:0.85rem}.svc-bundle{padding:1.75rem}.svc-bundle h3{font-size:1.3rem}.svc-bundle p{font-size:0.8rem}}
 
     /* PROCESS */
     .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
@@ -430,6 +431,7 @@
     .hero-sub{font-size:1.1rem;font-weight:400;color:var(--tx2);line-height:1.75;max-width:540px;margin:0 auto 1.5rem;opacity:0;animation:fu 0.8s var(--e) 0.5s forwards;text-wrap:balance}
     .hero-pills{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;opacity:0;animation:fu 0.8s var(--e) 0.58s forwards}
     .hp-tag{font-size:0.72rem;font-weight:600;color:var(--tx);padding:0.4rem 0.9rem;background:var(--bg2);border:1px solid var(--ln);border-radius:100px;letter-spacing:0.01em}
+    .hp-sep{color:var(--ln);font-size:0.6rem;line-height:1}
     .hero h1 br{display:none}
     .hero-btns{display:flex;gap:0.85rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fu 0.8s var(--e) 0.65s forwards}
     .btn-p{font-size:0.85rem;font-weight:600;color:#fff;background:var(--dk);padding:0.9rem 2.25rem;text-decoration:none;border-radius:10px;transition:all 0.3s var(--e);box-shadow:0 2px 8px rgba(15,23,42,0.1)}
@@ -444,7 +446,7 @@
       .hero h1 br{display:block}
       .hero-sub{font-size:0.95rem;margin-bottom:1.25rem;line-height:1.65;max-width:340px;margin-left:auto;margin-right:auto;text-wrap:balance}
       .hero-pills{justify-content:center;margin-bottom:2.5rem;gap:0.4rem;max-width:300px;margin-left:auto;margin-right:auto}
-      .hp-tag{font-size:0.65rem;padding:0.35rem 0.75rem}
+      .hp-tag{font-size:0.65rem;padding:0.35rem 0.75rem}.hp-sep{display:none}
       .hero-btns{flex-direction:column;align-items:center;width:100%;max-width:320px;margin:0 auto;gap:0.65rem}
       .btn-p{width:100%;text-align:center;padding:1rem 2rem;font-size:0.88rem;border-radius:12px}
       .btn-s{width:100%;text-align:center;padding:1rem 2rem;font-size:0.88rem;border-radius:12px}
@@ -454,9 +456,9 @@
 
     /* TRUST BAR */
     .stats{background:var(--bg2);border-bottom:1px solid var(--ln);padding:1.75rem 3rem}
-    .stats-inner{max-width:900px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:0.5rem;flex-wrap:wrap}
+    .stats-inner{max-width:900px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:0.6rem;flex-wrap:wrap}
     .trust-label{font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--tx3);margin-right:0.5rem}
-    .trust-tag{font-size:0.68rem;font-weight:500;color:var(--tx2);padding:0.35rem 0.85rem;background:var(--bg);border:1px solid var(--ln);border-radius:100px}
+    .trust-tag{font-size:0.68rem;font-weight:500;color:var(--tx2);padding:0.4rem 0.95rem;background:var(--bg);border:1px solid var(--ln);border-radius:100px;white-space:nowrap}
     @media(max-width:600px){.stats{padding:1.5rem 1.25rem}.stats-inner{gap:0.4rem;max-width:360px}.trust-label{width:100%;text-align:center;margin-right:0;margin-bottom:0.35rem}.trust-tag{font-size:0.62rem;padding:0.3rem 0.7rem}}
 
     /* SECTIONS */
@@ -583,7 +585,7 @@
     .svc-bundle-list li{font-size:0.78rem;color:rgba(255,255,255,0.4);padding:0.3rem 0 0.3rem 1.1rem;position:relative;line-height:1.5}
     .svc-bundle-list li::before{content:'\2713';position:absolute;left:0;color:var(--ac);font-size:0.65rem;top:0.35rem}
     @media(max-width:900px){.svc-grid-2{grid-template-columns:1fr;gap:1rem}.svc-bundle{grid-template-columns:1fr;gap:1.5rem;padding:2.25rem;border-radius:14px}}
-    @media(max-width:768px){.svc-tabs{gap:0.2rem;padding:0.25rem}.svc-tab{font-size:0.7rem;padding:0.65rem 0.5rem}.svc-card{padding:1.75rem;border-radius:14px}.svc-card h3{font-size:1.3rem}.svc-desc{font-size:0.8rem;margin-bottom:1rem}.svc-list li{font-size:0.85rem;line-height:1.55}.svc-btn{padding:0.85rem 1.75rem;border-radius:10px;font-size:0.8rem}.svc-note{font-size:0.7rem;margin-top:0.85rem}.svc-bundle{padding:1.75rem}.svc-bundle h3{font-size:1.3rem}.svc-bundle p{font-size:0.8rem}}
+    @media(max-width:768px){.svc-tabs{gap:0.2rem;padding:0.25rem}.svc-tab{font-size:0.7rem;padding:0.65rem 0.5rem}.svc-card{padding:1.75rem;border-radius:14px}.svc-card h3{font-size:1.3rem}.svc-desc{font-size:0.8rem;margin-bottom:1rem}.svc-btn{padding:0.85rem 1.75rem;border-radius:10px;font-size:0.8rem}.svc-note{font-size:0.7rem;margin-top:0.85rem}.svc-bundle{padding:1.75rem}.svc-bundle h3{font-size:1.3rem}.svc-bundle p{font-size:0.8rem}}
 
     /* PROCESS */
     .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
@@ -783,7 +785,7 @@
       <div class="hero-pill"><span class="dot"></span> Your site could be live by <strong id="liveDate"></strong></div>
       <h1>Your business deserves<br/> <span class="h1-lg">a website that <span class="accent">closes.</span></span></h1>
       <p class="hero-sub">Premium websites and lead follow-up systems for service businesses that want to look better, respond faster, and win more jobs.</p>
-      <div class="hero-pills"><span class="hp-tag">Fast turnaround</span><span class="hp-tag">Sharp positioning</span><span class="hp-tag">Built to convert</span><span class="hp-tag">Never miss a lead</span></div>
+      <div class="hero-pills"><span class="hp-tag">Fast turnaround</span><span class="hp-sep">&middot;</span><span class="hp-tag">Sharp positioning</span><span class="hp-sep">&middot;</span><span class="hp-tag">Built to convert</span><span class="hp-sep">&middot;</span><span class="hp-tag">Never miss a lead</span></div>
       <div class="hero-btns">
         <a href="#contact" class="btn-p">Get My Free Site Review</a>
         <a href="#proof" class="btn-s">See the Work</a>
@@ -861,7 +863,7 @@
       <div class="test-grid r">
         <div class="test-card">
           <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="test-quote">Our old site was a Wix template from like 2019. It did not reflect the quality of work we actually do. Trevor turned around a first draft in 2 days, nailed the direction, and we barely had to give any revisions. Clients have literally told us our site looks better than companies 10x our size.</p>
+          <p class="test-quote">Our old site was a Wix template from 2019. Did not reflect the quality of work we do. Trevor turned around a first draft in 2 days and nailed the direction. Clients have told us our site looks better than companies 10x our size.</p>
           <div class="test-author"><div class="test-name">Clayton H.</div><div class="test-role">Diamond H Irrigation, Fort Worth</div></div>
         </div>
         <div class="test-card">
@@ -871,7 +873,7 @@
         </div>
         <div class="test-card">
           <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="test-quote">I talked to 3 agencies before finding TMN. Every one of them quoted 8 to 12 weeks and $10K+. Trevor had something in my inbox in 48 hours that was better than anything they showed me. The whole process was painless and the final product actually looks like us.</p>
+          <p class="test-quote">Talked to 3 agencies before TMN. Every one quoted 8 to 12 weeks and $10K+. Trevor had something in my inbox in 48 hours that was better than anything they showed me. Final product actually looks like us.</p>
           <div class="test-author"><div class="test-name">Cody E.</div><div class="test-role">Elmore Home Services, Dallas</div></div>
         </div>
         <div class="test-card">
@@ -886,7 +888,7 @@
         </div>
         <div class="test-card">
           <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="test-quote">I am not a tech person. I just needed something that looked clean and made my business look legit. Trevor and Taylor handled everything, explained what they were doing in plain English, and had us live in under a week. Easiest vendor experience I have had in years.</p>
+          <p class="test-quote">Not a tech person. Just needed something that looked clean and made my business look legit. Trevor and Taylor handled everything, explained it in plain English, and had us live in under a week. Easiest vendor experience in years.</p>
           <div class="test-author"><div class="test-name">Jose M.</div><div class="test-role">Tony's Lawn &amp; Tree, Fort Worth</div></div>
         </div>
       </div>
@@ -963,7 +965,7 @@
           <div class="faq-item"><div class="faq-q"><h4>What does the Lead Conversion System actually do?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Missed-call text back, instant form replies, automated follow-up over 14 days, and automatic review requests after completed jobs. It catches the leads your current setup is dropping.</p></div></div>
           <div class="faq-item"><div class="faq-q"><h4>Do I need a new website to use the conversion system?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>No. It connects to your current site, forms, and phone number. That said, a strong site paired with strong follow-up is where results compound. That is why the bundle exists.</p></div></div>
           <div class="faq-item"><div class="faq-q"><h4>What is the monthly fee for?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>The platform that powers your texts, emails, and automations, plus ongoing optimization and a monthly report showing leads, response times, and booked jobs. 90-day minimum, then month-to-month.</p></div></div>
-          <div class="faq-item"><div class="faq-q"><h4>Will I be able to update the site myself?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Yes. We also offer Site Care plans starting at $25/mo for hosting and security up to $100/mo for priority support and monthly updates. Details on our <a href="/pricing#care" style="color:var(--ac);text-decoration:none;font-weight:600">pricing page</a>.</p></div></div>
+          <div class="faq-item"><div class="faq-q"><h4>Will I be able to update the site myself?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Yes. We also offer Site Care plans from $25/mo for hosting and security up to $100/mo for priority support and monthly updates.</p></div></div>
           <div class="faq-item"><div class="faq-q"><h4>Should I start with the Starter Refresh or the Full Rebuild?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Starter Refresh is a single homepage redesign for $1,500. Full Rebuild starts at $2,500 and includes deeper positioning, multi-page structure, and SEO. We scope everything on the strategy call.</p></div></div>
           <div class="faq-item"><div class="faq-q"><h4>Why choose a boutique studio over a larger agency?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Speed and direct access. You work with the founders, not account managers. Projects stay focused and move fast.</p></div></div>
           <div class="faq-item"><div class="faq-q"><h4>Do you only work with service businesses?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Service businesses are our core focus, but we also work with financial services, healthcare, and advisory firms. If you need a credible, premium web presence, we can help.</p></div></div>
