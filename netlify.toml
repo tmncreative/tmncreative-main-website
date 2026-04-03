@@ -1,6 +1,9 @@
 [build]
   publish = "."
-  functions = "netlify/functions"
+
+# Netlify pretty URLs are enabled by default
+# /portfolio serves portfolio.html automatically
+# /websites-for-contractors serves websites-for-contractors.html automatically
 
 [[headers]]
   for = "/*"
@@ -10,117 +13,8 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-[[redirects]]
-  from = "/pricing"
-  to = "/pricing.html"
-  status = 200
-
-[[redirects]]
-  from = "/pay"
-  to = "/pay.html"
-  status = 200
-
-[[redirects]]
-  from = "/care"
-  to = "/care.html"
-  status = 200
-
-[[redirects]]
-  from = "/fort-worth"
-  to = "/fort-worth.html"
-  status = 200
-
-[[redirects]]
-  from = "/scottsdale"
-  to = "/scottsdale.html"
-  status = 200
-
-[[redirects]]
-  from = "/dallas"
-  to = "/dallas.html"
-  status = 200
-
-[[redirects]]
-  from = "/phoenix"
-  to = "/phoenix.html"
-  status = 200
-
-[[redirects]]
-  from = "/los-angeles"
-  to = "/los-angeles.html"
-  status = 200
-
-[[redirects]]
-  from = "/new-york"
-  to = "/new-york.html"
-  status = 200
-
-[[redirects]]
-  from = "/home-services"
-  to = "/home-services.html"
-  status = 200
-
-[[redirects]]
-  from = "/contractors"
-  to = "/contractors.html"
-  status = 200
-
-[[redirects]]
-  from = "/small-business"
-  to = "/small-business.html"
-  status = 200
-
-
-[[redirects]]
-  from = "/healthcare"
-  to = "/healthcare.html"
-  status = 200
-
-[[redirects]]
-  from = "/financial-services"
-  to = "/financial-services.html"
-  status = 200
-
-[[redirects]]
-  from = "/landscaping"
-  to = "/landscaping.html"
-  status = 200
-
-[[redirects]]
-  from = "/consulting"
-  to = "/consulting.html"
-  status = 200
-
-[[redirects]]
-  from = "/med-spa"
-  to = "/med-spa.html"
-  status = 200
-
-[[redirects]]
-  from = "/dental"
-  to = "/dental.html"
-  status = 200
-
-[[redirects]]
-  from = "/plumbing"
-  to = "/plumbing.html"
-  status = 200
-
-[[redirects]]
-  from = "/hvac"
-  to = "/hvac.html"
-  status = 200
-
-[[redirects]]
-  from = "/real-estate"
-  to = "/real-estate.html"
-  status = 200
-
-[[redirects]]
-  from = "/arlington"
-  to = "/arlington.html"
-  status = 200
+# Custom 404
 [[redirects]]
   from = "/*"
-  to = "/404.html"
+  to = "/index.html"
   status = 404
