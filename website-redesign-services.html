@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Redesign Services | TMN Creative</title>
+  <meta name="description" content="Website redesign services for businesses that have outgrown their current site. Improve trust, mobile UX, and conversion with TMN Creative.">
+  <link rel="canonical" href="https://tmncreative.com/website-redesign-services">
+
+  <meta property="og:title" content="Website Redesign Services | TMN Creative">
+  <meta property="og:description" content="Website redesign services for businesses that have outgrown their current site. Improve trust, mobile UX, and conversion with TMN Creative.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tmncreative.com/website-redesign-services">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Website Redesign Services | TMN Creative">
+  <meta name="twitter:description" content="Website redesign services for businesses that have outgrown their current site. Improve trust, mobile UX, and conversion with TMN Creative.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I know if I need a redesign or just a few edits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If the site feels broadly outdated, weak on mobile, poorly structured, or hard to trust, a redesign is usually the better move."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you preserve parts of the current site that still work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A redesign should improve what is weak, not throw away what is useful."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you rewrite the copy too?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Copy is a major part of a strong redesign."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will a redesign help with lead generation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It can absolutely improve trust and conversion, especially if the current site is creating hesitation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do redesign projects take forever?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We aim to keep the process tight and move quickly."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #F8F7F4;
+      --bg2: #F0EEEA;
+      --sf: #FFFFFF;
+      --dk: #111111;
+      --dk2: #1A1A1A;
+      --dk3: #0A0A0A;
+      --ac: #A68B5B;
+      --ac2: #BFA06C;
+      --ac3: rgba(166, 139, 91, 0.08);
+      --tx: #2C2C2C;
+      --tx2: #6B6B64;
+      --tx3: #9A9A92;
+      --ti: #F8F7F4;
+      --ti2: rgba(248, 247, 244, 0.5);
+      --ti3: rgba(248, 247, 244, 0.25);
+      --ln: #E2E0DB;
+      --ln2: rgba(248, 247, 244, 0.07);
+      --sf2: 'Instrument Serif', Georgia, serif;
+      --sn: 'DM Sans', system-ui, sans-serif;
+      --e: cubic-bezier(0.16, 1, 0.3, 1);
+      --es: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sn);
+      color: var(--tx);
+      background: var(--bg);
+      line-height: 1.6;
+      position: relative;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' result='noise' seed='2'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: transparent;
+      transition: background-color 0.3s var(--es), backdrop-filter 0.3s var(--es);
+    }
+
+    nav.s {
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo-link img {
+      height: 32px;
+      width: auto;
+    }
+
+    nav.s .logo-light {
+      display: none;
+    }
+
+    nav .logo-dark {
+      display: none;
+    }
+
+    nav.s .logo-dark {
+      display: block;
+    }
+
+    nav-right {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    nav-right a {
+      text-decoration: none;
+      color: var(--ti2);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.3s var(--es);
+    }
+
+    nav.s nav-right a {
+      color: var(--tx);
+    }
+
+    nav-right a:hover {
+      color: var(--ac);
+    }
+
+    .cta-btn {
+      padding: 10px 24px;
+      background: var(--ac);
+      color: var(--sf);
+      border: none;
+      border-radius: 4px;
+      font-family: var(--sn);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s var(--es);
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cta-btn:hover {
+      background: var(--ac2);
+      transform: translateY(-2px);
+    }
+
+    nav .cta-btn {
+      background: transparent;
+      color: var(--ti2);
+      border: 1px solid rgba(248, 247, 244, 0.3);
+    }
+
+    nav.s .cta-btn {
+      color: var(--sf);
+      background: var(--ac);
+      border: none;
+    }
+
+    nav.s .cta-btn:hover {
+      background: var(--ac2);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 24px;
+      }
+
+      nav-right {
+        gap: 20px;
+        font-size: 12px;
+      }
+
+      nav-right a {
+        font-size: 12px;
+      }
+
+      .cta-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      background: var(--dk3);
+      color: var(--ti);
+      padding: 140px 40px 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      margin-top: 60px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(166, 139, 91, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-family: var(--sf2);
+      font-size: 56px;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--ti2);
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        padding: 120px 32px 80px;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .hero {
+        padding: 100px 24px 60px;
+        margin-top: 50px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+    }
+
+    /* Section Styles */
+    section {
+      padding: 80px 40px;
+      position: relative;
+    }
+
+    section.pad {
+      padding: 80px 40px;
+    }
+
+    section.pads {
+      padding: 60px 40px;
+    }
+
+    .section-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-content.w {
+      max-width: 1200px;
+    }
+
+    section h2 {
+      font-family: var(--sf2);
+      font-size: 48px;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+    }
+
+    section h3 {
+      font-family: var(--sf2);
+      font-size: 32px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    section p {
+      font-size: 16px;
+      color: var(--tx2);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    section.bg2 {
+      background: var(--bg2);
+    }
+
+    section.dk {
+      background: var(--dk3);
+      color: var(--ti);
+    }
+
+    section.dk h2 {
+      color: var(--ti);
+    }
+
+    section.dk h3 {
+      color: var(--ti);
+    }
+
+    section.dk p {
+      color: var(--ti2);
+    }
+
+    /* Pain Points List */
+    .pli {
+      list-style: none;
+      padding: 0;
+      margin: 40px 0 0 0;
+    }
+
+    .pli .pln {
+      padding: 24px 24px 24px 60px;
+      margin-bottom: 16px;
+      border-left: 3px solid var(--ac);
+      background: var(--ac3);
+      border-radius: 4px;
+      position: relative;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--tx);
+    }
+
+    .pli .pln::before {
+      content: attr(data-number);
+      position: absolute;
+      left: 20px;
+      top: 24px;
+      color: var(--ac);
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .pli .pln {
+        padding: 20px 20px 20px 48px;
+        font-size: 15px;
+      }
+
+      .pli .pln::before {
+        left: 16px;
+        font-size: 16px;
+      }
+    }
+
+    /* Grid Systems */
+    .fg {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .fg.fg5 {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .fg.fg3 {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    @media (max-width: 900px) {
+      .fg {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+      }
+
+      .fg.fg3 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+
+    @media (max-width: 500px) {
+      .fg {
+        grid-template-columns: 1fr;
+      }
+
+      .fg.fg3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .fc {
+      padding: 30px;
+      background: var(--sf);
+      border: 1px solid var(--ln);
+      border-radius: 6px;
+      transition: all 0.3s var(--es);
+    }
+
+    .fc:hover {
+      border-color: var(--ac);
+      box-shadow: 0 8px 24px rgba(166, 139, 91, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .fc h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .fc p {
+      font-size: 15px;
+      color: var(--tx2);
+      margin-bottom: 0;
+    }
+
+    /* Process Grid */
+    .prr {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .prc {
+      padding: 30px;
+      background: var(--bg2);
+      border-radius: 6px;
+      text-align: center;
+      border-top: 3px solid var(--ac);
+    }
+
+    .prc .prn {
+      font-family: var(--sf2);
+      font-size: 20px;
+      color: var(--ac);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .prc h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      margin-top: 0;
+    }
+
+    .prc p {
+      font-size: 14px;
+      color: var(--tx2);
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .prr {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .prr {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* FAQ Accordion */
+    .fql {
+      list-style: none;
+      margin-top: 40px;
+    }
+
+    .fli {
+      margin-bottom: 12px;
+      border: 1px solid var(--ln);
+      border-radius: 4px;
+      overflow: hidden;
+      background: var(--sf);
+    }
+
+    .flq {
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.3s var(--es);
+      background: var(--sf);
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-family: var(--sn);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--tx);
+    }
+
+    .flq:hover {
+      background: var(--bg);
+      color: var(--ac);
+    }
+
+    .flq::after {
+      content: '+';
+      font-size: 24px;
+      color: var(--ac);
+      transition: transform 0.3s var(--es);
+    }
+
+    .fli.open .flq::after {
+      transform: rotate(45deg);
+    }
+
+    .flt {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s var(--es);
+    }
+
+    .fli.open .flt {
+      max-height: 500px;
+    }
+
+    .fla {
+      padding: 0 24px 24px 24px;
+      color: var(--tx2);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .flq {
+        padding: 20px;
+        font-size: 15px;
+      }
+
+      .fla {
+        padding: 0 20px 20px 20px;
+        font-size: 14px;
+      }
+    }
+
+    /* Final CTA Section */
+    .fcta {
+      background: var(--dk3);
+      color: var(--ti);
+      text-align: center;
+      padding: 80px 40px;
+    }
+
+    .fcta h2 {
+      color: var(--ti);
+      margin-bottom: 20px;
+    }
+
+    .fcta p {
+      color: var(--ti2);
+      margin-bottom: 30px;
+    }
+
+    .fctab {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--ac);
+      color: var(--sf);
+      border: none;
+      border-radius: 4px;
+      font-family: var(--sn);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s var(--es);
+      text-decoration: none;
+    }
+
+    .fctab:hover {
+      background: var(--ac2);
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dk2);
+      color: var(--ti);
+      padding: 60px 40px;
+      border-top: 1px solid rgba(248, 247, 244, 0.1);
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .footer-logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-contact a {
+      color: var(--ti2);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s var(--es);
+    }
+
+    .footer-contact a:hover {
+      color: var(--ac);
+    }
+
+    .footer-copy {
+      color: var(--ti3);
+      font-size: 13px;
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-copy {
+        text-align: left;
+      }
+    }
+
+    /* Mobile Sticky CTA */
+    .stk {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 900;
+      background: var(--sf);
+      padding: 16px 24px;
+      border-top: 1px solid var(--ln);
+      display: none;
+      justify-content: center;
+      gap: 12px;
+      padding-bottom: calc(16px + env(safe-area-inset-bottom));
+      animation: slideUp 0.3s var(--es);
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .stk {
+        display: flex;
+      }
+
+      body {
+        padding-bottom: 80px;
+      }
+    }
+
+    .stk-btn {
+      flex: 1;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 4px;
+      font-family: var(--sn);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s var(--es);
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .stk-btn.primary {
+      background: var(--ac);
+      color: var(--sf);
+    }
+
+    .stk-btn.primary:active {
+      background: var(--ac2);
+    }
+
+    /* Reveal Animations */
+    .r, .v {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s var(--e);
+    }
+
+    .r.in, .v.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Two Column Layout */
+    .plyt {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 900px) {
+      .plyt {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    /* Utility Classes */
+    .pad {
+      padding: 80px 40px;
+    }
+
+    .pads {
+      padding: 60px 40px;
+    }
+
+    .sh {
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 24px;
+      }
+
+      .pad {
+        padding: 60px 24px;
+      }
+
+      .pads {
+        padding: 40px 24px;
+      }
+
+      section h2 {
+        font-size: 36px;
+      }
+
+      section h3 {
+        font-size: 24px;
+      }
+
+      section p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="/" class="logo-link">
+      <img src="images/logo-light.png" alt="TMN Creative" class="logo-light">
+      <img src="images/logo-dark.png" alt="TMN Creative" class="logo-dark">
+    </a>
+    <nav-right>
+      <a href="/index.html#proof">Work</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/index.html#faq">FAQ</a>
+      <a href="/index.html#contact" class="cta-btn">Start a Project</a>
+    </nav-right>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Website redesign services for businesses that have outgrown their current site</h1>
+      <p>Sometimes the issue is not that you need a website. It is that you already have one, and it is no longer helping the business the way it should. Maybe it looks dated. Maybe it feels generic. Maybe it no longer matches the quality of the company. Maybe it works well enough technically but still feels weak. That is when a redesign starts to matter. TMN Creative helps businesses turn outdated, underperforming websites into cleaner, sharper, more credible digital experiences built for trust, clarity, and conversion.</p>
+    </div>
+  </section>
+
+  <!-- Section: A redesign should fix more than the visuals -->
+  <section class="pad">
+    <div class="section-content r">
+      <h2>A redesign should fix more than the visuals</h2>
+      <p>A lot of businesses assume they just need a fresh look. Sometimes that is true. More often, the deeper issue is that the site is no longer making a strong case for the business. It may be failing to: explain the offer clearly, create trust quickly, feel premium enough, perform well on mobile, guide people toward action, support the kind of client you actually want. A strong redesign improves all of that together.</p>
+    </div>
+  </section>
+
+  <!-- Section: Signs it is time for a redesign -->
+  <section class="pad bg2">
+    <div class="section-content r">
+      <h2>Signs it is time for a redesign</h2>
+      <ul class="pli">
+        <li class="pln" data-number="1">Your website probably needs a redesign if: it looks old next to competitors</li>
+        <li class="pln" data-number="2">It feels cluttered or hard to navigate</li>
+        <li class="pln" data-number="3">The copy is weak or vague</li>
+        <li class="pln" data-number="4">Mobile experience is poor</li>
+        <li class="pln" data-number="5">The business has evolved but the site has not</li>
+        <li class="pln" data-number="6">It feels too cheap for the market you want</li>
+        <li class="pln" data-number="7">You hesitate to send people to it</li>
+        <li class="pln" data-number="8">It no longer reflects the quality of your work. That last point matters more than people think. If the website makes a strong business look smaller, cheaper, or less established than it really is, it is costing you.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section: What we improve in a redesign -->
+  <section class="pad">
+    <div class="section-content w r">
+      <h2>What we improve in a redesign</h2>
+      <div class="fg fg5">
+        <div class="fc">
+          <h3>Positioning</h3>
+          <p>We make the business easier to understand and more compelling.</p>
+        </div>
+        <div class="fc">
+          <h3>Structure</h3>
+          <p>We improve the flow so the site feels cleaner and easier to move through.</p>
+        </div>
+        <div class="fc">
+          <h3>Mobile UX</h3>
+          <p>We rebuild for how people actually browse and compare.</p>
+        </div>
+        <div class="fc">
+          <h3>Trust</h3>
+          <p>We make the company feel more established, credible, and premium.</p>
+        </div>
+        <div class="fc">
+          <h3>Conversion</h3>
+          <p>We create clearer paths to call, inquire, or take the next step.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Why patching the old site usually is not enough -->
+  <section class="pad bg2">
+    <div class="section-content r">
+      <h2>Why patching the old site usually is not enough</h2>
+      <p>A lot of owners try to fix a weak website with small updates. They swap a headline. Add a section. Change a photo. Tweak a color. Sometimes that helps a little. Usually it does not fix enough. Because weak sites rarely have one problem. They have layers of friction stacked on top of each other. The structure is off. The messaging is off. The hierarchy is off. The mobile experience is off. The first impression is off. A redesign gives you the chance to fix the full experience, not just dress it up.</p>
+    </div>
+  </section>
+
+  <!-- Section: Who this is for -->
+  <section class="pad">
+    <div class="section-content w r">
+      <h2>Who this is for</h2>
+      <p style="margin-bottom: 40px;">Our redesign work is a strong fit for businesses that already have a site live but know it no longer reflects where the company is now.</p>
+      <div class="fg fg3">
+        <div class="fc">
+          <h3>Service businesses</h3>
+          <p>Agencies, consultants, and professional services that need websites that build trust and explain their work clearly.</p>
+        </div>
+        <div class="fc">
+          <h3>Local operators</h3>
+          <p>Regionally focused businesses that need a site strong enough to compete against national brands.</p>
+        </div>
+        <div class="fc">
+          <h3>Growing brands</h3>
+          <p>Companies that have evolved, moved upmarket, or shifted their positioning and need their site to match.</p>
+        </div>
+        <div class="fc">
+          <h3>Dated templates</h3>
+          <p>Businesses stuck with generic, outdated, or templated websites that no longer feel premium or distinctive.</p>
+        </div>
+        <div class="fc">
+          <h3>Lead generation</h3>
+          <p>Companies that need their website to actually convert visitors into calls, emails, and qualified leads.</p>
+        </div>
+        <div class="fc">
+          <h3>Quality-focused owners</h3>
+          <p>Founders and leaders who want a better site without bloated rebuilds, endless rounds, or agency drag.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: How we approach redesign projects -->
+  <section class="pad bg2">
+    <div class="section-content w r">
+      <h2>How we approach redesign projects</h2>
+      <div class="prr">
+        <div class="prc">
+          <div class="prn">01</div>
+          <h3>Audit what is there now</h3>
+          <p>We identify what is hurting clarity, trust, and conversion.</p>
+        </div>
+        <div class="prc">
+          <div class="prn">02</div>
+          <h3>Sharpen the message</h3>
+          <p>We rewrite and reframe the site so it speaks more clearly to the buyer.</p>
+        </div>
+        <div class="prc">
+          <div class="prn">03</div>
+          <h3>Rebuild the experience</h3>
+          <p>We create a cleaner, more premium website with stronger layout, copy, and mobile usability.</p>
+        </div>
+        <div class="prc">
+          <div class="prn">04</div>
+          <h3>Launch with purpose</h3>
+          <p>No endless rounds. No agency drag. Just a finished site that feels like a real upgrade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: The outcome you are really buying -->
+  <section class="pad">
+    <div class="section-content r">
+      <h2>The outcome you are really buying</h2>
+      <p>You are not just buying a visual refresh. You are buying a stronger first impression. You are buying better alignment between the quality of your business and how it shows up online. You are buying a website you are actually proud to send people to.</p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="pad bg2">
+    <div class="section-content r">
+      <h2>Frequently asked questions</h2>
+      <ul class="fql">
+        <li class="fli">
+          <button class="flq">How do I know if I need a redesign or just a few edits?</button>
+          <div class="flt">
+            <div class="fla">If the site feels broadly outdated, weak on mobile, poorly structured, or hard to trust, a redesign is usually the better move.</div>
+          </div>
+        </li>
+        <li class="fli">
+          <button class="flq">Can you preserve parts of the current site that still work?</button>
+          <div class="flt">
+            <div class="fla">Yes. A redesign should improve what is weak, not throw away what is useful.</div>
+          </div>
+        </li>
+        <li class="fli">
+          <button class="flq">Do you rewrite the copy too?</button>
+          <div class="flt">
+            <div class="fla">Yes. Copy is a major part of a strong redesign.</div>
+          </div>
+        </li>
+        <li class="fli">
+          <button class="flq">Will a redesign help with lead generation?</button>
+          <div class="flt">
+            <div class="fla">It can absolutely improve trust and conversion, especially if the current site is creating hesitation.</div>
+          </div>
+        </li>
+        <li class="fli">
+          <button class="flq">Do redesign projects take forever?</button>
+          <div class="flt">
+            <div class="fla">No. We aim to keep the process tight and move quickly.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="fcta">
+    <div class="section-content r">
+      <h2>Get a Website Review</h2>
+      <p>Not sure if a redesign is right for you? Get a no-pressure review of your current site and we will tell you what is working, what is not, and what comes next.</p>
+      <a href="/index.html#contact" class="fctab">Start a conversation</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <img src="images/logo-light.png" alt="TMN Creative" class="footer-logo">
+      <div class="footer-contact">
+        <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a>
+      </div>
+      <div class="footer-copy">© 2026 True Margin North LLC</div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="stk">
+    <a href="tel:" class="stk-btn">Call us</a>
+    <a href="/index.html#contact" class="stk-btn primary">Get started</a>
+  </div>
+
+  <script>
+    // Smooth Scroll & Nav Background Transition
+    let lastScrollTop = 0;
+    const nav = document.querySelector('nav');
+    const navThreshold = 100;
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > navThreshold) {
+        nav.classList.add('s');
+      } else {
+        nav.classList.remove('s');
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+
+    // Reveal Animations on Scroll
+    const reveals = document.querySelectorAll('.r, .v');
+    const revealOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealOnScroll = new IntersectionObserver(function(entries) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+        }
+      });
+    }, revealOptions);
+
+    reveals.forEach((reveal) => {
+      revealOnScroll.observe(reveal);
+    });
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.fli');
+    faqItems.forEach((item) => {
+      const button = item.querySelector('.flq');
+      button.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+
+        // Close all other items
+        faqItems.forEach((otherItem) => {
+          otherItem.classList.remove('open');
+        });
+
+        // Toggle current item
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+
+    // Smooth scroll for Lenis-like behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && document.querySelector(href)) {
+          e.preventDefault();
+          const element = document.querySelector(href);
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Lazy load images
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src || img.src;
+            img.classList.add('loaded');
+            observer.unobserve(img);
+          }
+        });
+      });
+
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile First Web Design | TMN Creative</title>
+  <meta name="description" content="Mobile-first web design for businesses that need better usability, stronger trust, and more conversion from phone-based traffic.">
+  <link rel="canonical" href="https://tmncreative.com/mobile-first-web-design">
+  <meta property="og:title" content="Mobile First Web Design | TMN Creative">
+  <meta property="og:description" content="Mobile-first web design for businesses that need better usability, stronger trust, and more conversion from phone-based traffic.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tmncreative.com/mobile-first-web-design">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "@id": "faq-1",
+        "name": "What is mobile-first web design?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It means designing around the phone experience first rather than treating mobile as a secondary layout."
+        }
+      },
+      {
+        "@type": "Question",
+        "@id": "faq-2",
+        "name": "Why does mobile matter so much?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because a large share of traffic, especially for service businesses, comes from phones."
+        }
+      },
+      {
+        "@type": "Question",
+        "@id": "faq-3",
+        "name": "Can a mobile-first redesign improve conversion?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Better mobile UX reduces friction and makes it easier for people to take action."
+        }
+      },
+      {
+        "@type": "Question",
+        "@id": "faq-4",
+        "name": "Do you still optimize for desktop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Of course. Mobile-first does not mean desktop gets ignored. It means mobile gets the attention it deserves from the start."
+        }
+      },
+      {
+        "@type": "Question",
+        "@id": "faq-5",
+        "name": "How do I know if my mobile site is hurting me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If it feels cluttered, hard to scan, awkward, or less polished than desktop, it is probably costing you trust and conversion."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #F8F7F4;
+      --bg2: #F0EEEA;
+      --sf: #FFFFFF;
+      --dk: #111111;
+      --dk2: #1A1A1A;
+      --dk3: #0A0A0A;
+      --ac: #A68B5B;
+      --ac2: #BFA06C;
+      --ac3: rgba(166, 139, 91, 0.08);
+      --tx: #2C2C2C;
+      --tx2: #6B6B64;
+      --tx3: #9A9A92;
+      --ti: #F8F7F4;
+      --ti2: rgba(248, 247, 244, 0.5);
+      --ti3: rgba(248, 247, 244, 0.25);
+      --ln: #E2E0DB;
+      --ln2: rgba(248, 247, 244, 0.07);
+      --sf2: 'Instrument Serif', Georgia, serif;
+      --sn: 'DM Sans', system-ui, sans-serif;
+      --e: cubic-bezier(0.16, 1, 0.3, 1);
+      --es: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+      font-family: var(--sn);
+      color: var(--tx);
+      background: var(--bg);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' result='noise' /%3E%3C/filter%3E%3Crect width='1000' height='1000' filter='url(%23noiseFilter)' opacity='0.02' /%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: max(1rem, env(safe-area-inset-top)) 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.3s var(--es);
+      background: transparent;
+    }
+
+    nav.scrolled {
+      background: var(--sf);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-logo {
+      height: 32px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 100%;
+      width: auto;
+      mix-blend-mode: screen;
+      transition: opacity 0.3s var(--es);
+    }
+
+    nav.scrolled .nav-logo img {
+      mix-blend-mode: normal;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--ti);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.3s var(--es);
+    }
+
+    nav.scrolled .nav-links a {
+      color: var(--tx);
+    }
+
+    .nav-links a:hover {
+      color: var(--ac2);
+    }
+
+    .nav-cta {
+      background: var(--ac);
+      color: var(--sf);
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      transition: background 0.3s var(--es);
+      font-weight: 600;
+    }
+
+    .nav-cta:hover {
+      background: var(--ac2);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.85rem;
+      }
+
+      .nav-links a {
+        font-size: 0.85rem;
+      }
+
+      .nav-cta {
+        padding: 0.65rem 1.2rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--dk3) 0%, var(--dk2) 50%, var(--dk) 100%);
+      color: var(--sf);
+      padding: max(8rem, 15vh) max(1rem, env(safe-area-inset-left)) max(6rem, 10vh) max(1rem, env(safe-area-inset-right));
+      text-align: center;
+      margin-top: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(166, 139, 91, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-family: var(--sf2);
+      font-size: clamp(2rem, 8vw, 3.5rem);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      color: var(--ti2);
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      line-height: 1.6;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: var(--ac);
+      color: var(--sf);
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s var(--e);
+    }
+
+    .hero-cta:hover {
+      background: var(--ac2);
+      transform: translateY(-2px);
+    }
+
+    /* Content sections */
+    .pad {
+      padding: max(4rem, 8vh) max(1rem, env(safe-area-inset-left)) max(4rem, 8vh) max(1rem, env(safe-area-inset-right));
+    }
+
+    .pads {
+      padding: max(3rem, 6vh) max(1rem, env(safe-area-inset-left)) max(3rem, 6vh) max(1rem, env(safe-area-inset-right));
+    }
+
+    .w {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .lb {
+      line-height: 1.8;
+    }
+
+    .hd {
+      font-family: var(--sf2);
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .st {
+      font-size: 1rem;
+      color: var(--tx2);
+      margin-bottom: 1rem;
+    }
+
+    .sh {
+      color: var(--ac);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    /* Alternating sections */
+    section:nth-child(odd) {
+      background: var(--bg);
+    }
+
+    section:nth-child(even) {
+      background: var(--bg2);
+    }
+
+    section.dark {
+      background: var(--dk);
+      color: var(--sf);
+    }
+
+    section.dark .hd {
+      color: var(--sf);
+    }
+
+    section.dark .st {
+      color: var(--ti);
+    }
+
+    /* Scroll reveal */
+    .r {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s var(--e);
+    }
+
+    .r.v {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Pain points grid */
+    .plyt {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .pli {
+      padding: 2rem;
+      background: var(--sf);
+      border-radius: 8px;
+      border-left: 4px solid var(--ac);
+    }
+
+    section.dark .pli {
+      background: var(--dk2);
+      border-left-color: var(--ac2);
+    }
+
+    .pli strong {
+      display: block;
+      color: var(--ac);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    section.dark .pli strong {
+      color: var(--ac2);
+    }
+
+    .pli p {
+      font-size: 0.95rem;
+      color: var(--tx2);
+      line-height: 1.6;
+    }
+
+    section.dark .pli p {
+      color: var(--ti);
+    }
+
+    @media (max-width: 768px) {
+      .plyt {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .pli {
+        padding: 1.5rem;
+      }
+    }
+
+    /* How we build grid */
+    .pln {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .pli-title {
+      font-family: var(--sf2);
+      font-size: 1.2rem;
+      color: var(--tx);
+      margin-bottom: 0.75rem;
+      font-weight: 400;
+    }
+
+    section.dark .pli-title {
+      color: var(--sf);
+    }
+
+    .pli-desc {
+      font-size: 0.9rem;
+      color: var(--tx2);
+      line-height: 1.6;
+    }
+
+    section.dark .pli-desc {
+      color: var(--ti2);
+    }
+
+    @media (max-width: 768px) {
+      .pln {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .pln {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    /* Impact list */
+    .prr {
+      list-style: none;
+      margin-top: 2rem;
+    }
+
+    .prr li {
+      padding: 1rem 0;
+      padding-left: 2rem;
+      position: relative;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--tx);
+    }
+
+    section.dark .prr li {
+      color: var(--ti);
+    }
+
+    .prr li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 8px;
+      height: 2px;
+      background: var(--ac);
+    }
+
+    section.dark .prr li::before {
+      background: var(--ac2);
+    }
+
+    /* Who it's for grid */
+    .prc {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .prn {
+      padding: 2rem;
+      background: var(--sf);
+      border-radius: 8px;
+      border: 1px solid var(--ln);
+      transition: all 0.3s var(--e);
+    }
+
+    section.dark .prn {
+      background: var(--dk2);
+      border-color: var(--ln2);
+    }
+
+    .prn:hover {
+      border-color: var(--ac);
+      box-shadow: 0 8px 24px rgba(166, 139, 91, 0.1);
+    }
+
+    .prn-title {
+      font-family: var(--sf2);
+      font-size: 1.1rem;
+      color: var(--tx);
+      margin-bottom: 0.75rem;
+      font-weight: 400;
+    }
+
+    section.dark .prn-title {
+      color: var(--sf);
+    }
+
+    .prn-desc {
+      font-size: 0.9rem;
+      color: var(--tx2);
+      line-height: 1.6;
+    }
+
+    section.dark .prn-desc {
+      color: var(--ti2);
+    }
+
+    @media (max-width: 768px) {
+      .prc {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .prc {
+        grid-template-columns: 1fr;
+      }
+
+      .prn {
+        padding: 1.5rem;
+      }
+    }
+
+    /* CTA Section */
+    .fcta {
+      background: var(--dk);
+      color: var(--sf);
+      padding: max(5rem, 10vh) max(1rem, env(safe-area-inset-left)) max(5rem, 10vh) max(1rem, env(safe-area-inset-right));
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fcta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(166, 139, 91, 0.12) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .fcta > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .fctab {
+      font-family: var(--sf2);
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      font-weight: 400;
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      color: var(--ti2);
+    }
+
+    .fctab strong {
+      display: block;
+      color: var(--sf);
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .fcta-btn {
+      display: inline-block;
+      background: var(--ac);
+      color: var(--sf);
+      padding: 1.1rem 2.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      transition: all 0.3s var(--e);
+      cursor: pointer;
+    }
+
+    .fcta-btn:hover {
+      background: var(--ac2);
+      transform: translateY(-2px);
+    }
+
+    /* FAQ */
+    .fqs {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .fql {
+      border-bottom: 1px solid var(--ln);
+      padding: 1.5rem 0;
+      cursor: pointer;
+      transition: all 0.3s var(--es);
+    }
+
+    section.dark .fql {
+      border-bottom-color: var(--ln2);
+    }
+
+    .fql:last-child {
+      border-bottom: none;
+    }
+
+    .fql-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 600;
+      color: var(--tx);
+      user-select: none;
+    }
+
+    section.dark .fql-header {
+      color: var(--sf);
+    }
+
+    .fql-header:hover {
+      color: var(--ac);
+    }
+
+    section.dark .fql-header:hover {
+      color: var(--ac2);
+    }
+
+    .fql-toggle {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.2rem;
+      transition: transform 0.3s var(--e);
+    }
+
+    .fql.active .fql-toggle {
+      transform: rotate(180deg);
+    }
+
+    .fql-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s var(--es);
+      color: var(--tx2);
+      margin-top: 0;
+    }
+
+    section.dark .fql-answer {
+      color: var(--ti);
+    }
+
+    .fql.active .fql-answer {
+      max-height: 500px;
+      margin-top: 1rem;
+      overflow: visible;
+    }
+
+    .fql-answer p {
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dk);
+      color: var(--ti);
+      padding: max(3rem, 6vh) max(1rem, env(safe-area-inset-left)) max(3rem, 6vh) max(1rem, env(safe-area-inset-right));
+      text-align: center;
+      border-top: 1px solid var(--ln2);
+    }
+
+    .footer-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-logo img {
+      height: 100%;
+      width: auto;
+      mix-blend-mode: screen;
+    }
+
+    .footer-email {
+      display: block;
+      color: var(--ac2);
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      transition: color 0.3s var(--es);
+    }
+
+    .footer-email:hover {
+      color: var(--ac);
+    }
+
+    .footer-credit {
+      font-size: 0.85rem;
+      color: var(--tx3);
+      margin-top: 2rem;
+    }
+
+    .footer-credit a {
+      color: var(--ac2);
+      text-decoration: none;
+      transition: color 0.3s var(--es);
+    }
+
+    .footer-credit a:hover {
+      color: var(--ac);
+    }
+
+    /* Mobile sticky CTA */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--dk);
+      padding: 1rem max(1rem, env(safe-area-inset-left)) max(1rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-right));
+      z-index: 900;
+      animation: slideUp 0.3s var(--e);
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    .mobile-cta-btn {
+      display: block;
+      background: var(--ac);
+      color: var(--sf);
+      padding: 0.9rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      text-align: center;
+      transition: background 0.3s var(--es);
+    }
+
+    .mobile-cta-btn:hover {
+      background: var(--ac2);
+    }
+
+    @media (max-width: 768px) {
+      .mobile-cta {
+        display: block;
+      }
+    }
+
+    /* Typography adjustments for mobile */
+    @media (max-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+
+      .hd {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .pad {
+        padding: 3rem 1rem;
+      }
+
+      .pads {
+        padding: 2rem 1rem;
+      }
+
+      .hero {
+        padding: 5rem 1rem 4rem;
+        margin-top: 70px;
+      }
+
+      .hero h1 {
+        font-size: 1.75rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .plyt {
+        gap: 1.2rem;
+      }
+
+      .pli {
+        padding: 1.2rem;
+      }
+
+      .st {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      nav {
+        padding: max(0.75rem, env(safe-area-inset-top)) 0.75rem;
+      }
+
+      .nav-links {
+        gap: 0.75rem;
+      }
+
+      .nav-links a {
+        font-size: 0.75rem;
+      }
+
+      .nav-cta {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+      }
+
+      .hero {
+        padding: 4rem 1rem 3rem;
+        margin-top: 65px;
+      }
+
+      .hero h1 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hd {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+      }
+
+      .pad {
+        padding: 2rem 1rem;
+      }
+
+      .pads {
+        padding: 1.5rem 1rem;
+      }
+
+      .fcta {
+        padding: 3rem 1rem;
+      }
+
+      .fctab {
+        font-size: 1.2rem;
+      }
+
+      .mobile-cta {
+        padding: 0.75rem 1rem max(0.75rem, env(safe-area-inset-bottom)) 1rem;
+      }
+
+      .mobile-cta-btn {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    input {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="/" class="nav-logo">
+      <img src="images/logo-light.png" alt="TMN Creative" id="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/index.html#proof">Work</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/index.html#faq">FAQ</a></li>
+      <li><a href="/index.html#contact" class="nav-cta">Start a Project</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1 class="r">Mobile-first web design for businesses that cannot afford a weak phone experience</h1>
+    <p class="hero-subtitle r">Most websites are still judged on desktop and adapted to mobile afterward. That is backwards. For most service businesses, the phone experience is the first experience. People are finding you on mobile, scanning quickly, comparing options, and deciding whether you feel trustworthy enough to contact. That means mobile is not the secondary version of the site. It is the main event. TMN Creative builds mobile-first websites that feel cleaner, easier, faster, and more credible where it matters most.</p>
+  </section>
+
+  <!-- Why mobile first matters -->
+  <section class="pad">
+    <div class="w">
+      <h2 class="sh r">Why mobile first matters</h2>
+      <h3 class="hd r">When speed matters, clarity wins</h3>
+      <p class="st r lb">When someone lands on your website from their phone, they are making a fast call. Can they understand what you do right away? Does the site feel polished? Can they find what they need quickly? Does it feel easy to use? Can they trust the business from what they are seeing? If the answer is no, they leave. Bad mobile experience usually does not show up as a complaint. It shows up as lost opportunities.</p>
+    </div>
+  </section>
+
+  <!-- What usually goes wrong -->
+  <section class="pad">
+    <div class="w">
+      <h2 class="sh r">What usually goes wrong on mobile</h2>
+      <h3 class="hd r">Common friction points that kill trust</h3>
+      <div class="plyt r">
+        <div class="pli">
+          <strong>Text that feels too dense</strong>
+          <p>Large blocks of text on small screens overwhelm visitors.</p>
+        </div>
+        <div class="pli">
+          <strong>Sections that drag too long</strong>
+          <p>Excessive scrolling causes fatigue and bounce.</p>
+        </div>
+        <div class="pli">
+          <strong>Awkward spacing</strong>
+          <p>Poor padding and margins make layouts feel cramped.</p>
+        </div>
+        <div class="pli">
+          <strong>Weak visual hierarchy</strong>
+          <p>All elements feel equally important, nothing stands out.</p>
+        </div>
+        <div class="pli">
+          <strong>Buried buttons</strong>
+          <p>Calls to action are hidden or easy to miss.</p>
+        </div>
+        <div class="pli">
+          <strong>Clunky menus</strong>
+          <p>Navigation feels complex and hard to use.</p>
+        </div>
+        <div class="pli">
+          <strong>Cluttered layouts</strong>
+          <p>Too much competing for attention on small screens.</p>
+        </div>
+        <div class="pli">
+          <strong>Desktop-style design squeezed down</strong>
+          <p>Designs that work on desktop just don't translate well to mobile.</p>
+        </div>
+        <div class="pli">
+          <strong>Slow loading sections</strong>
+          <p>Performance issues create immediate frustration.</p>
+        </div>
+        <div class="pli">
+          <strong>Forms that feel annoying</strong>
+          <p>Friction in input fields prevents conversions.</p>
+        </div>
+      </div>
+      <p class="st r" style="margin-top: 2rem;">All of that creates friction. And friction kills trust fast.</p>
+    </div>
+  </section>
+
+  <!-- What mobile-first design means -->
+  <section class="pad" style="background: var(--bg2);">
+    <div class="w">
+      <h2 class="sh r">What mobile-first design actually means</h2>
+      <h3 class="hd r">Designing for the main event</h3>
+      <p class="st r lb">Mobile-first design means the phone experience is not treated like an afterthought. We think carefully about: what the user sees first, what matters most on a small screen, how quickly the business becomes clear, how easily someone can navigate, how naturally they can take action. A strong mobile-first website feels simple in the right way. It feels clean. It feels intentional. It feels easy. It feels trustworthy.</p>
+    </div>
+  </section>
+
+  <!-- Why this matters for service businesses -->
+  <section class="pad">
+    <div class="w">
+      <h2 class="sh r">Why this matters so much for service businesses</h2>
+      <h3 class="hd r">Mobile is where buyers make their first impression</h3>
+      <p class="st r lb">Mobile-first design is especially important for service businesses because buyers are often: searching quickly, comparing options in real time, looking you up after hearing about you, checking services/hours/location, deciding whether to call. In those moments, the site does not need to be clever. It needs to work. A polished mobile experience makes the business feel stronger immediately. A weak one can make a good company feel smaller, cheaper, or less established than it really is.</p>
+    </div>
+  </section>
+
+  <!-- How we build for mobile -->
+  <section class="pad" style="background: var(--bg2);">
+    <div class="w">
+      <h2 class="sh r">How we build for mobile</h2>
+      <h3 class="hd r">Five principles for strength on small screens</h3>
+      <div class="pln r">
+        <div>
+          <h4 class="pli-title">Copy</h4>
+          <p class="pli-desc">We write for clarity and scanability.</p>
+        </div>
+        <div>
+          <h4 class="pli-title">Layout</h4>
+          <p class="pli-desc">We build sections that breathe and stay readable on smaller screens.</p>
+        </div>
+        <div>
+          <h4 class="pli-title">Navigation</h4>
+          <p class="pli-desc">We make it easy for users to find what they need without friction.</p>
+        </div>
+        <div>
+          <h4 class="pli-title">Calls to action</h4>
+          <p class="pli-desc">We keep next steps visible and natural.</p>
+        </div>
+        <div>
+          <h4 class="pli-title">Trust</h4>
+          <p class="pli-desc">We make sure the phone experience still feels premium, not compressed or compromised.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business impact -->
+  <section class="pad">
+    <div class="w">
+      <h2 class="sh r">The business impact of better mobile UX</h2>
+      <h3 class="hd r">Why this drives real results</h3>
+      <ul class="prr r">
+        <li>Improve conversion from phone traffic</li>
+        <li>Reduce bounce from first-time visitors</li>
+        <li>Create more confidence before a call</li>
+        <li>Improve brand perception</li>
+        <li>Make SEO and paid traffic work harder</li>
+        <li>Support a more premium market position</li>
+      </ul>
+      <p class="st r" style="margin-top: 2rem;">For a lot of businesses, improving the mobile experience is one of the fastest ways to make the whole brand feel more serious.</p>
+    </div>
+  </section>
+
+  <!-- Who this is for -->
+  <section class="pad" style="background: var(--bg2);">
+    <div class="w">
+      <h2 class="sh r">Who this is for</h2>
+      <h3 class="hd r">If this describes your business, this is for you</h3>
+      <div class="prc r">
+        <div class="prn">
+          <h4 class="prn-title">Local service businesses</h4>
+          <p class="prn-desc">Contractors, plumbers, electricians, HVAC, and other trades that depend on local search.</p>
+        </div>
+        <div class="prn">
+          <h4 class="prn-title">Home service brands</h4>
+          <p class="prn-desc">Cleaning, landscaping, moving, and other services where mobile is the primary channel.</p>
+        </div>
+        <div class="prn">
+          <h4 class="prn-title">Medical and wellness</h4>
+          <p class="prn-desc">Med spas, salons, dental offices, and other practices looking for a stronger presence.</p>
+        </div>
+        <div class="prn">
+          <h4 class="prn-title">Multi-location operators</h4>
+          <p class="prn-desc">Businesses with multiple offices or locations that need a clear, consistent mobile experience.</p>
+        </div>
+        <div class="prn">
+          <h4 class="prn-title">SEO and paid traffic</h4>
+          <p class="prn-desc">Any business investing in SEO or paid ads and not converting visitors into leads.</p>
+        </div>
+        <div class="prn">
+          <h4 class="prn-title">Premium positioning</h4>
+          <p class="prn-desc">Companies trying to move upmarket and need their site to match their positioning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="fcta">
+    <div class="w">
+      <p class="fctab">
+        <strong>If your mobile site feels weak, the whole site feels weak</strong>
+        People do not separate the mobile experience from the brand. They treat it as the brand. So if your site is not strong on mobile, it is not strong enough.
+      </p>
+      <a href="/index.html#contact" class="fcta-btn">See How TMN Creative Can Help</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="pad dark">
+    <div class="w">
+      <h2 class="sh r">Frequently asked questions</h2>
+      <h3 class="hd r">Questions about mobile-first design</h3>
+      <div class="fqs r">
+        <div class="fql" id="faq-1">
+          <div class="fql-header">
+            <span>What is mobile-first web design?</span>
+            <span class="fql-toggle">▼</span>
+          </div>
+          <div class="fql-answer">
+            <p>It means designing around the phone experience first rather than treating mobile as a secondary layout.</p>
+          </div>
+        </div>
+        <div class="fql" id="faq-2">
+          <div class="fql-header">
+            <span>Why does mobile matter so much?</span>
+            <span class="fql-toggle">▼</span>
+          </div>
+          <div class="fql-answer">
+            <p>Because a large share of traffic, especially for service businesses, comes from phones.</p>
+          </div>
+        </div>
+        <div class="fql" id="faq-3">
+          <div class="fql-header">
+            <span>Can a mobile-first redesign improve conversion?</span>
+            <span class="fql-toggle">▼</span>
+          </div>
+          <div class="fql-answer">
+            <p>Yes. Better mobile UX reduces friction and makes it easier for people to take action.</p>
+          </div>
+        </div>
+        <div class="fql" id="faq-4">
+          <div class="fql-header">
+            <span>Do you still optimize for desktop?</span>
+            <span class="fql-toggle">▼</span>
+          </div>
+          <div class="fql-answer">
+            <p>Of course. Mobile-first does not mean desktop gets ignored. It means mobile gets the attention it deserves from the start.</p>
+          </div>
+        </div>
+        <div class="fql" id="faq-5">
+          <div class="fql-header">
+            <span>How do I know if my mobile site is hurting me?</span>
+            <span class="fql-toggle">▼</span>
+          </div>
+          <div class="fql-answer">
+            <p>If it feels cluttered, hard to scan, awkward, or less polished than desktop, it is probably costing you trust and conversion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo-light.png" alt="TMN Creative">
+      </div>
+      <a href="mailto:hello@tmncreative.com" class="footer-email">hello@tmncreative.com</a>
+      <p class="footer-credit">
+        &copy; 2026 True Margin North LLC &mdash; <a href="https://truemarginnorth.com" target="_blank" rel="noopener noreferrer">truemarginnorth.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky CTA -->
+  <div class="mobile-cta" id="mobile-cta">
+    <a href="/index.html#contact" class="mobile-cta-btn">Start a Project</a>
+  </div>
+
+  <script>
+    // Smooth scroll with Lenis
+    (async () => {
+      try {
+        const Lenis = (await import('https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.1.9/+esm')).default;
+        const lenis = new Lenis({ smoothWheel: true, syncTouch: true });
+
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+      } catch (e) {
+        console.log('Lenis not available, using default scroll');
+      }
+    })();
+
+    // Navigation scroll handler
+    const nav = document.getElementById('nav');
+    const navLogoImg = document.getElementById('nav-logo-img');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+        navLogoImg.src = 'images/logo-dark.png';
+      } else {
+        nav.classList.remove('scrolled');
+        navLogoImg.src = 'images/logo-light.png';
+      }
+    });
+
+    // Scroll reveal
+    const revealElements = document.querySelectorAll('.r');
+
+    const revealOnScroll = () => {
+      revealElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.9) {
+          el.classList.add('v');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Initial check
+
+    // FAQ accordion
+    const faqItems = document.querySelectorAll('.fql');
+
+    faqItems.forEach((item) => {
+      const header = item.querySelector('.fql-header');
+      header.addEventListener('click', () => {
+        faqItems.forEach((other) => {
+          if (other !== item) {
+            other.classList.remove('active');
+          }
+        });
+        item.classList.toggle('active');
+      });
+    });
+
+    // Mobile CTA visibility
+    const mobileCta = document.getElementById('mobile-cta');
+    const contactSection = document.getElementById('contact') || document.querySelector('[id*="contact"]');
+
+    window.addEventListener('scroll', () => {
+      if (contactSection) {
+        const rect = contactSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          mobileCta.style.display = 'none';
+        } else {
+          mobileCta.style.display = 'block';
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

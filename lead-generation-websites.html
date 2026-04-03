@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead Generation Websites | TMN Creative</title>
+  <meta name="description" content="TMN Creative builds lead generation websites for service businesses that need more calls, better inquiries, and stronger conversion from existing traffic.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tmncreative.com/lead-generation-websites">
+
+  <meta property="og:title" content="Lead Generation Websites | TMN Creative">
+  <meta property="og:description" content="TMN Creative builds lead generation websites for service businesses that need more calls, better inquiries, and stronger conversion from existing traffic.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tmncreative.com/lead-generation-websites">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #F8F7F4;
+      --bg2: #F0EEEA;
+      --sf: #FFFFFF;
+      --dk: #111111;
+      --dk2: #1A1A1A;
+      --dk3: #0A0A0A;
+      --ac: #A68B5B;
+      --ac2: #BFA06C;
+      --ac3: rgba(166, 139, 91, 0.08);
+      --tx: #2C2C2C;
+      --tx2: #6B6B64;
+      --tx3: #9A9A92;
+      --ti: #F8F7F4;
+      --ti2: rgba(248, 247, 244, 0.5);
+      --ti3: rgba(248, 247, 244, 0.25);
+      --ln: #E2E0DB;
+      --ln2: rgba(248, 247, 244, 0.07);
+      --sf2: 'Instrument Serif', Georgia, serif;
+      --sn: 'DM Sans', system-ui, sans-serif;
+      --e: cubic-bezier(0.16, 1, 0.3, 1);
+      --es: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sn);
+      color: var(--tx);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background:
+        repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 2px,
+          rgba(0, 0, 0, 0.03) 2px,
+          rgba(0, 0, 0, 0.03) 4px
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 2px,
+          rgba(0, 0, 0, 0.03) 2px,
+          rgba(0, 0, 0, 0.03) 4px
+        );
+      z-index: 9999;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4%;
+      z-index: 1000;
+      transition: background 0.3s var(--es), backdrop-filter 0.3s var(--es);
+      background: transparent;
+    }
+
+    nav.scrolled {
+      background: var(--sf);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 1px 0 var(--ln);
+    }
+
+    .nav-logo {
+      width: 32px;
+      height: 32px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      mix-blend-mode: lighten;
+      transition: mix-blend-mode 0.3s var(--es), opacity 0.3s var(--es);
+    }
+
+    nav.scrolled .nav-logo img {
+      mix-blend-mode: normal;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--sf);
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.3s var(--es);
+      font-family: var(--sn);
+    }
+
+    nav.scrolled .nav-links a {
+      color: var(--tx);
+    }
+
+    .nav-cta {
+      padding: 10px 20px;
+      background: var(--ac);
+      color: var(--sf);
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s var(--e), transform 0.2s var(--es);
+      font-family: var(--sn);
+    }
+
+    .nav-cta:hover {
+      background: var(--ac2);
+      transform: translateY(-2px);
+    }
+
+    /* Hero section */
+    .hero {
+      background: var(--dk);
+      color: var(--ti);
+      padding: 160px 4% 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(166, 139, 91, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-family: var(--sf2);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+      animation: fadeInUp 0.8s var(--e) 0.2s forwards;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      color: var(--ti2);
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+      animation: fadeInUp 0.8s var(--e) 0.4s forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Padding utilities */
+    .pad {
+      padding: 80px 4%;
+    }
+
+    .pads {
+      padding: 60px 4%;
+    }
+
+    @media (max-width: 768px) {
+      .pad {
+        padding: 60px 4%;
+      }
+      .pads {
+        padding: 40px 4%;
+      }
+    }
+
+    /* Width container */
+    .w {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Text utilities */
+    .tx2 {
+      color: var(--tx2);
+    }
+
+    .tx3 {
+      color: var(--tx3);
+    }
+
+    .lb {
+      line-height: 1.8;
+    }
+
+    .hd {
+      font-family: var(--sf2);
+      font-weight: 400;
+    }
+
+    .st {
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      line-height: 1.3;
+    }
+
+    .sh {
+      font-size: 1.125rem;
+    }
+
+    /* Scroll reveal */
+    .r {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s var(--e), transform 0.8s var(--e);
+    }
+
+    .r.v {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Flexbox utilities */
+    .fg {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .fc {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    /* Grid utilities */
+    .fql {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .fls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .fli {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .flq {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .flt {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+
+    .fla {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+      gap: 2rem;
+    }
+
+    /* Content sections */
+    section {
+      position: relative;
+    }
+
+    .content-intro {
+      background: var(--bg);
+      color: var(--tx);
+    }
+
+    .content-dark {
+      background: var(--dk2);
+      color: var(--ti);
+    }
+
+    .content-dark h2,
+    .content-dark h3 {
+      color: var(--ti);
+    }
+
+    .content-dark .tx2 {
+      color: var(--ti2);
+    }
+
+    /* Section headings */
+    section h2 {
+      font-family: var(--sf2);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 2rem;
+    }
+
+    section h3 {
+      font-family: var(--sf2);
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    section p {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Grid item cards */
+    .grid-item {
+      padding: 2rem;
+      background: var(--bg2);
+      border-radius: 4px;
+      transition: all 0.3s var(--e);
+    }
+
+    .content-dark .grid-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--ln2);
+    }
+
+    .grid-item:hover {
+      transform: translateY(-4px);
+      background: var(--ac3);
+    }
+
+    .content-dark .grid-item:hover {
+      background: rgba(166, 139, 91, 0.15);
+    }
+
+    .grid-item h3 {
+      color: var(--ac);
+      margin-bottom: 1rem;
+    }
+
+    .grid-item p {
+      color: var(--tx2);
+      margin-bottom: 0;
+    }
+
+    /* Process grid */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .process-item {
+      counter-increment: item;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .process-item::before {
+      content: counter(item);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--ac);
+      font-family: var(--sn);
+      line-height: 1;
+    }
+
+    .process-item h3 {
+      font-size: 1.25rem;
+      margin: 0;
+    }
+
+    .process-item p {
+      margin: 0;
+      color: var(--tx2);
+      font-size: 0.95rem;
+    }
+
+    /* Benefit list */
+    .benefit-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .benefit-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .benefit-item::before {
+      content: '–';
+      color: var(--ac);
+      font-size: 1.5rem;
+      font-weight: 300;
+      flex-shrink: 0;
+      width: 24px;
+    }
+
+    .benefit-item span {
+      flex: 1;
+    }
+
+    /* CTA section */
+    .fcta {
+      background: var(--dk);
+      color: var(--ti);
+      padding: 80px 4%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fcta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(166, 139, 91, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .fctab {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .fcta h2 {
+      color: var(--ti);
+      margin-bottom: 1.5rem;
+    }
+
+    .fcta p {
+      color: var(--ti2);
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+    }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--ac);
+      color: var(--sf);
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s var(--e);
+      font-family: var(--sn);
+      border: 2px solid var(--ac);
+    }
+
+    .btn:hover {
+      background: transparent;
+      color: var(--ac);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--ac);
+      border: 2px solid var(--ac);
+    }
+
+    .btn-secondary:hover {
+      background: var(--ac);
+      color: var(--sf);
+    }
+
+    .content-dark .btn-secondary {
+      color: var(--ac2);
+      border-color: var(--ac2);
+    }
+
+    .content-dark .btn-secondary:hover {
+      background: var(--ac2);
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      background: var(--bg);
+      padding: 80px 4%;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--ln);
+      padding: 2rem 0;
+      cursor: pointer;
+      transition: all 0.3s var(--e);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-item.active .faq-question::after {
+      transform: rotate(180deg);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--tx);
+    }
+
+    .faq-question::after {
+      content: '↓';
+      flex-shrink: 0;
+      font-size: 1.5rem;
+      color: var(--ac);
+      transition: transform 0.3s var(--e);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s var(--es);
+      padding-top: 0;
+      padding-bottom: 0;
+      color: var(--tx2);
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding-top: 1.5rem;
+      padding-bottom: 0;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dk2);
+      color: var(--ti);
+      padding: 60px 4%;
+      border-top: 1px solid var(--ln2);
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-col h3 {
+      font-family: var(--sf2);
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      color: var(--ti);
+    }
+
+    .footer-col a {
+      display: block;
+      color: var(--ti2);
+      text-decoration: none;
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+      transition: color 0.3s var(--e);
+    }
+
+    .footer-col a:hover {
+      color: var(--ac2);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--ln2);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      color: var(--ti3);
+      font-size: 0.9rem;
+    }
+
+    .footer-tmn {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .footer-tmn a {
+      color: var(--ac2);
+      text-decoration: none;
+      transition: color 0.3s var(--e);
+    }
+
+    .footer-tmn a:hover {
+      color: var(--ac);
+    }
+
+    /* Sticky mobile CTA */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--dk);
+      padding: max(1rem, env(safe-area-inset-bottom)) 4% 1rem;
+      display: none;
+      z-index: 999;
+      border-top: 1px solid var(--ln2);
+    }
+
+    .sticky-cta.show {
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        height: 70px;
+        padding: 0 3%;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+
+      .nav-links a {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 120px 3% 80px;
+      }
+
+      section h2 {
+        font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      }
+
+      .faq-section {
+        padding: 60px 3%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        height: 60px;
+        padding: 0 3%;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        font-size: 13px;
+        padding: 8px 16px;
+      }
+
+      .hero {
+        padding: 100px 3% 60px;
+        min-height: auto;
+      }
+
+      .hero h1 {
+        font-size: 1.75rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .pad {
+        padding: 60px 3%;
+      }
+
+      .pads {
+        padding: 40px 3%;
+      }
+
+      .fg {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .fql,
+      .fls,
+      .fli,
+      .flq,
+      .flt,
+      .fla {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefit-list {
+        gap: 1rem;
+      }
+
+      .fcta {
+        padding: 60px 3%;
+      }
+
+      .faq-section {
+        padding: 60px 3%;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .sticky-cta {
+        display: block;
+      }
+
+      /* Input font-size for mobile */
+      input,
+      textarea,
+      select {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+
+      section h3 {
+        font-size: 1.1rem;
+      }
+
+      .pad,
+      .pads {
+        padding: 40px 4%;
+      }
+
+      .faq-question {
+        font-size: 1rem;
+      }
+
+      .nav-logo {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Utilities */
+    .dks {
+      background: var(--dk);
+      color: var(--ti);
+    }
+
+    .alt {
+      background: var(--bg2);
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a lead generation website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It is a website designed specifically to help turn visitors into inquiries, calls, or customers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will this help if I already run ads?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A stronger website can improve the performance of the traffic you already pay for."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a full rebuild to improve lead generation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not always, but many underperforming sites need more than surface edits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does design really affect lead generation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Design shapes trust, clarity, usability, and how confident someone feels about contacting you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What matters most for lead generation on mobile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Speed, readability, hierarchy, and clear next steps matter a lot."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="/" class="nav-logo" aria-label="TMN Creative home">
+      <img id="nav-logo-img" src="logo-light.png" alt="TMN Creative">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/index.html#proof">Work</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/index.html#faq">FAQ</a></li>
+    </ul>
+    <button class="nav-cta" onclick="window.location.href='/index.html#contact'">Start a Project</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Lead generation websites built to turn traffic into real opportunities</h1>
+    <p>Traffic means very little if the website does not convert. A lot of businesses focus on getting more people to the site before fixing the bigger issue, which is that the site is not doing enough with the attention it already gets. That is expensive. TMN Creative builds lead generation websites for service businesses that need a stronger path from visit to inquiry. The goal is not just to make the site look better. The goal is to make it easier for the right prospect to trust you, understand you, and take action.</p>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="content-intro pad w r">
+    <h2 class="hd st">What a lead generation website actually does</h2>
+    <p class="lb tx2">A lead generation website is not just a website with a contact form. It is a site built intentionally to reduce friction and support action. That means it should:</p>
+    <ul class="benefit-list">
+      <li class="benefit-item"><span>Explain the offer clearly</span></li>
+      <li class="benefit-item"><span>Make the business feel trustworthy</span></li>
+      <li class="benefit-item"><span>Guide the visitor toward the next step</span></li>
+      <li class="benefit-item"><span>Remove confusion</span></li>
+      <li class="benefit-item"><span>Work extremely well on mobile</span></li>
+      <li class="benefit-item"><span>Make inquiries feel easy and natural</span></li>
+      <li class="benefit-item"><span>Reinforce why your business is the right choice</span></li>
+    </ul>
+    <p class="lb tx2" style="margin-top: 1.5rem;">Most websites fail here because they either overdesign the experience or underthink the buyer.</p>
+  </section>
+
+  <!-- Why Sites Lose Leads -->
+  <section class="content-dark pad w r">
+    <h2 class="hd st">Why websites lose leads</h2>
+    <p class="lb">You can lose leads online without anyone ever telling you. Maybe the site gets traffic but not enough calls. Maybe people visit several pages but never inquire. Maybe the offer is not clear enough. Maybe the site feels too generic. Maybe mobile is clunky. Maybe the trust signals are weak. Every extra second of doubt works against conversion. And when buyers have options, they do not fight through friction. They leave.</p>
+  </section>
+
+  <!-- What We Focus On -->
+  <section class="content-intro pad w r">
+    <h2 class="hd st">What we focus on</h2>
+    <div class="process-grid" style="counter-reset: item;">
+      <div class="process-item r">
+        <h3>Clear positioning</h3>
+        <p>The visitor should understand quickly what you do, who you help, and why you are worth contacting.</p>
+      </div>
+      <div class="process-item r">
+        <h3>Strong first impression</h3>
+        <p>The site should feel current, credible, and aligned with the quality of the business.</p>
+      </div>
+      <div class="process-item r">
+        <h3>Better mobile performance</h3>
+        <p>Most visitors are on their phone. If mobile is weak, conversion suffers.</p>
+      </div>
+      <div class="process-item r">
+        <h3>Cleaner structure</h3>
+        <p>The site should move naturally from understanding to confidence to action.</p>
+      </div>
+      <div class="process-item r">
+        <h3>Better calls to action</h3>
+        <p>People should never have to hunt for how to reach you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Experience -->
+  <section class="content-dark pad w r">
+    <h2 class="hd st">Lead generation is about the full experience</h2>
+    <p class="lb">A form alone does not create leads. Good lead generation comes from the full experience feeling right. The prospect needs to feel like:</p>
+    <ul class="benefit-list" style="margin-top: 1.5rem;">
+      <li class="benefit-item"><span>This business looks legitimate</span></li>
+      <li class="benefit-item"><span>This business understands what I need</span></li>
+      <li class="benefit-item"><span>This business feels better than the alternatives</span></li>
+      <li class="benefit-item"><span>Reaching out will be easy</span></li>
+      <li class="benefit-item"><span>I trust what I am seeing enough to take the next step</span></li>
+    </ul>
+    <p class="lb" style="margin-top: 1.5rem;">That is why design, copy, flow, hierarchy, and trust all matter together.</p>
+  </section>
+
+  <!-- Who This Is For -->
+  <section class="content-intro pad w r">
+    <h2 class="hd st">Who this is for</h2>
+    <p class="lb tx2">Especially valuable for businesses that are already earning attention and need their website to do more with it.</p>
+    <div class="fls">
+      <div class="grid-item r">
+        <h3>Service Trades</h3>
+        <p>Contractors, home service businesses, and specialty trades benefit greatly from clearer positioning and better mobile experience.</p>
+      </div>
+      <div class="grid-item r">
+        <h3>Wellness & Medical</h3>
+        <p>Med spas, clinics, and wellness brands need to build trust quickly and make the inquiry process feel easy.</p>
+      </div>
+      <div class="grid-item r">
+        <h3>Local & Multi-Location</h3>
+        <p>Local service brands and multi-location operators need consistent conversion across all locations and traffic sources.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Better Conversion Can Do -->
+  <section class="content-dark pad w r">
+    <h2 class="hd st">What better conversion can do</h2>
+    <p class="lb">In a lot of businesses, this is one of the most overlooked leverage points.</p>
+    <ul class="benefit-list" style="margin-top: 2rem;">
+      <li class="benefit-item"><span>Improve inquiry rates</span></li>
+      <li class="benefit-item"><span>Increase calls from existing traffic</span></li>
+      <li class="benefit-item"><span>Improve lead quality</span></li>
+      <li class="benefit-item"><span>Strengthen trust before the first conversation</span></li>
+      <li class="benefit-item"><span>Support a more premium position</span></li>
+      <li class="benefit-item"><span>Reduce leakage from mobile users</span></li>
+      <li class="benefit-item"><span>Make marketing dollars work harder</span></li>
+    </ul>
+  </section>
+
+  <!-- How We Build -->
+  <section class="content-intro pad w r">
+    <h2 class="hd st">How we build</h2>
+    <p class="lb tx2">We do not build bloated websites full of filler. We build websites with purpose. Every section should earn its place. Every page should support clarity and trust. Every click should feel intuitive. Every mobile experience should feel clean. The goal is simple. Help the right person get to yes faster.</p>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <h2 class="hd st r">Frequently asked questions</h2>
+      <div class="faq-item r">
+        <div class="faq-question">What is a lead generation website?</div>
+        <div class="faq-answer">It is a website designed specifically to help turn visitors into inquiries, calls, or customers.</div>
+      </div>
+      <div class="faq-item r">
+        <div class="faq-question">Will this help if I already run ads?</div>
+        <div class="faq-answer">Yes. A stronger website can improve the performance of the traffic you already pay for.</div>
+      </div>
+      <div class="faq-item r">
+        <div class="faq-question">Do I need a full rebuild to improve lead generation?</div>
+        <div class="faq-answer">Not always, but many underperforming sites need more than surface edits.</div>
+      </div>
+      <div class="faq-item r">
+        <div class="faq-question">Does design really affect lead generation?</div>
+        <div class="faq-answer">Yes. Design shapes trust, clarity, usability, and how confident someone feels about contacting you.</div>
+      </div>
+      <div class="faq-item r">
+        <div class="faq-question">What matters most for lead generation on mobile?</div>
+        <div class="faq-answer">Speed, readability, hierarchy, and clear next steps matter a lot.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="fcta r">
+    <div class="fctab">
+      <h2 class="hd st">Let the website do more of the selling</h2>
+      <p>If your current site looks fine but is not generating enough action, the problem may not be traffic. It may be the website itself.</p>
+      <a href="/index.html#contact" class="btn">Get a Website Review</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>TMN Creative</h3>
+        <a href="/">Home</a>
+        <a href="/index.html#proof">Work</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/web-design-for-service-businesses">Web Design</a>
+        <a href="/website-redesign-services">Redesigns</a>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <a href="/lead-generation-websites">Lead Generation</a>
+        <a href="/mobile-first-web-design">Mobile-First Design</a>
+        <a href="/index.html#faq">FAQ</a>
+        <a href="/index.html#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 True Margin North LLC</div>
+      <div class="footer-tmn">
+        <a href="https://truemarginnorth.com">truemarginnorth.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile CTA -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="/index.html#contact" class="btn" style="width: 100%; text-align: center;">Get a Website Review</a>
+  </div>
+
+  <script>
+    // Initialize Lenis smooth scroll
+    async function initLenis() {
+      try {
+        const Lenis = (await import('https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1')).default;
+        const lenis = new Lenis({
+          duration: 1.2,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          direction: 'vertical',
+          gestureDirection: 'vertical',
+          smooth: true,
+          smoothTouch: false,
+        });
+
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+      } catch (error) {
+        console.warn('Lenis failed to load, using native scroll');
+      }
+    }
+
+    initLenis();
+
+    // Navigation scroll detection
+    const nav = document.getElementById('nav');
+    const navLogoImg = document.getElementById('nav-logo-img');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+        navLogoImg.src = 'logo-dark.png';
+      } else {
+        nav.classList.remove('scrolled');
+        navLogoImg.src = 'logo-light.png';
+      }
+    });
+
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.r');
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('v');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    revealElements.forEach(el => {
+      observer.observe(el);
+    });
+
+    // FAQ accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        faqItems.forEach(el => el.classList.remove('active'));
+
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // Sticky CTA visibility
+    const stickyCta = document.getElementById('stickyCta');
+    const finalCta = document.querySelector('.fcta');
+
+    window.addEventListener('scroll', () => {
+      const rect = finalCta.getBoundingClientRect();
+      if (rect.top > window.innerHeight) {
+        stickyCta.classList.add('show');
+      } else {
+        stickyCta.classList.remove('show');
+      }
+    });
+  </script>
+
+</body>
+</html>
