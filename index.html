@@ -118,7 +118,7 @@
     .hero-pills{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;opacity:0;animation:fu 0.8s var(--e) 0.58s forwards}
     .hp-tag{font-size:0.72rem;font-weight:600;color:var(--tx);padding:0.4rem 0.9rem;background:var(--bg2);border:1px solid var(--ln);border-radius:100px;letter-spacing:0.01em}
     .hp-sep{color:var(--ln);font-size:0.6rem;line-height:1}
-    .hero h1 br{display:none}
+    .hero h1 br{display:block}
     .hero-btns{display:flex;gap:0.85rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fu 0.8s var(--e) 0.65s forwards}
     .btn-p{font-size:0.85rem;font-weight:600;color:#fff;background:var(--dk);padding:0.9rem 2.25rem;text-decoration:none;border-radius:10px;transition:all 0.3s var(--e);box-shadow:0 2px 8px rgba(15,23,42,0.1)}
     .btn-p:hover{background:var(--dk2);transform:translateY(-2px);box-shadow:0 12px 35px rgba(15,23,42,0.2)}
@@ -465,7 +465,7 @@
     .hero-pills{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;opacity:0;animation:fu 0.8s var(--e) 0.58s forwards}
     .hp-tag{font-size:0.72rem;font-weight:600;color:var(--tx);padding:0.4rem 0.9rem;background:var(--bg2);border:1px solid var(--ln);border-radius:100px;letter-spacing:0.01em}
     .hp-sep{color:var(--ln);font-size:0.6rem;line-height:1}
-    .hero h1 br{display:none}
+    .hero h1 br{display:block}
     .hero-btns{display:flex;gap:0.85rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fu 0.8s var(--e) 0.65s forwards}
     .btn-p{font-size:0.85rem;font-weight:600;color:#fff;background:var(--dk);padding:0.9rem 2.25rem;text-decoration:none;border-radius:10px;transition:all 0.3s var(--e);box-shadow:0 2px 8px rgba(15,23,42,0.1)}
     .btn-p:hover{background:var(--dk2);transform:translateY(-2px);box-shadow:0 12px 35px rgba(15,23,42,0.2)}
@@ -775,6 +775,14 @@
     @keyframes stkShimmer{0%,80%,100%{left:-100%}40%{left:100%}}
     @media(max-width:768px){.stk{display:block}.cta{padding-bottom:calc(4rem + env(safe-area-inset-bottom,0px))}footer{padding-bottom:calc(4.5rem + env(safe-area-inset-bottom,0px))}}
 
+
+    /* FOOTER NAV MOBILE */
+    @media(max-width:768px){
+      .foot-nav{padding:2rem 1.5rem 1rem !important}
+      .foot-nav-grid{grid-template-columns:1fr 1fr !important;gap:1.25rem 1rem !important}
+      .foot-nav-grid a{font-size:0.7rem !important;padding:0.15rem 0 !important}
+      .foot-nav-grid > div > div:first-child{font-size:0.5rem !important;margin-bottom:0.5rem !important}
+    }
     /* ANIM */
     @keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
@@ -816,7 +824,7 @@
     <div class="hero-fade"></div>
     <div class="hc">
       <div class="hero-pill"><span class="dot"></span> Now booking new projects</div>
-      <h1>The first impression.<br/> <span class="h1-lg">Make your business look <span class="accent">more established.</span></span></h1>
+      <h1>The first impression.<br/>Make your business<br/><span class="accent" style="font-size:1.08em">look more established.</span></h1>
       <p class="hero-sub">Premium websites and conversion systems for businesses that want to build trust, respond faster, and earn more.</p>
       <div class="hero-pills"><span class="hp-tag">Fast turnaround</span><span class="hp-sep">&middot;</span><span class="hp-tag">Mobile first</span><span class="hp-sep">&middot;</span><span class="hp-tag">Built to convert</span></div>
       <div class="hero-btns">
@@ -838,7 +846,7 @@
   </section>
 
   <section class="port-sec" id="proof">
-    <div class="port-header r"><span class="badge">Selected Work</span><h2 class="stl" style="color:#fff">Built by us. Live right&nbsp;now.</h2><p class="sdsc" style="color:rgba(255,255,255,0.4);margin:0 auto">Real sites. Real businesses. Click to see them live.</p></div>
+    <div class="port-header r"><span class="badge">Selected Work</span><h2 class="stl" style="color:#fff">Recent projects.</h2><p class="sdsc" style="color:rgba(255,255,255,0.4);margin:0 auto">Click any site to see it live.</p></div>
     <div class="port-wrap">
       <div class="port-track">
         <a href="https://truemarginnorth.com" target="_blank" rel="noopener" class="port-item"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">truemarginnorth.com</span></div><img src="images/tmn.jpg" alt="True Margin North" loading="lazy" width="900" height="562" /></div><div class="port-meta"><div><div class="port-type">Consultancy</div><h3>True Margin North</h3><div class="port-tag">Credibility upgrade</div></div><span class="port-arrow">→</span></div></a>
@@ -964,7 +972,7 @@
         <div class="team-info">
           <div class="team-names">
             <div class="team-person"><strong>Trevor</strong> <span>Strategy, design, build</span></div>
-            <div class="team-person"><strong>Taylor</strong> <span>Brand, copy, operations</span></div>
+            <div class="team-person"><strong>Taylor</strong> <span>Brand, art, operations</span></div>
           </div>
           <p style="font-size:0.92rem;color:var(--tx2);line-height:1.75;margin-top:1.25rem">You work directly with us from day one. Every project receives our complete focus, and you own 100% of the deliverable.</p>
         </div>
@@ -1062,8 +1070,8 @@
   </div>
 
   
-  <div style="background:#0A0A0A;padding:3rem 4rem 1rem;border-top:1px solid rgba(248,247,244,0.04)">
-    <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem">
+  <div class="foot-nav" style="background:#0A0A0A;padding:3rem 4rem 1rem;border-top:1px solid rgba(248,247,244,0.04)">
+    <div class="foot-nav-grid" style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem">
       <div>
         <div style="font-size:0.58rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,244,0.35);margin-bottom:0.75rem">Services</div>
         <a href="/pricing" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Pricing</a>
