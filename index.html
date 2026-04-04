@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TMN Creative | Modern Web Design for Service Businesses</title>
+  <title>TMN Creative | Premium Websites for Service Businesses</title>
   <meta name="description" content="Premium web design for service businesses in Fort Worth, Dallas, and Scottsdale. First draft in 72 hours. What used to take 3 months and $10K+ now ships in days. Starting at $2,500." />
   <meta property="og:title" content="TMN Creative | Modern Web Design for Service Businesses" />
   <meta property="og:description" content="Premium websites and lead conversion systems for businesses that have outgrown their current look. First draft in 72 hours. What used to take 3 months and $10K+ now ships in days." />
@@ -47,17 +47,6 @@
 
     nav.dark{background:rgba(11,17,32,0.92);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid rgba(255,255,255,0.06)}
     nav.dark.s{box-shadow:0 1px 3px rgba(0,0,0,0.2);border-bottom:1px solid rgba(255,255,255,0.06)}
-    nav.dark .nav-logo{mix-blend-mode:lighten}
-    nav.dark .nk{color:rgba(255,255,255,0.5)}
-    nav.dark .nk:hover{color:#fff}
-    nav.dark .nb{background:var(--ac);color:var(--dk3);border-color:var(--ac)}
-    nav.dark .menu-btn span,nav.dark .menu-btn span::before,nav.dark .menu-btn span::after{background:#fff}
-    nav.on-hero{background:transparent !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;box-shadow:none !important;border-bottom:none !important}
-    nav.on-hero.s{background:transparent !important;box-shadow:none !important;border-bottom:none !important}
-
-
-    nav.dark{background:rgba(11,17,32,0.92);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid rgba(255,255,255,0.06)}
-    nav.dark.s{box-shadow:0 1px 3px rgba(0,0,0,0.2);border-bottom:1px solid rgba(255,255,255,0.06)}
     nav.dark .nk{color:rgba(255,255,255,0.5)}
     nav.dark .nk:hover{color:#fff}
     nav.dark .nb{background:var(--ac);color:var(--dk3);border-color:var(--ac)}
@@ -66,10 +55,18 @@
     nav.on-hero{background:transparent !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;box-shadow:none !important;border-bottom:none !important}
     nav.on-hero.s{background:transparent !important;box-shadow:none !important;border-bottom:none !important}
 
-    .nl{text-decoration:none;display:flex;align-items:center;height:44px}
+    .nl{text-decoration:none;display:flex;align-items:center;height:40px}
     .nl:hover{opacity:0.7;transition:opacity 0.3s}
-    .nav-logo{height:36px;width:auto}
+    .nav-logo{height:30px;width:auto}
 
+    .nl{display:grid;align-items:center;height:40px}
+    .nav-logo-dark,.nav-logo-light{grid-area:1/1;height:30px;width:auto;transition:opacity 0.4s var(--e)}
+    .nav-logo-light{opacity:0}
+    .nav-logo-dark{opacity:1}
+    nav.dark .nav-logo-dark{opacity:0}
+    nav.dark .nav-logo-light{opacity:1}
+    nav.mob-open .nav-logo-dark{opacity:0}
+    nav.mob-open .nav-logo-light{opacity:1}
     .nr{display:flex;align-items:center;gap:2.25rem}
     .nk{font-size:0.82rem;font-weight:500;color:var(--tx2);text-decoration:none;transition:color 0.2s}
     .nk:hover{color:var(--dk)}
@@ -90,11 +87,10 @@
     .mob-menu.open a:nth-child(1){transition-delay:0.06s}.mob-menu.open a:nth-child(2){transition-delay:0.1s}.mob-menu.open a:nth-child(3){transition-delay:0.14s}.mob-menu.open a:nth-child(4){transition-delay:0.18s}.mob-menu.open a:nth-child(5){transition-delay:0.22s}.mob-menu.open a:nth-child(6){transition-delay:0.26s}
     .mob-menu .mob-cta{font-size:0.82rem;background:var(--ac);color:var(--dk3);padding:0.75rem 2rem;border-radius:8px;margin-top:1.5rem;font-weight:600}
     nav.mob-open{background:transparent !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;box-shadow:none !important}
-    nav.mob-open .nav-logo{mix-blend-mode:lighten}
     @media(max-width:768px){
       nav{padding:1rem 1.5rem;padding-top:calc(1rem + env(safe-area-inset-top,0px))}
       nav.s{padding:0.75rem 1.5rem;padding-top:calc(0.75rem + env(safe-area-inset-top,0px))}
-      .nk,.nb{display:none}.menu-btn{display:flex}.nr{gap:0}.nav-logo{height:30px}
+      .nk,.nb{display:none}.menu-btn{display:flex}.nr{gap:0}.nav-logo{height:26px}
     }
 
     /* HERO */
@@ -128,6 +124,8 @@
     .btn-p:hover{background:var(--dk2);transform:translateY(-2px);box-shadow:0 12px 35px rgba(15,23,42,0.2)}
     .btn-s{font-size:0.85rem;font-weight:500;color:var(--tx);padding:0.9rem 2.25rem;text-decoration:none;border:1px solid var(--ln);border-radius:10px;transition:all 0.3s var(--e)}
     .btn-s:hover{border-color:var(--tx3);background:var(--bg2);transform:translateY(-2px)}
+    .hero-trust{font-size:0.72rem;font-weight:400;color:var(--tx3);margin-top:2.5rem;opacity:0;animation:fu 0.8s var(--e) 0.8s forwards;text-wrap:balance}
+    @media(max-width:768px){.hero-trust{font-size:0.68rem;margin-top:1.75rem;text-align:center}}
     /* Floating mockup */
     .hero-mockup{display:none}
     @media(max-width:768px){
@@ -218,6 +216,20 @@
     .who-card h3{font-size:0.9rem;font-weight:700;color:var(--dk);margin-bottom:0.5rem;line-height:1.35;letter-spacing:-0.01em}
     .who-card p{font-size:0.82rem;color:var(--tx2);line-height:1.65}
     @media(max-width:768px){.who-grid{grid-template-columns:1fr;gap:0.85rem}.who-card:first-child{grid-row:auto;padding:1.75rem}.who-card:first-child h3{font-size:0.92rem;margin-bottom:0.5rem}.who-card:first-child p{font-size:0.84rem;line-height:1.65}.who-card{padding:1.75rem;border-radius:14px}.who-card h3{font-size:0.92rem}.who-card p{font-size:0.84rem;line-height:1.65}}
+
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+    @media(max-width:768px){.why-grid{grid-template-columns:1fr;gap:0.85rem}}
+    /* TEAM PHOTOS */
+    .team-row{text-align:center}
+    .team-photos{display:flex;gap:1.5rem;justify-content:center}
+    .team-photo{position:relative;flex:0 0 220px}
+    .team-photo img{width:220px;height:220px;object-fit:cover;border-radius:16px;filter:grayscale(15%);transition:filter 0.4s var(--e)}
+    .team-photo:hover img{filter:grayscale(0%)}
+    .team-label{margin-top:0.85rem;font-size:0.82rem;font-weight:700;color:var(--dk);letter-spacing:-0.01em}
+    .team-label span{display:block;font-size:0.68rem;font-weight:500;color:var(--tx3);margin-top:0.15rem;letter-spacing:0}
+    @media(max-width:768px){.team-photos{gap:1rem}.team-photo{flex:0 0 160px}.team-photo img{width:160px;height:160px;border-radius:14px}.team-label{font-size:0.78rem}.team-label span{font-size:0.65rem}}
+    @media(max-width:400px){.team-photo{flex:0 0 140px}.team-photo img{width:140px;height:140px}}
+    @media(max-width:768px){#process{padding-top:3rem;padding-bottom:3rem}#faq{padding-top:3rem;padding-bottom:3rem}}
 
     /* TESTIMONIALS */
     .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
@@ -359,7 +371,7 @@
       .ba-counter{margin-top:0.5rem;font-size:0.6rem}
     }
     @media(max-width:400px){.ba-pair{aspect-ratio:4/3}.ba-line::after{width:32px;height:32px}.ba-prev,.ba-next{width:30px;height:30px}}name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TMN Creative | Modern Web Design for Service Businesses</title>
+  <title>TMN Creative | Premium Websites for Service Businesses</title>
   <meta name="description" content="Premium web design for service businesses in Fort Worth, Dallas, and Scottsdale. First draft in 72 hours. What used to take 3 months and $10K+ now ships in days. Starting at $2,500." />
   <meta property="og:title" content="TMN Creative | Modern Web Design for Service Businesses" />
   <meta property="og:description" content="Premium websites and lead conversion systems for businesses that have outgrown their current look. First draft in 72 hours. What used to take 3 months and $10K+ now ships in days." />
@@ -400,9 +412,9 @@
     /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:310;padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s var(--e);background:rgba(255,255,255,0.88);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%)}
     nav.s{padding:0.75rem 3rem;box-shadow:0 1px 2px rgba(15,23,42,0.04);border-bottom:1px solid rgba(226,232,240,0.5)}
-    .nl{text-decoration:none;display:flex;align-items:center;height:44px}
+    .nl{text-decoration:none;display:flex;align-items:center;height:40px}
     .nl:hover{opacity:0.7;transition:opacity 0.3s}
-    .nav-logo{height:36px;width:auto}
+    .nav-logo{height:30px;width:auto}
     .nr{display:flex;align-items:center;gap:2.25rem}
     .nk{font-size:0.82rem;font-weight:500;color:var(--tx2);text-decoration:none;transition:color 0.2s}
     .nk:hover{color:var(--dk)}
@@ -426,7 +438,7 @@
     @media(max-width:768px){
       nav{padding:1rem 1.5rem;padding-top:calc(1rem + env(safe-area-inset-top,0px))}
       nav.s{padding:0.75rem 1.5rem;padding-top:calc(0.75rem + env(safe-area-inset-top,0px))}
-      .nk,.nb{display:none}.menu-btn{display:flex}.nr{gap:0}.nav-logo{height:30px}
+      .nk,.nb{display:none}.menu-btn{display:flex}.nr{gap:0}.nav-logo{height:26px}
     }
 
     /* HERO */
@@ -782,7 +794,7 @@
 </head>
 <body>
   <nav id="nav">
-    <a href="#" class="nl"><img src="images/logo-dark.png" alt="TMN Creative" class="nav-logo" /></a>
+    <a href="#" class="nl"><img src="images/logo-dark.png" alt="TMN Creative" class="nav-logo nav-logo-dark" /><img src="images/logo-light.png" alt="TMN Creative" class="nav-logo nav-logo-light" /></a>
     <div class="nr">
       <a href="#proof" class="nk">Work</a>
       <a href="/pricing" class="nk">Pricing</a>
@@ -804,31 +816,28 @@
     <div class="hero-mesh"><div class="hero-mesh-orb"></div><div class="hero-mesh-orb"></div><div class="hero-mesh-orb"></div></div>
     <div class="hero-fade"></div>
     <div class="hc">
-      <div class="hero-pill"><span class="dot"></span> Your site could be live by <strong id="liveDate"></strong></div>
-      <h1>Your business deserves<br/> <span class="h1-lg">a website that <span class="accent">closes.</span></span></h1>
-      <p class="hero-sub">Premium websites and lead follow-up systems for service businesses that want to look better, respond faster, and win more jobs.</p>
-      <div class="hero-pills"><span class="hp-tag">Fast turnaround</span><span class="hp-sep">&middot;</span><span class="hp-tag">Sharp positioning</span><span class="hp-sep">&middot;</span><span class="hp-tag">Built to convert</span><span class="hp-sep">&middot;</span><span class="hp-tag">Never miss a lead</span></div>
+      <div class="hero-pill"><span class="dot"></span> Now booking new projects</div>
+      <h1>The first impression.<br/> <span class="h1-lg">Make your business look <span class="accent">more established.</span></span></h1>
+      <p class="hero-sub">Premium websites and conversion systems for businesses that want to build trust, respond faster, and earn more.</p>
+      <div class="hero-pills"><span class="hp-tag">Fast turnaround</span><span class="hp-sep">&middot;</span><span class="hp-tag">Mobile first</span><span class="hp-sep">&middot;</span><span class="hp-tag">Built to convert</span></div>
       <div class="hero-btns">
-        <a href="#contact" class="btn-p">Get My Free Site Review</a>
-        <a href="#proof" class="btn-s">See the Work</a>
+        <a href="#contact" class="btn-p">Get a Free Website Review</a>
+        <a href="/pricing" class="btn-s">See Pricing</a>
       </div>
-
+      <p class="hero-trust">Built for service businesses, local brands, and operators who know first impressions matter.</p>
     </div>
   </section>
 
-  <div class="stats">
-    <div class="stats-inner">
-      <span class="trust-label">Best fit for</span>
-      <span class="trust-tag">HVAC</span>
-      <span class="trust-tag">Plumbing</span>
-      <span class="trust-tag">Irrigation</span>
-      <span class="trust-tag">Landscaping</span>
-      <span class="trust-tag">Med Spas</span>
-      <span class="trust-tag">Dental</span>
-      <span class="trust-tag">Consulting</span>
-      <span class="trust-tag">Financial Services</span>
+
+
+  <!-- PROBLEM FRAMING -->
+  <section class="sec" style="padding:5rem 3rem">
+    <div style="max-width:640px;margin:0 auto">
+      <h2 class="stl r" style="text-align:center;margin-bottom:1.5rem">Your website is your reputation online. If it does not look right, people notice.</h2>
+      <p class="r" style="font-size:0.95rem;color:var(--tx2);line-height:1.8;margin-bottom:1.25rem;text-align:center">Most businesses do not have a lead problem. They have a trust problem. Prospects visit your site before they call. A dated or generic design sends them straight to the competition.</p>
+      <p class="r" style="font-size:0.95rem;color:var(--tx2);line-height:1.8;text-align:center">Your work is probably great. Your reputation is strong. But when someone Googles you and lands on a site that was built years ago on a template, the gap between your real-world credibility and your web presence costs you business every week.</p>
     </div>
-  </div>
+  </section>
 
   <section class="port-sec" id="proof">
     <div class="port-header r"><span class="badge">Selected Work</span><h2 class="stl" style="color:#fff">Built by us. Live right&nbsp;now.</h2><p class="sdsc" style="color:rgba(255,255,255,0.4);margin:0 auto">Real sites. Real businesses. Click to see them live.</p></div>
@@ -860,7 +869,7 @@
 
   <!-- BEFORE & AFTER -->
   <section class="ba-sec">
-    <div class="ba-header r"><span class="badge">Before &amp; After</span><h2 class="stl">The difference is immediate.</h2><p class="sdsc" style="margin:0 auto">Drag the slider to compare. Use the arrows to see more projects.</p></div>
+    <div class="ba-header r" style="margin-bottom:2rem"><p style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--tx3);text-align:center">Before and after</p></div>
     <div class="ba-wrap r">
       <div class="ba-slider" id="baSlider">
         <div class="ba-slide-track" id="baTrack">
@@ -875,56 +884,6 @@
       </div>
       <div class="ba-dots" id="baDots"></div>
       <div class="ba-counter" id="baCounter">1 of 5</div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="sec">
-    <div class="wrap">
-      <div class="sec-header center r"><span class="badge">What Clients Say</span><h2 class="stl">Real feedback from real projects.</h2><p class="sdsc" style="margin:0 auto">5.0 &#9733; on <a href="https://maps.app.goo.gl/hf37L4ca44xjHiKe8" target="_blank" rel="noopener" style="color:var(--ac);text-decoration:none;font-weight:600">Google</a></p></div>
-      <div class="test-grid r">
-        <div class="test-card">
-          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="test-quote">Our old site was a Wix template from 2019. Did not reflect the quality of work we do. Trevor turned around a first draft in 2 days and nailed the direction. Clients have told us our site looks better than companies 10x our size.</p>
-          <div class="test-author"><div class="test-name">Clayton H.</div><div class="test-role">Diamond H Irrigation, Fort Worth</div></div>
-        </div>
-        <div class="test-card">
-          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="test-quote">Really great experience working with Trevor and Taylor. They got what we needed right away and made the whole site feel cleaner, more modern, and credible. Insanely huge step up from where we were before. 10000% recommend.</p>
-          <div class="test-author"><div class="test-name">Michael M.</div><div class="test-role">Google Review</div></div>
-        </div>
-        <div class="test-card">
-          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="test-quote">Talked to 3 agencies before TMN. Every one quoted 8 to 12 weeks and $10K+. Trevor had something in my inbox in 48 hours that was better than anything they showed me. Final product actually looks like us.</p>
-          <div class="test-author"><div class="test-name">Cody E.</div><div class="test-role">Elmore Home Services, Dallas</div></div>
-        </div>
-        <div class="test-card">
-          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="test-quote">I showed Winston the site and his exact words were "like he couldn't have nailed it any more." That is the reaction you want your customers to have. Trevor and Taylor deliver at a level that makes you look like a much bigger operation than you are.</p>
-          <div class="test-author"><div class="test-name">Jonathan T.</div><div class="test-role">Client Referral, QC Atlantic</div></div>
-        </div>
-        <div class="test-card">
-          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="test-quote">Straightforward process. I appreciated that they actually looked at my business before the call instead of asking me 40 questions I already answered in the form. Site looks clean and professional. Exactly what I asked for and in record fast time.</p>
-          <div class="test-author"><div class="test-name">Ryan O.</div><div class="test-role">Google Review</div></div>
-        </div>
-        <div class="test-card">
-          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="test-quote">Not a tech person. Just needed something that looked clean and made my business look legit. Trevor and Taylor handled everything, explained it in plain English, and had us live in under a week. Easiest vendor experience in years.</p>
-          <div class="test-author"><div class="test-name">Jose M.</div><div class="test-role">Tony's Lawn &amp; Tree, Fort Worth</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec sec-alt">
-    <div class="wrap">
-      <div class="sec-header center r"><span class="badge">Who This Is For</span><h2 class="stl">We build for a specific type of business.</h2><p class="sdsc">If you prioritize execution and credibility, we should talk.</p></div>
-      <div class="who-grid r">
-        <div class="who-card"><div class="who-icon" style="background:#E8F5E9">&#127793;</div><h3>Strong operations, weak web presence.</h3><p>You run a great business. Irrigation, HVAC, plumbing, dental, med spa. Your work speaks for itself but your website and follow-up process do not reflect that reality.</p><div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.5rem"><a href="/home-services" style="font-size:0.68rem;font-weight:600;color:var(--ac);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid var(--ac3);border-radius:100px">Home Services</a><a href="/contractors" style="font-size:0.68rem;font-weight:600;color:var(--ac);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid var(--ac3);border-radius:100px">Contractors</a><a href="/dental" style="font-size:0.68rem;font-weight:600;color:var(--ac);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid var(--ac3);border-radius:100px">Dental</a><a href="/med-spa" style="font-size:0.68rem;font-weight:600;color:var(--ac);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid var(--ac3);border-radius:100px">Med Spas</a></div></div>
-        <div class="who-card"><div class="who-icon" style="background:#E3F2FD">&#128188;</div><h3>You sell on expertise and trust.</h3><p>Advisory firms, consultants, niche lenders, brokers. Your website is your first handshake. It needs to command respect and your follow-up needs to be instant.</p><div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.5rem"><a href="/consulting" style="font-size:0.68rem;font-weight:600;color:var(--ac);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid var(--ac3);border-radius:100px">Consulting</a><a href="/financial-services" style="font-size:0.68rem;font-weight:600;color:var(--ac);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid var(--ac3);border-radius:100px">Financial Services</a><a href="/real-estate" style="font-size:0.68rem;font-weight:600;color:var(--ac);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid var(--ac3);border-radius:100px">Real Estate</a></div></div>
-        <div class="who-card"><div class="who-icon" style="background:#FFF3E0">&#128200;</div><h3>Real revenue, outdated systems.</h3><p>You are generating serious income with a website built years ago and no structured follow-up process. Time to match your digital presence and lead handling to your actual business.</p><div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.5rem"><a href="/website-redesign-services" style="font-size:0.68rem;font-weight:600;color:var(--ac);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid var(--ac3);border-radius:100px">Website Redesign</a><a href="/lead-generation-websites" style="font-size:0.68rem;font-weight:600;color:var(--ac);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid var(--ac3);border-radius:100px">Lead Generation</a><a href="/small-business" style="font-size:0.68rem;font-weight:600;color:var(--ac);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid var(--ac3);border-radius:100px">Small Business</a></div></div>
-      </div>
     </div>
   </section>
 
@@ -965,14 +924,79 @@
     </div>
   </section>
 
+
+  <!-- TESTIMONIALS -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-header center r"><span class="badge">Client Feedback</span><h2 class="stl">5.0 &#9733; on <a href="https://maps.app.goo.gl/hf37L4ca44xjHiKe8" target="_blank" rel="noopener" style="color:var(--ac);text-decoration:none">Google</a>. Here is what they said.</h2></div>
+      <div class="test-grid r">
+        <div class="test-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-quote">Our old site was a Wix template from 2019. Did not reflect the quality of work we do. Trevor turned around a first draft in 2 days and nailed the direction. Clients have told us our site looks better than companies 10x our size.</p>
+          <div class="test-author"><div class="test-name">Clayton H.</div><div class="test-role">Diamond H Irrigation, Fort Worth</div></div>
+        </div>
+
+        <div class="test-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-quote">Talked to 3 agencies before TMN. Every one quoted 8 to 12 weeks and $10K+. Trevor had something in my inbox in 48 hours that was better than anything they showed me. Final product actually looks like us.</p>
+          <div class="test-author"><div class="test-name">Cody E.</div><div class="test-role">Elmore Home Services, Dallas</div></div>
+        </div>
+        <div class="test-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-quote">I showed Winston the site and his exact words were "like he couldn't have nailed it any more." That is the reaction you want your customers to have. Trevor and Taylor deliver at a level that makes you look like a much bigger operation than you are.</p>
+          <div class="test-author"><div class="test-name">Jonathan T.</div><div class="test-role">Client Referral, QC Atlantic</div></div>
+        </div>
+
+        <div class="test-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-quote">Not a tech person. Just needed something that looked clean and made my business look legit. Trevor and Taylor handled everything, explained it in plain English, and had us live in under a week. Easiest vendor experience in years.</p>
+          <div class="test-author"><div class="test-name">Jose M.</div><div class="test-role">Tony's Lawn &amp; Tree, Fort Worth</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-alt">
+    <div class="wrap">
+      <div class="sec-header r"><span class="badge">The Studio</span><h2 class="stl">Husband-and-wife team. Fort Worth, TX.</h2></div>
+      <div class="team-row r">
+        <div class="team-photos">
+          <div class="team-photo">
+            <img src="images/trevor.jpg" alt="Trevor Niemann" loading="lazy" width="600" height="600" />
+            <div class="team-label">Trevor <span>Strategy, design, build</span></div>
+          </div>
+          <div class="team-photo">
+            <img src="images/taylor.jpg" alt="Taylor Niemann" loading="lazy" width="600" height="600" />
+            <div class="team-label">Taylor <span>Brand, copy, operations</span></div>
+          </div>
+        </div>
+        <p style="font-size:0.95rem;color:var(--tx2);line-height:1.8;max-width:540px;margin:2rem auto 0">You work directly with us from day one. Every project receives our complete focus, and you own 100% of the deliverable.</p>
+      </div>
+      <div class="why-grid r">
+        <div style="background:var(--bg);border:1px solid var(--ln);border-radius:14px;padding:2rem">
+          <h3 style="font-size:0.88rem;font-weight:700;color:var(--dk);margin-bottom:0.4rem">72-hour first drafts.</h3>
+          <p style="font-size:0.82rem;color:var(--tx2);line-height:1.65">You get a working preview of your site within 3 days of kickoff. A live site you can click through on your phone.</p>
+        </div>
+        <div style="background:var(--bg);border:1px solid var(--ln);border-radius:14px;padding:2rem">
+          <h3 style="font-size:0.88rem;font-weight:700;color:var(--dk);margin-bottom:0.4rem">You own everything.</h3>
+          <p style="font-size:0.82rem;color:var(--tx2);line-height:1.65">Your site, your code, your domain. No retainers, no lock-in.</p>
+        </div>
+        <div style="background:var(--bg);border:1px solid var(--ln);border-radius:14px;padding:2rem">
+          <h3 style="font-size:0.88rem;font-weight:700;color:var(--dk);margin-bottom:0.4rem">Built for operators.</h3>
+          <p style="font-size:0.82rem;color:var(--tx2);line-height:1.65">We think about trust, speed, margins, and booked jobs. The web presence should match the real business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="sec" id="process">
     <div class="wrap">
-      <div class="sec-header r"><span class="badge">How It Works</span><h2 class="stl">From first call to live in days, not months.</h2></div>
+      <div class="sec-header r"><h2 class="stl">Live in days, not months.</h2></div>
       <div class="proc-grid r">
-        <div class="proc-card"><div class="proc-num">01</div><h3>Submit</h3><p>Share your current site and goals. We review your footprint and respond within 24 hours.</p></div>
-        <div class="proc-card"><div class="proc-num">02</div><h3>Strategy</h3><p>A focused 30-minute call. We define what you need and scope the project. No guesswork.</p></div>
-        <div class="proc-card"><div class="proc-num">03</div><h3>Build</h3><p>We design, develop, and configure with momentum. Most clients review their first build within 72 hours.</p></div>
-        <div class="proc-card"><div class="proc-num">04</div><h3>Launch</h3><p>Your new site goes live. Polished, fast, and built to convert. If you added a conversion system, that launches alongside it.</p></div>
+        <div class="proc-card"><div class="proc-num">01</div><h3>Submit</h3><p>Share your current site and what you want to improve. We respond within 24 hours.</p></div>
+        <div class="proc-card"><div class="proc-num">02</div><h3>Strategy call</h3><p>30 minutes. We define the scope and agree on a plan.</p></div>
+        <div class="proc-card"><div class="proc-num">03</div><h3>Build</h3><p>First draft in 72 hours. A working site you can click through on your phone.</p></div>
+        <div class="proc-card"><div class="proc-num">04</div><h3>Launch</h3><p>Polished, fast, and live. You own everything.</p></div>
       </div>
     </div>
   </section>
@@ -980,66 +1004,34 @@
   <section class="sec sec-alt" id="faq">
     <div class="wrap">
       <div class="faq-layout">
-        <div class="r"><span class="badge">Common Questions</span><h2 class="stl">You're probably wondering.</h2><p class="sdsc" style="margin-top:0.5rem">Every question we get asked before someone says yes.</p></div>
+        <div class="r"><span class="badge">Common Questions</span><h2 class="stl">Before you reach out.</h2></div>
         <div class="faq-list r">
           <div class="faq-item"><div class="faq-q"><h4>How do you build sites this fast?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>You work directly with the people building your site. No middlemen, no bottlenecks. Most clients see their first review in 72 hours.</p></div></div>
           <div class="faq-item"><div class="faq-q"><h4>What if my site just needs a refresh, not a full rebuild?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>That is what the $1,500 Starter Refresh covers. Homepage redesign, copy cleanup, mobile optimization. Live within a week. If you want to expand later, everything carries forward.</p></div></div>
           <div class="faq-item"><div class="faq-q"><h4>What does the Lead Conversion System actually do?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Missed-call text back, instant form replies, automated follow-up over 14 days, and automatic review requests after completed jobs. It catches the leads your current setup is dropping.</p></div></div>
-          <div class="faq-item"><div class="faq-q"><h4>Do I need a new website to use the conversion system?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>No. It connects to your current site, forms, and phone number. That said, a strong site paired with strong follow-up is where results compound. That is why the bundle exists.</p></div></div>
           <div class="faq-item"><div class="faq-q"><h4>What is the monthly fee for?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>The platform that powers your texts, emails, and automations, plus ongoing optimization and a monthly report showing leads, response times, and booked jobs. 90-day minimum, then month-to-month.</p></div></div>
           <div class="faq-item"><div class="faq-q"><h4>Will I be able to update the site myself?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Yes. We also offer Site Care plans from $25/mo for hosting and security up to $100/mo for priority support and monthly updates.</p></div></div>
           <div class="faq-item"><div class="faq-q"><h4>Should I start with the Starter Refresh or the Full Rebuild?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Starter Refresh is a single homepage redesign for $1,500. Full Rebuild starts at $2,500 and includes deeper positioning, multi-page structure, and SEO. We scope everything on the strategy call.</p></div></div>
-          <div class="faq-item"><div class="faq-q"><h4>Why choose a boutique studio over a larger agency?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Speed and direct access. You work with the founders, not account managers. Projects stay focused and move fast.</p></div></div>
-          <div class="faq-item"><div class="faq-q"><h4>Do you only work with service businesses?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Service businesses are our core focus, but we also work with financial services, healthcare, and advisory firms. If you need a credible, premium web presence, we can help.</p></div></div>
         </div>
       </div>
     </div>
   </section>
 
 
-  <!-- STRATEGIC CAPABILITIES -->
-  <section class="sec sec-alt">
-    <div class="wrap">
-      <div class="sec-header r"><span class="badge">Beyond the Build</span><h2 class="stl">Your website is one piece. Here is the full picture.</h2><p class="sdsc">We think about more than just how a site looks. We think about how it performs, how it captures leads, and how it works on every device.</p></div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem" class="r">
-        <a href="/mobile-first-web-design" style="display:block;padding:2rem;background:var(--bg);border:1px solid var(--ln);border-radius:14px;text-decoration:none;transition:all 0.3s">
-          <div style="font-size:1.4rem;margin-bottom:0.75rem">&#128241;</div>
-          <h3 style="font-size:0.95rem;font-weight:700;color:var(--dk);margin-bottom:0.5rem">Mobile-first web design</h3>
-          <p style="font-size:0.82rem;color:var(--tx2);line-height:1.65;margin-bottom:0.75rem">Over 70% of your visitors are on a phone. Every site we build is designed for mobile first, then scaled up.</p>
-          <span style="font-size:0.72rem;font-weight:600;color:var(--ac)">Learn more &rarr;</span>
-        </a>
-        <a href="/lead-generation-websites" style="display:block;padding:2rem;background:var(--bg);border:1px solid var(--ln);border-radius:14px;text-decoration:none;transition:all 0.3s">
-          <div style="font-size:1.4rem;margin-bottom:0.75rem">&#128200;</div>
-          <h3 style="font-size:0.95rem;font-weight:700;color:var(--dk);margin-bottom:0.5rem">Lead generation websites</h3>
-          <p style="font-size:0.82rem;color:var(--tx2);line-height:1.65;margin-bottom:0.75rem">A website that looks good but does not capture leads is a missed opportunity. We build sites with conversion architecture built in.</p>
-          <span style="font-size:0.72rem;font-weight:600;color:var(--ac)">Learn more &rarr;</span>
-        </a>
-        <a href="/website-redesign-services" style="display:block;padding:2rem;background:var(--bg);border:1px solid var(--ln);border-radius:14px;text-decoration:none;transition:all 0.3s">
-          <div style="font-size:1.4rem;margin-bottom:0.75rem">&#128260;</div>
-          <h3 style="font-size:0.95rem;font-weight:700;color:var(--dk);margin-bottom:0.5rem">Website redesign services</h3>
-          <p style="font-size:0.82rem;color:var(--tx2);line-height:1.65;margin-bottom:0.75rem">Already have a site that is not working? We take what you have and rebuild it into something that earns trust and generates business.</p>
-          <span style="font-size:0.72rem;font-weight:600;color:var(--ac)">Learn more &rarr;</span>
-        </a>
-      </div>
-      <div style="text-align:center;margin-top:2.5rem" class="r">
-        <a href="/web-design-for-service-businesses" style="font-size:0.75rem;font-weight:600;color:var(--ac);text-decoration:none;letter-spacing:0.05em">See all services for service businesses &rarr;</a>
-      </div>
-    </div>
-  </section>
 
   <section class="sec" id="contact">
     <div class="wrap">
       <div class="contact-grid">
         <div class="ct-text r">
           <span class="badge">Get Started</span>
-          <h2 class="stl">Ready to see what your website is costing you?</h2>
-          <p>Tell us about your business and your current site. We will review it, then respond within 24 hours with a clear take on what is working, what is not, and what we would change.</p>
+          <h2 class="stl">See what your website is costing you.</h2>
+          <p>Tell us about your business and your current site. We review it before we respond. You will hear from us within 24 hours with an honest take on what we would change.</p>
           <div class="chk"><div class="chk-dot"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div><span>We review your site before we respond</span></div>
           <div class="chk"><div class="chk-dot"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div><span>24-hour response time</span></div>
-          <div class="chk"><div class="chk-dot"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div><span>No commitment, no pressure</span></div>
-          <div class="chk"><div class="chk-dot"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div><span>Honest assessment of what we would change</span></div>
+          <div class="chk"><div class="chk-dot"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5"/></svg></div><span>Honest assessment, no sales pitch</span></div>
+
           <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--ln)">
-            <p style="font-size:0.85rem;color:var(--tx2);line-height:1.65;margin-bottom:0.75rem">We are operators first, designers second. Based in Fort Worth, Texas, we think about trust, speed, margins, and booked jobs. Not just pixels. When you work with us, you get direct collaboration from day one. No agency layers. No handoffs.</p>
+
             <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
               <a href="https://www.linkedin.com/in/taylor-niemann-ab86033aa/" target="_blank" rel="noopener" style="font-size:0.72rem;font-weight:600;color:var(--ac);text-decoration:none;display:inline-flex;align-items:center;gap:0.35rem;opacity:0.7;transition:opacity 0.2s"><svg width="13" height="13" viewBox="0 0 24 24" fill="var(--ac)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Taylor</a>
               <a href="https://www.linkedin.com/in/niemann29/" target="_blank" rel="noopener" style="font-size:0.72rem;font-weight:600;color:var(--ac);text-decoration:none;display:inline-flex;align-items:center;gap:0.35rem;opacity:0.7;transition:opacity 0.2s"><svg width="13" height="13" viewBox="0 0 24 24" fill="var(--ac)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Trevor</a>
@@ -1059,22 +1051,17 @@
             <p class="hidden"><label>Ignore:<input name="bot-field" /></label></p>
             <div class="form-row"><div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="John Smith" required /></div><div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="john@company.com" required /></div></div>
             <div class="fg"><label for="website">Current Website (if you have one)</label><input type="text" id="website" name="website" placeholder="https://yoursite.com" /></div>
-            <div class="fg"><label for="service">What do you need help with?</label><select id="service" name="service" required><option value="" disabled selected>Select a service</option><option value="starter">Starter Refresh ($1,500)</option><option value="rebuild">Full Site Rebuild (Starting at $2,500)</option><option value="conversion-essentials">Conversion Essentials ($1,500 + $297/mo)</option><option value="conversion-full">Full Conversion System ($3,500 + $497/mo)</option><option value="full-build">The Full Build: Site + Conversion System</option><option value="site-care">Site Care Plan</option><option value="not-sure">Not sure yet, just want to talk</option></select></div>
+            <div class="fg"><label for="service">What do you need help with?</label><select id="service" name="service" required><option value="" disabled selected>Select a service</option><option value="website">Website</option><option value="conversion">Lead Conversion System</option><option value="full-build">Website + Lead Conversion</option><option value="site-care">Site Care</option><option value="not-sure">Not sure yet, just want to talk</option></select></div>
              <div class="fg"><label for="details">Anything else we should know?</label><textarea id="details" name="details" placeholder="Tell us about your business and what you are hoping to fix or improve."></textarea></div>
             <div style="margin-top:0.5rem;margin-bottom:0.75rem"><label style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.68rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--tx3);line-height:1.5;cursor:pointer"><input type="checkbox" name="sms-consent" style="margin-top:3px;flex-shrink:0" /> I agree to receive text messages from True Margin North, LLC regarding my inquiry, including appointment confirmations and follow-up communications. Message frequency varies. Message and data rates may apply. Reply STOP to cancel, HELP for help. <a href="/privacy" style="color:var(--ac)">Privacy Policy</a> | <a href="/terms" style="color:var(--ac)">Terms of Service</a></label></div>
-            <button type="submit" class="form-sub">Get My Free Site Review</button>
+            <button type="submit" class="form-sub">Get a Free Website Review</button>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="cta">
-    <p style="font-size:0.6rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--ac);margin-bottom:1rem;position:relative">Now booking new projects</p>
-    <h2>Your website should help you win more jobs.<br/>Let's fix that.</h2>
-    <p>Get a clear, honest review of your current site and what we would improve.</p>
-    <a href="#contact" class="cta-btn">Get My Free Site Review</a>
-    <div style="margin-top:1rem"><a href="https://api.leadconnectorhq.com/widget/bookings/tmn-web-strategy" target="_blank" rel="noopener" style="font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s">or book a call directly &rarr;</a></div>
+
   </div>
 
   
@@ -1125,14 +1112,14 @@
     <div class="foot-r">&copy; 2026 True Margin North LLC &middot; <a href="https://truemarginnorth.com" target="_blank" rel="noopener">truemarginnorth.com</a></div>
   </footer>
 
-  <div class="stk" id="stk"><a href="#contact">Get My Free Site Review</a></div>
+  <div class="stk" id="stk"><a href="#contact">Get a Free Website Review</a></div>
 
   <script>
     (function(){try{var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js';s.onload=function(){try{var l=new Lenis({duration:1.1,easing:function(t){return Math.min(1,1.001-Math.pow(2,-10*t))},touchMultiplier:2});function r(t){l.raf(t);requestAnimationFrame(r)}requestAnimationFrame(r);document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();l.scrollTo(t,{offset:-50})}});})}catch(e){}};s.onerror=function(){};document.head.appendChild(s)}catch(e){}})();
     try{var nav=document.getElementById('nav'),stk=document.getElementById('stk');var paraSecs=document.querySelectorAll('.port-sec,.cta');window.addEventListener('scroll',function(){var y=window.scrollY;nav.classList.toggle('s',y>60);if(window.innerWidth<=768)stk.classList.toggle('show',y>window.innerHeight*0.5);paraSecs.forEach(function(s){var r=s.getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0){var offset=((r.top/window.innerHeight)-0.5)*-25;s.style.setProperty('--para-y',offset+'px')}})})}catch(e){}
     try{var obs=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('v');obs.unobserve(en.target)}})},{threshold:0.04,rootMargin:'0px 0px -10px 0px'});document.querySelectorAll('.r').forEach(function(el){obs.observe(el)})}catch(e){document.querySelectorAll('.r').forEach(function(el){el.classList.add('v')})}
     setTimeout(function(){document.querySelectorAll('.r:not(.v)').forEach(function(el){el.classList.add('v')})},1500);
-    try{var d=new Date();d.setDate(d.getDate()+7);var mo=['January','February','March','April','May','June','July','August','September','October','November','December'];var ld=document.getElementById('liveDate');if(ld)ld.textContent=mo[d.getMonth()]+' '+d.getDate()}catch(e){}
+    
     try{var countObs=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.querySelectorAll('.count').forEach(function(c){var target=+c.dataset.target,dur=1200,start=performance.now();(function step(now){var p=Math.min((now-start)/dur,1);var ease=1-Math.pow(1-p,4);c.textContent=Math.round(target*ease);if(p<1)requestAnimationFrame(step)})(start)});countObs.unobserve(entry.target)}})},{threshold:0.3});var ps=document.getElementById('portStats');if(ps)countObs.observe(ps)}catch(e){document.querySelectorAll('.count').forEach(function(c){c.textContent=c.dataset.target})}
     try{document.querySelectorAll('.svc-tab').forEach(function(tab){tab.addEventListener('click',function(){document.querySelectorAll('.svc-tab').forEach(function(t){t.classList.remove('active')});document.querySelectorAll('.svc-panel').forEach(function(p){p.classList.remove('active')});tab.classList.add('active');var panel=document.getElementById('panel-'+tab.dataset.tab);if(panel)panel.classList.add('active')})})}catch(e){}
     try{document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){q.parentElement.classList.toggle('o')})})}catch(e){}
@@ -1164,28 +1151,6 @@
     }catch(e){}
 
     // Adaptive nav: transparent on hero, dark on dark sections, white on light sections
-    try{
-      var darkSections=document.querySelectorAll('.stats,.port-sec,.sec-dk,.cta');
-      var heroEl=document.querySelector('.hero');
-      function updateNavColor(){
-        if(nav.classList.contains('mob-open'))return;
-        var navH=nav.offsetHeight;
-        var heroRect=heroEl.getBoundingClientRect();
-        var onHero=heroRect.top<navH&&heroRect.bottom>navH;
-        var isDark=false;
-        darkSections.forEach(function(sec){
-          var r=sec.getBoundingClientRect();
-          if(r.top<navH&&r.bottom>0)isDark=true;
-        });
-        nav.classList.toggle('dark',isDark);
-        nav.classList.toggle('on-hero',onHero&&!isDark);
-      }
-      window.addEventListener('scroll',updateNavColor,{passive:true});
-      updateNavColor();
-    }catch(e){}
-
-
-    // Adaptive nav color
     try{
       var darkSections=document.querySelectorAll('.stats,.port-sec,.sec-dk,.cta');
       var heroEl=document.querySelector('.hero');
