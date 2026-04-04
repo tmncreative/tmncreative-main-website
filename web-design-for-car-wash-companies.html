@@ -1,1197 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Web Design for Car Wash Companies | TMN Creative</title>
-	<meta name="description" content="Premium web design for car wash companies that need better membership positioning, stronger local credibility, and a more modern digital presence.">
-	<link rel="canonical" href="https://tmncreative.com/web-design-for-car-wash-companies">
-	<meta property="og:title" content="Web Design for Car Wash Companies | TMN Creative">
-	<meta property="og:description" content="Premium web design for car wash companies that need better membership positioning, stronger local credibility, and a more modern digital presence.">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://tmncreative.com/web-design-for-car-wash-companies">
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-
-	<style>
-		:root {
-			--bg: #F8F7F4;
-			--bg2: #F0EEEA;
-			--sf: #FFFFFF;
-			--dk: #111111;
-			--dk2: #1A1A1A;
-			--dk3: #0A0A0A;
-			--ac: #A68B5B;
-			--ac2: #BFA06C;
-			--ac3: rgba(166, 139, 91, 0.08);
-			--tx: #2C2C2C;
-			--tx2: #6B6B64;
-			--tx3: #9A9A92;
-			--ti: #F8F7F4;
-			--ti2: rgba(248, 247, 244, 0.5);
-			--ti3: rgba(248, 247, 244, 0.25);
-			--ln: #E2E0DB;
-			--ln2: rgba(248, 247, 244, 0.07);
-			--sf2: 'Instrument Serif', Georgia, serif;
-			--sn: 'DM Sans', system-ui, sans-serif;
-			--e: cubic-bezier(0.16, 1, 0.3, 1);
-			--es: cubic-bezier(0.4, 0, 0.2, 1);
-		}
-
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-
-		html {
-			scroll-behavior: smooth;
-		}
-
-		body {
-			font-family: var(--sn);
-			color: var(--tx);
-			background-color: var(--bg);
-			line-height: 1.6;
-			font-size: 16px;
-			-webkit-font-smoothing: antialiased;
-		}
-		body::after {
-			content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.018;
-			background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") repeat;
-			background-size:256px;
-		}
-
-		/* Navigation */
-		nav {
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			z-index: 1000;
-			padding: 1.25rem clamp(1rem, 4vw, 2rem);
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			transition: all 0.3s var(--es);
-			background: transparent;
-		}
-
-		nav.scrolled {
-			background: rgba(255, 255, 255, 0.98);
-			backdrop-filter: blur(10px);
-			border-bottom: 1px solid var(--ln);
-		}
-
-		.nav-logo {
-			height: 32px;
-			width: auto;
-			transition: opacity 0.3s var(--es);
-		}
-
-		.nav-logo-light {
-			display: none;
-		}
-
-		nav.scrolled .nav-logo-light {
-			display: block;
-			mix-blend-mode: darken;
-		}
-
-		nav.scrolled .nav-logo-dark {
-			display: none;
-		}
-
-		.nav-links {
-			display: flex;
-			gap: clamp(1.5rem, 3vw, 2.5rem);
-			align-items: center;
-			list-style: none;
-		}
-
-		.nav-links a {
-			text-decoration: none;
-			font-size: 0.875rem;
-			font-weight: 500;
-			color: var(--tx);
-			transition: color 0.3s var(--es);
-		}
-
-		nav:not(.scrolled) .nav-links a {
-			color: var(--sf);
-		}
-
-		.nav-links a:hover {
-			color: var(--ac);
-		}
-
-		.nav-cta {
-			background: var(--ac);
-			color: var(--sf);
-			padding: 0.625rem 1.25rem;
-			border-radius: 0.25rem;
-			font-size: 0.875rem;
-			font-weight: 600;
-			transition: all 0.3s var(--e);
-			border: none;
-			cursor: pointer;
-		}
-
-		.nav-cta:hover {
-			background: var(--ac2);
-			transform: translateY(-2px);
-		}
-
-		/* Hero Section */
-		.hero {
-			background: var(--dk);
-			color: var(--sf);
-			padding: clamp(6rem, 15vw, 10rem) clamp(1rem, 4vw, 2rem);
-			text-align: center;
-			position: relative;
-			overflow: hidden;
-			margin-top: 80px;
-		}
-
-		.hero::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-image:
-				repeating-linear-gradient(
-					90deg,
-					rgba(255, 255, 255, 0.02),
-					rgba(255, 255, 255, 0.02) 1px,
-					transparent 1px,
-					transparent 2px
-				),
-				repeating-linear-gradient(
-					0deg,
-					rgba(255, 255, 255, 0.02),
-					rgba(255, 255, 255, 0.02) 1px,
-					transparent 1px,
-					transparent 2px
-				);
-			pointer-events: none;
-		}
-
-		.hero > * {
-			position: relative;
-			z-index: 1;
-		}
-
-		.hero h1 {
-			font-family: var(--sf2);
-			font-size: clamp(2rem, 6vw, 3.5rem);
-			font-weight: 400;
-			line-height: 1.2;
-			margin-bottom: 1.5rem;
-			max-width: 900px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		/* Utility Classes */
-		.pad {
-			padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 2rem);
-		}
-
-		.pads {
-			padding: clamp(1.5rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
-		}
-
-		.w {
-			max-width: 1200px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		.lb {
-			margin-bottom: clamp(1rem, 4vw, 2rem);
-		}
-
-		.hd {
-			font-family: var(--sf2);
-			font-size: clamp(1.75rem, 4vw, 2.5rem);
-			font-weight: 400;
-			line-height: 1.2;
-			color: var(--dk);
-			margin-bottom: 1.5rem;
-		}
-
-		.st {
-			font-size: 1rem;
-			color: var(--tx2);
-			line-height: 1.7;
-			margin-bottom: 1.5rem;
-		}
-
-		.sh {
-			font-family: var(--sf2);
-			font-size: clamp(1.25rem, 3vw, 1.75rem);
-			font-weight: 400;
-			color: var(--dk);
-			margin-bottom: 1rem;
-		}
-
-		.r {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-
-		.v {
-			opacity: 1;
-			transform: translateY(0);
-			transition: all 0.8s var(--e);
-		}
-
-		/* Buttons */
-		.btn {
-			display: inline-block;
-			padding: 0.875rem 2rem;
-			background: var(--ac);
-			color: var(--sf);
-			text-decoration: none;
-			border-radius: 0.25rem;
-			font-weight: 600;
-			font-size: 0.875rem;
-			transition: all 0.3s var(--e);
-			border: none;
-			cursor: pointer;
-		}
-
-		.btn:hover {
-			background: var(--ac2);
-			transform: translateY(-2px);
-		}
-
-		.btn-dark {
-			background: var(--dk);
-			color: var(--sf);
-		}
-
-		.btn-dark:hover {
-			background: var(--dk2);
-		}
-
-		/* Content Sections */
-		.content {
-			background: var(--bg);
-			padding: var(--pad, clamp(3rem, 8vw, 5rem)) clamp(1rem, 4vw, 2rem);
-		}
-
-		.content.alt {
-			background: var(--bg2);
-		}
-
-		.content.dks {
-			background: var(--dk);
-			color: var(--sf);
-		}
-
-		.content.dks .hd {
-			color: var(--sf);
-		}
-
-		.content.dks .sh {
-			color: var(--sf);
-		}
-
-		.content.dks .st {
-			color: var(--ti2);
-		}
-
-		/* Grid Layouts */
-		.plyt {
-			display: grid;
-			gap: clamp(1.5rem, 4vw, 3rem);
-			margin-top: 2rem;
-		}
-
-		.pli {
-			background: var(--sf);
-			padding: clamp(1.5rem, 3vw, 2.5rem);
-			border-radius: 0.5rem;
-			border: 1px solid var(--ln);
-		}
-
-		.pli.dks {
-			background: var(--dk2);
-			border: 1px solid rgba(255, 255, 255, 0.1);
-		}
-
-		.pli.dks .sh {
-			color: var(--sf);
-		}
-
-		.pli.dks .st {
-			color: var(--ti2);
-		}
-
-		.pln {
-			grid-template-columns: 1fr;
-		}
-
-		@media (min-width: 768px) {
-			.pln {
-				grid-template-columns: repeat(2, 1fr);
-			}
-		}
-
-		@media (min-width: 900px) {
-			.pln {
-				grid-template-columns: repeat(3, 1fr);
-			}
-		}
-
-		/* Pain Points List */
-		.pp-list {
-			list-style: none;
-			display: grid;
-			gap: clamp(1rem, 2vw, 1.5rem);
-			margin-top: 2rem;
-		}
-
-		.pp-item {
-			padding-left: 1.5rem;
-			position: relative;
-		}
-
-		.pp-item::before {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 0.5rem;
-			width: 0.5rem;
-			height: 0.5rem;
-			background: var(--ac);
-			border-radius: 0.25rem;
-		}
-
-		.pp-item strong {
-			color: var(--dk);
-			font-weight: 600;
-		}
-
-		/* Section Benefits List */
-		.benefits {
-			list-style: none;
-			margin-top: 2rem;
-			display: grid;
-			gap: 1rem;
-		}
-
-		.benefits li {
-			padding-left: 2rem;
-			position: relative;
-			color: var(--tx2);
-			line-height: 1.7;
-		}
-
-		.benefits li::before {
-			content: '—';
-			position: absolute;
-			left: 0;
-			color: var(--ac);
-			font-weight: 600;
-		}
-
-		/* FAQ */
-		.faq {
-			margin-top: 2rem;
-		}
-
-		.faq-item {
-			border-bottom: 1px solid var(--ln);
-			padding: clamp(1rem, 2vw, 1.5rem) 0;
-		}
-
-		.faq-item:first-child {
-			border-top: 1px solid var(--ln);
-		}
-
-		.faq-q {
-			cursor: pointer;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			font-weight: 600;
-			color: var(--dk);
-			transition: color 0.3s var(--es);
-			padding: 0.5rem 0;
-			user-select: none;
-		}
-
-		.dks .faq-q {
-			color: var(--sf);
-		}
-
-		.faq-q:hover {
-			color: var(--ac);
-		}
-
-		.faq-toggle {
-			font-size: 1.25rem;
-			transition: transform 0.3s var(--e);
-		}
-
-		.faq-item.active .faq-toggle {
-			transform: rotate(180deg);
-		}
-
-		.faq-a {
-			max-height: 0;
-			overflow: hidden;
-			transition: max-height 0.3s var(--e);
-			color: var(--tx2);
-			line-height: 1.7;
-		}
-
-		.dks .faq-a {
-			color: var(--ti2);
-		}
-
-		.faq-item.active .faq-a {
-			max-height: 500px;
-			padding-top: 1rem;
-		}
-
-		/* Footer */
-		footer {
-			background: var(--dk);
-			color: var(--ti2);
-			padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
-			border-top: 1px solid rgba(255, 255, 255, 0.1);
-		}
-
-		footer .w {
-			display: grid;
-			gap: 2rem;
-			grid-template-columns: 1fr 1fr;
-		}
-
-		@media (min-width: 768px) {
-			footer .w {
-				grid-template-columns: 1fr 1fr 1fr;
-				gap: 3rem;
-			}
-		}
-
-		.footer-logo {
-			height: 24px;
-			margin-bottom: 1rem;
-		}
-
-		.footer-col a {
-			color: var(--ti2);
-			text-decoration: none;
-			transition: color 0.3s var(--es);
-		}
-
-		.footer-col a:hover {
-			color: var(--ac);
-		}
-
-		.footer-col p {
-			font-size: 0.875rem;
-			line-height: 1.7;
-		}
-
-		.footer-col ul {
-			list-style: none;
-		}
-
-		.footer-col ul li {
-			margin-bottom: 0.5rem;
-		}
-
-		.footer-copyright {
-			font-size: 0.875rem;
-			color: var(--tx3);
-			margin-top: 2rem;
-			padding-top: 2rem;
-			border-top: 1px solid rgba(255, 255, 255, 0.1);
-			text-align: center;
-		}
-
-		/* Mobile Sticky CTA */
-		.mobile-cta {
-			display: none;
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			background: var(--sf);
-			border-top: 1px solid var(--ln);
-			padding: max(1rem, env(safe-area-inset-bottom, 1rem)) 1rem;
-			z-index: 999;
-		}
-
-		@media (max-width: 768px) {
-			.mobile-cta {
-				display: block;
-			}
-
-			body {
-				padding-bottom: 80px;
-			}
-		}
-
-		.mobile-cta .btn {
-			width: 100%;
-			text-align: center;
-		}
-
-		/* Responsive */
-		@media (max-width: 768px) {
-			.nav-links {
-				gap: 1rem;
-			}
-
-			.hero h1 {
-				font-size: 1.75rem;
-			}
-
-			.hd {
-				font-size: 1.5rem;
-			}
-
-			.sh {
-				font-size: 1.125rem;
-			}
-
-			.pln {
-				grid-template-columns: 1fr;
-			}
-		}
-
-		@media (max-width: 500px) {
-			.nav-links {
-				gap: 0.75rem;
-			}
-
-			.nav-links a {
-				font-size: 0.8125rem;
-			}
-
-			nav {
-				padding: 1rem;
-			}
-
-			.hero {
-				padding: 4rem 1rem;
-				margin-top: 60px;
-			}
-
-			.hero h1 {
-				font-size: 1.5rem;
-			}
-
-			.hd {
-				font-size: 1.25rem;
-				margin-bottom: 1rem;
-			}
-
-			.st {
-				font-size: 0.9375rem;
-			}
-
-			.sh {
-				font-size: 1rem;
-			}
-
-			.pad {
-				padding: 2rem 1rem;
-			}
-
-			.pads {
-				padding: 1.5rem 1rem;
-			}
-
-			input {
-				font-size: 16px;
-			}
-		}
-
-		/* Animations */
-		@keyframes fadeInUp {
-			from {
-				opacity: 0;
-				transform: translateY(20px);
-			}
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
-		}
-
-		.r {
-			animation: fadeInUp 0.6s var(--e) forwards;
-		}
-
-		/* CTA Section */
-		.cta-section {
-			text-align: center;
-		}
-
-		.cta-section .hd {
-			margin-bottom: 1.5rem;
-		}
-
-		.cta-section .st {
-			max-width: 600px;
-			margin-left: auto;
-			margin-right: auto;
-			margin-bottom: 2rem;
-		}
-
-		/* Form Styles */
-		form {
-			max-width: 500px;
-			margin: 2rem auto;
-		}
-
-		.form-group {
-			margin-bottom: 1.5rem;
-		}
-
-		label {
-			display: block;
-			margin-bottom: 0.5rem;
-			font-weight: 600;
-			font-size: 0.875rem;
-			color: var(--dk);
-		}
-
-		input,
-		textarea {
-			width: 100%;
-			padding: 0.875rem;
-			border: 1px solid var(--ln);
-			border-radius: 0.25rem;
-			font-family: var(--sn);
-			font-size: 16px;
-			transition: border-color 0.3s var(--es);
-		}
-
-		input:focus,
-		textarea:focus {
-			outline: none;
-			border-color: var(--ac);
-			box-shadow: 0 0 0 3px var(--ac3);
-		}
-
-		textarea {
-			resize: vertical;
-			min-height: 120px;
-		}
-
-		/* Flexbox utilities */
-		.fg {
-			display: flex;
-			gap: 1rem;
-		}
-
-		.fc {
-			display: flex;
-			flex-direction: column;
-		}
-
-		.fql {
-			justify-content: flex-start;
-		}
-
-		.fls {
-			justify-content: flex-start;
-			align-items: stretch;
-		}
-
-		.fli {
-			justify-content: flex-start;
-			align-items: center;
-		}
-
-		.flq {
-			justify-content: center;
-		}
-
-		.flt {
-			justify-content: space-between;
-		}
-
-		.fla {
-			justify-content: space-around;
-		}
-
-		.fcta {
-			justify-content: center;
-			align-items: center;
-		}
-
-		.fctab {
-			justify-content: center;
-			align-items: baseline;
-		}
-
-		/* Stroke text */
-		.stk {
-			text-decoration: underline;
-			text-decoration-color: var(--ac);
-			text-decoration-thickness: 2px;
-			text-underline-offset: 4px;
-		}
-
-		/* Alt theme */
-		.alt .hd {
-			color: var(--dk);
-		}
-
-		.alt .st {
-			color: var(--tx2);
-		}
-
-		.alt .sh {
-			color: var(--dk);
-		}
-	</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Design for Car Wash Companies | TMN Creative</title>
+  <meta name="description" content="Web design for car wash companies. Membership signups, location pages, service menu clarity, mobile-first. First draft in 72 hours. Starting at $2,500." />
+  <meta property="og:title" content="Web Design for Car Wash Companies | TMN Creative" />
+  <meta property="og:description" content="Web design for car wash companies. Membership signups, location pages, service menu clarity, mobile-first. First draft in 72 hours. Starting at $2,500." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tmncreative.com/web-design-for-car-wash-companies" />
+  <meta property="og:image" content="https://tmncreative.com/images/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://tmncreative.com/web-design-for-car-wash-companies" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#fff;--bg2:#F7F8FA;--dk:#0F172A;--dk2:#1E293B;--dk3:#0B1120;--ac:#C6A24A;--ac2:#D4B04E;--ac3:rgba(198,162,74,0.08);--tx:#1E293B;--tx2:#64748B;--tx3:#94A3B8;--ln:#E2E8F0;--fn:'Plus Jakarta Sans',system-ui,sans-serif;--fs:'Fraunces',Georgia,serif;--e:cubic-bezier(0.16,1,0.3,1)}
+    body{font-family:var(--fn);color:var(--tx);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    nav{padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);position:sticky;top:0;z-index:100;border-bottom:1px solid var(--ln)}
+    .nav-logo{height:28px}
+    .nav-r{display:flex;align-items:center;gap:1.5rem}
+    .nav-r a{font-size:0.8rem;font-weight:500;color:var(--tx2);transition:color 0.2s}
+    .nav-r a:hover{color:var(--dk)}
+    .nb{font-size:0.78rem;font-weight:600;color:#fff;background:var(--dk);padding:0.6rem 1.4rem;border-radius:8px}
+    @media(max-width:768px){nav{padding:1rem 1.5rem}.nav-r{gap:1rem}.nav-r a:not(.nb){display:none}}
+    .hero{background:var(--dk3);color:#fff;padding:6rem 3rem 5rem;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:-30px;background:radial-gradient(ellipse 50% 60% at 50% 40%,rgba(198,162,74,0.06) 0%,transparent 70%);pointer-events:none}
+    .hero-pill{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:0.35rem 1rem 0.35rem 0.5rem;font-size:0.68rem;font-weight:500;color:rgba(255,255,255,0.5);margin-bottom:2.5rem}
+    .hero-pill .dot{width:7px;height:7px;border-radius:50%;background:#22C55E;box-shadow:0 0 8px rgba(34,197,94,0.4);margin-left:0.25rem}
+    .hero h1{font-family:var(--fs);font-size:clamp(2.4rem,5.5vw,4rem);font-weight:700;line-height:1.08;letter-spacing:-0.03em;margin-bottom:1.5rem;position:relative}
+    .hero h1 .accent{color:var(--ac)}
+    .hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.45);line-height:1.75;max-width:520px;margin:0 auto 2.5rem}
+    .hero-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
+    .btn-g{font-size:0.82rem;font-weight:600;color:var(--dk3);background:linear-gradient(135deg,var(--ac2),var(--ac));padding:0.85rem 2rem;border-radius:10px;box-shadow:0 4px 15px rgba(198,162,74,0.2)}
+    .btn-o{font-size:0.82rem;font-weight:500;color:rgba(255,255,255,0.5);padding:0.85rem 2rem;border:1px solid rgba(255,255,255,0.12);border-radius:10px}
+    .hero-trust{margin-top:3rem;font-size:0.62rem;font-weight:500;letter-spacing:0.04em;color:rgba(255,255,255,0.2)}
+    @media(max-width:768px){.hero{padding:5rem 1.5rem 4rem;text-align:left}.hero h1{font-size:1.9rem}.hero-sub{font-size:0.95rem;margin:0 0 2rem}.hero-btns{flex-direction:column;max-width:300px}.btn-g,.btn-o{text-align:center}.hero-trust{text-align:left}}
+    .stats{background:var(--dk3);border-top:1px solid rgba(255,255,255,0.04);padding:2rem 3rem}
+    .stats-grid{max-width:700px;margin:0 auto;display:flex;justify-content:center;gap:3rem}
+    .stat{text-align:center}
+    .stat-num{font-family:var(--fs);font-size:1.8rem;font-weight:700;color:var(--ac)}
+    .stat-label{font-size:0.55rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.25);margin-top:0.2rem}
+    @media(max-width:600px){.stats{padding:1.5rem}.stats-grid{gap:2rem}.stat-num{font-size:1.4rem}}
+    .sec{padding:5rem 3rem}
+    .sec-alt{background:var(--bg2)}
+    .wrap{max-width:800px;margin:0 auto}
+    .badge{display:inline-flex;font-size:0.55rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--ac);padding:0.3rem 0.75rem;background:var(--ac3);border-radius:100px;margin-bottom:1rem}
+    h2{font-family:var(--fn);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-0.035em;line-height:1.1;margin-bottom:1rem;color:var(--dk)}
+    .sec p{font-size:0.92rem;color:var(--tx2);line-height:1.75;margin-bottom:1.25rem}
+    @media(max-width:768px){.sec{padding:3.5rem 1.5rem}h2{font-size:1.6rem}}
+    .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+    .work-card{border-radius:14px;overflow:hidden;border:1px solid var(--ln);transition:all 0.3s var(--e)}
+    .work-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(15,23,42,0.08)}
+    .work-card img{width:100%;height:200px;object-fit:cover;object-position:top}
+    .work-meta{padding:1rem 1.25rem}
+    .work-type{font-size:0.52rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--ac);margin-bottom:0.2rem}
+    .work-meta h3{font-size:0.9rem;font-weight:700;color:var(--dk);letter-spacing:-0.01em}
+    .work-meta p{font-size:0.75rem;color:var(--tx3);margin:0}
+    @media(max-width:600px){.work-grid{grid-template-columns:1fr}}
+    .cta-sec{background:var(--dk3);padding:5rem 3rem;text-align:center;color:#fff}
+    .cta-sec h2{color:#fff;margin-bottom:0.75rem}
+    .cta-sec p{font-size:0.9rem;color:rgba(255,255,255,0.4);margin-bottom:2rem}
+    .cta-btn{display:inline-block;font-size:0.82rem;font-weight:600;color:var(--dk3);background:linear-gradient(135deg,var(--ac2),var(--ac));padding:0.9rem 2.5rem;border-radius:10px}
+    @media(max-width:768px){.cta-sec{padding:4rem 1.5rem;text-align:left}}
+    footer{background:var(--dk3);padding:1.5rem 3rem;border-top:1px solid rgba(255,255,255,0.04);display:flex;justify-content:space-between;align-items:center;font-size:0.62rem;color:rgba(255,255,255,0.18)}
+    footer a{color:var(--ac);text-decoration:none;opacity:0.5}
+    @media(max-width:600px){footer{flex-direction:column;gap:0.5rem;text-align:center;padding:1.5rem}}
+  </style>
 </head>
 <body>
-	<!-- Navigation -->
-	<nav id="nav">
-		<a href="/" style="display: flex; align-items: center; text-decoration: none;">
-			<img src="images/logo-dark.png" alt="TMN Creative" class="nav-logo nav-logo-dark" style="height: 32px; width: auto;">
-			<img src="images/logo-light.png" alt="TMN Creative" class="nav-logo nav-logo-light" style="height: 32px; width: auto;">
-		</a>
-		<ul class="nav-links">
-			<li><a href='/#proof'>Work</a></li>
-			<li><a href="/pricing">Pricing</a></li>
-			<li><a href='/#faq'>FAQ</a></li>
-			<li><a class='nav-cta' href='/#contact'>Start a Project</a></li>
-		</ul>
-	</nav>
+  <nav>
+    <a href="/"><img src="images/logo-dark.png" alt="TMN Creative" class="nav-logo" /></a>
+    <div class="nav-r">
+      <a href="/#proof">Work</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#contact" class="nb">Start a Project</a>
+    </div>
+  </nav>
 
-	<!-- Hero Section -->
-	<section class="hero">
-		<div class="w">
-			<h1 class="r" style="animation-delay: 0.1s;">Web design for car wash companies that want to look more premium and convert better</h1>
-			<p class="st r" style="color: var(--ti2); animation-delay: 0.2s; max-width: 800px; margin-left: auto; margin-right: auto;">A stronger digital presence that positions your memberships better, builds local credibility, and makes your operation feel as professional as it actually is.</p>
-		</div>
-	</section>
+  <div class="hero">
+    <div class="hero-pill"><span class="dot"></span> Built for car wash operators</div>
+    <h1>Web design for car wash<br/>companies that want memberships,<br/><span class="accent">not just one-time washes.</span></h1>
+    <p class="hero-sub">Most car wash websites are terrible. That means a properly built site creates an outsized competitive advantage. We build membership-focused, mobile-first websites for car wash operators. First draft in 72 hours. Starting at $2,500.</p>
+    <div class="hero-btns">
+      <a href="/#contact" class="btn-g">Get a Car Wash Website Review</a>
+      <a href="tel:6822313202" class="btn-o">(682) 231-3202</a>
+    </div>
+    <p class="hero-trust">5.0 &#9733; on Google &middot; 100% client satisfaction &middot; Full refund if you are not happy with the work</p>
+  </div>
 
-	<!-- Intro Section -->
-	<section class="content pad w">
-		<div class="r" style="animation-delay: 0.1s;">
-			<p class="st" style="font-size: 1.0625rem; color: var(--tx); line-height: 1.8;">A lot of car wash websites lag behind the actual quality of the business. The operation may be strong. The branding may be improving. The customer experience may be solid. But the website still feels generic, dated, or underbuilt. That creates a gap in trust and positioning that a lot of operators underestimate. At TMN Creative, we build websites for car wash companies that need a more modern digital presence, stronger membership presentation, and a sharper first impression.</p>
-		</div>
-	</section>
+  <div class="stats">
+    <div class="stats-grid">
+      <div class="stat"><div class="stat-num">72h</div><div class="stat-label">First review</div></div>
+      <div class="stat"><div class="stat-num">80%</div><div class="stat-label">Less than typical agency</div></div>
+      <div class="stat"><div class="stat-num">10x</div><div class="stat-label">Faster turnaround</div></div>
+      <div class="stat"><div class="stat-num">Direct</div><div class="stat-label">Founder collaboration</div></div>
+    </div>
+  </div>
 
-	<!-- Why the website matters -->
-	<section class="content alt pad w">
-		<div class="r" style="animation-delay: 0.1s;">
-			<h2 class="hd">Why the website matters in this category</h2>
-			<p class="st">Car wash is a local, visible, repeat business. Customers look you up for: memberships, wash packages, locations, hours, promotions, reviews, convenience, whether the brand feels legit. That means the website still plays a real role in how people judge the business, even if a lot of traffic starts with signage or drive-by visibility. If the site feels old, confusing, or cheap, it weakens confidence. If the site presents memberships and package structure poorly, it weakens value perception.</p>
-		</div>
-	</section>
+  <section class="sec">
+    <div class="wrap">
+      <span class="badge">Car Wash Web Design</span>
+      <h2>Your customer is sitting in their car, searching on their phone. Your site needs to work for that moment.</h2>
+      <p>Car wash customers find you one of two ways: they drive past your location, or they search on their phone while sitting in traffic. Either way, they end up on your mobile site. If it is slow, confusing, or does not show your services and pricing clearly, they drive to the next wash.</p>
+      <p>What car wash operators actually care about: membership signups (the recurring revenue that makes the business), multi-location pages if you have more than one site, a service menu that is clear from the first scroll, and a mobile experience that loads instantly because your customer is literally searching from their car.</p>
+      <p>We build car wash websites with membership conversion as the primary goal. Prominent membership CTAs, clear tier comparisons, easy signup flows, and loyalty program visibility. Every design decision serves the business model.</p>
+      <p>This is one of the most underserved niches in web design. Most car wash sites are built by general agencies that do not understand the operator model. We do.</p>
+    </div>
+  </section>
 
-	<!-- What a strong site should do -->
-	<section class="content pad w">
-		<div class="r" style="animation-delay: 0.1s;">
-			<h2 class="hd">What a strong car wash website should do</h2>
-			<p class="st">A strong site in this category should make the business feel: modern, legitimate, convenient, premium, easy to understand, worth choosing again. It should also communicate: membership value, package differences, location details, promotions, trust signals, why your wash is a better option than nearby alternatives. For many operators, the current site is either too basic or too cluttered. Neither helps much.</p>
-		</div>
-	</section>
-
-	<!-- Pain Points Section -->
-	<section class="content alt pad w">
-		<div class="r" style="animation-delay: 0.1s;">
-			<h2 class="hd">Where most car wash websites fall short</h2>
-			<ul class="pp-list">
-				<li class="pp-item"><strong>Weak mobile UX:</strong> A lot of customers check on the go. If mobile feels clunky, they move on.</li>
-				<li class="pp-item"><strong>Unclear package presentation:</strong> Wash tiers should be easy to compare. If they are not, confusion weakens conversion.</li>
-				<li class="pp-item"><strong>Poor membership messaging:</strong> Memberships are critical to the business. If the site does not present them persuasively, you leave money on the table.</li>
-				<li class="pp-item"><strong>Generic visuals:</strong> Stock imagery and basic design make the operation feel less established.</li>
-				<li class="pp-item"><strong>Outdated design:</strong> Older sites signal older operations. A dated look weakens trust.</li>
-				<li class="pp-item"><strong>Weak local trust signals:</strong> Locations should feel real and accessible. Poor presentation of hours, reviews, or location details hurts conversion.</li>
-				<li class="pp-item"><strong>Not enough differentiation:</strong> If the site does not explain why your wash is better than competitors, customers will not see a reason to choose you.</li>
-				<li class="pp-item"><strong>Too much friction:</strong> Long forms, unclear CTAs, or confusing navigation between landing and taking action all lower conversion rates.</li>
-			</ul>
-		</div>
-	</section>
-
-	<!-- Why TMN Creative -->
-	<section class="content pad w">
-		<div class="r" style="animation-delay: 0.1s;">
-			<h2 class="hd">Why TMN Creative has an edge here</h2>
-			<p class="st">We are not approaching this category as outsiders guessing what matters. We understand how operators think about: memberships, wash packages, local competition, convenience, premium positioning, repeat business, brand trust, location-level marketing. That matters because a strong car wash website should not just look better. It should reflect how the business actually wins.</p>
-		</div>
-	</section>
-
-	<!-- What We Focus On -->
-	<section class="content alt pad w">
-		<div class="r" style="animation-delay: 0.1s;">
-			<h2 class="hd">What we focus on for car wash websites</h2>
-			<div class="plyt pln">
-				<div class="pli r" style="animation-delay: 0.1s;">
-					<h3 class="sh">Membership positioning</h3>
-					<p class="st">Memberships are one of the most important economic levers in the business. The site should present them clearly and persuasively.</p>
-				</div>
-				<div class="pli r" style="animation-delay: 0.2s;">
-					<h3 class="sh">Package clarity</h3>
-					<p class="st">Wash tiers should be easy to compare and easy to understand.</p>
-				</div>
-				<div class="pli r" style="animation-delay: 0.3s;">
-					<h3 class="sh">Mobile UX</h3>
-					<p class="st">A lot of customers are checking the site on the go. Mobile has to be sharp.</p>
-				</div>
-				<div class="pli r" style="animation-delay: 0.4s;">
-					<h3 class="sh">Brand quality</h3>
-					<p class="st">The site should make the operation feel more established and more premium.</p>
-				</div>
-				<div class="pli r" style="animation-delay: 0.5s;">
-					<h3 class="sh">Local trust</h3>
-					<p class="st">Each location should feel real, accessible, and well presented.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Who This Is For -->
-	<section class="content pad w">
-		<div class="r" style="animation-delay: 0.1s;">
-			<h2 class="hd">Who this is for</h2>
-			<div class="plyt pln">
-				<div class="pli r" style="animation-delay: 0.1s;">
-					<p class="st"><strong>Single-site operators</strong><br>A strong website matters just as much for independent washes. It is often the biggest lever for growth.</p>
-				</div>
-				<div class="pli r" style="animation-delay: 0.2s;">
-					<p class="st"><strong>Growing regional chains</strong><br>Multi-location sites that present consistency and local positioning across locations.</p>
-				</div>
-				<div class="pli r" style="animation-delay: 0.3s;">
-					<p class="st"><strong>Express wash brands</strong><br>Newer concepts that need to communicate speed, convenience, and membership value.</p>
-				</div>
-				<div class="pli r" style="animation-delay: 0.4s;">
-					<p class="st"><strong>IBA operators</strong><br>In-bay automatic washes that need clear package positioning and local trust signals.</p>
-				</div>
-				<div class="pli r" style="animation-delay: 0.5s;">
-					<p class="st"><strong>New site launches</strong><br>Whether you are building a stronger brand or launching a location, a modern website signals you are worth choosing.</p>
-				</div>
-				<div class="pli r" style="animation-delay: 0.6s;">
-					<p class="st"><strong>Operators modernizing their brand</strong><br>Companies looking to shed the dated image and feel more competitive in their market.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- A Better Website Supports -->
-	<section class="content alt pad w">
-		<div class="r" style="animation-delay: 0.1s;">
-			<h2 class="hd">A better website supports the bigger picture</h2>
-			<ul class="benefits">
-				<li>Membership growth through clearer value presentation</li>
-				<li>Stronger first impressions that convert drive-by traffic</li>
-				<li>Better promotion visibility and seasonal marketing impact</li>
-				<li>Improved trust for new locations entering new markets</li>
-				<li>Better brand consistency across locations</li>
-				<li>Better local comparison against competitors</li>
-			</ul>
-			<p class="st" style="margin-top: 2rem;"><strong>If the operation is stronger than the website, that is a fixable problem. And in this category, it is often a high-leverage one.</strong></p>
-		</div>
-	</section>
-
-	<!-- CTA Section -->
-	<section class="content dks pad w cta-section" id="contact">
-		<div class="r" style="animation-delay: 0.1s;">
-			<h2 class="hd" style="color: var(--sf);">Ready for a stronger car wash website?</h2>
-			<p class="st" style="color: var(--ti2);">Let's talk about how a modern site can improve your membership positioning, trust signals, and conversion rates.</p>
-			<a href="#contact-form" class="btn">Request a Homepage Audit</a>
-		</div>
-	</section>
-
-	<!-- FAQ Section -->
-	<section class="content pad w" id="faq">
-		<div class="r" style="animation-delay: 0.1s;">
-			<h2 class="hd">Frequently asked questions</h2>
-			<div class="faq">
-				<div class="faq-item">
-					<div class="faq-q">
-						<span>Do car wash companies really need a strong website?</span>
-						<span class="faq-toggle">+</span>
-					</div>
-					<div class="faq-a">
-						<p>Yes. Memberships, trust, promotions, and local positioning all benefit from a better digital experience. Even if most traffic starts with drive-by visibility or signage, the website plays a critical role in converting that interest into action.</p>
-					</div>
-				</div>
-				<div class="faq-item">
-					<div class="faq-q">
-						<span>Can you help present membership packages better?</span>
-						<span class="faq-toggle">+</span>
-					</div>
-					<div class="faq-a">
-						<p>Yes. That is one of the most important parts of the site. Clear membership presentation, tier comparison, and value communication are core to what we build for car wash operators.</p>
-					</div>
-				</div>
-				<div class="faq-item">
-					<div class="faq-q">
-						<span>Is this only for larger chains?</span>
-						<span class="faq-toggle">+</span>
-					</div>
-					<div class="faq-a">
-						<p>No. Strong websites matter for single locations and regional operators too. In fact, for many independent operators, a modern website is one of the highest-leverage investments they can make.</p>
-					</div>
-				</div>
-				<div class="faq-item">
-					<div class="faq-q">
-						<span>Can you build pages for multiple locations?</span>
-						<span class="faq-toggle">+</span>
-					</div>
-					<div class="faq-a">
-						<p>Yes. Multi-location structure is a common part of this type of project. We build location pages that feel local, consistent, and trust-worthy across your network.</p>
-					</div>
-				</div>
-				<div class="faq-item">
-					<div class="faq-q">
-						<span>Can a better website make a car wash feel more premium?</span>
-						<span class="faq-toggle">+</span>
-					</div>
-					<div class="faq-a">
-						<p>Absolutely. Presentation matters a lot in a category where people compare quickly. A modern, well-designed site signals quality, professionalism, and trustworthiness.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Footer -->
-	
-  <section style="background:var(--bg2,#F0EEEA);padding:5rem 4rem" class="related-pages-section">
-    <div style="max-width:1120px;margin:0 auto">
-      <div style="margin-bottom:2.5rem">
-        <span style="font-size:0.58rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:var(--ac,#A68B5B);display:flex;align-items:center;gap:1rem;margin-bottom:1rem"><span style="width:24px;height:1px;background:currentColor;display:inline-block"></span>Explore</span>
-        <h2 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.15;color:var(--dk,#111)">Related Pages</h2>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0.75rem">
-        
-        <a href="/portfolio" style="display:block;padding:1rem 1.25rem;background:var(--sf,#FFF);border:1px solid var(--ln,#E2E0DB);text-decoration:none;transition:all 0.3s;color:var(--dk,#111)">
-          <span style="font-size:0.85rem;font-weight:500">See Our Work</span>
-          <span style="float:right;color:var(--ac,#A68B5B);font-size:0.85rem">&rarr;</span>
+  <section class="sec sec-alt">
+    <div class="wrap">
+      <span class="badge">Our Work</span>
+      <h2>Recent projects from our portfolio.</h2>
+      <p>Real businesses. Real results. Click to see them live.</p>
+      <div class="work-grid">
+        <a href="https://qcatlantic.com" target="_blank" rel="noopener" class="work-card">
+          <img src="images/qca.jpg" alt="QC Atlantic" loading="lazy" width="900" height="562" />
+          <div class="work-meta"><div class="work-type">B2B / Car Wash Chemistry</div><h3>QC Atlantic</h3><p>Full brand and site build.</p></div>
         </a>
-        <a href="/website-redesign-services" style="display:block;padding:1rem 1.25rem;background:var(--sf,#FFF);border:1px solid var(--ln,#E2E0DB);text-decoration:none;transition:all 0.3s;color:var(--dk,#111)">
-          <span style="font-size:0.85rem;font-weight:500">Website Redesign Services</span>
-          <span style="float:right;color:var(--ac,#A68B5B);font-size:0.85rem">&rarr;</span>
+        <a href="https://tonyslawntree.com" target="_blank" rel="noopener" class="work-card">
+          <img src="images/tlt.jpg" alt="Tony's Lawn and Tree" loading="lazy" width="900" height="562" />
+          <div class="work-meta"><div class="work-type">Landscaping / Fort Worth</div><h3>Tony's Lawn &amp; Tree</h3><p>Conversion-focused redesign.</p></div>
         </a>
-        <a href="/lead-generation-websites" style="display:block;padding:1rem 1.25rem;background:var(--sf,#FFF);border:1px solid var(--ln,#E2E0DB);text-decoration:none;transition:all 0.3s;color:var(--dk,#111)">
-          <span style="font-size:0.85rem;font-weight:500">Lead Generation Websites</span>
-          <span style="float:right;color:var(--ac,#A68B5B);font-size:0.85rem">&rarr;</span>
+        <a href="https://www.diamondhirrigation.com" target="_blank" rel="noopener" class="work-card">
+          <img src="images/dh.jpg" alt="Diamond H Irrigation" loading="lazy" width="900" height="562" />
+          <div class="work-meta"><div class="work-type">Home Services / Fort Worth</div><h3>Diamond H Irrigation</h3><p>Lead-gen rebuild. 5.0 Google rating.</p></div>
         </a>
-        <a href="/pricing" style="display:block;padding:1rem 1.25rem;background:var(--sf,#FFF);border:1px solid var(--ln,#E2E0DB);text-decoration:none;transition:all 0.3s;color:var(--dk,#111)">
-          <span style="font-size:0.85rem;font-weight:500">See Our Pricing</span>
-          <span style="float:right;color:var(--ac,#A68B5B);font-size:0.85rem">&rarr;</span>
+        <a href="https://truemarginnorth.com" target="_blank" rel="noopener" class="work-card">
+          <img src="images/tmn.jpg" alt="True Margin North" loading="lazy" width="900" height="562" />
+          <div class="work-meta"><div class="work-type">Pricing Consultancy</div><h3>True Margin North</h3><p>Multi-page site for PE-focused advisor.</p></div>
         </a>
       </div>
     </div>
   </section>
 
-  
-  <div class="foot-nav" style="background:var(--dk3,#0A0A0A);padding:3rem 4rem 1rem;border-top:1px solid rgba(248,247,244,0.04)">
-    <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem">
+  <section class="sec">
+    <div class="wrap">
+      <span class="badge">How It Works</span>
+      <h2>From first call to live site in under 2 weeks.</h2>
+      <p><strong>1. Free site review.</strong> Fill out the form or call us. We look at your current site and your competitors before we even get on the phone. You get an honest assessment of where you stand and what we would fix.</p>
+      <p><strong>2. Kickoff call.</strong> 30 minutes. We talk about your business, your customers, and what a good website looks like for your market. No sales pitch. If we are not the right fit, we will tell you.</p>
+      <p><strong>3. First draft in 72 hours.</strong> You get a real, working preview of your new site within 3 days. Not a mockup. Not a wireframe. A live site you can click through on your phone.</p>
+      <p><strong>4. Revisions and launch.</strong> We refine based on your feedback and go live within 7 days of kickoff. You own everything. Optional Site Care plans available if you want ongoing support.</p>
+    </div>
+  </section>
+
+  <section class="sec sec-alt">
+    <div class="wrap">
+      <span class="badge">Related Pages</span>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:0.75rem;margin-top:1.5rem">
+        <a href="/portfolio" style="display:block;padding:1rem 1.25rem;background:var(--bg);border:1px solid var(--ln);border-radius:10px;text-decoration:none;color:var(--dk);font-size:0.85rem;font-weight:600;transition:all 0.2s">See Our Work <span style="float:right;color:var(--ac)">&rarr;</span></a>
+        <a href="/website-redesign-services" style="display:block;padding:1rem 1.25rem;background:var(--bg);border:1px solid var(--ln);border-radius:10px;text-decoration:none;color:var(--dk);font-size:0.85rem;font-weight:600;transition:all 0.2s">Website Redesign Services <span style="float:right;color:var(--ac)">&rarr;</span></a>
+        <a href="/lead-generation-websites" style="display:block;padding:1rem 1.25rem;background:var(--bg);border:1px solid var(--ln);border-radius:10px;text-decoration:none;color:var(--dk);font-size:0.85rem;font-weight:600;transition:all 0.2s">Lead Generation Websites <span style="float:right;color:var(--ac)">&rarr;</span></a>
+        <a href="/pricing" style="display:block;padding:1rem 1.25rem;background:var(--bg);border:1px solid var(--ln);border-radius:10px;text-decoration:none;color:var(--dk);font-size:0.85rem;font-weight:600;transition:all 0.2s">See Our Pricing <span style="float:right;color:var(--ac)">&rarr;</span></a>
+        <a href="/web-design-for-service-businesses" style="display:block;padding:1rem 1.25rem;background:var(--bg);border:1px solid var(--ln);border-radius:10px;text-decoration:none;color:var(--dk);font-size:0.85rem;font-weight:600;transition:all 0.2s">Web Design for Service Businesses <span style="float:right;color:var(--ac)">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-sec">
+    <h2>Ready for a car wash website that drives memberships?</h2>
+    <p>Get a free review of your current site. We will tell you what is working and what is costing you signups.</p>
+    <a href="/#contact" class="cta-btn">Get a Car Wash Website Review</a>
+  </div>
+
+
+  <div style="background:#0B1120;padding:3rem 3rem 1.5rem;border-top:1px solid rgba(255,255,255,0.04)">
+    <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:2rem">
       <div>
-        <div style="font-size:0.58rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,244,0.35);margin-bottom:0.75rem">Services</div>
-        <a href="/pricing" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Pricing</a>
-        <a href="/portfolio" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Portfolio</a>
-        <a href="/website-redesign-services" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Website Redesign</a>
-        <a href="/lead-generation-websites" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Lead Generation</a>
-        <a href="/mobile-first-web-design" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Mobile-First Design</a>
-        <a href="/care" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Site Care</a>
+        <div style="font-size:0.52rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:0.75rem">Services</div>
+        <a href="/pricing" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Pricing</a>
+        <a href="/portfolio" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Portfolio</a>
+        <a href="/website-redesign-services" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Website Redesign</a>
+        <a href="/lead-generation-websites" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Lead Generation</a>
+        <a href="/mobile-first-web-design" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Mobile-First Design</a>
+        <a href="/care" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Site Care</a>
       </div>
       <div>
-        <div style="font-size:0.58rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,244,0.35);margin-bottom:0.75rem">Industries</div>
-        <a href="/home-services" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Home Services</a>
-        <a href="/contractors" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Contractors</a>
-        <a href="/healthcare" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Healthcare</a>
-        <a href="/dental" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Dental</a>
-        <a href="/med-spa" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Med Spas</a>
-        <a href="/consulting" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Consulting</a>
-        <a href="/financial-services" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Financial Services</a>
+        <div style="font-size:0.52rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:0.75rem">Industries</div>
+        <a href="/home-services" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Home Services</a>
+        <a href="/contractors" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Contractors</a>
+        <a href="/healthcare" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Healthcare</a>
+        <a href="/dental" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Dental</a>
+        <a href="/med-spa" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Med Spas</a>
+        <a href="/consulting" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Consulting</a>
+        <a href="/financial-services" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Financial Services</a>
       </div>
       <div>
-        <div style="font-size:0.58rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,244,0.35);margin-bottom:0.75rem">Locations</div>
-        <a href="/fort-worth" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Fort Worth</a>
-        <a href="/dallas" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Dallas</a>
-        <a href="/arlington" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Arlington</a>
-        <a href="/scottsdale" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Scottsdale</a>
-        <a href="/phoenix" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Phoenix</a>
-        <a href="/los-angeles" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Los Angeles</a>
-        <a href="/new-york" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">New York</a>
+        <div style="font-size:0.52rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:0.75rem">Locations</div>
+        <a href="/fort-worth" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Fort Worth</a>
+        <a href="/dallas" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Dallas</a>
+        <a href="/arlington" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Arlington</a>
+        <a href="/scottsdale" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Scottsdale</a>
+        <a href="/phoenix" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Phoenix</a>
+        <a href="/los-angeles" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Los Angeles</a>
+        <a href="/new-york" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">New York</a>
       </div>
       <div>
-        <div style="font-size:0.58rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,244,0.35);margin-bottom:0.75rem">Company</div>
-        <a href="/" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Home</a>
-        <a href="/web-design-fort-worth" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">About Our Studio</a>
-        <a href="/pay" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Client Portal</a>
-        <a href="/privacy" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Privacy</a>
-        <a href="/terms" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0;transition:color 0.2s">Terms</a>
+        <div style="font-size:0.52rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:0.75rem">Company</div>
+        <a href="/" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Home</a>
+        <a href="/web-design-fort-worth" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">About Our Studio</a>
+        <a href="/pay" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Client Portal</a>
+        <a href="/privacy" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Privacy</a>
+        <a href="/terms" style="display:block;font-size:0.75rem;color:rgba(255,255,255,0.4);text-decoration:none;padding:0.2rem 0">Terms</a>
       </div>
     </div>
   </div>
 
+
   <footer>
-		<div class="w">
-			<div>
-				<img src="images/logo-light.png" alt="TMN Creative" class="footer-logo">
-				<p style="font-size: 0.875rem; color: var(--ti2);">Premium web design for growing businesses.</p>
-			</div>
-			<div class="footer-col">
-				<p style="font-weight: 600; margin-bottom: 1rem;">Contact</p>
-				<p><a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></p>
-			</div>
-			<div class="footer-col">
-				<p style="font-weight: 600; margin-bottom: 1rem;">More</p>
-				<ul>
-					<li><a href="/pricing">Pricing</a></li>
-					<li><a href="/web-design-for-service-businesses">Service Businesses</a></li>
-					<li><a href="/lead-generation-websites">Lead Generation</a></li>
-					<li><a href="/mobile-first-web-design">Mobile-First Design</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="footer-copyright">
-			<p>&copy; 2026 True Margin North LLC. <a href="https://truemarginnorth.com" style="color: var(--ac); text-decoration: none;">truemarginnorth.com</a></p>
-		</div>
-	</footer>
-
-	<!-- Mobile Sticky CTA -->
-	<div class="mobile-cta">
-		<a class='btn' href='/#contact'>Request a Homepage Audit</a>
-	</div>
-
-	<!-- FAQ Schema JSON-LD -->
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "FAQPage",
-		"mainEntity": [
-			{
-				"@type": "Question",
-				"name": "Do car wash companies really need a strong website?",
-				"acceptedAnswer": {
-					"@type": "Answer",
-					"text": "Yes. Memberships, trust, promotions, and local positioning all benefit from a better digital experience. Even if most traffic starts with drive-by visibility or signage, the website plays a critical role in converting that interest into action."
-				}
-			},
-			{
-				"@type": "Question",
-				"name": "Can you help present membership packages better?",
-				"acceptedAnswer": {
-					"@type": "Answer",
-					"text": "Yes. That is one of the most important parts of the site. Clear membership presentation, tier comparison, and value communication are core to what we build for car wash operators."
-				}
-			},
-			{
-				"@type": "Question",
-				"name": "Is this only for larger chains?",
-				"acceptedAnswer": {
-					"@type": "Answer",
-					"text": "No. Strong websites matter for single locations and regional operators too. In fact, for many independent operators, a modern website is one of the highest-leverage investments they can make."
-				}
-			},
-			{
-				"@type": "Question",
-				"name": "Can you build pages for multiple locations?",
-				"acceptedAnswer": {
-					"@type": "Answer",
-					"text": "Yes. Multi-location structure is a common part of this type of project. We build location pages that feel local, consistent, and trust-worthy across your network."
-				}
-			},
-			{
-				"@type": "Question",
-				"name": "Can a better website make a car wash feel more premium?",
-				"acceptedAnswer": {
-					"@type": "Answer",
-					"text": "Absolutely. Presentation matters a lot in a category where people compare quickly. A modern, well-designed site signals quality, professionalism, and trustworthiness."
-				}
-			}
-		]
-	}
-	</script>
-
-	<!-- Lenis Smooth Scroll -->
-	<script>
-		(async () => {
-			try {
-				const { Lenis } = await import('https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/+esm');
-				const lenis = new Lenis();
-
-				function raf(time) {
-					lenis.raf(time);
-					requestAnimationFrame(raf);
-				}
-				requestAnimationFrame(raf);
-			} catch (e) {
-				console.warn('Lenis failed to load, using native scroll');
-			}
-		})();
-	</script>
-
-	<!-- Navigation Scroll Effects -->
-	<script>
-		const nav = document.getElementById('nav');
-		let lastScrollTop = 0;
-
-		window.addEventListener('scroll', () => {
-			const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-			if (scrollTop > 50) {
-				nav.classList.add('scrolled');
-			} else {
-				nav.classList.remove('scrolled');
-			}
-
-			lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-		});
-	</script>
-
-	<!-- Scroll Reveal -->
-	<script>
-		const revealElements = document.querySelectorAll('.r');
-
-		const revealOnScroll = () => {
-			revealElements.forEach((element) => {
-				const elementTop = element.getBoundingClientRect().top;
-				const elementBottom = element.getBoundingClientRect().bottom;
-
-				if (elementTop < window.innerHeight && elementBottom > 0) {
-					element.classList.add('v');
-				}
-			});
-		};
-
-		window.addEventListener('scroll', revealOnScroll);
-		revealOnScroll();
-	</script>
-
-	<!-- FAQ Accordion -->
-	<script>
-		const faqItems = document.querySelectorAll('.faq-item');
-
-		faqItems.forEach((item) => {
-			const question = item.querySelector('.faq-q');
-			question.addEventListener('click', () => {
-				const isActive = item.classList.contains('active');
-
-				faqItems.forEach((other) => {
-					other.classList.remove('active');
-				});
-
-				if (!isActive) {
-					item.classList.add('active');
-				}
-			});
-		});
-	</script>
+    <div>TMN Creative &middot; Serving car wash operators nationwide &middot; <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></div>
+    <div>&copy; 2026 True Margin North LLC</div>
+  </footer>
 </body>
 </html>
