@@ -42,7 +42,7 @@
     img{max-width:100%;display:block}
 
     /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:310;padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s var(--e);background:rgba(255,255,255,0.88);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:310;padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s var(--e);background:rgba(255,255,255,0.92);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid rgba(226,232,240,0.3)}
     nav.s{padding:0.75rem 3rem;box-shadow:0 1px 2px rgba(15,23,42,0.04);border-bottom:1px solid rgba(226,232,240,0.5)}
 
     nav.dark{background:rgba(11,17,32,0.92);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid rgba(255,255,255,0.06)}
@@ -55,7 +55,7 @@
 
     .nl{text-decoration:none;display:flex;align-items:center;height:40px}
     .nl:hover{opacity:0.7;transition:opacity 0.3s}
-    .nav-logo{height:42px;width:auto}
+    .nav-logo{height:30px;width:auto}
 
     .nr{display:flex;align-items:center;gap:2.25rem}
     .nk{font-size:0.82rem;font-weight:500;color:var(--tx2);text-decoration:none;transition:color 0.2s}
@@ -68,8 +68,8 @@
     .menu-btn span::before,.menu-btn span::after{content:'';position:absolute;left:0}
     .menu-btn span::before{top:-5px}.menu-btn span::after{top:5px}
     .menu-btn.active span{background:transparent}
-    .menu-btn.active span::before{top:0;transform:rotate(45deg);background:#fff}
-    .menu-btn.active span::after{top:0;transform:rotate(-45deg);background:#fff}
+    .menu-btn.active span::before{top:0;transform:rotate(45deg);background:var(--ac)}
+    .menu-btn.active span::after{top:0;transform:rotate(-45deg);background:var(--ac)}
     .mob-menu{position:fixed;inset:0;z-index:300;background:var(--dk3);display:flex;flex-direction:column;justify-content:center;align-items:center;opacity:0;pointer-events:none;transition:opacity 0.3s}
     .mob-menu.open{opacity:1;pointer-events:auto}
     .mob-menu a{font-family:var(--fs);font-size:1.75rem;font-weight:600;color:#fff;text-decoration:none;padding:0.85rem 0;opacity:0;transform:translateY(12px);transition:all 0.3s var(--e);letter-spacing:-0.02em}
@@ -77,10 +77,11 @@
     .mob-menu.open a:nth-child(1){transition-delay:0.06s}.mob-menu.open a:nth-child(2){transition-delay:0.1s}.mob-menu.open a:nth-child(3){transition-delay:0.14s}.mob-menu.open a:nth-child(4){transition-delay:0.18s}.mob-menu.open a:nth-child(5){transition-delay:0.22s}.mob-menu.open a:nth-child(6){transition-delay:0.26s}
     .mob-menu .mob-cta{font-size:0.82rem;background:var(--ac);color:var(--dk3);padding:0.75rem 2rem;border-radius:8px;margin-top:1.5rem;font-weight:600}
     nav.mob-open{background:transparent !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;box-shadow:none !important}
+    nav.mob-open .nav-logo{opacity:0;transition:opacity 0.3s}
     @media(max-width:768px){
       nav{padding:1rem 1.5rem;padding-top:calc(1rem + env(safe-area-inset-top,0px))}
       nav.s{padding:0.75rem 1.5rem;padding-top:calc(0.75rem + env(safe-area-inset-top,0px))}
-      .nk,.nb{display:none}.menu-btn{display:flex}.nr{gap:0}.nav-logo{height:34px}
+      .nk,.nb{display:none}.menu-btn{display:flex}.nr{gap:0}.nav-logo{height:26px}
     }
 
     /* HERO */
@@ -108,7 +109,7 @@
     .hero-pills{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;opacity:0;animation:fu 0.8s var(--e) 0.58s forwards}
     .hp-tag{font-size:0.72rem;font-weight:600;color:var(--tx);padding:0.4rem 0.9rem;background:var(--bg2);border:1px solid var(--ln);border-radius:100px;letter-spacing:0.01em}
     .hp-sep{color:var(--ln);font-size:0.6rem;line-height:1}
-    .hero h1 br{display:block}
+    .hero h1 br{display:none}
     .hero-btns{display:flex;gap:0.85rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fu 0.8s var(--e) 0.65s forwards}
     .btn-p{font-size:0.85rem;font-weight:600;color:#fff;background:var(--dk);padding:0.9rem 2.25rem;text-decoration:none;border-radius:10px;transition:all 0.3s var(--e);box-shadow:0 2px 8px rgba(15,23,42,0.1)}
     .btn-p:hover{background:var(--dk2);transform:translateY(-2px);box-shadow:0 12px 35px rgba(15,23,42,0.2)}
@@ -279,12 +280,12 @@
     @media(max-width:768px){.svc-tabs{gap:0.2rem;padding:0.25rem}.svc-tab{font-size:0.7rem;padding:0.65rem 0.5rem}.svc-card{padding:1.75rem;border-radius:14px}.svc-card h3{font-size:1.3rem}.svc-desc{font-size:0.8rem;margin-bottom:1rem}.svc-btn{padding:0.85rem 1.75rem;border-radius:10px;font-size:0.8rem}.svc-note{font-size:0.7rem;margin-top:0.85rem}.svc-bundle{padding:1.75rem}.svc-bundle h3{font-size:1.3rem}.svc-bundle p{font-size:0.8rem}}
 
     /* PROCESS */
-    .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-    .proc-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:1.5rem 1.5rem;transition:all 0.4s var(--e);box-shadow:0 1px 3px rgba(15,23,42,0.03);position:relative}
+    .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+    .proc-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:2rem 1.75rem;transition:all 0.4s var(--e);box-shadow:0 1px 3px rgba(15,23,42,0.03);position:relative}
     .proc-card::before{content:'';position:absolute;inset:-1px;border-radius:17px;padding:1px;background:linear-gradient(135deg,var(--ac),rgba(198,162,74,0.2),var(--ac),rgba(198,162,74,0.2));background-size:300% 300%;opacity:0;transition:opacity 0.4s;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
     .proc-card:hover::before{opacity:1;animation:borderRotate 3s linear infinite}
     .proc-card:hover{border-color:transparent;box-shadow:0 12px 40px rgba(198,162,74,0.08);transform:translateY(-4px)}
-    .proc-num{font-family:var(--fs);font-size:1.75rem;font-weight:700;color:var(--ln);letter-spacing:-0.02em;margin-bottom:0.5rem;line-height:1;transition:color 0.4s}
+    .proc-num{font-family:var(--fs);font-size:2.25rem;font-weight:700;color:var(--ln);letter-spacing:-0.02em;margin-bottom:0.75rem;line-height:1;transition:color 0.4s}
     .proc-card:hover .proc-num{color:var(--ac)}
     .proc-card h3{font-size:0.9rem;font-weight:700;color:var(--dk);margin-bottom:0.35rem;letter-spacing:-0.01em}
     .proc-card p{font-size:0.82rem;color:var(--tx2);line-height:1.65}
@@ -319,9 +320,9 @@
     .ba-pair{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(15,23,42,0.08);border:1px solid var(--ln);cursor:col-resize;aspect-ratio:16/9}
     .ba-pair img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:top}
     .ba-after{clip-path:inset(0 0 0 50%)}
-    .ba-lbl{position:absolute;top:0.65rem;padding:0.2rem 0.65rem;font-size:0.52rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;border-radius:100px;z-index:3;pointer-events:none;transition:opacity 0.25s}
-    .ba-lbl-b{left:0.65rem;background:rgba(15,23,42,0.65);color:rgba(255,255,255,0.85);backdrop-filter:blur(6px)}
-    .ba-lbl-a{right:0.65rem;background:var(--ac);color:var(--dk3)}
+    .ba-lbl{position:absolute;top:0.65rem;padding:0.25rem 0.8rem;font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;border-radius:100px;z-index:3;pointer-events:none;transition:opacity 0.25s}
+    .ba-lbl-b{left:0.65rem;background:rgba(220,50,50,0.8);color:#fff;backdrop-filter:blur(6px)}
+    .ba-lbl-a{right:0.65rem;background:rgba(34,197,94,0.85);color:#fff}
     .ba-line{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%);z-index:4;pointer-events:none;box-shadow:0 0 10px rgba(0,0,0,0.3)}
     .ba-line::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.25);border:2px solid rgba(0,0,0,0.08)}
     .ba-line::before{content:'\25C0  \25B6';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:9px;color:var(--tx2);z-index:5;letter-spacing:3px;white-space:nowrap}
@@ -351,7 +352,7 @@
       .ba-arrow svg{width:11px;height:11px}
       .ba-line::after{width:36px;height:36px}
       .ba-line::before{font-size:8px}
-      .ba-lbl{font-size:0.48rem;top:0.5rem}
+      .ba-lbl{font-size:0.55rem;top:0.5rem}
       .ba-lbl-b{left:0.5rem}.ba-lbl-a{right:0.5rem}
       .ba-info{padding:1rem 0.15rem 0}
       .ba-name{font-size:0.82rem}
@@ -399,11 +400,11 @@
     img{max-width:100%;display:block}
 
     /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:310;padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s var(--e);background:rgba(255,255,255,0.88);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:310;padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s var(--e);background:rgba(255,255,255,0.88);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid rgba(226,232,240,0.3)}
     nav.s{padding:0.75rem 3rem;box-shadow:0 1px 2px rgba(15,23,42,0.04);border-bottom:1px solid rgba(226,232,240,0.5)}
     .nl{text-decoration:none;display:flex;align-items:center;height:40px}
     .nl:hover{opacity:0.7;transition:opacity 0.3s}
-    .nav-logo{height:42px;width:auto}
+    .nav-logo{height:30px;width:auto}
     .nr{display:flex;align-items:center;gap:2.25rem}
     .nk{font-size:0.82rem;font-weight:500;color:var(--tx2);text-decoration:none;transition:color 0.2s}
     .nk:hover{color:var(--dk)}
@@ -415,8 +416,8 @@
     .menu-btn span::before,.menu-btn span::after{content:'';position:absolute;left:0}
     .menu-btn span::before{top:-5px}.menu-btn span::after{top:5px}
     .menu-btn.active span{background:transparent}
-    .menu-btn.active span::before{top:0;transform:rotate(45deg);background:#fff}
-    .menu-btn.active span::after{top:0;transform:rotate(-45deg);background:#fff}
+    .menu-btn.active span::before{top:0;transform:rotate(45deg);background:var(--ac)}
+    .menu-btn.active span::after{top:0;transform:rotate(-45deg);background:var(--ac)}
     .mob-menu{position:fixed;inset:0;z-index:300;background:var(--dk3);display:flex;flex-direction:column;justify-content:center;align-items:center;opacity:0;pointer-events:none;transition:opacity 0.3s}
     .mob-menu.open{opacity:1;pointer-events:auto}
     .mob-menu a{font-family:var(--fs);font-size:1.75rem;font-weight:600;color:#fff;text-decoration:none;padding:0.85rem 0;opacity:0;transform:translateY(12px);transition:all 0.3s var(--e);letter-spacing:-0.02em}
@@ -424,10 +425,11 @@
     .mob-menu.open a:nth-child(1){transition-delay:0.06s}.mob-menu.open a:nth-child(2){transition-delay:0.1s}.mob-menu.open a:nth-child(3){transition-delay:0.14s}.mob-menu.open a:nth-child(4){transition-delay:0.18s}.mob-menu.open a:nth-child(5){transition-delay:0.22s}.mob-menu.open a:nth-child(6){transition-delay:0.26s}
     .mob-menu .mob-cta{font-size:0.82rem;background:var(--ac);color:var(--dk3);padding:0.75rem 2rem;border-radius:8px;margin-top:1.5rem;font-weight:600}
     nav.mob-open{background:transparent !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;box-shadow:none !important}
+    nav.mob-open .nav-logo{opacity:0;transition:opacity 0.3s}
     @media(max-width:768px){
       nav{padding:1rem 1.5rem;padding-top:calc(1rem + env(safe-area-inset-top,0px))}
       nav.s{padding:0.75rem 1.5rem;padding-top:calc(0.75rem + env(safe-area-inset-top,0px))}
-      .nk,.nb{display:none}.menu-btn{display:flex}.nr{gap:0}.nav-logo{height:34px}
+      .nk,.nb{display:none}.menu-btn{display:flex}.nr{gap:0}.nav-logo{height:26px}
     }
 
     /* HERO */
@@ -455,7 +457,7 @@
     .hero-pills{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;opacity:0;animation:fu 0.8s var(--e) 0.58s forwards}
     .hp-tag{font-size:0.72rem;font-weight:600;color:var(--tx);padding:0.4rem 0.9rem;background:var(--bg2);border:1px solid var(--ln);border-radius:100px;letter-spacing:0.01em}
     .hp-sep{color:var(--ln);font-size:0.6rem;line-height:1}
-    .hero h1 br{display:block}
+    .hero h1 br{display:none}
     .hero-btns{display:flex;gap:0.85rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fu 0.8s var(--e) 0.65s forwards}
     .btn-p{font-size:0.85rem;font-weight:600;color:#fff;background:var(--dk);padding:0.9rem 2.25rem;text-decoration:none;border-radius:10px;transition:all 0.3s var(--e);box-shadow:0 2px 8px rgba(15,23,42,0.1)}
     .btn-p:hover{background:var(--dk2);transform:translateY(-2px);box-shadow:0 12px 35px rgba(15,23,42,0.2)}
@@ -611,12 +613,12 @@
     @media(max-width:768px){.svc-tabs{gap:0.2rem;padding:0.25rem}.svc-tab{font-size:0.7rem;padding:0.65rem 0.5rem}.svc-card{padding:1.75rem;border-radius:14px}.svc-card h3{font-size:1.3rem}.svc-desc{font-size:0.8rem;margin-bottom:1rem}.svc-btn{padding:0.85rem 1.75rem;border-radius:10px;font-size:0.8rem}.svc-note{font-size:0.7rem;margin-top:0.85rem}.svc-bundle{padding:1.75rem}.svc-bundle h3{font-size:1.3rem}.svc-bundle p{font-size:0.8rem}}
 
     /* PROCESS */
-    .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-    .proc-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:1.5rem 1.5rem;transition:all 0.4s var(--e);box-shadow:0 1px 3px rgba(15,23,42,0.03);position:relative}
+    .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+    .proc-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:2rem 1.75rem;transition:all 0.4s var(--e);box-shadow:0 1px 3px rgba(15,23,42,0.03);position:relative}
     .proc-card::before{content:'';position:absolute;inset:-1px;border-radius:17px;padding:1px;background:linear-gradient(135deg,var(--ac),rgba(198,162,74,0.2),var(--ac),rgba(198,162,74,0.2));background-size:300% 300%;opacity:0;transition:opacity 0.4s;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
     .proc-card:hover::before{opacity:1;animation:borderRotate 3s linear infinite}
     .proc-card:hover{border-color:transparent;box-shadow:0 12px 40px rgba(198,162,74,0.08);transform:translateY(-4px)}
-    .proc-num{font-family:var(--fs);font-size:1.75rem;font-weight:700;color:var(--ln);letter-spacing:-0.02em;margin-bottom:0.5rem;line-height:1;transition:color 0.4s}
+    .proc-num{font-family:var(--fs);font-size:2.25rem;font-weight:700;color:var(--ln);letter-spacing:-0.02em;margin-bottom:0.75rem;line-height:1;transition:color 0.4s}
     .proc-card:hover .proc-num{color:var(--ac)}
     .proc-card h3{font-size:0.9rem;font-weight:700;color:var(--dk);margin-bottom:0.35rem;letter-spacing:-0.01em}
     .proc-card p{font-size:0.82rem;color:var(--tx2);line-height:1.65}
@@ -725,7 +727,7 @@
     .chk span{font-size:0.8rem;color:var(--tx2)}
     .form-card{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--ln);border-radius:16px;padding:2.5rem;box-shadow:0 8px 30px rgba(15,23,42,0.06),0 1px 3px rgba(15,23,42,0.04)}
     .form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.65rem}
-    .fg{margin-bottom:0.75rem}
+    .fg{margin-bottom:0.35rem}
     .fg.full{grid-column:1/-1}
     .fg label{display:block;font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--tx2);margin-bottom:0.3rem}
     .fg input,.fg select,.fg textarea{width:100%;padding:0.75rem 0.9rem;font-family:var(--fn);font-size:0.85rem;color:var(--dk);background:var(--bg2);border:1px solid var(--ln);border-radius:10px;outline:none;transition:all 0.25s}
@@ -734,8 +736,8 @@
     .fg select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%2394A3B8' stroke-width='1.2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0.8rem center}
     .fg textarea{min-height:70px;resize:vertical}
     .hidden{display:none}
-    .form-sub{width:100%;font-family:var(--fn);font-size:0.82rem;font-weight:600;color:#fff;background:var(--dk);border:none;padding:0.9rem;cursor:pointer;border-radius:10px;transition:all 0.3s var(--e);margin-top:0.25rem;box-shadow:0 2px 8px rgba(15,23,42,0.1)}
-    .form-sub:hover{background:var(--dk2);transform:translateY(-2px);box-shadow:0 12px 35px rgba(15,23,42,0.18)}
+    .form-sub{width:100%;font-family:var(--fn);font-size:0.82rem;font-weight:600;color:var(--dk3);background:linear-gradient(135deg,var(--ac2),var(--ac));border:none;padding:0.9rem;cursor:pointer;border-radius:10px;transition:all 0.3s var(--e);margin-top:0.25rem;box-shadow:0 4px 15px rgba(198,162,74,0.2)}
+    .form-sub:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(198,162,74,0.3)}
     @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:2.5rem}.form-row{grid-template-columns:1fr;gap:0}.form-card{padding:1.75rem;border-radius:14px}.fg input,.fg select,.fg textarea{font-size:16px;padding:0.8rem 0.9rem;border-radius:10px}.ct-text>p{font-size:0.9rem;margin-bottom:1.5rem;line-height:1.7}.form-sub{padding:1rem;border-radius:12px;font-size:0.86rem;min-height:48px}}
 
     /* CTA */
@@ -765,14 +767,8 @@
     @keyframes stkShimmer{0%,80%,100%{left:-100%}40%{left:100%}}
     @media(max-width:768px){.stk{display:block}.cta{padding-bottom:calc(4rem + env(safe-area-inset-bottom,0px))}footer{padding-bottom:calc(4.5rem + env(safe-area-inset-bottom,0px))}}
 
-
-    /* FOOTER NAV MOBILE */
-    @media(max-width:768px){
-      .foot-nav{padding:2rem 1.5rem 1rem !important}
-      .foot-nav-grid{grid-template-columns:1fr 1fr !important;gap:1.25rem 1rem !important}
-      .foot-nav-grid a{font-size:0.7rem !important;padding:0.15rem 0 !important}
-      .foot-nav-grid > div > div:first-child{font-size:0.5rem !important;margin-bottom:0.5rem !important}
-    }
+    .gold-div{height:1px;background:linear-gradient(90deg,transparent 10%,rgba(198,162,74,0.25) 50%,transparent 90%);border:none;margin:0}
+    @media(max-width:768px){.foot-nav-wrap{grid-template-columns:repeat(2,1fr) !important;gap:0.75rem 1.25rem}}
     /* ANIM */
     @keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
@@ -814,7 +810,7 @@
     <div class="hero-fade"></div>
     <div class="hc">
       <div class="hero-pill"><span class="dot"></span> Now booking new projects</div>
-      <h1>The first impression.<br/>Make your business<br/><span class="accent" style="font-size:1.08em">look more established.</span></h1>
+      <h1>The first impression.<br/> <span class="h1-lg">Make your business look <span class="accent">more established.</span></span></h1>
       <p class="hero-sub">Premium websites and conversion systems for businesses that want to build trust, respond faster, and earn more.</p>
       <div class="hero-pills"><span class="hp-tag">Fast turnaround</span><span class="hp-sep">&middot;</span><span class="hp-tag">Mobile first</span><span class="hp-sep">&middot;</span><span class="hp-tag">Built to convert</span></div>
       <div class="hero-btns">
@@ -827,7 +823,7 @@
 
 
 
-  <style>#process{padding-top:4rem;padding-bottom:4rem}</style>
+  <hr class="gold-div" />
   <!-- PROBLEM FRAMING -->
   <section class="sec" style="padding:4rem 3rem">
     <div style="max-width:640px;margin:0 auto">
@@ -837,7 +833,7 @@
   </section>
 
   <section class="port-sec" id="proof">
-    <div class="port-header r"><span class="badge">Selected Work</span><h2 class="stl" style="color:#fff">Recent projects.</h2><p class="sdsc" style="color:rgba(255,255,255,0.4);margin:0 auto">Click any site to see it live.</p></div>
+    <div class="port-header r"><span class="badge">Selected Work</span><h2 class="stl" style="color:#fff">Built by us. Live right&nbsp;now.</h2><p class="sdsc" style="color:rgba(255,255,255,0.4);margin:0 auto">Real sites. Real businesses. Click to see them live.</p></div>
     <div class="port-wrap">
       <div class="port-track">
         <a href="https://truemarginnorth.com" target="_blank" rel="noopener" class="port-item"><div class="port-browser"><div class="port-bar"><span class="pd"></span><span class="pd"></span><span class="pd"></span><span class="port-url">truemarginnorth.com</span></div><img src="images/tmn.jpg" alt="True Margin North" loading="lazy" width="900" height="562" /></div><div class="port-meta"><div><div class="port-type">Consultancy</div><h3>True Margin North</h3><div class="port-tag">Credibility upgrade</div></div><span class="port-arrow">→</span></div></a>
@@ -866,7 +862,7 @@
 
   <!-- BEFORE & AFTER -->
   <section class="ba-sec">
-    <div class="ba-header r" style="margin-bottom:2rem"><p style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--tx3);text-align:center">Before and after</p></div>
+    <div class="ba-header r" style="margin-bottom:2rem"><p style="font-family:var(--fs);font-style:italic;font-size:1.05rem;font-weight:400;color:var(--tx3);text-align:center;letter-spacing:-0.01em">Before and after</p></div>
     <div class="ba-wrap r">
       <div class="ba-slider" id="baSlider">
         <div class="ba-slide-track" id="baTrack">
@@ -884,6 +880,7 @@
     </div>
   </section>
 
+  <hr class="gold-div" />
   <section class="sec sec-dk" id="services">
     <div class="wrap">
       <div class="sec-header r"><span class="badge">Services</span><h2 class="stl">Premium websites. Smarter lead follow-up.</h2><p class="sdsc">Start with a site that builds trust. Add the system that turns visitors into booked jobs.</p></div>
@@ -987,7 +984,7 @@
 
   <section class="sec" id="process">
     <div class="wrap">
-      <div class="sec-header r" style="margin-bottom:2rem"><h2 class="stl">Live in days, not months.</h2></div>
+      <div class="sec-header r"><h2 class="stl">Live in days, not months.</h2></div>
       <div class="proc-grid r">
         <div class="proc-card"><div class="proc-num">01</div><h3>Submit</h3><p>Share your current site and what you want to improve. We respond within 24 hours.</p></div>
         <div class="proc-card"><div class="proc-num">02</div><h3>Strategy call</h3><p>30 minutes. We define the scope and agree on a plan.</p></div>
@@ -1015,6 +1012,7 @@
 
 
 
+  <hr class="gold-div" />
   <section class="sec" id="contact">
     <div class="wrap">
       <div class="contact-grid">
@@ -1049,7 +1047,10 @@
             <div class="fg"><label for="website">Current Website (if you have one)</label><input type="text" id="website" name="website" placeholder="https://yoursite.com" /></div>
             <div class="fg"><label for="service">What do you need help with?</label><select id="service" name="service" required><option value="" disabled selected>Select a service</option><option value="website">Website</option><option value="conversion">Lead Conversion System</option><option value="full-build">Website + Lead Conversion</option><option value="site-care">Site Care</option><option value="not-sure">Not sure yet, just want to talk</option></select></div>
              <div class="fg"><label for="details">Anything else we should know?</label><textarea id="details" name="details" placeholder="Tell us about your business and what you are hoping to fix or improve."></textarea></div>
-            <div style="margin-top:0.5rem;margin-bottom:0.75rem"><label style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.68rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--tx3);line-height:1.5;cursor:pointer"><input type="checkbox" name="sms-consent" style="margin-top:3px;flex-shrink:0" /> I agree to receive text messages from True Margin North, LLC regarding my inquiry, including appointment confirmations and follow-up communications. Message frequency varies. Message and data rates may apply. Reply STOP to cancel, HELP for help. <a href="/privacy" style="color:var(--ac)">Privacy Policy</a> | <a href="/terms" style="color:var(--ac)">Terms of Service</a></label></div>
+            <div style="margin-top:0.15rem;margin-bottom:0.75rem">
+              <label style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.58rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--tx3);line-height:1.45;cursor:pointer"><input type="checkbox" name="sms-consent" style="margin-top:3px;flex-shrink:0" /> I agree to receive text messages from True Margin North, LLC regarding my inquiry, including appointment confirmations and follow-up communications. Message frequency varies. Message and data rates may apply. Reply STOP to cancel, HELP for help.</label>
+              <div style="display:flex;gap:0.75rem;margin-top:0.4rem;padding-left:1.25rem"><a href="/privacy" style="font-size:0.6rem;font-weight:500;color:var(--tx3);text-decoration:none">Privacy Policy</a><a href="/terms" style="font-size:0.6rem;font-weight:500;color:var(--tx3);text-decoration:none">Terms of Service</a></div>
+            </div>
             <button type="submit" class="form-sub">Get a Free Website Review</button>
           </form>
         </div>
@@ -1061,44 +1062,44 @@
   </div>
 
   
-  <div class="foot-nav" style="background:#0A0A0A;padding:3rem 4rem 1rem;border-top:1px solid rgba(248,247,244,0.04)">
-    <div class="foot-nav-grid" style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem">
+  <div style="background:#0A0A0A;padding:1.5rem 3rem 0.75rem;border-top:1px solid rgba(248,247,244,0.04)">
+    <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem 1.5rem" class="foot-nav-wrap">
       <div>
-        <div style="font-size:0.58rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,244,0.35);margin-bottom:0.75rem">Services</div>
-        <a href="/pricing" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Pricing</a>
-        <a href="/portfolio" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Portfolio</a>
-        <a href="/website-redesign-services" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Website Redesign</a>
-        <a href="/lead-generation-websites" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Lead Generation</a>
-        <a href="/mobile-first-web-design" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Mobile-First Design</a>
-        <a href="/care" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Site Care</a>
+        <div style="font-size:0.5rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(248,247,244,0.25);margin-bottom:0.3rem">Services</div>
+        <a href="/pricing" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Pricing</a>
+        <a href="/portfolio" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Portfolio</a>
+        <a href="/website-redesign-services" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Website Redesign</a>
+        <a href="/lead-generation-websites" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Lead Generation</a>
+        <a href="/mobile-first-web-design" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Mobile-First Design</a>
+        <a href="/care" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Site Care</a>
       </div>
       <div>
-        <div style="font-size:0.58rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,244,0.35);margin-bottom:0.75rem">Industries</div>
-        <a href="/home-services" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Home Services</a>
-        <a href="/contractors" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Contractors</a>
-        <a href="/healthcare" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Healthcare</a>
-        <a href="/dental" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Dental</a>
-        <a href="/med-spa" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Med Spas</a>
-        <a href="/consulting" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Consulting</a>
-        <a href="/financial-services" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Financial Services</a>
+        <div style="font-size:0.5rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(248,247,244,0.25);margin-bottom:0.3rem">Industries</div>
+        <a href="/home-services" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Home Services</a>
+        <a href="/contractors" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Contractors</a>
+        <a href="/healthcare" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Healthcare</a>
+        <a href="/dental" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Dental</a>
+        <a href="/med-spa" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Med Spas</a>
+        <a href="/consulting" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Consulting</a>
+        <a href="/financial-services" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Financial Services</a>
       </div>
       <div>
-        <div style="font-size:0.58rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,244,0.35);margin-bottom:0.75rem">Locations</div>
-        <a href="/fort-worth" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Fort Worth</a>
-        <a href="/dallas" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Dallas</a>
-        <a href="/arlington" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Arlington</a>
-        <a href="/scottsdale" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Scottsdale</a>
-        <a href="/phoenix" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Phoenix</a>
-        <a href="/los-angeles" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Los Angeles</a>
-        <a href="/new-york" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">New York</a>
+        <div style="font-size:0.5rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(248,247,244,0.25);margin-bottom:0.3rem">Locations</div>
+        <a href="/fort-worth" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Fort Worth</a>
+        <a href="/dallas" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Dallas</a>
+        <a href="/arlington" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Arlington</a>
+        <a href="/scottsdale" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Scottsdale</a>
+        <a href="/phoenix" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Phoenix</a>
+        <a href="/los-angeles" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Los Angeles</a>
+        <a href="/new-york" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">New York</a>
       </div>
       <div>
-        <div style="font-size:0.58rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,244,0.35);margin-bottom:0.75rem">Company</div>
-        <a href="/" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Home</a>
-        <a href="/web-design-fort-worth" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">About Our Studio</a>
-        <a href="/pay" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Client Portal</a>
-        <a href="/privacy" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Privacy</a>
-        <a href="/terms" style="display:block;font-size:0.78rem;color:rgba(248,247,244,0.5);text-decoration:none;padding:0.25rem 0">Terms</a>
+        <div style="font-size:0.5rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(248,247,244,0.25);margin-bottom:0.3rem">Company</div>
+        <a href="/" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Home</a>
+        <a href="/web-design-fort-worth" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">About Our Studio</a>
+        <a href="/pay" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Client Portal</a>
+        <a href="/privacy" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Privacy</a>
+        <a href="/terms" style="display:block;font-size:0.68rem;color:rgba(248,247,244,0.4);text-decoration:none;padding:0.06rem 0">Terms</a>
       </div>
     </div>
   </div>
