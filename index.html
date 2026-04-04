@@ -59,14 +59,6 @@
     .nl:hover{opacity:0.7;transition:opacity 0.3s}
     .nav-logo{height:30px;width:auto}
 
-    .nl{display:grid;align-items:center;height:40px}
-    .nav-logo-dark,.nav-logo-light{grid-area:1/1;height:30px;width:auto;transition:opacity 0.4s var(--e)}
-    .nav-logo-light{opacity:0}
-    .nav-logo-dark{opacity:1}
-    nav.dark .nav-logo-dark{opacity:0}
-    nav.dark .nav-logo-light{opacity:1}
-    nav.mob-open .nav-logo-dark{opacity:0}
-    nav.mob-open .nav-logo-light{opacity:1}
     .nr{display:flex;align-items:center;gap:2.25rem}
     .nk{font-size:0.82rem;font-weight:500;color:var(--tx2);text-decoration:none;transition:color 0.2s}
     .nk:hover{color:var(--dk)}
@@ -289,12 +281,12 @@
     @media(max-width:768px){.svc-tabs{gap:0.2rem;padding:0.25rem}.svc-tab{font-size:0.7rem;padding:0.65rem 0.5rem}.svc-card{padding:1.75rem;border-radius:14px}.svc-card h3{font-size:1.3rem}.svc-desc{font-size:0.8rem;margin-bottom:1rem}.svc-btn{padding:0.85rem 1.75rem;border-radius:10px;font-size:0.8rem}.svc-note{font-size:0.7rem;margin-top:0.85rem}.svc-bundle{padding:1.75rem}.svc-bundle h3{font-size:1.3rem}.svc-bundle p{font-size:0.8rem}}
 
     /* PROCESS */
-    .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
-    .proc-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:2rem 1.75rem;transition:all 0.4s var(--e);box-shadow:0 1px 3px rgba(15,23,42,0.03);position:relative}
+    .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+    .proc-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:1.5rem 1.5rem;transition:all 0.4s var(--e);box-shadow:0 1px 3px rgba(15,23,42,0.03);position:relative}
     .proc-card::before{content:'';position:absolute;inset:-1px;border-radius:17px;padding:1px;background:linear-gradient(135deg,var(--ac),rgba(198,162,74,0.2),var(--ac),rgba(198,162,74,0.2));background-size:300% 300%;opacity:0;transition:opacity 0.4s;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
     .proc-card:hover::before{opacity:1;animation:borderRotate 3s linear infinite}
     .proc-card:hover{border-color:transparent;box-shadow:0 12px 40px rgba(198,162,74,0.08);transform:translateY(-4px)}
-    .proc-num{font-family:var(--fs);font-size:2.25rem;font-weight:700;color:var(--ln);letter-spacing:-0.02em;margin-bottom:0.75rem;line-height:1;transition:color 0.4s}
+    .proc-num{font-family:var(--fs);font-size:1.75rem;font-weight:700;color:var(--ln);letter-spacing:-0.02em;margin-bottom:0.5rem;line-height:1;transition:color 0.4s}
     .proc-card:hover .proc-num{color:var(--ac)}
     .proc-card h3{font-size:0.9rem;font-weight:700;color:var(--dk);margin-bottom:0.35rem;letter-spacing:-0.01em}
     .proc-card p{font-size:0.82rem;color:var(--tx2);line-height:1.65}
@@ -621,12 +613,12 @@
     @media(max-width:768px){.svc-tabs{gap:0.2rem;padding:0.25rem}.svc-tab{font-size:0.7rem;padding:0.65rem 0.5rem}.svc-card{padding:1.75rem;border-radius:14px}.svc-card h3{font-size:1.3rem}.svc-desc{font-size:0.8rem;margin-bottom:1rem}.svc-btn{padding:0.85rem 1.75rem;border-radius:10px;font-size:0.8rem}.svc-note{font-size:0.7rem;margin-top:0.85rem}.svc-bundle{padding:1.75rem}.svc-bundle h3{font-size:1.3rem}.svc-bundle p{font-size:0.8rem}}
 
     /* PROCESS */
-    .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
-    .proc-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:2rem 1.75rem;transition:all 0.4s var(--e);box-shadow:0 1px 3px rgba(15,23,42,0.03);position:relative}
+    .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+    .proc-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:1.5rem 1.5rem;transition:all 0.4s var(--e);box-shadow:0 1px 3px rgba(15,23,42,0.03);position:relative}
     .proc-card::before{content:'';position:absolute;inset:-1px;border-radius:17px;padding:1px;background:linear-gradient(135deg,var(--ac),rgba(198,162,74,0.2),var(--ac),rgba(198,162,74,0.2));background-size:300% 300%;opacity:0;transition:opacity 0.4s;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
     .proc-card:hover::before{opacity:1;animation:borderRotate 3s linear infinite}
     .proc-card:hover{border-color:transparent;box-shadow:0 12px 40px rgba(198,162,74,0.08);transform:translateY(-4px)}
-    .proc-num{font-family:var(--fs);font-size:2.25rem;font-weight:700;color:var(--ln);letter-spacing:-0.02em;margin-bottom:0.75rem;line-height:1;transition:color 0.4s}
+    .proc-num{font-family:var(--fs);font-size:1.75rem;font-weight:700;color:var(--ln);letter-spacing:-0.02em;margin-bottom:0.5rem;line-height:1;transition:color 0.4s}
     .proc-card:hover .proc-num{color:var(--ac)}
     .proc-card h3{font-size:0.9rem;font-weight:700;color:var(--dk);margin-bottom:0.35rem;letter-spacing:-0.01em}
     .proc-card p{font-size:0.82rem;color:var(--tx2);line-height:1.65}
@@ -801,7 +793,7 @@
 </head>
 <body>
   <nav id="nav">
-    <a href="#" class="nl"><img src="images/logo-dark.png" alt="TMN Creative" class="nav-logo nav-logo-dark" /><img src="images/logo-light.png" alt="TMN Creative" class="nav-logo nav-logo-light" /></a>
+    <a href="#" class="nl"><img src="images/logo-dark.png" alt="TMN Creative" class="nav-logo" /></a>
     <div class="nr">
       <a href="#proof" class="nk">Work</a>
       <a href="/pricing" class="nk">Pricing</a>
@@ -837,6 +829,7 @@
 
 
 
+  <style>#process{padding-top:4rem;padding-bottom:4rem}</style>
   <!-- PROBLEM FRAMING -->
   <section class="sec" style="padding:4rem 3rem">
     <div style="max-width:640px;margin:0 auto">
@@ -964,7 +957,7 @@
 
   <section class="sec sec-alt">
     <div class="wrap">
-      <div class="sec-header r"><span class="badge">The Studio</span><h2 class="stl">Husband-and-wife team. Fort Worth, TX.</h2></div>
+      <div class="sec-header r"><span class="badge">The Studio</span><h2 class="stl">Husband-and-wife team.<br/>Fort Worth, TX.</h2></div>
       <div class="team-row r">
         <div class="team-img-wrap">
           <img src="images/team.jpg" alt="Trevor and Taylor Niemann" loading="lazy" width="800" height="600" class="team-img" />
@@ -996,7 +989,7 @@
 
   <section class="sec" id="process">
     <div class="wrap">
-      <div class="sec-header r"><h2 class="stl">Live in days, not months.</h2></div>
+      <div class="sec-header r" style="margin-bottom:2rem"><h2 class="stl">Live in days, not months.</h2></div>
       <div class="proc-grid r">
         <div class="proc-card"><div class="proc-num">01</div><h3>Submit</h3><p>Share your current site and what you want to improve. We respond within 24 hours.</p></div>
         <div class="proc-card"><div class="proc-num">02</div><h3>Strategy call</h3><p>30 minutes. We define the scope and agree on a plan.</p></div>
