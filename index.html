@@ -219,16 +219,15 @@
 
     .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
     @media(max-width:768px){.why-grid{grid-template-columns:1fr;gap:0.85rem}}
-    /* TEAM PHOTOS */
-    .team-row{text-align:center}
-    .team-photos{display:flex;gap:1.5rem;justify-content:center}
-    .team-photo{position:relative;flex:0 0 220px}
-    .team-photo img{width:220px;height:220px;object-fit:cover;border-radius:16px;filter:grayscale(15%);transition:filter 0.4s var(--e)}
-    .team-photo:hover img{filter:grayscale(0%)}
-    .team-label{margin-top:0.85rem;font-size:0.82rem;font-weight:700;color:var(--dk);letter-spacing:-0.01em}
-    .team-label span{display:block;font-size:0.68rem;font-weight:500;color:var(--tx3);margin-top:0.15rem;letter-spacing:0}
-    @media(max-width:768px){.team-photos{gap:1rem}.team-photo{flex:0 0 160px}.team-photo img{width:160px;height:160px;border-radius:14px}.team-label{font-size:0.78rem}.team-label span{font-size:0.65rem}}
-    @media(max-width:400px){.team-photo{flex:0 0 140px}.team-photo img{width:140px;height:140px}}
+    /* TEAM PHOTO */
+    .team-row{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:1rem}
+    .team-img-wrap{border-radius:16px;overflow:hidden}
+    .team-img{width:100%;height:auto;display:block;filter:grayscale(10%);transition:filter 0.5s var(--e)}
+    .team-img:hover{filter:grayscale(0%)}
+    .team-names{display:flex;gap:2rem}
+    .team-person strong{font-size:0.88rem;font-weight:700;color:var(--dk);display:block;margin-bottom:0.15rem}
+    .team-person span{font-size:0.72rem;font-weight:500;color:var(--tx3)}
+    @media(max-width:768px){.team-row{grid-template-columns:1fr;gap:1.5rem;text-align:center}.team-img-wrap{border-radius:14px;max-width:400px;margin:0 auto}.team-names{justify-content:center}}
     @media(max-width:768px){#process{padding-top:3rem;padding-bottom:3rem}#faq{padding-top:3rem;padding-bottom:3rem}}
 
     /* TESTIMONIALS */
@@ -960,17 +959,16 @@
     <div class="wrap">
       <div class="sec-header r"><span class="badge">The Studio</span><h2 class="stl">Husband-and-wife team. Fort Worth, TX.</h2></div>
       <div class="team-row r">
-        <div class="team-photos">
-          <div class="team-photo">
-            <img src="images/trevor.jpg" alt="Trevor Niemann" loading="lazy" width="600" height="600" />
-            <div class="team-label">Trevor <span>Strategy, design, build</span></div>
-          </div>
-          <div class="team-photo">
-            <img src="images/taylor.jpg" alt="Taylor Niemann" loading="lazy" width="600" height="600" />
-            <div class="team-label">Taylor <span>Brand, copy, operations</span></div>
-          </div>
+        <div class="team-img-wrap">
+          <img src="images/team.jpg" alt="Trevor and Taylor Niemann" loading="lazy" width="800" height="600" class="team-img" />
         </div>
-        <p style="font-size:0.95rem;color:var(--tx2);line-height:1.8;max-width:540px;margin:2rem auto 0">You work directly with us from day one. Every project receives our complete focus, and you own 100% of the deliverable.</p>
+        <div class="team-info">
+          <div class="team-names">
+            <div class="team-person"><strong>Trevor</strong> <span>Strategy, design, build</span></div>
+            <div class="team-person"><strong>Taylor</strong> <span>Brand, art, operations</span></div>
+          </div>
+          <p style="font-size:0.92rem;color:var(--tx2);line-height:1.75;margin-top:1.25rem">You work directly with us from day one. Every project receives our complete focus, and you own 100% of the deliverable.</p>
+        </div>
       </div>
       <div class="why-grid r">
         <div style="background:var(--bg);border:1px solid var(--ln);border-radius:14px;padding:2rem">
