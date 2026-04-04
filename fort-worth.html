@@ -1005,7 +1005,7 @@
             <span class="sep">&middot;</span>
             <a href="https://api.leadconnectorhq.com/widget/bookings/tmn-web-strategy" target="_blank" rel="noopener">Book a call</a>
             <span class="sep">&middot;</span>
-            <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a>
+            <a href="/cdn-cgi/l/email-protection#9af2fff6f6f5daeef7f4f9e8fffbeef3ecffb4f9f5f7"><span class="__cf_email__" data-cfemail="3b535e5757547b4f565558495e5a4f524d5e15585456">[email&#160;protected]</span></a>
           </div>
         </div>
         <div class="form-card r rd1">
@@ -1091,13 +1091,13 @@
   </div>
 
   <footer>
-    <div class="foot-l"><img src="images/logo-dark.png" alt="TMN Creative" style="filter:brightness(10)" /> TMN Creative &middot; Fort Worth, TX &middot; <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></div>
+    <div class="foot-l"><img src="images/logo-dark.png" alt="TMN Creative" style="filter:brightness(10)" /> TMN Creative &middot; Fort Worth, TX &middot; <a href="/cdn-cgi/l/email-protection#ef878a838380af9b82818c9d8a8e9b86998ac18c8082"><span class="__cf_email__" data-cfemail="a2cac7cececde2d6cfccc1d0c7c3d6cbd4c78cc1cdcf">[email&#160;protected]</span></a></div>
     <div class="foot-r">&copy; 2026 True Margin North LLC &middot; <a href="https://truemarginnorth.com" target="_blank" rel="noopener">truemarginnorth.com</a></div>
   </footer>
 
   <div class="stk" id="stk"><a href="#contact">Get My Free Site Review</a></div>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     (function(){try{var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js';s.onload=function(){try{var l=new Lenis({duration:1.1,easing:function(t){return Math.min(1,1.001-Math.pow(2,-10*t))},touchMultiplier:2});function r(t){l.raf(t);requestAnimationFrame(r)}requestAnimationFrame(r);document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();l.scrollTo(t,{offset:-50})}});})}catch(e){}};s.onerror=function(){};document.head.appendChild(s)}catch(e){}})();
     try{var nav=document.getElementById('nav'),stk=document.getElementById('stk');var paraSecs=document.querySelectorAll('.port-sec,.cta');window.addEventListener('scroll',function(){var y=window.scrollY;nav.classList.toggle('s',y>60);if(window.innerWidth<=768)stk.classList.toggle('show',y>window.innerHeight*0.5);paraSecs.forEach(function(s){var r=s.getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0){var offset=((r.top/window.innerHeight)-0.5)*-25;s.style.setProperty('--para-y',offset+'px')}})})}catch(e){}
     try{var obs=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('v');obs.unobserve(en.target)}})},{threshold:0.04,rootMargin:'0px 0px -10px 0px'});document.querySelectorAll('.r').forEach(function(el){obs.observe(el)})}catch(e){document.querySelectorAll('.r').forEach(function(el){el.classList.add('v')})}
@@ -1129,9 +1129,4 @@
       });
       // Swipe between slides (outside the pair)
       var swX=0,swT=0,baWrap=document.querySelector('.ba-wrap');
-      baWrap.addEventListener('touchstart',function(e){if(e.target.closest('[data-ba]'))return;swX=e.touches[0].clientX;swT=Date.now()},{passive:true});
-      baWrap.addEventListener('touchend',function(e){if(e.target.closest('[data-ba]'))return;var dx=e.changedTouches[0].clientX-swX;if(Math.abs(dx)>50&&Date.now()-swT<400){if(dx<0)baGo(baIdx+1);else baGo(baIdx-1)}},{passive:true});
-    }catch(e){}
-  </script>
-</body>
-</html>
+      baWrap.addEventListener('touchstart',

@@ -1,10 +1,6 @@
 [build]
   publish = "."
 
-# Netlify pretty URLs are enabled by default
-# /portfolio serves portfolio.html automatically
-# /websites-for-contractors serves websites-for-contractors.html automatically
-
 [[headers]]
   for = "/*"
   [headers.values]
@@ -13,8 +9,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# Custom 404
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 404
+  status = 200
