@@ -78,6 +78,7 @@
     .mob-menu .mob-cta{font-size:0.82rem;background:var(--ac);color:var(--dk3);padding:0.75rem 2rem;border-radius:8px;margin-top:1.5rem;font-weight:600}
     nav.mob-open{background:transparent !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;box-shadow:none !important}
     nav.mob-open .nav-logo{opacity:0;transition:opacity 0.3s}
+    nav.mob-open .nav-logo{opacity:0;transition:opacity 0.3s}
     @media(max-width:768px){
       nav{padding:1rem 1.5rem;padding-top:calc(1rem + env(safe-area-inset-top,0px))}
       nav.s{padding:0.75rem 1.5rem;padding-top:calc(0.75rem + env(safe-area-inset-top,0px))}
@@ -101,7 +102,7 @@
     .hc{max-width:760px;position:relative;z-index:1}
     .hero-pill{display:inline-flex;align-items:center;gap:0.5rem;background:var(--bg);border:1px solid transparent;border-radius:100px;padding:0.4rem 1.15rem 0.4rem 0.55rem;font-size:0.72rem;font-weight:500;color:var(--tx2);margin-bottom:2.75rem;opacity:0;animation:fu 0.8s var(--e) 0.2s forwards;box-shadow:0 2px 10px rgba(15,23,42,0.05);background-image:linear-gradient(var(--bg),var(--bg)),linear-gradient(135deg,var(--ln),var(--ac3),var(--ln));background-origin:border-box;background-clip:padding-box,border-box}
     .hero-pill .dot{width:7px;height:7px;border-radius:50%;background:#22C55E;box-shadow:0 0 8px rgba(34,197,94,0.4);margin-left:0.25rem;flex-shrink:0;animation:pulse 2.5s ease-in-out infinite}
-    .hero h1{font-family:var(--fs);font-size:clamp(2.8rem,6vw,4.8rem);font-weight:700;line-height:1.06;letter-spacing:-0.03em;color:var(--dk);margin-bottom:1.75rem;opacity:0;animation:fu 0.8s var(--e) 0.35s forwards}
+    .hero h1{font-family:var(--fn);font-size:clamp(2.8rem,6vw,4.8rem);font-weight:800;line-height:1.06;letter-spacing:-0.04em;color:var(--dk);margin-bottom:1.75rem;opacity:0;animation:fu 0.8s var(--e) 0.35s forwards}
     .hero h1 .accent{color:var(--ac);background:linear-gradient(135deg,#E8C96A 0%,#C6A24A 40%,#D4B04E 60%,#E8C96A 100%);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradShift 4s ease-in-out infinite}
     @supports not (-webkit-background-clip:text){.hero h1 .accent{background:none;-webkit-text-fill-color:var(--ac);color:var(--ac)}}
     .h1-lg{font-size:1.1em}
@@ -109,14 +110,16 @@
     .hero-pills{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;opacity:0;animation:fu 0.8s var(--e) 0.58s forwards}
     .hp-tag{font-size:0.72rem;font-weight:600;color:var(--tx);padding:0.4rem 0.9rem;background:var(--bg2);border:1px solid var(--ln);border-radius:100px;letter-spacing:0.01em}
     .hp-sep{color:var(--ln);font-size:0.6rem;line-height:1}
-    .hero h1 br{display:none}
+    .hero h1 br{display:block}
     .hero-btns{display:flex;gap:0.85rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fu 0.8s var(--e) 0.65s forwards}
-    .btn-p{font-size:0.85rem;font-weight:600;color:#fff;background:var(--dk);padding:0.9rem 2.25rem;text-decoration:none;border-radius:10px;transition:all 0.3s var(--e);box-shadow:0 2px 8px rgba(15,23,42,0.1)}
-    .btn-p:hover{background:var(--dk2);transform:translateY(-2px);box-shadow:0 12px 35px rgba(15,23,42,0.2)}
-    .btn-s{font-size:0.85rem;font-weight:500;color:var(--tx);padding:0.9rem 2.25rem;text-decoration:none;border:1px solid var(--ln);border-radius:10px;transition:all 0.3s var(--e)}
-    .btn-s:hover{border-color:var(--tx3);background:var(--bg2);transform:translateY(-2px)}
-    .hero-trust{font-size:0.72rem;font-weight:400;color:var(--tx3);margin-top:2.5rem;opacity:0;animation:fu 0.8s var(--e) 0.8s forwards;text-wrap:balance}
-    @media(max-width:768px){.hero-trust{font-size:0.68rem;margin-top:1.75rem;text-align:center}}
+    .btn-p{font-size:0.85rem;font-weight:600;color:var(--dk);background:var(--bg);padding:0.9rem 2.25rem;text-decoration:none;border-radius:10px;transition:all 0.3s var(--e);box-shadow:0 2px 8px rgba(15,23,42,0.06);border:1px solid var(--ln)}
+    .btn-p:hover{background:var(--bg2);transform:translateY(-2px);box-shadow:0 12px 35px rgba(15,23,42,0.08)}
+    .btn-s{font-size:0.85rem;font-weight:600;color:#fff;background:var(--dk);padding:0.9rem 2.25rem;text-decoration:none;border:none;border-radius:10px;transition:all 0.3s var(--e);box-shadow:0 2px 8px rgba(15,23,42,0.1)}
+    .btn-s:hover{background:var(--dk2);transform:translateY(-2px);box-shadow:0 12px 35px rgba(15,23,42,0.2)}
+    .hero-trust{font-size:0.85rem;font-weight:500;color:var(--tx2);margin-top:2.75rem;opacity:0;animation:fu 0.8s var(--e) 0.8s forwards;text-wrap:balance;letter-spacing:0.02em}
+    .hero-trust span{color:var(--ac);font-weight:600;background:linear-gradient(135deg,#E8C96A 0%,#C6A24A 40%,#D4B04E 60%,#E8C96A 100%);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradShift 4s ease-in-out infinite}
+    @supports not (-webkit-background-clip:text){.hero-trust span{background:none;-webkit-text-fill-color:var(--ac);color:var(--ac)}}
+    @media(max-width:768px){.hero-trust{font-size:0.78rem;margin-top:2rem;text-align:center}}
     /* Floating mockup */
     .hero-mockup{display:none}
     @media(max-width:768px){
@@ -426,6 +429,7 @@
     .mob-menu .mob-cta{font-size:0.82rem;background:var(--ac);color:var(--dk3);padding:0.75rem 2rem;border-radius:8px;margin-top:1.5rem;font-weight:600}
     nav.mob-open{background:transparent !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;box-shadow:none !important}
     nav.mob-open .nav-logo{opacity:0;transition:opacity 0.3s}
+    nav.mob-open .nav-logo{opacity:0;transition:opacity 0.3s}
     @media(max-width:768px){
       nav{padding:1rem 1.5rem;padding-top:calc(1rem + env(safe-area-inset-top,0px))}
       nav.s{padding:0.75rem 1.5rem;padding-top:calc(0.75rem + env(safe-area-inset-top,0px))}
@@ -449,7 +453,7 @@
     .hc{max-width:760px;position:relative;z-index:1}
     .hero-pill{display:inline-flex;align-items:center;gap:0.5rem;background:var(--bg);border:1px solid transparent;border-radius:100px;padding:0.4rem 1.15rem 0.4rem 0.55rem;font-size:0.72rem;font-weight:500;color:var(--tx2);margin-bottom:2.75rem;opacity:0;animation:fu 0.8s var(--e) 0.2s forwards;box-shadow:0 2px 10px rgba(15,23,42,0.05);background-image:linear-gradient(var(--bg),var(--bg)),linear-gradient(135deg,var(--ln),var(--ac3),var(--ln));background-origin:border-box;background-clip:padding-box,border-box}
     .hero-pill .dot{width:7px;height:7px;border-radius:50%;background:#22C55E;box-shadow:0 0 8px rgba(34,197,94,0.4);margin-left:0.25rem;flex-shrink:0;animation:pulse 2.5s ease-in-out infinite}
-    .hero h1{font-family:var(--fs);font-size:clamp(2.8rem,6vw,4.8rem);font-weight:700;line-height:1.06;letter-spacing:-0.03em;color:var(--dk);margin-bottom:1.75rem;opacity:0;animation:fu 0.8s var(--e) 0.35s forwards}
+    .hero h1{font-family:var(--fn);font-size:clamp(2.8rem,6vw,4.8rem);font-weight:800;line-height:1.06;letter-spacing:-0.04em;color:var(--dk);margin-bottom:1.75rem;opacity:0;animation:fu 0.8s var(--e) 0.35s forwards}
     .hero h1 .accent{color:var(--ac);background:linear-gradient(135deg,#E8C96A 0%,#C6A24A 40%,#D4B04E 60%,#E8C96A 100%);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradShift 4s ease-in-out infinite}
     @supports not (-webkit-background-clip:text){.hero h1 .accent{background:none;-webkit-text-fill-color:var(--ac);color:var(--ac)}}
     .h1-lg{font-size:1.1em}
@@ -457,12 +461,12 @@
     .hero-pills{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;opacity:0;animation:fu 0.8s var(--e) 0.58s forwards}
     .hp-tag{font-size:0.72rem;font-weight:600;color:var(--tx);padding:0.4rem 0.9rem;background:var(--bg2);border:1px solid var(--ln);border-radius:100px;letter-spacing:0.01em}
     .hp-sep{color:var(--ln);font-size:0.6rem;line-height:1}
-    .hero h1 br{display:none}
+    .hero h1 br{display:block}
     .hero-btns{display:flex;gap:0.85rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fu 0.8s var(--e) 0.65s forwards}
-    .btn-p{font-size:0.85rem;font-weight:600;color:#fff;background:var(--dk);padding:0.9rem 2.25rem;text-decoration:none;border-radius:10px;transition:all 0.3s var(--e);box-shadow:0 2px 8px rgba(15,23,42,0.1)}
-    .btn-p:hover{background:var(--dk2);transform:translateY(-2px);box-shadow:0 12px 35px rgba(15,23,42,0.2)}
-    .btn-s{font-size:0.85rem;font-weight:500;color:var(--tx);padding:0.9rem 2.25rem;text-decoration:none;border:1px solid var(--ln);border-radius:10px;transition:all 0.3s var(--e)}
-    .btn-s:hover{border-color:var(--tx3);background:var(--bg2);transform:translateY(-2px)}
+    .btn-p{font-size:0.85rem;font-weight:600;color:var(--dk);background:var(--bg);padding:0.9rem 2.25rem;text-decoration:none;border-radius:10px;transition:all 0.3s var(--e);box-shadow:0 2px 8px rgba(15,23,42,0.06);border:1px solid var(--ln)}
+    .btn-p:hover{background:var(--bg2);transform:translateY(-2px);box-shadow:0 12px 35px rgba(15,23,42,0.08)}
+    .btn-s{font-size:0.85rem;font-weight:600;color:#fff;background:var(--dk);padding:0.9rem 2.25rem;text-decoration:none;border:none;border-radius:10px;transition:all 0.3s var(--e);box-shadow:0 2px 8px rgba(15,23,42,0.1)}
+    .btn-s:hover{background:var(--dk2);transform:translateY(-2px);box-shadow:0 12px 35px rgba(15,23,42,0.2)}
     /* Floating mockup */
     .hero-mockup{display:none}
     @media(max-width:768px){
@@ -769,6 +773,8 @@
 
     .gold-div{height:1px;background:linear-gradient(90deg,transparent 10%,rgba(198,162,74,0.25) 50%,transparent 90%);border:none;margin:0}
     @media(max-width:768px){.foot-nav-wrap{grid-template-columns:repeat(2,1fr) !important;gap:0.75rem 1.25rem}}
+    .gold-div{height:1px;background:linear-gradient(90deg,transparent 10%,rgba(198,162,74,0.25) 50%,transparent 90%);border:none;margin:0}
+    @media(max-width:768px){#process{padding-top:3rem;padding-bottom:3rem}#faq{padding-top:3rem;padding-bottom:3rem}}
     /* ANIM */
     @keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
@@ -810,25 +816,28 @@
     <div class="hero-fade"></div>
     <div class="hc">
       <div class="hero-pill"><span class="dot"></span> Now booking new projects</div>
-      <h1>The first impression.<br/> <span class="h1-lg">Make your business look <span class="accent">more established.</span></span></h1>
+      <h1><span style="display:block;margin-bottom:0.25em;font-style:italic;font-size:1.1em">The first impression.</span>Make your business<br/><span class="accent">look more established.</span></h1>
       <p class="hero-sub">Premium websites and conversion systems for businesses that want to build trust, respond faster, and earn more.</p>
       <div class="hero-pills"><span class="hp-tag">Fast turnaround</span><span class="hp-sep">&middot;</span><span class="hp-tag">Mobile first</span><span class="hp-sep">&middot;</span><span class="hp-tag">Built to convert</span></div>
       <div class="hero-btns">
         <a href="#contact" class="btn-p">Get a Free Website Review</a>
         <a href="/pricing" class="btn-s">See Pricing</a>
       </div>
-      <p class="hero-trust">Built for service businesses, local brands, and operators who know first impressions matter.</p>
+      <p class="hero-trust">Built for <span>service businesses</span>, <span>local brands</span>, and <span>operators</span> who know first impressions matter.</p>
     </div>
   </section>
 
 
 
   <hr class="gold-div" />
+  <hr class="gold-div" />
   <!-- PROBLEM FRAMING -->
   <section class="sec" style="padding:4rem 3rem">
     <div style="max-width:640px;margin:0 auto">
       <h2 class="stl r" style="text-align:center;margin-bottom:1.5rem">Most businesses do not have a lead problem. They have a trust problem.</h2>
-      <p class="r" style="font-size:0.95rem;color:var(--tx2);line-height:1.8;text-align:center">Prospects check your website before they call. If it looks dated or generic, they move on. The gap between your real reputation and your web presence is costing you business every week. We fix that.</p>
+      <p class="r" style="font-size:0.95rem;color:var(--tx2);line-height:1.8;text-align:center;margin-bottom:0.75rem">Prospects check your website before they call. If it looks dated or generic, they move on. The gap between your real reputation and your web presence is costing you business every week.</p>
+      <p class="r" style="font-family:var(--fn);font-size:1.1rem;font-weight:800;color:var(--dk);text-align:center;letter-spacing:-0.03em;margin-top:0.5rem">We fix that.</p>
+
     </div>
   </section>
 
@@ -880,6 +889,7 @@
     </div>
   </section>
 
+  <hr class="gold-div" />
   <hr class="gold-div" />
   <section class="sec sec-dk" id="services">
     <div class="wrap">
@@ -1013,6 +1023,7 @@
 
 
   <hr class="gold-div" />
+  <hr class="gold-div" />
   <section class="sec" id="contact">
     <div class="wrap">
       <div class="contact-grid">
@@ -1047,10 +1058,7 @@
             <div class="fg"><label for="website">Current Website (if you have one)</label><input type="text" id="website" name="website" placeholder="https://yoursite.com" /></div>
             <div class="fg"><label for="service">What do you need help with?</label><select id="service" name="service" required><option value="" disabled selected>Select a service</option><option value="website">Website</option><option value="conversion">Lead Conversion System</option><option value="full-build">Website + Lead Conversion</option><option value="site-care">Site Care</option><option value="not-sure">Not sure yet, just want to talk</option></select></div>
              <div class="fg"><label for="details">Anything else we should know?</label><textarea id="details" name="details" placeholder="Tell us about your business and what you are hoping to fix or improve."></textarea></div>
-            <div style="margin-top:0.15rem;margin-bottom:0.75rem">
-              <label style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.58rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--tx3);line-height:1.45;cursor:pointer"><input type="checkbox" name="sms-consent" style="margin-top:3px;flex-shrink:0" /> I agree to receive text messages from True Margin North, LLC regarding my inquiry, including appointment confirmations and follow-up communications. Message frequency varies. Message and data rates may apply. Reply STOP to cancel, HELP for help.</label>
-              <div style="display:flex;gap:0.75rem;margin-top:0.4rem;padding-left:1.25rem"><a href="/privacy" style="font-size:0.6rem;font-weight:500;color:var(--tx3);text-decoration:none">Privacy Policy</a><a href="/terms" style="font-size:0.6rem;font-weight:500;color:var(--tx3);text-decoration:none">Terms of Service</a></div>
-            </div>
+            <div style="margin-top:0.15rem;margin-bottom:0.75rem"><label style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.58rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--tx3);line-height:1.45;cursor:pointer"><input type="checkbox" name="sms-consent" style="margin-top:3px;flex-shrink:0" /> I agree to receive text messages from True Margin North, LLC regarding my inquiry, including appointment confirmations and follow-up communications. Message frequency varies. Message and data rates may apply. Reply STOP to cancel, HELP for help.</label><div style="display:flex;gap:0.75rem;margin-top:0.4rem;padding-left:1.25rem"><a href="/privacy" style="font-size:0.6rem;font-weight:500;color:var(--tx3);text-decoration:none">Privacy Policy</a><a href="/terms" style="font-size:0.6rem;font-weight:500;color:var(--tx3);text-decoration:none">Terms of Service</a></div></div>
             <button type="submit" class="form-sub">Get a Free Website Review</button>
           </form>
         </div>
