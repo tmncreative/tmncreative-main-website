@@ -132,6 +132,30 @@
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.35}}
     @keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
   </style>
+  <script async src="https://plausible.io/js/pa-qenXucgzJOGY_zAczSQ6m.js"></script>
+  <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+  <!-- Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18041747908"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18041747908');
+  </script>
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1488960412756574');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1488960412756574&ev=PageView&noscript=1"/></noscript>
 </head>
 <body>
 
@@ -181,7 +205,7 @@
           <div class="msg-icon">&#128274;</div>
           <h3>No invoices found</h3>
           <p>We could not find any invoices for that email. Make sure you are using the address your invoice was sent to, or reach out directly.</p>
-          <a href="/cdn-cgi/l/email-protection#bed6dbd2d2d1fecad3d0ddccdbdfcad7c8db90ddd1d3"><span class="__cf_email__" data-cfemail="c9a1aca5a5a689bda4a7aabbaca8bda0bface7aaa6a4">[email&#160;protected]</span></a>
+          <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a>
         </div>
       </div>
 
@@ -190,7 +214,7 @@
           <div class="msg-icon">&#9888;&#65039;</div>
           <h3>Something went wrong</h3>
           <p id="error-text">Could not retrieve invoices. Please try again or contact us directly.</p>
-          <a href="/cdn-cgi/l/email-protection#a2cac7cececde2d6cfccc1d0c7c3d6cbd4c78cc1cdcf"><span class="__cf_email__" data-cfemail="abc3cec7c7c4ebdfc6c5c8d9cecadfc2ddce85c8c4c6">[email&#160;protected]</span></a>
+          <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a>
         </div>
       </div>
 
@@ -241,11 +265,11 @@
   </div>
 
   <footer>
-    <div class="fl">TMN Creative &nbsp;&middot;&nbsp; <a href="/cdn-cgi/l/email-protection#1179747d7d7e51657c7f72637470657867743f727e7c"><span class="__cf_email__" data-cfemail="fc9499909093bc8891929f8e999d88958a99d29f9391">[email&#160;protected]</span></a></div>
+    <div class="fl">TMN Creative &nbsp;&middot;&nbsp; <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></div>
     <div class="fr">&copy; 2026 True Margin North LLC &middot; <a href="https://truemarginnorth.com" target="_blank" rel="noopener">truemarginnorth.com</a></div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     function hideAll(){document.querySelectorAll('.state').forEach(function(el){el.classList.remove('show')})}
     function show(id){var el=document.getElementById(id);if(el)el.classList.add('show')}
 
@@ -285,4 +309,15 @@
         else if(isPaid)html+='<span class="paid-note">No balance due</span>';
         html+='</div></div></div>';
       });
- 
+       document.getElementById('results').innerHTML=html;
+    }
+
+    function e(s){if(!s)return '';var d=document.createElement('div');d.textContent=s;return d.innerHTML}
+    function fmtDate(iso){if(!iso)return '';var parts=iso.split('-');return parts[1]+'/'+parts[2]+'/'+parts[0]}
+
+    // Wire up button and enter key
+    document.getElementById('lookup-btn').addEventListener('click',lookupInvoices);
+    document.getElementById('email-input').addEventListener('keydown',function(ev){if(ev.key==='Enter'){ev.preventDefault();lookupInvoices()}});
+  </script>
+</body>
+</html>
