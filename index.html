@@ -804,7 +804,7 @@
   fbq('init', '1488960412756574');
   fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1488960412756574&ev=PageView&noscript=1"/></noscript>
   <!-- End Meta Pixel Code -->
 
   <!-- Google tag (gtag.js) -->
@@ -1184,4 +1184,20 @@
       var darkSections=document.querySelectorAll('.stats,.port-sec,.sec-dk,.cta');
       function updateNavColor(){
         if(nav.classList.contains('mob-open'))return;
-        var navH=n
+        var navH=nav.offsetHeight;
+        var isDark = false;
+        darkSections.forEach(function(sec) {
+            var r = sec.getBoundingClientRect();
+            if (r.top < navH && r.bottom > 0)
+                isDark = true;
+        });
+        nav.classList.toggle('dark', isDark);
+    }
+    window.addEventListener('scroll', updateNavColor, {
+        passive: true
+    });
+    updateNavColor();
+} catch (e) {}
+</script>
+</body>
+</html>
