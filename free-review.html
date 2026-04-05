@@ -130,7 +130,7 @@
     .cta-btn:hover{transform:translateY(-3px);box-shadow:0 14px 45px rgba(198,162,74,0.4)}
 
     /* ── FOOTER ── */
-    footer{padding:1.25rem 1.5rem;text-align:center;font-size:0.58rem;color:rgba(255,255,255,0.15);background:var(--dk3);border-top:1px solid rgba(255,255,255,0.03)}
+    footer{padding:1.25rem 1.5rem;padding-bottom:calc(1.25rem + env(safe-area-inset-bottom,0px));text-align:center;font-size:0.58rem;color:rgba(255,255,255,0.15);background:var(--dk3);border-top:1px solid rgba(255,255,255,0.03)}
     footer a{color:var(--ac);text-decoration:none;opacity:0.5}
     footer a:hover{opacity:1}
 
@@ -218,7 +218,7 @@
     <p>We review your site before we respond. Most people hear back the same day.</p>
   </div>
   <div class="form-card">
-    <form action="/success" method="POST" name="tmn-meta-intake">
+    <form action="/success" method="POST" name="tmn-meta-intake" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="tmn-meta-intake" />
       <p class="hidden"><label>Ignore:<input name="bot-field" /></label></p>
       <div class="form-row">
