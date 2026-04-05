@@ -134,7 +134,6 @@
   </style>
   <script async src="https://plausible.io/js/pa-qenXucgzJOGY_zAczSQ6m.js"></script>
   <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
-  <!-- Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18041747908"></script>
   <script>
   window.dataLayer = window.dataLayer || [];
@@ -142,7 +141,6 @@
   gtag('js', new Date());
   gtag('config', 'AW-18041747908');
   </script>
-  <!-- Meta Pixel -->
   <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -309,13 +307,12 @@
         else if(isPaid)html+='<span class="paid-note">No balance due</span>';
         html+='</div></div></div>';
       });
-       document.getElementById('results').innerHTML=html;
+       document.getElementById('inv-list').innerHTML=html;
     }
 
     function e(s){if(!s)return '';var d=document.createElement('div');d.textContent=s;return d.innerHTML}
     function fmtDate(iso){if(!iso)return '';var parts=iso.split('-');return parts[1]+'/'+parts[2]+'/'+parts[0]}
 
-    // Wire up button and enter key
     document.getElementById('lookup-btn').addEventListener('click',lookupInvoices);
     document.getElementById('email-input').addEventListener('keydown',function(ev){if(ev.key==='Enter'){ev.preventDefault();lookupInvoices()}});
   </script>
