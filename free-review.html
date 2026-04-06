@@ -24,128 +24,104 @@
     /* ── DARK HERO WRAP ── */
     .hero-wrap{background:var(--dk3);position:relative;overflow:hidden}
     .hero-wrap::before{content:'';position:absolute;top:-50%;left:-30%;width:160%;height:200%;background:radial-gradient(ellipse 45% 45% at 50% 25%,rgba(198,162,74,0.06) 0%,transparent 70%);pointer-events:none}
-    .hero-wrap::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 10%,rgba(198,162,74,0.35) 50%,transparent 90%)}
 
     /* ── TOP BAR ── */
-    .top-bar{padding:0.85rem 1.5rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
-    .top-bar img{height:40px;opacity:0.9;mix-blend-mode:lighten}
-    .top-bar-right{display:flex;align-items:center;gap:1.25rem}
-    .top-bar-phone{font-size:0.68rem;font-weight:600;color:var(--ac);display:inline-flex;align-items:center;gap:0.3rem;opacity:0.7;transition:opacity 0.2s}
-    .top-bar-phone:hover{opacity:1}
-    .top-bar-phone svg{width:12px;height:12px;stroke:var(--ac);stroke-width:2;fill:none}
-    .top-bar-rating{font-size:0.6rem;font-weight:600;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:0.3rem}
-    .top-bar-rating span{color:var(--ac);font-size:0.7rem}
+    .top-bar{padding:0.75rem 1.5rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
+    .top-bar img{height:34px;opacity:0.9;mix-blend-mode:lighten}
+    .top-bar-right{display:flex;align-items:center;gap:0.3rem;font-size:0.58rem;font-weight:600;color:rgba(255,255,255,0.3)}
+    .top-bar-right span{color:var(--ac);font-size:0.65rem}
 
     /* ── HERO ── */
-    .hero{padding:2.25rem 1.5rem 1.5rem;text-align:center;position:relative;z-index:2}
-    .hero-badge{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.55rem;font-weight:700;text-transform:uppercase;letter-spacing:0.13em;color:var(--ac);background:rgba(198,162,74,0.08);border:1px solid rgba(198,162,74,0.12);padding:0.4rem 1rem;border-radius:100px;margin-bottom:1.5rem}
-    .hero-badge .pulse{width:6px;height:6px;border-radius:50%;background:var(--ac);animation:pulse 2s ease-in-out infinite}
-    .hero h1{font-family:var(--fs);font-size:clamp(1.75rem,6vw,2.6rem);font-weight:800;color:#fff;letter-spacing:-0.04em;line-height:1.06;margin-bottom:1.15rem}
-    .hero h1 span{color:var(--ac)}
-    .hero-sub{font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.75;max-width:420px;margin:0 auto}
-    .hero-sub strong{color:rgba(255,255,255,0.7);font-weight:600}
+    .hero{padding:1.5rem 1.5rem 0;text-align:center;position:relative;z-index:2}
+    .hero h1{font-family:var(--fs);font-size:clamp(1.6rem,5.5vw,2.3rem);font-weight:800;color:#fff;letter-spacing:-0.04em;line-height:1.08;margin-bottom:0.75rem}
+    .hero h1 em{font-style:normal;color:var(--ac)}
+    .hero-sub{font-size:0.78rem;color:rgba(255,255,255,0.4);line-height:1.7;max-width:380px;margin:0 auto}
 
-    /* ── HERO ACTIONS ── */
-    .hero-actions{display:flex;flex-direction:column;align-items:center;gap:0.6rem;margin-top:2rem}
-    .hero-book{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;font-family:var(--fn);font-size:0.84rem;font-weight:700;color:var(--dk3);background:var(--acG);padding:1rem 2rem;border-radius:10px;text-decoration:none;box-shadow:0 4px 24px rgba(198,162,74,0.35),0 0 0 1px rgba(198,162,74,0.1);transition:all 0.35s var(--e);width:100%;max-width:300px;text-align:center;position:relative;overflow:hidden}
-    .hero-book::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);animation:shimmer 5s ease-in-out infinite 1.5s}
-    .hero-book:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(198,162,74,0.45)}
-    .hero-book svg{width:15px;height:15px;stroke:var(--dk3);stroke-width:2.5;fill:none;flex-shrink:0}
-    .hero-or{font-size:0.58rem;font-weight:700;color:rgba(255,255,255,0.15);text-transform:uppercase;letter-spacing:0.15em;display:flex;align-items:center;gap:0.6rem;width:100%;max-width:300px}
-    .hero-or::before,.hero-or::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.06)}
-    .hero-form-link{font-size:0.72rem;font-weight:600;color:rgba(255,255,255,0.35);cursor:pointer;transition:color 0.2s;border-bottom:1px dashed rgba(255,255,255,0.15);padding-bottom:1px}
-    .hero-form-link:hover{color:var(--ac);border-color:var(--ac)}
+    /* ── HERO QUOTE ── */
+    .hero-quote{max-width:400px;margin:1.25rem auto 0;padding:0.75rem 1rem;background:rgba(198,162,74,0.06);border:1px solid rgba(198,162,74,0.1);border-radius:10px;display:flex;align-items:center;gap:0.6rem}
+    .hero-quote-stars{color:var(--ac);font-size:0.6rem;letter-spacing:1px;flex-shrink:0;line-height:1}
+    .hero-quote-text{font-size:0.65rem;color:rgba(255,255,255,0.5);line-height:1.5;text-align:left}
+    .hero-quote-text strong{color:rgba(255,255,255,0.7);font-weight:600}
 
     /* ── TRUST STRIP ── */
-    .trust{display:flex;justify-content:center;gap:1.75rem;flex-wrap:wrap;padding:1.25rem 1.5rem 2.25rem;position:relative;z-index:2}
-    .trust-item{display:flex;align-items:center;gap:0.3rem;font-size:0.62rem;font-weight:500;color:rgba(255,255,255,0.25);letter-spacing:0.02em}
-    .trust-dot{width:4px;height:4px;border-radius:50%;background:var(--ac);flex-shrink:0;opacity:0.6}
+    .trust{display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;padding:1.25rem 1.5rem 1.75rem;position:relative;z-index:2}
+    .trust-item{font-size:0.58rem;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:0.02em;display:flex;align-items:center;gap:0.3rem}
+    .trust-dot{width:4px;height:4px;border-radius:50%;background:var(--ac);opacity:0.5;flex-shrink:0}
 
     /* ── FORM SECTION ── */
-    .form-section{padding:3rem 1.5rem 2rem;position:relative}
+    .form-section{padding:1.75rem 1.5rem 2rem;position:relative;background:var(--bg)}
     .form-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:48px;height:3px;background:var(--acG);border-radius:2px;opacity:0.7}
-    .form-label{text-align:center;margin-bottom:1.5rem}
-    .form-label h2{font-family:var(--fn);font-size:1.2rem;font-weight:800;color:var(--dk);letter-spacing:-0.03em;margin-bottom:0.35rem}
-    .form-label p{font-size:0.73rem;color:var(--tx3)}
-    .form-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:1.75rem;box-shadow:0 12px 40px rgba(15,23,42,0.06),0 1px 3px rgba(15,23,42,0.03);max-width:500px;margin:0 auto}
-    .fg{margin-bottom:0.7rem}
-    .fg label{display:block;font-size:0.56rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--tx2);margin-bottom:0.28rem}
-    .fg input,.fg select,.fg textarea{width:100%;padding:0.8rem 0.9rem;font-family:var(--fn);font-size:16px;color:var(--dk);background:var(--bg2);border:1px solid var(--ln);border-radius:10px;outline:none;transition:all 0.25s var(--e)}
+    .form-label{text-align:center;margin-bottom:1rem}
+    .form-label h2{font-family:var(--fn);font-size:1.1rem;font-weight:800;color:var(--dk);letter-spacing:-0.03em;margin-bottom:0.2rem}
+    .form-label p{font-size:0.7rem;color:var(--tx3)}
+    .form-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:1.35rem;box-shadow:0 12px 40px rgba(15,23,42,0.06),0 1px 3px rgba(15,23,42,0.03);max-width:440px;margin:0 auto}
+    .fg{margin-bottom:0.6rem}
+    .fg label{display:block;font-size:0.56rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--tx2);margin-bottom:0.22rem}
+    .fg input,.fg select,.fg textarea{width:100%;padding:0.75rem 0.85rem;font-family:var(--fn);font-size:16px;color:var(--dk);background:var(--bg2);border:1px solid var(--ln);border-radius:10px;outline:none;transition:all 0.25s var(--e)}
     .fg input::placeholder,.fg textarea::placeholder{color:var(--tx3)}
     .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--ac);background:#fff;box-shadow:0 0 0 4px var(--ac3)}
-    .fg select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%2394A3B8' stroke-width='1.2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0.8rem center}
-    .fg textarea{min-height:55px;resize:vertical}
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem}
+    .fg textarea{min-height:52px;resize:vertical}
     .hidden{display:none}
-    .form-sub{width:100%;font-family:var(--fn);font-size:0.84rem;font-weight:700;color:#fff;background:var(--dk);border:none;padding:1rem;cursor:pointer;border-radius:10px;transition:all 0.3s var(--e);margin-top:0.4rem;box-shadow:0 2px 10px rgba(15,23,42,0.12);position:relative;overflow:hidden}
-    .form-sub::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.06),transparent);transition:left 0.5s}
-    .form-sub:hover{background:var(--dk2);transform:translateY(-2px);box-shadow:0 14px 40px rgba(15,23,42,0.2)}
-    .form-sub:hover::after{left:100%}
-    .form-note{text-align:center;font-size:0.58rem;color:var(--tx3);margin-top:0.7rem;line-height:1.5}
-    .consent-label{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.58rem;font-weight:400;color:var(--tx3);line-height:1.5;cursor:pointer;margin-top:0.5rem;margin-bottom:0.5rem}
-    .consent-label input{margin-top:3px;flex-shrink:0;accent-color:var(--ac)}
-    .consent-label a{color:var(--ac)}
-    @media(max-width:600px){.form-row{grid-template-columns:1fr;gap:0}}
+    .form-sub{width:100%;font-family:var(--fn);font-size:0.9rem;font-weight:700;color:var(--dk3);background:var(--acG);border:none;padding:1.05rem;cursor:pointer;border-radius:10px;transition:all 0.3s var(--e);margin-top:0.25rem;box-shadow:0 4px 20px rgba(198,162,74,0.3),0 0 0 1px rgba(198,162,74,0.1);position:relative;overflow:hidden;letter-spacing:-0.01em}
+    .form-sub::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);animation:shimmer 5s ease-in-out infinite 1.5s}
+    .form-sub:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(198,162,74,0.4)}
+    .form-sub:active{transform:translateY(0)}
+    .form-micro{text-align:center;font-size:0.58rem;color:var(--tx3);margin-top:0.5rem;line-height:1.5}
+    .form-micro svg{width:10px;height:10px;vertical-align:-1px;stroke:var(--tx3);stroke-width:2;fill:none;margin-right:2px}
 
-    /* ── EXPLORE LINKS ── */
-    .explore{display:flex;justify-content:center;align-items:center;gap:0.75rem;padding:2rem 1.5rem 0.5rem}
-    .explore a{font-size:0.75rem;font-weight:700;color:var(--ac);padding:0.55rem 1.1rem;border-radius:8px;transition:all 0.25s var(--e);border:1px solid rgba(198,162,74,0.25);background:var(--ac3)}
-    .explore a:hover{background:rgba(198,162,74,0.12);border-color:var(--ac);transform:translateY(-1px);box-shadow:0 4px 12px rgba(198,162,74,0.1)}
-    .explore .sep{width:3px;height:3px;border-radius:50%;background:var(--ac);opacity:0.4}
+    /* ── VALUE PROPS (compact) ── */
+    .value-strip{max-width:440px;margin:1.5rem auto 0;display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
+    .value-card{padding:0.85rem 0.75rem;background:var(--bg2);border:1px solid rgba(226,232,240,0.6);border-radius:10px;text-align:center}
+    .value-card .vc-icon{font-size:1rem;margin-bottom:0.3rem}
+    .value-card h3{font-size:0.7rem;font-weight:700;color:var(--dk);line-height:1.3;margin-bottom:0.15rem}
+    .value-card p{font-size:0.6rem;color:var(--tx2);line-height:1.45}
 
-    /* ── SOCIAL PROOF ── */
-    .proof{padding:2rem 1.5rem 1.5rem;max-width:500px;margin:0 auto}
-    .proof-header{text-align:center;margin-bottom:1.25rem}
-    .proof-stars{color:var(--ac);font-size:1rem;letter-spacing:2px;margin-bottom:0.2rem}
-    .proof-label{font-size:0.66rem;font-weight:600;color:var(--tx3)}
-    .proof-label a{color:var(--ac);text-decoration:none;border-bottom:1px solid rgba(198,162,74,0.25);transition:border-color 0.2s}
-    .proof-label a:hover{border-color:var(--ac)}
-    .test-card{background:var(--bg2);border:1px solid rgba(226,232,240,0.6);border-radius:14px;padding:1.2rem 1.3rem;margin-bottom:0.6rem;transition:all 0.3s var(--e)}
-    .test-card:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(15,23,42,0.06);border-color:rgba(198,162,74,0.15)}
-    .test-stars{color:var(--ac);font-size:0.6rem;letter-spacing:1px;margin-bottom:0.4rem}
-    .test-quote{font-size:0.78rem;color:var(--tx);line-height:1.7;margin-bottom:0.55rem}
-    .test-author{display:flex;align-items:baseline;gap:0.4rem;flex-wrap:wrap}
-    .test-name{font-size:0.7rem;font-weight:700;color:var(--dk)}
-    .test-role{font-size:0.6rem;font-weight:400;color:var(--tx3)}
-
-    /* ── WHAT YOU GET ── */
-    .what-section{padding:2.5rem 1.5rem 1.5rem;max-width:500px;margin:0 auto}
-    .what-header{font-family:var(--fs);font-size:1.1rem;font-weight:700;color:var(--dk);text-align:center;margin-bottom:1.5rem;letter-spacing:-0.02em}
-    .what-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
-    .what-card{padding:1.15rem;border:1px solid var(--ln);border-radius:12px;transition:all 0.3s var(--e);background:var(--bg)}
-    .what-card:hover{border-color:rgba(198,162,74,0.2);box-shadow:0 4px 16px rgba(15,23,42,0.04)}
-    .what-card .icon{font-size:1.2rem;margin-bottom:0.6rem}
-    .what-card h3{font-size:0.76rem;font-weight:700;color:var(--dk);margin-bottom:0.25rem;line-height:1.3}
-    .what-card p{font-size:0.68rem;color:var(--tx2);line-height:1.55}
-    @media(max-width:400px){.what-grid{grid-template-columns:1fr}}
+    /* ── TESTIMONIALS ── */
+    .proof{max-width:440px;margin:0 auto;padding:1.75rem 1.5rem 1rem}
+    .proof-header{text-align:center;margin-bottom:1rem}
+    .proof-stars{color:var(--ac);font-size:0.9rem;letter-spacing:2px;margin-bottom:0.15rem}
+    .proof-label{font-size:0.62rem;font-weight:600;color:var(--tx3)}
+    .proof-label a{color:var(--ac);border-bottom:1px solid rgba(198,162,74,0.25);text-decoration:none}
+    .test-card{display:flex;align-items:flex-start;gap:0.6rem;padding:0.8rem 0.9rem;background:var(--bg2);border:1px solid rgba(226,232,240,0.6);border-radius:12px;margin-bottom:0.45rem}
+    .test-card .tc-init{width:26px;height:26px;border-radius:50%;background:var(--ac3);border:1px solid rgba(198,162,74,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.55rem;font-weight:800;color:var(--ac)}
+    .test-card .tc-body{flex:1}
+    .test-card .tc-quote{font-size:0.7rem;color:var(--tx);line-height:1.6;margin-bottom:0.15rem}
+    .test-card .tc-attr{font-size:0.55rem;color:var(--tx3);font-weight:500}
 
     /* ── BOTTOM CTA ── */
-    .bottom-cta{text-align:center;padding:2.5rem 1.5rem 3rem;background:var(--dk3);position:relative;overflow:hidden}
+    .bottom-cta{text-align:center;padding:2rem 1.5rem 2.5rem;background:var(--dk3);position:relative;overflow:hidden}
     .bottom-cta::before{content:'';position:absolute;top:-60%;left:-30%;width:160%;height:220%;background:radial-gradient(ellipse 40% 40% at 50% 80%,rgba(198,162,74,0.05) 0%,transparent 70%);pointer-events:none}
-    .bottom-cta p{font-size:0.72rem;color:rgba(255,255,255,0.3);margin-bottom:0.6rem;position:relative}
-    .bottom-cta .tagline{font-family:var(--fs);font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:1.5rem;position:relative;letter-spacing:-0.02em}
-    .bottom-cta .tagline span{color:var(--ac)}
-    .cta-btn{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--fn);font-size:0.82rem;font-weight:700;color:var(--dk3);background:var(--acG);padding:0.95rem 2.25rem;border-radius:10px;box-shadow:0 4px 20px rgba(198,162,74,0.3);transition:all 0.35s var(--e);position:relative;overflow:hidden}
-    .cta-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);animation:shimmer 5s ease-in-out infinite 2s}
-    .cta-btn:hover{transform:translateY(-3px);box-shadow:0 14px 45px rgba(198,162,74,0.4)}
+    .bottom-cta p{font-size:0.7rem;color:rgba(255,255,255,0.3);margin-bottom:0.4rem;position:relative}
+    .bottom-cta .tagline{font-family:var(--fs);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:1rem;position:relative;letter-spacing:-0.02em}
+    .bottom-cta .tagline em{font-style:normal;color:var(--ac)}
+    .cta-btn-scroll{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--fn);font-size:0.82rem;font-weight:700;color:var(--dk3);background:var(--acG);padding:0.9rem 2rem;border-radius:10px;box-shadow:0 4px 20px rgba(198,162,74,0.3);transition:all 0.35s var(--e);position:relative;overflow:hidden;cursor:pointer;border:none}
+    .cta-btn-scroll::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);animation:shimmer 5s ease-in-out infinite 2s}
+    .cta-btn-scroll:hover{transform:translateY(-3px);box-shadow:0 14px 45px rgba(198,162,74,0.4)}
+    .cta-btn-scroll svg{width:14px;height:14px;stroke:var(--dk3);stroke-width:2.5;fill:none}
+
+    /* ── STICKY MOBILE CTA ── */
+    .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:100;padding:0.65rem 1rem;padding-bottom:calc(0.65rem + env(safe-area-inset-bottom,0px));background:rgba(11,17,32,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(198,162,74,0.15);transform:translateY(100%);transition:transform 0.4s var(--e);display:flex;align-items:center;justify-content:center;gap:0.6rem}
+    .sticky-cta.show{transform:translateY(0)}
+    .sticky-cta-btn{font-family:var(--fn);font-size:0.8rem;font-weight:700;color:var(--dk3);background:var(--acG);border:none;padding:0.75rem 1.5rem;border-radius:9px;cursor:pointer;box-shadow:0 2px 12px rgba(198,162,74,0.3);flex:1;max-width:320px}
+    .sticky-cta-text{font-size:0.58rem;color:rgba(255,255,255,0.35);font-weight:500;display:none}
+    @media(min-width:380px){.sticky-cta-text{display:block;flex-shrink:0}}
 
     /* ── FOOTER ── */
-    footer{padding:1.25rem 1.5rem;padding-bottom:calc(1.25rem + env(safe-area-inset-bottom,0px));text-align:center;font-size:0.58rem;color:rgba(255,255,255,0.15);background:var(--dk3);border-top:1px solid rgba(255,255,255,0.03)}
+    footer{padding:1rem 1.5rem 1.25rem;padding-bottom:calc(4.5rem + env(safe-area-inset-bottom,0px));text-align:center;font-size:0.56rem;color:rgba(255,255,255,0.15);background:var(--dk3);border-top:1px solid rgba(255,255,255,0.03)}
     footer a{color:var(--ac);text-decoration:none;opacity:0.5}
     footer a:hover{opacity:1}
 
     /* ── ANIMATIONS ── */
-    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.35}}
     @keyframes shimmer{0%,75%,100%{left:-100%}25%{left:100%}}
-    .hero-badge{opacity:0;animation:fadeUp 0.7s var(--e) 0.1s forwards}
-    .hero h1{opacity:0;animation:fadeUp 0.7s var(--e) 0.2s forwards}
-    .hero-sub{opacity:0;animation:fadeUp 0.7s var(--e) 0.35s forwards}
-    .hero-actions{opacity:0;animation:fadeUp 0.7s var(--e) 0.5s forwards}
-    .trust{opacity:0;animation:fadeUp 0.6s var(--e) 0.65s forwards}
-    .r{opacity:0;transform:translateY(20px);transition:opacity 0.7s var(--e),transform 0.7s var(--e)}
+    .hero h1{opacity:0;animation:fadeUp 0.6s var(--e) 0.1s forwards}
+    .hero-sub{opacity:0;animation:fadeUp 0.6s var(--e) 0.25s forwards}
+    .hero-quote{opacity:0;animation:fadeUp 0.6s var(--e) 0.4s forwards}
+    .trust{opacity:0;animation:fadeUp 0.5s var(--e) 0.55s forwards}
+    .r{opacity:0;transform:translateY(18px);transition:opacity 0.6s var(--e),transform 0.6s var(--e)}
     .r.v{opacity:1;transform:translateY(0)}
-    @media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms !important;transition-duration:0.01ms !important}.r{opacity:1;transform:none}.hero-badge,.hero h1,.hero-sub,.hero-actions,.trust{opacity:1;animation:none}}
+    @media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms !important;transition-duration:0.01ms !important}.r{opacity:1;transform:none}.hero h1,.hero-sub,.hero-quote,.trust{opacity:1;animation:none}}
   </style>
 
   <!-- Plausible Analytics -->
@@ -187,31 +163,22 @@
 <div class="hero-wrap">
   <div class="top-bar">
     <a href="/"><img src="images/logo-dark.png" alt="TMN Creative" /></a>
-    <div class="top-bar-right">
-      <div class="top-bar-rating"><span>&#9733;</span> 5.0 Google</div>
-      <a href="tel:6822313202" class="top-bar-phone">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        (682) 231-3202
-      </a>
-    </div>
+    <div class="top-bar-right"><span>&#9733;</span> 5.0 on Google</div>
   </div>
 
   <div class="hero">
-    <div class="hero-badge"><div class="pulse"></div>Now accepting new projects</div>
-    <h1>Your website is costing you <span>business.</span></h1>
-    <p class="hero-sub">Prospects check your site before they call. If it looks outdated, they move on. If you don't have one, they never find you. We build <strong>custom-coded, future-proof websites</strong> that look sharp and stay modern. No templates. <strong>Starting at $1,500.</strong></p>
-    <div class="hero-actions">
-      <a href="https://api.leadconnectorhq.com/widget/booking/FOV83x3fk6V38Idj3fZi" target="_blank" rel="noopener" class="hero-book"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a Free 15-Min Call</a>
-      <div class="hero-or">or</div>
-      <a class="hero-form-link" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Fill out the form below</a>
+    <h1>If your website is over 2 years old, it's <em>already outdated.</em></h1>
+    <p class="hero-sub">Web standards move fast. What looked modern in 2023 now looks like it was built a decade ago. We'll review your site and tell you exactly where it's falling behind. Don't have a site yet? We'll show you what you're missing. Free, no strings.</p>
+    <div class="hero-quote">
+      <div class="hero-quote-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="hero-quote-text">"Had something in my inbox in 48 hours that was better than anything 3 other agencies showed me." <strong>— Cody E., Dallas</strong></div>
     </div>
   </div>
 
   <div class="trust">
-    <div class="trust-item"><div class="trust-dot"></div>72-Hour First Drafts</div>
+    <div class="trust-item"><div class="trust-dot"></div>Same-Day Response</div>
     <div class="trust-item"><div class="trust-dot"></div>Fort Worth, TX</div>
-    <div class="trust-item"><div class="trust-dot"></div>No Contracts</div>
-    <div class="trust-item"><div class="trust-dot"></div>You Own Everything</div>
+    <div class="trust-item"><div class="trust-dot"></div>No Obligation</div>
   </div>
 </div>
 
@@ -219,79 +186,71 @@
 <div class="form-section r" id="form-section">
   <div class="form-label">
     <h2>Get your free site review</h2>
-    <p>We review your site before we respond. Most people hear back the same day.</p>
+    <p>Takes 30 seconds. Most people hear back the same day.</p>
   </div>
   <div class="form-card">
     <form action="/success" method="POST" name="tmn-meta-intake" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="tmn-meta-intake" />
       <p class="hidden"><label>Ignore:<input name="bot-field" /></label></p>
-      <div class="form-row">
-        <div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="John Smith" required /></div>
-        <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="john@company.com" required /></div>
-      </div>
-      <div class="fg"><label for="phone">Phone (optional)</label><input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" /></div>
-      <div class="fg"><label for="website">Current Website (if you have one)</label><input type="text" id="website" name="website" placeholder="yoursite.com or 'I don't have one yet'" /></div>
-      <div class="fg"><label for="biggest-issue">What do you need help with?</label><select id="biggest-issue" name="biggest-issue" required><option value="" disabled selected>Select one</option><option value="looks-outdated">My site looks outdated</option><option value="no-leads">My site doesn't generate leads</option><option value="not-mobile-friendly">Not mobile friendly</option><option value="doesnt-reflect-business">Doesn't reflect my business</option><option value="built-it-myself">I built it myself and outgrew it</option><option value="no-site">I don't have a website yet</option><option value="not-sure">Not sure, just want to talk</option></select></div>
-      <label class="consent-label"><input type="checkbox" name="sms-consent" /> I agree to receive text messages from True Margin North, LLC regarding my inquiry. Message frequency varies. Rates may apply. Reply STOP to cancel. <a href="/privacy">Privacy</a> | <a href="/terms">Terms</a></label>
-      <button type="submit" class="form-sub">Get My Free Site Review</button>
+      <div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="John Smith" required autocomplete="name" /></div>
+      <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email" /></div>
+      <div class="fg"><label for="website">Your Website URL (if you have one)</label><input type="text" id="website" name="website" placeholder="yoursite.com or leave blank" /></div>
+      <div class="fg"><label for="message">Anything else you want us to know? (optional)</label><textarea id="message" name="message" placeholder="E.g. I'm launching a new business, my current site is 5 years old, etc." rows="2"></textarea></div>
+      <button type="submit" class="form-sub">Get My Free Review →</button>
     </form>
-    <div class="form-note">No obligation. No credit card. We review your site before we respond.</div>
+    <div class="form-micro"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>No spam. No credit card. Just an honest review.</div>
+  </div>
+
+  <!-- Value props right under form -->
+  <div class="value-strip">
+    <div class="value-card">
+      <div class="vc-icon">&#128269;</div>
+      <h3>Honest Assessment</h3>
+      <p>How customers actually see your site.</p>
+    </div>
+    <div class="value-card">
+      <div class="vc-icon">&#128241;</div>
+      <h3>Mobile Check</h3>
+      <p>70%+ of visits are on a phone.</p>
+    </div>
+    <div class="value-card">
+      <div class="vc-icon">&#127919;</div>
+      <h3>Clear Next Steps</h3>
+      <p>What to fix, what to skip.</p>
+    </div>
+    <div class="value-card">
+      <div class="vc-icon">&#9889;</div>
+      <h3>Same-Day Reply</h3>
+      <p>We review before we respond.</p>
+    </div>
   </div>
 </div>
 
-<!-- ════════════════ EXPLORE ════════════════ -->
-<div class="explore r">
-  <a href="/portfolio">See Our Work</a>
-  <div class="sep"></div>
-  <a href="/">Visit Main Site</a>
-</div>
-
-<!-- ════════════════ SOCIAL PROOF ════════════════ -->
+<!-- ════════════════ TESTIMONIALS ════════════════ -->
 <div class="proof r">
   <div class="proof-header">
     <div class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
     <div class="proof-label">5.0 on <a href="https://maps.app.goo.gl/hf37L4ca44xjHiKe8" target="_blank" rel="noopener">Google Reviews</a></div>
   </div>
   <div class="test-card">
-    <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-    <p class="test-quote">Talked to 3 agencies before TMN. Every one quoted 8 to 12 weeks and $10K+. Trevor had something in my inbox in 48 hours that was better than anything they showed me.</p>
-    <div class="test-author"><span class="test-name">Cody E.</span><span class="test-role">Elmore Home Services, Dallas</span></div>
+    <div class="tc-init">CE</div>
+    <div class="tc-body">
+      <div class="tc-quote">"Talked to 3 agencies before TMN. Every one quoted 8 to 12 weeks and $10K+. Trevor had something in my inbox in 48 hours that was better than anything they showed me."</div>
+      <div class="tc-attr">Cody E. &middot; Elmore Home Services, Dallas</div>
+    </div>
   </div>
   <div class="test-card">
-    <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-    <p class="test-quote">Not a tech person. Just needed something that looked clean and made my business look legit. Trevor and Taylor handled everything and had us live in under a week.</p>
-    <div class="test-author"><span class="test-name">Jose M.</span><span class="test-role">Tony's Lawn &amp; Tree, Fort Worth</span></div>
+    <div class="tc-init">JM</div>
+    <div class="tc-body">
+      <div class="tc-quote">"Not a tech person. Just needed something that looked clean and made my business look legit. Had us live in under a week."</div>
+      <div class="tc-attr">Jose M. &middot; Tony's Lawn &amp; Tree, Fort Worth</div>
+    </div>
   </div>
   <div class="test-card">
-    <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-    <p class="test-quote">Trevor and Taylor deliver at a level that makes you look like a much bigger operation than you are.</p>
-    <div class="test-author"><span class="test-name">Jonathan T.</span><span class="test-role">Client Referral, QC Atlantic</span></div>
-  </div>
-</div>
-
-<!-- ════════════════ WHAT YOU GET ════════════════ -->
-<div class="what-section r">
-  <div class="what-header">What you get</div>
-  <div class="what-grid">
-    <div class="what-card">
-      <div class="icon">&#128269;</div>
-      <h3>Honest site assessment</h3>
-      <p>We look at your site the way your customers do. No fluff.</p>
-    </div>
-    <div class="what-card">
-      <div class="icon">&#128241;</div>
-      <h3>Mobile experience check</h3>
-      <p>70%+ of visitors are on a phone. We show you what they see.</p>
-    </div>
-    <div class="what-card">
-      <div class="icon">&#127919;</div>
-      <h3>Clear next steps</h3>
-      <p>What to fix, what to skip, and what we'd prioritize.</p>
-    </div>
-    <div class="what-card">
-      <div class="icon">&#9889;</div>
-      <h3>24-hour response</h3>
-      <p>We review your site before we reply. Same-day for most.</p>
+    <div class="tc-init">JT</div>
+    <div class="tc-body">
+      <div class="tc-quote">"Trevor and Taylor deliver at a level that makes you look like a much bigger operation than you are."</div>
+      <div class="tc-attr">Jonathan T. &middot; QC Atlantic</div>
     </div>
   </div>
 </div>
@@ -299,8 +258,11 @@
 <!-- ════════════════ BOTTOM CTA ════════════════ -->
 <div class="bottom-cta">
   <p>Husband-and-wife team. Fort Worth, TX.</p>
-  <div class="tagline">Ready to look <span>the part?</span></div>
-  <a href="https://api.leadconnectorhq.com/widget/booking/FOV83x3fk6V38Idj3fZi" target="_blank" rel="noopener" class="cta-btn">Book a Free Call</a>
+  <div class="tagline">Ready to look <em>the part?</em></div>
+  <button class="cta-btn-scroll" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">
+    <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    Get Your Free Review
+  </button>
 </div>
 
 <!-- ════════════════ FOOTER ════════════════ -->
@@ -308,9 +270,30 @@
   &copy; 2026 TMN Creative &middot; True Margin North LLC &middot; <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a>
 </footer>
 
+<!-- ════════════════ STICKY MOBILE CTA ════════════════ -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta-text">Free, no obligation</div>
+  <button class="sticky-cta-btn" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Get My Free Review →</button>
+</div>
+
 <script>
-try{const o=new IntersectionObserver((e)=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add('v'),o.unobserve(e.target))})},{threshold:0.12});document.querySelectorAll('.r').forEach(e=>o.observe(e))}catch(e){}
+/* Reveal on scroll */
+try{const o=new IntersectionObserver((e)=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add('v'),o.unobserve(e.target))})},{threshold:0.1});document.querySelectorAll('.r').forEach(e=>o.observe(e))}catch(e){}
+
+/* Sticky CTA: show when form is not visible */
+try{
+  const fs=document.getElementById('form-section');
+  const sc=document.getElementById('stickyCta');
+  const fo=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){sc.classList.remove('show')}
+      else{sc.classList.add('show')}
+    });
+  },{threshold:0.15});
+  fo.observe(fs);
+}catch(e){}
 </script>
+
 
 </body>
 </html>
