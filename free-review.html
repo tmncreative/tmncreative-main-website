@@ -26,16 +26,16 @@
     .hero-wrap::before{content:'';position:absolute;top:-50%;left:-30%;width:160%;height:200%;background:radial-gradient(ellipse 45% 45% at 50% 25%,rgba(198,162,74,0.06) 0%,transparent 70%);pointer-events:none}
 
     /* ── TOP BAR ── */
-    .top-bar{padding:0.75rem 1.5rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
-    .top-bar img{height:34px;opacity:0.9;mix-blend-mode:lighten}
+    .top-bar{padding:0.5rem 1.5rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
+    .top-bar img{height:28px;opacity:0.9;mix-blend-mode:lighten}
     .top-bar-right{display:flex;align-items:center;gap:0.3rem;font-size:0.58rem;font-weight:600;color:rgba(255,255,255,0.3)}
     .top-bar-right span{color:var(--ac);font-size:0.65rem}
 
     /* ── HERO ── */
-    .hero{padding:1.5rem 1.5rem 0;text-align:center;position:relative;z-index:2}
-    .hero h1{font-family:var(--fs);font-size:clamp(1.6rem,5.5vw,2.3rem);font-weight:800;color:#fff;letter-spacing:-0.04em;line-height:1.08;margin-bottom:0.75rem}
+    .hero{padding:0.75rem 1.5rem 0;text-align:center;position:relative;z-index:2}
+    .hero h1{font-family:var(--fs);font-size:clamp(1.45rem,5vw,2.3rem);font-weight:800;color:#fff;letter-spacing:-0.04em;line-height:1.08;margin-bottom:0.4rem}
     .hero h1 em{font-style:normal;color:var(--ac)}
-    .hero-sub{font-size:0.78rem;color:rgba(255,255,255,0.4);line-height:1.7;max-width:400px;margin:0 auto}
+    .hero-sub{font-size:0.72rem;color:rgba(255,255,255,0.4);line-height:1.6;max-width:360px;margin:0 auto}
 
     /* ── HERO QUOTE ── */
     .hero-quote{max-width:400px;margin:1.25rem auto 0;padding:0.75rem 1rem;background:rgba(198,162,74,0.06);border:1px solid rgba(198,162,74,0.1);border-radius:10px;display:flex;align-items:center;gap:0.6rem}
@@ -44,12 +44,12 @@
     .hero-quote-text strong{color:rgba(255,255,255,0.7);font-weight:600}
 
     /* ── TRUST STRIP ── */
-    .trust{display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;padding:1.25rem 1.5rem 1.75rem;position:relative;z-index:2}
+    .trust{display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;padding:0.75rem 1.5rem 0.85rem;position:relative;z-index:2}
     .trust-item{font-size:0.58rem;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:0.02em;display:flex;align-items:center;gap:0.3rem}
     .trust-dot{width:4px;height:4px;border-radius:50%;background:var(--ac);opacity:0.5;flex-shrink:0}
 
     /* ── FORM SECTION ── */
-    .form-section{padding:1.75rem 1.5rem 2rem;position:relative;background:var(--bg)}
+    .form-section{padding:1.25rem 1.5rem 2rem;position:relative;background:var(--bg)}
     .form-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:48px;height:3px;background:var(--acG);border-radius:2px;opacity:0.7}
     .form-label{text-align:center;margin-bottom:1rem}
     .form-label h2{font-family:var(--fn);font-size:1.1rem;font-weight:800;color:var(--dk);letter-spacing:-0.03em;margin-bottom:0.2rem}
@@ -168,11 +168,7 @@
 
   <div class="hero">
     <h1>We'll design you a new homepage. <em>For free.</em></h1>
-    <p class="hero-sub">Tell us about your business and we'll design a fresh homepage for you. See exactly what a modern site looks like with your name on it. No call needed. No commitment. We handle everything.</p>
-    <div class="hero-quote">
-      <div class="hero-quote-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <div class="hero-quote-text">"Had something in my inbox in 48 hours that was better than anything 3 other agencies showed me." <strong>— Cody E., Dallas</strong></div>
-    </div>
+    <p class="hero-sub">See what your site could look like before you spend a dollar. No call needed. No commitment.</p>
   </div>
 
   <div class="trust">
@@ -183,10 +179,14 @@
 </div>
 
 <!-- ════════════════ FORM ════════════════ -->
-<div class="form-section r" id="form-section">
+<div class="form-section" id="form-section">
   <div class="form-label">
     <h2>Get your free mockup</h2>
-    <p>Takes 30 seconds. We'll have something in your inbox within days.</p>
+    <p>Takes 30 seconds. We deliver in 48-72 hours.</p>
+    <div style="max-width:400px;margin:0.6rem auto 0;padding:0.5rem 0.75rem;background:rgba(198,162,74,0.06);border:1px solid rgba(198,162,74,0.1);border-radius:8px;display:flex;align-items:center;gap:0.5rem">
+      <span style="color:var(--ac);font-size:0.55rem;letter-spacing:1px;flex-shrink:0">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span style="font-size:0.6rem;color:var(--tx2);line-height:1.4">"Had something in my inbox in 48 hours that was better than anything 3 other agencies showed me." <strong style="color:var(--tx)">Cody E.</strong></span>
+    </div>
   </div>
   <div class="form-card">
     <form action='/success' method='POST' name='tmn-meta-intake'>
