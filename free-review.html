@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -21,115 +22,122 @@
     a{color:inherit;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
     img{max-width:100%;display:block}
 
-    /* ── DARK HERO WRAP ── */
-    .hero-wrap{background:var(--dk3);position:relative;overflow:hidden}
-    .hero-wrap::before{content:'';position:absolute;top:-50%;left:-30%;width:160%;height:200%;background:radial-gradient(ellipse 45% 45% at 50% 25%,rgba(198,162,74,0.06) 0%,transparent 70%);pointer-events:none}
+```
+/* ── DARK HERO WRAP ── */
+.hero-wrap{background:var(--dk3);position:relative;overflow:hidden}
+.hero-wrap::before{content:'';position:absolute;top:-50%;left:-30%;width:160%;height:200%;background:radial-gradient(ellipse 45% 45% at 50% 25%,rgba(198,162,74,0.06) 0%,transparent 70%);pointer-events:none}
 
-    /* ── TOP BAR ── */
-    .top-bar{padding:0.5rem 1.5rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
-    .top-bar img{height:28px;opacity:0.9;mix-blend-mode:lighten}
-    .top-bar-right{display:flex;align-items:center;gap:0.3rem;font-size:0.58rem;font-weight:600;color:rgba(255,255,255,0.3)}
-    .top-bar-right span{color:var(--ac);font-size:0.65rem}
+/* ── TOP BAR ── */
+.top-bar{padding:0.5rem 1.5rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
+.top-bar img{height:28px;opacity:0.9;mix-blend-mode:lighten}
+.top-bar-right{display:flex;align-items:center;gap:0.3rem;font-size:0.58rem;font-weight:600;color:rgba(255,255,255,0.5)}
+.top-bar-right span{color:var(--ac);font-size:0.65rem}
 
-    /* ── HERO ── */
-    .hero{padding:0.75rem 1.5rem 0;text-align:center;position:relative;z-index:2}
-    .hero h1{font-family:var(--fs);font-size:clamp(1.45rem,5vw,2.3rem);font-weight:800;color:#fff;letter-spacing:-0.04em;line-height:1.08;margin-bottom:0.4rem}
-    .hero h1 em{font-style:normal;color:var(--ac)}
-    .hero-sub{font-size:0.72rem;color:rgba(255,255,255,0.4);line-height:1.6;max-width:360px;margin:0 auto}
+/* ── HERO ── */
+.hero{padding:0.5rem 1.5rem 0;text-align:center;position:relative;z-index:2}
+.hero h1{font-family:var(--fs);font-size:clamp(1.45rem,5vw,2.3rem);font-weight:800;color:#fff;letter-spacing:-0.04em;line-height:1.08;margin-bottom:0.3rem}
+.hero h1 em{font-style:normal;color:var(--ac)}
+.hero-sub{font-size:0.72rem;color:rgba(255,255,255,0.4);line-height:1.6;max-width:360px;margin:0 auto}
 
-    /* ── HERO QUOTE ── */
-    .hero-quote{max-width:400px;margin:1.25rem auto 0;padding:0.75rem 1rem;background:rgba(198,162,74,0.06);border:1px solid rgba(198,162,74,0.1);border-radius:10px;display:flex;align-items:center;gap:0.6rem}
-    .hero-quote-stars{color:var(--ac);font-size:0.6rem;letter-spacing:1px;flex-shrink:0;line-height:1}
-    .hero-quote-text{font-size:0.65rem;color:rgba(255,255,255,0.5);line-height:1.5;text-align:left}
-    .hero-quote-text strong{color:rgba(255,255,255,0.7);font-weight:600}
+/* ── HERO QUOTE ── */
+.hero-quote{max-width:400px;margin:1.25rem auto 0;padding:0.75rem 1rem;background:rgba(198,162,74,0.06);border:1px solid rgba(198,162,74,0.1);border-radius:10px;display:flex;align-items:center;gap:0.6rem}
+.hero-quote-stars{color:var(--ac);font-size:0.6rem;letter-spacing:1px;flex-shrink:0;line-height:1}
+.hero-quote-text{font-size:0.65rem;color:rgba(255,255,255,0.5);line-height:1.5;text-align:left}
+.hero-quote-text strong{color:rgba(255,255,255,0.7);font-weight:600}
 
-    /* ── TRUST STRIP ── */
-    .trust{display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;padding:0.75rem 1.5rem 0.85rem;position:relative;z-index:2}
-    .trust-item{font-size:0.58rem;font-weight:600;color:rgba(255,255,255,0.2);letter-spacing:0.02em;display:flex;align-items:center;gap:0.3rem}
-    .trust-dot{width:4px;height:4px;border-radius:50%;background:var(--ac);opacity:0.5;flex-shrink:0}
+/* ── TRUST STRIP ── */
+.trust{display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;padding:0.5rem 1.5rem 0.65rem;position:relative;z-index:2}
+.trust-item{font-size:0.58rem;font-weight:600;color:rgba(255,255,255,0.45);letter-spacing:0.02em;display:flex;align-items:center;gap:0.3rem}
+.trust-dot{width:4px;height:4px;border-radius:50%;background:var(--ac);opacity:0.8;flex-shrink:0}
 
-    /* ── FORM SECTION ── */
-    .form-section{padding:1.25rem 1.5rem 2rem;position:relative;background:var(--bg)}
-    .form-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:48px;height:3px;background:var(--acG);border-radius:2px;opacity:0.7}
-    .form-label{text-align:center;margin-bottom:1rem}
-    .form-label h2{font-family:var(--fn);font-size:1.1rem;font-weight:800;color:var(--dk);letter-spacing:-0.03em;margin-bottom:0.2rem}
-    .form-label p{font-size:0.7rem;color:var(--tx3)}
-    .form-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:1.35rem;box-shadow:0 12px 40px rgba(15,23,42,0.06),0 1px 3px rgba(15,23,42,0.03);max-width:440px;margin:0 auto}
-    .fg{margin-bottom:0.6rem}
-    .fg label{display:block;font-size:0.56rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--tx2);margin-bottom:0.22rem}
-    .fg input,.fg select,.fg textarea{width:100%;padding:0.75rem 0.85rem;font-family:var(--fn);font-size:16px;color:var(--dk);background:var(--bg2);border:1px solid var(--ln);border-radius:10px;outline:none;transition:all 0.25s var(--e)}
-    .fg input::placeholder,.fg textarea::placeholder{color:var(--tx3)}
-    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--ac);background:#fff;box-shadow:0 0 0 4px var(--ac3)}
-    .fg textarea{min-height:52px;resize:vertical}
-    .hidden{display:none}
-    .form-sub{width:100%;font-family:var(--fn);font-size:0.9rem;font-weight:700;color:var(--dk3);background:var(--acG);border:none;padding:1.05rem;cursor:pointer;border-radius:10px;transition:all 0.3s var(--e);margin-top:0.25rem;box-shadow:0 4px 20px rgba(198,162,74,0.3),0 0 0 1px rgba(198,162,74,0.1);position:relative;overflow:hidden;letter-spacing:-0.01em}
-    .form-sub::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);animation:shimmer 5s ease-in-out infinite 1.5s}
-    .form-sub:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(198,162,74,0.4)}
-    .form-sub:active{transform:translateY(0)}
-    .form-micro{text-align:center;font-size:0.58rem;color:var(--tx3);margin-top:0.5rem;line-height:1.5}
-    .form-micro svg{width:10px;height:10px;vertical-align:-1px;stroke:var(--tx3);stroke-width:2;fill:none;margin-right:2px}
+/* ── FORM SECTION ── */
+.form-section{padding:1rem 1.5rem 2rem;position:relative;background:var(--bg)}
+.form-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:48px;height:3px;background:var(--acG);border-radius:2px;opacity:0.7}
+.form-label{text-align:center;margin-bottom:0.75rem}
+.form-label h2{font-family:var(--fn);font-size:1.1rem;font-weight:800;color:var(--dk);letter-spacing:-0.03em;margin-bottom:0.2rem}
+.form-label p{font-size:0.7rem;color:var(--tx3)}
+.form-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:1.15rem;box-shadow:0 12px 40px rgba(15,23,42,0.06),0 1px 3px rgba(15,23,42,0.03);max-width:440px;margin:0 auto}
+.fg{margin-bottom:0.45rem}
+.fg label{display:block;font-size:0.56rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--tx2);margin-bottom:0.22rem}
+.fg input,.fg select,.fg textarea{width:100%;padding:0.65rem 0.85rem;font-family:var(--fn);font-size:16px;color:var(--dk);background:var(--bg2);border:1px solid var(--ln);border-radius:10px;outline:none;transition:all 0.25s var(--e)}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--tx3)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--ac);background:#fff;box-shadow:0 0 0 4px var(--ac3)}
+.fg textarea{min-height:52px;resize:vertical}
+.hidden{display:none}
+.form-sub{width:100%;font-family:var(--fn);font-size:0.9rem;font-weight:700;color:var(--dk3);background:var(--acG);border:none;padding:1.05rem;cursor:pointer;border-radius:10px;transition:all 0.3s var(--e);margin-top:0.25rem;box-shadow:0 4px 20px rgba(198,162,74,0.3),0 0 0 1px rgba(198,162,74,0.1);position:relative;overflow:hidden;letter-spacing:-0.01em}
+.form-sub::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);animation:shimmer 5s ease-in-out infinite 1.5s}
+.form-sub:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(198,162,74,0.4)}
+.form-sub:active{transform:translateY(0)}
+.form-micro{text-align:center;font-size:0.58rem;color:var(--tx3);margin-top:0.5rem;line-height:1.5}
+.form-micro svg{width:10px;height:10px;vertical-align:-1px;stroke:var(--tx3);stroke-width:2;fill:none;margin-right:2px}
 
-    /* ── VALUE PROPS (compact) ── */
-    .value-strip{max-width:440px;margin:1.5rem auto 0;display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
-    .value-card{padding:0.85rem 0.75rem;background:var(--bg2);border:1px solid rgba(226,232,240,0.6);border-radius:10px;text-align:center}
-    .value-card .vc-icon{font-size:1rem;margin-bottom:0.3rem}
-    .value-card h3{font-size:0.7rem;font-weight:700;color:var(--dk);line-height:1.3;margin-bottom:0.15rem}
-    .value-card p{font-size:0.6rem;color:var(--tx2);line-height:1.45}
+/* ── VALUE PROPS (compact) ── */
+.value-strip{max-width:440px;margin:1.5rem auto 0;display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
+.value-card{padding:0.85rem 0.75rem;background:var(--bg2);border:1px solid rgba(226,232,240,0.6);border-radius:10px;text-align:center}
+.value-card .vc-icon{font-size:1rem;margin-bottom:0.3rem}
+.value-card h3{font-size:0.7rem;font-weight:700;color:var(--dk);line-height:1.3;margin-bottom:0.15rem}
+.value-card p{font-size:0.6rem;color:var(--tx2);line-height:1.45}
 
-    /* ── TESTIMONIALS ── */
-    .proof{max-width:440px;margin:0 auto;padding:1.75rem 1.5rem 1rem}
-    .proof-header{text-align:center;margin-bottom:1rem}
-    .proof-stars{color:var(--ac);font-size:0.9rem;letter-spacing:2px;margin-bottom:0.15rem}
-    .proof-label{font-size:0.62rem;font-weight:600;color:var(--tx3)}
-    .proof-label a{color:var(--ac);border-bottom:1px solid rgba(198,162,74,0.25);text-decoration:none}
-    .test-card{display:flex;align-items:flex-start;gap:0.6rem;padding:0.8rem 0.9rem;background:var(--bg2);border:1px solid rgba(226,232,240,0.6);border-radius:12px;margin-bottom:0.45rem}
-    .test-card .tc-init{width:26px;height:26px;border-radius:50%;background:var(--ac3);border:1px solid rgba(198,162,74,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.55rem;font-weight:800;color:var(--ac)}
-    .test-card .tc-body{flex:1}
-    .test-card .tc-quote{font-size:0.7rem;color:var(--tx);line-height:1.6;margin-bottom:0.15rem}
-    .test-card .tc-attr{font-size:0.55rem;color:var(--tx3);font-weight:500}
+/* ── TESTIMONIALS ── */
+.proof{max-width:440px;margin:0 auto;padding:1.75rem 1.5rem 1rem}
+.proof-header{text-align:center;margin-bottom:1rem}
+.proof-stars{color:var(--ac);font-size:0.9rem;letter-spacing:2px;margin-bottom:0.15rem}
+.proof-label{font-size:0.62rem;font-weight:600;color:var(--tx3)}
+.proof-label a{color:var(--ac);border-bottom:1px solid rgba(198,162,74,0.25);text-decoration:none}
+.test-card{display:flex;align-items:flex-start;gap:0.6rem;padding:0.8rem 0.9rem;background:var(--bg2);border:1px solid rgba(226,232,240,0.6);border-radius:12px;margin-bottom:0.45rem}
+.test-card .tc-init{width:26px;height:26px;border-radius:50%;background:var(--ac3);border:1px solid rgba(198,162,74,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.55rem;font-weight:800;color:var(--ac)}
+.test-card .tc-body{flex:1}
+.test-card .tc-quote{font-size:0.7rem;color:var(--tx);line-height:1.6;margin-bottom:0.15rem}
+.test-card .tc-attr{font-size:0.55rem;color:var(--tx3);font-weight:500}
 
-    /* ── BOTTOM CTA ── */
-    .bottom-cta{text-align:center;padding:2rem 1.5rem 2.5rem;background:var(--dk3);position:relative;overflow:hidden}
-    .bottom-cta::before{content:'';position:absolute;top:-60%;left:-30%;width:160%;height:220%;background:radial-gradient(ellipse 40% 40% at 50% 80%,rgba(198,162,74,0.05) 0%,transparent 70%);pointer-events:none}
-    .bottom-cta p{font-size:0.7rem;color:rgba(255,255,255,0.3);margin-bottom:0.4rem;position:relative}
-    .bottom-cta .tagline{font-family:var(--fs);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:1rem;position:relative;letter-spacing:-0.02em}
-    .bottom-cta .tagline em{font-style:normal;color:var(--ac)}
-    .cta-btn-scroll{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--fn);font-size:0.82rem;font-weight:700;color:var(--dk3);background:var(--acG);padding:0.9rem 2rem;border-radius:10px;box-shadow:0 4px 20px rgba(198,162,74,0.3);transition:all 0.35s var(--e);position:relative;overflow:hidden;cursor:pointer;border:none}
-    .cta-btn-scroll::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);animation:shimmer 5s ease-in-out infinite 2s}
-    .cta-btn-scroll:hover{transform:translateY(-3px);box-shadow:0 14px 45px rgba(198,162,74,0.4)}
-    .cta-btn-scroll svg{width:14px;height:14px;stroke:var(--dk3);stroke-width:2.5;fill:none}
+/* ── BOTTOM CTA ── */
+.bottom-cta{text-align:center;padding:2rem 1.5rem 2.5rem;background:var(--dk3);position:relative;overflow:hidden}
+.bottom-cta::before{content:'';position:absolute;top:-60%;left:-30%;width:160%;height:220%;background:radial-gradient(ellipse 40% 40% at 50% 80%,rgba(198,162,74,0.05) 0%,transparent 70%);pointer-events:none}
+.bottom-cta p{font-size:0.7rem;color:rgba(255,255,255,0.3);margin-bottom:0.4rem;position:relative}
+.bottom-cta .tagline{font-family:var(--fs);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:1rem;position:relative;letter-spacing:-0.02em}
+.bottom-cta .tagline em{font-style:normal;color:var(--ac)}
+.cta-btn-scroll{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--fn);font-size:0.82rem;font-weight:700;color:var(--dk3);background:var(--acG);padding:0.9rem 2rem;border-radius:10px;box-shadow:0 4px 20px rgba(198,162,74,0.3);transition:all 0.35s var(--e);position:relative;overflow:hidden;cursor:pointer;border:none}
+.cta-btn-scroll::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);animation:shimmer 5s ease-in-out infinite 2s}
+.cta-btn-scroll:hover{transform:translateY(-3px);box-shadow:0 14px 45px rgba(198,162,74,0.4)}
+.cta-btn-scroll svg{width:14px;height:14px;stroke:var(--dk3);stroke-width:2.5;fill:none}
 
-    /* ── STICKY MOBILE CTA ── */
-    .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:100;padding:0.65rem 1rem;padding-bottom:calc(0.65rem + env(safe-area-inset-bottom,0px));background:rgba(11,17,32,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(198,162,74,0.15);transform:translateY(100%);transition:transform 0.4s var(--e);display:flex;align-items:center;justify-content:center;gap:0.6rem}
-    .sticky-cta.show{transform:translateY(0)}
-    .sticky-cta-btn{font-family:var(--fn);font-size:0.8rem;font-weight:700;color:var(--dk3);background:var(--acG);border:none;padding:0.75rem 1.5rem;border-radius:9px;cursor:pointer;box-shadow:0 2px 12px rgba(198,162,74,0.3);flex:1;max-width:320px}
-    .sticky-cta-text{font-size:0.58rem;color:rgba(255,255,255,0.35);font-weight:500;display:none}
-    @media(min-width:380px){.sticky-cta-text{display:block;flex-shrink:0}}
+/* ── STICKY MOBILE CTA ── */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:100;padding:0.65rem 1rem;padding-bottom:calc(0.65rem + env(safe-area-inset-bottom,0px));background:rgba(11,17,32,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(198,162,74,0.15);transform:translateY(100%);transition:transform 0.4s var(--e);display:flex;align-items:center;justify-content:center;gap:0.6rem}
+.sticky-cta.show{transform:translateY(0)}
+.sticky-cta-btn{font-family:var(--fn);font-size:0.8rem;font-weight:700;color:var(--dk3);background:var(--acG);border:none;padding:0.75rem 1.5rem;border-radius:9px;cursor:pointer;box-shadow:0 2px 12px rgba(198,162,74,0.3);flex:1;max-width:320px}
+.sticky-cta-text{font-size:0.58rem;color:rgba(255,255,255,0.35);font-weight:500;display:none}
+@media(min-width:380px){.sticky-cta-text{display:block;flex-shrink:0}}
 
-    /* ── FOOTER ── */
-    footer{padding:1rem 1.5rem 1.25rem;padding-bottom:calc(4.5rem + env(safe-area-inset-bottom,0px));text-align:center;font-size:0.56rem;color:rgba(255,255,255,0.15);background:var(--dk3);border-top:1px solid rgba(255,255,255,0.03)}
-    footer a{color:var(--ac);text-decoration:none;opacity:0.5}
-    footer a:hover{opacity:1}
+/* ── FOOTER ── */
+footer{padding:1rem 1.5rem 1.25rem;padding-bottom:calc(4.5rem + env(safe-area-inset-bottom,0px));text-align:center;font-size:0.56rem;color:rgba(255,255,255,0.15);background:var(--dk3);border-top:1px solid rgba(255,255,255,0.03)}
+footer a{color:var(--ac);text-decoration:none;opacity:0.5}
+footer a:hover{opacity:1}
 
-    /* ── ANIMATIONS ── */
-    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.35}}
-    @keyframes shimmer{0%,75%,100%{left:-100%}25%{left:100%}}
-    .hero h1{opacity:0;animation:fadeUp 0.6s var(--e) 0.1s forwards}
-    .hero-sub{opacity:0;animation:fadeUp 0.6s var(--e) 0.25s forwards}
-    .hero-quote{opacity:0;animation:fadeUp 0.6s var(--e) 0.4s forwards}
-    .trust{opacity:0;animation:fadeUp 0.5s var(--e) 0.55s forwards}
-    .r{opacity:0;transform:translateY(18px);transition:opacity 0.6s var(--e),transform 0.6s var(--e)}
-    .r.v{opacity:1;transform:translateY(0)}
-    @media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms !important;transition-duration:0.01ms !important}.r{opacity:1;transform:none}.hero h1,.hero-sub,.hero-quote,.trust{opacity:1;animation:none}}
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.35}}
+@keyframes shimmer{0%,75%,100%{left:-100%}25%{left:100%}}
+.hero h1{opacity:0;animation:fadeUp 0.6s var(--e) 0.1s forwards}
+.hero-sub{opacity:0;animation:fadeUp 0.6s var(--e) 0.25s forwards}
+.hero-quote{opacity:0;animation:fadeUp 0.6s var(--e) 0.4s forwards}
+.trust{opacity:0;animation:fadeUp 0.5s var(--e) 0.55s forwards}
+.r{opacity:0;transform:translateY(18px);transition:opacity 0.6s var(--e),transform 0.6s var(--e)}
+.r.v{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms !important;transition-duration:0.01ms !important}.r{opacity:1;transform:none}.hero h1,.hero-sub,.hero-quote,.trust{opacity:1;animation:none}}
+```
+
   </style>
 
   <!-- Plausible Analytics -->
+
   <script async src="https://plausible.io/js/pa-qenXucgzJOGY_zAczSQ6m.js"></script>
+
   <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
 
   <!-- Google tag (gtag.js) -->
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18041747908"></script>
+
   <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -138,6 +146,7 @@
   </script>
 
   <!-- Meta Pixel Code -->
+
   <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -150,8 +159,11 @@
   fbq('init', '1488960412756574');
   fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1488960412756574&ev=PageView&noscript=1"/></noscript>
+
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1488960412756574&ev=PageView&noscript=1"/></noscript>
+
   <!-- End Meta Pixel Code -->
+
   <link rel="canonical" href="https://tmncreative.com/free-review" />
   <meta property="og:image" content="https://tmncreative.com/images/og.jpg" />
   <meta property="og:image:width" content="1200" />
@@ -160,6 +172,7 @@
 <body>
 
 <!-- ════════════════ DARK HERO ════════════════ -->
+
 <div class="hero-wrap">
   <div class="top-bar">
     <a href="/"><img src="images/logo-dark.png" alt="TMN Creative" /></a>
@@ -179,6 +192,7 @@
 </div>
 
 <!-- ════════════════ FORM ════════════════ -->
+
 <div class="form-section" id="form-section">
   <div class="form-label">
     <h2>Get your free mockup</h2>
@@ -195,87 +209,46 @@
       <div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="John Smith" required autocomplete="name" /></div>
       <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email" /></div>
       <div class="fg"><label for="website">Current Website (if you have one)</label><input type="text" id="website" name="website" placeholder="yoursite.com or leave blank" /></div>
-      <div class="fg"><label for="message">Tell us about your business</label><textarea id="message" name="message" placeholder="What do you do, where are you located, and what matters most to your customers?" rows="2"></textarea></div>
-      <button type="submit" class="form-sub">Send Me a Free Mockup →</button>
+      <div class="fg"><label for="business-type">What type of business?</label><select id="business-type" name="business-type" style="appearance:none;cursor:pointer;background-image:url(&quot;data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%2394A3B8' stroke-width='1.2'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 0.85rem center"><option value="" disabled selected>Select one</option><option value="home-services">Home Services</option><option value="contractor">Contractor / Construction</option><option value="healthcare">Healthcare / Dental</option><option value="fitness">Fitness / Wellness</option><option value="professional-services">Professional Services</option><option value="restaurant-food">Restaurant / Food</option><option value="other">Other</option></select></div>
+      <button type="submit" class="form-sub">Build My Free Homepage →</button>
     </form>
     <div class="form-micro"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>No spam. No credit card. We build it, you decide.</div>
     <div style="text-align:center;margin-top:0.6rem;font-size:0.6rem;color:var(--tx3)">Rather talk? <a href="tel:6822313202" style="color:var(--ac);text-decoration:none;font-weight:600">(682) 231-3202</a></div>
   </div>
 
-  <!-- Value props right under form -->
-  <div class="value-strip">
-    <div class="value-card">
-      <div class="vc-icon">&#127912;</div>
-      <h3>Custom Design</h3>
-      <p>Built for your business, not a template.</p>
-    </div>
-    <div class="value-card">
-      <div class="vc-icon">&#9889;</div>
-      <h3>48-72 Hour Delivery</h3>
-      <p>In your inbox within days.</p>
-    </div>
-    <div class="value-card">
-      <div class="vc-icon">&#9997;&#65039;</div>
-      <h3>We Write Everything</h3>
-      <p>Content, copy, layout. Zero work by you.</p>
-    </div>
-    <div class="value-card">
-      <div class="vc-icon">&#128274;</div>
-      <h3>No Strings</h3>
-      <p>Don't like it? No hard feelings.</p>
-    </div>
-  </div>
-</div>
+  <!-- Social proof right under form -->
 
-<!-- ════════════════ TESTIMONIALS ════════════════ -->
-<div class="proof r">
-  <div class="proof-header">
-    <div class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-    <div class="proof-label">5.0 on <a href="https://maps.app.goo.gl/hf37L4ca44xjHiKe8" target="_blank" rel="noopener">Google Reviews</a></div>
-  </div>
-  <div class="test-card">
-    <div class="tc-init">CE</div>
-    <div class="tc-body">
-      <div class="tc-quote">"Talked to 3 agencies before TMN. Every one quoted 8 to 12 weeks and $10K+. Trevor had something in my inbox in 48 hours that was better than anything they showed me."</div>
-      <div class="tc-attr">Cody E. &middot; Elmore Home Services, Dallas</div>
-    </div>
-  </div>
-  <div class="test-card">
-    <div class="tc-init">JM</div>
-    <div class="tc-body">
-      <div class="tc-quote">"Not a tech person. Just needed something that looked clean and made my business look legit. Had us live in under a week."</div>
-      <div class="tc-attr">Jose M. &middot; Tony's Lawn &amp; Tree, Fort Worth</div>
-    </div>
-  </div>
-  <div class="test-card">
-    <div class="tc-init">JT</div>
-    <div class="tc-body">
-      <div class="tc-quote">"Trevor and Taylor deliver at a level that makes you look like a much bigger operation than you are."</div>
-      <div class="tc-attr">Jonathan T. &middot; QC Atlantic</div>
-    </div>
+  <div style="max-width:440px;margin:0.75rem auto 0">
+    <div style="text-align:center;margin-bottom:0.6rem"><span style="color:var(--ac);font-size:0.85rem;letter-spacing:2px">&#9733;&#9733;&#9733;&#9733;&#9733;</span><div style="font-size:0.6rem;font-weight:600;color:var(--tx3)">5.0 on <a href="https://maps.app.goo.gl/hf37L4ca44xjHiKe8" target="_blank" rel="noopener" style="color:var(--ac);border-bottom:1px solid rgba(198,162,74,0.25);text-decoration:none">Google Reviews</a></div></div>
+    <div class="test-card"><div class="tc-init">CE</div><div class="tc-body"><div class="tc-quote">"Talked to 3 agencies before TMN. Every one quoted 8 to 12 weeks and $10K+. Trevor had something in my inbox in 48 hours that was better than anything they showed me."</div><div class="tc-attr">Cody E. &middot; Elmore Home Services, Dallas</div></div></div>
+    <div class="test-card"><div class="tc-init">JM</div><div class="tc-body"><div class="tc-quote">"Not a tech person. Just needed something that looked clean and made my business look legit. Had us live in under a week."</div><div class="tc-attr">Jose M. &middot; Tony's Lawn &amp; Tree, Fort Worth</div></div></div>
+    <div class="test-card"><div class="tc-init">JT</div><div class="tc-body"><div class="tc-quote">"Trevor and Taylor deliver at a level that makes you look like a much bigger operation than you are."</div><div class="tc-attr">Jonathan T. &middot; QC Atlantic</div></div></div>
   </div>
 </div>
 
 <!-- ════════════════ BOTTOM CTA ════════════════ -->
+
 <div class="bottom-cta">
   <p>Husband-and-wife team. Fort Worth, TX.</p>
   <div class="tagline">See what your site <em>could look like.</em></div>
   <button class="cta-btn-scroll" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">
     <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-    Get Your Free Mockup
+    Get Your Free Homepage
   </button>
   <div style="margin-top:1rem;font-size:0.65rem;color:rgba(255,255,255,0.25)">or call <a href="tel:6822313202" style="color:var(--ac);text-decoration:none;font-weight:600;opacity:0.7">(682) 231-3202</a></div>
 </div>
 
 <!-- ════════════════ FOOTER ════════════════ -->
+
 <footer>
   &copy; 2026 TMN Creative &middot; True Margin North LLC &middot; <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a>
 </footer>
 
 <!-- ════════════════ STICKY MOBILE CTA ════════════════ -->
+
 <div class="sticky-cta" id="stickyCta">
   <div class="sticky-cta-text">Free, no obligation</div>
-  <button class="sticky-cta-btn" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Get My Free Mockup →</button>
+  <button class="sticky-cta-btn" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Build My Free Homepage →</button>
 </div>
 
 <script>
