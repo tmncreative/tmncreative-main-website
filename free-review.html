@@ -124,7 +124,7 @@
     @media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms !important;transition-duration:0.01ms !important}.r{opacity:1;transform:none}.hero h1,.hero-sub,.hero-quote,.trust{opacity:1;animation:none}}
 
     /* ── BEFORE/AFTER SLIDER ── */
-    .ba-wrap{max-width:340px;margin:0 auto 0.5rem;padding:0 1.5rem}
+    .ba-wrap{max-width:440px;margin:0 auto 0.75rem;padding:0 1.5rem}@media(min-width:600px){.ba-wrap{max-width:680px}}
     .ba-title{font-size:0.55rem;font-weight:700;color:var(--tx2);text-align:center;margin-bottom:0.25rem;text-transform:uppercase;letter-spacing:0.06em}
     .ba-title span{color:var(--ac)}
     .ba-pair{position:relative;width:100%;border-radius:8px;overflow:hidden;box-shadow:0 6px 20px rgba(15,23,42,0.1);aspect-ratio:2/1;touch-action:none}
@@ -196,13 +196,12 @@
 <div class="form-section" id="form-section">
   <div class="form-label">
     <h2>Get your free homepage</h2>
-    <p>Takes 30 seconds. We deliver in 48-72 hours.</p>
-
+    
   </div>
 
   <!-- Before/After Slider: Diamond H Irrigation -->
   <div class="ba-wrap r">
-    <p class="ba-title">See a real before &amp; after<br><span>Diamond H Irrigation</span></p>
+    <p class="ba-title">See a real before &amp; after &mdash; <span>Diamond H Irrigation</span></p>
     <div class="ba-pair" data-ba>
       <img class="ba-before" src="images/dh-after.jpg" alt="Diamond H Irrigation website after TMN Creative redesign" width="900" height="632" loading="lazy" />
       <img class="ba-after" src="images/dh-before.jpg" alt="Diamond H Irrigation website before TMN Creative" width="900" height="632" loading="lazy" />
@@ -221,7 +220,7 @@
       <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email" /></div>
       <div class="fg"><label for="website">Current Website (optional)</label><input type="text" id="website" name="website" placeholder="yourcompany.com" /></div>
       <div class="fg"><label for="business-type">What type of business?</label><select id="business-type" name="business-type" style="appearance:none;cursor:pointer;background-image:url(&quot;data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%2394A3B8' stroke-width='1.2'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 0.85rem center"><option value="" disabled selected>Select one</option><option value="home-services">Home Services</option><option value="contractor">Contractor / Construction</option><option value="healthcare">Healthcare / Dental</option><option value="fitness">Fitness / Wellness</option><option value="professional-services">Professional Services</option><option value="restaurant-food">Restaurant / Food</option><option value="other">Other</option></select></div>
-      <button type="submit" class="form-sub">Build My Free Homepage →</button>
+      <button type="submit" class="form-sub">Send me the mockup →</button>
     </form>
     <div class="form-micro"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>No spam. No credit card. We build it, you decide.</div>
     <div style="text-align:center;margin-top:0.4rem;font-size:0.6rem;color:var(--tx3)">Rather talk first? <a href="https://api.leadconnectorhq.com/widget/booking/FOV83x3fk6V38Idj3fZi" target="_blank" rel="noopener" style="color:var(--ac);text-decoration:none;font-weight:600">Book a 15-min call</a></div>
@@ -255,7 +254,7 @@
 <!-- ════════════════ STICKY MOBILE CTA ════════════════ -->
 <div class="sticky-cta" id="stickyCta">
   <div class="sticky-cta-text">Free, no obligation</div>
-  <button class="sticky-cta-btn" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Build My Free Homepage →</button>
+  <button class="sticky-cta-btn" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Send me the mockup →</button>
 </div>
 
 <script>
