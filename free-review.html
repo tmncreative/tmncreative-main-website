@@ -49,24 +49,24 @@
     .trust-dot{width:4px;height:4px;border-radius:50%;background:var(--ac);opacity:0.8;flex-shrink:0}
 
     /* ── FORM SECTION ── */
-    .form-section{padding:1rem 1.5rem 2rem;position:relative;background:var(--bg)}
+    .form-section{padding:0.5rem 1.5rem 1.25rem;position:relative;background:var(--bg)}
     .form-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:48px;height:3px;background:var(--acG);border-radius:2px;opacity:0.7}
-    .form-label{text-align:center;margin-bottom:0.75rem}
+    .form-label{text-align:center;margin-bottom:0.35rem}
     .form-label h2{font-family:var(--fn);font-size:1.1rem;font-weight:800;color:var(--dk);letter-spacing:-0.03em;margin-bottom:0.2rem}
     .form-label p{font-size:0.7rem;color:var(--tx3)}
-    .form-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:1.15rem;box-shadow:0 12px 40px rgba(15,23,42,0.06),0 1px 3px rgba(15,23,42,0.03);max-width:440px;margin:0 auto}
-    .fg{margin-bottom:0.45rem}
-    .fg label{display:block;font-size:0.56rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--tx2);margin-bottom:0.22rem}
-    .fg input,.fg select,.fg textarea{width:100%;padding:0.65rem 0.85rem;font-family:var(--fn);font-size:16px;color:var(--dk);background:var(--bg2);border:1px solid var(--ln);border-radius:10px;outline:none;transition:all 0.25s var(--e)}
+    .form-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:0.7rem;box-shadow:0 12px 40px rgba(15,23,42,0.06),0 1px 3px rgba(15,23,42,0.03);max-width:440px;margin:0 auto}
+    .fg{margin-bottom:0.28rem}
+    .fg label{display:block;font-size:0.56rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--tx2);margin-bottom:0.15rem}
+    .fg input,.fg select,.fg textarea{width:100%;padding:0.45rem 0.75rem;font-family:var(--fn);font-size:16px;color:var(--dk);background:var(--bg2);border:1px solid var(--ln);border-radius:10px;outline:none;transition:all 0.25s var(--e)}
     .fg input::placeholder,.fg textarea::placeholder{color:var(--tx3)}
     .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--ac);background:#fff;box-shadow:0 0 0 4px var(--ac3)}
     .fg textarea{min-height:52px;resize:vertical}
     .hidden{display:none}
-    .form-sub{width:100%;font-family:var(--fn);font-size:0.9rem;font-weight:700;color:var(--dk3);background:var(--acG);border:none;padding:1.05rem;cursor:pointer;border-radius:10px;transition:all 0.3s var(--e);margin-top:0.25rem;box-shadow:0 4px 20px rgba(198,162,74,0.3),0 0 0 1px rgba(198,162,74,0.1);position:relative;overflow:hidden;letter-spacing:-0.01em}
+    .form-sub{width:100%;font-family:var(--fn);font-size:0.875rem;font-weight:700;color:var(--dk3);background:var(--acG);border:none;padding:0.75rem;cursor:pointer;border-radius:10px;transition:all 0.3s var(--e);margin-top:0.25rem;box-shadow:0 4px 20px rgba(198,162,74,0.3),0 0 0 1px rgba(198,162,74,0.1);position:relative;overflow:hidden;letter-spacing:-0.01em}
     .form-sub::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);animation:shimmer 5s ease-in-out infinite 1.5s}
     .form-sub:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(198,162,74,0.4)}
     .form-sub:active{transform:translateY(0)}
-    .form-micro{text-align:center;font-size:0.58rem;color:var(--tx3);margin-top:0.5rem;line-height:1.5}
+    .form-micro{text-align:center;font-size:0.58rem;color:var(--tx3);margin-top:0.35rem;line-height:1.5}
     .form-micro svg{width:10px;height:10px;vertical-align:-1px;stroke:var(--tx3);stroke-width:2;fill:none;margin-right:2px}
 
     /* ── VALUE PROPS (compact) ── */
@@ -122,6 +122,20 @@
     .r{opacity:0;transform:translateY(18px);transition:opacity 0.6s var(--e),transform 0.6s var(--e)}
     .r.v{opacity:1;transform:translateY(0)}
     @media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms !important;transition-duration:0.01ms !important}.r{opacity:1;transform:none}.hero h1,.hero-sub,.hero-quote,.trust{opacity:1;animation:none}}
+
+    /* ── BEFORE/AFTER SLIDER ── */
+    .ba-wrap{max-width:340px;margin:0 auto 0.5rem;padding:0 1.5rem}
+    .ba-title{font-size:0.55rem;font-weight:700;color:var(--tx2);text-align:center;margin-bottom:0.25rem;text-transform:uppercase;letter-spacing:0.06em}
+    .ba-title span{color:var(--ac)}
+    .ba-pair{position:relative;width:100%;border-radius:8px;overflow:hidden;box-shadow:0 6px 20px rgba(15,23,42,0.1);aspect-ratio:2/1;touch-action:none}
+    .ba-pair img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left top;pointer-events:none;display:block}
+    .ba-pair .ba-after{clip-path:inset(0 0 0 50%)}
+    .ba-pair .ba-handle{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:3px;background:rgba(255,255,255,0.9);z-index:4;pointer-events:none;box-shadow:0 0 8px rgba(0,0,0,0.3)}
+    .ba-pair .ba-handle::after{content:'◀ ▶';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;font-size:9px;color:#64748B;letter-spacing:2px;z-index:5;text-indent:0}
+    .ba-pair input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:col-resize;z-index:6;margin:0;-webkit-appearance:none;appearance:none}
+    .ba-lbl{position:absolute;top:10px;padding:3px 8px;font-size:0.5rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;border-radius:4px;z-index:3;pointer-events:none;transition:opacity 0.2s}
+    .ba-lbl.before{left:10px;background:rgba(15,23,42,0.7);color:rgba(255,255,255,0.8)}
+    .ba-lbl.after{right:10px;background:var(--ac);color:var(--dk3)}
   </style>
 
   <!-- Plausible Analytics -->
@@ -168,7 +182,7 @@
 
   <div class="hero">
     <h1>We'll design you a new homepage. <em>For free.</em></h1>
-    <p class="hero-sub">See what your site could look like before you spend a dollar. No call needed. No commitment.</p>
+    <p class="hero-sub">See what your website could look like before you spend a dollar. No call needed. No commitment.</p>
   </div>
 
   <div class="trust">
@@ -183,28 +197,42 @@
   <div class="form-label">
     <h2>Get your free mockup</h2>
     <p>Takes 30 seconds. We deliver in 48-72 hours.</p>
-    <div style="max-width:400px;margin:0.6rem auto 0;padding:0.5rem 0.75rem;background:rgba(198,162,74,0.06);border:1px solid rgba(198,162,74,0.1);border-radius:8px;display:flex;align-items:center;gap:0.5rem">
+    <div style="max-width:400px;margin:0.4rem auto 0;padding:0.4rem 0.65rem;background:rgba(198,162,74,0.06);border:1px solid rgba(198,162,74,0.1);border-radius:8px;display:flex;align-items:center;gap:0.5rem">
       <span style="color:var(--ac);font-size:0.55rem;letter-spacing:1px;flex-shrink:0">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
       <span style="font-size:0.6rem;color:var(--tx2);line-height:1.4">"Had something in my inbox in 48 hours that was better than anything 3 other agencies showed me." <strong style="color:var(--tx)">Cody E.</strong></span>
     </div>
   </div>
+
+  <!-- Before/After Slider: Diamond H Irrigation -->
+  <div class="ba-wrap r">
+    <p class="ba-title">Real client result &mdash; <span>Diamond H Irrigation</span></p>
+    <div class="ba-pair" data-ba>
+      <img class="ba-before" src="images/dh-after.jpg" alt="Diamond H Irrigation website after TMN Creative redesign" width="900" height="632" loading="lazy" />
+      <img class="ba-after" src="images/dh-before.jpg" alt="Diamond H Irrigation website before TMN Creative" width="900" height="632" loading="lazy" />
+      <div class="ba-handle"></div>
+      <span class="ba-lbl before">Before</span>
+      <span class="ba-lbl after">After</span>
+      <input type="range" min="0" max="100" value="50" aria-label="Before and after slider" />
+    </div>
+  </div>
+
   <div class="form-card">
-    <form action='/success' method='POST' name='tmn-meta-intake'>
+    <form name="tmn-meta-intake" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="tmn-meta-intake" />
       <p class="hidden"><label>Ignore:<input name="bot-field" /></label></p>
       <div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="John Smith" required autocomplete="name" /></div>
       <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email" /></div>
       <div class="fg"><label for="website">Current Website (optional)</label><input type="text" id="website" name="website" placeholder="yourcompany.com" /></div>
-      <div class="fg"><label for="business-type">What type of business?</label><select id="business-type" name="business-type" style="appearance:none;cursor:pointer;background-image:url(&quot;data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%2394A3B8' stroke-width='1.2'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 0.85rem center"><option value="" disabled selected>Select one</option><option value="home-services">Home Services</option><option value="contractor">Contractor / Trades</option><option value="healthcare">Healthcare / Medical</option><option value="fitness">Fitness / Wellness</option><option value="professional-services">Professional Services</option><option value="real-estate">Real Estate</option><option value="food-hospitality">Food / Hospitality</option><option value="retail">Retail / E-commerce</option><option value="other">Other</option></select></div>
+      <div class="fg"><label for="business-type">What type of business?</label><select id="business-type" name="business-type" style="appearance:none;cursor:pointer;background-image:url(&quot;data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%2394A3B8' stroke-width='1.2'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 0.85rem center"><option value="" disabled selected>Select one</option><option value="home-services">Home Services</option><option value="contractor">Contractor / Construction</option><option value="healthcare">Healthcare / Dental</option><option value="fitness">Fitness / Wellness</option><option value="professional-services">Professional Services</option><option value="restaurant-food">Restaurant / Food</option><option value="other">Other</option></select></div>
       <button type="submit" class="form-sub">Build My Free Homepage →</button>
     </form>
     <div class="form-micro"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>No spam. No credit card. We build it, you decide.</div>
-    <div style="text-align:center;margin-top:0.6rem;font-size:0.6rem;color:var(--tx3)">Rather talk first? <a href="https://api.leadconnectorhq.com/widget/booking/FOV83x3fk6V38Idj3fZi" target="_blank" rel="noopener" style="color:var(--ac);text-decoration:none;font-weight:600">Book a 15-min call</a></div>
+    <div style="text-align:center;margin-top:0.4rem;font-size:0.6rem;color:var(--tx3)">Rather talk first? <a href="https://api.leadconnectorhq.com/widget/booking/FOV83x3fk6V38Idj3fZi" target="_blank" rel="noopener" style="color:var(--ac);text-decoration:none;font-weight:600">Book a 15-min call</a></div>
   </div>
 
   <!-- Social proof right under form -->
-  <div style="max-width:440px;margin:0.75rem auto 0">
-    <div style="text-align:center;margin-bottom:0.6rem"><span style="color:var(--ac);font-size:0.85rem;letter-spacing:2px">&#9733;&#9733;&#9733;&#9733;&#9733;</span><div style="font-size:0.6rem;font-weight:600;color:var(--tx3)">5.0 on <a href="https://maps.app.goo.gl/hf37L4ca44xjHiKe8" target="_blank" rel="noopener" style="color:var(--ac);border-bottom:1px solid rgba(198,162,74,0.25);text-decoration:none">Google Reviews</a></div></div>
+  <div style="max-width:440px;margin:0.4rem auto 0">
+    <div style="text-align:center;margin-bottom:0.4rem"><span style="color:var(--ac);font-size:0.85rem;letter-spacing:2px">&#9733;&#9733;&#9733;&#9733;&#9733;</span><div style="font-size:0.6rem;font-weight:600;color:var(--tx3)">5.0 on <a href="https://maps.app.goo.gl/hf37L4ca44xjHiKe8" target="_blank" rel="noopener" style="color:var(--ac);border-bottom:1px solid rgba(198,162,74,0.25);text-decoration:none">Google Reviews</a></div></div>
     <div class="test-card"><div class="tc-init">CE</div><div class="tc-body"><div class="tc-quote">"Talked to 3 agencies before TMN. Every one quoted 8 to 12 weeks and $10K+. Trevor had something in my inbox in 48 hours that was better than anything they showed me."</div><div class="tc-attr">Cody E. &middot; Elmore Home Services, Dallas</div></div></div>
     <div class="test-card"><div class="tc-init">JM</div><div class="tc-body"><div class="tc-quote">"Not a tech person. Just needed something that looked clean and made my business look legit. Had us live in under a week."</div><div class="tc-attr">Jose M. &middot; Tony's Lawn &amp; Tree, Fort Worth</div></div></div>
     <div class="test-card"><div class="tc-init">JT</div><div class="tc-body"><div class="tc-quote">"Trevor and Taylor deliver at a level that makes you look like a much bigger operation than you are."</div><div class="tc-attr">Jonathan T. &middot; QC Atlantic</div></div></div>
@@ -236,6 +264,37 @@
 <script>
 /* Reveal on scroll */
 try{const o=new IntersectionObserver((e)=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add('v'),o.unobserve(e.target))})},{threshold:0.1});document.querySelectorAll('.r').forEach(e=>o.observe(e))}catch(e){}
+
+/* Before/After Slider — Tony's pattern */
+try{
+  document.querySelectorAll('[data-ba]').forEach(function(pair){
+    var input=pair.querySelector('input[type=range]');
+    var afterImg=pair.querySelector('.ba-after');
+    var handle=pair.querySelector('.ba-handle');
+    var lblBefore=pair.querySelector('.ba-lbl.before');
+    var lblAfter=pair.querySelector('.ba-lbl.after');
+    function update(val){
+      var pct=100-val;
+      afterImg.style.clipPath='inset(0 0 0 '+pct+'%)';
+      handle.style.left=val+'%';
+      if(lblBefore)lblBefore.style.opacity=val>85?0:1;
+      if(lblAfter)lblAfter.style.opacity=val<15?0:1;
+    }
+    update(50);
+    input.addEventListener('input',function(){update(this.value);});
+    var dragging=false;
+    pair.addEventListener('touchstart',function(){dragging=true;},{passive:true});
+    pair.addEventListener('touchmove',function(e){
+      if(!dragging)return;
+      var rect=pair.getBoundingClientRect();
+      var x=e.touches[0].clientX-rect.left;
+      var pct=Math.max(0,Math.min(100,(x/rect.width)*100));
+      input.value=pct;
+      update(pct);
+    },{passive:true});
+    pair.addEventListener('touchend',function(){dragging=false;},{passive:true});
+  });
+}catch(e){}
 
 /* Sticky CTA: show when form is not visible */
 try{
