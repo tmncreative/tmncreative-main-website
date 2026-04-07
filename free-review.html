@@ -123,6 +123,15 @@
     .r.v{opacity:1;transform:translateY(0)}
     @media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms !important;transition-duration:0.01ms !important}.r{opacity:1;transform:none}.hero h1,.hero-sub,.hero-quote,.trust{opacity:1;animation:none}}
 
+    /* ── HOW IT WORKS ── */
+    .steps{max-width:440px;margin:0 auto 1rem;padding:0 1.5rem}
+    .steps-label{font-size:0.58rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--tx3);text-align:center;margin-bottom:0.6rem}
+    .steps-grid{display:flex;flex-direction:column;gap:0.45rem}
+    .step{display:flex;align-items:flex-start;gap:0.75rem;padding:0.7rem 0.85rem;background:var(--bg2);border:1px solid var(--ln);border-radius:10px}
+    .step-num{width:24px;height:24px;border-radius:50%;background:var(--acG);display:flex;align-items:center;justify-content:center;font-size:0.6rem;font-weight:800;color:var(--dk3);flex-shrink:0;margin-top:1px}
+    .step-body h4{font-size:0.7rem;font-weight:700;color:var(--dk);margin-bottom:0.1rem}
+    .step-body p{font-size:0.62rem;color:var(--tx2);line-height:1.5}
+
     /* ── BEFORE/AFTER SLIDER ── */
     .ba-wrap{max-width:440px;margin:0 auto 0.75rem;padding:0 1.5rem}
     .ba-title{font-size:0.55rem;font-weight:700;color:var(--tx2);text-align:center;margin-bottom:0.25rem;text-transform:uppercase;letter-spacing:0.06em}
@@ -224,6 +233,34 @@
     </form>
     <div class="form-micro"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>No spam. No credit card. We build it, you decide.</div>
     <div style="text-align:center;margin-top:0.4rem;font-size:0.6rem;color:var(--tx3)">Rather talk first? <a href="https://api.leadconnectorhq.com/widget/booking/FOV83x3fk6V38Idj3fZi" target="_blank" rel="noopener" style="color:var(--ac);text-decoration:none;font-weight:600">Book a 15-min call</a></div>
+  </div>
+
+  <!-- How it works -->
+  <div class="steps r">
+    <p class="steps-label">What happens next</p>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Fill out the 30-second form</h4>
+          <p>Tell us your business name and type. That's all we need to get started.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>We build your free homepage</h4>
+          <p>We design a custom homepage for your business. No templates. Delivered in 48-72 hours.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>You decide if you want to move forward</h4>
+          <p>See the work first. No commitment, no pressure, no credit card.</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Social proof right under form -->
