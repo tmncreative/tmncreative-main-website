@@ -199,6 +199,32 @@
     .adhoc-unit{font-size:0.65rem;font-weight:500;color:rgba(255,255,255,0.25);display:block;text-align:right;margin-top:0.1rem}
     @media(max-width:600px){.adhoc{flex-direction:column;text-align:center;padding:1.5rem;gap:0.75rem;border-radius:12px}.adhoc-unit{text-align:center}}
 
+    /* PLATFORM COMPARE */
+    .plat-sec{padding:0 2rem 4.5rem}
+    .plat-wrap{max-width:1060px;margin:0 auto}
+    .plat-head{text-align:center;margin-bottom:2.5rem}
+    .plat-head h2{font-size:1.4rem;font-weight:800;letter-spacing:-0.03em;color:var(--dk);margin-bottom:0.4rem}
+    .plat-head p{font-size:0.85rem;color:var(--tx2);max-width:560px;margin:0 auto;line-height:1.7}
+    .plat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+    .plat-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:1.75rem;text-align:center;position:relative}
+    .plat-card.you{border-color:var(--ac);background:rgba(198,162,74,0.04)}
+    .plat-card.you::before{content:'Your Plan';position:absolute;top:-10px;left:50%;transform:translateX(-50%);font-size:0.55rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#fff;background:var(--ac);padding:0.2rem 0.75rem;border-radius:100px}
+    .plat-name{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--tx3);margin-bottom:0.75rem}
+    .plat-card.you .plat-name{color:var(--ac)}
+    .plat-price{font-family:var(--fs);font-size:1.75rem;font-weight:700;color:var(--dk);letter-spacing:-0.02em}
+    .plat-price span{font-size:0.75rem;font-weight:400;color:var(--tx3);letter-spacing:0}
+    .plat-note{font-size:0.72rem;color:var(--tx3);margin-top:0.35rem;line-height:1.5}
+    .plat-div{height:1px;background:var(--ln);margin:1.25rem 0}
+    .plat-card.you .plat-div{background:rgba(198,162,74,0.15)}
+    .plat-feats{list-style:none;text-align:left;display:flex;flex-direction:column;gap:0.5rem}
+    .plat-feats li{font-size:0.78rem;color:var(--tx2);display:flex;align-items:flex-start;gap:0.5rem;line-height:1.5}
+    .plat-feats li .ico{flex-shrink:0;width:14px;height:14px;margin-top:2px}
+    .plat-feats .yes{color:#22C55E}.plat-feats .no{color:var(--tx3)}
+    .plat-card.you .plat-feats li{color:var(--dk)}
+    .plat-bottom{font-size:0.78rem;color:var(--tx2);line-height:1.7;text-align:center;margin-top:2rem;max-width:640px;margin-left:auto;margin-right:auto}
+    @media(max-width:800px){.plat-grid{grid-template-columns:1fr 1fr;gap:0.75rem}}
+    @media(max-width:500px){.plat-grid{grid-template-columns:1fr}}
+
     /* FAQ */
     .faq-sec{padding:0 2rem 4.5rem}
     .faq-wrap{max-width:660px;margin:0 auto}
@@ -429,14 +455,14 @@
           <div class="care-price"><span class="care-amt">$39</span><span class="care-per">/mo</span></div>
           <p class="care-desc">Hosting and peace of mind.</p>
           <div class="care-div"></div>
-          <ul class="care-feats"><li>Fast, reliable hosting</li><li>Security monitoring</li><li>Uptime monitoring</li><li>Updates billed at $125/hr</li></ul>
+          <ul class="care-feats"><li>Fast, reliable hosting</li><li>Security monitoring</li><li>Uptime monitoring</li><li>Updates billed at $140/hr</li></ul>
           <a href="/#contact" class="cbtn cbtn-o">Get Started</a>
         </div>
         <div class="care-card pop">
           <div class="card-tag">Most Popular</div>
           <div class="care-label">Standard</div>
           <div class="care-price"><span class="care-amt">$99</span><span class="care-per">/mo</span></div>
-          <p class="care-desc">Hosting plus hands-on support.</p>
+          <p class="care-desc">Best for quarterly updates.</p>
           <div class="care-div"></div>
           <ul class="care-feats"><li>Fast, reliable hosting</li><li>Security monitoring</li><li>Uptime monitoring</li><li>2 hrs/mo content and copy updates (unused hours roll over, up to 12 hrs)</li><li>Priority email support</li><li>Monthly backup</li></ul>
           <a href="/#contact" class="cbtn cbtn-g">Get Started</a>
@@ -444,15 +470,15 @@
         <div class="care-card">
           <div class="care-label">Priority</div>
           <div class="care-price"><span class="care-amt">$179</span><span class="care-per">/mo</span></div>
-          <p class="care-desc">Full-service, actively maintained.</p>
+          <p class="care-desc">Best for monthly updates and ongoing changes.</p>
           <div class="care-div"></div>
-          <ul class="care-feats"><li>Fast, reliable hosting</li><li>Security monitoring</li><li>Uptime monitoring</li><li>4 hrs/mo updates (unused hours roll over, up to 24 hrs)</li><li>Priority email support</li><li>Monthly backup</li><li>SEO tweaks included</li></ul>
+          <ul class="care-feats"><li>Fast, reliable hosting</li><li>Security monitoring</li><li>Uptime monitoring</li><li>4 hrs/mo updates (unused hours roll over, up to 24 hrs)</li><li>Priority email support</li><li>Monthly backup</li><li>SEO tweaks included</li><li>Monthly analytics reporting</li></ul>
           <a href="/#contact" class="cbtn cbtn-dk">Get Started</a>
         </div>
       </div>
       <div class="adhoc r">
         <div><h4>Need a one-off change?</h4><p>Not on a plan? We handle updates at a flat hourly rate.</p></div>
-        <div><div class="adhoc-price">$125</div><span class="adhoc-unit">per hour</span></div>
+        <div><div class="adhoc-price">$140</div><span class="adhoc-unit">per hour</span></div>
       </div>
       <div class="cmp r">
         <div class="sh"><h2>Compare care plans.</h2><p>Everything side by side.</p></div>
@@ -462,14 +488,80 @@
           <tr><td>Uptime monitoring</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr><td>Monthly backup</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr><td>Priority email support</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
-          <tr><td>Content updates</td><td><span class="val">$125/hr</span></td><td class="hi"><span class="val">2 hrs/mo</span></td><td><span class="val">4 hrs/mo</span></td></tr>
+          <tr><td>Content updates</td><td><span class="val">$140/hr</span></td><td class="hi"><span class="val">2 hrs/mo</span></td><td><span class="val">4 hrs/mo</span></td></tr>
           <tr><td>Unused hours roll over</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="val">Up to 12 hrs</span></td><td><span class="val">Up to 24 hrs</span></td></tr>
           <tr><td>SEO tweaks</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="n">&mdash;</span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>Analytics reporting</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="n">&mdash;</span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr><td>Monthly price</td><td><span class="val">$39</span></td><td class="hi"><span class="val">$99</span></td><td><span class="val">$179</span></td></tr>
           <tr class="cta-r"><td></td><td><a href="/#contact" class="tcta tcta-o">Get Started</a></td><td class="hi"><a href="/#contact" class="tcta tcta-g">Get Started</a></td><td><a href="/#contact" class="tcta tcta-dk">Get Started</a></td></tr>
         </tbody></table></div>
         <p style="text-align:center;font-size:0.78rem;color:var(--tx3);margin-top:1.25rem">No contracts. Cancel anytime. You own your site outright.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="plat-sec r">
+    <div class="plat-wrap">
+      <div class="plat-head">
+        <h2>What you actually get for $39/mo</h2>
+        <p>Platforms like Wix and Squarespace charge about the same and hand you a login. We handle everything for you.</p>
+      </div>
+      <div class="plat-grid">
+
+        <div class="plat-card">
+          <div class="plat-name">Squarespace</div>
+          <div class="plat-price">$300<span>/yr</span></div>
+          <div class="plat-note">Business plan, billed annually</div>
+          <div class="plat-div"></div>
+          <ul class="plat-feats">
+            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>You build and maintain everything yourself</li>
+            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Template-based, limited customization</li>
+            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Generic support tickets</li>
+            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Your site lives on their platform</li>
+          </ul>
+        </div>
+
+        <div class="plat-card">
+          <div class="plat-name">Wix</div>
+          <div class="plat-price">~$40<span>/mo</span></div>
+          <div class="plat-note">Business plan</div>
+          <div class="plat-div"></div>
+          <ul class="plat-feats">
+            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>You build and maintain everything yourself</li>
+            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Drag-and-drop builder, cookie-cutter results</li>
+            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Generic support tickets</li>
+            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Your site lives on their platform</li>
+          </ul>
+        </div>
+
+        <div class="plat-card">
+          <div class="plat-name">WordPress.com</div>
+          <div class="plat-price">$40<span>/mo</span></div>
+          <div class="plat-note">Business plan, billed annually</div>
+          <div class="plat-div"></div>
+          <ul class="plat-feats">
+            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>You build and maintain everything yourself</li>
+            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Plugin updates and security are on you</li>
+            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Generic support tickets</li>
+            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Locked into their ecosystem</li>
+          </ul>
+        </div>
+
+        <div class="plat-card you">
+          <div class="plat-name">TMN Essential</div>
+          <div class="plat-price">$39<span>/mo</span></div>
+          <div class="plat-note">Boutique care, real humans</div>
+          <div class="plat-div"></div>
+          <ul class="plat-feats">
+            <li><span class="ico yes"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>We handle hosting, security, and uptime for you</li>
+            <li><span class="ico yes"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>Custom-built site, no templates</li>
+            <li><span class="ico yes"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>Text or email a real person when you need something</li>
+            <li><span class="ico yes"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>You own your code and your domain</li>
+          </ul>
+        </div>
+
+      </div>
+      <p class="plat-bottom">These platforms sell you a tool and leave you to figure it out. We give you a finished product and take care of it so you can focus on your business.</p>
     </div>
   </section>
 
@@ -481,7 +573,7 @@
       <div class="faq-item r"><div class="faq-q"><h4>Do I need a new website to use the conversion system?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>No. The conversion system plugs into your existing site. We connect it to your current forms and phone number. A strong site paired with strong follow-up is where the results compound, which is why the bundle exists.</p></div></div>
       <div class="faq-item r"><div class="faq-q"><h4>What is the monthly fee for on the conversion plans?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>It covers the platform that powers your texts, emails, and automations, plus ongoing optimization and monthly reporting. 90-day minimum, then month-to-month. No long-term contracts.</p></div></div>
       <div class="faq-item r"><div class="faq-q"><h4>Can I cancel site care anytime?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Yes. No contracts, no cancellation fees. You own your site outright regardless of whether you stay on a care plan.</p></div></div>
-      <div class="faq-item r"><div class="faq-q"><h4>Do unused site care hours roll over?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Yes. On Standard, unused hours accumulate up to 12 total. On Priority, up to 24. So if you have a quiet few months and then need a bigger update, you have the hours banked. Anything beyond your balance is billed at $125/hr, and we always let you know before going over.</p></div></div>
+      <div class="faq-item r"><div class="faq-q"><h4>Do unused site care hours roll over?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Yes. On Standard, unused hours accumulate up to 12 total. On Priority, up to 24. So if you have a quiet few months and then need a bigger update, you have the hours banked. Anything beyond your balance is billed at $140/hr, and we always let you know before going over.</p></div></div>
       <div class="faq-item r"><div class="faq-q"><h4>Why a boutique studio instead of an agency?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Speed and direct access. You work with the founders, not account managers. That keeps projects focused and timelines short.</p></div></div>
     </div>
   </section>
