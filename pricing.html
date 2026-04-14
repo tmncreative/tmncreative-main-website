@@ -4,20 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pricing | TMN Creative</title>
-  <meta name="description" content="TMN Creative pricing for premium websites, intake and follow-up systems, and ongoing site care. Scoped on a call, delivered in days." />
-  <meta property="og:title" content="Pricing | TMN Creative" />
-  <meta property="og:description" content="Agency-grade websites at a fraction of the cost and timeline. First review in 72 hours. 100% satisfaction guaranteed." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tmncreative.com/pricing" />
-  <meta property="og:image" content="https://tmncreative.com/images/og.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="TMN Creative pricing for premium websites, lead conversion systems, and ongoing site care. Scoped on a call, delivered in days." />
   <meta name="theme-color" content="#0B1120" />
   <link rel="canonical" href="https://tmncreative.com/pricing" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet" />
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
     :root{
@@ -27,7 +21,7 @@
       --tx:#1E293B;--tx2:#64748B;--tx3:#94A3B8;
       --ln:#E2E8F0;
       --fn:'Plus Jakarta Sans',system-ui,sans-serif;
-      --fs:'Lora',Georgia,serif;
+      --fs:'Fraunces',Georgia,serif;
       --e:cubic-bezier(0.16,1,0.3,1);
       --g:#22C55E;--gbg:rgba(34,197,94,0.08);
       --nav-h:60px;--tab-h:52px;
@@ -91,7 +85,8 @@
     @media(max-width:600px){.psec{padding:3rem 1.25rem 3.5rem}.sh{margin-bottom:2.5rem;text-align:left}.sh p{margin:0}.sh h2{font-size:1.5rem}}
 
     /* CARDS */
-    .cards{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:3.5rem}
+    .cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;margin-bottom:3.5rem}
+    .cards.two{grid-template-columns:1fr 1fr}
     .card{background:var(--bg);border:1px solid var(--ln);border-radius:18px;padding:2.25rem;display:flex;flex-direction:column;position:relative;transition:all 0.35s var(--e)}
     .card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(15,23,42,0.07)}
     .card.pop{border-color:transparent;box-shadow:0 2px 16px rgba(198,162,74,0.1);background:var(--bg);position:relative}
@@ -113,7 +108,8 @@
     .cbtn-g:hover{background:var(--ac2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(198,162,74,0.22)}
     .cbtn-dk{background:var(--dk);color:#fff}.cbtn-dk:hover{background:var(--dk2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(15,23,42,0.18)}
     .cbtn-o{border:1px solid var(--ln);color:var(--tx2);background:transparent}.cbtn-o:hover{border-color:var(--tx3);color:var(--dk);background:var(--bg2)}
-    @media(max-width:900px){.cards{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto}}
+    @media(max-width:1080px){.cards{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto}.cards.two{grid-template-columns:1fr}}
+    @media(min-width:1081px){.cards.two{max-width:none}}
     @media(max-width:600px){.card{padding:1.75rem;border-radius:14px}.card h3{font-size:1.3rem}.cards{gap:1rem}}
 
     /* BUNDLE */
@@ -160,14 +156,10 @@
     @media(max-width:600px){.tcta{min-height:44px;padding:0.65rem 1rem;font-size:0.68rem}}
     @media(max-width:700px){
       .cmp{margin-left:-0.25rem;margin-right:-0.25rem}
-      .tw{border-radius:12px;overflow:hidden}
-      table.t{width:100%;min-width:0}
-      .t th,.t td{padding:0.6rem 0.5rem;font-size:0.7rem}
-      .t th:first-child,.t td:first-child{padding-left:0.75rem;min-width:0;width:38%;position:static;font-size:0.68rem}
-      .t th:not(:first-child),.t td:not(:first-child){width:auto;min-width:0;font-size:0.68rem}
-      .t th.hi::after{height:2px}
-      .tcat td{font-size:0.55rem !important;padding:0.5rem 0.5rem !important}
-      .cta-r td{padding:0.75rem 0.35rem !important}
+      .tw{border-radius:12px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+      table.t{min-width:520px}
+      .t th,.t td{padding:0.65rem 0.65rem;font-size:0.75rem}
+      .t th:first-child,.t td:first-child{padding-left:1rem;min-width:160px;position:sticky;left:0;background:inherit;z-index:2}
       .t tr:hover td:first-child{background:var(--bg2)}
       .t .sep td:first-child{background:var(--bg3)}
     }
@@ -198,32 +190,6 @@
     .adhoc-price{font-family:var(--fs);font-size:2rem;font-weight:700;color:var(--ac);white-space:nowrap;line-height:1}
     .adhoc-unit{font-size:0.65rem;font-weight:500;color:rgba(255,255,255,0.25);display:block;text-align:right;margin-top:0.1rem}
     @media(max-width:600px){.adhoc{flex-direction:column;text-align:center;padding:1.5rem;gap:0.75rem;border-radius:12px}.adhoc-unit{text-align:center}}
-
-    /* PLATFORM COMPARE */
-    .plat-sec{padding:0 2rem 4.5rem}
-    .plat-wrap{max-width:1060px;margin:0 auto}
-    .plat-head{text-align:center;margin-bottom:2.5rem}
-    .plat-head h2{font-size:1.4rem;font-weight:800;letter-spacing:-0.03em;color:var(--dk);margin-bottom:0.4rem}
-    .plat-head p{font-size:0.85rem;color:var(--tx2);max-width:560px;margin:0 auto;line-height:1.7}
-    .plat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-    .plat-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:1.75rem;text-align:center;position:relative}
-    .plat-card.you{border-color:var(--ac);background:rgba(198,162,74,0.04)}
-    .plat-card.you::before{content:'Your Plan';position:absolute;top:-10px;left:50%;transform:translateX(-50%);font-size:0.55rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#fff;background:var(--ac);padding:0.2rem 0.75rem;border-radius:100px}
-    .plat-name{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--tx3);margin-bottom:0.75rem}
-    .plat-card.you .plat-name{color:var(--ac)}
-    .plat-price{font-family:var(--fs);font-size:1.75rem;font-weight:700;color:var(--dk);letter-spacing:-0.02em}
-    .plat-price span{font-size:0.75rem;font-weight:400;color:var(--tx3);letter-spacing:0}
-    .plat-note{font-size:0.72rem;color:var(--tx3);margin-top:0.35rem;line-height:1.5}
-    .plat-div{height:1px;background:var(--ln);margin:1.25rem 0}
-    .plat-card.you .plat-div{background:rgba(198,162,74,0.15)}
-    .plat-feats{list-style:none;text-align:left;display:flex;flex-direction:column;gap:0.5rem}
-    .plat-feats li{font-size:0.78rem;color:var(--tx2);display:flex;align-items:flex-start;gap:0.5rem;line-height:1.5}
-    .plat-feats li .ico{flex-shrink:0;width:14px;height:14px;margin-top:2px}
-    .plat-feats .yes{color:#22C55E}.plat-feats .no{color:var(--tx3)}
-    .plat-card.you .plat-feats li{color:var(--dk)}
-    .plat-bottom{font-size:0.78rem;color:var(--tx2);line-height:1.7;text-align:center;margin-top:2rem;max-width:640px;margin-left:auto;margin-right:auto}
-    @media(max-width:800px){.plat-grid{grid-template-columns:1fr 1fr;gap:0.75rem}}
-    @media(max-width:500px){.plat-grid{grid-template-columns:1fr}}
 
     /* FAQ */
     .faq-sec{padding:0 2rem 4.5rem}
@@ -270,30 +236,6 @@
     .rd1{transition-delay:0.06s}.rd2{transition-delay:0.12s}.rd3{transition-delay:0.18s}
     @media(prefers-reduced-motion:reduce){.r{opacity:1;transform:none;transition:none}}
   </style>
-  <script async src="https://plausible.io/js/pa-qenXucgzJOGY_zAczSQ6m.js"></script>
-  <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
-  <!-- Google Ads -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18041747908"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18041747908');
-  </script>
-  <!-- Meta Pixel -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1488960412756574');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1488960412756574&ev=PageView&noscript=1"/></noscript>
 </head>
 <body>
 
@@ -334,7 +276,7 @@
   <div class="tab-bar" id="tabBar">
     <div class="tab active" data-sec="websites">Websites</div>
     <div class="tab" data-sec="care">Site Care</div>
-    <div class="tab" data-sec="conversion">Inquiry Systems</div>
+    <div class="tab" data-sec="conversion">Lead Conversion</div>
   </div>
 
   <!-- WEBSITES -->
@@ -345,8 +287,8 @@
         <div class="card">
           <div class="card-label">Starter Refresh</div>
           <h3>Starter Refresh</h3>
-          <div class="card-price">From $1,699</div>
-          <p class="card-desc">A focused homepage upgrade for firms that need to look credible now.</p>
+          <div class="card-price">$1,500</div>
+          <p class="card-desc">A focused homepage upgrade for businesses that need to look credible now.</p>
           <ul class="card-list"><li>Homepage redesign</li><li>Mobile-optimized, fast-loading build</li><li>Copy cleanup and CTA structure</li><li>First review within 72 hours</li></ul>
           <a href="/#contact" class="cbtn cbtn-o">Get a Refresh</a>
         </div>
@@ -354,10 +296,18 @@
           <div class="card-tag">Flagship</div>
           <div class="card-label">Full Site Rebuild</div>
           <h3>Full Site Rebuild</h3>
-          <div class="card-price">From $2,699</div>
+          <div class="card-price">Starting at $2,500</div>
           <p class="card-desc">Complete redesign with messaging, conversion strategy, and SEO foundations.</p>
           <ul class="card-list"><li>Strategic homepage or multi-page redesign</li><li>Messaging and positioning refinement</li><li>Mobile-first, high-performance build</li><li>Conversion flow and CTA optimization</li><li>SEO foundations and schema markup</li><li>First review within 72 hours</li></ul>
           <a href="/#contact" class="cbtn cbtn-g">Start a Rebuild</a>
+        </div>
+        <div class="card">
+          <div class="card-label">Custom</div>
+          <h3>Custom Studio Build</h3>
+          <div class="card-price">Starts at $4,500</div>
+          <p class="card-desc">For professional firms, RIAs, attorneys, CPAs, and architecture practices. When the website needs to match the caliber of the credentials behind it.</p>
+          <ul class="card-list"><li>Custom strategy and editorial design</li><li>Compliance-ready copy and disclosures</li><li>Team bios, credentials, and portfolio sections</li><li>Integrated contact and lead capture</li><li>2-week build timeline from kickoff</li><li>Dedicated founder-led engagement</li></ul>
+          <a href="/studio" class="cbtn cbtn-dk">Request a Conversation</a>
         </div>
       </div>
       <div class="cmp r">
@@ -377,7 +327,7 @@
           <tr><td>SEO foundations</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr><td>Schema markup</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr><td>First review</td><td><span class="val">72 hours</span></td><td class="hi"><span class="val">72 hours</span></td></tr>
-          <tr><td>Price</td><td><span class="val">From $1,699</span></td><td class="hi"><span class="val">From $2,699</span></td></tr>
+          <tr><td>Price</td><td><span class="val">$1,500</span></td><td class="hi"><span class="val">From $2,500</span></td></tr>
           <tr class="cta-r"><td></td><td><a href="/#contact" class="tcta tcta-o">Get a Refresh</a></td><td class="hi"><a href="/#contact" class="tcta tcta-g">Start a Rebuild</a></td></tr>
         </tbody></table></div>
       </div>
@@ -387,23 +337,23 @@
   <!-- LEAD CONVERSION -->
   <section class="psec" id="sec-conversion">
     <div class="wrap">
-      <div class="sh r"><h2>Stop missing the inquiries your site is already earning.</h2><p>Respond faster, follow up automatically, and make it easy for serious prospects to reach you.</p></div>
-      <div class="cards r">
+      <div class="sh r"><h2>Stop losing the leads your site already generates.</h2><p>Respond faster, follow up automatically, close more.</p></div>
+      <div class="cards two r">
         <div class="card">
           <div class="card-label">Essentials</div>
           <h3>Conversion Essentials</h3>
-          <div class="card-price">$1,699 + $297/mo</div>
-          <p class="card-desc">Catch the inquiries your current setup is missing.</p>
-          <ul class="card-list"><li>Missed-call text back in 60 seconds</li><li>Instant form reply</li><li>Inquiry routing and team notifications</li><li>Simple CRM and contact tracking</li><li>Monthly performance report</li></ul>
+          <div class="card-price">$1,500 + $297/mo</div>
+          <p class="card-desc">Catch the leads your current setup is dropping.</p>
+          <ul class="card-list"><li>Missed-call text back in 60 seconds</li><li>Instant form reply</li><li>Lead routing and team notifications</li><li>Simple CRM pipeline</li><li>Monthly performance report</li></ul>
           <a href="/#contact" class="cbtn cbtn-o">Get Essentials</a>
         </div>
         <div class="card pop">
           <div class="card-tag">Most Popular</div>
           <div class="card-label">Full System</div>
-          <h3>Full Intake System</h3>
+          <h3>Full Conversion System</h3>
           <div class="card-price">$3,500 + $497/mo</div>
-          <p class="card-desc">Your entire inquiry-to-client process, handled.</p>
-          <ul class="card-list"><li>Everything in Essentials</li><li>14-day automated follow-up sequences</li><li>Automatic post-engagement review requests</li><li>Chat widget for real-time inquiries</li><li>Win-back campaigns for inactive prospects</li><li>Full reporting dashboard</li></ul>
+          <p class="card-desc">Your entire lead-to-booked-job process, handled.</p>
+          <ul class="card-list"><li>Everything in Essentials</li><li>14-day automated follow-up sequences</li><li>Automatic post-job review requests</li><li>Chat widget for lead capture</li><li>Win-back campaigns for old leads</li><li>Full reporting dashboard</li></ul>
           <a href="/#contact" class="cbtn cbtn-g">Get the Full System</a>
         </div>
       </div>
@@ -412,7 +362,7 @@
         <div>
           <h3>The Full Build</h3>
           <div class="card-price">$5,000 to $7,500 + $497/mo</div>
-          <p>Premium website plus the full intake system. Bundled at a lower setup cost than buying separately.</p>
+          <p>Premium website plus the full conversion system. Bundled at a lower setup cost than buying separately.</p>
           <a href="/#contact" class="cbtn cbtn-g">Start the Full Build</a>
         </div>
         <div>
@@ -428,15 +378,15 @@
           <tr><td>Lead routing and team alerts</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr><td>Website chat widget</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr class="sep"><td colspan="3">Follow-up and Automation</td></tr>
-          <tr><td>CRM and contact tracking</td><td><span class="val">Basic</span></td><td class="hi"><span class="val">Full</span></td></tr>
-          <tr><td>14-day follow-up sequence</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
+          <tr><td>CRM pipeline</td><td><span class="val">Basic</span></td><td class="hi"><span class="val">Full</span></td></tr>
+          <tr><td>14-day lead nurture sequence</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr><td>Automatic review requests</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr><td>Win-back campaigns</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr class="sep"><td colspan="3">Reporting</td></tr>
           <tr><td>Monthly performance report</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr><td>Full reporting dashboard</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr><td>Ongoing optimization</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
-          <tr><td>Setup</td><td><span class="val">$1,699</span></td><td class="hi"><span class="val">$3,500</span></td></tr>
+          <tr><td>Setup</td><td><span class="val">$1,500</span></td><td class="hi"><span class="val">$3,500</span></td></tr>
           <tr><td>Monthly</td><td><span class="val">$297/mo</span></td><td class="hi"><span class="val">$497/mo</span></td></tr>
           <tr class="cta-r"><td></td><td><a href="/#contact" class="tcta tcta-o">Get Essentials</a></td><td class="hi"><a href="/#contact" class="tcta tcta-g">Get Full System</a></td></tr>
         </tbody></table></div>
@@ -451,48 +401,47 @@
       <div class="sh r"><h2>Your site, maintained. Without thinking about it.</h2><p>Hosting, security, backups, and updates handled for you.</p></div>
       <div class="care-cards r">
         <div class="care-card">
-          <div class="care-label">Essential</div>
-          <div class="care-price"><span class="care-amt">$39</span><span class="care-per">/mo</span></div>
+          <div class="care-label">Basic</div>
+          <div class="care-price"><span class="care-amt">$25</span><span class="care-per">/mo</span></div>
           <p class="care-desc">Hosting and peace of mind.</p>
           <div class="care-div"></div>
-          <ul class="care-feats"><li>Fast, reliable hosting</li><li>Security monitoring</li><li>Uptime monitoring</li><li>Updates billed at $140/hr</li></ul>
+          <ul class="care-feats"><li>Fast, reliable hosting</li><li>Security monitoring</li><li>Uptime monitoring</li><li>Updates billed at $100/hr</li></ul>
           <a href="/#contact" class="cbtn cbtn-o">Get Started</a>
         </div>
         <div class="care-card pop">
           <div class="card-tag">Most Popular</div>
           <div class="care-label">Standard</div>
-          <div class="care-price"><span class="care-amt">$99</span><span class="care-per">/mo</span></div>
-          <p class="care-desc">Best for quarterly updates.</p>
+          <div class="care-price"><span class="care-amt">$60</span><span class="care-per">/mo</span></div>
+          <p class="care-desc">Hosting plus hands-on support.</p>
           <div class="care-div"></div>
           <ul class="care-feats"><li>Fast, reliable hosting</li><li>Security monitoring</li><li>Uptime monitoring</li><li>2 hrs/mo content and copy updates (unused hours roll over, up to 12 hrs)</li><li>Priority email support</li><li>Monthly backup</li></ul>
           <a href="/#contact" class="cbtn cbtn-g">Get Started</a>
         </div>
         <div class="care-card">
-          <div class="care-label">Priority</div>
-          <div class="care-price"><span class="care-amt">$179</span><span class="care-per">/mo</span></div>
-          <p class="care-desc">Best for monthly updates and ongoing changes.</p>
+          <div class="care-label">Pro</div>
+          <div class="care-price"><span class="care-amt">$100</span><span class="care-per">/mo</span></div>
+          <p class="care-desc">Full-service, actively maintained.</p>
           <div class="care-div"></div>
-          <ul class="care-feats"><li>Fast, reliable hosting</li><li>Security monitoring</li><li>Uptime monitoring</li><li>4 hrs/mo updates (unused hours roll over, up to 24 hrs)</li><li>Priority email support</li><li>Monthly backup</li><li>SEO tweaks included</li><li>Monthly analytics reporting</li></ul>
+          <ul class="care-feats"><li>Fast, reliable hosting</li><li>Security monitoring</li><li>Uptime monitoring</li><li>4 hrs/mo updates (unused hours roll over, up to 24 hrs)</li><li>Priority email support</li><li>Monthly backup</li><li>SEO tweaks included</li></ul>
           <a href="/#contact" class="cbtn cbtn-dk">Get Started</a>
         </div>
       </div>
       <div class="adhoc r">
         <div><h4>Need a one-off change?</h4><p>Not on a plan? We handle updates at a flat hourly rate.</p></div>
-        <div><div class="adhoc-price">$140</div><span class="adhoc-unit">per hour</span></div>
+        <div><div class="adhoc-price">$100</div><span class="adhoc-unit">per hour</span></div>
       </div>
       <div class="cmp r">
         <div class="sh"><h2>Compare care plans.</h2><p>Everything side by side.</p></div>
-        <div class="tw"><table class="t"><thead><tr><th>Feature</th><th>Essential</th><th class="hi">Standard</th><th>Priority</th></tr></thead><tbody>
+        <div class="tw"><table class="t"><thead><tr><th>Feature</th><th>Basic</th><th class="hi">Standard</th><th>Pro</th></tr></thead><tbody>
           <tr><td>Hosting</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr><td>Security monitoring</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr><td>Uptime monitoring</td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr><td>Monthly backup</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
           <tr><td>Priority email support</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
-          <tr><td>Content updates</td><td><span class="val">$140/hr</span></td><td class="hi"><span class="val">2 hrs/mo</span></td><td><span class="val">4 hrs/mo</span></td></tr>
+          <tr><td>Content updates</td><td><span class="val">$100/hr</span></td><td class="hi"><span class="val">2 hrs/mo</span></td><td><span class="val">4 hrs/mo</span></td></tr>
           <tr><td>Unused hours roll over</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="val">Up to 12 hrs</span></td><td><span class="val">Up to 24 hrs</span></td></tr>
           <tr><td>SEO tweaks</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="n">&mdash;</span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
-          <tr><td>Analytics reporting</td><td><span class="n">&mdash;</span></td><td class="hi"><span class="n">&mdash;</span></td><td><span class="y"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2"/></svg></span></td></tr>
-          <tr><td>Monthly price</td><td><span class="val">$39</span></td><td class="hi"><span class="val">$99</span></td><td><span class="val">$179</span></td></tr>
+          <tr><td>Monthly price</td><td><span class="val">$25</span></td><td class="hi"><span class="val">$60</span></td><td><span class="val">$100</span></td></tr>
           <tr class="cta-r"><td></td><td><a href="/#contact" class="tcta tcta-o">Get Started</a></td><td class="hi"><a href="/#contact" class="tcta tcta-g">Get Started</a></td><td><a href="/#contact" class="tcta tcta-dk">Get Started</a></td></tr>
         </tbody></table></div>
         <p style="text-align:center;font-size:0.78rem;color:var(--tx3);margin-top:1.25rem">No contracts. Cancel anytime. You own your site outright.</p>
@@ -500,80 +449,15 @@
     </div>
   </section>
 
-  <section class="plat-sec r">
-    <div class="plat-wrap">
-      <div class="plat-head">
-        <h2>What you actually get for $39/mo</h2>
-        <p>Platforms like Wix and Squarespace charge about the same and hand you a login. We handle everything for you.</p>
-      </div>
-      <div class="plat-grid">
-
-        <div class="plat-card">
-          <div class="plat-name">Squarespace</div>
-          <div class="plat-price">$300<span>/yr</span></div>
-          <div class="plat-note">Business plan, billed annually</div>
-          <div class="plat-div"></div>
-          <ul class="plat-feats">
-            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>You build and maintain everything yourself</li>
-            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Template-based, limited customization</li>
-            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Generic support tickets</li>
-            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Your site lives on their platform</li>
-          </ul>
-        </div>
-
-        <div class="plat-card">
-          <div class="plat-name">Wix</div>
-          <div class="plat-price">~$40<span>/mo</span></div>
-          <div class="plat-note">Business plan</div>
-          <div class="plat-div"></div>
-          <ul class="plat-feats">
-            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>You build and maintain everything yourself</li>
-            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Drag-and-drop builder, cookie-cutter results</li>
-            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Generic support tickets</li>
-            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Your site lives on their platform</li>
-          </ul>
-        </div>
-
-        <div class="plat-card">
-          <div class="plat-name">WordPress.com</div>
-          <div class="plat-price">$40<span>/mo</span></div>
-          <div class="plat-note">Business plan, billed annually</div>
-          <div class="plat-div"></div>
-          <ul class="plat-feats">
-            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>You build and maintain everything yourself</li>
-            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Plugin updates and security are on you</li>
-            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Generic support tickets</li>
-            <li><span class="ico no"><svg viewBox="0 0 10 10"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span>Locked into their ecosystem</li>
-          </ul>
-        </div>
-
-        <div class="plat-card you">
-          <div class="plat-name">TMN Essential</div>
-          <div class="plat-price">$39<span>/mo</span></div>
-          <div class="plat-note">Boutique care, real humans</div>
-          <div class="plat-div"></div>
-          <ul class="plat-feats">
-            <li><span class="ico yes"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>We handle hosting, security, and uptime for you</li>
-            <li><span class="ico yes"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>Custom-built site, no templates</li>
-            <li><span class="ico yes"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>Text or email a real person when you need something</li>
-            <li><span class="ico yes"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>You own your code and your domain</li>
-          </ul>
-        </div>
-
-      </div>
-      <p class="plat-bottom">These platforms sell you a tool and leave you to figure it out. We give you a finished product and take care of it so you can focus on your business.</p>
-    </div>
-  </section>
-
   <section class="faq-sec">
     <div class="faq-wrap">
       <div class="faq-head r"><h2>Common questions</h2><p>What people ask before saying yes.</p></div>
       <div class="faq-item r"><div class="faq-q"><h4>How do you build sites this fast?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Modern tooling and a lean workflow. You talk directly to the people building your site. No account managers, no layers. Most clients see their first review within 72 hours.</p></div></div>
-      <div class="faq-item r"><div class="faq-q"><h4>What if my site just needs a refresh, not a full rebuild?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>That is what the Starter package is for. We redesign your homepage, clean up the copy and CTAs, and make it look sharp on mobile. Starting at $1,699. If you later want a full rebuild, everything carries forward.</p></div></div>
+      <div class="faq-item r"><div class="faq-q"><h4>What if my site just needs a refresh, not a full rebuild?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>That is what the $1,500 Starter Refresh is for. We redesign your homepage, clean up the copy and CTAs, and make it look sharp on mobile. If you later want a full rebuild, everything carries forward.</p></div></div>
       <div class="faq-item r"><div class="faq-q"><h4>Do I need a new website to use the conversion system?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>No. The conversion system plugs into your existing site. We connect it to your current forms and phone number. A strong site paired with strong follow-up is where the results compound, which is why the bundle exists.</p></div></div>
       <div class="faq-item r"><div class="faq-q"><h4>What is the monthly fee for on the conversion plans?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>It covers the platform that powers your texts, emails, and automations, plus ongoing optimization and monthly reporting. 90-day minimum, then month-to-month. No long-term contracts.</p></div></div>
       <div class="faq-item r"><div class="faq-q"><h4>Can I cancel site care anytime?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Yes. No contracts, no cancellation fees. You own your site outright regardless of whether you stay on a care plan.</p></div></div>
-      <div class="faq-item r"><div class="faq-q"><h4>Do unused site care hours roll over?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Yes. On Standard, unused hours accumulate up to 12 total. On Priority, up to 24. So if you have a quiet few months and then need a bigger update, you have the hours banked. Anything beyond your balance is billed at $140/hr, and we always let you know before going over.</p></div></div>
+      <div class="faq-item r"><div class="faq-q"><h4>Do unused site care hours roll over?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Yes. On Standard, unused hours accumulate up to 12 total. On Pro, up to 24. So if you have a quiet few months and then need a bigger update, you have the hours banked. Anything beyond your balance is billed at $100/hr, and we always let you know before going over.</p></div></div>
       <div class="faq-item r"><div class="faq-q"><h4>Why a boutique studio instead of an agency?</h4><div class="faq-tog"><svg viewBox="0 0 12 12"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="faq-a"><p>Speed and direct access. You work with the founders, not account managers. That keeps projects focused and timelines short.</p></div></div>
     </div>
   </section>
@@ -583,18 +467,18 @@
       <h2>Ready to see what your website is costing you?</h2>
       <p>Get a clear, honest review and what we would change.</p>
       <div class="bcta-btns">
-        <a href="/#contact" class="bcta-p">Get My Free Mockup</a>
-        <a href="mailto:hello@tmncreative.com" class="bcta-s">Email Us</a>
+        <a href="/#contact" class="bcta-p">Get My Free Site Review</a>
+        <a href="/cdn-cgi/l/email-protection#98f0fdf4f4f7d8ecf5f6fbeafdf9ecf1eefdb6fbf7f5" class="bcta-s">Email Us</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="fl">TMN Creative &middot; <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></div>
+    <div class="fl">TMN Creative &middot; <a href="/cdn-cgi/l/email-protection#0169646d6d6e41756c6f62736460756877642f626e6c"><span class="__cf_email__" data-cfemail="afc7cac3c3c0efdbc2c1ccddcacedbc6d9ca81ccc0c2">[email&#160;protected]</span></a></div>
     <div class="fr">&copy; 2026 True Margin North LLC &middot; <a href="https://truemarginnorth.com" target="_blank" rel="noopener">truemarginnorth.com</a></div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     (function(){
       var tabs=document.querySelectorAll('.tab');
       var secs=document.querySelectorAll('.psec');
@@ -619,10 +503,4 @@
     var obs;
     try{
       obs=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('vis');obs.unobserve(en.target)}})},{threshold:0.06,rootMargin:'0px 0px -30px 0px'});
-      document.querySelectorAll('.r').forEach(function(el){obs.observe(el)});
-    }catch(e){document.querySelectorAll('.r').forEach(function(el){el.classList.add('vis')})}
-    setTimeout(function(){document.querySelectorAll('.r:not(.vis)').forEach(function(el){el.classList.add('vis')})},1500);
-    try{document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){q.parentElement.classList.toggle('open')})})}catch(e){}
-  </script>
-</body>
-</html>
+      document.querySelectorAll('.r').forEach(function(el){obs.obse
