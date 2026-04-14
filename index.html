@@ -251,6 +251,7 @@
     .svc-panel.active{display:block}
     @keyframes panelIn{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:translateX(0)}}
     .svc-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    .svc-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem}
     .svc-card{background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:2.75rem;position:relative;transition:all 0.4s var(--e)}
     .svc-card:hover{border-color:rgba(255,255,255,0.14);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.2)}
     .svc-card.pop{border-color:rgba(198,162,74,0.3);background:rgba(198,162,74,0.04);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 8px 30px rgba(198,162,74,0.08)}
@@ -268,6 +269,7 @@
     .svc-btn-p:hover::before{left:100%}
     .svc-btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(198,162,74,0.3)}
     .svc-btn-s{border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.5)}.svc-btn-s:hover{border-color:var(--ac);color:var(--ac);transform:translateY(-2px)}
+    .svc-btn-dk{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.08)}.svc-btn-dk:hover{background:rgba(255,255,255,0.18);transform:translateY(-2px);box-shadow:0 12px 35px rgba(0,0,0,0.25)}
     .svc-note{font-size:0.78rem;color:rgba(255,255,255,0.25);margin-top:1.25rem;text-align:center}
     .svc-note a{color:var(--ac);text-decoration:none;font-weight:600;opacity:0.7;transition:opacity 0.2s}.svc-note a:hover{opacity:1}
     /* Bundle panel */
@@ -279,7 +281,7 @@
     .svc-bundle-list{list-style:none;margin:0 0 1.5rem}
     .svc-bundle-list li{font-size:0.78rem;color:rgba(255,255,255,0.4);padding:0.3rem 0 0.3rem 1.1rem;position:relative;line-height:1.5}
     .svc-bundle-list li::before{content:'\2713';position:absolute;left:0;color:var(--ac);font-size:0.65rem;top:0.35rem}
-    @media(max-width:900px){.svc-grid-2{grid-template-columns:1fr;gap:1rem}.svc-bundle{grid-template-columns:1fr;gap:1.5rem;padding:2.25rem;border-radius:14px}}
+    @media(max-width:900px){.svc-grid-2,.svc-grid-3{grid-template-columns:1fr;gap:1rem}.svc-bundle{grid-template-columns:1fr;gap:1.5rem;padding:2.25rem;border-radius:14px}}
     @media(max-width:768px){.svc-tabs{gap:0.2rem;padding:0.25rem}.svc-tab{font-size:0.7rem;padding:0.65rem 0.5rem}.svc-card{padding:1.75rem;border-radius:14px}.svc-card h3{font-size:1.3rem}.svc-desc{font-size:0.8rem;margin-bottom:1rem}.svc-btn{padding:0.85rem 1.75rem;border-radius:10px;font-size:0.8rem}.svc-note{font-size:0.7rem;margin-top:0.85rem}.svc-bundle{padding:1.75rem}.svc-bundle h3{font-size:1.3rem}.svc-bundle p{font-size:0.8rem}}
 
     /* PROCESS */
@@ -584,9 +586,10 @@ Most firms do not have a traffic problem. They have a credibility problem. We cl
 
         <!-- WEBSITE TAB -->
         <div class="svc-panel active" id="panel-website">
-          <div class="svc-grid-2">
+          <div class="svc-grid-3">
             <div class="svc-card"><h3>Starter Refresh</h3><div class="svc-price">From $1,699</div><div class="svc-desc">Homepage redesign with clean copy, mobile optimization, and CTA structure. First design in 24 hours.</div><a href="#contact" class="svc-btn svc-btn-s">Get a Refresh</a><div class="svc-note"><a href="/pricing#sec-websites">See full comparison &rarr;</a></div></div>
             <div class="svc-card pop"><div class="svc-tag">Flagship</div><h3>Full Site Rebuild</h3><div class="svc-price">From $2,699</div><div class="svc-desc">Complete redesign with messaging, SEO foundations, and conversion-focused structure. Multi-page available. First design in 24 hours.</div><a href="#contact" class="svc-btn svc-btn-p">Start a Rebuild</a><div class="svc-note"><a href="/pricing#sec-websites">See full comparison &rarr;</a></div></div>
+            <div class="svc-card"><div class="svc-tag">Custom</div><h3>Custom Studio Build</h3><div class="svc-price">From $4,499</div><div class="svc-desc">For professional firms, RIAs, attorneys, and CPAs. Custom strategy, compliance-ready copy, and dedicated founder engagement.</div><a href="#contact" class="svc-btn svc-btn-dk">Request a Conversation</a><div class="svc-note"><a href="/pricing#sec-websites">See full comparison &rarr;</a></div></div>
           </div>
           <p class="svc-note">Optional website support plans from $39/mo. <a href="/pricing#sec-care">Learn more</a></p>
         </div>
