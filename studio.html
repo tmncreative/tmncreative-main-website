@@ -157,12 +157,84 @@
       font-weight: 300;
     }
 
+    .hero .tagline {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(20px, 2.4vw, 30px);
+      color: var(--gold);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 36px;
+      max-width: 760px;
+    }
+
     .hero p.lede {
       font-size: clamp(16px, 1.5vw, 19px);
       color: var(--stone-dim);
       max-width: 560px;
       line-height: 1.6;
       font-weight: 300;
+    }
+
+    /* Segment strip */
+    .segments {
+      padding: 36px 0;
+      border-top: 1px solid var(--stone-hairline);
+      border-bottom: 1px solid var(--stone-hairline);
+      background: var(--navy-deep);
+    }
+
+    .segments .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 14px 32px;
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--stone-dim);
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .segments .row .dot {
+      color: var(--gold);
+      font-size: 8px;
+    }
+
+    .segments .row .lead {
+      color: var(--gold);
+    }
+
+    /* Sticky mobile CTA */
+    .sticky-cta {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .sticky-cta {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 90;
+        background: var(--gold);
+        color: var(--navy);
+        padding: 16px 20px calc(16px + env(safe-area-inset-bottom)) 20px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.25);
+      }
+      body { padding-bottom: 60px; }
     }
 
     .hero .scroll-cue {
@@ -539,14 +611,34 @@
 <section class="hero">
   <div class="eyebrow">TMN Creative Studio</div>
   <h1 class="serif">Web design for firms that take their work <em>seriously.</em></h1>
-  <p class="lede">A small Fort Worth studio building websites for a limited number of firms each quarter.</p>
+  <div class="tagline">Designed to convert, not just exist.</div>
+  <p class="lede">A two-person Fort Worth studio building websites for firms that need to look worth the fee. Limited engagements each quarter.</p>
   <a href="#work" class="scroll-cue">Selected Work ↓</a>
+</section>
+
+<section class="segments">
+  <div class="container">
+    <div class="row">
+      <span class="lead">Built for</span>
+      <span>Architecture</span>
+      <span class="dot">●</span>
+      <span>Construction</span>
+      <span class="dot">●</span>
+      <span>Private Capital</span>
+      <span class="dot">●</span>
+      <span>Wealth Advisory</span>
+      <span class="dot">●</span>
+      <span>Asset Management</span>
+      <span class="dot">●</span>
+      <span>Service Firms</span>
+    </div>
+  </div>
 </section>
 
 <section class="studio">
   <div class="container">
     <div class="label">The Studio</div>
-    <p>TMN Creative is a two-person studio run by <em>Trevor and Taylor Niemann</em> in Fort Worth, Texas. Before starting TMN, Trevor spent a decade building digital systems for lending platforms, asset managers, and service companies, including the intake platform that scaled one business to 1,800 service requests a month. Taylor leads brand, art direction, and operations. We take on a small number of firms each quarter and build every site ourselves, from strategy through launch.</p>
+    <p>A decade building digital systems for lending platforms, asset managers, and service companies, including the intake platform that scaled one business to <em>1,800 service requests a month.</em> Today, Trevor and Taylor Niemann run TMN as a two-person studio in Fort Worth, taking on a small number of firms each quarter and building every site themselves.</p>
   </div>
 </section>
 
@@ -560,6 +652,30 @@
       <div class="piece-caption">
         <div class="firm serif">Ramon Design Group</div>
         <div class="detail">Architecture · Phoenix, AZ</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <img src="/images/ba-rehab-after.jpg" alt="Property Rehab Services website homepage" class="piece-image">
+      <div class="piece-caption">
+        <div class="firm serif">Property Rehab Services</div>
+        <div class="detail">Construction · Fort Worth, TX</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <img src="/images/walnut-hero.jpg" alt="Walnut Ventures website homepage" class="piece-image">
+      <div class="piece-caption">
+        <div class="firm serif">Walnut Ventures</div>
+        <div class="detail">Real Estate Private Capital · SoCal</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <img src="/images/shelton-hero.jpg" alt="Shelton Wealth Management website homepage" class="piece-image">
+      <div class="piece-caption">
+        <div class="firm serif">Shelton Wealth Management</div>
+        <div class="detail">Financial Advisory · Fort Worth, TX</div>
       </div>
     </div>
 
@@ -623,7 +739,7 @@
 <section class="contact" id="contact">
   <div class="container">
     <h2 class="serif">Request an <em>introduction.</em></h2>
-    <p class="sub">Tell us about your firm and the project. We respond within one business day.</p>
+    <p class="sub">Engagements start at $5,000. For firms ready to move in the next 30 days. We usually reply the same day.</p>
 
     <form name="studio-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
       <input type="hidden" name="form-name" value="studio-inquiry">
@@ -642,18 +758,18 @@
       </div>
 
       <div class="field">
-        <label for="website">Current Website</label>
-        <input type="text" id="website" name="website" placeholder="example.com or 'none'" required>
-      </div>
-
-      <div class="field">
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required>
       </div>
 
       <div class="field">
-        <label for="project">Brief Project Description</label>
-        <textarea id="project" name="project" rows="3" required></textarea>
+        <label for="website">Current Website <span style="text-transform:none;letter-spacing:0;color:var(--stone-faint);">(optional)</span></label>
+        <input type="text" id="website" name="website" placeholder="example.com">
+      </div>
+
+      <div class="field">
+        <label for="project">Brief Project Description <span style="text-transform:none;letter-spacing:0;color:var(--stone-faint);">(optional)</span></label>
+        <textarea id="project" name="project" rows="3"></textarea>
       </div>
 
       <button type="submit">Request Introduction</button>
@@ -663,11 +779,12 @@
   </div>
 </section>
 
+<a href="#contact" class="sticky-cta">Request Introduction →</a>
+
 <footer>
   <div class="line serif">Built by hand in Fort Worth.</div>
   <div class="meta">© 2026 TMN Creative · True Margin North LLC · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></div>
 </footer>
-<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69df8da351d14ab32cf9314c"></script>
 <script 
   src="https://link.msgsndr.com/js/external-tracking.js"
   data-tracking-id="tk_5662a9586f804ebdb3340fbc1a24b196">
