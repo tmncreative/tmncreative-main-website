@@ -142,7 +142,7 @@
 
     .hero h1 {
       font-family: 'Fraunces', serif;
-      font-weight: 300;
+      font-weight: 400;
       font-size: clamp(44px, 8vw, 108px);
       line-height: 1.02;
       letter-spacing: -0.025em;
@@ -154,13 +154,13 @@
     .hero h1 em {
       font-style: italic;
       color: var(--gold);
-      font-weight: 300;
+      font-weight: 400;
     }
 
     .hero .tagline {
       font-family: 'Fraunces', serif;
       font-style: italic;
-      font-weight: 300;
+      font-weight: 400;
       font-size: clamp(20px, 2.4vw, 30px);
       color: var(--gold);
       line-height: 1.3;
@@ -273,7 +273,7 @@
 
     .studio p {
       font-family: 'Fraunces', serif;
-      font-weight: 300;
+      font-weight: 400;
       font-size: clamp(22px, 2.4vw, 30px);
       line-height: 1.52;
       color: var(--stone);
@@ -285,10 +285,44 @@
       color: var(--gold);
     }
 
+    .studio p a {
+      color: var(--stone);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 2px;
+      transition: color 0.25s ease;
+    }
+
+    .studio p a:hover { color: var(--gold); }
+
+    .studio .credentials {
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 22px;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--stone-faint);
+      font-weight: 500;
+    }
+
+    .studio .credentials a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .studio .credentials a:hover { color: var(--gold-warm); }
+
+    .studio .credentials .sep {
+      color: var(--stone-hairline);
+    }
+
     /* Work */
     .work h2 {
       font-family: 'Fraunces', serif;
-      font-weight: 300;
+      font-weight: 400;
       font-size: clamp(36px, 5vw, 60px);
       color: var(--stone);
       line-height: 1.05;
@@ -350,7 +384,7 @@
 
     .testimonial blockquote {
       font-family: 'Fraunces', serif;
-      font-weight: 300;
+      font-weight: 400;
       font-style: italic;
       font-size: clamp(26px, 4vw, 48px);
       line-height: 1.28;
@@ -371,7 +405,7 @@
     /* Process */
     .process h2 {
       font-family: 'Fraunces', serif;
-      font-weight: 300;
+      font-weight: 400;
       font-size: clamp(36px, 5vw, 60px);
       color: var(--stone);
       line-height: 1.05;
@@ -427,7 +461,7 @@
 
     .contact h2 {
       font-family: 'Fraunces', serif;
-      font-weight: 300;
+      font-weight: 400;
       font-size: clamp(40px, 6vw, 68px);
       color: var(--stone);
       line-height: 1.05;
@@ -638,7 +672,12 @@
 <section class="studio">
   <div class="container">
     <div class="label">The Studio</div>
-    <p>A decade building digital systems for lending platforms, asset managers, and service companies, including the intake platform that scaled one business to <em>1,800 service requests a month.</em> Today, Trevor and Taylor Niemann run TMN as a two-person studio in Fort Worth, taking on a small number of firms each quarter and building every site themselves.</p>
+    <p>A decade building digital systems for lending platforms, asset managers, and service companies, including the intake platform that scaled one business to <em>1,800 service requests a month.</em> Today, <a href="/trevor">Trevor</a> and Taylor Niemann run TMN as a two-person studio in Fort Worth, taking on a small number of firms each quarter and building every site themselves.</p>
+    <div class="credentials">
+      <a href="/trevor">Meet Trevor →</a>
+      <span class="sep">·</span>
+      <a href="https://www.linkedin.com/in/niemann29/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
   </div>
 </section>
 
@@ -646,22 +685,6 @@
   <div class="container">
     <div class="label">Selected Work</div>
     <h2 class="serif">Every site designed, built, and launched <em>in house.</em></h2>
-
-    <div class="piece">
-      <img src="/images/ba-rdg-after.jpg" alt="Ramon Design Group website homepage" class="piece-image">
-      <div class="piece-caption">
-        <div class="firm serif">Ramon Design Group</div>
-        <div class="detail">Architecture · Phoenix, AZ</div>
-      </div>
-    </div>
-
-    <div class="piece">
-      <img src="/images/ba-rehab-after.jpg" alt="Property Rehab Services website homepage" class="piece-image">
-      <div class="piece-caption">
-        <div class="firm serif">Property Rehab Services</div>
-        <div class="detail">Construction · Fort Worth, TX</div>
-      </div>
-    </div>
 
     <div class="piece">
       <img src="/images/walnut-hero.jpg" alt="Walnut Ventures website homepage" class="piece-image">
@@ -680,26 +703,26 @@
     </div>
 
     <div class="piece">
+      <img src="/images/ba-rdg-after.jpg" alt="Ramon Design Group website homepage" class="piece-image">
+      <div class="piece-caption">
+        <div class="firm serif">Ramon Design Group</div>
+        <div class="detail">Architecture · Phoenix, AZ</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <img src="/images/ba-rehab-after.jpg" alt="Property Rehab Services website homepage" class="piece-image">
+      <div class="piece-caption">
+        <div class="firm serif">Property Rehab Services</div>
+        <div class="detail">Construction · Fort Worth, TX</div>
+      </div>
+    </div>
+
+    <div class="piece">
       <img src="/images/cap-after.jpg" alt="Crestone Air Partners website homepage" class="piece-image">
       <div class="piece-caption">
         <div class="firm serif">Crestone Air Partners</div>
         <div class="detail">Aviation Asset Management</div>
-      </div>
-    </div>
-
-    <div class="piece">
-      <img src="/images/scl-hero.jpg" alt="SCL Metal Works website homepage" class="piece-image">
-      <div class="piece-caption">
-        <div class="firm serif">SCL Metal Works</div>
-        <div class="detail">Custom Iron Fabrication · Houston</div>
-      </div>
-    </div>
-
-    <div class="piece">
-      <img src="/images/dh-hero.jpg" alt="Diamond H Irrigation website homepage" class="piece-image">
-      <div class="piece-caption">
-        <div class="firm serif">Diamond H Irrigation</div>
-        <div class="detail">Commercial & Residential · Fort Worth</div>
       </div>
     </div>
   </div>
