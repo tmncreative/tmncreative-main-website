@@ -101,6 +101,17 @@
     .pay-link:hover{background:var(--dk2);transform:translateY(-1px);box-shadow:0 6px 18px rgba(15,23,42,0.18)}
     .paid-note{font-size:0.72rem;font-weight:500;color:var(--tx3)}
 
+    /* PORTAL CARD */
+    .portal-card{background:linear-gradient(135deg,var(--ac3) 0%,rgba(198,162,74,0.02) 100%);border:1px solid rgba(198,162,74,0.25);border-radius:16px;padding:1.25rem 1.5rem;margin-bottom:1rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;animation:fu 0.4s var(--e)}
+    .portal-info{flex:1;min-width:0}
+    .portal-info h4{font-size:0.9rem;font-weight:700;color:var(--dk);letter-spacing:-0.01em;margin-bottom:0.2rem}
+    .portal-info p{font-size:0.75rem;color:var(--tx2);line-height:1.5;margin:0}
+    .portal-btn{flex-shrink:0;display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--fn);font-size:0.75rem;font-weight:700;color:var(--dk);background:#fff;border:1px solid rgba(198,162,74,0.4);border-radius:10px;padding:0.65rem 1.1rem;cursor:pointer;transition:all 0.25s var(--e);white-space:nowrap;box-shadow:0 1px 3px rgba(15,23,42,0.04)}
+    .portal-btn:hover{background:var(--ac);color:#fff;border-color:var(--ac);transform:translateY(-1px);box-shadow:0 6px 18px rgba(198,162,74,0.25)}
+    .portal-btn:disabled{opacity:0.5;cursor:wait;transform:none}
+    .portal-btn svg{width:12px;height:12px;stroke:currentColor;stroke-width:2;fill:none}
+    @media(max-width:600px){.portal-card{flex-direction:column;align-items:stretch;text-align:center}.portal-btn{justify-content:center;width:100%;padding:0.8rem}}
+
     /* MSG CARDS */
     .msg-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:2.5rem;text-align:center;animation:fu 0.35s var(--e)}
     .msg-icon{font-size:1.75rem;margin-bottom:0.75rem}
@@ -198,6 +209,16 @@
       </div>
 
       <div class="state" id="state-results">
+        <div class="portal-card" id="portal-card" style="display:none">
+          <div class="portal-info">
+            <h4>Manage your account</h4>
+            <p>Update payment method, view billing history, or change your subscription.</p>
+          </div>
+          <button class="portal-btn" id="portal-btn" type="button">
+            <span id="portal-btn-text">Manage Subscription</span>
+            <svg viewBox="0 0 16 16"><polyline points="6,3 11,8 6,13"/></svg>
+          </button>
+        </div>
         <div class="results-header" id="results-header"></div>
         <div id="inv-list"></div>
       </div>
@@ -275,6 +296,8 @@
     function hideAll(){document.querySelectorAll('.state').forEach(function(el){el.classList.remove('show')})}
     function show(id){var el=document.getElementById(id);if(el)el.classList.add('show')}
 
+    var currentEmail='';
+
     function lookupInvoices(){
       var email=document.getElementById('email-input').value.trim();
       if(!email||!email.includes('@')){document.getElementById('email-input').focus();return}
@@ -287,9 +310,37 @@
           hideAll();document.getElementById('lookup-btn').disabled=false;
           if(data.error){document.getElementById('error-text').textContent=data.error;show('state-error');return}
           if(!data.found||!data.invoices||data.invoices.length===0){show('state-notfound');return}
+          currentEmail=email;
+          document.getElementById('portal-card').style.display='flex';
           renderInvoices(data.invoices);show('state-results');
         })
         .catch(function(){hideAll();document.getElementById('lookup-btn').disabled=false;show('state-error')});
+    }
+
+    function openPortal(){
+      if(!currentEmail)return;
+      var btn=document.getElementById('portal-btn');
+      var txt=document.getElementById('portal-btn-text');
+      btn.disabled=true;txt.textContent='Opening...';
+
+      fetch('/.netlify/functions/create-portal-session',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({email:currentEmail})
+      })
+        .then(function(r){return r.json().then(function(d){return{ok:r.ok,data:d}})})
+        .then(function(res){
+          if(!res.ok||!res.data.url){
+            btn.disabled=false;txt.textContent='Manage Subscription';
+            document.getElementById('error-text').textContent=res.data.error||'Could not open the billing portal.';
+            hideAll();show('state-error');return;
+          }
+          window.location.href=res.data.url;
+        })
+        .catch(function(){
+          btn.disabled=false;txt.textContent='Manage Subscription';
+          hideAll();show('state-error');
+        });
     }
 
     function renderInvoices(invoices){
@@ -319,6 +370,7 @@
 
     document.getElementById('lookup-btn').addEventListener('click',lookupInvoices);
     document.getElementById('email-input').addEventListener('keydown',function(ev){if(ev.key==='Enter'){ev.preventDefault();lookupInvoices()}});
+    document.getElementById('portal-btn').addEventListener('click',openPortal);
   </script>
 <script 
   src="https://link.msgsndr.com/js/external-tracking.js"
