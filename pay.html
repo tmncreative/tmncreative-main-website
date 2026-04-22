@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pay Invoice | TMN Creative</title>
-  <meta name="description" content="Look up and pay your TMN Creative invoice." />
+  <title>Client Portal | TMN Creative</title>
+  <meta name="description" content="View invoices, manage your subscription, and update billing details for your TMN Creative account." />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
@@ -187,8 +187,8 @@
 
       <div class="ph">
         <div class="badge">Client Portal</div>
-        <h1>Pay Your Invoice</h1>
-        <p>Enter the email address on your account to pull up your invoices.</p>
+        <h1>Welcome back</h1>
+        <p>Enter your email to view invoices, update payment methods, or manage your subscription.</p>
       </div>
 
       <div class="card">
@@ -196,7 +196,7 @@
           <label for="email-input">Email Address</label>
           <div class="input-row">
             <input type="email" id="email-input" placeholder="you@yourcompany.com" autocomplete="email" />
-            <button class="sbtn" id="lookup-btn" onclick="lookupInvoices()">Look Up</button>
+            <button class="sbtn" id="lookup-btn" onclick="lookupInvoices()">Continue</button>
           </div>
         </div>
       </div>
@@ -204,7 +204,7 @@
       <div class="state" id="state-loading">
         <div class="loading-wrap">
           <div class="spinner"></div>
-          <span>Looking up your invoices...</span>
+          <span>Pulling up your account...</span>
         </div>
       </div>
 
@@ -225,9 +225,9 @@
 
       <div class="state" id="state-notfound">
         <div class="msg-card">
-          <div class="msg-icon">&#128274;</div>
-          <h3>No invoices found</h3>
-          <p>We could not find any invoices for that email. Make sure you are using the address your invoice was sent to, or reach out directly.</p>
+          <div class="msg-icon">&#128269;</div>
+          <h3>We don't see an account for that email</h3>
+          <p>Try the email address your invoice was sent to, or reach out and we'll get you sorted.</p>
           <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a>
         </div>
       </div>
