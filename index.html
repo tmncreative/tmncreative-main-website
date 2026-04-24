@@ -178,41 +178,41 @@
     .logo-sub{font-family:var(--mono);font-size:0.68rem;font-weight:500;color:var(--ink-soft);margin-left:0.4rem;letter-spacing:0;display:none}
     @media(min-width:1080px){.logo-sub{display:inline}}
 
-    .nav-links{display:flex;align-items:center;gap:0.15rem}
+    .nav-links{display:flex;align-items:center;gap:0.05rem}
     .nav-link{
       position:relative;font-family:var(--sans);
-      font-size:0.88rem;font-weight:600;color:var(--ink-mid);
-      text-decoration:none;padding:0.55rem 0.9rem;border-radius:var(--r-xs);
-      letter-spacing:0.005em;
-      transition:color 220ms var(--e-quart);
+      font-size:0.82rem;font-weight:500;color:var(--ink-mid);
+      text-decoration:none;padding:0.45rem 0.7rem;border-radius:var(--r-xs);
+      letter-spacing:0;
+      transition:color 260ms var(--e-quart);
     }
     .nav-link::after{
-      content:'';position:absolute;left:0.9rem;right:0.9rem;bottom:0.35rem;
-      height:1px;background:var(--ink);
+      content:'';position:absolute;left:0.7rem;right:0.7rem;bottom:0.3rem;
+      height:1px;background:currentColor;opacity:0.55;
       transform:scaleX(0);transform-origin:left center;
-      transition:transform 340ms var(--e-quint);
+      transition:transform 380ms var(--e-quint);
     }
     .nav-link:hover{color:var(--ink)}
     .nav-link:hover::after{transform:scaleX(1)}
-    .nav-actions{display:flex;align-items:center;gap:0.6rem}
+    .nav-actions{display:flex;align-items:center;gap:0.45rem}
     .nav-ghost{
-      font-family:var(--sans);font-size:0.86rem;font-weight:600;color:var(--ink-mid);
-      text-decoration:none;padding:0.55rem 0.9rem;border-radius:var(--r-sm);
-      letter-spacing:0.005em;
-      transition:color 200ms var(--e-quart);
+      font-family:var(--sans);font-size:0.82rem;font-weight:500;color:var(--ink-mid);
+      text-decoration:none;padding:0.45rem 0.7rem;border-radius:var(--r-sm);
+      letter-spacing:0;
+      transition:color 220ms var(--e-quart);
     }
     .nav-ghost:hover{color:var(--ink)}
     .nav-cta{
-      font-family:var(--sans);font-size:0.85rem;font-weight:600;color:var(--bg);
+      font-family:var(--sans);font-size:0.82rem;font-weight:600;color:var(--bg);
       background:var(--ink);text-decoration:none;
-      padding:0.7rem 1.1rem;border-radius:999px;
-      display:inline-flex;align-items:center;gap:0.55rem;
-      letter-spacing:-0.003em;
+      padding:0.58rem 0.95rem;border-radius:999px;
+      display:inline-flex;align-items:center;gap:0.5rem;
+      letter-spacing:0;
       transition:background 260ms var(--e-quart), transform 260ms var(--e-quart), box-shadow 260ms var(--e-quart);
-      box-shadow:0 1px 0 oklch(100% 0 0 / 0.12) inset, 0 1px 2px oklch(14% 0.01 260 / 0.18), 0 0 0 1px oklch(100% 0 0 / 0.04) inset;
+      box-shadow:0 1px 0 oklch(100% 0 0 / 0.1) inset, 0 1px 2px oklch(14% 0.01 260 / 0.14);
     }
-    .nav-cta:hover{background:var(--ink-2);transform:translateY(-1px);box-shadow:0 1px 0 oklch(100% 0 0 / 0.14) inset, 0 8px 22px oklch(14% 0.01 260 / 0.28)}
-    .nav-cta svg{width:11px;height:11px;transition:transform 260ms var(--e-quart)}
+    .nav-cta:hover{background:var(--ink-2);transform:translateY(-1px);box-shadow:0 1px 0 oklch(100% 0 0 / 0.12) inset, 0 6px 18px oklch(14% 0.01 260 / 0.22)}
+    .nav-cta svg{width:10px;height:10px;transition:transform 260ms var(--e-quart)}
     .nav-cta:hover svg{transform:translateX(2px)}
     .menu-btn{display:none;width:40px;height:40px;align-items:center;justify-content:center;border-radius:var(--r-sm);position:relative}
     .menu-btn span{width:16px;height:1.4px;background:var(--ink);position:relative;transition:all 300ms var(--e-quart)}
@@ -493,47 +493,49 @@
 
     .hero-inner{position:relative;z-index:1;max-width:1240px;margin:0 auto}
 
-    /* Hero status row — two distinct premium markers separated by a hairline */
-    .hero-tag{
-      display:inline-flex;align-items:center;gap:0.85rem;
-      padding:0.55rem 1rem 0.55rem 0.85rem;
-      background:var(--bg-elev);
-      border:1px solid oklch(70% 0.107 85 / 0.24);
-      border-radius:999px;
-      font-family:var(--sans);font-size:0.78rem;font-weight:500;color:var(--ink-mid);
-      box-shadow:0 1px 2px oklch(14% 0.01 260 / 0.04), 0 0 0 4px oklch(70% 0.107 85 / 0.03);
+    /* Hero status row — two separate premium markers, aligned compact */
+    .hero-tags{
+      display:inline-flex;align-items:center;gap:0.4rem;flex-wrap:wrap;
       opacity:0;transform:translateY(-6px);
       animation:fade-down 700ms var(--e-quart) 100ms forwards;
     }
-    .hero-tag .dot{
-      position:relative;width:7px;height:7px;border-radius:50%;
+    .hp{
+      display:inline-flex;align-items:center;gap:0.55rem;
+      padding:0.45rem 0.85rem;
+      background:var(--bg-elev);
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-family:var(--sans);font-size:0.76rem;font-weight:500;color:var(--ink-2);
+      letter-spacing:-0.003em;
+      box-shadow:0 1px 2px oklch(14% 0.01 260 / 0.03);
+    }
+    .hp-avail{
+      border-color:oklch(64% 0.13 155 / 0.22);
+      background:linear-gradient(180deg, var(--bg-elev), oklch(64% 0.13 155 / 0.02));
+    }
+    .hp-avail strong{color:var(--ink);font-weight:600;letter-spacing:-0.005em}
+    .hp-avail .dot{
+      position:relative;width:6px;height:6px;border-radius:50%;
       background:var(--success);
       box-shadow:0 0 0 3px oklch(64% 0.13 155 / 0.18);
       flex-shrink:0;
     }
-    .hero-tag .dot::before{
+    .hp-avail .dot::before{
       content:'';position:absolute;inset:-4px;border-radius:50%;
       background:var(--success);opacity:0.4;
       animation:pulse-dot 2.4s var(--e-quart) infinite;
     }
     @keyframes pulse-dot{0%{transform:scale(0.7);opacity:0.5}70%,100%{transform:scale(2);opacity:0}}
-    .hero-tag strong{
-      color:var(--ink);font-weight:600;letter-spacing:0.01em;
-      font-size:0.76rem;
+    .hp-rating{
+      border-color:oklch(70% 0.107 85 / 0.28);
+      background:linear-gradient(180deg, var(--bg-elev), oklch(70% 0.107 85 / 0.025));
     }
-    .hero-tag .sep{width:1px;height:14px;background:oklch(70% 0.107 85 / 0.32)}
-    .hero-tag .rating{
-      display:inline-flex;align-items:center;gap:0.4rem;
-      font-style:normal;color:var(--ink-2);
-      font-size:0.78rem;font-weight:600;letter-spacing:-0.005em;
-    }
-    .hero-tag .rating-stars{
-      display:inline-flex;gap:1px;color:var(--accent);font-size:0.72rem;letter-spacing:0;line-height:1;
-    }
-    .hero-tag .rating-stars svg{width:10px;height:10px;fill:var(--accent);display:block}
-    .hero-tag .rating-src{color:var(--ink-soft);font-weight:500;font-size:0.72rem}
+    .hp-rating .stars{display:inline-flex;gap:1.5px;line-height:1}
+    .hp-rating .stars svg{width:11px;height:11px;fill:var(--accent);display:block}
+    .hp-rating strong{color:var(--ink);font-weight:600;letter-spacing:-0.005em}
+    .hp-rating .src{color:var(--ink-soft);font-weight:500}
     @media (prefers-reduced-motion:reduce){
-      .hero-tag .dot::before{animation:none}
+      .hp-avail .dot::before{animation:none}
     }
     @keyframes fade-down{to{opacity:1;transform:translateY(0)}}
 
@@ -575,10 +577,10 @@
     .hero-meta-item{display:flex;flex-direction:column;gap:0.15rem}
     .hero-meta-k{font-family:var(--sans);font-size:1.35rem;font-weight:600;color:var(--ink);letter-spacing:-0.02em;font-feature-settings:"tnum"}
     .hero-meta-k .unit{font-size:0.82rem;color:var(--ink-soft);font-weight:500;margin-left:0.12em}
-    .hero-meta-l{font-family:var(--mono);font-size:0.68rem;color:var(--ink-soft);font-weight:500}
+    .hero-meta-l{font-family:var(--sans);font-size:0.78rem;color:var(--ink-soft);font-weight:500;letter-spacing:-0.003em;line-height:1.4}
     .hero-trust{font-family:var(--sans);font-size:1.05rem;color:var(--ink-2);line-height:1.5;letter-spacing:-0.005em;margin:0}
     .hero-trust em{font-style:italic;color:var(--accent-deep);font-family:var(--serif);font-weight:500}
-    .hero-audience{font-family:var(--mono);font-size:0.78rem;color:var(--ink-soft);letter-spacing:0.08em;line-height:1.5;margin:0.5rem 0 0}
+    .hero-audience{font-family:var(--sans);font-size:0.86rem;color:var(--ink-soft);font-weight:500;letter-spacing:-0.003em;line-height:1.55;margin:0.45rem 0 0}
 
     /* Full-width hero footer — trust + audience line sit below the device cluster,
        span the full hero-inner width (not clamped to one column) */
@@ -2398,7 +2400,7 @@
       .contact::before,
       .form::before,
       .pc-toggle .dot,
-      .hero-tag::before{animation:none !important}
+      .hp-avail .dot::before{animation:none !important}
       html{scroll-behavior:auto}
     }
   </style>
@@ -2428,7 +2430,7 @@
 
       <div class="nav-actions">
         <a href="/pay" class="nav-ghost">Client Portal</a>
-        <a href="#contact" class="nav-cta">Get a Free Redesign <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#contact" class="nav-cta">Request a Free Preview <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobMenu"><span></span></button>
       </div>
     </div>
@@ -2441,7 +2443,7 @@
     <a href="#process">Process <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="#faq">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="/pay">Client Portal <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <a href="#contact" class="mob-cta">Get a Free Redesign <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="#contact" class="mob-cta">Request a Free Preview <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 
   <!-- =========== CARD STACK: HERO → WEBSITES → CRM =========== -->
@@ -2450,20 +2452,21 @@
   <!-- =========== HERO =========== -->
   <section class="hero card">
     <div class="hero-inner">
-      <div class="hero-tag">
-        <span class="dot" aria-hidden="true"></span>
-        <strong>Now booking select projects</strong>
-        <span class="sep" aria-hidden="true"></span>
-        <span class="rating">
-          <span class="rating-stars" aria-hidden="true">
+      <div class="hero-tags">
+        <span class="hp hp-avail">
+          <span class="dot" aria-hidden="true"></span>
+          <strong>Now booking select projects</strong>
+        </span>
+        <span class="hp hp-rating" aria-label="5.0 Google rating">
+          <span class="stars" aria-hidden="true">
             <svg viewBox="0 0 12 12"><path d="M6 0.5l1.545 3.643 3.955.315-3.015 2.582.925 3.86L6 8.866l-3.41 2.034.925-3.86L.5 4.458l3.955-.315z"/></svg>
             <svg viewBox="0 0 12 12"><path d="M6 0.5l1.545 3.643 3.955.315-3.015 2.582.925 3.86L6 8.866l-3.41 2.034.925-3.86L.5 4.458l3.955-.315z"/></svg>
             <svg viewBox="0 0 12 12"><path d="M6 0.5l1.545 3.643 3.955.315-3.015 2.582.925 3.86L6 8.866l-3.41 2.034.925-3.86L.5 4.458l3.955-.315z"/></svg>
             <svg viewBox="0 0 12 12"><path d="M6 0.5l1.545 3.643 3.955.315-3.015 2.582.925 3.86L6 8.866l-3.41 2.034.925-3.86L.5 4.458l3.955-.315z"/></svg>
             <svg viewBox="0 0 12 12"><path d="M6 0.5l1.545 3.643 3.955.315-3.015 2.582.925 3.86L6 8.866l-3.41 2.034.925-3.86L.5 4.458l3.955-.315z"/></svg>
           </span>
-          <span>5.0</span>
-          <span class="rating-src">Google</span>
+          <strong>5.0</strong>
+          <span class="src">Google rating</span>
         </span>
       </div>
 
@@ -2474,7 +2477,7 @@
             <strong>We close the gap</strong> with premium websites and the <em>custom-built operations platforms</em> that run the teams behind them.
           </p>
           <div class="hero-ctas">
-            <a href="#contact" class="btn btn-primary">Get a Free Redesign <svg class="btn-arrow" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="#contact" class="btn btn-primary">Request a Free Preview <svg class="btn-arrow" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <a href="#pricing" class="btn btn-secondary">See Pricing</a>
           </div>
           <div class="hero-meta">
@@ -2511,7 +2514,7 @@
 
       <!-- Full-width trust row under the devices — reads as a closing frame for the hero -->
       <div class="hero-footer">
-        <p class="hero-trust">Built for anyone who wants to <em>future-proof</em> their aesthetic and functionality in <em>2026 and beyond.</em></p>
+        <p class="hero-trust">Built for <em>professional firms</em> where the website has to make the referral feel <em>obvious.</em></p>
         <p class="hero-audience">Financial advisors · Consultants · Attorneys · Architects · Professional firms where credibility is everything.</p>
       </div>
     </div>
