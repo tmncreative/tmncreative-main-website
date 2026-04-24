@@ -335,8 +335,10 @@
       #services .feat-grid,
       .feat .feat-grid{gap:0.25rem}
       .feat-list{gap:0.6rem;margin:1.2rem 0 1.5rem}
-      /* MacBook + iPhone stack shows on mobile between Websites + Custom CRM sections */
-      #services .feat-visual.feat-stack{margin:-1.5rem auto -1.5rem}
+      /* MacBook + iPhone stack shows on mobile between Websites + Custom CRM sections.
+         Small gap above so the CTAs have breathing room; positive padding below on the
+         next card so the taller iPhone doesn't feel clipped by section 02's bg */
+      #services .feat-visual.feat-stack{margin:1.25rem auto 0.5rem}
       /* Drop the TMN Studio OS pipeline mock on the CRM card on phone — keep it clean */
       .feat-grid.reverse .feat-panel{display:none}
       /* Tighter testimonial grid on phone */
@@ -745,8 +747,8 @@
       .feat-visual.feat-stack .feat-visual-overlay{display:none}
       /* Bridge Websites (01) and Custom CRM (02) — no hairline cut between them on mobile,
          so the device stack reads as a connective tissue, not a section-end afterthought */
-      #services + .feat.card{border-top:none;padding-top:0.5rem}
-      #services{padding-bottom:0.5rem}
+      #services + .feat.card{border-top:none;padding-top:2.25rem}
+      #services{padding-bottom:1.25rem}
     }
     @media(max-width:640px){
       .hero{padding-top:calc(var(--nav-h) + 0.5rem)}
