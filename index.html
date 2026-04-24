@@ -698,7 +698,7 @@
     @keyframes pulse{0%,100%{box-shadow:0 0 0 2px oklch(64% 0.13 155 / 0.25)}50%{box-shadow:0 0 0 6px oklch(64% 0.13 155 / 0)}}
 
     .hv-badge{
-      position:absolute;top:-2.25rem;right:14%;left:auto;bottom:auto;
+      position:absolute;top:-2.25rem;right:5%;left:auto;bottom:auto;
       background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--r-md);
       padding:0.7rem 0.9rem;
       display:flex;align-items:center;gap:0.7rem;
@@ -725,9 +725,9 @@
       .hero-visual{max-width:400px;margin:0 auto -10rem;order:-1}
       .hv-main{transform:rotate(-0.4deg)}
       .hv-stack{transform:rotate(1deg);width:52%}
-      /* iPhone slides DOWN to sit below the badge: top:9% puts phone top clearly below
-         the badge's bottom edge (badge top:-1.1rem + ~40px height) */
-      .hero-visual .hv-iphone{width:24%;right:-1%;top:9%;bottom:auto}
+      /* iPhone bottom aligns with iMac stand bottom — bottom:2% accounts for the
+         small transparent padding below the stand in the imac.png asset */
+      .hero-visual .hv-iphone{width:30%;right:-1%;top:auto;bottom:2%}
       /* "40+ operators" badge: top-right corner of iMac, half above / half on the screen */
       .hero-visual .hv-badge{right:2%;left:auto;top:-1.1rem;bottom:auto;padding:0.7rem 0.9rem;gap:0.7rem}
       .hero-visual .hv-badge-text{font-size:0.82rem;line-height:1.3}
@@ -761,7 +761,7 @@
     @media(max-width:640px){
       .hero{padding-top:calc(var(--nav-h) + 0.5rem)}
       .hero-visual{max-width:340px;margin-bottom:-8rem}
-      .hero-visual .hv-iphone{width:26%;right:-2%;top:9%;bottom:auto}
+      .hero-visual .hv-iphone{width:32%;right:-2%;top:auto;bottom:2%}
       .hero-visual .hv-badge{right:2%;left:auto;top:-0.9rem;bottom:auto;padding:0.65rem 0.85rem;gap:0.65rem}
       .hero-visual .hv-badge-text{font-size:0.78rem}
       .hero-visual .hv-badge-avatars > div{width:22px;height:22px;font-size:0.58rem}
@@ -833,8 +833,8 @@
       border-radius:0;overflow:visible;
       aspect-ratio:auto;
     }
-    .feat-visual.feat-stack .hv-macbook{filter:drop-shadow(0 14px 28px oklch(14% 0.01 260 / 0.10))}
-    .feat-visual.feat-stack .hv-iphone{filter:drop-shadow(0 12px 24px oklch(14% 0.01 260 / 0.10))}
+    .feat-visual.feat-stack .hv-macbook{filter:drop-shadow(0 8px 16px oklch(14% 0.01 260 / 0.05))}
+    .feat-visual.feat-stack .hv-iphone{filter:drop-shadow(0 6px 14px oklch(14% 0.01 260 / 0.05))}
     /* Desktop feat-stack — iPhone larger so it reads as a peer to the MacBook */
     .feat-visual.feat-stack .hv-iphone.left{width:30%;left:-5%;bottom:-9%}
     .feat-visual.feat-stack .feat-visual-overlay{z-index:3;left:1.25rem;bottom:-0.9rem}
