@@ -331,12 +331,13 @@
       .hero-audience{display:none}
       .hero-meta{gap:1.25rem 1.5rem;padding-top:1rem}
       .hero-trust{font-size:0.95rem;margin-top:1.1rem;padding-top:0.95rem}
-      /* Feat sections tighter */
-      .feat-grid{gap:2rem}
+      /* Feat sections tighter on mobile — pull devices tight against the copy */
+      #services .feat-grid,
+      .feat .feat-grid{gap:0.25rem}
       .feat-list{gap:0.6rem;margin:1.2rem 0 1.5rem}
-      /* Drop the SCL screenshot on the Websites card on phone — copy + CTAs carry the moment */
-      #services .feat-visual{display:none}
-      /* Drop the TMN Studio OS pipeline mock on the CRM card on phone for same reason */
+      /* MacBook + iPhone stack shows on mobile between Websites + Custom CRM sections */
+      #services .feat-visual.feat-stack{margin:-1.5rem auto -1.5rem}
+      /* Drop the TMN Studio OS pipeline mock on the CRM card on phone — keep it clean */
       .feat-grid.reverse .feat-panel{display:none}
       /* Tighter testimonial grid on phone */
       .testi-grid{gap:0.75rem}
@@ -709,11 +710,13 @@
       .hero-grid{grid-template-columns:1fr;gap:0;margin-top:1.25rem}
       /* No air between devices and the "underselling" headline */
       .hero h1{margin-top:0 !important}
-      /* Devices at TOP of mobile hero — aggressive negative bottom margin pulls
-         headline up through the iMac's transparent pixel padding + stand area */
-      .hero-visual{max-width:400px;margin:0 auto -7rem;order:-1}
+      /* Devices at TOP of mobile hero — heavy negative bottom margin so the headline
+         sits right under the iMac base, through the PNG's transparent padding */
+      .hero-visual{max-width:400px;margin:0 auto -10rem;order:-1}
       .hv-main{transform:rotate(-0.4deg)}
       .hv-stack{transform:rotate(1deg);width:52%}
+      /* "Live build in 72h" chip to the RIGHT on mobile (was top-left) */
+      .hero-visual .hv-chip{left:auto;right:-0.5rem;top:-0.9rem}
       /* iPhone sits on the iMac screen, a little higher */
       .hero-visual .hv-iphone{width:28%;right:-1%;bottom:34%}
       /* "40+ operators" badge: larger, same horizontal plane as phone bottom */
@@ -743,7 +746,8 @@
     }
     @media(max-width:640px){
       .hero{padding-top:calc(var(--nav-h) + 0.5rem)}
-      .hero-visual{max-width:340px;margin-bottom:-5.5rem}
+      .hero-visual{max-width:340px;margin-bottom:-8rem}
+      .hero-visual .hv-chip{right:-0.25rem}
       .hero-visual .hv-iphone{width:30%;right:-2%;bottom:32%}
       .hero-visual .hv-badge{bottom:32%;left:3%;padding:0.65rem 0.85rem;gap:0.65rem}
       .hero-visual .hv-badge-text{font-size:0.78rem}
@@ -820,7 +824,7 @@
     .feat-visual-overlay .dot{width:7px;height:7px;border-radius:50%;background:var(--success)}
 
     @media(max-width:900px){
-      .feat-grid{grid-template-columns:1fr;gap:2rem}
+      .feat-grid{grid-template-columns:1fr;gap:0.75rem}
       .feat-grid.reverse > .feat-visual{order:1}
       .feat-grid.reverse > .feat-copy{order:2}
     }
@@ -2444,7 +2448,6 @@
             <img src="images/scl-metalworks-m.jpg?v=3" alt="SCL Metal Works — mobile site" loading="lazy" decoding="async" />
           </div>
         </div>
-        <div class="feat-visual-overlay"><span class="dot"></span>qcatlantic.com · live</div>
       </div>
     </div>
   </section>
