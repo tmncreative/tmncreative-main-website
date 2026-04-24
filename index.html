@@ -21,7 +21,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- LCP hero image preload -->
   <link rel="preload" as="image" href="images/walnut-ventures.jpg?v=2" fetchpriority="high" imagesrcset="images/walnut-ventures-m.jpg?v=2 720w, images/walnut-ventures.jpg?v=2 1000w" imagesizes="(max-width:640px) 720px, 1000px" />
@@ -134,8 +134,8 @@
 
     /* Eyebrow — mono small */
     .eye{
-      font-family:var(--mono);font-size:0.72rem;font-weight:500;
-      letter-spacing:0.02em;color:var(--accent);
+      font-family:'Oswald',var(--sans);font-size:0.86rem;font-weight:500;
+      letter-spacing:0.06em;color:var(--accent);text-transform:uppercase;
       display:inline-flex;align-items:center;gap:0.5rem;
     }
     .eye::before{content:'';width:0.4rem;height:0.4rem;background:var(--accent);border-radius:50%}
@@ -253,6 +253,11 @@
       box-shadow:0 1px 2px oklch(14% 0.01 260 / 0.03);
     }
     .btn-secondary:hover{border-color:var(--ink-faint);background:var(--bg-alt);transform:translateY(-1px)}
+    .btn-gold{
+      background:var(--accent);color:var(--ink);
+      box-shadow:0 1px 0 oklch(100% 0 0 / 0.18) inset, 0 2px 6px oklch(70% 0.107 85 / 0.32);
+    }
+    .btn-gold:hover{background:oklch(74% 0.115 85);transform:translateY(-1px);box-shadow:0 1px 0 oklch(100% 0 0 / 0.22) inset, 0 8px 22px oklch(70% 0.107 85 / 0.42)}
     .btn-ghost{
       color:var(--ink-mid);padding:0.82rem 0.6rem;
     }
@@ -2463,7 +2468,7 @@
           <div class="feat-li"><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>You own everything.</strong></span></div>
         </div>
         <div class="feat-cta">
-          <a href="#contact" class="btn btn-primary">Start a Project <svg class="btn-arrow" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#contact" class="btn btn-gold">Start a Project <svg class="btn-arrow" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <a href="#work" class="btn btn-ghost">See recent work <svg class="btn-arrow" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
@@ -3229,9 +3234,9 @@
 
     // Magnetic CTAs — subtle pull on pointer-fine devices
     if(!REDUCED && window.matchMedia('(pointer: fine)').matches){
-      document.querySelectorAll('.btn-primary, .btn-secondary, .nav-cta, .pc-cta, .form-submit').forEach(function(el){
+      document.querySelectorAll('.btn-primary, .btn-secondary, .btn-gold, .nav-cta, .pc-cta, .form-submit').forEach(function(el){
         el.classList.add('mag');
-        var strength = el.classList.contains('btn-primary') || el.classList.contains('form-submit') ? 6 : 4;
+        var strength = el.classList.contains('btn-primary') || el.classList.contains('btn-gold') || el.classList.contains('form-submit') ? 6 : 4;
         el.addEventListener('mousemove', function(e){
           var r = el.getBoundingClientRect();
           var x = (e.clientX - r.left - r.width/2) / (r.width/2);
