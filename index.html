@@ -831,7 +831,13 @@
       #services{padding-bottom:1.25rem}
     }
     @media(max-width:640px){
-      .hero{padding-top:calc(var(--nav-h) + 0.5rem)}
+      .hero{padding-top:calc(var(--nav-h) + 0.25rem)}
+      .hero-grid{margin-top:0.85rem}
+      /* Two pills share the top line — tighter padding/font so booking + rating both fit */
+      .hero-tags{flex-wrap:nowrap;gap:0.35rem;justify-content:flex-start;width:100%}
+      .hp{padding:0.38rem 0.7rem;font-size:0.7rem;gap:0.45rem;white-space:nowrap;min-width:0}
+      .hp-rating .stars{gap:1px}
+      .hp-rating .stars svg{width:9px;height:9px}
       .hero-visual{max-width:340px;margin-bottom:1rem}
       .hero-visual .hv-iphone{width:32%;right:-2%;top:auto;bottom:-3%}
       .hero-visual .hv-badge{right:2%;left:auto;top:-0.9rem;bottom:auto;padding:0.65rem 0.85rem;gap:0.65rem}
@@ -840,6 +846,11 @@
       .feat-visual.feat-stack{max-width:400px;gap:0.3rem}
       .feat-visual.feat-stack .hv-iphone,
       .feat-visual.feat-stack .hv-iphone.left{width:20%;transform:rotate(-3deg) translateY(-1.4rem)}
+    }
+    @media(max-width:400px){
+      /* Drop "Google rating" label on very narrow phones — stars + 5.0 carry the meaning */
+      .hp{padding:0.35rem 0.6rem;font-size:0.66rem}
+      .hp-rating .src{display:none}
     }
 
     /* =========== SECTION HEADERS =========== */
