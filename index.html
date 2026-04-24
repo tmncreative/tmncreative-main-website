@@ -715,10 +715,12 @@
       .hero-visual{max-width:400px;margin:0 auto -10rem;order:-1}
       .hv-main{transform:rotate(-0.4deg)}
       .hv-stack{transform:rotate(1deg);width:52%}
-      /* iPhone top-right corner of iMac */
-      .hero-visual .hv-iphone{width:28%;right:-1%;top:0%;bottom:auto}
-      /* "40+ operators" badge: bottom-right corner of iMac, under the phone */
-      .hero-visual .hv-badge{right:2%;left:auto;bottom:8%;padding:0.7rem 0.9rem;gap:0.7rem}
+      /* iPhone peeks a little above iMac top-right */
+      .hero-visual .hv-iphone{width:28%;right:-1%;top:-4%;bottom:auto}
+      /* "40+ operators" badge: bottom-right under phone, stays ABOVE the headline overlap
+         (hero-visual has -10rem bottom margin pulling h1 up, so badge.bottom must be > 30%
+         to remain visually within the iMac area and not float over "underselling") */
+      .hero-visual .hv-badge{right:2%;left:auto;bottom:34%;padding:0.7rem 0.9rem;gap:0.7rem}
       .hero-visual .hv-badge-text{font-size:0.82rem;line-height:1.3}
       .hero-visual .hv-badge-avatars > div{width:24px;height:24px;font-size:0.62rem}
 
@@ -749,8 +751,8 @@
     @media(max-width:640px){
       .hero{padding-top:calc(var(--nav-h) + 0.5rem)}
       .hero-visual{max-width:340px;margin-bottom:-8rem}
-      .hero-visual .hv-iphone{width:30%;right:-2%;top:0%;bottom:auto}
-      .hero-visual .hv-badge{right:2%;left:auto;bottom:7%;padding:0.65rem 0.85rem;gap:0.65rem}
+      .hero-visual .hv-iphone{width:30%;right:-2%;top:-4%;bottom:auto}
+      .hero-visual .hv-badge{right:2%;left:auto;bottom:32%;padding:0.65rem 0.85rem;gap:0.65rem}
       .hero-visual .hv-badge-text{font-size:0.78rem}
       .hero-visual .hv-badge-avatars > div{width:22px;height:22px;font-size:0.58rem}
       .feat-visual.feat-stack{max-width:360px;gap:0.4rem}
