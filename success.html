@@ -3,131 +3,175 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Got it | TMN Creative</title>
+  <title>We got it · TMN Creative</title>
+  <meta name="description" content="We got your info. Your free homepage mockup is on its way." />
   <meta name="robots" content="noindex" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#ffffff" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{--dk:#0F172A;--dk2:#1E293B;--dk3:#0B1120;--ac:#C6A24A;--ac2:#D4B04E;--ac3:rgba(198,162,74,0.08);--acG:linear-gradient(135deg,#D4B04E,#C6A24A,#B8923C);--tx2:#64748B;--tx3:#94A3B8;--ln:#E2E8F0;--fn:'Plus Jakarta Sans',system-ui,sans-serif;--fs:'Lora',Georgia,serif;--e:cubic-bezier(0.16,1,0.3,1)}
-    body{font-family:var(--fn);background:#fff;color:var(--dk2);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    /* ── CONFIRMATION ── */
-    .confirm{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3.5rem 1.5rem 1rem;text-align:center}
-    .confirm-inner{max-width:420px;opacity:0;animation:fadeUp 0.7s var(--e) 0.15s forwards}
-    .logo{height:26px;margin-bottom:1.25rem;opacity:0.5}
-    .check{width:48px;height:48px;border-radius:50%;border:2px solid var(--ac);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;opacity:0;animation:scaleIn 0.4s var(--e) 0.4s forwards}
-    .check svg{width:20px;height:20px;stroke:var(--ac);stroke-width:2.5;fill:none;stroke-dasharray:30;stroke-dashoffset:30;animation:drawCheck 0.35s ease 0.7s forwards}
-    .confirm h1{font-family:var(--fs);font-size:1.8rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:0.5rem;line-height:1.15;color:var(--dk)}
-    .confirm h1 em{font-style:normal;color:var(--ac)}
-    .confirm .status{font-size:0.85rem;color:var(--tx2);line-height:1.7;margin-bottom:0}
-
-    /* ── NEXT STEP CTA ── */
-    .next-step{padding:1rem 1.5rem 2.5rem;text-align:center;opacity:0;animation:fadeUp 0.7s var(--e) 0.9s forwards}
-    .next-step-card{max-width:420px;margin:0 auto;background:var(--dk3);border-radius:16px;padding:1.75rem 1.5rem;position:relative;overflow:hidden}
-    .next-step-card::before{content:'';position:absolute;top:-50%;left:-30%;width:160%;height:200%;background:radial-gradient(ellipse 45% 45% at 50% 30%,rgba(198,162,74,0.06) 0%,transparent 70%);pointer-events:none}
-    .next-step-label{font-size:0.55rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--ac);margin-bottom:0.85rem;position:relative;opacity:0.7}
-    .next-step h2{font-family:var(--fs);font-size:1.2rem;font-weight:700;color:#fff;letter-spacing:-0.02em;line-height:1.2;margin-bottom:0.65rem;position:relative}
-    .next-step h2 em{font-style:normal;color:var(--ac)}
-    .next-step .pitch{font-size:0.76rem;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:1.25rem;position:relative;max-width:340px;margin-left:auto;margin-right:auto}
-    .book-btn{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;font-family:var(--fn);font-size:0.84rem;font-weight:700;color:var(--dk3);background:var(--acG);padding:0.95rem 2rem;border-radius:10px;text-decoration:none;box-shadow:0 4px 20px rgba(198,162,74,0.35);transition:all 0.35s var(--e);position:relative;overflow:hidden;width:100%;max-width:280px}
-    .book-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);animation:shimmer 5s ease-in-out infinite 2s}
-    .book-btn:hover{transform:translateY(-3px);box-shadow:0 14px 45px rgba(198,162,74,0.45)}
-    .book-btn svg{width:15px;height:15px;stroke:var(--dk3);stroke-width:2.5;fill:none;flex-shrink:0}
-    .book-note{font-size:0.58rem;color:rgba(255,255,255,0.2);margin-top:0.75rem;position:relative}
-
-    /* ── BULLETS ── */
-    .perks{display:flex;flex-direction:column;gap:0.4rem;text-align:left;max-width:300px;margin:0 auto 1.35rem;position:relative}
-    .perk{display:flex;align-items:center;gap:0.5rem;font-size:0.72rem;color:rgba(255,255,255,0.5)}
-    .perk svg{width:14px;height:14px;stroke:var(--ac);stroke-width:2.5;fill:none;flex-shrink:0}
-
-    /* ── SKIP LINK ── */
-    .skip{display:block;text-align:center;padding:1.25rem;font-size:0.7rem;font-weight:600;color:var(--tx3);text-decoration:none;transition:color 0.2s;opacity:0;animation:fadeUp 0.5s var(--e) 1.3s forwards}
-    .skip:hover{color:var(--ac)}
-
-    /* ── ANIMATIONS ── */
-    @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes scaleIn{from{opacity:0;transform:scale(0.5)}to{opacity:1;transform:scale(1)}}
-    @keyframes drawCheck{to{stroke-dashoffset:0}}
-    @keyframes shimmer{0%,75%,100%{left:-100%}25%{left:100%}}
-    @media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms !important;transition-duration:0.01ms !important}.confirm-inner,.next-step,.check,.skip{opacity:1;animation:none}.check svg{stroke-dashoffset:0}}
-  </style>
-
-  <!-- Plausible Analytics -->
   <script async src="https://plausible.io/js/pa-qenXucgzJOGY_zAczSQ6m.js"></script>
   <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Ads — conversion page -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18041747908"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18041747908');
-  gtag('event', 'conversion', {
-    'send_to': 'AW-18041747908/xXmMCKXKiZccEMTz_JpD',
-    'value': 1.0,
-    'currency': 'USD'
-  });
+  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());gtag('config','AW-18041747908');
+  gtag('event','conversion',{'send_to':'AW-18041747908/lead'});
   </script>
 
-  <!-- Meta Pixel - Lead conversion -->
+  <!-- Meta Pixel — Lead conversion -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1488960412756574');
-  fbq('track', 'PageView');
-  fbq('track', 'Lead');
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','1488960412756574');fbq('track','PageView');fbq('track','Lead');
   </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1488960412756574&ev=PageView&noscript=1"/></noscript>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1488960412756574&ev=Lead&noscript=1"/></noscript>
+
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:oklch(99% 0.004 240);--bg-alt:oklch(97% 0.006 240);--bg-elev:oklch(100% 0 0);
+      --ink:oklch(18% 0.037 262);--ink-2:oklch(26% 0.035 260);--ink-mid:oklch(42% 0.028 256);
+      --ink-soft:oklch(56% 0.022 250);--ink-faint:oklch(70% 0.016 245);
+      --line:oklch(91% 0.012 248);
+      --accent:oklch(70% 0.107 85);--accent-2:oklch(75% 0.118 87);
+      --accent-soft:oklch(95% 0.042 88);--accent-deep:oklch(60% 0.105 80);
+      --success:oklch(64% 0.13 155);
+      --sans:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+      --mono:'Geist Mono',ui-monospace,Menlo,monospace;
+      --serif:'Fraunces',Georgia,serif;
+      --e:cubic-bezier(0.25,1,0.5,1);--e-quint:cubic-bezier(0.22,1,0.36,1);
+      --rail:clamp(1.5rem,4vw,3rem);
+      --nav-h:68px;--r-sm:6px;--r-md:10px;--r-lg:14px;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.5;font-size:16px;-webkit-font-smoothing:antialiased;min-height:100dvh;display:flex;flex-direction:column;font-feature-settings:"kern","liga"}
+    :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+    a{cursor:pointer;-webkit-tap-highlight-color:transparent}
+    img,svg{max-width:100%;display:block}
+
+    .nav{position:fixed;top:0;left:0;right:0;z-index:80;height:var(--nav-h);display:flex;align-items:center;padding:0 var(--rail);background:oklch(99% 0.004 240 / 0.82);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;align-items:center;width:100%}
+    .logo{display:inline-flex;align-items:center;gap:0.7rem;text-decoration:none;color:var(--ink);font-weight:600}
+    .logo-mark{height:34px;width:auto}
+    .logo-word{font-size:1rem;font-weight:600;letter-spacing:-0.015em}
+
+    main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:calc(var(--nav-h) + 3rem) var(--rail) 3rem;gap:1.5rem}
+
+    /* CONFIRM */
+    .confirm{
+      position:relative;max-width:640px;width:100%;text-align:center;
+      padding:clamp(2.5rem,4vw,3.5rem) clamp(1.5rem,3vw,2.5rem);
+      background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--r-lg);
+      box-shadow:0 30px 60px oklch(18% 0.037 262 / 0.08);
+      overflow:hidden;
+    }
+    .confirm::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 50% at 50% 0%, var(--accent-soft), transparent 70%);opacity:0.6}
+    .confirm > *{position:relative;z-index:1}
+
+    .check{
+      width:72px;height:72px;border-radius:50%;background:oklch(94% 0.06 155);
+      display:grid;place-items:center;margin:0 auto 1.25rem;
+      animation:pop 600ms var(--e-quint) 100ms both;
+      box-shadow:0 0 0 6px oklch(94% 0.06 155 / 0.4);
+    }
+    .check svg{width:32px;height:32px;fill:none;stroke:var(--success);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    .check svg polyline{stroke-dasharray:30;stroke-dashoffset:30;animation:draw 600ms var(--e) 350ms forwards}
+    @keyframes pop{from{transform:scale(0.6);opacity:0}to{transform:scale(1);opacity:1}}
+    @keyframes draw{to{stroke-dashoffset:0}}
+
+    .confirm h1{font-family:var(--sans);font-weight:500;font-size:clamp(2rem,2vw + 1rem,3rem);color:var(--ink);letter-spacing:-0.028em;line-height:1.05;margin-bottom:0.75rem}
+    .confirm h1 em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--accent-deep);letter-spacing:-0.015em}
+    .confirm .status{font-family:var(--sans);font-size:1.05rem;color:var(--ink-mid);line-height:1.55;margin:0 auto;max-width:42ch}
+
+    /* NEXT STEP */
+    .next{
+      max-width:640px;width:100%;
+      padding:clamp(2rem,3.5vw,2.75rem);
+      background:var(--ink);color:oklch(85% 0.014 245);border-radius:var(--r-lg);
+      position:relative;overflow:hidden;box-shadow:0 30px 60px oklch(18% 0.037 262 / 0.25);
+    }
+    .next::before{content:'';position:absolute;top:-30%;right:-15%;width:60%;height:150%;background:radial-gradient(ellipse at center, oklch(70% 0.107 85 / 0.15), transparent 60%);pointer-events:none}
+    .next > *{position:relative;z-index:1}
+    .next-label{font-family:var(--mono);font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:0.65rem}
+    .next h2{font-family:var(--sans);font-weight:500;font-size:clamp(1.5rem,1.5vw + 0.8rem,2.1rem);color:var(--bg);letter-spacing:-0.025em;line-height:1.1;margin-bottom:0.85rem}
+    .next h2 em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--accent);letter-spacing:-0.015em}
+    .next-pitch{font-family:var(--sans);font-size:1rem;color:oklch(80% 0.014 245);line-height:1.55;margin-bottom:1.5rem;max-width:50ch}
+
+    .perks{display:flex;flex-direction:column;gap:0.7rem;margin-bottom:1.75rem}
+    .perk{display:flex;align-items:center;gap:0.65rem;font-family:var(--sans);font-size:0.95rem;color:oklch(85% 0.014 245)}
+    .perk svg{width:16px;height:16px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+
+    .book-btn{
+      display:inline-flex;align-items:center;gap:0.6rem;
+      background:var(--accent);color:var(--ink);
+      padding:1rem 1.5rem;border-radius:var(--r-sm);
+      font-family:var(--sans);font-size:0.92rem;font-weight:600;letter-spacing:-0.005em;
+      text-decoration:none;transition:all 250ms var(--e);
+      box-shadow:0 10px 24px oklch(70% 0.107 85 / 0.25);
+    }
+    .book-btn:hover{background:var(--accent-2);transform:translateY(-1px)}
+    .book-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .book-note{font-family:var(--mono);font-size:0.72rem;color:oklch(72% 0.016 245);margin-top:0.85rem;letter-spacing:0.02em}
+
+    .skip{
+      margin-top:1rem;font-family:var(--sans);font-size:0.85rem;color:var(--ink-soft);
+      text-decoration:none;padding:0.55rem 1rem;border-radius:var(--r-sm);
+      transition:color 200ms var(--e);
+    }
+    .skip:hover{color:var(--ink)}
+
+    .foot{padding:2rem var(--rail);background:oklch(14% 0.035 262);color:oklch(72% 0.016 245);font-family:var(--mono);font-size:0.72rem;letter-spacing:0.02em;text-align:center}
+    .foot a{color:var(--accent);text-decoration:none}
+    .foot a:hover{color:var(--accent-2)}
+
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
+  </style>
 </head>
 <body>
 
-  <!-- ── CONFIRMATION ── -->
-  <div class="confirm">
-    <div class="confirm-inner">
-      <img src="images/logo-dark.png" alt="TMN Creative" class="logo" />
-      <div class="check"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <h1>We're <em>on it.</em></h1>
-      <p class="status">We have your info and we're already working on your mockup. Expect something in your inbox within 48-72 hours.</p>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="TMN Creative home">
+        <img src="images/logo-dark.png" alt="" class="logo-mark" width="60" height="34" />
+        <span class="logo-word">Creative</span>
+      </a>
     </div>
-  </div>
+  </nav>
 
-  <!-- ── NEXT STEP: BOOK A CALL ── -->
-  <div class="next-step">
-    <div class="next-step-card">
-      <div class="next-step-label">Want to move even faster?</div>
+  <main>
+
+    <div class="confirm">
+      <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg></div>
+      <h1>We&rsquo;re <em>on it.</em></h1>
+      <p class="status">We have your info and we&rsquo;re already working on your mockup. Expect something in your inbox within 48 to 72 hours.</p>
+    </div>
+
+    <div class="next">
+      <div class="next-label">Want to move even faster?</div>
       <h2>15 minutes. <em>We handle the rest.</em></h2>
-      <p class="pitch">Tell us your vision on a short call and we'll nail the mockup on the first try. We write every word, design every page, and launch it for you. Zero work on your end.</p>
+      <p class="next-pitch">Tell us your vision on a short call and we&rsquo;ll nail the mockup on the first try. We write every word, design every page, and launch it for you. Zero work on your end.</p>
       <div class="perks">
-        <div class="perk"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6" stroke-linecap="round" stroke-linejoin="round"/></svg>We write all the content for you</div>
-        <div class="perk"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6" stroke-linecap="round" stroke-linejoin="round"/></svg>First draft in 72 hours</div>
-        <div class="perk"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6" stroke-linecap="round" stroke-linejoin="round"/></svg>You own everything, no lock-in</div>
+        <div class="perk"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg>We write all the content for you</div>
+        <div class="perk"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg>First draft in 72 hours</div>
+        <div class="perk"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg>You own everything. No lock-in.</div>
       </div>
-      <a href="https://calendly.com/tmn-book/websitereview" target="_blank" rel="noopener" class="book-btn">
+      <a href="https://api.leadconnectorhq.com/widget/booking/FOV83x3fk6V38Idj3fZi" target="_blank" rel="noopener" class="book-btn">
         <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         Book a Free 15-Min Call
       </a>
       <div class="book-note">No obligation. No pressure. Just a conversation.</div>
     </div>
-  </div>
 
-  <a href="/" class="skip">← Back to TMN Creative</a>
+    <a href="/" class="skip">← Back to TMN Creative</a>
 
-<script 
-  src="https://link.msgsndr.com/js/external-tracking.js"
-  data-tracking-id="tk_5662a9586f804ebdb3340fbc1a24b196">
-</script>
-<!-- Fathom - beautiful, simple website analytics -->
-<script src="https://cdn.usefathom.com/script.js" data-site="TBWMZHLW" defer></script>
-<!-- / Fathom -->
+  </main>
+
+  <div class="foot">© 2026 True Margin North, LLC · <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></div>
 </body>
 </html>

@@ -3,366 +3,333 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Website Mockup | TMN Creative</title>
-  <meta name="description" content="We'll design a custom homepage mockup for your firm, free. See what a credibility-driven site could look like before you spend a dime." />
-
+  <title>Free Homepage Redesign · TMN Creative</title>
+  <meta name="description" content="We'll design you a new homepage. For free. First draft in 48–72 hours. No credit card. No obligation." />
+  <meta property="og:title" content="Free Homepage Redesign · TMN Creative" />
+  <meta property="og:description" content="We'll design you a new homepage. For free. First draft in 48–72 hours." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tmncreative.com/free-review" />
+  <meta property="og:image" content="https://tmncreative.com/images/og.jpg" />
+  <link rel="canonical" href="https://tmncreative.com/free-review" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#ffffff" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{--bg:#fff;--bg2:#F7F8FA;--dk:#0F172A;--dk2:#1E293B;--dk3:#0B1120;--ac:#C6A24A;--ac2:#D4B04E;--ac3:rgba(198,162,74,0.08);--acG:linear-gradient(135deg,#D4B04E,#C6A24A,#B8923C);--tx:#1E293B;--tx2:#64748B;--tx3:#94A3B8;--ln:#E2E8F0;--fn:'Plus Jakarta Sans',system-ui,sans-serif;--fs:'Lora',Georgia,serif;--e:cubic-bezier(0.16,1,0.3,1)}
-    html{scroll-behavior:smooth}
-    body{font-family:var(--fn);color:var(--tx);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.015;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") repeat;background-size:256px}
-    ::selection{background:rgba(198,162,74,0.2);color:var(--dk)}
-    a{color:inherit;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
-    img{max-width:100%;display:block}
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    /* ── DARK HERO WRAP ── */
-    .hero-wrap{background:var(--dk3);position:relative;overflow:hidden}
-    .hero-wrap::before{content:'';position:absolute;top:-50%;left:-30%;width:160%;height:200%;background:radial-gradient(ellipse 45% 45% at 50% 25%,rgba(198,162,74,0.06) 0%,transparent 70%);pointer-events:none}
+  <!-- LCP preloads -->
+  <link rel="preload" as="image" href="images/dh-before.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="images/logo-dark.png" fetchpriority="high" />
 
-    /* ── TOP BAR ── */
-    .top-bar{padding:0.3rem 1.5rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
-    .top-bar img{height:22px;opacity:0.9;mix-blend-mode:lighten}
-    .top-bar-right{display:flex;align-items:center;gap:0.3rem;font-size:0.58rem;font-weight:600;color:rgba(255,255,255,0.5)}
-    .top-bar-right span{color:var(--ac);font-size:0.65rem}
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Free Homepage Redesign","provider":{"@type":"Organization","@id":"https://tmncreative.com/#org","name":"TMN Creative"},"description":"We will design you a new homepage. For free. First draft in 48 to 72 hours. No credit card. No obligation.","url":"https://tmncreative.com/free-review","areaServed":"United States","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free custom homepage mockup delivered in 48 to 72 hours"}},{"@type":"WebPage","@id":"https://tmncreative.com/free-review","url":"https://tmncreative.com/free-review","name":"Free Homepage Redesign · TMN Creative"}]}
+  </script>
 
-    /* ── HERO ── */
-    .hero{padding:0.25rem 1.5rem 0;text-align:center;position:relative;z-index:2}
-    .hero h1{font-family:var(--fs);font-size:clamp(1.45rem,5vw,2.3rem);font-weight:800;color:#fff;letter-spacing:-0.04em;line-height:1.08;margin-bottom:0.15rem}
-    .hero h1 em{font-style:normal;color:var(--ac)}
-    .hero-sub{font-size:0.72rem;color:rgba(255,255,255,0.65);line-height:1.6;max-width:360px;margin:0 auto}
-
-    /* ── HERO QUOTE ── */
-    .hero-quote{max-width:400px;margin:0.75rem auto 0;padding:0.5rem 0.75rem;background:rgba(198,162,74,0.06);border:1px solid rgba(198,162,74,0.1);border-radius:10px;display:flex;align-items:center;gap:0.6rem}
-    .hero-quote-stars{color:var(--ac);font-size:0.6rem;letter-spacing:1px;flex-shrink:0;line-height:1}
-    .hero-quote-text{font-size:0.65rem;color:rgba(255,255,255,0.5);line-height:1.5;text-align:left}
-    .hero-quote-text strong{color:rgba(255,255,255,0.7);font-weight:600}
-
-    /* ── TRUST STRIP ── */
-    .trust{display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;padding:0.3rem 1.5rem 0.4rem;position:relative;z-index:2}
-    .trust-item{font-size:0.58rem;font-weight:600;color:rgba(255,255,255,0.45);letter-spacing:0.02em;display:flex;align-items:center;gap:0.3rem}
-    .trust-dot{width:4px;height:4px;border-radius:50%;background:var(--ac);opacity:0.8;flex-shrink:0}
-
-    /* ── FORM SECTION ── */
-    .form-section{padding:0.5rem 1.5rem 1.25rem;position:relative;background:var(--bg)}
-    .form-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:48px;height:3px;background:var(--acG);border-radius:2px;opacity:0.7}
-    .form-label{text-align:center;margin-bottom:0.35rem}
-    .form-label h2{font-family:var(--fn);font-size:1.1rem;font-weight:800;color:var(--dk);letter-spacing:-0.03em;margin-bottom:0.2rem}
-    .form-label p{font-size:0.7rem;color:var(--tx3)}
-    .form-card{background:var(--bg);border:1px solid var(--ln);border-radius:16px;padding:0.7rem;box-shadow:0 12px 40px rgba(15,23,42,0.06),0 1px 3px rgba(15,23,42,0.03);max-width:440px;margin:0 auto}
-    .fg{margin-bottom:0.28rem}
-    .fg label{display:block;font-size:0.56rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--tx2);margin-bottom:0.15rem}
-    .fg input,.fg select,.fg textarea{width:100%;padding:0.45rem 0.75rem;font-family:var(--fn);font-size:16px;color:var(--dk);background:var(--bg2);border:1px solid var(--ln);border-radius:10px;outline:none;transition:all 0.25s var(--e)}
-    .fg input::placeholder,.fg textarea::placeholder{color:var(--tx3)}
-    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--ac);background:#fff;box-shadow:0 0 0 4px var(--ac3)}
-    .fg textarea{min-height:52px;resize:vertical}
-    .hidden{display:none}
-    .form-sub{width:100%;font-family:var(--fn);font-size:0.875rem;font-weight:700;color:var(--dk3);background:var(--acG);border:none;padding:0.75rem;cursor:pointer;border-radius:10px;transition:all 0.3s var(--e);margin-top:0.25rem;box-shadow:0 4px 20px rgba(198,162,74,0.3),0 0 0 1px rgba(198,162,74,0.1);position:relative;overflow:hidden;letter-spacing:-0.01em}
-    .form-sub::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);animation:shimmer 5s ease-in-out infinite 1.5s}
-    .form-sub:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(198,162,74,0.4)}
-    .form-sub:active{transform:translateY(0)}
-    .form-micro{text-align:center;font-size:0.58rem;color:var(--tx3);margin-top:0.35rem;line-height:1.5}
-    .form-micro svg{width:10px;height:10px;vertical-align:-1px;stroke:var(--tx3);stroke-width:2;fill:none;margin-right:2px}
-
-    /* ── VALUE PROPS (compact) ── */
-    .value-strip{max-width:440px;margin:1.5rem auto 0;display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
-    .value-card{padding:0.85rem 0.75rem;background:var(--bg2);border:1px solid rgba(226,232,240,0.6);border-radius:10px;text-align:center}
-    .value-card .vc-icon{font-size:1rem;margin-bottom:0.3rem}
-    .value-card h3{font-size:0.7rem;font-weight:700;color:var(--dk);line-height:1.3;margin-bottom:0.15rem}
-    .value-card p{font-size:0.6rem;color:var(--tx2);line-height:1.45}
-
-    /* ── TESTIMONIALS ── */
-    .proof{max-width:440px;margin:0 auto;padding:1.75rem 1.5rem 1rem}
-    .proof-header{text-align:center;margin-bottom:1rem}
-    .proof-stars{color:var(--ac);font-size:0.9rem;letter-spacing:2px;margin-bottom:0.15rem}
-    .proof-label{font-size:0.62rem;font-weight:600;color:var(--tx3)}
-    .proof-label a{color:var(--ac);border-bottom:1px solid rgba(198,162,74,0.25);text-decoration:none}
-    .test-card{display:flex;align-items:flex-start;gap:0.6rem;padding:0.8rem 0.9rem;background:var(--bg2);border:1px solid rgba(226,232,240,0.6);border-radius:12px;margin-bottom:0.45rem}
-    .test-card .tc-init{width:26px;height:26px;border-radius:50%;background:var(--ac3);border:1px solid rgba(198,162,74,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.55rem;font-weight:800;color:var(--ac)}
-    .test-card .tc-body{flex:1}
-    .test-card .tc-quote{font-size:0.7rem;color:var(--tx);line-height:1.6;margin-bottom:0.15rem}
-    .test-card .tc-attr{font-size:0.55rem;color:var(--tx3);font-weight:500}
-
-    /* ── BOTTOM CTA ── */
-    .bottom-cta{text-align:center;padding:2rem 1.5rem 2.5rem;background:var(--dk3);position:relative;overflow:hidden}
-    .bottom-cta::before{content:'';position:absolute;top:-60%;left:-30%;width:160%;height:220%;background:radial-gradient(ellipse 40% 40% at 50% 80%,rgba(198,162,74,0.05) 0%,transparent 70%);pointer-events:none}
-    .bottom-cta p{font-size:0.7rem;color:rgba(255,255,255,0.3);margin-bottom:0.4rem;position:relative}
-    .bottom-cta .tagline{font-family:var(--fs);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:1rem;position:relative;letter-spacing:-0.02em}
-    .bottom-cta .tagline em{font-style:normal;color:var(--ac)}
-    .cta-btn-scroll{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--fn);font-size:0.82rem;font-weight:700;color:var(--dk3);background:var(--acG);padding:0.9rem 2rem;border-radius:10px;box-shadow:0 4px 20px rgba(198,162,74,0.3);transition:all 0.35s var(--e);position:relative;overflow:hidden;cursor:pointer;border:none}
-    .cta-btn-scroll::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);animation:shimmer 5s ease-in-out infinite 2s}
-    .cta-btn-scroll:hover{transform:translateY(-3px);box-shadow:0 14px 45px rgba(198,162,74,0.4)}
-    .cta-btn-scroll svg{width:14px;height:14px;stroke:var(--dk3);stroke-width:2.5;fill:none}
-
-    /* ── STICKY MOBILE CTA ── */
-    .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:100;padding:0.65rem 1rem;padding-bottom:calc(0.65rem + env(safe-area-inset-bottom,0px));background:rgba(11,17,32,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(198,162,74,0.15);transform:translateY(100%);transition:transform 0.4s var(--e);display:flex;align-items:center;justify-content:center;gap:0.6rem}
-    .sticky-cta.show{transform:translateY(0)}
-    .sticky-cta-btn{font-family:var(--fn);font-size:0.8rem;font-weight:700;color:var(--dk3);background:var(--acG);border:none;padding:0.75rem 1.5rem;border-radius:9px;cursor:pointer;box-shadow:0 2px 12px rgba(198,162,74,0.3);flex:1;max-width:320px}
-    .sticky-cta-text{font-size:0.58rem;color:rgba(255,255,255,0.35);font-weight:500;display:none}
-    @media(min-width:380px){.sticky-cta-text{display:block;flex-shrink:0}}
-
-    /* ── FOOTER ── */
-    footer{padding:1rem 1.5rem 1.25rem;padding-bottom:calc(4.5rem + env(safe-area-inset-bottom,0px));text-align:center;font-size:0.56rem;color:rgba(255,255,255,0.15);background:var(--dk3);border-top:1px solid rgba(255,255,255,0.03)}
-    footer a{color:var(--ac);text-decoration:none;opacity:0.5}
-    footer a:hover{opacity:1}
-
-    /* ── ANIMATIONS ── */
-    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.35}}
-    @keyframes shimmer{0%,75%,100%{left:-100%}25%{left:100%}}
-    .hero h1{opacity:0;animation:fadeUp 0.6s var(--e) 0.1s forwards}
-    .hero-sub{opacity:0;animation:fadeUp 0.6s var(--e) 0.25s forwards}
-    .hero-quote{opacity:0;animation:fadeUp 0.6s var(--e) 0.4s forwards}
-    .trust{opacity:0;animation:fadeUp 0.5s var(--e) 0.55s forwards}
-    .r{opacity:0;transform:translateY(18px);transition:opacity 0.6s var(--e),transform 0.6s var(--e)}
-    .r.v{opacity:1;transform:translateY(0)}
-    @media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms !important;transition-duration:0.01ms !important}.r{opacity:1;transform:none}.hero h1,.hero-sub,.hero-quote,.trust{opacity:1;animation:none}}
-
-    /* ── HOW IT WORKS ── */
-    .steps{max-width:440px;margin:0 auto 1rem;padding:0 1.5rem}
-    .steps-label{font-size:0.58rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--tx3);text-align:center;margin-bottom:0.6rem}
-    .steps-grid{display:flex;flex-direction:column;gap:0.45rem}
-    .step{display:flex;align-items:flex-start;gap:0.75rem;padding:0.7rem 0.85rem;background:var(--bg2);border:1px solid var(--ln);border-radius:10px}
-    .step-num{width:24px;height:24px;border-radius:50%;background:var(--acG);display:flex;align-items:center;justify-content:center;font-size:0.6rem;font-weight:800;color:var(--dk3);flex-shrink:0;margin-top:1px}
-    .step-body h4{font-size:0.7rem;font-weight:700;color:var(--dk);margin-bottom:0.1rem}
-    .step-body p{font-size:0.62rem;color:var(--tx2);line-height:1.5}
-
-    /* ── BEFORE/AFTER SLIDER ── */
-    .ba-wrap{max-width:440px;margin:0 auto 0.75rem;padding:0 1.5rem}
-    .ba-title{font-size:0.55rem;font-weight:700;color:var(--tx2);text-align:center;margin-bottom:0.25rem;text-transform:uppercase;letter-spacing:0.06em}
-    .ba-title span{color:var(--ac)}
-    .ba-pair{position:relative;width:100%;border-radius:8px;overflow:hidden;box-shadow:0 6px 20px rgba(15,23,42,0.1);aspect-ratio:2/1;touch-action:none}
-    .ba-pair img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left top;pointer-events:none;display:block}
-    .ba-pair .ba-after{clip-path:inset(0 0 0 50%)}
-    .ba-pair .ba-handle{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:3px;background:rgba(255,255,255,0.9);z-index:4;pointer-events:none;box-shadow:0 0 8px rgba(0,0,0,0.3)}
-    .ba-pair .ba-handle::after{content:'◀ ▶';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;font-size:9px;color:#64748B;letter-spacing:2px;z-index:5;text-indent:0}
-    .ba-pair input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:col-resize;z-index:6;margin:0;-webkit-appearance:none;appearance:none}
-    .ba-lbl{position:absolute;top:10px;padding:3px 8px;font-size:0.5rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;border-radius:4px;z-index:3;pointer-events:none;transition:opacity 0.2s}
-    .ba-lbl.before{left:10px;background:rgba(15,23,42,0.7);color:rgba(255,255,255,0.8)}
-    .ba-lbl.after{right:10px;background:var(--ac);color:var(--dk3)}
-  </style>
-
-  <!-- Plausible Analytics -->
   <script async src="https://plausible.io/js/pa-qenXucgzJOGY_zAczSQ6m.js"></script>
   <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18041747908"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18041747908');
-  </script>
-
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1488960412756574');
-  fbq('track', 'PageView');
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','1488960412756574');fbq('track','PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1488960412756574&ev=PageView&noscript=1"/></noscript>
-  <!-- End Meta Pixel Code -->
-  <link rel="canonical" href="https://tmncreative.com/free-review" />
-  <meta property="og:image" content="https://tmncreative.com/images/og.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18041747908"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18041747908');</script>
+
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:oklch(99% 0.004 240);--bg-alt:oklch(97% 0.006 240);--bg-elev:oklch(100% 0 0);
+      --ink:oklch(18% 0.037 262);--ink-2:oklch(26% 0.035 260);--ink-mid:oklch(42% 0.028 256);
+      --ink-soft:oklch(56% 0.022 250);--ink-faint:oklch(70% 0.016 245);
+      --line:oklch(91% 0.012 248);--line-soft:oklch(94% 0.008 248);
+      --accent:oklch(70% 0.107 85);--accent-2:oklch(75% 0.118 87);
+      --accent-soft:oklch(95% 0.042 88);--accent-deep:oklch(60% 0.105 80);
+      --success:oklch(64% 0.13 155);
+      --sans:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+      --mono:'Geist Mono',ui-monospace,Menlo,monospace;
+      --serif:'Fraunces',Georgia,serif;
+      --e:cubic-bezier(0.25,1,0.5,1);--e-quint:cubic-bezier(0.22,1,0.36,1);
+      --rail:clamp(1.25rem,3.5vw,3rem);--sec-y:clamp(4rem,7vw,6.5rem);
+      --nav-h:68px;--r-xs:4px;--r-sm:6px;--r-md:10px;--r-lg:14px;
+    }
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.5;font-size:16px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;font-feature-settings:"kern","liga","ss04","cv11";min-height:100dvh;display:flex;flex-direction:column}
+    ::selection{background:oklch(90% 0.09 70);color:var(--ink)}
+    :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+    a,button{cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+    button{border:none;background:none;font:inherit;color:inherit}
+    img,svg{max-width:100%;display:block}
+    .hidden{display:none}
+
+    h1,h2,h3,h4{font-family:var(--sans);color:var(--ink);letter-spacing:-0.018em}
+    h1{font-size:clamp(2.25rem,3vw + 1rem,4rem);line-height:1.04;font-weight:500;letter-spacing:-0.032em}
+    h2{font-size:clamp(1.75rem,1.4vw + 1.1rem,2.5rem);line-height:1.08;font-weight:500;letter-spacing:-0.025em}
+    h3{font-size:1.25rem;font-weight:600;letter-spacing:-0.02em}
+    h1 em,h2 em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--accent-deep);letter-spacing:-0.02em}
+
+    .eye{font-family:var(--mono);font-size:0.72rem;font-weight:500;color:var(--accent);display:inline-flex;align-items:center;gap:0.5rem}
+    .eye::before{content:'';width:0.4rem;height:0.4rem;background:var(--accent);border-radius:50%}
+
+    .nav{position:fixed;top:0;left:0;right:0;z-index:80;height:var(--nav-h);display:flex;align-items:center;padding:0 var(--rail);background:oklch(99% 0.004 240 / 0.82);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid transparent;transition:border-color 300ms var(--e)}
+    .nav.scrolled{border-bottom-color:var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%}
+    .logo{display:inline-flex;align-items:center;gap:0.7rem;text-decoration:none;color:var(--ink);font-weight:600}
+    .logo-mark{height:34px;width:auto;transition:transform 400ms var(--e)}
+    .logo:hover .logo-mark{transform:rotate(-4deg) scale(1.05)}
+    .logo-word{font-size:1rem;font-weight:600;letter-spacing:-0.015em}
+    .nav-back{font-family:var(--sans);font-size:0.85rem;color:var(--ink-mid);text-decoration:none;padding:0.55rem 0.9rem;border-radius:var(--r-sm);transition:all 200ms var(--e);display:inline-flex;align-items:center;gap:0.5rem}
+    .nav-back:hover{color:var(--ink);background:var(--bg-alt)}
+    .nav-back svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+    main{flex:1;padding:calc(var(--nav-h) + 3rem) var(--rail) 4rem;position:relative;overflow:hidden}
+    main::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 50% 35% at 50% 0%, var(--accent-soft), transparent 65%);opacity:0.7}
+    .wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto}
+
+    /* TAG */
+    .intro-tag{
+      display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 0.85rem 0.4rem 0.5rem;
+      background:var(--bg-elev);border:1px solid var(--line);border-radius:100px;
+      font-family:var(--sans);font-size:0.78rem;font-weight:500;color:var(--ink-mid);
+      box-shadow:0 1px 2px oklch(14% 0.01 80 / 0.04);margin-bottom:1.5rem;
+    }
+    .intro-tag .stars{color:var(--accent);font-size:0.78rem;letter-spacing:0.08em}
+    .intro-tag .sep{width:1px;height:12px;background:var(--line)}
+    .intro-tag strong{color:var(--ink);font-weight:600}
+
+    /* INTRO + FORM GRID */
+    .grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(2rem,4vw,3.5rem);align-items:start;margin-bottom:clamp(3rem,5vw,5rem)}
+    @media(max-width:880px){.grid{grid-template-columns:1fr}}
+
+    .intro h1{margin-bottom:1.25rem;max-width:14ch}
+    .intro .lead{font-family:var(--sans);font-size:clamp(1.05rem,0.4vw + 1rem,1.2rem);color:var(--ink-mid);line-height:1.55;margin-bottom:1.5rem;max-width:44ch}
+    .intro .lead strong{color:var(--ink);font-weight:600}
+    .intro .perks{display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.75rem}
+    .intro .perk{display:flex;align-items:center;gap:0.65rem;font-family:var(--sans);font-size:0.95rem;color:var(--ink-2)}
+    .intro .perk svg{width:18px;height:18px;fill:none;stroke:var(--success);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;background:oklch(94% 0.06 155);border-radius:50%;padding:3px}
+
+    /* BEFORE / AFTER (Diamond H) */
+    .ba-block{margin-top:1rem}
+    .ba-block-head{font-family:var(--mono);font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0.75rem}
+    .ba-pair{position:relative;aspect-ratio:16/10;overflow:hidden;border-radius:var(--r-md);border:1px solid var(--line);background:var(--bg-alt);cursor:ew-resize;user-select:none;-webkit-user-select:none;box-shadow:0 12px 32px oklch(18% 0.037 262 / 0.08)}
+    .ba-pair img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;pointer-events:none}
+    .ba-after{clip-path:inset(0 0 0 50%)}
+    .ba-line{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--bg);box-shadow:0 0 0 1px oklch(18% 0.037 262 / 0.2),0 8px 24px oklch(18% 0.037 262 / 0.2);pointer-events:none;z-index:5}
+    .ba-line::after{content:'';position:absolute;top:50%;left:50%;width:40px;height:40px;transform:translate(-50%,-50%);background:var(--bg);border-radius:50%;box-shadow:0 8px 20px oklch(18% 0.037 262 / 0.18),0 0 0 1px var(--line);background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%231e293b' stroke-width='1.6' stroke-linecap='round'%3E%3Cpolyline points='15 18 9 12 15 6'/%3E%3Cpolyline points='9 6 15 12 9 18' transform='translate(6 0)'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:20px}
+    .ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:8}
+    .ba-lbl{position:absolute;top:0.85rem;font-family:var(--mono);font-size:0.62rem;font-weight:500;letter-spacing:0.04em;color:var(--bg);padding:0.3rem 0.55rem;background:oklch(18% 0.037 262 / 0.82);backdrop-filter:blur(10px);border-radius:100px;pointer-events:none;z-index:4;transition:opacity 250ms var(--e)}
+    .ba-lbl-b{left:0.85rem}.ba-lbl-a{right:0.85rem;background:var(--accent);color:var(--ink);font-weight:600}
+    .ba-cap{font-family:var(--mono);font-size:0.68rem;color:var(--ink-soft);margin-top:0.6rem;letter-spacing:0.04em}
+
+    /* FORM */
+    .form-card{background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(1.5rem,2.5vw,2rem);box-shadow:0 24px 48px oklch(18% 0.037 262 / 0.06);position:relative}
+    .form-card::before{content:'FORM · 48–72 HRS';position:absolute;top:1rem;right:1.25rem;font-family:var(--mono);font-size:0.58rem;letter-spacing:0.2em;color:var(--ink-faint)}
+    .fg{display:flex;flex-direction:column;gap:0.45rem;margin-bottom:1rem}
+    .fg label{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-soft);font-weight:500}
+    .fg input,.fg select{font-family:var(--sans);font-size:0.98rem;color:var(--ink);background:var(--bg-alt);border:1px solid var(--line);border-radius:var(--r-sm);padding:0.85rem 1rem;transition:all 200ms var(--e);-webkit-appearance:none;appearance:none}
+    .fg input:focus,.fg select:focus{outline:none;border-color:var(--accent);background:var(--bg-elev);box-shadow:0 0 0 3px var(--accent-soft)}
+    .fg input::placeholder{color:var(--ink-faint)}
+    .fg select{background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none' stroke='%2394A3B8' stroke-width='1.4'%3E%3Cpolyline points='1 1 5 5 9 1'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0.9rem center;padding-right:2rem;cursor:pointer}
+    .form-sub{
+      width:100%;margin-top:0.5rem;padding:1rem 1.25rem;
+      background:var(--ink);color:var(--bg);border-radius:var(--r-sm);
+      font-family:var(--sans);font-size:0.95rem;font-weight:600;letter-spacing:-0.005em;
+      display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;cursor:pointer;
+      transition:all 250ms var(--e);box-shadow:0 8px 20px oklch(18% 0.037 262 / 0.18);
+    }
+    .form-sub:hover{background:var(--ink-2);transform:translateY(-1px)}
+    .form-sub svg{width:14px;height:10px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+    .form-micro{display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:1rem;font-family:var(--mono);font-size:0.68rem;color:var(--ink-soft);letter-spacing:0.02em}
+    .form-micro svg{width:12px;height:12px;fill:none;stroke:var(--success);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .form-alt{text-align:center;margin-top:0.75rem;font-family:var(--sans);font-size:0.82rem;color:var(--ink-soft)}
+    .form-alt a{color:var(--accent-deep);text-decoration:none;font-weight:600;border-bottom:1px solid var(--accent);padding-bottom:1px}
+    .form-alt a:hover{color:var(--accent)}
+
+    /* STEPS */
+    .steps{margin-top:clamp(3rem,5vw,4rem);padding-top:clamp(2.5rem,4vw,3rem);border-top:1px solid var(--line)}
+    .steps-label{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;display:inline-flex;align-items:center;gap:0.5rem}
+    .steps-label::before{content:'';width:0.4rem;height:0.4rem;background:var(--accent);border-radius:50%}
+    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .step{padding:1.5rem;background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--r-lg);display:flex;flex-direction:column;gap:0.75rem;transition:all 300ms var(--e);position:relative;overflow:hidden}
+    .step::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 550ms var(--e)}
+    .step:hover::before{transform:scaleX(1)}
+    .step:hover{transform:translateY(-3px);box-shadow:0 20px 40px oklch(18% 0.037 262 / 0.06)}
+    .step-num{font-family:var(--serif);font-weight:400;font-size:2rem;font-style:italic;color:var(--accent-deep);line-height:0.9}
+    .step h4{font-size:1.05rem;font-weight:600;letter-spacing:-0.015em}
+    .step p{font-family:var(--sans);font-size:0.9rem;color:var(--ink-mid);line-height:1.55;margin:0}
+    @media(max-width:760px){.steps-grid{grid-template-columns:1fr}}
+
+    /* FOOTER */
+    .foot{background:oklch(14% 0.035 262);color:oklch(72% 0.016 245);padding:2rem var(--rail);margin-top:auto}
+    .foot-inner{max-width:1240px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:0.72rem;letter-spacing:0.02em}
+    .foot-inner a{color:var(--accent);text-decoration:none}
+    .foot-inner a:hover{color:var(--accent-2)}
+    .foot-l{display:inline-flex;align-items:center;gap:0.65rem}
+    .foot-l img{height:26px;width:auto}
+
+    
+    /* Scroll progress bar + cursor-follow light */
+    .scroll-prog{position:fixed;top:0;left:0;right:0;height:2px;z-index:200;background:linear-gradient(90deg,var(--accent-deep),var(--accent) 50%,var(--accent-2));transform:scaleX(var(--p,0));transform-origin:left;box-shadow:0 0 14px oklch(70% 0.107 85 / 0.35)}
+    .cursor-light{position:fixed;top:0;left:0;width:480px;height:480px;pointer-events:none;z-index:0;background:radial-gradient(circle, oklch(70% 0.107 85 / 0.06), transparent 60%);transform:translate(calc(var(--cx,50vw) - 240px), calc(var(--cy,50vh) - 240px));transition:transform 350ms var(--e);will-change:transform;mix-blend-mode:multiply}
+    .mag{transition:transform 300ms var(--e)}
+
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
+  </style>
 </head>
 <body>
 
-<!-- ════════════════ DARK HERO ════════════════ -->
-<div class="hero-wrap">
-  <div class="top-bar">
-    <a href="/"><img src="images/logo-dark.png" alt="TMN Creative" /></a>
-    <div class="top-bar-right"><span>&#9733;</span> 5.0 on Google</div>
-  </div>
+  <div class="cursor-light" id="cursorLight" aria-hidden="true"></div>
+  <div class="scroll-prog" id="scrollProg" aria-hidden="true"></div>
 
-  <div class="hero">
-    <h1>We'll design you a new homepage. <em>For free.</em></h1>
-    <p class="hero-sub">See what your website could look like before you spend a dollar. No call needed. No commitment.</p>
-  </div>
 
-  <div class="trust">
-    <div class="trust-item"><div class="trust-dot"></div>Delivered in 24 Hours</div>
-    <div class="trust-item"><div class="trust-dot"></div>Fort Worth, TX</div>
-    <div class="trust-item"><div class="trust-dot"></div><a href="https://www.linkedin.com/in/niemann29/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Built by Trevor</a></div>
-  </div>
-</div>
-
-<!-- ════════════════ FORM ════════════════ -->
-<div class="form-section" id="form-section">
-  <div class="form-label">
-    <h2>See a better version of your website</h2>
-    
-  </div>
-
-  <div class="form-card">
-    <form name="tmn-meta-intake" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="tmn-meta-intake" />
-      <p class="hidden"><label>Ignore:<input name="bot-field" /></label></p>
-      <div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="John Smith" required autocomplete="name" /></div>
-      <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email" /></div>
-      <div class="fg"><label for="company">Company Name</label><input type="text" id="company" name="company" placeholder="Acme Inc." autocomplete="organization" /></div>
-      <!-- Phone field temporarily hidden for A2P compliance review -->
-      <!--<div class="fg"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required autocomplete="tel" /></div>-->
-      <button type="submit" class="form-sub">Build My Custom Web Design (free) →</button>
-    </form>
-    <div class="form-micro"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>No spam. No credit card. We build it, you decide.</div>
-    <div style="text-align:center;margin-top:0.4rem;font-size:0.6rem;color:var(--tx3)">Rather talk first? <a href="https://calendly.com/tmn-book/websitereview" target="_blank" rel="noopener" style="color:var(--ac);text-decoration:none;font-weight:600">Book a 15-min call</a></div>
-  </div>
-
-  <!-- Before/After Slider: Ramon Design Group -->
-  <div class="ba-wrap r">
-    <p class="ba-title">See a real before &amp; after &mdash; <span>Ramon Design Group</span></p>
-    <div class="ba-pair" data-ba>
-      <img class="ba-before" src="images/ba-rdg-before.jpg" alt="Ramon Design Group website before TMN Creative" width="900" height="632" loading="lazy" />
-      <img class="ba-after" src="images/ba-rdg-after.jpg" alt="Ramon Design Group website after TMN Creative redesign" width="900" height="632" loading="lazy" />
-      <div class="ba-handle"></div>
-      <span class="ba-lbl before">Before</span>
-      <span class="ba-lbl after">After</span>
-      <input type="range" min="0" max="100" value="50" aria-label="Before and after slider" />
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="TMN Creative home">
+        <img src="images/logo-dark.png" alt="" class="logo-mark" width="60" height="34" />
+        <span class="logo-word">Creative</span>
+      </a>
+      <a href="/" class="nav-back">
+        <svg viewBox="0 0 16 16"><polyline points="10,3 5,8 10,13"/></svg>
+        Back to site
+      </a>
     </div>
-  </div>
+  </nav>
 
-  <!-- Before/After Slider: Crestone Air Partners -->
-  <div class="ba-wrap r">
-    <p class="ba-title">See a real before &amp; after &mdash; <span><a href="https://crestone-air.netlify.app" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Crestone Air Partners</a></span></p>
-    <div class="ba-pair" data-ba>
-      <img class="ba-before" src="images/cap-before.jpg" alt="Crestone Air Partners website before TMN Creative" width="900" height="632" loading="lazy" />
-      <img class="ba-after" src="images/cap-after.jpg" alt="Crestone Air Partners website after TMN Creative redesign" width="900" height="632" loading="lazy" />
-      <div class="ba-handle"></div>
-      <span class="ba-lbl before">Before</span>
-      <span class="ba-lbl after">After</span>
-      <input type="range" min="0" max="100" value="50" aria-label="Before and after slider" />
-    </div>
-  </div>
+  <main>
+    <div class="wrap">
 
-  <!-- How it works -->
-  <div class="steps r">
-    <p class="steps-label">What happens next</p>
-    <div class="steps-grid">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h4>Fill out the 30-second form</h4>
-          <p>Tell us your name and what you do. That's all we need to get started.</p>
+      <div class="grid">
+        <div class="intro">
+          <div class="intro-tag">
+            <span class="stars">★★★★★</span>
+            <strong>5.0 on Google</strong>
+            <span class="sep"></span>
+            <em style="font-style:normal;color:var(--ink-soft)">40+ sites shipped</em>
+          </div>
+          <h1>We&rsquo;ll design you a new homepage. <em>For free.</em></h1>
+          <p class="lead"><strong>No catch.</strong> Fill out the form. In 48 to 72 hours, a custom homepage built around your business lands in your inbox. If you love it, we build the full site. If not, keep the mockup.</p>
+          <div class="perks">
+            <div class="perk"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg>Custom designed, not a template</div>
+            <div class="perk"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg>48–72 hour turnaround</div>
+            <div class="perk"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg>No credit card. No obligation.</div>
+          </div>
+
+          <div class="ba-block">
+            <div class="ba-block-head">See a better version of your website</div>
+            <div class="ba-pair" data-ba>
+              <img src="images/dh-before.jpg" alt="Diamond H Irrigation before" loading="lazy">
+              <img src="images/dh-after.jpg" alt="Diamond H Irrigation after" class="ba-after" loading="lazy">
+              <span class="ba-lbl ba-lbl-b">Before</span>
+              <span class="ba-lbl ba-lbl-a">After</span>
+              <div class="ba-line"></div>
+              <input type="range" min="0" max="100" value="50" class="ba-range" aria-label="Before / after slider">
+            </div>
+            <div class="ba-cap">Diamond H Irrigation · Fort Worth · shipped in 5 days</div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <form name="tmn-meta-intake" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="tmn-meta-intake" />
+            <p class="hidden"><label>Ignore:<input name="bot-field" /></label></p>
+            <div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="John Smith" required autocomplete="name" /></div>
+            <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email" /></div>
+            <div class="fg"><label for="company">Company Name</label><input type="text" id="company" name="company" placeholder="Smith Plumbing Co." required autocomplete="organization" /></div>
+            <div class="fg"><label for="phone">Phone (optional)</label><input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel" /></div>
+            <div class="fg"><label for="website">Current Website (optional)</label><input type="text" id="website" name="website" placeholder="yourcompany.com" /></div>
+            <div class="fg"><label for="business-type">What type of business?</label>
+              <select id="business-type" name="business-type" required>
+                <option value="" disabled selected>Select one</option>
+                <option value="home-services">Home Services</option>
+                <option value="contractor">Contractor / Construction</option>
+                <option value="healthcare">Healthcare / Dental</option>
+                <option value="financial">Financial Services / RIA</option>
+                <option value="professional-services">Legal / Accounting / Consulting</option>
+                <option value="architecture">Architecture / Design</option>
+                <option value="fitness">Fitness / Wellness</option>
+                <option value="restaurant-food">Restaurant / Food</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <button type="submit" class="form-sub">Send me my free homepage <svg viewBox="0 0 14 10"><path d="M1 5h12m0 0L9 1m4 4L9 9"/></svg></button>
+          </form>
+          <div class="form-micro"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>No spam. No credit card. We build it. You decide.</div>
+          <div class="form-alt">Rather talk first? <a href="https://api.leadconnectorhq.com/widget/booking/FOV83x3fk6V38Idj3fZi" target="_blank" rel="noopener">Book a 15-min call</a></div>
         </div>
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h4>We build your free homepage</h4>
-          <p>We design a custom homepage for your firm. No templates. Delivered in 24 hours.</p>
+
+      <div class="steps">
+        <p class="steps-label">What happens next</p>
+        <div class="steps-grid">
+          <div class="step">
+            <div class="step-num">01</div>
+            <h4>Fill out the 30-second form</h4>
+            <p>Tell us your business name and type. That&rsquo;s all we need to get started.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <h4>We build your free homepage</h4>
+            <p>We design a custom homepage for your business. No templates. Delivered in 48 to 72 hours.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <h4>You decide what&rsquo;s next</h4>
+            <p>Keep the mockup. Hire us to ship the full site. Or take it somewhere else. Zero pressure.</p>
+          </div>
         </div>
       </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h4>You decide if you want to move forward</h4>
-          <p>See the work first. No commitment, no pressure, no credit card.</p>
-        </div>
+
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <div class="foot-l">
+        <img src="images/logo-dark.png" alt="TMN Creative" />
+        <span>© 2026 True Margin North, LLC</span>
+      </div>
+      <div>
+        <a href="/privacy">Privacy</a> &nbsp;·&nbsp; <a href="/terms">Terms</a> &nbsp;·&nbsp; <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a>
       </div>
     </div>
-  </div>
+  </footer>
 
-  <!-- Social proof right under form -->
-  <div style="max-width:440px;margin:1.25rem auto 0;padding-top:1rem;border-top:1px solid var(--ln)">
-    <div style="text-align:center;margin-bottom:0.4rem"><span style="color:var(--ac);font-size:0.85rem;letter-spacing:2px">&#9733;&#9733;&#9733;&#9733;&#9733;</span><div style="font-size:0.6rem;font-weight:600;color:var(--tx3)">5.0 on <a href="https://maps.app.goo.gl/hf37L4ca44xjHiKe8" target="_blank" rel="noopener" style="color:var(--ac);border-bottom:1px solid rgba(198,162,74,0.25);text-decoration:none">Google Reviews</a></div></div>
-    <div class="test-card"><div class="tc-init">RR</div><div class="tc-body"><div class="tc-quote">"We needed a site that matched the caliber of work we do. Trevor nailed it on the first pass, and we were live before the end of the week."</div><div class="tc-attr">Ramon R. &middot; Ramon Design Group</div></div></div>
-    <div class="test-card"><div class="tc-init">CA</div><div class="tc-body"><div class="tc-quote">"Damn, that looks pretty great. We like this way more than what we have. It finally feels like it matches the level we operate at."</div><div class="tc-attr">Crestone Air Partners</div></div></div>
-    <div class="test-card"><div class="tc-init">JT</div><div class="tc-body"><div class="tc-quote">"Trevor and Taylor deliver at a level that makes you look like a much bigger operation than you are."</div><div class="tc-attr">Jonathan T. &middot; QC Atlantic</div></div></div>
-  </div>
-</div>
+  <script>
+  (function(){
+    var nav=document.getElementById('nav');
+    window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>20);},{passive:true});
 
-<!-- ════════════════ BOTTOM CTA ════════════════ -->
-<div class="bottom-cta">
-  <p>Husband-and-wife team. Fort Worth, TX.</p>
-  <div class="tagline">See what your site <em>could look like.</em></div>
-  <button class="cta-btn-scroll" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">
-    <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-    Get Your Free Homepage
-  </button>
-  <div style="margin-top:1rem;font-size:0.65rem;color:rgba(255,255,255,0.25)">or call <a href="tel:6822313202" style="color:var(--ac);text-decoration:none;font-weight:600;opacity:0.7">(682) 231-3202</a></div>
-</div>
-
-<!-- ════════════════ FOOTER ════════════════ -->
-<footer>
-  &copy; 2026 TMN Creative &middot; True Margin North LLC &middot; <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a>
-</footer>
-
-<!-- ════════════════ STICKY MOBILE CTA ════════════════ -->
-<div class="sticky-cta" id="stickyCta">
-  <div class="sticky-cta-text">Free, no obligation</div>
-  <button class="sticky-cta-btn" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Send me my free homepage →</button>
-</div>
-
-<script>
-/* Reveal on scroll */
-try{const o=new IntersectionObserver((e)=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add('v'),o.unobserve(e.target))})},{threshold:0.1});document.querySelectorAll('.r').forEach(e=>o.observe(e))}catch(e){}
-
-/* Before/After Slider — Tony's pattern */
-try{
-  document.querySelectorAll('[data-ba]').forEach(function(pair){
-    var input=pair.querySelector('input[type=range]');
-    var afterImg=pair.querySelector('.ba-after');
-    var handle=pair.querySelector('.ba-handle');
-    var lblBefore=pair.querySelector('.ba-lbl.before');
-    var lblAfter=pair.querySelector('.ba-lbl.after');
-    function update(val){
-      var pct=100-val;
-      afterImg.style.clipPath='inset(0 0 0 '+pct+'%)';
-      handle.style.left=val+'%';
-      if(lblBefore)lblBefore.style.opacity=val>85?0:1;
-      if(lblAfter)lblAfter.style.opacity=val<15?0:1;
-    }
-    update(50);
-    input.addEventListener('input',function(){update(this.value);});
-    var dragging=false;
-    pair.addEventListener('touchstart',function(){dragging=true;},{passive:true});
-    pair.addEventListener('touchmove',function(e){
-      if(!dragging)return;
-      var rect=pair.getBoundingClientRect();
-      var x=e.touches[0].clientX-rect.left;
-      var pct=Math.max(0,Math.min(100,(x/rect.width)*100));
-      input.value=pct;
-      update(pct);
-    },{passive:true});
-    pair.addEventListener('touchend',function(){dragging=false;},{passive:true});
-  });
-}catch(e){}
-
-/* Sticky CTA: show when form is not visible */
-try{
-  const fs=document.getElementById('form-section');
-  const sc=document.getElementById('stickyCta');
-  const fo=new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){sc.classList.remove('show')}
-      else{sc.classList.add('show')}
+    // Before/After slider
+    document.querySelectorAll('[data-ba]').forEach(function(pair){
+      var input=pair.querySelector('.ba-range'),
+          after=pair.querySelector('.ba-after'),
+          line=pair.querySelector('.ba-line'),
+          lblB=pair.querySelector('.ba-lbl-b'),
+          lblA=pair.querySelector('.ba-lbl-a');
+      function update(v){after.style.clipPath='inset(0 0 0 '+(100-v)+'%)';line.style.left=v+'%';if(lblB)lblB.style.opacity=v>85?0:1;if(lblA)lblA.style.opacity=v<15?0:1;}
+      update(50);
+      input.addEventListener('input',function(){update(this.value);});
+      var dragging=false;
+      pair.addEventListener('touchstart',function(){dragging=true;},{passive:true});
+      pair.addEventListener('touchmove',function(e){if(!dragging)return;var r=pair.getBoundingClientRect();var x=e.touches[0].clientX-r.left;var pct=Math.max(0,Math.min(100,(x/r.width)*100));input.value=pct;update(pct);},{passive:true});
+      pair.addEventListener('touchend',function(){dragging=false;},{passive:true});
     });
-  },{threshold:0.15});
-  fo.observe(fs);
-}catch(e){}
-</script>
+  
+    // Scroll progress + cursor-follow gold light
+    var prog=document.getElementById('scrollProg');
+    window.addEventListener('scroll',function(){if(prog){var h=document.documentElement.scrollHeight-window.innerHeight;prog.style.setProperty('--p',(h>0?window.scrollY/h:0).toFixed(3));}},{passive:true});
+    if(window.matchMedia('(pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      var cl=document.getElementById('cursorLight');
+      if(cl){var lx=window.innerWidth/2,ly=window.innerHeight/2,tx=lx,ty=ly;
+        window.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY;},{passive:true});
+        (function raf(){lx+=(tx-lx)*0.10;ly+=(ty-ly)*0.10;cl.style.setProperty('--cx',lx+'px');cl.style.setProperty('--cy',ly+'px');requestAnimationFrame(raf);})();
+      }
+    }
 
-<script 
-  src="https://link.msgsndr.com/js/external-tracking.js"
-  data-tracking-id="tk_5662a9586f804ebdb3340fbc1a24b196">
-</script>
-<!-- Fathom - beautiful, simple website analytics -->
-<script src="https://cdn.usefathom.com/script.js" data-site="TBWMZHLW" defer></script>
-<!-- / Fathom -->
+  })();
+  </script>
 </body>
 </html>

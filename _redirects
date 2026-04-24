@@ -1,10 +1,29 @@
 # TMN Creative Redirects
 # Old slug → new slug redirects (301 permanent)
 
+# Studio page — v2 canonical URL
+/about                  /studio   301
+/about-us               /studio   301
+/web-design-fort-worth  /studio   301!
+/team                   /studio   301
+
 # Legacy care page variants
 /site-care    /care    301
 /sitecare     /care    301
 /maintenance  /care    301
+
+# Legacy CRM / conversion offer redirects (GHL → Custom CRM pivot)
+/lead-generation-websites    /pricing#crm    301
+/conversion-system           /pricing#crm    301
+/inquiry-system              /pricing#crm    301
+/crm                         /pricing#crm    301
+
+# Free review / redesign entry point
+/free                /free-review   301
+/free-redesign       /free-review   301
+/mockup              /free-review   301
+/site-review         /free-review   301
+/audit               /free-review   301
 
 # Common typos and alternate slugs
 /web-design   /    301

@@ -1,820 +1,802 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TMN Creative Studio · Web design for firms that take their work seriously</title>
-  <meta name="description" content="A small Fort Worth studio building websites for a limited number of firms each quarter. Editorial design, no templates, by appointment.">
+  <meta name="description" content="A two-person Fort Worth studio building websites for a limited number of firms each quarter. Editorial design, no templates, by appointment." />
+  <meta property="og:title" content="TMN Creative Studio" />
+  <meta property="og:description" content="Web design for firms that take their work seriously. A small Fort Worth studio, by appointment." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tmncreative.com/studio" />
+  <meta property="og:image" content="https://tmncreative.com/images/og.jpg" />
+  <link rel="canonical" href="https://tmncreative.com/studio" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#1B1F3B" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <meta property="og:title" content="TMN Creative Studio">
-  <meta property="og:description" content="Web design for firms that take their work seriously. A small Fort Worth studio, by appointment.">
-  <meta property="og:image" content="https://tmncreative.com/og.jpg">
-  <meta property="og:url" content="https://tmncreative.com/studio">
-  <meta property="og:type" content="website">
+  <!-- LCP preloads -->
+  <link rel="preload" as="image" href="images/team.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="images/logo-dark.png" fetchpriority="high" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"AboutPage","@id":"https://tmncreative.com/studio","url":"https://tmncreative.com/studio","name":"TMN Creative Studio","description":"A two-person Fort Worth studio building websites for a limited number of firms each quarter. Editorial design, no templates, by appointment.","primaryImageOfPage":"https://tmncreative.com/images/team.jpg","about":{"@type":"Organization","@id":"https://tmncreative.com/#org","name":"TMN Creative"}},{"@type":"Organization","@id":"https://tmncreative.com/#org","name":"TMN Creative","url":"https://tmncreative.com","logo":"https://tmncreative.com/images/logo-dark.png","address":{"@type":"PostalAddress","addressLocality":"Fort Worth","addressRegion":"TX","addressCountry":"US"},"founder":[{"@type":"Person","name":"Trevor Niemann","jobTitle":"Strategy, design, build","url":"https://www.linkedin.com/in/niemann29/"},{"@type":"Person","name":"Taylor Niemann","jobTitle":"Brand direction, art, operations","url":"https://www.linkedin.com/in/taylor-niemann-ab86033aa/"}],"numberOfEmployees":"2","foundingDate":"2024","sameAs":["https://truemarginnorth.com","https://www.linkedin.com/in/niemann29/","https://www.linkedin.com/in/taylor-niemann-ab86033aa/"]}]}
+  </script>
 
-  <!-- Plausible Analytics -->
-  <script defer data-domain="tmncreative.com" src="https://plausible.io/js/script.js"></script>
+  <script async src="https://plausible.io/js/pa-qenXucgzJOGY_zAczSQ6m.js"></script>
+  <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
 
-  <!-- Meta Pixel -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1488960412756574');
-  fbq('track', 'PageView');
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','1488960412756574');fbq('track','PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1488960412756574&ev=PageView&noscript=1"/></noscript>
 
-  <!-- Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18041747908"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-18041747908');
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18041747908');</script>
 
   <style>
-    :root {
-      --navy: #1B1F3B;
-      --navy-deep: #14172d;
-      --navy-light: #262a4a;
-      --gold: #C8A951;
-      --gold-warm: #d4b76a;
-      --stone: #F5F3EE;
-      --stone-dim: rgba(245, 243, 238, 0.72);
-      --stone-faint: rgba(245, 243, 238, 0.42);
-      --stone-hairline: rgba(245, 243, 238, 0.12);
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --navy:#1B1F3B;
+      --navy-deep:#14172d;
+      --navy-light:#262a4a;
+      --gold:#C8A951;
+      --gold-warm:#d4b76a;
+      --stone:#F5F3EE;
+      --stone-dim:rgba(245,243,238,0.72);
+      --stone-faint:rgba(245,243,238,0.42);
+      --stone-hairline:rgba(245,243,238,0.12);
+      --serif:'Fraunces',Georgia,serif;
+      --sans:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+      --mono:'Geist Mono',ui-monospace,Menlo,monospace;
+      --e:cubic-bezier(0.25,1,0.5,1);
+      --rail:clamp(1.5rem,4vw,3rem);
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{
+      background:var(--navy);color:var(--stone);
+      font-family:var(--sans);font-weight:400;line-height:1.6;
+      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+      overflow-x:hidden;font-feature-settings:"kern","liga";
+    }
+    ::selection{background:var(--gold);color:var(--navy)}
+    :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px}
+    a,button{cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+    button{border:none;background:none;font:inherit;color:inherit}
+    img,svg{max-width:100%;display:block}
 
-    html { scroll-behavior: smooth; }
+    .serif{font-family:var(--serif)}
+    .container{max-width:1280px;margin:0 auto;padding:0 var(--rail)}
 
-    body {
-      background: var(--navy);
-      color: var(--stone);
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-weight: 300;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
+    /* =========== NAV =========== */
+    nav.topnav{
+      position:fixed;top:0;left:0;right:0;z-index:100;
+      padding:1.35rem var(--rail);
+      display:flex;justify-content:space-between;align-items:center;
+      background:linear-gradient(to bottom,rgba(20,23,45,0.88),rgba(20,23,45,0));
+      backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+      transition:background 300ms var(--e),padding 300ms var(--e);
+    }
+    nav.topnav.s{background:rgba(20,23,45,0.96);padding-top:1rem;padding-bottom:1rem;border-bottom:1px solid var(--stone-hairline)}
+
+    .mark{
+      display:inline-flex;align-items:center;gap:0.7rem;
+      text-decoration:none;color:var(--stone);
+    }
+    .mark img{height:32px;width:auto;transition:transform 400ms var(--e)}
+    .mark:hover img{transform:rotate(-4deg) scale(1.05)}
+    .mark-word{font-family:var(--serif);font-weight:400;font-size:1.15rem;letter-spacing:0.04em;color:var(--stone)}
+    .mark-word span{color:var(--gold)}
+
+    .nav-meta{
+      font-family:var(--sans);font-size:0.65rem;letter-spacing:0.22em;
+      text-transform:uppercase;color:var(--stone-faint);font-weight:500;
+    }
+    .nav-meta .dot{color:var(--gold);margin:0 0.4rem}
+
+    .nav-cta{
+      font-family:var(--sans);font-size:0.65rem;letter-spacing:0.22em;
+      text-transform:uppercase;color:var(--gold);text-decoration:none;
+      font-weight:500;padding:0.55rem 0.8rem;border:1px solid var(--gold);
+      border-radius:999px;transition:all 300ms var(--e);
+      display:inline-flex;align-items:center;gap:0.4rem;
+    }
+    .nav-cta:hover{background:var(--gold);color:var(--navy)}
+
+    .nav-back{
+      font-family:var(--sans);font-size:0.72rem;color:var(--stone-faint);
+      text-decoration:none;font-weight:400;
+      display:inline-flex;align-items:center;gap:0.4rem;
+      transition:color 200ms var(--e);padding:0.4rem 0.6rem;
+    }
+    .nav-back:hover{color:var(--stone)}
+    .nav-back svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+    @media(max-width:760px){.nav-meta{display:none}}
+
+    /* =========== HERO =========== */
+    .hero{
+      min-height:100vh;min-height:100svh;
+      display:flex;flex-direction:column;justify-content:center;align-items:center;
+      text-align:center;padding:8rem var(--rail) 6rem;position:relative;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(200,169,81,0.06), transparent 60%),
+        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(200,169,81,0.04), transparent 55%);
+    }
+    .hero::before{
+      content:'';position:absolute;inset:0;pointer-events:none;z-index:0;
+      background:
+        linear-gradient(180deg, transparent 0%, rgba(20,23,45,0.3) 100%);
+    }
+    .hero > *{position:relative;z-index:1}
+    .eyebrow{
+      font-family:var(--sans);font-size:0.68rem;letter-spacing:0.24em;
+      text-transform:uppercase;color:var(--gold);font-weight:500;
+      margin-bottom:3.5rem;
+      opacity:0;transform:translateY(-8px);
+      animation:rise 900ms var(--e) 100ms forwards;
+    }
+    .hero h1{
+      font-family:var(--serif);font-weight:400;
+      font-size:clamp(2.75rem,7vw,6.75rem);line-height:1.02;letter-spacing:-0.025em;
+      color:var(--stone);margin-bottom:2.5rem;max-width:1040px;
+      opacity:0;transform:translateY(16px);
+      animation:rise 1000ms var(--e) 250ms forwards;
+    }
+    .hero h1 em{font-style:italic;color:var(--gold);font-weight:400}
+    .tagline{
+      font-family:var(--serif);font-style:italic;font-weight:400;
+      font-size:clamp(1.25rem,2.2vw,1.85rem);color:var(--gold);
+      line-height:1.3;letter-spacing:-0.01em;margin-bottom:2.25rem;max-width:760px;
+      opacity:0;transform:translateY(10px);
+      animation:rise 900ms var(--e) 500ms forwards;
+    }
+    .lede{
+      font-size:clamp(1rem,1.3vw + 0.3rem,1.2rem);color:var(--stone-dim);
+      max-width:560px;line-height:1.6;font-weight:400;
+      opacity:0;transform:translateY(10px);
+      animation:rise 900ms var(--e) 650ms forwards;
+    }
+    @keyframes rise{to{opacity:1;transform:translateY(0)}}
+    .scroll-cue{
+      position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);
+      font-family:var(--sans);font-size:0.65rem;letter-spacing:0.24em;
+      text-transform:uppercase;color:var(--stone-faint);text-decoration:none;
+      font-weight:500;transition:color 300ms var(--e);
+      opacity:0;animation:rise 900ms var(--e) 900ms forwards;
+    }
+    .scroll-cue:hover{color:var(--gold)}
+
+    /* =========== SEGMENTS =========== */
+    .segments{
+      padding:2.5rem var(--rail);
+      border-top:1px solid var(--stone-hairline);
+      border-bottom:1px solid var(--stone-hairline);
+      background:var(--navy-deep);
+    }
+    .seg-row{
+      display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+      gap:0.9rem 2.25rem;
+      font-family:var(--sans);font-size:0.68rem;letter-spacing:0.24em;
+      text-transform:uppercase;color:var(--stone-dim);font-weight:500;
+      max-width:1080px;margin:0 auto;
+    }
+    .seg-row .dot{color:var(--gold);font-size:0.55rem}
+    .seg-row .lead{color:var(--gold)}
+
+    /* =========== SECTION BASE =========== */
+    section.sec{padding:clamp(5rem,9vw,9rem) 0}
+    .label{
+      font-family:var(--sans);font-size:0.68rem;letter-spacing:0.24em;
+      text-transform:uppercase;color:var(--gold);font-weight:500;
+      margin-bottom:2.5rem;display:inline-block;
     }
 
-    .serif {
-      font-family: 'Fraunces', Georgia, serif;
+    /* =========== STUDIO ORIGIN =========== */
+    .studio .container{max-width:880px}
+    .studio p.manifesto{
+      font-family:var(--serif);font-weight:400;
+      font-size:clamp(1.35rem,2vw + 0.4rem,1.85rem);
+      line-height:1.52;color:var(--stone);letter-spacing:-0.005em;
+      max-width:820px;
+    }
+    .studio p.manifesto em{font-style:italic;color:var(--gold)}
+    .studio p.manifesto a{
+      color:var(--stone);text-decoration:none;
+      border-bottom:1px solid var(--gold);padding-bottom:2px;
+      transition:color 250ms var(--e);
+    }
+    .studio p.manifesto a:hover{color:var(--gold)}
+    .credentials{
+      margin-top:2rem;display:flex;flex-wrap:wrap;gap:0.85rem 1.4rem;
+      font-family:var(--sans);font-size:0.7rem;letter-spacing:0.22em;
+      text-transform:uppercase;color:var(--stone-faint);font-weight:500;
+    }
+    .credentials a{color:var(--gold);text-decoration:none;transition:color 250ms var(--e)}
+    .credentials a:hover{color:var(--gold-warm)}
+    .credentials .sep{color:var(--stone-hairline)}
+
+    /* =========== SELECTED WORK =========== */
+    .work h2{
+      font-family:var(--serif);font-weight:400;
+      font-size:clamp(2rem,3vw + 0.5rem,3.5rem);line-height:1.08;letter-spacing:-0.02em;
+      color:var(--stone);max-width:24ch;margin-bottom:clamp(2.5rem,5vw,4.5rem);
+    }
+    .work h2 em{font-style:italic;color:var(--gold)}
+
+    .pieces{display:flex;flex-direction:column;gap:clamp(3rem,6vw,6rem)}
+    .piece{display:block;text-decoration:none;color:inherit;transition:transform 600ms var(--e)}
+    .piece:hover{transform:translateY(-6px)}
+    .piece-image{
+      width:100%;aspect-ratio:3/2;object-fit:cover;display:block;
+      border-radius:4px;border:1px solid var(--stone-hairline);
+      box-shadow:0 30px 80px rgba(0,0,0,0.4);
+      transition:box-shadow 500ms var(--e);
+    }
+    .piece:hover .piece-image{box-shadow:0 40px 100px rgba(0,0,0,0.5), 0 0 0 1px rgba(200,169,81,0.25)}
+    .piece-caption{
+      margin-top:1.5rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:0.75rem 1.5rem;
+      border-top:1px solid var(--stone-hairline);padding-top:1.25rem;
+    }
+    .firm{font-family:var(--serif);font-weight:400;font-size:clamp(1.25rem,1.5vw + 0.4rem,1.75rem);color:var(--stone);letter-spacing:-0.015em}
+    .detail{font-family:var(--sans);font-size:0.78rem;color:var(--stone-faint);letter-spacing:0.02em}
+    .piece-visit{
+      font-family:var(--sans);font-size:0.65rem;letter-spacing:0.24em;
+      text-transform:uppercase;color:var(--gold);margin-left:auto;font-weight:500;
+      display:inline-flex;align-items:center;gap:0.4rem;
+      transition:gap 250ms var(--e);
+    }
+    .piece:hover .piece-visit{gap:0.65rem}
+
+    /* =========== TESTIMONIAL =========== */
+    .testimonial{
+      padding:clamp(5rem,9vw,9rem) 0;
+      background:var(--navy-deep);
+      border-top:1px solid var(--stone-hairline);
+      border-bottom:1px solid var(--stone-hairline);
+    }
+    .testimonial .container{max-width:880px;text-align:center}
+    .testimonial blockquote{
+      font-family:var(--serif);font-weight:400;font-style:italic;
+      font-size:clamp(1.5rem,2.5vw + 0.4rem,2.5rem);line-height:1.35;letter-spacing:-0.015em;
+      color:var(--stone);margin-bottom:1.75rem;
+      position:relative;padding:0 1.5rem;
+    }
+    .testimonial blockquote::before{
+      content:'“';position:absolute;left:-0.2em;top:-0.1em;
+      font-size:1.4em;color:var(--gold);opacity:0.5;font-weight:500;
+    }
+    .testimonial cite{
+      font-family:var(--sans);font-style:normal;font-size:0.7rem;
+      letter-spacing:0.22em;text-transform:uppercase;color:var(--stone-faint);
+      font-weight:500;
+    }
+    .testimonial cite strong{color:var(--gold);font-weight:500}
+
+    /* =========== PROCESS =========== */
+    .process h2{
+      font-family:var(--serif);font-weight:400;
+      font-size:clamp(2rem,3vw + 0.4rem,3.25rem);line-height:1.08;letter-spacing:-0.02em;
+      color:var(--stone);margin-bottom:clamp(2.5rem,5vw,4rem);max-width:20ch;
+    }
+    .process h2 em{font-style:italic;color:var(--gold)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.25rem,3vw,2.5rem)}
+    .step{
+      padding:1.75rem 1.75rem 1.5rem;
+      border:1px solid var(--stone-hairline);border-radius:4px;
+      background:linear-gradient(180deg,var(--navy-light),var(--navy));
+      transition:border-color 400ms var(--e), transform 400ms var(--e);
+      display:flex;flex-direction:column;gap:0.85rem;position:relative;overflow:hidden;
+    }
+    .step::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--gold);
+      transform:scaleX(0);transform-origin:left;transition:transform 600ms var(--e);
+    }
+    .step:hover{border-color:rgba(200,169,81,0.35);transform:translateY(-4px)}
+    .step:hover::before{transform:scaleX(1)}
+    .step .num{
+      font-family:var(--serif);font-weight:400;font-size:2.75rem;
+      color:var(--gold);line-height:1;margin-bottom:0.5rem;font-feature-settings:"lnum";
+    }
+    .step h3{
+      font-family:var(--serif);font-weight:400;font-size:1.5rem;
+      color:var(--stone);letter-spacing:-0.015em;line-height:1.2;
+    }
+    .step h3 em{font-style:italic;color:var(--gold)}
+    .step p{font-family:var(--sans);font-size:0.92rem;color:var(--stone-dim);line-height:1.62;font-weight:400}
+    @media(max-width:800px){.steps{grid-template-columns:1fr;gap:1rem}}
+
+    /* =========== CONTACT =========== */
+    .contact{
+      padding:clamp(5rem,9vw,9rem) var(--rail);
+      background:var(--navy-deep);border-top:1px solid var(--stone-hairline);
+    }
+    .contact-inner{max-width:640px;margin:0 auto}
+    .contact h2{
+      font-family:var(--serif);font-weight:400;
+      font-size:clamp(2rem,3vw + 0.4rem,3rem);line-height:1.08;letter-spacing:-0.02em;
+      color:var(--stone);margin-bottom:1rem;
+    }
+    .contact h2 em{font-style:italic;color:var(--gold)}
+    .contact .sub{
+      font-size:1rem;color:var(--stone-dim);margin-bottom:2.5rem;
+      line-height:1.55;max-width:48ch;
     }
 
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 48px;
+    .contact form{display:flex;flex-direction:column;gap:0}
+    .field{display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.5rem}
+    .field label{
+      font-family:var(--sans);font-size:0.65rem;letter-spacing:0.22em;
+      text-transform:uppercase;color:var(--stone-faint);font-weight:500;
     }
-
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      padding: 28px 48px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(to bottom, rgba(20, 23, 45, 0.85), rgba(20, 23, 45, 0));
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
+    .field label span{letter-spacing:0;text-transform:none;color:var(--stone-hairline);font-weight:400}
+    .field input,.field textarea{
+      font-family:var(--sans);font-size:1rem;color:var(--stone);
+      background:transparent;border:none;border-bottom:1px solid var(--stone-hairline);
+      padding:0.7rem 0;outline:none;transition:border-color 300ms var(--e);
+      -webkit-appearance:none;appearance:none;border-radius:0;
     }
+    .field input:focus,.field textarea:focus{border-bottom-color:var(--gold)}
+    .field input::placeholder,.field textarea::placeholder{color:var(--stone-hairline);font-style:italic}
+    .field textarea{min-height:90px;resize:vertical;line-height:1.55}
 
-    nav .mark {
-      font-family: 'Fraunces', serif;
-      font-weight: 400;
-      font-size: 19px;
-      color: var(--stone);
-      letter-spacing: 0.04em;
-      text-decoration: none;
+    .hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+    .contact button[type=submit]{
+      margin-top:1rem;padding:1.1rem 2rem;
+      background:var(--gold);color:var(--navy);
+      font-family:var(--sans);font-size:0.72rem;font-weight:600;
+      letter-spacing:0.22em;text-transform:uppercase;cursor:pointer;
+      transition:all 300ms var(--e);border-radius:4px;
+      align-self:flex-start;position:relative;overflow:hidden;
     }
-
-    nav .mark span { color: var(--gold); }
-
-    nav .meta {
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--stone-faint);
-      font-weight: 500;
+    .contact button[type=submit]::after{
+      content:'';position:absolute;inset:0;background:var(--stone);
+      transform:translateY(101%);transition:transform 400ms var(--e);z-index:0;
     }
+    .contact button[type=submit] > span{position:relative;z-index:1;display:inline-flex;align-items:center;gap:0.5rem}
+    .contact button[type=submit]:hover::after{transform:translateY(0)}
+    .contact button[type=submit] svg{width:12px;height:10px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
-    /* Hero */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 140px 48px 100px;
-      position: relative;
+    .fine{
+      margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--stone-hairline);
+      font-family:var(--sans);font-size:0.72rem;letter-spacing:0.04em;color:var(--stone-faint);
     }
+    .fine a{color:var(--gold);text-decoration:none}
+    .fine a:hover{color:var(--gold-warm)}
 
-    .hero .eyebrow {
-      font-size: 11px;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 56px;
-      font-weight: 500;
-    }
-
-    .hero h1 {
-      font-family: 'Fraunces', serif;
-      font-weight: 400;
-      font-size: clamp(44px, 8vw, 108px);
-      line-height: 1.02;
-      letter-spacing: -0.025em;
-      color: var(--stone);
-      margin-bottom: 44px;
-      max-width: 1040px;
-    }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--gold);
-      font-weight: 400;
-    }
-
-    .hero .tagline {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: clamp(20px, 2.4vw, 30px);
-      color: var(--gold);
-      line-height: 1.3;
-      letter-spacing: -0.01em;
-      margin-bottom: 36px;
-      max-width: 760px;
-    }
-
-    .hero p.lede {
-      font-size: clamp(16px, 1.5vw, 19px);
-      color: var(--stone-dim);
-      max-width: 560px;
-      line-height: 1.6;
-      font-weight: 300;
-    }
-
-    /* Segment strip */
-    .segments {
-      padding: 36px 0;
-      border-top: 1px solid var(--stone-hairline);
-      border-bottom: 1px solid var(--stone-hairline);
-      background: var(--navy-deep);
-    }
-
-    .segments .row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 14px 32px;
-      font-size: 10px;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      color: var(--stone-dim);
-      font-weight: 500;
-      text-align: center;
-    }
-
-    .segments .row .dot {
-      color: var(--gold);
-      font-size: 8px;
-    }
-
-    .segments .row .lead {
-      color: var(--gold);
-    }
-
-    /* Sticky mobile CTA */
-    .sticky-cta {
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      .sticky-cta {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 90;
-        background: var(--gold);
-        color: var(--navy);
-        padding: 16px 20px calc(16px + env(safe-area-inset-bottom)) 20px;
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.24em;
-        text-transform: uppercase;
-        text-decoration: none;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.25);
+    /* =========== STICKY MOBILE CTA =========== */
+    .sticky-cta{display:none}
+    @media(max-width:768px){
+      .sticky-cta{
+        display:flex;position:fixed;bottom:0;left:0;right:0;z-index:90;
+        background:var(--gold);color:var(--navy);
+        padding:1rem 1.25rem calc(1rem + env(safe-area-inset-bottom,0));
+        font-family:var(--sans);font-size:0.72rem;font-weight:600;
+        letter-spacing:0.22em;text-transform:uppercase;
+        text-decoration:none;justify-content:center;align-items:center;gap:0.5rem;
+        box-shadow:0 -8px 24px rgba(0,0,0,0.3);
+        transform:translateY(120%);transition:transform 400ms var(--e);
       }
-      body { padding-bottom: 60px; }
+      .sticky-cta.show{transform:translateY(0)}
+      body{padding-bottom:3.5rem}
     }
 
-    .hero .scroll-cue {
-      position: absolute;
-      bottom: 56px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 10px;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      color: var(--stone-faint);
-      text-decoration: none;
-      transition: color 0.3s ease;
+    /* =========== FOOTER =========== */
+    footer{padding:3.5rem var(--rail) 2.5rem;border-top:1px solid var(--stone-hairline);background:var(--navy-deep)}
+    .foot-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center}
+    .foot-line{font-family:var(--serif);font-style:italic;font-size:0.95rem;color:var(--gold);letter-spacing:-0.005em}
+    .foot-meta{text-align:right;font-family:var(--sans);font-size:0.7rem;letter-spacing:0.04em;color:var(--stone-faint)}
+    .foot-meta a{color:var(--gold);text-decoration:none}
+    .foot-meta a:hover{color:var(--gold-warm)}
+    @media(max-width:720px){.foot-inner{grid-template-columns:1fr;text-align:left}.foot-meta{text-align:left}}
+
+    /* Reveal */
+    [data-r]{opacity:0;transform:translateY(18px);transition:opacity 900ms var(--e), transform 900ms var(--e)}
+    [data-r].in{opacity:1;transform:translateY(0)}
+
+    /* =========== MOTION UPGRADES =========== */
+
+    /* Ambient drifting gold orbs behind hero + sections */
+    .orbs{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+    .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:0.55;will-change:transform}
+    .orb-1{width:520px;height:520px;top:-15%;left:-8%;background:rgba(200,169,81,0.14);animation:orb-drift-a 24s var(--e) infinite alternate}
+    .orb-2{width:360px;height:360px;bottom:5%;right:-8%;background:rgba(140,110,200,0.08);animation:orb-drift-b 30s var(--e) infinite alternate}
+    .orb-3{width:280px;height:280px;top:55%;left:40%;background:rgba(200,169,81,0.08);animation:orb-drift-c 34s var(--e) infinite alternate}
+    @keyframes orb-drift-a{from{transform:translate(0,0) scale(1)}to{transform:translate(50px,70px) scale(1.15)}}
+    @keyframes orb-drift-b{from{transform:translate(0,0) scale(1)}to{transform:translate(-40px,-50px) scale(1.1)}}
+    @keyframes orb-drift-c{from{transform:translate(0,0) scale(1)}to{transform:translate(60px,-40px) scale(0.88)}}
+
+    /* Cursor-follow light */
+    .cursor-light{position:fixed;top:0;left:0;width:500px;height:500px;pointer-events:none;z-index:0;
+      background:radial-gradient(circle, rgba(200,169,81,0.08), transparent 60%);
+      transform:translate(calc(var(--cx,50vw) - 250px), calc(var(--cy,50vh) - 250px));
+      transition:transform 350ms var(--e);will-change:transform}
+
+    /* Scroll progress bar */
+    .scroll-prog{position:fixed;top:0;left:0;right:0;height:2px;z-index:200;
+      background:linear-gradient(90deg,#a68936,var(--gold) 50%,var(--gold-warm));
+      transform:scaleX(var(--p,0));transform-origin:left;
+      box-shadow:0 0 20px rgba(200,169,81,0.4)}
+
+    /* All main content above the fixed bg */
+    nav.topnav,section,footer{position:relative;z-index:1}
+
+    /* Hero — word-by-word mask reveal on H1 */
+    .hero h1{display:inline-block;max-width:1040px}
+    .hero h1 .w{display:inline-block;overflow:hidden;line-height:1.04;padding-bottom:0.06em;margin-bottom:-0.04em;vertical-align:top}
+    .hero h1 .w > span{display:inline-block;transform:translateY(110%);animation:w-rise 1000ms var(--e-expo,cubic-bezier(0.16,1,0.3,1)) forwards;opacity:0}
+    @keyframes w-rise{to{transform:translateY(0);opacity:1}}
+    /* Per-word delay applied via style="--i:N" */
+    .hero h1 .w > span{animation-delay:calc(300ms + var(--i,0) * 80ms)}
+
+    /* Segment row — marquee version when many items */
+    .segments{overflow:hidden;position:relative}
+    .segments::before,.segments::after{content:'';position:absolute;top:0;bottom:0;width:100px;pointer-events:none;z-index:2}
+    .segments::before{left:0;background:linear-gradient(90deg,var(--navy-deep),transparent)}
+    .segments::after{right:0;background:linear-gradient(-90deg,var(--navy-deep),transparent)}
+
+    /* Pieces — editorial parallax + scroll-coupled */
+    .piece{transition:transform 600ms var(--e-expo,cubic-bezier(0.16,1,0.3,1)), opacity 900ms var(--e)}
+    .piece{opacity:0;transform:translateY(40px)}
+    .piece.in{opacity:1;transform:translateY(0)}
+    .piece-image{transition:transform 900ms var(--e),filter 600ms var(--e),box-shadow 600ms var(--e);will-change:transform}
+    .piece:hover .piece-image{transform:scale(1.01);filter:brightness(1.05)}
+    .piece-frame{position:relative;overflow:hidden;border-radius:4px}
+    .piece-num{position:absolute;top:1.5rem;left:1.5rem;z-index:3;font-family:var(--serif);font-style:italic;font-size:0.95rem;color:var(--gold);letter-spacing:0.02em;opacity:0.8}
+    .piece-corner{position:absolute;bottom:1.5rem;right:1.5rem;z-index:3;display:flex;gap:0.5rem;font-family:var(--sans);font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);padding:0.45rem 0.75rem;background:rgba(20,23,45,0.82);backdrop-filter:blur(8px);border-radius:100px;border:1px solid var(--gold-line);opacity:0;transform:translateY(6px);transition:opacity 400ms var(--e),transform 400ms var(--e)}
+    .piece:hover .piece-corner{opacity:1;transform:translateY(0)}
+
+    /* Testimonial — big draw-in mark */
+    .testimonial{position:relative;overflow:hidden}
+    .testimonial::before{
+      content:'\201C';position:absolute;top:-2rem;left:50%;transform:translateX(-50%);
+      font-family:var(--serif);font-style:italic;font-size:22rem;color:var(--gold);
+      opacity:0.08;line-height:0.8;pointer-events:none;z-index:0;font-weight:500;
     }
+    .testimonial .container{position:relative;z-index:1}
 
-    .hero .scroll-cue:hover { color: var(--gold); }
+    /* Process steps — staggered rise */
+    .step{opacity:0;transform:translateY(20px);transition:opacity 700ms var(--e),transform 700ms var(--e)}
+    .step.in{opacity:1;transform:translateY(0)}
+    .steps .step:nth-child(1).in{transition-delay:0ms}
+    .steps .step:nth-child(2).in{transition-delay:120ms}
+    .steps .step:nth-child(3).in{transition-delay:240ms}
 
-    /* Section base */
-    section {
-      padding: 140px 0;
-    }
+    /* Form submit shimmer */
+    .contact button[type=submit]{position:relative;overflow:hidden;transition:all 350ms var(--e)}
+    .contact button[type=submit]::after{content:'';position:absolute;inset:0;background:var(--stone);transform:translateY(101%);transition:transform 450ms var(--e);z-index:0}
+    .contact button[type=submit] > span{position:relative;z-index:1;transition:color 450ms var(--e)}
+    .contact button[type=submit]:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(200,169,81,0.3)}
+    .contact button[type=submit]:hover::after{transform:translateY(0)}
+    .contact button[type=submit]:hover > span{color:var(--navy)}
 
-    .label {
-      font-size: 10px;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 40px;
-      font-weight: 500;
-    }
+    /* Magnetic CTA support */
+    .mag{transition:transform 300ms var(--e)}
 
-    /* Studio */
-    .studio .container {
-      max-width: 880px;
-    }
+    /* Nav CTA lift */
+    .nav-cta{transition:all 300ms var(--e)}
+    .nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(200,169,81,0.25)}
 
-    .studio p {
-      font-family: 'Fraunces', serif;
-      font-weight: 400;
-      font-size: clamp(22px, 2.4vw, 30px);
-      line-height: 1.52;
-      color: var(--stone);
-      letter-spacing: -0.005em;
-    }
+    /* Scroll cue — breathing arrow */
+    .scroll-cue{animation:bob 2.8s var(--e) infinite}
+    @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-6px)}}
 
-    .studio p em {
-      font-style: italic;
-      color: var(--gold);
-    }
+    /* Credentials links — underline stroke-in */
+    .credentials a{position:relative;transition:color 250ms var(--e)}
+    .credentials a::after{content:'';position:absolute;left:0;right:0;bottom:-3px;height:1px;background:var(--gold-warm);transform:scaleX(0);transform-origin:left;transition:transform 400ms var(--e)}
+    .credentials a:hover::after{transform:scaleX(1)}
 
-    .studio p a {
-      color: var(--stone);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold);
-      padding-bottom: 2px;
-      transition: color 0.25s ease;
-    }
-
-    .studio p a:hover { color: var(--gold); }
-
-    .studio .credentials {
-      margin-top: 32px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px 22px;
-      font-size: 11px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--stone-faint);
-      font-weight: 500;
-    }
-
-    .studio .credentials a {
-      color: var(--gold);
-      text-decoration: none;
-      transition: color 0.25s ease;
-    }
-
-    .studio .credentials a:hover { color: var(--gold-warm); }
-
-    .studio .credentials .sep {
-      color: var(--stone-hairline);
-    }
-
-    /* Work */
-    .work h2 {
-      font-family: 'Fraunces', serif;
-      font-weight: 400;
-      font-size: clamp(36px, 5vw, 60px);
-      color: var(--stone);
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      margin-bottom: 110px;
-      max-width: 780px;
-    }
-
-    .work h2 em { font-style: italic; color: var(--gold); }
-
-    .piece {
-      margin-bottom: 130px;
-    }
-
-    .piece:last-child { margin-bottom: 0; }
-
-    .piece-image {
-      display: block;
-      width: 100%;
-      max-width: 1180px;
-      margin: 0 auto 0;
-      border-radius: 3px;
-      box-shadow: 0 50px 100px rgba(0, 0, 0, 0.45);
-    }
-
-    .piece-caption {
-      max-width: 1180px;
-      margin: 28px auto 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding-top: 22px;
-      border-top: 1px solid var(--stone-hairline);
-    }
-
-    .piece-caption .firm {
-      font-family: 'Fraunces', serif;
-      font-size: 21px;
-      font-weight: 400;
-      color: var(--stone);
-      letter-spacing: -0.01em;
-    }
-
-    .piece-caption .detail {
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--stone-faint);
-    }
-
-    /* Testimonial */
-    .testimonial {
-      border-top: 1px solid var(--stone-hairline);
-      border-bottom: 1px solid var(--stone-hairline);
-      padding: 180px 0;
-    }
-
-    .testimonial .container { max-width: 1000px; text-align: center; }
-
-    .testimonial blockquote {
-      font-family: 'Fraunces', serif;
-      font-weight: 400;
-      font-style: italic;
-      font-size: clamp(26px, 4vw, 48px);
-      line-height: 1.28;
-      letter-spacing: -0.015em;
-      color: var(--gold);
-      margin-bottom: 52px;
-    }
-
-    .testimonial cite {
-      font-style: normal;
-      font-size: 11px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--stone-dim);
-      font-weight: 500;
-    }
-
-    /* Process */
-    .process h2 {
-      font-family: 'Fraunces', serif;
-      font-weight: 400;
-      font-size: clamp(36px, 5vw, 60px);
-      color: var(--stone);
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      margin-bottom: 100px;
-    }
-
-    .process h2 em { font-style: italic; color: var(--gold); }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 72px;
-      border-top: 1px solid var(--stone-hairline);
-      padding-top: 72px;
-    }
-
-    .step .num {
-      font-family: 'Fraunces', serif;
-      font-size: 64px;
-      font-weight: 300;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 36px;
-      letter-spacing: -0.02em;
-    }
-
-    .step h3 {
-      font-family: 'Fraunces', serif;
-      font-size: 23px;
-      font-weight: 400;
-      color: var(--stone);
-      margin-bottom: 20px;
-      letter-spacing: -0.01em;
-    }
-
-    .step p {
-      font-size: 16px;
-      color: var(--stone-dim);
-      line-height: 1.65;
-      font-weight: 300;
-    }
-
-    /* Contact */
-    .contact {
-      background: var(--navy-deep);
-      padding: 160px 0;
-    }
-
-    .contact .container {
-      max-width: 680px;
-    }
-
-    .contact h2 {
-      font-family: 'Fraunces', serif;
-      font-weight: 400;
-      font-size: clamp(40px, 6vw, 68px);
-      color: var(--stone);
-      line-height: 1.05;
-      letter-spacing: -0.025em;
-      margin-bottom: 28px;
-      text-align: center;
-    }
-
-    .contact h2 em { font-style: italic; color: var(--gold); }
-
-    .contact .sub {
-      text-align: center;
-      font-size: 17px;
-      color: var(--stone-dim);
-      margin-bottom: 80px;
-      max-width: 460px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
-      font-weight: 300;
-    }
-
-    form .field {
-      margin-bottom: 42px;
-    }
-
-    form label {
-      display: block;
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--stone-faint);
-      margin-bottom: 14px;
-      font-weight: 500;
-    }
-
-    form input,
-    form textarea {
-      width: 100%;
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid var(--stone-hairline);
-      padding: 10px 0;
-      color: var(--stone);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 17px;
-      font-weight: 300;
-      transition: border-color 0.3s ease;
-    }
-
-    form input:focus,
-    form textarea:focus {
-      outline: none;
-      border-bottom-color: var(--gold);
-    }
-
-    form input::placeholder,
-    form textarea::placeholder {
-      color: var(--stone-faint);
-      font-weight: 300;
-    }
-
-    form textarea {
-      resize: vertical;
-      min-height: 90px;
-      line-height: 1.6;
-    }
-
-    /* Hidden honeypot (correctly hidden, no visible label) */
-    .hp-field {
-      position: absolute;
-      left: -9999px;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      visibility: hidden;
-    }
-
-    form button {
-      margin-top: 48px;
-      background: var(--gold);
-      border: none;
-      color: var(--navy);
-      padding: 22px 48px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.25s ease;
-      width: 100%;
-    }
-
-    form button:hover {
-      background: var(--gold-warm);
-    }
-
-    .contact .fine {
-      margin-top: 44px;
-      text-align: center;
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--stone-faint);
-    }
-
-    .contact .fine a {
-      color: var(--stone-dim);
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .contact .fine a:hover { color: var(--gold); }
-
-    /* Footer */
-    footer {
-      padding: 72px 48px 56px;
-      text-align: center;
-      border-top: 1px solid var(--stone-hairline);
-    }
-
-    footer .line {
-      font-family: 'Fraunces', serif;
-      font-size: 15px;
-      color: var(--stone-dim);
-      margin-bottom: 14px;
-      font-style: italic;
-      font-weight: 300;
-    }
-
-    footer .meta {
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--stone-faint);
-    }
-
-    footer a {
-      color: var(--stone-faint);
-      text-decoration: none;
-      transition: color 0.25s ease;
-    }
-
-    footer a:hover { color: var(--gold); }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .steps {
-        grid-template-columns: 1fr;
-        gap: 56px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .container, footer { padding-left: 28px; padding-right: 28px; }
-      nav { padding: 20px 28px; }
-      nav .meta { display: none; }
-      section { padding: 100px 0; }
-      .hero { padding: 120px 28px 80px; }
-      .hero .eyebrow { margin-bottom: 40px; }
-      .piece { margin-bottom: 90px; }
-      .piece-caption {
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-      }
-      .testimonial { padding: 120px 0; }
-      .contact { padding: 120px 0; }
-      .step .num { font-size: 56px; }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}
+      [data-r]{opacity:1;transform:none}
+      .orb,.cursor-light{display:none}
+      .hero h1 .w > span{transform:none;opacity:1}
+      .piece,.step{opacity:1;transform:none}
     }
   </style>
 </head>
 <body>
 
-<nav>
-  <a href="/studio" class="mark">TMN<span>.</span></a>
-  <div class="meta">Fort Worth · By Appointment</div>
-  <a href="#contact" style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);text-decoration:none;font-weight:500;">Request Introduction</a>
-</nav>
+  <div class="orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="cursor-light" aria-hidden="true" id="cursorLight"></div>
+  <div class="scroll-prog" aria-hidden="true" id="scrollProg"></div>
 
-<section class="hero">
-  <div class="eyebrow">TMN Creative Studio</div>
-  <h1 class="serif">Web design for firms that take their work <em>seriously.</em></h1>
-  <div class="tagline">Designed to convert, not just exist.</div>
-  <p class="lede">A two-person Fort Worth studio building websites for firms that need to look worth the fee. Limited engagements each quarter.</p>
-  <a href="#work" class="scroll-cue">Selected Work ↓</a>
-</section>
+  <nav class="topnav" id="nav">
+    <a href="/" class="mark" aria-label="TMN Creative home">
+      <img src="images/logo-dark.png" alt="" />
+      <span class="mark-word">Creative</span>
+    </a>
+    <div class="nav-meta">Fort Worth<span class="dot">·</span>By Appointment</div>
+    <a href="#contact" class="nav-cta">Request Introduction</a>
+  </nav>
 
-<section class="segments">
-  <div class="container">
-    <div class="row">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="eyebrow">TMN Creative Studio</div>
+    <h1 class="serif"><span class="w" style="--i:0"><span>Web</span></span> <span class="w" style="--i:1"><span>design</span></span> <span class="w" style="--i:2"><span>for</span></span> <span class="w" style="--i:3"><span>firms</span></span> <span class="w" style="--i:4"><span>that</span></span> <span class="w" style="--i:5"><span>take</span></span> <span class="w" style="--i:6"><span>their</span></span> <span class="w" style="--i:7"><span>work</span></span> <span class="w" style="--i:8"><span><em>seriously.</em></span></span></h1>
+    <div class="tagline">Designed to convert, not just exist.</div>
+    <p class="lede">A two-person Fort Worth studio building websites for firms that need to look worth the fee. Limited engagements each quarter.</p>
+    <a href="#work" class="scroll-cue">Selected Work ↓</a>
+  </section>
+
+  <!-- SEGMENTS -->
+  <section class="segments">
+    <div class="seg-row">
       <span class="lead">Built for</span>
-      <span>Architecture</span>
-      <span class="dot">●</span>
-      <span>Construction</span>
-      <span class="dot">●</span>
-      <span>Private Capital</span>
-      <span class="dot">●</span>
-      <span>Wealth Advisory</span>
-      <span class="dot">●</span>
-      <span>Asset Management</span>
-      <span class="dot">●</span>
+      <span>Architecture</span><span class="dot">●</span>
+      <span>Construction</span><span class="dot">●</span>
+      <span>Private Capital</span><span class="dot">●</span>
+      <span>Wealth Advisory</span><span class="dot">●</span>
+      <span>Asset Management</span><span class="dot">●</span>
       <span>Service Firms</span>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="studio">
-  <div class="container">
-    <div class="label">The Studio</div>
-    <p>A decade building digital systems for lending platforms, asset managers, and service companies, including the intake platform that scaled one business to <em>1,800 service requests a month.</em> Today, <a href="/trevor">Trevor</a> and Taylor Niemann run TMN as a two-person studio in Fort Worth, taking on a small number of firms each quarter and building every site themselves.</p>
-    <div class="credentials">
-      <a href="/trevor">Meet Trevor →</a>
-      <span class="sep">·</span>
-      <a href="https://www.linkedin.com/in/niemann29/" target="_blank" rel="noopener">LinkedIn ↗</a>
-    </div>
-  </div>
-</section>
-
-<section class="work" id="work">
-  <div class="container">
-    <div class="label">Selected Work</div>
-    <h2 class="serif">Every site designed, built, and launched <em>in house.</em></h2>
-
-    <div class="piece">
-      <img src="/images/walnut-hero.jpg" alt="Walnut Ventures website homepage" class="piece-image">
-      <div class="piece-caption">
-        <div class="firm serif">Walnut Ventures</div>
-        <div class="detail">Real Estate Private Capital · SoCal</div>
+  <!-- STUDIO -->
+  <section class="sec studio">
+    <div class="container">
+      <div class="label" data-r>The Studio</div>
+      <p class="manifesto" data-r>
+        A decade building digital systems for lending platforms, asset managers, and service companies, including the intake platform that scaled one business to <em>1,800 service requests a month.</em> Today, Trevor and Taylor Niemann run TMN as a two-person studio in Fort Worth, taking on a small number of firms each quarter and building every site themselves.
+      </p>
+      <div class="credentials" data-r>
+        <a href="https://www.linkedin.com/in/niemann29/" target="_blank" rel="noopener">Trevor · LinkedIn ↗</a>
+        <span class="sep">·</span>
+        <a href="https://www.linkedin.com/in/taylor-niemann-ab86033aa/" target="_blank" rel="noopener">Taylor · LinkedIn ↗</a>
+        <span class="sep">·</span>
+        <a href="https://truemarginnorth.com" target="_blank" rel="noopener">True Margin North ↗</a>
       </div>
     </div>
+  </section>
 
-    <div class="piece">
-      <img src="/images/shelton-hero.jpg" alt="Shelton Wealth Management website homepage" class="piece-image">
-      <div class="piece-caption">
-        <div class="firm serif">Shelton Wealth Management</div>
-        <div class="detail">Financial Advisory · Fort Worth, TX</div>
+  <!-- SELECTED WORK -->
+  <section class="sec work" id="work">
+    <div class="container">
+      <div class="label" data-r>Selected Work</div>
+      <h2 class="serif" data-r>Every site designed, built, and launched <em>in house.</em></h2>
+
+      <div class="pieces">
+        <a href="https://walnutventuresre.com" target="_blank" rel="noopener" class="piece" data-r>
+          <img src="images/walnut-ventures.jpg" alt="Walnut Ventures website homepage" class="piece-image" loading="lazy" />
+          <div class="piece-caption">
+            <div class="firm serif">Walnut Ventures</div>
+            <div class="detail">Real Estate Private Capital · SoCal</div>
+            <div class="piece-visit">View Live →</div>
+          </div>
+        </a>
+
+        <a href="https://sclmetalworks.com" target="_blank" rel="noopener" class="piece" data-r>
+          <img src="images/scl-metalworks.jpg" alt="SCL Metal Works website homepage" class="piece-image" loading="lazy" />
+          <div class="piece-caption">
+            <div class="firm serif">SCL Metal Works</div>
+            <div class="detail">Custom Iron Doors · Architectural Metal</div>
+            <div class="piece-visit">View Live →</div>
+          </div>
+        </a>
+
+        <a href="#contact" class="piece" data-r>
+          <img src="images/wealth-mgmt-fw.jpg" alt="Private wealth management website" class="piece-image" loading="lazy" />
+          <div class="piece-caption">
+            <div class="firm serif">Private Wealth Management</div>
+            <div class="detail">Fiduciary Advisory · Fort Worth · Under NDA</div>
+            <div class="piece-visit">Discreet Engagement</div>
+          </div>
+        </a>
+
+        <a href="https://truemarginnorth.com" target="_blank" rel="noopener" class="piece" data-r>
+          <img src="images/tmn.jpg" alt="True Margin North website homepage" class="piece-image" loading="lazy" />
+          <div class="piece-caption">
+            <div class="firm serif">True Margin North</div>
+            <div class="detail">Real Estate Consultancy · Fort Worth</div>
+            <div class="piece-visit">View Live →</div>
+          </div>
+        </a>
+
+        <a href="https://qcatlantic.com" target="_blank" rel="noopener" class="piece" data-r>
+          <img src="images/qca.jpg" alt="QC Atlantic website homepage" class="piece-image" loading="lazy" />
+          <div class="piece-caption">
+            <div class="firm serif">QC Atlantic</div>
+            <div class="detail">B2B Car-Wash Chemistry</div>
+            <div class="piece-visit">View Live →</div>
+          </div>
+        </a>
+
+        <a href="https://ramondesigngroup.com" target="_blank" rel="noopener" class="piece" data-r>
+          <img src="images/rdg.jpg" alt="Ramon Design Group website homepage" class="piece-image" loading="lazy" />
+          <div class="piece-caption">
+            <div class="firm serif">Ramon Design Group</div>
+            <div class="detail">Architecture · Phoenix, AZ</div>
+            <div class="piece-visit">View Live →</div>
+          </div>
+        </a>
+
+        <div class="piece" data-r>
+          <img src="images/cap-after.jpg" alt="Crestone Air Partners website homepage" class="piece-image" loading="lazy" />
+          <div class="piece-caption">
+            <div class="firm serif">Crestone Air Partners</div>
+            <div class="detail">Aviation Asset Management</div>
+            <div class="piece-visit">Recent Engagement</div>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="piece">
-      <img src="/images/ba-rdg-after.jpg" alt="Ramon Design Group website homepage" class="piece-image">
-      <div class="piece-caption">
-        <div class="firm serif">Ramon Design Group</div>
-        <div class="detail">Architecture · Phoenix, AZ</div>
+  <!-- TESTIMONIAL -->
+  <section class="testimonial">
+    <div class="container">
+      <blockquote class="serif">Clients have told us our site looks better than companies ten times our size. Trevor turned around a first draft in two days and nailed the direction.</blockquote>
+      <cite><strong>Clayton H.</strong> · Diamond H Irrigation · Fort Worth</cite>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="sec process">
+    <div class="container">
+      <div class="label" data-r>How We Work</div>
+      <h2 class="serif" data-r>Three phases. <em>One team.</em></h2>
+
+      <div class="steps">
+        <div class="step" data-r>
+          <div class="num serif">01</div>
+          <h3 class="serif">Introduction</h3>
+          <p>A 20 minute conversation about your firm and what the site needs to do. We get clear on fit before anything else.</p>
+        </div>
+        <div class="step" data-r>
+          <div class="num serif">02</div>
+          <h3 class="serif">Proposal</h3>
+          <p>A written scope with timeline, pricing, and approach. No templates, no placeholder work, no outsourcing.</p>
+        </div>
+        <div class="step" data-r>
+          <div class="num serif">03</div>
+          <h3 class="serif">Build</h3>
+          <p>Two weeks from kickoff to launch. We handle design, development, copy, and hosting under one roof.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="piece">
-      <img src="/images/ba-rehab-after.jpg" alt="Property Rehab Services website homepage" class="piece-image">
-      <div class="piece-caption">
-        <div class="firm serif">Property Rehab Services</div>
-        <div class="detail">Construction · Fort Worth, TX</div>
-      </div>
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="label" data-r>Begin</div>
+      <h2 class="serif" data-r>Request an <em>introduction.</em></h2>
+      <p class="sub" data-r>Engagements start at $5,000. For firms ready to move in the next 30 days. We usually reply the same day.</p>
+
+      <form name="studio-inquiry" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="studio-inquiry" />
+        <div class="hp-field" aria-hidden="true">
+          <label>Do not fill<input type="text" name="bot-field" tabindex="-1" autocomplete="off" /></label>
+        </div>
+
+        <div class="field"><label for="name">Full Name</label><input type="text" id="name" name="name" required autocomplete="name" /></div>
+        <div class="field"><label for="firm">Firm Name</label><input type="text" id="firm" name="firm" required /></div>
+        <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" required autocomplete="email" /></div>
+        <div class="field"><label for="website">Current Website <span>(optional)</span></label><input type="text" id="website" name="website" placeholder="example.com" inputmode="url" /></div>
+        <div class="field"><label for="project">Brief Project Description <span>(optional)</span></label><textarea id="project" name="project" rows="3"></textarea></div>
+
+        <button type="submit"><span>Request Introduction <svg viewBox="0 0 14 10"><path d="M1 5h12m0 0L9 1m4 4L9 9"/></svg></span></button>
+
+        <p class="fine">By appointment · Fort Worth, Texas · <a href="tel:6822313202">(682) 231-3202</a> · <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></p>
+      </form>
     </div>
+  </section>
 
-    <div class="piece">
-      <img src="/images/cap-after.jpg" alt="Crestone Air Partners website homepage" class="piece-image">
-      <div class="piece-caption">
-        <div class="firm serif">Crestone Air Partners</div>
-        <div class="detail">Aviation Asset Management</div>
-      </div>
+  <a href="#contact" class="sticky-cta" id="stickyCta">Request Introduction →</a>
+
+  <footer>
+    <div class="foot-inner">
+      <div class="foot-line">Built by hand in Fort Worth.</div>
+      <div class="foot-meta">© 2026 True Margin North, LLC · <a href="/">Home</a> · <a href="/pricing">Pricing</a> · <a href="/pay">Client Portal</a></div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<section class="testimonial">
-  <div class="container">
-    <blockquote class="serif">"We needed a site that matched the caliber of work we do. Trevor nailed it on the first pass, and we were live before the end of the week."</blockquote>
-    <cite>Alex Ramon · Principal · Ramon Design Group</cite>
-  </div>
-</section>
+  <script>
+  (function(){
+    var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var FINE = window.matchMedia('(pointer: fine)').matches;
+    var nav = document.getElementById('nav');
+    var stk = document.getElementById('stickyCta');
+    var prog = document.getElementById('scrollProg');
 
-<section class="process">
-  <div class="container">
-    <div class="label">How We Work</div>
-    <h2 class="serif">Three phases. <em>One team.</em></h2>
-    <div class="steps">
-      <div class="step">
-        <div class="num serif">01</div>
-        <h3 class="serif">Introduction</h3>
-        <p>A 20 minute conversation about your firm and what the site needs to do. We get clear on fit before anything else.</p>
-      </div>
-      <div class="step">
-        <div class="num serif">02</div>
-        <h3 class="serif">Proposal</h3>
-        <p>A written scope with timeline, pricing, and approach. No templates, no placeholder work, no outsourcing.</p>
-      </div>
-      <div class="step">
-        <div class="num serif">03</div>
-        <h3 class="serif">Build</h3>
-        <p>Two weeks from kickoff to launch. We handle design, development, copy, and hosting under one roof.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    // Nav scroll state + scroll progress
+    var ticking = false;
+    function onScroll(){
+      var y = window.scrollY;
+      nav.classList.toggle('s', y > 40);
+      if(stk) stk.classList.toggle('show', y > window.innerHeight * 0.4);
+      if(prog){
+        var h = document.documentElement.scrollHeight - window.innerHeight;
+        prog.style.setProperty('--p', (h > 0 ? y / h : 0).toFixed(3));
+      }
+      ticking = false;
+    }
+    window.addEventListener('scroll', function(){
+      if(!ticking){ requestAnimationFrame(onScroll); ticking = true; }
+    }, {passive:true});
 
-<section class="contact" id="contact">
-  <div class="container">
-    <h2 class="serif">Request an <em>introduction.</em></h2>
-    <p class="sub">Engagements start at $5,000. For firms ready to move in the next 30 days. We usually reply the same day.</p>
+    // Pieces reveal
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, {threshold:0.06, rootMargin:'0px 0px -6% 0px'});
+      document.querySelectorAll('[data-r], .piece, .step').forEach(function(el){ io.observe(el); });
+    } else {
+      document.querySelectorAll('[data-r], .piece, .step').forEach(function(el){ el.classList.add('in'); });
+    }
 
-    <form name="studio-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
-      <input type="hidden" name="form-name" value="studio-inquiry">
-      <div class="hp-field" aria-hidden="true">
-        <input type="text" name="bot-field" tabindex="-1" autocomplete="off">
-      </div>
+    // Smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        var href = a.getAttribute('href');
+        if(href.length > 1){
+          var t = document.querySelector(href);
+          if(t){ e.preventDefault(); window.scrollTo({top:t.getBoundingClientRect().top + window.scrollY - 20, behavior: REDUCED ? 'auto' : 'smooth'}); }
+        }
+      });
+    });
 
-      <div class="field">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
+    if(REDUCED) return;
 
-      <div class="field">
-        <label for="firm">Firm Name</label>
-        <input type="text" id="firm" name="firm" required>
-      </div>
+    // Cursor-follow gold light
+    if(FINE){
+      var light = document.getElementById('cursorLight');
+      var lx = window.innerWidth/2, ly = window.innerHeight/2, tx = lx, ty = ly;
+      window.addEventListener('mousemove', function(e){ tx = e.clientX; ty = e.clientY; }, {passive:true});
+      (function raf(){
+        lx += (tx - lx) * 0.12;
+        ly += (ty - ly) * 0.12;
+        light.style.setProperty('--cx', lx + 'px');
+        light.style.setProperty('--cy', ly + 'px');
+        requestAnimationFrame(raf);
+      })();
+    }
 
-      <div class="field">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-      </div>
+    // Scroll-coupled parallax on hero + piece images
+    var parallaxEls = [
+      {el:document.querySelector('.hero'), speed:0.2, inner:true},
+    ];
+    document.querySelectorAll('.piece-image').forEach(function(img){
+      parallaxEls.push({el:img, speed:0.06, inner:false});
+    });
+    function onParallax(){
+      parallaxEls.forEach(function(p){
+        if(!p.el) return;
+        var r = p.el.getBoundingClientRect();
+        if(r.bottom < 0 || r.top > window.innerHeight) return;
+        var mid = r.top + r.height/2 - window.innerHeight/2;
+        var y = -mid * p.speed;
+        p.el.style.transform = 'translate3d(0,' + y.toFixed(2) + 'px,0)';
+      });
+    }
+    window.addEventListener('scroll', function(){ requestAnimationFrame(onParallax); }, {passive:true});
+    onParallax();
 
-      <div class="field">
-        <label for="website">Current Website <span style="text-transform:none;letter-spacing:0;color:var(--stone-faint);">(optional)</span></label>
-        <input type="text" id="website" name="website" placeholder="example.com">
-      </div>
-
-      <div class="field">
-        <label for="project">Brief Project Description <span style="text-transform:none;letter-spacing:0;color:var(--stone-faint);">(optional)</span></label>
-        <textarea id="project" name="project" rows="3"></textarea>
-      </div>
-
-      <button type="submit">Request Introduction</button>
-
-      <p class="fine">By appointment · Fort Worth, Texas · <a href="tel:6822313202">(682) 231-3202</a></p>
-    </form>
-  </div>
-</section>
-
-<a href="#contact" class="sticky-cta">Request Introduction →</a>
-
-<footer>
-  <div class="line serif">Built by hand in Fort Worth.</div>
-  <div class="meta">© 2026 TMN Creative · True Margin North LLC · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></div>
-</footer>
-<script 
-  src="https://link.msgsndr.com/js/external-tracking.js"
-  data-tracking-id="tk_5662a9586f804ebdb3340fbc1a24b196">
-</script>
-<!-- Fathom - beautiful, simple website analytics -->
-<script src="https://cdn.usefathom.com/script.js" data-site="TBWMZHLW" defer></script>
-<!-- / Fathom -->
+    // Magnetic CTAs on pointer-fine
+    if(FINE){
+      document.querySelectorAll('.nav-cta, .contact button[type=submit], .sticky-cta, .scroll-cue').forEach(function(el){
+        el.classList.add('mag');
+        el.addEventListener('mousemove', function(e){
+          var r = el.getBoundingClientRect();
+          var x = (e.clientX - r.left - r.width/2) / (r.width/2);
+          var y = (e.clientY - r.top - r.height/2) / (r.height/2);
+          el.style.transform = 'translate('+(x*6).toFixed(1)+'px,'+(y*4).toFixed(1)+'px)';
+        });
+        el.addEventListener('mouseleave', function(){ el.style.transform = ''; });
+      });
+    }
+  })();
+  </script>
 </body>
 </html>

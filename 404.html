@@ -3,63 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page Not Found | TMN Creative</title>
-  <meta name="robots" content="noindex, nofollow" />
+  <title>Page Not Found · TMN Creative</title>
+  <meta name="description" content="That page does not exist. Head back to TMN Creative." />
+  <meta name="robots" content="noindex" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#ffffff" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#fff;color:#1E293B;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;-webkit-font-smoothing:antialiased}
-    .wrap{text-align:center;max-width:420px;opacity:0;animation:fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.1s forwards}
-    .logo{height:28px;margin-bottom:2.5rem;opacity:0.6}
-    .code{font-size:5rem;font-weight:800;letter-spacing:-0.04em;color:#E2E8F0;line-height:1;margin-bottom:1rem}
-    h1{font-size:1.5rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:0.5rem;color:#0F172A}
-    p{font-size:0.9rem;color:#64748B;line-height:1.7;margin-bottom:2rem}
-    .back{font-size:0.8rem;font-weight:600;color:#fff;background:#0F172A;padding:0.8rem 2rem;text-decoration:none;display:inline-block;border-radius:8px;transition:all 0.25s cubic-bezier(0.16,1,0.3,1)}
-    .back:hover{background:#1E293B;transform:translateY(-2px);box-shadow:0 8px 25px rgba(15,23,42,0.15)}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
   <script async src="https://plausible.io/js/pa-qenXucgzJOGY_zAczSQ6m.js"></script>
-  <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
-  <!-- Google Ads -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18041747908"></script>
+  <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init();plausible('404',{props:{path:location.pathname}})</script>
+
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18041747908');
-  </script>
-  <!-- Meta Pixel -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1488960412756574');
-  fbq('track', 'PageView');
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','1488960412756574');fbq('track','PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1488960412756574&ev=PageView&noscript=1"/></noscript>
+
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:oklch(99% 0.004 240);--bg-alt:oklch(97% 0.006 240);--bg-elev:oklch(100% 0 0);
+      --ink:oklch(18% 0.037 262);--ink-2:oklch(26% 0.035 260);--ink-mid:oklch(42% 0.028 256);
+      --ink-soft:oklch(56% 0.022 250);--ink-faint:oklch(70% 0.016 245);
+      --line:oklch(91% 0.012 248);
+      --accent:oklch(70% 0.107 85);--accent-2:oklch(75% 0.118 87);
+      --accent-soft:oklch(95% 0.042 88);--accent-deep:oklch(60% 0.105 80);
+      --sans:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+      --mono:'Geist Mono',ui-monospace,Menlo,monospace;
+      --serif:'Fraunces',Georgia,serif;
+      --e:cubic-bezier(0.25,1,0.5,1);
+      --rail:clamp(1.5rem,4vw,3rem);
+      --nav-h:68px;--r-sm:6px;
+    }
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.5;font-size:16px;-webkit-font-smoothing:antialiased;min-height:100dvh;display:flex;flex-direction:column;font-feature-settings:"kern","liga"}
+    :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+    a{cursor:pointer;-webkit-tap-highlight-color:transparent}
+    img,svg{max-width:100%;display:block}
+
+    .nav{position:fixed;top:0;left:0;right:0;z-index:80;height:var(--nav-h);display:flex;align-items:center;padding:0 var(--rail);background:oklch(99% 0.004 240 / 0.82);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%}
+    .logo{display:inline-flex;align-items:center;gap:0.7rem;text-decoration:none;color:var(--ink);font-weight:600}
+    .logo-mark{height:34px;width:auto;transition:transform 400ms var(--e)}
+    .logo:hover .logo-mark{transform:rotate(-4deg) scale(1.05)}
+    .logo-word{font-family:var(--sans);font-weight:600;letter-spacing:-0.015em;font-size:1rem}
+    .nav-home{font-family:var(--sans);font-size:0.85rem;font-weight:500;color:var(--ink-mid);text-decoration:none;padding:0.55rem 0.95rem;border:1px solid var(--line);border-radius:var(--r-sm);transition:all 200ms var(--e);display:inline-flex;align-items:center;gap:0.45rem;background:var(--bg-elev)}
+    .nav-home:hover{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+    .nav-home svg{width:12px;height:10px;fill:none;stroke:currentColor;stroke-width:1.6}
+
+    main{flex:1;display:flex;align-items:center;justify-content:center;padding:calc(var(--nav-h) + 3rem) var(--rail) 3rem;position:relative;overflow:hidden}
+    main::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 45% at 50% 30%, var(--accent-soft), transparent 70%);opacity:0.75}
+    .wrap{position:relative;z-index:1;max-width:640px;text-align:center}
+
+    .code{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(6rem,18vw,13rem);color:var(--accent-deep);letter-spacing:-0.04em;line-height:0.9;margin-bottom:1.5rem}
+    h1{font-family:var(--sans);font-weight:500;font-size:clamp(1.75rem,2vw + 1rem,2.75rem);color:var(--ink);letter-spacing:-0.025em;line-height:1.1;margin-bottom:1rem}
+    h1 em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--accent-deep);letter-spacing:-0.015em}
+    .lede{font-family:var(--sans);font-size:1.05rem;color:var(--ink-mid);line-height:1.55;margin:0 auto 2.25rem;max-width:44ch}
+    .ctas{display:inline-flex;gap:0.75rem;flex-wrap:wrap;justify-content:center}
+    .btn{display:inline-flex;align-items:center;gap:0.55rem;font-family:var(--sans);font-size:0.92rem;font-weight:500;padding:0.85rem 1.25rem;border-radius:var(--r-sm);text-decoration:none;transition:all 250ms var(--e)}
+    .btn-p{background:var(--ink);color:var(--bg);box-shadow:0 2px 6px oklch(18% 0.037 262 / 0.18)}
+    .btn-p:hover{background:var(--ink-2);transform:translateY(-1px)}
+    .btn-s{background:var(--bg-elev);color:var(--ink);border:1px solid var(--line)}
+    .btn-s:hover{border-color:var(--ink-faint);background:var(--bg-alt)}
+    .btn svg{width:14px;height:10px;fill:none;stroke:currentColor;stroke-width:1.6}
+
+    .links{margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--line);display:flex;gap:1.25rem 2rem;flex-wrap:wrap;justify-content:center}
+    .links a{font-family:var(--mono);font-size:0.76rem;color:var(--ink-soft);letter-spacing:0.04em;text-decoration:none;transition:color 200ms var(--e)}
+    .links a:hover{color:var(--accent-deep)}
+
+    .foot{padding:2rem var(--rail);background:oklch(14% 0.035 262);color:oklch(72% 0.016 245);font-family:var(--mono);font-size:0.72rem;letter-spacing:0.02em;text-align:center}
+    .foot a{color:var(--accent);text-decoration:none}
+    .foot a:hover{color:var(--accent-2)}
+
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
+  </style>
 </head>
 <body>
-  <div class="wrap">
-    <img src="images/logo-dark.png" alt="TMN Creative" class="logo" />
-    <div class="code">404</div>
-    <h1>Page not found.</h1>
-    <p>This page does not exist or may have moved. Head back to the homepage or get in touch if you need help finding something.</p>
-    <a href="/" class="back">Back to TMN Creative</a>
-  </div>
-<script 
-  src="https://link.msgsndr.com/js/external-tracking.js"
-  data-tracking-id="tk_5662a9586f804ebdb3340fbc1a24b196">
-</script>
-<!-- Fathom - beautiful, simple website analytics -->
-<script src="https://cdn.usefathom.com/script.js" data-site="TBWMZHLW" defer></script>
-<!-- / Fathom -->
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="TMN Creative home">
+        <img src="images/logo-dark.png" alt="" class="logo-mark" width="60" height="34" />
+        <span class="logo-word">Creative</span>
+      </a>
+      <a href="/" class="nav-home"><span>Back home</span> <svg viewBox="0 0 14 10"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="wrap">
+      <div class="code">404</div>
+      <h1>That page <em>wandered off.</em></h1>
+      <p class="lede">The link is broken or the page moved. Head back home, or pick one of these.</p>
+      <div class="ctas">
+        <a href="/" class="btn btn-p">Back to homepage <svg viewBox="0 0 14 10"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="/#contact" class="btn btn-s">Get a free redesign</a>
+      </div>
+      <div class="links">
+        <a href="/pricing">Pricing</a>
+        <a href="/studio">Studio</a>
+        <a href="/#work">Work</a>
+        <a href="/pay">Client portal</a>
+        <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a>
+      </div>
+    </div>
+  </main>
+
+  <div class="foot">© 2026 True Margin North, LLC · <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></div>
 </body>
 </html>
