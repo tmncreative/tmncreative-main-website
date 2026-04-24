@@ -21,7 +21,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- LCP hero image preload -->
   <link rel="preload" as="image" href="images/walnut-ventures.jpg?v=2" fetchpriority="high" imagesrcset="images/walnut-ventures-m.jpg?v=2 720w, images/walnut-ventures.jpg?v=2 1000w" imagesizes="(max-width:640px) 720px, 1000px" />
@@ -70,8 +70,9 @@
       --success:       oklch(64% 0.13 155);
 
       /* Type */
-      --sans: 'Hanken Grotesk',system-ui, -apple-system, 'Segoe UI', sans-serif;
-      --mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      --sans:  'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --serif: 'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+      --mono:  'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
       /* Motion */
       --e-quart: cubic-bezier(0.25,1,0.5,1);
@@ -96,12 +97,12 @@
       font-family: var(--sans);
       color: var(--ink);
       background: var(--bg);
-      line-height: 1.5;
-      font-size: 16px;
+      line-height: 1.6;
+      font-size: 17px;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
       overflow-x: hidden;
-      font-feature-settings: "kern","liga","ss01","cv01";
+      font-feature-settings: "kern","liga","calt";
     }
     ::selection{background:oklch(90% 0.09 70);color:var(--ink)}
     :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
@@ -122,20 +123,23 @@
     .skip-link:focus-visible{transform:translateY(0)}
 
     /* =========== TYPE =========== */
-    h1,h2,h3,h4{font-family:var(--sans);color:var(--ink);letter-spacing:-0.018em}
-    h1{font-size:clamp(2.5rem, 3.6vw + 1rem, 5.25rem);line-height:1.18;font-weight:500;letter-spacing:-0.032em;padding-bottom:0.22em}
-    h2{font-size:clamp(2rem, 1.6vw + 1.15rem, 3.5rem);line-height:1.18;font-weight:500;letter-spacing:-0.028em;padding-bottom:0.2em}
-    /* Signature italic serif accent — ties studio aesthetic into body headlines */
-    h1 em, h2 em, .hero h1 em{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:400;color:var(--ink-soft);padding-bottom:0.06em;display:inline-block;line-height:inherit}
-    .ac, h1 .ac, h2 .ac{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;color:var(--accent-deep);letter-spacing:-0.02em;padding-bottom:0.06em;display:inline-block;line-height:inherit}
-    h3{font-size:clamp(1.375rem, 0.7vw + 1.1rem, 1.75rem);line-height:1.18;font-weight:500;letter-spacing:-0.018em}
-    h4{font-size:1.05rem;line-height:1.3;font-weight:600;letter-spacing:-0.01em}
-    p{max-width:62ch}
+    /* Editorial serif headlines, neutral-sans subheads and UI.
+       padding-bottom on h1/h2 reserves room for deep descenders (g, y, p)
+       in Source Serif 4 italic. */
+    h1,h2{font-family:var(--serif);color:var(--ink);font-weight:400}
+    h1{font-size:clamp(2.4rem, 3.4vw + 1rem, 5rem);line-height:1.0;letter-spacing:-0.03em;padding-bottom:0.18em}
+    h2{font-size:clamp(2rem, 1.8vw + 1.15rem, 3.6rem);line-height:1.04;letter-spacing:-0.02em;padding-bottom:0.18em}
+    /* Italic serif em — same family, italic cut. Section-specific rules override the color. */
+    h1 em, h2 em, .hero h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--ink-soft);letter-spacing:-0.015em}
+    .ac, h1 .ac, h2 .ac{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--accent-deep);letter-spacing:-0.018em}
+    h3{font-family:var(--sans);font-size:clamp(1.3rem, 0.55vw + 1.1rem, 1.6rem);line-height:1.3;font-weight:600;letter-spacing:-0.012em;color:var(--ink)}
+    h4{font-family:var(--sans);font-size:1.02rem;line-height:1.35;font-weight:600;letter-spacing:-0.005em;color:var(--ink)}
+    p{max-width:68ch;line-height:1.65}
 
-    /* Eyebrow — mono small */
+    /* Eyebrow — small, neutral sans, subtly tracked */
     .eye{
-      font-family:'Oswald',var(--sans);font-size:0.86rem;font-weight:500;
-      letter-spacing:0.06em;color:var(--accent);text-transform:uppercase;
+      font-family:var(--sans);font-size:0.74rem;font-weight:600;
+      letter-spacing:0.04em;color:var(--accent-deep);text-transform:uppercase;
       display:inline-flex;align-items:center;gap:0.5rem;
     }
     .eye::before{content:'';width:0.4rem;height:0.4rem;background:var(--accent);border-radius:50%}
@@ -145,7 +149,7 @@
 
     /* Kicker / tag */
     .kicker{
-      font-family:var(--mono);font-size:0.72rem;font-weight:500;
+      font-family:var(--sans);font-size:0.74rem;font-weight:600;
       color:var(--ink-soft);letter-spacing:0.02em;
     }
 
@@ -174,30 +178,42 @@
     .logo-sub{font-family:var(--mono);font-size:0.68rem;font-weight:500;color:var(--ink-soft);margin-left:0.4rem;letter-spacing:0;display:none}
     @media(min-width:1080px){.logo-sub{display:inline}}
 
-    .nav-links{display:flex;align-items:center;gap:0.25rem}
+    .nav-links{display:flex;align-items:center;gap:0.15rem}
     .nav-link{
-      font-size:0.85rem;font-weight:500;color:var(--ink-mid);
-      text-decoration:none;padding:0.5rem 0.85rem;border-radius:var(--r-xs);
-      transition:color 200ms var(--e-quart), background 200ms var(--e-quart);
+      position:relative;font-family:var(--sans);
+      font-size:0.88rem;font-weight:600;color:var(--ink-mid);
+      text-decoration:none;padding:0.55rem 0.9rem;border-radius:var(--r-xs);
+      letter-spacing:0.005em;
+      transition:color 220ms var(--e-quart);
     }
-    .nav-link:hover{color:var(--ink);background:var(--bg-alt)}
-    .nav-actions{display:flex;align-items:center;gap:0.5rem}
+    .nav-link::after{
+      content:'';position:absolute;left:0.9rem;right:0.9rem;bottom:0.35rem;
+      height:1px;background:var(--ink);
+      transform:scaleX(0);transform-origin:left center;
+      transition:transform 340ms var(--e-quint);
+    }
+    .nav-link:hover{color:var(--ink)}
+    .nav-link:hover::after{transform:scaleX(1)}
+    .nav-actions{display:flex;align-items:center;gap:0.6rem}
     .nav-ghost{
-      font-size:0.85rem;font-weight:500;color:var(--ink-mid);
+      font-family:var(--sans);font-size:0.86rem;font-weight:600;color:var(--ink-mid);
       text-decoration:none;padding:0.55rem 0.9rem;border-radius:var(--r-sm);
+      letter-spacing:0.005em;
       transition:color 200ms var(--e-quart);
     }
     .nav-ghost:hover{color:var(--ink)}
     .nav-cta{
-      font-size:0.85rem;font-weight:500;color:var(--bg);
+      font-family:var(--sans);font-size:0.85rem;font-weight:600;color:var(--bg);
       background:var(--ink);text-decoration:none;
-      padding:0.6rem 1rem;border-radius:var(--r-sm);
-      display:inline-flex;align-items:center;gap:0.45rem;
-      transition:background 250ms var(--e-quart), transform 250ms var(--e-quart);
-      box-shadow:0 1px 0 oklch(100% 0 0 / 0.1) inset, 0 1px 2px oklch(14% 0.01 260 / 0.15);
+      padding:0.7rem 1.1rem;border-radius:999px;
+      display:inline-flex;align-items:center;gap:0.55rem;
+      letter-spacing:-0.003em;
+      transition:background 260ms var(--e-quart), transform 260ms var(--e-quart), box-shadow 260ms var(--e-quart);
+      box-shadow:0 1px 0 oklch(100% 0 0 / 0.12) inset, 0 1px 2px oklch(14% 0.01 260 / 0.18), 0 0 0 1px oklch(100% 0 0 / 0.04) inset;
     }
-    .nav-cta:hover{background:var(--ink-2);transform:translateY(-1px)}
-    .nav-cta svg{width:12px;height:12px}
+    .nav-cta:hover{background:var(--ink-2);transform:translateY(-1px);box-shadow:0 1px 0 oklch(100% 0 0 / 0.14) inset, 0 8px 22px oklch(14% 0.01 260 / 0.28)}
+    .nav-cta svg{width:11px;height:11px;transition:transform 260ms var(--e-quart)}
+    .nav-cta:hover svg{transform:translateX(2px)}
     .menu-btn{display:none;width:40px;height:40px;align-items:center;justify-content:center;border-radius:var(--r-sm);position:relative}
     .menu-btn span{width:16px;height:1.4px;background:var(--ink);position:relative;transition:all 300ms var(--e-quart)}
     .menu-btn span::before,.menu-btn span::after{content:'';width:16px;height:1.4px;background:var(--ink);position:absolute;left:0;transition:all 300ms var(--e-quart)}
@@ -237,9 +253,9 @@
     /* =========== BUTTONS =========== */
     .btn{
       display:inline-flex;align-items:center;gap:0.55rem;
-      font-family:var(--sans);font-size:0.95rem;font-weight:500;
+      font-family:var(--sans);font-size:0.95rem;font-weight:600;
       padding:0.82rem 1.2rem;border-radius:var(--r-sm);
-      text-decoration:none;letter-spacing:-0.01em;
+      text-decoration:none;letter-spacing:-0.005em;
       transition:all 250ms var(--e-quart);
       position:relative;
     }
@@ -384,7 +400,7 @@
     .cards{counter-reset:sec-num}
     .cards > .card .eye{
       display:inline-flex;align-items:center;gap:0.65rem;
-      font-size:0.76rem;letter-spacing:0.2em;
+      font-size:0.74rem;letter-spacing:0.04em;
       margin-bottom:1.35rem;
       counter-increment:sec-num;
       line-height:1;
@@ -414,19 +430,20 @@
     .cards > .card .faq-head h2,
     .cards > .card .studio-inner h2,
     .cards > .card .ct-copy h2{
-      font-size:clamp(2.35rem, 2.8vw + 1.45rem, 4.5rem);
-      line-height:1.18;
-      letter-spacing:-0.035em;
-      font-weight:500;
+      font-family:var(--serif);
+      font-size:clamp(2.3rem, 2.6vw + 1.45rem, 4.4rem);
+      line-height:1.04;
+      letter-spacing:-0.02em;
+      font-weight:400;
       margin:0 0 1.35rem;
-      padding-bottom:0.22em;
+      padding-bottom:0.18em;
     }
     .cards > .card h2 em,
     .cards > .card h2 .ac{
-      font-family:'Fraunces',Georgia,serif;
-      font-style:italic;font-weight:500;
+      font-family:var(--serif);
+      font-style:italic;font-weight:400;
       color:var(--accent-deep);
-      letter-spacing:-0.024em;
+      letter-spacing:-0.018em;
     }
     .cards > .card .sec-head p,
     .cards > .card .feat-copy > p,
@@ -476,19 +493,48 @@
 
     .hero-inner{position:relative;z-index:1;max-width:1240px;margin:0 auto}
 
+    /* Hero status row — two distinct premium markers separated by a hairline */
     .hero-tag{
-      display:inline-flex;align-items:center;gap:0.5rem;
-      padding:0.4rem 0.85rem 0.4rem 0.5rem;
-      background:var(--bg-elev);border:1px solid var(--line);border-radius:100px;
+      display:inline-flex;align-items:center;gap:0.85rem;
+      padding:0.55rem 1rem 0.55rem 0.85rem;
+      background:var(--bg-elev);
+      border:1px solid oklch(70% 0.107 85 / 0.24);
+      border-radius:999px;
       font-family:var(--sans);font-size:0.78rem;font-weight:500;color:var(--ink-mid);
-      box-shadow:0 1px 2px oklch(14% 0.01 260 / 0.04);
+      box-shadow:0 1px 2px oklch(14% 0.01 260 / 0.04), 0 0 0 4px oklch(70% 0.107 85 / 0.03);
       opacity:0;transform:translateY(-6px);
       animation:fade-down 700ms var(--e-quart) 100ms forwards;
     }
-    .hero-tag .stars{color:var(--accent);font-size:0.78rem;letter-spacing:0.08em}
-    .hero-tag .sep{width:1px;height:12px;background:var(--line)}
-    .hero-tag strong{color:var(--ink);font-weight:600}
-    .hero-tag em{font-style:normal;color:var(--ink-soft)}
+    .hero-tag .dot{
+      position:relative;width:7px;height:7px;border-radius:50%;
+      background:var(--success);
+      box-shadow:0 0 0 3px oklch(64% 0.13 155 / 0.18);
+      flex-shrink:0;
+    }
+    .hero-tag .dot::before{
+      content:'';position:absolute;inset:-4px;border-radius:50%;
+      background:var(--success);opacity:0.4;
+      animation:pulse-dot 2.4s var(--e-quart) infinite;
+    }
+    @keyframes pulse-dot{0%{transform:scale(0.7);opacity:0.5}70%,100%{transform:scale(2);opacity:0}}
+    .hero-tag strong{
+      color:var(--ink);font-weight:600;letter-spacing:0.01em;
+      font-size:0.76rem;
+    }
+    .hero-tag .sep{width:1px;height:14px;background:oklch(70% 0.107 85 / 0.32)}
+    .hero-tag .rating{
+      display:inline-flex;align-items:center;gap:0.4rem;
+      font-style:normal;color:var(--ink-2);
+      font-size:0.78rem;font-weight:600;letter-spacing:-0.005em;
+    }
+    .hero-tag .rating-stars{
+      display:inline-flex;gap:1px;color:var(--accent);font-size:0.72rem;letter-spacing:0;line-height:1;
+    }
+    .hero-tag .rating-stars svg{width:10px;height:10px;fill:var(--accent);display:block}
+    .hero-tag .rating-src{color:var(--ink-soft);font-weight:500;font-size:0.72rem}
+    @media (prefers-reduced-motion:reduce){
+      .hero-tag .dot::before{animation:none}
+    }
     @keyframes fade-down{to{opacity:1;transform:translateY(0)}}
 
     .hero-grid{
@@ -504,7 +550,7 @@
       animation:fade-up 800ms var(--e-quint) 200ms forwards;
     }
     .hero h1 .ac{color:var(--accent-deep)}
-    .hero h1 em{font-style:normal;color:var(--accent);font-weight:400}
+    .hero h1 em{font-family:var(--serif);font-style:italic;color:var(--accent);font-weight:400;letter-spacing:-0.018em}
     .hero-deck{
       font-size:clamp(1.05rem, 0.35vw + 1rem, 1.2rem);color:var(--ink-mid);line-height:1.55;
       margin-bottom:2rem;max-width:36em;
@@ -531,7 +577,7 @@
     .hero-meta-k .unit{font-size:0.82rem;color:var(--ink-soft);font-weight:500;margin-left:0.12em}
     .hero-meta-l{font-family:var(--mono);font-size:0.68rem;color:var(--ink-soft);font-weight:500}
     .hero-trust{font-family:var(--sans);font-size:1.05rem;color:var(--ink-2);line-height:1.5;letter-spacing:-0.005em;margin:0}
-    .hero-trust em{font-style:italic;color:var(--accent-deep);font-family:'Fraunces',Georgia,serif;font-weight:500}
+    .hero-trust em{font-style:italic;color:var(--accent-deep);font-family:var(--serif);font-weight:500}
     .hero-audience{font-family:var(--mono);font-size:0.78rem;color:var(--ink-soft);letter-spacing:0.08em;line-height:1.5;margin:0.5rem 0 0}
 
     /* Full-width hero footer — trust + audience line sit below the device cluster,
@@ -707,19 +753,22 @@
 
     .hv-badge{
       position:absolute;top:-2.25rem;right:5%;left:auto;bottom:auto;
-      background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--r-md);
-      padding:0.7rem 0.9rem;
-      display:flex;align-items:center;gap:0.7rem;
-      box-shadow:0 10px 24px oklch(14% 0.01 260 / 0.1);z-index:3;
+      background:var(--bg-elev);
+      border:1px solid oklch(70% 0.107 85 / 0.2);
+      border-radius:14px;
+      padding:0.7rem 0.95rem 0.7rem 0.8rem;
+      display:flex;align-items:center;gap:0.75rem;
+      box-shadow:0 10px 24px oklch(14% 0.01 260 / 0.1), 0 0 0 4px oklch(70% 0.107 85 / 0.04);
+      z-index:3;
     }
     .hv-badge-avatars{display:flex}
-    .hv-badge-avatars > div{width:22px;height:22px;border-radius:50%;border:2px solid var(--bg-elev);background:var(--bg-alt);margin-left:-6px;font-family:var(--mono);font-size:0.58rem;font-weight:600;color:var(--ink-mid);display:grid;place-items:center}
+    .hv-badge-avatars > div{width:24px;height:24px;border-radius:50%;border:2px solid var(--bg-elev);background:var(--bg-alt);margin-left:-7px;font-family:var(--sans);font-size:0.62rem;font-weight:600;color:var(--ink);display:grid;place-items:center;letter-spacing:-0.01em}
     .hv-badge-avatars > div:first-child{margin-left:0}
     .hv-badge-avatars > div:nth-child(1){background:oklch(90% 0.08 65)}
     .hv-badge-avatars > div:nth-child(2){background:oklch(88% 0.09 150)}
     .hv-badge-avatars > div:nth-child(3){background:oklch(86% 0.1 200)}
-    .hv-badge-text{font-size:0.78rem;color:var(--ink-mid);line-height:1.3}
-    .hv-badge-text strong{color:var(--ink);font-weight:600}
+    .hv-badge-text{font-family:var(--sans);font-size:0.78rem;color:var(--ink-mid);line-height:1.3;letter-spacing:-0.005em}
+    .hv-badge-text strong{color:var(--ink);font-weight:600;letter-spacing:-0.01em}
 
     @media(max-width:960px){
       /* Pull the whole hero up toward the nav — reclaims top-of-fold real estate */
@@ -966,14 +1015,14 @@
       display:grid;place-items:center;
       background:oklch(15% 0.015 260 / 0.92);
       border:1.5px solid oklch(45% 0.03 260);
-      font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:0.95rem;
+      font-family:var(--serif);font-style:italic;font-size:0.95rem;
       color:var(--bg);letter-spacing:-0.03em;line-height:1;
       backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
     }
     .show-info{min-width:0;display:flex;flex-direction:column;gap:0.15rem;white-space:nowrap}
     .show-sub{
       font-family:var(--mono);font-size:0.64rem;color:oklch(78% 0.107 85);
-      letter-spacing:0.14em;text-transform:uppercase;line-height:1;
+      letter-spacing:0.06em;text-transform:uppercase;line-height:1;
       opacity:0;transform:translateX(18px);
       transition:opacity 550ms var(--e-quart) 80ms,transform 550ms var(--e-quart) 80ms;
     }
@@ -1087,9 +1136,9 @@
       box-shadow:0 24px 48px oklch(18% 0.037 262 / 0.18);
     }
     .port-stat{display:flex;flex-direction:column;gap:0.35rem;text-align:center}
-    .port-stat-k{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:clamp(2rem,1.5vw + 1.2rem,2.75rem);color:var(--accent);letter-spacing:-0.02em;line-height:1;font-feature-settings:"lnum"}
+    .port-stat-k{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,1.5vw + 1.2rem,2.75rem);color:var(--accent);letter-spacing:-0.02em;line-height:1;font-feature-settings:"lnum"}
     .port-stat-k .u{font-size:0.55em;color:oklch(75% 0.016 245);margin-left:0.05em}
-    .port-stat-l{font-family:var(--mono);font-size:0.72rem;color:oklch(70% 0.018 248);letter-spacing:0.14em;text-transform:uppercase;font-weight:500}
+    .port-stat-l{font-family:var(--sans);font-size:0.72rem;color:oklch(70% 0.018 248);letter-spacing:0.04em;text-transform:uppercase;font-weight:600}
     .port-stat-sep{width:1px;height:56px;background:oklch(100% 0 0 / 0.08);align-self:center}
     @media(max-width:720px){
       .port-stats{grid-template-columns:1fr;gap:1.5rem;padding:1.75rem 1.5rem}
@@ -1107,7 +1156,7 @@
       border:1px solid oklch(70% 0.107 85 / 0.28);margin-bottom:1.25rem;
     }
     .testi-badge svg{width:13px;height:13px;fill:var(--accent-deep);stroke:none}
-    .testi-head h2 em{font-family:'Fraunces',Georgia,serif;font-style:italic;color:var(--accent-deep);font-weight:500}
+    .testi-head h2 em{font-family:var(--serif);font-style:italic;color:var(--accent-deep);font-weight:400;letter-spacing:-0.018em}
     .testi-head p{color:var(--ink-mid);line-height:1.55;max-width:50ch;margin:0 auto}
 
     .testi-grid{
@@ -1138,14 +1187,14 @@
     .testi-hero .testi-stars svg{width:18px;height:18px}
 
     .testi-quote{
-      font-family:var(--sans);font-size:0.97rem;font-weight:500;
-      line-height:1.5;color:var(--ink);letter-spacing:-0.006em;margin:0;
+      font-family:var(--serif);font-size:1.05rem;font-weight:400;
+      line-height:1.5;color:var(--ink);letter-spacing:-0.01em;margin:0;
     }
     .testi-hero .testi-quote{
-      font-size:clamp(1.12rem,0.4vw + 1.05rem,1.32rem);
-      line-height:1.45;letter-spacing:-0.012em;
+      font-size:clamp(1.25rem,0.5vw + 1.15rem,1.5rem);
+      line-height:1.35;letter-spacing:-0.015em;
     }
-    .testi-quote em{font-family:'Fraunces',Georgia,serif;font-style:italic;color:var(--accent-deep);font-weight:500}
+    .testi-quote em{font-family:var(--serif);font-style:italic;color:var(--accent-deep);font-weight:400}
 
     .testi-attr{display:grid;grid-template-columns:auto 1fr;gap:0.75rem;align-items:center}
     .testi-avatar{
@@ -1155,8 +1204,8 @@
       font-family:var(--sans);font-size:0.82rem;font-weight:600;color:var(--accent-deep);letter-spacing:-0.012em;
     }
     .testi-hero .testi-avatar{width:3rem;height:3rem;font-size:0.95rem}
-    .testi-name{font-family:var(--sans);font-size:0.9rem;font-weight:600;color:var(--ink);letter-spacing:-0.008em;display:block;font-style:normal;line-height:1.25}
-    .testi-role{font-family:var(--mono);font-size:0.62rem;color:var(--ink-soft);letter-spacing:0.13em;text-transform:uppercase;line-height:1.3;margin-top:0.15rem;display:block}
+    .testi-name{font-family:var(--sans);font-size:0.92rem;font-weight:600;color:var(--ink);letter-spacing:-0.008em;display:block;font-style:normal;line-height:1.25}
+    .testi-role{font-family:var(--sans);font-size:0.72rem;color:var(--ink-soft);letter-spacing:0.02em;font-weight:500;line-height:1.3;margin-top:0.2rem;display:block}
 
     /* =========== PRICING =========== */
     .price{padding:var(--sec-y) var(--rail);border-top:1px solid var(--line);background:var(--bg-alt)}
@@ -1173,16 +1222,16 @@
       box-shadow:0 1px 2px oklch(18% 0.037 262 / 0.04);
     }
     .price-tab{
-      font-family:var(--sans);font-size:0.86rem;font-weight:500;color:var(--ink-mid);
-      padding:0.6rem 1.2rem;border-radius:100px;cursor:pointer;
+      font-family:var(--sans);font-size:0.88rem;font-weight:600;color:var(--ink-mid);
+      padding:0.65rem 1.25rem;border-radius:100px;cursor:pointer;
       transition:all 350ms var(--e-quart);
       border:none;background:transparent;position:relative;
-      display:inline-flex;flex-direction:column;align-items:center;gap:0.15rem;line-height:1.1;
+      display:inline-flex;flex-direction:column;align-items:center;gap:0.2rem;line-height:1.1;
     }
-    .price-tab .pt-label{letter-spacing:-0.01em}
+    .price-tab .pt-label{letter-spacing:-0.008em}
     .price-tab .pt-sub{
-      font-family:var(--mono);font-size:0.64rem;font-weight:500;
-      color:var(--ink-faint);letter-spacing:0.02em;
+      font-family:var(--sans);font-size:0.7rem;font-weight:500;
+      color:var(--ink-faint);letter-spacing:0.01em;
       transition:color 350ms var(--e-quart);
     }
     .price-tab:hover{color:var(--ink)}
@@ -1348,8 +1397,8 @@
       gap:clamp(2rem,4vw,3.5rem);
     }
     .studio-tenet{display:flex;flex-direction:column;gap:0.25rem;align-items:center}
-    .studio-tenet .t{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(1.6rem,1.2vw + 1rem,2rem);color:var(--ink);letter-spacing:-0.02em;line-height:1}
-    .studio-tenet .d{font-family:var(--mono);font-size:0.64rem;color:var(--ink-soft);letter-spacing:0.16em;text-transform:uppercase;line-height:1}
+    .studio-tenet .t{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.6rem,1.2vw + 1rem,2rem);color:var(--ink);letter-spacing:-0.02em;line-height:1}
+    .studio-tenet .d{font-family:var(--sans);font-size:0.66rem;color:var(--ink-soft);letter-spacing:0.04em;text-transform:uppercase;font-weight:600;line-height:1}
     @media(max-width:640px){
       .studio-people{flex-direction:column;gap:1.25rem}
     }
@@ -1404,7 +1453,7 @@
     .faq{padding:var(--sec-y) var(--rail);border-top:1px solid var(--line);background:var(--bg-alt)}
     .faq-inner{max-width:860px;margin:0 auto;width:100%}
     .faq-head{text-align:center;max-width:620px;margin:0 auto clamp(2.25rem,3.5vw,3.25rem)}
-    .faq-head h2 em{font-family:'Fraunces',Georgia,serif;font-style:italic;color:var(--accent-deep);font-weight:500}
+    .faq-head h2 em{font-family:var(--serif);font-style:italic;color:var(--accent-deep);font-weight:400;letter-spacing:-0.018em}
     .faq-head p{color:var(--ink-mid);line-height:1.55;max-width:52ch;margin:0 auto}
     .faq-list{display:flex;flex-direction:column;gap:0.55rem;width:100%}
     .faq-item{
@@ -1498,7 +1547,7 @@
       box-shadow:0 12px 32px oklch(66% 0.14 65 / 0.32), inset 0 1px 0 oklch(100% 0 0 / 0.25);
       position:relative;overflow:hidden;
     }
-    .form-submit em{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;padding:0 0.08em}
+    .form-submit em{font-family:var(--serif);font-style:italic;font-weight:500;padding:0 0.08em}
     .form-submit svg{transition:transform 400ms var(--e-quart)}
     .form-submit:hover{background:var(--accent-2);transform:translateY(-2px);box-shadow:0 18px 44px oklch(66% 0.14 65 / 0.42), inset 0 1px 0 oklch(100% 0 0 / 0.3)}
     .form-submit:hover svg{transform:translateX(3px)}
@@ -1521,13 +1570,13 @@
     .foot-logo{display:inline-flex;align-items:center;gap:0.75rem;color:var(--bg);font-weight:600;font-size:1.05rem;text-decoration:none;letter-spacing:-0.012em}
     .foot-logo .logo-mark{height:40px;width:auto}
     .foot-brand p{font-size:0.93rem;line-height:1.65;color:oklch(68% 0.012 260);letter-spacing:-0.003em}
-    .foot-brand p em{font-family:'Fraunces',Georgia,serif;font-style:italic;color:var(--accent);font-weight:500;letter-spacing:-0.012em}
+    .foot-brand p em{font-family:var(--serif);font-style:italic;color:var(--accent);font-weight:500;letter-spacing:-0.012em}
     .foot-badges{display:flex;align-items:center;gap:0.55rem;margin-top:0.35rem;flex-wrap:wrap}
-    .foot-badge{font-family:var(--mono);font-size:0.68rem;color:oklch(74% 0.012 260);padding:0.4rem 0.7rem;border:1px solid oklch(100% 0 0 / 0.09);border-radius:100px;display:inline-flex;align-items:center;gap:0.4rem;letter-spacing:0.02em}
-    .foot-badge .stars{color:var(--accent);letter-spacing:0.04em}
-    .foot-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px oklch(70% 0.107 85 / 0.2);animation:pulse 2.2s var(--e-quart) infinite}
+    .foot-badge{font-family:var(--sans);font-size:0.74rem;font-weight:500;color:oklch(80% 0.012 260);padding:0.45rem 0.8rem;border:1px solid oklch(100% 0 0 / 0.11);background:oklch(100% 0 0 / 0.02);border-radius:999px;display:inline-flex;align-items:center;gap:0.45rem;letter-spacing:-0.003em}
+    .foot-badge .stars{color:var(--accent);letter-spacing:0.02em;font-size:0.72rem}
+    .foot-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--success);box-shadow:0 0 0 3px oklch(64% 0.13 155 / 0.2);animation:pulse 2.2s var(--e-quart) infinite}
 
-    .foot-col h5{font-family:var(--mono);font-size:0.7rem;color:oklch(60% 0.01 260);letter-spacing:0.02em;margin-bottom:0.85rem;font-weight:500}
+    .foot-col h5{font-family:var(--sans);font-size:0.74rem;color:oklch(70% 0.012 260);letter-spacing:0.04em;margin-bottom:0.95rem;font-weight:600;text-transform:uppercase}
     .foot-col a{display:block;font-size:0.88rem;color:oklch(72% 0.012 260);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e-quart)}
     .foot-col a:hover{color:var(--accent)}
 
@@ -1550,9 +1599,11 @@
     [data-r].in{opacity:1;transform:translateY(0)}
     [data-r-delay]{transition-delay:var(--rd,0ms)}
 
-    /* Section heading stagger — reveal each word */
+    /* Section heading stagger — reveal each word.
+       padding-bottom extends the inline-block box below the baseline so deep
+       serif italic descenders (g/y/p) don't clip when overflow:hidden runs. */
     .stagger{display:inline}
-    .stagger .w{display:inline-block;overflow:hidden;vertical-align:bottom}
+    .stagger .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:0.22em}
     .stagger .w > span{display:inline-block;transform:translateY(110%);transition:transform 700ms var(--e-quint);transition-delay:calc(var(--i,0)*55ms)}
     .stagger.in .w > span{transform:translateY(0)}
 
@@ -1636,8 +1687,9 @@
     .cards > .card h2.nowrap-head{
       white-space:nowrap;
       font-size:clamp(1.55rem, 5.6vw + 0.3rem, 4.5rem);
-      letter-spacing:-0.035em;
-      line-height:1.1;
+      letter-spacing:-0.02em;
+      line-height:1.04;
+      padding-bottom:0.22em;
     }
     @media(min-width:1100px){
       .cards > .card h2.nowrap-head{font-size:clamp(2.4rem, 2.2vw + 1.5rem, 4rem)}
@@ -1730,7 +1782,7 @@
       content:'';position:absolute;top:0;left:0;right:0;height:1px;z-index:2;
       background:linear-gradient(90deg,transparent 5%,oklch(70% 0.107 85 / 0.55) 50%,transparent 95%);
     }
-    .ct-lead em{font-family:'Fraunces',Georgia,serif;font-style:italic;color:var(--accent);font-weight:500}
+    .ct-lead em{font-family:var(--serif);font-style:italic;color:var(--accent);font-weight:500}
     .ct-pt svg{
       width:18px;height:18px;padding:3px;
       background:oklch(70% 0.107 85 / 0.14);
@@ -1818,7 +1870,7 @@
       color:var(--bg);letter-spacing:-0.028em;line-height:1.18;max-width:26ch;
       margin:0 0 0.4rem;
     }
-    .foot-sig-copy h3 em{font-family:'Fraunces',Georgia,serif;font-style:italic;color:var(--accent);font-weight:500;letter-spacing:-0.02em}
+    .foot-sig-copy h3 em{font-family:var(--serif);font-style:italic;color:var(--accent);font-weight:500;letter-spacing:-0.02em}
     .foot-sig-copy p{font-size:0.92rem;color:oklch(68% 0.012 260);line-height:1.5;max-width:42ch;margin:0}
     .foot-sig-cta{
       display:inline-flex;align-items:center;gap:0.55rem;
@@ -1845,9 +1897,9 @@
 
     /* Refined column headers + link hover */
     .foot-col h5{
-      font-family:var(--mono);font-size:0.66rem;
+      font-family:var(--sans);font-size:0.72rem;
       color:var(--accent);
-      letter-spacing:0.16em;text-transform:uppercase;font-weight:600;
+      letter-spacing:0.05em;text-transform:uppercase;font-weight:600;
       padding-bottom:0.75rem;margin-bottom:0.85rem;
       border-bottom:1px solid oklch(100% 0 0 / 0.07);
       position:relative;
@@ -1896,7 +1948,7 @@
       background:var(--accent);transform:translateX(-50%);opacity:0.5;
     }
     .foot-bar{position:relative}
-    .foot-sig em{font-family:'Fraunces',Georgia,serif;font-style:italic;color:var(--accent);font-weight:500;font-size:0.74rem}
+    .foot-sig em{font-family:var(--serif);font-style:italic;color:var(--accent);font-weight:500;font-size:0.74rem}
 
     /* =========================================================
        PRICING VISUAL UPGRADE — premium editorial
@@ -2145,7 +2197,7 @@
     }
     .tacc-id{display:flex;flex-direction:column;gap:0.15rem;min-width:0;overflow:hidden}
     .tacc-name{font-size:0.94rem;font-weight:600;color:var(--ink);letter-spacing:-0.01em;line-height:1.2;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
-    .tacc-role{font-family:var(--mono);font-size:0.64rem;color:var(--ink-soft);letter-spacing:0.13em;text-transform:uppercase;line-height:1.3;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+    .tacc-role{font-family:var(--sans);font-size:0.72rem;font-weight:500;color:var(--ink-soft);letter-spacing:0.02em;line-height:1.3;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
     .tacc-stars{display:inline-flex;gap:0.18rem;flex-shrink:0}
     .tacc-stars svg{width:13px;height:13px;fill:var(--accent);stroke:none;transition:transform 400ms var(--e-quart)}
     .tacc.open .tacc-stars svg{transform:scale(1.08)}
@@ -2162,7 +2214,7 @@
     .tacc.open .tacc-body{grid-template-rows:1fr}
     .tacc-body > div{overflow:hidden}
     .tacc-body blockquote{
-      font-family:'Fraunces',Georgia,serif;font-style:normal;font-weight:400;
+      font-family:var(--serif);font-style:normal;font-weight:400;
       font-size:1.05rem;line-height:1.55;color:var(--ink-2);
       padding:0.2rem 1.25rem 1.15rem 4.3rem;max-width:64ch;letter-spacing:-0.005em;
       opacity:0;transform:translateY(8px);
@@ -2184,7 +2236,7 @@
       .tacc-stars{display:none}
       .tacc-avatar{width:2.1rem;height:2.1rem;font-size:0.76rem}
       .tacc-name{font-size:0.9rem}
-      .tacc-role{font-size:0.58rem;letter-spacing:0.1em}
+      .tacc-role{font-size:0.66rem;letter-spacing:0.02em}
       .tacc-body blockquote{padding:0.2rem 0.85rem 1rem 3.75rem;font-size:0.98rem}
     }
 
@@ -2205,8 +2257,8 @@
       width:100%;gap:0.5rem;margin:0.25rem 0 0;
       background:none;border:none;cursor:pointer;
       padding:0.7rem 0;
-      font-family:var(--mono);font-size:0.66rem;font-weight:500;
-      color:var(--ink-soft);letter-spacing:0.14em;text-transform:uppercase;line-height:1;
+      font-family:var(--sans);font-size:0.72rem;font-weight:600;
+      color:var(--ink-soft);letter-spacing:0.04em;text-transform:uppercase;line-height:1;
       border-top:1px solid var(--line);
       transition:color 280ms var(--e-quart), border-color 350ms var(--e-quart);
       text-align:left;
@@ -2282,11 +2334,11 @@
       filter:drop-shadow(0 18px 44px oklch(70% 0.107 85 / 0.12));
     }
     .tmn-mark text{
-      font-family:'Hanken Grotesk',system-ui,sans-serif;
-      font-weight:800;font-size:96px;
+      font-family:var(--sans);
+      font-weight:700;font-size:96px;
       letter-spacing:-0.06em;
       text-transform:uppercase;
-      font-feature-settings:"kern","liga","ss01";
+      font-feature-settings:"kern","liga";
     }
     /* Layer 1 — faint outline, fades in on hover */
     .tmn-outline{
@@ -2399,10 +2451,20 @@
   <section class="hero card">
     <div class="hero-inner">
       <div class="hero-tag">
-        <span class="stars">●</span>
-        <strong>Now booking new projects</strong>
-        <span class="sep"></span>
-        <em>5.0 on Google</em>
+        <span class="dot" aria-hidden="true"></span>
+        <strong>Now booking select projects</strong>
+        <span class="sep" aria-hidden="true"></span>
+        <span class="rating">
+          <span class="rating-stars" aria-hidden="true">
+            <svg viewBox="0 0 12 12"><path d="M6 0.5l1.545 3.643 3.955.315-3.015 2.582.925 3.86L6 8.866l-3.41 2.034.925-3.86L.5 4.458l3.955-.315z"/></svg>
+            <svg viewBox="0 0 12 12"><path d="M6 0.5l1.545 3.643 3.955.315-3.015 2.582.925 3.86L6 8.866l-3.41 2.034.925-3.86L.5 4.458l3.955-.315z"/></svg>
+            <svg viewBox="0 0 12 12"><path d="M6 0.5l1.545 3.643 3.955.315-3.015 2.582.925 3.86L6 8.866l-3.41 2.034.925-3.86L.5 4.458l3.955-.315z"/></svg>
+            <svg viewBox="0 0 12 12"><path d="M6 0.5l1.545 3.643 3.955.315-3.015 2.582.925 3.86L6 8.866l-3.41 2.034.925-3.86L.5 4.458l3.955-.315z"/></svg>
+            <svg viewBox="0 0 12 12"><path d="M6 0.5l1.545 3.643 3.955.315-3.015 2.582.925 3.86L6 8.866l-3.41 2.034.925-3.86L.5 4.458l3.955-.315z"/></svg>
+          </span>
+          <span>5.0</span>
+          <span class="rating-src">Google</span>
+        </span>
       </div>
 
       <div class="hero-grid">
@@ -2547,7 +2609,7 @@
   <section class="work card" id="work">
     <div class="sec-head left" style="max-width:900px;margin:0 auto clamp(2rem,3vw,3rem) 0">
       <div class="eye">Selected Work</div>
-      <h2>Built by us.<br /><em style="font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500">Live right now.</em></h2>
+      <h2>Built by us.<br /><em>Live right now.</em></h2>
       <p>Hover to preview, click to visit.</p>
     </div>
 
@@ -2624,6 +2686,7 @@
   <section class="price card" id="pricing">
     <div class="sec-head price-head">
       <div class="eye">Pricing</div>
+      <h2>Priced <em>plainly.</em></h2>
     </div>
 
     <div class="price-toggle-wrap" data-r>
