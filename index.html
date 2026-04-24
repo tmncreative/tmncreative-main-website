@@ -245,16 +245,19 @@
     .mob-menu.open{opacity:1;transform:translateY(0);pointer-events:auto}
     .mob-menu a{
       display:flex;align-items:center;justify-content:space-between;
-      padding:1rem 0;font-size:1.15rem;font-weight:500;color:var(--ink);
+      padding:1rem 0;font-family:var(--serif);font-size:1.35rem;font-weight:400;
+      letter-spacing:-0.015em;color:var(--ink);
       text-decoration:none;border-bottom:1px solid var(--line-soft);
     }
     .mob-menu a svg{width:14px;height:14px;color:var(--ink-soft)}
     .mob-menu .mob-cta{
       margin-top:1rem;background:var(--ink);color:var(--bg);
-      padding:0.95rem 1.2rem;border-radius:var(--r-sm);border:none;
-      justify-content:center;font-size:1rem;
+      padding:0.95rem 1.2rem;border-radius:3px;border:none;
+      justify-content:center;
+      font-family:var(--sans);font-size:0.92rem;font-weight:600;letter-spacing:0.005em;
+      box-shadow:0 0 0 1px oklch(14% 0.01 260 / 0.92), 0 1px 0 oklch(100% 0 0 / 0.08) inset;
     }
-    .mob-menu .mob-cta svg{color:var(--bg)}
+    .mob-menu .mob-cta svg{color:var(--bg);width:11px;height:11px}
 
     @media(max-width:900px){
       .nav-links,.nav-ghost,.nav-cta{display:none}
@@ -362,10 +365,9 @@
       /* Center the full-width <a> contents in the stacked mobile footer bar
          (© line stays centered via text-align, but anchors are flex-level) */
       .foot-bar a{justify-content:center}
-      /* Reduce tertiary hero content competition */
-      .hero-audience{display:none}
+      /* Hide the trust/audience footer on mobile — flows straight into Websites */
+      .hero-footer{display:none}
       .hero-meta{gap:1.25rem 1.5rem;padding-top:1rem}
-      .hero-trust{font-size:0.95rem;margin-top:1.1rem;padding-top:0.95rem}
       /* Feat sections tighter on mobile — pull devices tight against the copy */
       #services .feat-grid,
       .feat .feat-grid{gap:0.25rem}
@@ -1715,10 +1717,6 @@
     @media(max-width:640px){
       /* Hide credibility / custom-built / live-in-24 chips on mobile */
       .hero-meta{display:none}
-      /* Tighten spacing after CTAs now that chips are gone */
-      .hero-trust{margin-top:1.35rem;padding-top:1.1rem;font-size:0.92rem;line-height:1.45}
-      /* Kill the desktop break after "aesthetic" so mobile wraps naturally to 2 lines */
-      .hero-trust br{display:none}
 
       /* Shrink home-page pricing card on mobile */
       .price{padding:2.75rem var(--rail)}

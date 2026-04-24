@@ -623,11 +623,12 @@
       .card.pop:hover{transform:scale(1.035) translateY(-3px)}
     }
   
-    /* === TYPE-V2 === */
-    /* Editorial serif (Source Serif 4) + neutral sans (IBM Plex Sans).
+    
+    /* === TYPE-V3 === */
+    /* Source Serif 4 (editorial serif) + IBM Plex Sans (neutral UI).
        Geist Mono retained only for tabular dashboard data.
-       padding-bottom on headings + .stagger .w reserves room for
-       deep italic descenders (g, y, p) so overflow:hidden never clips. */
+       padding-bottom on h1/h2 + .stagger .w reserves room for deep
+       italic descenders (g/y/p). */
     :root {
       --sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
       --serif: 'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
@@ -662,12 +663,55 @@
       letter-spacing: 0.04em !important;
       text-transform: uppercase;
     }
-    .btn, .nav-cta, .nav-link, .nav-ghost {
+    /* --- Editorial nav (serif labels) --- */
+    .logo, .logo-word {
+      font-family: var(--serif) !important;
+      font-weight: 400 !important;
+      letter-spacing: -0.01em !important;
+    }
+    .logo-word { font-size: 1.12rem !important; line-height: 1 !important; }
+    .logo-sub {
+      font-family: var(--sans) !important;
+      font-weight: 400 !important;
+      font-size: 0.78rem !important;
+      letter-spacing: -0.003em !important;
+      color: var(--ink-soft) !important;
+    }
+    .nav-link, .nav-ghost {
+      font-family: var(--serif) !important;
+      font-weight: 400 !important;
+      font-size: 1rem !important;
+      letter-spacing: -0.008em !important;
+      background: transparent !important;
+    }
+    .nav-link:hover, .nav-ghost:hover { background: transparent !important; }
+    /* --- Utility button stays sans for clickability --- */
+    .nav-cta, .btn {
       font-family: var(--sans) !important;
       font-weight: 600 !important;
-      letter-spacing: -0.003em !important;
+      letter-spacing: 0.005em !important;
     }
-    /* === TYPE-V2 === */
+    .nav-cta {
+      border-radius: 3px !important;
+      font-size: 0.8rem !important;
+      padding: 0.65rem 1.1rem 0.62rem !important;
+      box-shadow: 0 0 0 1px oklch(14% 0.01 260 / 0.92), 0 1px 0 oklch(100% 0 0 / 0.08) inset, 0 1px 2px oklch(14% 0.01 260 / 0.14) !important;
+    }
+    /* --- Mobile menu — serif labels, sans CTA to match desktop nav --- */
+    .mob-menu a {
+      font-family: var(--serif) !important;
+      font-weight: 400 !important;
+      font-size: 1.35rem !important;
+      letter-spacing: -0.015em !important;
+    }
+    .mob-menu .mob-cta {
+      font-family: var(--sans) !important;
+      font-weight: 600 !important;
+      font-size: 0.92rem !important;
+      letter-spacing: 0.005em !important;
+      border-radius: 3px !important;
+    }
+    /* === TYPE-V3 === */
 </style>
 </head>
 <body>
