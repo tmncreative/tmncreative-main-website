@@ -20,7 +20,7 @@
   <link rel="preload" as="image" href="images/logo-dark.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","@id":"https://tmncreative.com/trevor","name":"Trevor Niemann","jobTitle":"Founder, TMN Creative","url":"https://tmncreative.com/trevor","image":"https://tmncreative.com/images/trevor-headshot.jpg","worksFor":{"@type":"Organization","@id":"https://tmncreative.com/#org","name":"TMN Creative","url":"https://tmncreative.com"},"sameAs":["https://www.linkedin.com/in/niemann29/","https://truemarginnorth.com"],"alumniOf":{"@type":"CollegeOrUniversity","name":"University of Pennsylvania"},"description":"A decade in enterprise sales, capital raising, and digital strategy across fintech, private wealth, and logistics. Now building premium websites for professional firms."}
@@ -49,7 +49,7 @@
       --accent-deep:   oklch(60% 0.105 260);
       --success:       oklch(64% 0.13 155);
 
-      --sans: 'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+      --sans: var(--sans);
       --mono: 'Geist Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
 
       --e-quart: cubic-bezier(0.25,1,0.5,1);
@@ -94,8 +94,8 @@
     h1,h2,h3,h4{font-family:var(--sans);color:var(--ink);letter-spacing:-0.018em}
     h1{font-size:clamp(2.4rem,3.2vw + 1rem,4.5rem);line-height:1.08;font-weight:500;letter-spacing:-0.032em;padding-bottom:0.12em}
     h2{font-size:clamp(1.95rem,1.6vw + 1.1rem,3.25rem);line-height:1.12;font-weight:500;letter-spacing:-0.028em;padding-bottom:0.1em}
-    h1 em,h2 em{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:400;color:var(--ink-soft);padding-bottom:0.06em;display:inline-block;line-height:inherit}
-    h2 .ac,h1 .ac{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;color:var(--accent-deep);letter-spacing:-0.02em;padding-bottom:0.06em;display:inline-block;line-height:inherit}
+    h1 em,h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--ink-soft);padding-bottom:0.06em;display:inline-block;line-height:inherit}
+    h2 .ac,h1 .ac{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--accent-deep);letter-spacing:-0.02em;padding-bottom:0.06em;display:inline-block;line-height:inherit}
     h3{font-size:clamp(1.25rem,0.6vw + 1rem,1.55rem);line-height:1.2;font-weight:500;letter-spacing:-0.018em}
     h4{font-size:1.05rem;line-height:1.3;font-weight:600;letter-spacing:-0.01em}
     p{max-width:62ch}
@@ -332,7 +332,7 @@
       box-shadow:0 1px 2px oklch(14% 0.01 260 / 0.04);
     }
     .story-pull p{
-      font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:400;
+      font-family:var(--serif);font-style:italic;font-weight:400;
       font-size:1.22rem;line-height:1.45;color:var(--ink);letter-spacing:-0.012em;
     }
 
@@ -487,7 +487,7 @@
     .foot-logo{display:inline-flex;align-items:center;gap:0.75rem;color:var(--bg);font-weight:600;font-size:1.05rem;text-decoration:none;letter-spacing:-0.012em}
     .foot-logo .logo-mark{height:34px}
     .foot-brand p{font-size:0.95rem;color:oklch(66% 0.01 260);line-height:1.55;margin:0;max-width:none}
-    .foot-brand p em{font-family:'Fraunces',Georgia,serif;font-style:italic;color:var(--accent);font-weight:500}
+    .foot-brand p em{font-family:var(--serif);font-style:italic;color:var(--accent);font-weight:500}
     .foot-badges{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.25rem;justify-content:center}
     .foot-badge{font-family:var(--mono);font-size:0.72rem;color:oklch(78% 0.012 260);background:oklch(100% 0 0 / 0.04);border:1px solid oklch(100% 0 0 / 0.07);padding:0.38rem 0.7rem;border-radius:100px;display:inline-flex;align-items:center;gap:0.45rem;letter-spacing:0.02em}
     .foot-badge .stars{color:var(--accent);font-size:0.72rem;letter-spacing:0.12em}
@@ -518,7 +518,7 @@
       filter:drop-shadow(0 22px 52px oklch(70% 0.107 85 / 0.18));
     }
     .tmn-mark text{
-      font-family:'Hanken Grotesk',system-ui,sans-serif;
+      font-family:var(--sans);
       font-weight:800;font-size:96px;letter-spacing:-0.06em;
       text-transform:uppercase;font-feature-settings:"kern","liga","ss01";
     }
@@ -581,7 +581,53 @@
       [data-r]{opacity:1;transform:none}
       .hero-photo-frame,.hero-text{opacity:1;animation:none}
     }
-  </style>
+  
+    /* === TYPE-V2 === */
+    /* Editorial serif (Source Serif 4) + neutral sans (IBM Plex Sans).
+       Geist Mono retained only for tabular dashboard data.
+       padding-bottom on headings + .stagger .w reserves room for
+       deep italic descenders (g, y, p) so overflow:hidden never clips. */
+    :root {
+      --sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --serif: 'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    }
+    body { font-family: var(--sans); line-height: 1.6; font-size: 17px; }
+    h1, h2 {
+      font-family: var(--serif) !important;
+      font-weight: 400 !important;
+      letter-spacing: -0.02em !important;
+      line-height: 1.04 !important;
+      padding-bottom: 0.18em !important;
+    }
+    h1 { letter-spacing: -0.03em !important; line-height: 1.0 !important; }
+    h1 em, h2 em, .hero h1 em, .htext h1 em, .htext h1 .ac, h2 .ac {
+      font-family: var(--serif) !important;
+      font-style: italic !important;
+      font-weight: 400 !important;
+      letter-spacing: -0.018em !important;
+      display: inline !important;
+      padding: 0 !important;
+      line-height: inherit !important;
+    }
+    h3 {
+      font-family: var(--sans) !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.012em !important;
+    }
+    .stagger .w { padding-bottom: 0.22em !important; }
+    .eye {
+      font-family: var(--sans) !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase;
+    }
+    .btn, .nav-cta, .nav-link, .nav-ghost {
+      font-family: var(--sans) !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.003em !important;
+    }
+    /* === TYPE-V2 === */
+</style>
 </head>
 <body>
 

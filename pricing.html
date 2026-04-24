@@ -17,7 +17,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- LCP preloads -->
   <link rel="preload" as="image" href="images/logo-dark.png" fetchpriority="high" />
@@ -51,7 +51,7 @@
       --success:oklch(64% 0.13 155);
       --sans:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
       --mono:'Geist Mono',ui-monospace,Menlo,monospace;
-      --serif:'Fraunces',Georgia,serif;
+      --serif:var(--serif);
       --e-quart:cubic-bezier(0.25,1,0.5,1);
       --e-quint:cubic-bezier(0.22,1,0.36,1);
       --e-io:cubic-bezier(0.65,0,0.35,1);
@@ -622,7 +622,53 @@
       .card.pop{transform:scale(1.02)}
       .card.pop:hover{transform:scale(1.035) translateY(-3px)}
     }
-  </style>
+  
+    /* === TYPE-V2 === */
+    /* Editorial serif (Source Serif 4) + neutral sans (IBM Plex Sans).
+       Geist Mono retained only for tabular dashboard data.
+       padding-bottom on headings + .stagger .w reserves room for
+       deep italic descenders (g, y, p) so overflow:hidden never clips. */
+    :root {
+      --sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --serif: 'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    }
+    body { font-family: var(--sans); line-height: 1.6; font-size: 17px; }
+    h1, h2 {
+      font-family: var(--serif) !important;
+      font-weight: 400 !important;
+      letter-spacing: -0.02em !important;
+      line-height: 1.04 !important;
+      padding-bottom: 0.18em !important;
+    }
+    h1 { letter-spacing: -0.03em !important; line-height: 1.0 !important; }
+    h1 em, h2 em, .hero h1 em, .htext h1 em, .htext h1 .ac, h2 .ac {
+      font-family: var(--serif) !important;
+      font-style: italic !important;
+      font-weight: 400 !important;
+      letter-spacing: -0.018em !important;
+      display: inline !important;
+      padding: 0 !important;
+      line-height: inherit !important;
+    }
+    h3 {
+      font-family: var(--sans) !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.012em !important;
+    }
+    .stagger .w { padding-bottom: 0.22em !important; }
+    .eye {
+      font-family: var(--sans) !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase;
+    }
+    .btn, .nav-cta, .nav-link, .nav-ghost {
+      font-family: var(--sans) !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.003em !important;
+    }
+    /* === TYPE-V2 === */
+</style>
 </head>
 <body>
 
