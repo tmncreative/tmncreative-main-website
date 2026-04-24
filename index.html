@@ -522,9 +522,17 @@
     .hero-meta-k{font-family:var(--sans);font-size:1.35rem;font-weight:600;color:var(--ink);letter-spacing:-0.02em;font-feature-settings:"tnum"}
     .hero-meta-k .unit{font-size:0.82rem;color:var(--ink-soft);font-weight:500;margin-left:0.12em}
     .hero-meta-l{font-family:var(--mono);font-size:0.68rem;color:var(--ink-soft);font-weight:500}
-    .hero-trust{margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:1rem;color:var(--ink-2);line-height:1.45;max-width:56ch;letter-spacing:-0.005em}
+    .hero-trust{font-family:var(--sans);font-size:1.05rem;color:var(--ink-2);line-height:1.5;letter-spacing:-0.005em;margin:0}
     .hero-trust em{font-style:italic;color:var(--accent-deep);font-family:'Fraunces',Georgia,serif;font-weight:500}
-    .hero-audience{font-family:var(--mono);font-size:0.72rem;color:var(--ink-soft);letter-spacing:0.08em;margin-top:0.5rem;max-width:56ch;line-height:1.5}
+    .hero-audience{font-family:var(--mono);font-size:0.78rem;color:var(--ink-soft);letter-spacing:0.08em;line-height:1.5;margin:0.5rem 0 0}
+
+    /* Full-width hero footer — trust + audience line sit below the device cluster,
+       span the full hero-inner width (not clamped to one column) */
+    .hero-footer{
+      margin-top:clamp(1.75rem,3vw,2.75rem);
+      padding-top:clamp(1.25rem,2vw,1.75rem);
+      border-top:1px solid var(--line);
+    }
 
     /* Hero visual — product shots */
     .hero-visual{
@@ -601,7 +609,7 @@
 
     /* ========== iPhone mockup variant ========== */
     .hv-iphone{
-      position:absolute;right:-4%;bottom:-8%;width:22%;line-height:0;
+      position:absolute;right:-6%;bottom:-10%;width:32%;line-height:0;
       transform:rotate(3deg);
       filter:drop-shadow(0 22px 42px oklch(14% 0.01 260 / 0.28));
       image-rendering:-webkit-optimize-contrast;
@@ -690,7 +698,7 @@
     @keyframes pulse{0%,100%{box-shadow:0 0 0 2px oklch(64% 0.13 155 / 0.25)}50%{box-shadow:0 0 0 6px oklch(64% 0.13 155 / 0)}}
 
     .hv-badge{
-      position:absolute;bottom:-1rem;left:8%;
+      position:absolute;top:-1rem;left:8%;bottom:auto;
       background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--r-md);
       padding:0.7rem 0.9rem;
       display:flex;align-items:center;gap:0.7rem;
@@ -719,10 +727,9 @@
       .hv-stack{transform:rotate(1deg);width:52%}
       /* iPhone peeks a little above iMac top-right */
       .hero-visual .hv-iphone{width:28%;right:-1%;top:-4%;bottom:auto}
-      /* "40+ operators" badge: bottom-right under phone, stays ABOVE the headline overlap
-         (hero-visual has -10rem bottom margin pulling h1 up, so badge.bottom must be > 30%
-         to remain visually within the iMac area and not float over "underselling") */
-      .hero-visual .hv-badge{right:2%;left:auto;bottom:34%;padding:0.7rem 0.9rem;gap:0.7rem}
+      /* "40+ operators" badge: bottom-right under phone, stays ABOVE the headline overlap.
+         Explicit top:auto required because desktop base now uses top:-1rem */
+      .hero-visual .hv-badge{right:2%;left:auto;top:auto;bottom:34%;padding:0.7rem 0.9rem;gap:0.7rem}
       .hero-visual .hv-badge-text{font-size:0.82rem;line-height:1.3}
       .hero-visual .hv-badge-avatars > div{width:24px;height:24px;font-size:0.62rem}
 
@@ -754,7 +761,7 @@
       .hero{padding-top:calc(var(--nav-h) + 0.5rem)}
       .hero-visual{max-width:340px;margin-bottom:-8rem}
       .hero-visual .hv-iphone{width:30%;right:-2%;top:-4%;bottom:auto}
-      .hero-visual .hv-badge{right:2%;left:auto;bottom:32%;padding:0.65rem 0.85rem;gap:0.65rem}
+      .hero-visual .hv-badge{right:2%;left:auto;top:auto;bottom:32%;padding:0.65rem 0.85rem;gap:0.65rem}
       .hero-visual .hv-badge-text{font-size:0.78rem}
       .hero-visual .hv-badge-avatars > div{width:22px;height:22px;font-size:0.58rem}
       .feat-visual.feat-stack{max-width:360px;gap:0.4rem}
@@ -2404,8 +2411,6 @@
             <div class="hero-meta-item"><div class="hero-meta-k">Custom-built</div><div class="hero-meta-l">sites + CRMs</div></div>
             <div class="hero-meta-item"><div class="hero-meta-k">Live in 72<span class="unit">hrs</span></div><div class="hero-meta-l">first draft</div></div>
           </div>
-          <p class="hero-trust">Built for anyone who wants to <em>future-proof</em> their aesthetic<br />and functionality in <em>2026 and beyond.</em></p>
-          <p class="hero-audience">Financial advisors · Consultants · Attorneys · Architects · Professional firms where credibility is everything.</p>
         </div>
 
         <div class="hero-visual">
@@ -2431,6 +2436,12 @@
             <div class="hv-badge-text"><strong>40+ operators</strong><br>trust TMN Creative</div>
           </div>
         </div>
+      </div>
+
+      <!-- Full-width trust row under the devices — reads as a closing frame for the hero -->
+      <div class="hero-footer">
+        <p class="hero-trust">Built for anyone who wants to <em>future-proof</em> their aesthetic and functionality in <em>2026 and beyond.</em></p>
+        <p class="hero-audience">Financial advisors · Consultants · Attorneys · Architects · Professional firms where credibility is everything.</p>
       </div>
     </div>
   </section>
