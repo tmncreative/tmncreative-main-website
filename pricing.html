@@ -430,6 +430,10 @@
     .foot-bar{max-width:1240px;margin:0 auto;padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:0.72rem;color:oklch(56% 0.018 248)}
     .foot-bar a{color:inherit;text-decoration:none;transition:color 200ms}
     .foot-bar a:hover{color:var(--accent)}
+    @media(max-width:640px){
+      .foot-bar{flex-direction:column;align-items:center;text-align:center;gap:0.55rem;justify-content:center}
+      .foot-bar a{justify-content:center;display:inline-flex}
+    }
     @media(max-width:960px){.foot-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:520px){.foot-grid{grid-template-columns:1fr}}
 
@@ -536,12 +540,11 @@
       60%{box-shadow:0 0 0 5px oklch(18% 0.037 262 / 0)}
     }
 
-    /* Price digits — gradient text + gold underscore */
+    /* Price digits — solid ink with gold underscore accent */
     .card-price{
       position:relative;padding-bottom:0.55rem;margin-bottom:0.25rem;
       font-size:2.05rem;font-variant-numeric:tabular-nums;
-      background:linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
-      -webkit-background-clip:text;background-clip:text;color:transparent;
+      color:var(--ink);
       display:inline-flex;align-items:baseline;gap:0.45rem;flex-wrap:wrap;
     }
     .card-from{
@@ -559,8 +562,7 @@
       color:var(--ink-soft);
     }
     .card.pop .card-price{
-      background:linear-gradient(180deg, var(--bg) 0%, oklch(88% 0.014 245) 100%);
-      -webkit-background-clip:text;background-clip:text;color:transparent;
+      color:var(--bg);
     }
     .card.pop .card-price .unit{color:oklch(72% 0.016 245)}
     .card-price::after{
@@ -988,7 +990,8 @@
       <div class="foot-col"><h5>Studio</h5><a href="/">Home</a><a href="/studio">About</a><a href="/pay">Client Portal</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
     </div>
     <div class="foot-bar">
-      <div>© 2026 True Margin North, LLC · <a href="https://truemarginnorth.com" target="_blank" rel="noopener">truemarginnorth.com</a></div>
+      <div>© 2026 True Margin North, LLC</div>
+      <div><a href="https://truemarginnorth.com" target="_blank" rel="noopener">truemarginnorth.com</a></div>
       <div>Built by TMN · <a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a></div>
     </div>
   </footer>
