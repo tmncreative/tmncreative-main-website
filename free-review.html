@@ -17,7 +17,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Non-blocking Google Fonts (saves ~2.7s render-blocking on mobile). Trimmed to weights actually used. -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=Geist+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=Geist+Mono:wght@500&display=swap" /></noscript>
 
   <!-- LCP preloads -->
   <link rel="preload" as="image" href="images/ba-rdg-before.jpg" fetchpriority="high" />
@@ -178,6 +180,35 @@
     .step p{font-family:var(--sans);font-size:0.9rem;color:var(--ink-mid);line-height:1.55;margin:0}
     @media(max-width:760px){.steps-grid{grid-template-columns:1fr}}
 
+    /* INTRO TAG LINK (Google reviews) */
+    .intro-tag-rev{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;transition:opacity 200ms var(--e)}
+    .intro-tag-rev:hover strong{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}
+    .intro-tag-ext{width:9px;height:9px;color:var(--ink-faint);flex-shrink:0;margin-left:-0.05rem}
+
+    /* FINALE CTA */
+    .finale{margin-top:clamp(3rem,5vw,4rem);padding:clamp(2.5rem,5vw,4rem) 0 0;text-align:center;border-top:1px solid var(--line);position:relative}
+    .finale::before{content:'';position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:60px;height:1px;background:var(--accent);box-shadow:0 0 16px oklch(70% 0.107 85 / 0.5)}
+    .finale-eye{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;display:inline-flex;align-items:center;gap:0.5rem}
+    .finale-eye::before{content:'';width:0.4rem;height:0.4rem;background:var(--accent);border-radius:50%}
+    .finale-h{font-family:var(--serif);font-weight:400;font-size:clamp(1.85rem,2vw + 1rem,2.85rem);line-height:1.05;letter-spacing:-0.025em;color:var(--ink);max-width:18ch;margin:0 auto 1rem;padding-bottom:0.18em}
+    .finale-h em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent-deep)}
+    .finale-sub{font-family:var(--sans);font-size:1rem;color:var(--ink-mid);margin:0 auto 2rem;max-width:46ch;line-height:1.55}
+    .finale-actions{display:inline-flex;align-items:center;gap:1.25rem;flex-wrap:wrap;justify-content:center}
+    .finale-cta{display:inline-flex;align-items:center;gap:0.5rem;padding:1rem 1.6rem;background:var(--ink);color:var(--bg);border-radius:var(--r-sm);font-family:var(--sans);font-size:0.95rem;font-weight:600;text-decoration:none;letter-spacing:-0.005em;box-shadow:0 8px 22px oklch(18% 0.037 262 / 0.22);transition:all 250ms var(--e)}
+    .finale-cta:hover{background:var(--ink-2);transform:translateY(-1px);box-shadow:0 12px 30px oklch(18% 0.037 262 / 0.28)}
+    .finale-cta svg{width:14px;height:10px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .finale-or{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-faint)}
+    .finale-tel{font-family:var(--sans);font-size:0.95rem;color:var(--ink-2);text-decoration:none;font-weight:600;border-bottom:1px solid var(--accent);padding-bottom:1px;transition:color 200ms var(--e)}
+    .finale-tel:hover{color:var(--accent-deep)}
+
+    /* STICKY MOBILE CTA */
+    .mob-cta{position:fixed;bottom:0;left:0;right:0;z-index:90;padding:0.65rem 1rem calc(0.65rem + env(safe-area-inset-bottom,0px));background:oklch(99% 0.004 240 / 0.94);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-top:1px solid var(--line);transform:translateY(110%);transition:transform 350ms var(--e-quint);display:none;pointer-events:none}
+    .mob-cta.show{transform:translateY(0);pointer-events:auto}
+    .mob-cta-btn{display:flex;align-items:center;justify-content:center;gap:0.5rem;width:100%;padding:0.95rem 1.25rem;background:var(--ink);color:var(--bg);border-radius:var(--r-sm);font-family:var(--sans);font-size:0.95rem;font-weight:600;text-decoration:none;letter-spacing:-0.005em;box-shadow:0 8px 20px oklch(18% 0.037 262 / 0.22)}
+    .mob-cta-btn:active{background:var(--ink-2);transform:translateY(1px)}
+    .mob-cta-btn svg{width:14px;height:10px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    @media(max-width:880px){.mob-cta{display:block}}
+
     /* FOOTER */
     .foot{background:oklch(14% 0.035 262);color:oklch(72% 0.016 245);padding:2rem var(--rail);margin-top:auto}
     .foot-inner{max-width:1240px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:0.72rem;letter-spacing:0.02em}
@@ -310,8 +341,11 @@
       <div class="grid">
         <div class="intro">
           <div class="intro-tag">
-            <span class="stars">★★★★★</span>
-            <strong>5.0 on Google</strong>
+            <a href="https://share.google/0CMfolwBtFSuuoOuo" target="_blank" rel="noopener" class="intro-tag-rev" aria-label="Read our 5.0 reviews on Google">
+              <span class="stars">★★★★★</span>
+              <strong>5.0 on Google</strong>
+              <svg class="intro-tag-ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1h7v7m-7 0L10 1M1 4v7h7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </a>
             <span class="sep"></span>
             <em style="font-style:normal;color:var(--ink-soft)">Husband-and-wife studio · Fort Worth</em>
           </div>
@@ -326,26 +360,24 @@
           <div class="ba-block">
             <div class="ba-block-head">See a better version of your website</div>
             <div class="ba-pair" data-ba>
-              <img src="images/ba-rdg-before.jpg" alt="Ramon Design Group before" loading="lazy">
-              <img src="images/ba-rdg-after.jpg" alt="Ramon Design Group after" class="ba-after" loading="lazy">
+              <img src="images/ba-rdg-before.jpg" alt="Ramon Design Group before" width="1600" height="1048" fetchpriority="high" decoding="async">
+              <img src="images/ba-rdg-after.jpg" alt="Ramon Design Group after" class="ba-after" width="1600" height="1042" fetchpriority="high" decoding="async">
               <span class="ba-lbl ba-lbl-b">Before</span>
               <span class="ba-lbl ba-lbl-a">After</span>
               <div class="ba-line"></div>
               <input type="range" min="0" max="100" value="50" class="ba-range" aria-label="Before / after slider">
             </div>
-            <div class="ba-cap">Ramon Design Group · Phoenix architecture studio</div>
+            <div class="ba-cap">Ramon Design Group · <a href="https://ramondesigngroup.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">ramondesigngroup.com</a></div>
           </div>
         </div>
 
-        <div class="form-card">
+        <div class="form-card" id="form-card">
           <form name="tmn-meta-intake" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="tmn-meta-intake" />
             <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></div>
             <div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="John Smith" required autocomplete="name" /></div>
-            <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email" /></div>
-            <div class="fg"><label for="company">Company Name</label><input type="text" id="company" name="company" placeholder="Smith Plumbing Co." required autocomplete="organization" /></div>
-            <div class="fg"><label for="phone">Phone (optional)</label><input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel" /></div>
-            <div class="fg"><label for="website">Current Website</label><input type="text" id="website" name="website" placeholder="yourcompany.com" required /></div>
+            <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email" inputmode="email" /></div>
+            <div class="fg"><label for="website">Current Website</label><input type="text" id="website" name="website" placeholder="yourcompany.com" required autocomplete="url" inputmode="url" /></div>
             <div class="fg"><label for="business-type">What type of business?</label>
               <select id="business-type" name="business-type" required>
                 <option value="" disabled selected>Select one</option>
@@ -360,10 +392,11 @@
                 <option value="other">Other</option>
               </select>
             </div>
+            <div class="fg"><label for="phone">Phone <span style="text-transform:none;letter-spacing:0;color:var(--ink-faint);font-weight:400">(optional)</span></label><input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel" inputmode="tel" /></div>
             <button type="submit" class="form-sub">Send me my free homepage <svg viewBox="0 0 14 10"><path d="M1 5h12m0 0L9 1m4 4L9 9"/></svg></button>
           </form>
           <div class="form-micro"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>No spam. No credit card. We build it. You decide.</div>
-          <div class="form-alt">Rather talk first? <a href="https://api.leadconnectorhq.com/widget/booking/FOV83x3fk6V38Idj3fZi" target="_blank" rel="noopener">Book a 15-min call</a></div>
+          <div class="form-alt">Rather talk first? <a href="https://api.leadconnectorhq.com/widget/booking/FOV83x3fk6V38Idj3fZi" target="_blank" rel="noopener">Book a 15-min call</a> &middot; <a href="tel:6822313202">(682) 231-3202</a></div>
         </div>
       </div>
 
@@ -372,8 +405,8 @@
 
         <div class="ba-block">
           <div class="ba-pair" data-ba>
-            <img src="images/cap-before.jpg" alt="Crestone Air Partners before" loading="lazy">
-            <img src="images/cap-after.jpg" alt="Crestone Air Partners after" class="ba-after" loading="lazy">
+            <img src="images/cap-before.jpg" alt="Crestone Air Partners before" width="900" height="572" loading="lazy" decoding="async">
+            <img src="images/cap-after.jpg" alt="Crestone Air Partners after" class="ba-after" width="900" height="570" loading="lazy" decoding="async">
             <span class="ba-lbl ba-lbl-b">Before</span>
             <span class="ba-lbl ba-lbl-a">After</span>
             <div class="ba-line"></div>
@@ -386,8 +419,8 @@
           <div class="testimonial">
             <div class="testimonial-quote">&ldquo;We needed a site that matched the caliber of work we do. Trevor nailed it on the first pass, and we were live before the end of the week.&rdquo;</div>
             <div class="testimonial-attr">
-              <div class="testimonial-init">RR</div>
-              <div class="testimonial-name">Ramon R.<span>Ramon Design Group</span></div>
+              <div class="testimonial-init">RD</div>
+              <div class="testimonial-name">Ramon Design Group<span>Architecture studio · Phoenix</span></div>
             </div>
           </div>
           <div class="testimonial">
@@ -400,8 +433,8 @@
           <div class="testimonial">
             <div class="testimonial-quote">&ldquo;Trevor and Taylor deliver at a level that makes you look like a much bigger operation than you are.&rdquo;</div>
             <div class="testimonial-attr">
-              <div class="testimonial-init">JT</div>
-              <div class="testimonial-name">Jonathan T.<span>QC Atlantic</span></div>
+              <div class="testimonial-init">QC</div>
+              <div class="testimonial-name">QC Atlantic<span>B2B industrial chemistry</span></div>
             </div>
           </div>
         </div>
@@ -413,12 +446,12 @@
           <div class="step">
             <div class="step-num">01</div>
             <h4>Fill out the 30-second form</h4>
-            <p>Tell us your business name and type. That&rsquo;s all we need to get started.</p>
+            <p>Five fields. Name, email, your current site, business type, optional phone. That&rsquo;s it.</p>
           </div>
           <div class="step">
             <div class="step-num">02</div>
             <h4>We build your free homepage</h4>
-            <p>We design a custom homepage for your business. No templates. Delivered in 48 to 72 hours.</p>
+            <p>A custom homepage designed around your business. No templates. Delivered in 48 to 72 hours.</p>
           </div>
           <div class="step">
             <div class="step-num">03</div>
@@ -428,8 +461,23 @@
         </div>
       </div>
 
+      <section class="finale">
+        <p class="finale-eye">Ready when you are</p>
+        <h2 class="finale-h">See what your site could <em>actually look like.</em></h2>
+        <p class="finale-sub">First draft in 48&ndash;72 hours. No catch. No credit card. We build it. You decide.</p>
+        <div class="finale-actions">
+          <a href="#form-card" class="finale-cta">Send me my free homepage <svg viewBox="0 0 14 10" aria-hidden="true"><path d="M1 5h12m0 0L9 1m4 4L9 9"/></svg></a>
+          <span class="finale-or">or</span>
+          <a href="tel:6822313202" class="finale-tel">call (682) 231-3202</a>
+        </div>
+      </section>
+
     </div>
   </main>
+
+  <div class="mob-cta" id="mobCta" aria-hidden="true">
+    <a href="#form-card" class="mob-cta-btn">Send me my free homepage <svg viewBox="0 0 14 10" aria-hidden="true"><path d="M1 5h12m0 0L9 1m4 4L9 9"/></svg></a>
+  </div>
 
   <footer class="foot">
     <div class="foot-inner">
@@ -453,7 +501,19 @@
     if(leadForm){leadForm.addEventListener('submit',function(){
       try{if(window.fbq)fbq('track','Lead');}catch(e){}
       try{if(window.plausible)plausible('Lead Submit');}catch(e){}
+      try{if(window.fathom)fathom.trackEvent('Free Review Form Submit');}catch(e){}
     });}
+
+    // Sticky mobile CTA: show when form-card AND finale are both out of view
+    var mobCta=document.getElementById('mobCta');
+    var formCard=document.getElementById('form-card');
+    var finale=document.querySelector('.finale');
+    if(mobCta && 'IntersectionObserver' in window){
+      var formInView=true,finaleInView=false;
+      function update(){mobCta.classList.toggle('show',!formInView && !finaleInView);}
+      if(formCard){new IntersectionObserver(function(es){es.forEach(function(e){formInView=e.isIntersecting;update();});},{threshold:0.05}).observe(formCard);}
+      if(finale){new IntersectionObserver(function(es){es.forEach(function(e){finaleInView=e.isIntersecting;update();});},{threshold:0.05}).observe(finale);}
+    }
 
     // Before/After slider
     document.querySelectorAll('[data-ba]').forEach(function(pair){

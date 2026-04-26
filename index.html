@@ -24,7 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- LCP hero image preload -->
-  <link rel="preload" as="image" href="images/walnut-ventures.jpg?v=2" fetchpriority="high" imagesrcset="images/walnut-ventures-m.jpg?v=2 720w, images/walnut-ventures.jpg?v=2 1000w" imagesizes="(max-width:640px) 720px, 1000px" />
+  <link rel="preload" as="image" type="image/webp" href="images/walnut-ventures.webp?v=1" fetchpriority="high" imagesrcset="images/walnut-ventures-m.webp?v=1 720w, images/walnut-ventures.webp?v=1 1000w" imagesizes="(max-width:640px) 720px, 1000px" />
   <link rel="preload" as="image" href="images/logo-dark.png" fetchpriority="high" />
 
   <script type="application/ld+json">
@@ -2511,18 +2511,29 @@
 
         <div class="hero-visual">
           <div class="hv-imac">
-            <img class="imac-frame" src="images/imac.png?v=6" alt="" aria-hidden="true" loading="eager" decoding="async" />
+            <picture>
+              <source type="image/webp" srcset="images/imac.webp?v=1">
+              <img class="imac-frame" src="images/imac.png?v=6" alt="" aria-hidden="true" loading="eager" decoding="async" width="1000" height="821" />
+            </picture>
             <div class="imac-screen">
               <picture class="imac-site">
-                <source media="(max-width:640px)" srcset="images/walnut-ventures-m.jpg?v=2">
-                <img src="images/walnut-ventures.jpg?v=2" alt="Walnut Ventures, a private-capital site built by TMN Creative" loading="eager" decoding="async" />
+                <source type="image/webp" media="(max-width:640px)" srcset="images/walnut-ventures-m.webp?v=1">
+                <source type="image/webp" srcset="images/walnut-ventures.webp?v=1">
+                <source media="(max-width:640px)" srcset="images/walnut-ventures-m.jpg?v=3">
+                <img src="images/walnut-ventures.jpg?v=3" alt="Walnut Ventures, a private-capital site built by TMN Creative" loading="eager" decoding="async" fetchpriority="high" width="1000" height="9105" />
               </picture>
             </div>
           </div>
           <div class="hv-iphone" aria-hidden="true">
-            <img class="iphone-frame" src="images/iphone.png?v=1" alt="" loading="eager" decoding="async" />
+            <picture>
+              <source type="image/webp" srcset="images/iphone.webp?v=1">
+              <img class="iphone-frame" src="images/iphone.png?v=1" alt="" loading="eager" decoding="async" width="500" height="1050" />
+            </picture>
             <div class="iphone-screen">
-              <img src="images/rdg-m.jpg?v=3" alt="Ramon Design Group, a mobile site by TMN Creative" loading="eager" decoding="async" />
+              <picture>
+                <source type="image/webp" srcset="images/rdg-m.webp?v=1">
+                <img src="images/rdg-m.jpg?v=4" alt="Ramon Design Group, a mobile site by TMN Creative" loading="eager" decoding="async" width="540" height="8328" />
+              </picture>
             </div>
           </div>
           <div class="hv-badge">
@@ -2561,18 +2572,29 @@
       </div>
       <div class="feat-visual feat-stack" data-r data-r-delay style="--rd:100ms">
         <div class="hv-macbook">
-          <img class="macbook-frame" src="images/macbook.png?v=1" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <picture>
+            <source type="image/webp" srcset="images/macbook.webp?v=1">
+            <img class="macbook-frame" src="images/macbook.png?v=1" alt="" aria-hidden="true" loading="lazy" decoding="async" width="1200" height="822" />
+          </picture>
           <div class="macbook-screen">
             <picture class="macbook-site">
-              <source media="(max-width:640px)" srcset="images/qca-m.jpg?v=2">
-              <img src="images/qca.jpg?v=2" alt="QC Atlantic, a B2B site built by TMN Creative" loading="lazy" decoding="async" />
+              <source type="image/webp" media="(max-width:640px)" srcset="images/qca-m.webp?v=1">
+              <source type="image/webp" srcset="images/qca.webp?v=1">
+              <source media="(max-width:640px)" srcset="images/qca-m.jpg?v=3">
+              <img src="images/qca.jpg?v=3" alt="QC Atlantic, a B2B site built by TMN Creative" loading="lazy" decoding="async" width="1000" height="4080" />
             </picture>
           </div>
         </div>
         <div class="hv-iphone left" aria-hidden="true">
-          <img class="iphone-frame" src="images/iphone.png?v=1" alt="" loading="lazy" decoding="async" />
+          <picture>
+            <source type="image/webp" srcset="images/iphone.webp?v=1">
+            <img class="iphone-frame" src="images/iphone.png?v=1" alt="" loading="lazy" decoding="async" width="500" height="1050" />
+          </picture>
           <div class="iphone-screen">
-            <img src="images/scl-metalworks-m.jpg?v=3" alt="SCL Metal Works, a mobile site by TMN Creative" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp" srcset="images/scl-metalworks-m.webp?v=1">
+              <img src="images/scl-metalworks-m.jpg?v=4" alt="SCL Metal Works, a mobile site by TMN Creative" loading="lazy" decoding="async" width="540" height="15552" />
+            </picture>
           </div>
         </div>
       </div>
@@ -2889,7 +2911,10 @@
       <p class="studio-lead">You work directly with us from day one.<br /><em>We care</em> about the result the same way you do.</p>
       <div class="studio-chip"><span class="dot"></span>Fort Worth &middot; Est. 2023</div>
       <div class="studio-portrait">
-        <img src="images/team.jpg" alt="Trevor and Taylor Niemann" loading="lazy" width="560" height="700" />
+        <picture>
+          <source type="image/webp" srcset="images/team.webp">
+          <img src="images/team.jpg" alt="Trevor and Taylor Niemann" loading="lazy" decoding="async" width="560" height="700" />
+        </picture>
       </div>
       <div class="studio-people">
         <div class="studio-person">
