@@ -6,6 +6,7 @@ Allow: /
 Disallow: /success
 Disallow: /pay
 Disallow: /404.html
+Disallow: /new%20landing%20stuff/
 
 # OpenAI: search inclusion, training crawler, and user-triggered visits.
 User-agent: OAI-SearchBot
@@ -15,6 +16,7 @@ Allow: /
 Disallow: /success
 Disallow: /pay
 Disallow: /404.html
+Disallow: /new%20landing%20stuff/
 
 # Anthropic: training, search indexing, and user-triggered Claude visits.
 User-agent: ClaudeBot
@@ -24,6 +26,7 @@ Allow: /
 Disallow: /success
 Disallow: /pay
 Disallow: /404.html
+Disallow: /new%20landing%20stuff/
 
 # Legacy Anthropic tokens kept for compatibility with older bot lists.
 User-agent: Claude-Web
@@ -32,6 +35,7 @@ Allow: /
 Disallow: /success
 Disallow: /pay
 Disallow: /404.html
+Disallow: /new%20landing%20stuff/
 
 # Perplexity: search index and user-triggered fetches.
 User-agent: PerplexityBot
@@ -40,6 +44,7 @@ Allow: /
 Disallow: /success
 Disallow: /pay
 Disallow: /404.html
+Disallow: /new%20landing%20stuff/
 
 # Google AI/Gemini controls. Googlebot for Search is already covered by *.
 User-agent: Google-Extended
@@ -48,6 +53,20 @@ Allow: /
 Disallow: /success
 Disallow: /pay
 Disallow: /404.html
+Disallow: /new%20landing%20stuff/
+
+# Bing/Copilot use Bing's crawler stack. The wildcard section already allows
+# these, but an explicit group keeps intent clear for webmaster tooling.
+User-agent: Bingbot
+User-agent: BingPreview
+User-agent: msnbot
+User-agent: msnbot-media
+User-agent: adidxbot
+Allow: /
+Disallow: /success
+Disallow: /pay
+Disallow: /404.html
+Disallow: /new%20landing%20stuff/
 
 # Other reputable AI/indexing crawlers.
 User-agent: CCBot
@@ -68,5 +87,6 @@ Allow: /
 Disallow: /success
 Disallow: /pay
 Disallow: /404.html
+Disallow: /new%20landing%20stuff/
 
 Sitemap: https://tmncreative.com/sitemap.xml

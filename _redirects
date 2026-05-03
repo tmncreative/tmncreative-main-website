@@ -1,6 +1,14 @@
 # TMN Creative Redirects
 # Old slug → new slug redirects (301 permanent)
 
+# Canonical clean URLs — prevent duplicate /page.html indexing
+/index.html        /          301
+/:slug.html        /:slug     301
+
+# Retired draft folder — keep old experimental studio page out of the index
+/new%20landing%20stuff/studio.html    /studio    301
+/new%20landing%20stuff/*              /studio    301
+
 # Studio page — v2 canonical URL
 /about                  /studio   301
 /about-us               /studio   301

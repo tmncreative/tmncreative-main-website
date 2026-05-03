@@ -25,6 +25,29 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+# Lightweight attribution helper — short cache so tracking changes propagate
+[[headers]]
+  for = "/tmn-attribution.js"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Content-Type = "application/javascript; charset=utf-8"
+
+# Noindex utility and retired draft surfaces even if a bot reaches them directly
+[[headers]]
+  for = "/success"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/pay"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/new%20landing%20stuff/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
 # Sitemap and robots — short cache
 [[headers]]
   for = "/sitemap.xml"
