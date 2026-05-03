@@ -229,6 +229,8 @@
     [data-r]{opacity:0;transform:translateY(14px);transition:opacity 700ms var(--e),transform 700ms var(--e)}
     [data-r].in{opacity:1;transform:translateY(0)}
 
+    @media(max-width:640px){.cursor-light{display:none!important}.logo{width:max-content!important;max-width:calc(100vw - 5.5rem);flex-shrink:0}.logo-word{white-space:nowrap}}
+
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}[data-r]{opacity:1;transform:none}.cursor-light{display:none}}
   
     /* === TYPE-V3 === */
