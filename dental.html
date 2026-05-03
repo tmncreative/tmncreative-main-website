@@ -24,7 +24,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" /></noscript>
 
   <link rel="preload" as="image" href="images/walnut-ventures.jpg" fetchpriority="high" />
   <link rel="preload" as="image" href="images/logo-dark.png" fetchpriority="high" />
@@ -328,7 +329,7 @@
       </div>
       <div class="nav-actions">
         <a href="/pay" class="nav-ghost">Client Portal</a>
-        <a href="/#contact" class="nav-cta">Request a Free Preview <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="/#contact" class="nav-cta">Get My Free Mockup <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span></button>
       </div>
     </div>
@@ -340,7 +341,7 @@
     <a href="/studio">Studio</a>
     <a href="/#faq">FAQ</a>
     <a href="/pay">Client Portal</a>
-    <a href="/#contact" class="mob-cta">Request a Free Preview</a>
+    <a href="/#contact" class="mob-cta">Get My Free Mockup</a>
   </div>
 
   <main>
@@ -351,7 +352,7 @@
         <h1>Dental website design that helps patients <em>feel confident before they book.</em></h1>
         <p class="lead">TMN Creative builds premium hand-coded websites for general dentists, cosmetic dentists, orthodontists, pediatric dentists, oral surgeons, periodontists, and DSOs. Online booking integrated with Dentrix, Eaglesoft, Open Dental, and NexHealth. Mobile-first. accessibility-forward. First draft in 72 hours. Starting at $2,250.</p>
         <div class="hero-ctas">
-          <a href="/#contact" class="btn btn-p">Request a Free Preview <svg viewBox="0 0 14 10"><path d="M1 5h12m0 0L9 1m4 4L9 9"/></svg></a>
+          <a href="/#contact" class="btn btn-p">Get My Free Mockup <svg viewBox="0 0 14 10"><path d="M1 5h12m0 0L9 1m4 4L9 9"/></svg></a>
           <a href="/pricing" class="btn btn-s">See Pricing</a>
         </div>
       </div>
@@ -434,7 +435,7 @@
         <div class="card" data-r><div class="card-num">02</div><h3>Provider bios with credentials</h3><p>Each dentist and hygienist gets a clean bio with DDS/DMD credentials, residency, board certifications, CE focus, and a real headshot. Schema-tagged as Person/Physician.</p></div>
         <div class="card" data-r><div class="card-num">03</div><h3>Procedure pages</h3><p>Each major procedure (implants, Invisalign, veneers, root canal, etc.) gets its own page. We write what patients actually search: pain, cost, recovery, what to expect.</p></div>
         <div class="card" data-r><div class="card-num">04</div><h3>Insurance &amp; financing pages</h3><p>Clear insurance acceptance, financing options (CareCredit, LendingClub, in-house plans), membership program details. This is what new patients filter on.</p></div>
-        <div class="card" data-r><div class="card-num">05</div><h3>Reviews &amp; trust signals</h3><p>Google review pulls, before/after galleries, patient testimonials, awards, "as seen on" press logos. Schema-tagged as Review/AggregateRating where appropriate.</p></div>
+        <div class="card" data-r><div class="card-num">05</div><h3>Reviews &amp; trust signals</h3><p>Google review pulls, before/after galleries, patient testimonials, awards, "as seen on" press logos. Review signals are used carefully, with structured markup only where the source and page type make it appropriate.</p></div>
         <div class="card" data-r><div class="card-num">06</div><h3>Local + AI search SEO</h3><p>MedicalBusiness and Dentist schema, Google Business Profile optimization, Apple Maps, Bing Places, plus FAQ schema for ChatGPT/Perplexity/Google AI Overviews.</p></div>
         <div class="card" data-r><div class="card-num">07</div><h3>ADA accessibility (WCAG 2.2 AA)</h3><p>Color contrast, keyboard nav, screen reader semantics, focus states, form labels. Plus an accessibility statement page. Dental practices are a top ADA-complaint target — we build to reduce avoidable accessibility risk.</p></div>
         <div class="card" data-r><div class="card-num">08</div><h3>Mobile-first performance</h3><p>Hand-coded HTML/CSS. No WordPress, no DentalQore template. Strong mobile Core Web Vitals target. Built for fast mobile loads on 4G — which is how many patients book.</p></div>
@@ -495,7 +496,7 @@
         <h2>Ready to <em>get started?</em></h2>
         <p>Tell us about your practice. We&rsquo;ll put together a free custom homepage so you can see the direction before committing. No retainer. No pressure.</p>
         <div class="bcta-btns">
-          <a href="/#contact" class="bcta-p">Request a Free Preview</a>
+          <a href="/#contact" class="bcta-p">Get My Free Mockup</a>
           <a href="/pricing" class="bcta-s">See Pricing</a>
         </div>
       </div>
@@ -519,6 +520,12 @@
           <a href="/plumbing" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Plumbing</a>
           <a href="/landscaping" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Landscaping</a>
           <a href="/contractors" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Contractors</a>
+        <a href="/websites-for-contractors">Contractor Websites</a>
+        <a href="/websites-for-hvac-plumbing">HVAC & Plumbing Websites</a>
+        <a href="/websites-for-landscapers">Landscaper Websites</a>
+        <a href="/websites-for-dental-practices">Dental Practice Websites</a>
+        <a href="/websites-for-med-spas">Med Spa Websites</a>
+        <a href="/web-design-for-car-wash-companies">Car Wash Web Design</a>
           <a href="/consulting" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Consulting</a>
         </div>
       </div>
@@ -526,6 +533,7 @@
         <h3 style="font-family:var(--mono);font-size:0.7rem;color:oklch(60% 0.018 248);letter-spacing:0.02em;margin-bottom:0.85rem;font-weight:500;text-transform:uppercase">Locations</h3>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 1rem">
           <a href="/fort-worth" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Fort Worth</a>
+        <a href="/web-design-fort-worth">Web Design Fort Worth</a>
           <a href="/dallas" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Dallas</a>
           <a href="/arlington" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Arlington</a>
           <a href="/weatherford" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Weatherford</a>
