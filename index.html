@@ -603,6 +603,12 @@
       opacity:0;transform:translateY(10px);
       animation:fade-up 700ms var(--e-quart) 500ms forwards;
     }
+    .hero-cta-note{
+      margin-top:0.9rem;max-width:36rem;
+      font-size:0.92rem;line-height:1.55;color:var(--ink-soft);
+      opacity:0;transform:translateY(8px);
+      animation:fade-up 700ms var(--e-quart) 600ms forwards;
+    }
 
     .hero-meta{
       margin-top:2.25rem;padding-top:1.5rem;border-top:1px solid var(--line);
@@ -647,7 +653,7 @@
       animation:hvScroll 110s linear infinite alternate;
     }
 
-    /* ========== iMac mockup variant ========== */
+    /* ========== iMac device variant ========== */
     .hv-imac{
       position:relative;width:100%;line-height:0;
       filter:drop-shadow(0 28px 52px oklch(14% 0.01 260 / 0.18));
@@ -699,7 +705,7 @@
       .imac-site img{animation:none}
     }
 
-    /* ========== iPhone mockup variant ========== */
+    /* ========== iPhone device variant ========== */
     .hv-iphone{
       position:absolute;right:-6%;bottom:-10%;width:32%;line-height:0;
       transform:rotate(3deg);
@@ -713,7 +719,7 @@
     }
     .hv-iphone.left{right:auto;left:-3%;bottom:-7%;transform:rotate(-4deg)}
 
-    /* ========== MacBook Pro mockup variant ========== */
+    /* ========== MacBook Pro device variant ========== */
     .hv-macbook{
       position:relative;width:100%;line-height:0;
       filter:drop-shadow(0 26px 48px oklch(14% 0.01 260 / 0.18));
@@ -2549,7 +2555,7 @@
 
       <div class="nav-actions">
         <a href="/pay" class="nav-ghost">Client Portal</a>
-        <a href="#contact" class="nav-cta">Get My Free Mockup <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#contact" class="nav-cta">Request a Free Preview <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobMenu"><span></span></button>
       </div>
     </div>
@@ -2562,7 +2568,7 @@
     <a href="#process">Process <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="#faq">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="/pay">Client Portal <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <a href="#contact" class="mob-cta">Get My Free Mockup <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="#contact" class="mob-cta">Request a Free Preview <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 
   <!-- =========== CARD STACK: HERO → WEBSITES → CRM =========== -->
@@ -2596,9 +2602,10 @@
             <strong>TMN Creative is a Fort Worth web design studio</strong> building premium websites for serious operators that need to <em>create trust before the first conversation.</em> Your website is underselling your firm, not your work; then we build the intake systems, dashboards, and automations behind it.
           </p>
           <div class="hero-ctas">
-            <a href="#contact" class="btn btn-primary">Get My Free Mockup <svg class="btn-arrow" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            <a href="#pricing" class="btn btn-secondary">See Pricing</a>
+            <a href="#contact" class="btn btn-primary">Request a Free Preview <svg class="btn-arrow" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="https://calendly.com/tmn-book/review" target="_blank" rel="noopener" class="btn btn-secondary">Book a 15-Minute Call</a>
           </div>
+          <p class="hero-cta-note">We&rsquo;ll review your current site and send back a custom preview of what a sharper first impression could look like.</p>
           <div class="hero-meta">
             <div class="hero-meta-item"><div class="hero-meta-k">Credibility-first</div><div class="hero-meta-l">not template-led</div></div>
             <div class="hero-meta-item"><div class="hero-meta-k">Custom-built</div><div class="hero-meta-l">sites + CRMs</div></div>
@@ -2610,7 +2617,7 @@
           <div class="hv-imac">
             <picture>
               <source srcset="images/imac.webp?v=1" type="image/webp">
-              <img class="imac-frame" src="images/imac.png?v=6" alt="iMac website mockup frame" width="1000" height="821" aria-hidden="true" loading="eager" decoding="async" />
+              <img class="imac-frame" src="images/imac.png?v=6" alt="iMac website preview frame" width="1000" height="821" aria-hidden="true" loading="eager" decoding="async" />
             </picture>
             <div class="imac-screen">
               <picture class="imac-site">
@@ -2624,7 +2631,7 @@
           <div class="hv-iphone" aria-hidden="true">
             <picture>
               <source srcset="images/iphone.webp?v=1" type="image/webp">
-              <img class="iphone-frame" src="images/iphone.webp?v=1" alt="iPhone website mockup frame" width="500" height="1050" loading="eager" decoding="async" />
+              <img class="iphone-frame" src="images/iphone.webp?v=1" alt="iPhone website preview frame" width="500" height="1050" loading="eager" decoding="async" />
             </picture>
             <div class="iphone-screen">
               <picture>
@@ -2663,13 +2670,13 @@
           <div class="feat-li"><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>You own everything.</strong></span></div>
         </div>
         <div class="feat-cta">
-          <a href="#contact" class="btn btn-gold">Get My Free Mockup <svg class="btn-arrow" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#contact" class="btn btn-gold">Request a Free Preview <svg class="btn-arrow" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <a href="#work" class="btn btn-ghost">See recent work <svg class="btn-arrow" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
       <div class="feat-visual feat-stack" data-r data-r-delay style="--rd:100ms">
         <div class="hv-macbook">
-          <img class="macbook-frame" src="images/macbook.webp?v=1" alt="MacBook website mockup frame" width="1200" height="822" aria-hidden="true" loading="lazy" decoding="async" />
+          <img class="macbook-frame" src="images/macbook.webp?v=1" alt="MacBook website preview frame" width="1200" height="822" aria-hidden="true" loading="lazy" decoding="async" />
           <div class="macbook-screen">
             <picture class="macbook-site">
               <source media="(max-width:640px)" srcset="images/qca-m.jpg?v=2">
@@ -2678,7 +2685,7 @@
           </div>
         </div>
         <div class="hv-iphone left" aria-hidden="true">
-          <img class="iphone-frame" src="images/iphone.webp?v=1" alt="iPhone website mockup frame" width="500" height="1050" loading="lazy" decoding="async" />
+          <img class="iphone-frame" src="images/iphone.webp?v=1" alt="iPhone website preview frame" width="500" height="1050" loading="lazy" decoding="async" />
           <div class="iphone-screen">
             <img src="images/scl-metalworks-m.v20260503.webp" alt="SCL Metal Works, a mobile site by TMN Creative" width="540" height="15552" loading="lazy" decoding="async" />
           </div>
@@ -2701,7 +2708,7 @@
         </div>
         <div class="feat-cta">
           <a href="#contact" class="btn btn-primary">Get a Platform <svg class="btn-arrow" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <a href="#pricing" class="btn btn-ghost">See pricing <svg class="btn-arrow" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="https://calendly.com/tmn-book/review" target="_blank" rel="noopener" class="btn btn-ghost">Book a 15-Minute Call <svg class="btn-arrow" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
 
@@ -2915,7 +2922,7 @@
               <div class="pc-li"><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Local SEO and GBP setup</div>
               <div class="pc-li"><span class="chk"><svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>2-week timeline · founder-led</div>
             </div>
-            <a href="#contact" class="pc-cta">Book a Call</a>
+            <a href="#contact" class="pc-cta">Book a 15-Minute Call</a>
           </div>
         </div>
       </div>
@@ -3200,11 +3207,11 @@
     <div class="contact-inner">
       <div class="ct-copy">
         <div class="eye">Start Here</div>
-        <h2 class="nowrap-head">A free draft, <em>on us.</em></h2>
-        <p class="ct-lead">Send over your business and a link to your current site. We&rsquo;ll send back a custom homepage redesign within 48 hours.</p>
+        <h2 class="nowrap-head">Request a free <em>preview.</em></h2>
+        <p class="ct-lead">We&rsquo;ll review your current site and send back a custom preview of what a sharper first impression could look like.</p>
         <div class="ct-pts">
-          <div class="ct-pt"><svg viewBox="0 0 16 16"><polyline points="2.5,8 6.5,12 13.5,4" stroke-linecap="round" stroke-linejoin="round"/></svg>Custom homepage draft, free</div>
-          <div class="ct-pt"><svg viewBox="0 0 16 16"><polyline points="2.5,8 6.5,12 13.5,4" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to you in 48 hours</div>
+          <div class="ct-pt"><svg viewBox="0 0 16 16"><polyline points="2.5,8 6.5,12 13.5,4" stroke-linecap="round" stroke-linejoin="round"/></svg>Custom homepage preview, free</div>
+          <div class="ct-pt"><svg viewBox="0 0 16 16"><polyline points="2.5,8 6.5,12 13.5,4" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to you in 48 to 72 hours</div>
           <div class="ct-pt"><svg viewBox="0 0 16 16"><polyline points="2.5,8 6.5,12 13.5,4" stroke-linecap="round" stroke-linejoin="round"/></svg>No obligation to move forward</div>
         </div>
         <div class="ct-direct">
@@ -3275,7 +3282,7 @@
             <div class="consent-links"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
           </div>
 
-          <button type="submit" class="form-submit"><span>Send to the <em>studio</em></span> <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="submit" class="form-submit"><span>Request a <em>Free Preview</em></span> <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </form>
       </div>
     </div>
@@ -3382,7 +3389,7 @@
   </footer>
 
   <!-- Sticky mobile CTA -->
-  <div class="stk" id="stk"><a href="#contact">Get My Free Mockup</a></div>
+  <div class="stk" id="stk"><a href="#contact">Request a Free Preview</a></div>
 
   <!-- =========== SCRIPTS =========== -->
   <script>
