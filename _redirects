@@ -39,7 +39,13 @@
 /web-design-for-service-businesses.html /web-design-for-service-businesses 301!
 /web-design-fort-worth.html      /web-design-fort-worth 301!
 /website-redesign-services.html  /website-redesign-services 301!
+/wordpress-website-redesign.html /wordpress-website-redesign 301!
+/squarespace-website-redesign.html /squarespace-website-redesign 301!
+/wix-website-redesign.html       /wix-website-redesign 301!
 /websites-for-contractors.html   /websites-for-contractors 301!
+/websites-for-roofing-companies.html /websites-for-roofing-companies 301!
+/websites-for-electricians.html  /websites-for-electricians 301!
+/websites-for-accounting-firms.html /websites-for-accounting-firms 301!
 /websites-for-dental-practices.html /websites-for-dental-practices 301!
 /websites-for-hvac-plumbing.html /websites-for-hvac-plumbing 301!
 /websites-for-landscapers.html   /websites-for-landscapers 301!
@@ -72,6 +78,12 @@
 /mockup              /free-review   301
 /site-review         /free-review   301
 /audit               /free-review   301
+/wordpress-redesign  /wordpress-website-redesign 301
+/replace-wordpress   /wordpress-website-redesign 301
+/squarespace-redesign /squarespace-website-redesign 301
+/replace-squarespace /squarespace-website-redesign 301
+/wix-redesign        /wix-website-redesign 301
+/replace-wix         /wix-website-redesign 301
 
 # Common typos and alternate slugs
 /web-design   /    301
@@ -85,6 +97,12 @@
 # Alternate industry slug patterns
 /hvac-plumbing            /websites-for-hvac-plumbing    301
 /contractor-websites      /websites-for-contractors       301
+/roofing-websites         /websites-for-roofing-companies 301
+/roofer-websites          /websites-for-roofing-companies 301
+/electrician-websites     /websites-for-electricians      301
+/electrical-contractor-websites /websites-for-electricians 301
+/accounting-websites      /websites-for-accounting-firms  301
+/cpa-websites             /websites-for-accounting-firms  301
 /landscaper-websites      /websites-for-landscapers       301
 /dental-websites          /websites-for-dental-practices   301
 /law-firm-websites        /websites-for-law-firms          301

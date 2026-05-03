@@ -1177,6 +1177,79 @@
       .work-item,.work-item.sm{grid-column:span 12}
     }
 
+    /* =========== BUYER PATHS =========== */
+    .growth-hubs{
+      padding:var(--sec-y) var(--rail);
+      background:var(--bg);
+      border-top:1px solid var(--line);
+    }
+    .growth-hubs .sec-head{
+      max-width:760px;
+      margin:0 auto clamp(2rem,3.5vw,3rem);
+      text-align:center;
+    }
+    .growth-hubs .sec-head .eye{justify-content:center}
+    .growth-hubs .sec-head p{
+      color:var(--ink-mid);
+      line-height:1.65;
+      margin:0.85rem auto 0;
+      max-width:58ch;
+    }
+    .hub-grid{
+      max-width:1160px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1rem;
+    }
+    .hub-link{
+      min-height:170px;
+      padding:clamp(1.25rem,2vw,1.6rem);
+      border:1px solid var(--line);
+      border-radius:var(--r-md);
+      background:var(--bg-elev);
+      text-decoration:none;
+      color:var(--ink);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:1rem;
+      transition:transform 300ms var(--e-quart),border-color 300ms var(--e-quart),box-shadow 300ms var(--e-quart);
+    }
+    .hub-link:hover{
+      transform:translateY(-3px);
+      border-color:oklch(70% 0.107 85 / 0.5);
+      box-shadow:0 18px 36px oklch(18% 0.037 262 / 0.08);
+    }
+    .hub-k{
+      font-family:var(--mono);
+      font-size:0.68rem;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:var(--accent-deep);
+    }
+    .hub-link h3{
+      font-size:1.18rem;
+      letter-spacing:-0.02em;
+      margin-top:0.35rem;
+    }
+    .hub-link p{
+      color:var(--ink-mid);
+      font-size:0.9rem;
+      line-height:1.55;
+      margin-top:0.45rem;
+    }
+    .hub-arrow{
+      color:var(--ink-soft);
+      font-family:var(--mono);
+      font-size:0.7rem;
+      letter-spacing:0.03em;
+      text-transform:uppercase;
+    }
+    .hub-link:hover .hub-arrow{color:var(--accent-deep)}
+    @media(max-width:900px){.hub-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:620px){.hub-grid{grid-template-columns:1fr}.hub-link{min-height:0}}
+
     /* Portfolio stats strip */
     .port-stats{
       max-width:1040px;margin:clamp(3rem,5vw,4.5rem) auto 0;
@@ -2740,6 +2813,41 @@
     </div>
   </section>
 
+  <!-- =========== BUYER PATHS =========== -->
+  <section class="growth-hubs card" aria-labelledby="growth-hubs-title">
+    <div class="sec-head">
+      <div class="eye">Find The Right Build</div>
+      <h2 id="growth-hubs-title">Pages for buyers who are already <em>close to action.</em></h2>
+      <p>Some prospects search by platform problem. Others search by industry. These paths help them land on the page that matches the job they are trying to hire for.</p>
+    </div>
+    <div class="hub-grid">
+      <a class="hub-link" href="/wordpress-website-redesign">
+        <div><div class="hub-k">Platform Redesign</div><h3>WordPress Website Redesign</h3><p>For businesses stuck with plugin bloat, theme sameness, slow pages, or fragile editing workflows.</p></div>
+        <span class="hub-arrow">View page</span>
+      </a>
+      <a class="hub-link" href="/squarespace-website-redesign">
+        <div><div class="hub-k">Platform Redesign</div><h3>Squarespace Website Redesign</h3><p>For teams that outgrew the template and need a faster, more ownable marketing site.</p></div>
+        <span class="hub-arrow">View page</span>
+      </a>
+      <a class="hub-link" href="/wix-website-redesign">
+        <div><div class="hub-k">Platform Redesign</div><h3>Wix Website Redesign</h3><p>For businesses that need to leave the drag-and-drop builder without losing SEO continuity.</p></div>
+        <span class="hub-arrow">View page</span>
+      </a>
+      <a class="hub-link" href="/websites-for-roofing-companies">
+        <div><div class="hub-k">Trade Websites</div><h3>Websites for Roofing Companies</h3><p>Built for storm leads, emergency repairs, project galleries, financing, and service-area SEO.</p></div>
+        <span class="hub-arrow">View page</span>
+      </a>
+      <a class="hub-link" href="/websites-for-electricians">
+        <div><div class="hub-k">Trade Websites</div><h3>Websites for Electricians</h3><p>Emergency calls, commercial capability, panel upgrades, generator work, and clear quote paths.</p></div>
+        <span class="hub-arrow">View page</span>
+      </a>
+      <a class="hub-link" href="/websites-for-accounting-firms">
+        <div><div class="hub-k">Professional Firms</div><h3>Websites for Accounting Firms</h3><p>Trust-first sites for CPAs, tax firms, bookkeepers, advisory practices, and seasonal intake.</p></div>
+        <span class="hub-arrow">View page</span>
+      </a>
+    </div>
+  </section>
+
   <!-- =========== TESTIMONIALS (compact asymmetric grid) =========== -->
 
   <!-- =========== PRICING =========== -->
@@ -3208,19 +3316,22 @@
         <a href="/plumbing">Plumbing</a>
         <a href="/landscaping">Landscaping</a>
         <a href="/contractors">Contractors</a>
-        <a href="/websites-for-contractors">Contractor Websites</a>
+        <a href="/websites-for-contractors" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Contractor Websites</a>
+        <a href="/websites-for-roofing-companies" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Roofing Websites</a>
+        <a href="/websites-for-electricians" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Electrician Websites</a>
+        <a href="/websites-for-accounting-firms" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Accounting Firm Websites</a>
         <a href="/websites-for-hvac-plumbing">HVAC & Plumbing Websites</a>
-        <a href="/websites-for-landscapers">Landscaper Websites</a>
-        <a href="/websites-for-dental-practices">Dental Practice Websites</a>
-        <a href="/websites-for-med-spas">Med Spa Websites</a>
-        <a href="/web-design-for-car-wash-companies">Car Wash Web Design</a>
+        <a href="/websites-for-landscapers" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Landscaper Websites</a>
+        <a href="/websites-for-dental-practices" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Dental Practice Websites</a>
+        <a href="/websites-for-med-spas" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Med Spa Websites</a>
+        <a href="/web-design-for-car-wash-companies" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Car Wash Web Design</a>
         <a href="/consulting">Consulting</a>
         <a href="/small-business">Small Business</a>
       </div>
       <div class="foot-col">
         <h3>Locations</h3>
         <a href="/fort-worth">Fort Worth</a>
-        <a href="/web-design-fort-worth">Web Design Fort Worth</a>
+        <a href="/web-design-fort-worth" style="display:block;font-size:0.84rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)">Web Design Fort Worth</a>
         <a href="/weatherford">Weatherford</a>
         <a href="/arlington">Arlington</a>
         <a href="/dallas">Dallas</a>

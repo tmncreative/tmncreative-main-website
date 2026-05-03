@@ -45,6 +45,8 @@ TMN does not require long agency retainers for website projects. Clients own the
 - Healthcare practices, dental practices, med spas, therapy groups, optometry, chiropractic, physical therapy, functional medicine
 - Architecture firms, design studios, consultants, accountants
 - Contractors, home services, HVAC, plumbing, landscaping, roofing, remodeling
+- Electricians and electrical contractors
+- Accounting firms, CPAs, tax advisors, bookkeeping teams
 - Real estate brokerages, private capital firms, developers
 - Manufacturing, custom fabrication, B2B services
 
@@ -111,8 +113,14 @@ Search/topic:
 - /lead-generation-websites - lead-generation website strategy
 - /mobile-first-web-design - mobile-first website design
 - /website-redesign-services - website redesign services
+- /wordpress-website-redesign - WordPress website redesign and migration
+- /squarespace-website-redesign - Squarespace website redesign and custom rebuilds
+- /wix-website-redesign - Wix website redesign and custom rebuilds
 - /web-design-for-service-businesses - service business web design
 - /web-design-for-car-wash-companies - car wash web design
+- /websites-for-roofing-companies - roofing company website design
+- /websites-for-electricians - electrician and electrical contractor website design
+- /websites-for-accounting-firms - accounting firm, CPA, tax, and bookkeeping website design
 
 ## AI/search visibility notes
 
