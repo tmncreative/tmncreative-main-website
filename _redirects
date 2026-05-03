@@ -4,7 +4,6 @@
 # Studio page — v2 canonical URL
 /about                  /studio   301
 /about-us               /studio   301
-/web-design-fort-worth  /studio   301!
 /team                   /studio   301
 
 # Legacy care page variants
@@ -13,7 +12,7 @@
 /maintenance  /care    301
 
 # Legacy CRM / conversion offer redirects (GHL → Custom CRM pivot)
-/lead-generation-websites    /pricing#crm    301
+# NOTE: /lead-generation-websites is now a real SEO landing page — do NOT redirect it
 /conversion-system           /pricing#crm    301
 /inquiry-system              /pricing#crm    301
 /crm                         /pricing#crm    301
@@ -45,6 +44,9 @@
 # Alternate city slug patterns
 /fortworth       /fort-worth       301
 /dfw             /fort-worth       301
+/weatherford-tx  /weatherford      301
+/weatherford-web-design  /weatherford  301
+/web-design-weatherford  /weatherford  301
 /newyork         /new-york         301
 /nyc             /new-york         301
 /la              /los-angeles      301

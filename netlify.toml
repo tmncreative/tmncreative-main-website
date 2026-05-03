@@ -35,3 +35,10 @@
   for = "/robots.txt"
   [headers.values]
     Cache-Control = "public, max-age=3600"
+
+# llms.txt — AI search engine guide. Serve as text/plain so AI crawlers parse it.
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Content-Type = "text/plain; charset=utf-8"

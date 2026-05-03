@@ -3,13 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Selected Work · TMN Creative</title>
-  <meta name="description" content="Every site designed, built, and launched in-house. Real work for real firms, live right now." />
-  <meta property="og:title" content="Selected Work · TMN Creative" />
-  <meta property="og:description" content="Every site designed, built, and launched in-house. Real work for real firms, live right now." />
+  <title>Portfolio · Selected Web Design Work · TMN Creative · Fort Worth, TX</title>
+  <meta name="description" content="TMN Creative portfolio: 40+ premium hand-coded websites for RIAs, attorneys, healthcare practices, real estate, manufacturing, landscaping, and home services. Every site designed, built, and launched in-house by Trevor and Taylor Niemann. Live right now." />
+  <meta name="keywords" content="TMN Creative portfolio, web design portfolio, custom website portfolio, hand-coded websites, premium web design examples, Fort Worth web design portfolio, RIA website examples, healthcare website examples" />
+  <meta name="author" content="TMN Creative — Trevor Niemann and Taylor Niemann" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:title" content="Portfolio · Selected Web Design Work · TMN Creative" />
+  <meta property="og:description" content="40+ premium hand-coded websites for RIAs, attorneys, healthcare practices, and professional firms. Every site designed, built, and launched in-house. Live right now." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tmncreative.com/portfolio" />
   <meta property="og:image" content="https://tmncreative.com/images/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tmncreative.com/images/og.jpg" />
   <link rel="canonical" href="https://tmncreative.com/portfolio" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
@@ -20,7 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- LCP preloads -->
-  <link rel="preload" as="image" href="images/tmn.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="images/tmn-portfolio.jpg" fetchpriority="high" />
   <link rel="preload" as="image" href="images/logo-dark.png" fetchpriority="high" />
 
   <script type="application/ld+json">
@@ -113,13 +120,13 @@
 
     /* STATS */
     .stats{padding:2.5rem var(--rail);background:var(--ink);color:oklch(85% 0.014 245);border-bottom:1px solid var(--ink-2)}
-    .stats-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1rem,3vw,2rem);align-items:center}
-    .stat{display:flex;flex-direction:column;gap:0.35rem;text-align:center;position:relative}
+    .stats-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(1rem,3vw,2rem);align-items:center}
+    .stat{display:flex;flex-direction:column;gap:0.35rem;text-align:center;position:relative;min-width:0}
     .stat + .stat::before{content:'';position:absolute;left:calc(-1 * clamp(0.5rem, 1.5vw, 1rem));top:50%;transform:translateY(-50%);width:1px;height:60%;background:oklch(100% 0 0 / 0.08)}
     .stat-k{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,1.5vw + 1.2rem,2.75rem);color:var(--accent);letter-spacing:-0.02em;line-height:1;font-feature-settings:"lnum"}
     .stat-k .u{font-size:0.55em;color:oklch(75% 0.016 245);margin-left:0.08em}
     .stat-l{font-family:var(--mono);font-size:0.68rem;color:oklch(72% 0.016 245);letter-spacing:0.2em;text-transform:uppercase;font-weight:500}
-    @media(max-width:720px){.stats-inner{grid-template-columns:repeat(2,1fr);gap:1.75rem 1rem}.stat + .stat::before{display:none}}
+    @media(max-width:720px){.stats-inner{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.75rem 1rem}.stat + .stat::before{display:none}}
 
     main{flex:1}
 
@@ -140,7 +147,7 @@
     .work-item:hover{transform:translateY(-4px)}
     .work-img{aspect-ratio:16/10;border-radius:var(--r-md);overflow:hidden;background:var(--bg-alt);border:1px solid var(--line);position:relative}
     .work-item.feature .work-img{aspect-ratio:21/9}
-    .work-img img{width:100%;height:100%;object-fit:cover;transition:transform 700ms var(--e)}
+    .work-img img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform 700ms var(--e)}
     .work-item:hover .work-img img{transform:scale(1.025)}
     .work-img::before{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--accent);z-index:5;transform:scaleX(0);transform-origin:left;transition:transform 650ms var(--e)}
     .work-item:hover .work-img::before{transform:scaleX(1)}
@@ -215,6 +222,26 @@
     .scroll-prog{position:fixed;top:0;left:0;right:0;height:2px;z-index:200;background:linear-gradient(90deg,var(--accent-deep),var(--accent) 50%,var(--accent-2));transform:scaleX(var(--p,0));transform-origin:left;box-shadow:0 0 14px oklch(70% 0.107 85 / 0.35)}
     .cursor-light{position:fixed;top:0;left:0;width:480px;height:480px;pointer-events:none;z-index:0;background:radial-gradient(circle, oklch(70% 0.107 85 / 0.06), transparent 60%);transform:translate(calc(var(--cx,50vw) - 240px), calc(var(--cy,50vh) - 240px));transition:transform 350ms var(--e);will-change:transform;mix-blend-mode:multiply}
     .mag{transition:transform 300ms var(--e)}
+
+    @media(max-width:640px){
+      .nav-inner{gap:0.75rem}
+      .logo{gap:0.55rem;min-width:0}
+      .logo-mark{height:30px}
+      .nav-cta{display:none !important}
+      .hero{padding-top:calc(var(--nav-h) + 3rem)}
+      .hero h1{font-size:clamp(2.3rem,11vw,3rem);max-width:12ch;margin-inline:auto}
+      .hero .lead{font-size:1rem;max-width:30ch}
+      .stats{padding:2rem var(--rail)}
+      .stat-l{font-size:0.58rem;letter-spacing:0.1em;overflow-wrap:anywhere}
+      .gallery{padding-top:3.5rem}
+      .gallery-head{gap:1.25rem}
+      .gallery-head .hint{font-size:0.65rem;line-height:1.5}
+      .work-meta{flex-direction:column;gap:0.35rem}
+      .work-arrow{font-size:0.75rem;max-width:100%;overflow-wrap:anywhere}
+      .work-name{font-size:1rem}
+      .work-cat{font-size:0.68rem;line-height:1.45}
+      .cursor-light{display:none}
+    }
 
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}[data-r]{opacity:1;transform:none}}
   
@@ -358,7 +385,7 @@
     <section class="stats">
       <div class="stats-inner">
         <div class="stat"><div class="stat-k">40<span class="u">+</span></div><div class="stat-l">Sites shipped</div></div>
-        <div class="stat"><div class="stat-k">24<span class="u">h</span></div><div class="stat-l">First draft</div></div>
+        <div class="stat"><div class="stat-k">72<span class="u">h</span></div><div class="stat-l">First draft</div></div>
         <div class="stat"><div class="stat-k">0</div><div class="stat-l">Templates</div></div>
         <div class="stat"><div class="stat-k">100<span class="u">%</span></div><div class="stat-l">Custom code</div></div>
       </div>
@@ -377,7 +404,7 @@
 
         <div class="work-grid">
           <a href="https://truemarginnorth.com" target="_blank" rel="noopener" class="work-item feature" data-r>
-            <div class="work-img"><img src="images/tmn.jpg" alt="True Margin North" loading="lazy" width="1600" height="686" /></div>
+            <div class="work-img"><img src="images/tmn-portfolio.jpg" alt="True Margin North" loading="lazy" width="1100" height="471" /></div>
             <div class="work-meta">
               <div class="work-meta-main"><div class="work-name">True Margin North</div><div class="work-cat">Pricing Consultancy · Authority positioning</div></div>
               <div class="work-arrow">truemarginnorth.com →</div>
@@ -385,7 +412,7 @@
           </a>
 
           <a href="https://walnutventuresre.com" target="_blank" rel="noopener" class="work-item" data-r>
-            <div class="work-img"><img src="images/walnut-ventures.jpg" alt="Walnut Ventures" loading="lazy" width="1200" height="750" /></div>
+            <div class="work-img"><img src="images/walnut-ventures-portfolio.jpg" alt="Walnut Ventures" loading="lazy" width="1000" height="625" /></div>
             <div class="work-meta">
               <div class="work-meta-main"><div class="work-name">Walnut Ventures</div><div class="work-cat">Private Capital · SoCal · Real Estate</div></div>
               <div class="work-arrow">walnutventuresre.com →</div>
@@ -394,7 +421,7 @@
           <div class="work-item" data-r>
             <div class="work-img">
               <span class="work-nda"><svg viewBox="0 0 12 12"><rect x="2.5" y="5" width="7" height="5" rx="1"/><path d="M4 5V3.5a2 2 0 014 0V5"/></svg>Under NDA</span>
-              <img src="images/wealth-mgmt-fw.jpg" alt="Private wealth management, Fort Worth" loading="lazy" width="1200" height="750" />
+              <img src="images/wealth-mgmt-fw-portfolio.jpg" alt="Private wealth management, Fort Worth" loading="lazy" width="1800" height="1125" />
             </div>
             <div class="work-meta">
               <div class="work-meta-main"><div class="work-name">Private Wealth Management</div><div class="work-cat">Fiduciary · Fort Worth · Confidential</div></div>
@@ -403,7 +430,7 @@
           </div>
 
           <a href="https://sclmetalworks.com" target="_blank" rel="noopener" class="work-item feature" data-r>
-            <div class="work-img"><img src="images/scl-metalworks.jpg" alt="SCL Metal Works" loading="lazy" width="1600" height="686" /></div>
+            <div class="work-img"><img src="images/scl-metalworks-portfolio.jpg" alt="SCL Metal Works" loading="lazy" width="1000" height="429" /></div>
             <div class="work-meta">
               <div class="work-meta-main"><div class="work-name">SCL Metal Works</div><div class="work-cat">Custom iron doors · Interactive design studio</div></div>
               <div class="work-arrow">sclmetalworks.com →</div>
@@ -411,14 +438,14 @@
           </a>
 
           <a href="https://ramondesigngroup.com" target="_blank" rel="noopener" class="work-item" data-r>
-            <div class="work-img"><img src="images/rdg.jpg" alt="Ramon Design Group" loading="lazy" width="1200" height="750" /></div>
+            <div class="work-img"><img src="images/rdg-portfolio.jpg" alt="Ramon Design Group" loading="lazy" width="1000" height="625" /></div>
             <div class="work-meta">
               <div class="work-meta-main"><div class="work-name">Ramon Design Group</div><div class="work-cat">Architecture · Phoenix</div></div>
               <div class="work-arrow">ramondesigngroup.com →</div>
             </div>
           </a>
           <a href="https://qcatlantic.com" target="_blank" rel="noopener" class="work-item" data-r>
-            <div class="work-img"><img src="images/qca.jpg" alt="QC Atlantic" loading="lazy" width="1200" height="750" /></div>
+            <div class="work-img"><img src="images/qca-portfolio.jpg" alt="QC Atlantic" loading="lazy" width="1000" height="625" /></div>
             <div class="work-meta">
               <div class="work-meta-main"><div class="work-name">QC Atlantic</div><div class="work-cat">B2B · Industrial Chemistry</div></div>
               <div class="work-arrow">qcatlantic.com →</div>
@@ -462,7 +489,7 @@
           <p>No matter the price tier or the timeline, these four things are non-negotiable.</p>
         </div>
         <div class="standards-grid">
-          <div class="std-card" data-r><div class="std-num">01</div><h4>Hand-coded</h4><p>Every line of HTML and CSS is written by us. No page builders. No bloat. Your site loads in under a second on mobile.</p></div>
+          <div class="std-card" data-r><div class="std-num">01</div><h4>Hand-coded</h4><p>Every line of HTML and CSS is written by us. No page builders. No bloat. Your site is built to stay fast on mobile.</p></div>
           <div class="std-card" data-r><div class="std-num">02</div><h4>Conversion-first</h4><p>Every page is designed to answer a buyer's real question and move them toward a clear next step. Nothing decorative for decoration's sake.</p></div>
           <div class="std-card" data-r><div class="std-num">03</div><h4>SEO ready</h4><p>Schema markup, semantic HTML, sitemap, meta tags, Open Graph images. Everything Google needs, configured on day one.</p></div>
           <div class="std-card" data-r><div class="std-num">04</div><h4>You own it</h4><p>Code, copy, domain, hosting access. Everything transfers to you. No lock-in. No retainer required.</p></div>
