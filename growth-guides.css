@@ -89,7 +89,7 @@ h1 em,h2 em{font-family:var(--serif);font-style:italic;font-weight:390;color:var
 @media(max-width:900px){
   .nav-links,.nav-actions .btn-secondary{display:none}
   .hero-inner,.proof-strip,.cta-inner{grid-template-columns:1fr}
-  h1{font-size:clamp(3rem,15vw,5.2rem);max-width:9ch}
+  h1{font-size:clamp(3rem,12.5vw,4.45rem);line-height:.94;letter-spacing:-.05em;max-width:12.4ch}
   .grid,.comparison{grid-template-columns:1fr}
   .wide{grid-column:auto}
   .foot-inner{grid-template-columns:1fr 1fr}
@@ -99,6 +99,7 @@ h1 em,h2 em{font-family:var(--serif);font-style:italic;font-weight:390;color:var
   .logo span{font-size:.96rem}
   .nav-actions .btn-primary{padding:.72rem .85rem;font-size:.8rem}
   .hero{padding-top:3.4rem}
+  h1{font-size:clamp(2.95rem,12.8vw,3.85rem);line-height:.95;max-width:100%}
   .answer-panel,.card,.compare-col{border-radius:6px}
   .foot-inner{grid-template-columns:1fr}
 }
