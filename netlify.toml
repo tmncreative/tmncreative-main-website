@@ -27,7 +27,7 @@
 
 # Lightweight attribution helper — short cache so tracking changes propagate
 [[headers]]
-  for = "/tmn-attribution.js"
+  for = "/tmn-attribution*.js"
   [headers.values]
     Cache-Control = "public, max-age=3600"
     Content-Type = "application/javascript; charset=utf-8"

@@ -2,12 +2,53 @@
 # Old slug → new slug redirects (301 permanent)
 
 # Canonical clean URLs — prevent duplicate /page.html indexing
-/index.html        /          301
-/:slug.html        /:slug     301
+/arlington.html                  /arlington             301!
+/care.html                       /care                  301!
+/consulting.html                 /consulting            301!
+/contractors.html                /contractors           301!
+/dallas.html                     /dallas                301!
+/dental.html                     /dental                301!
+/financial-services.html         /financial-services    301!
+/fort-worth.html                 /fort-worth            301!
+/free-review.html                /free-review           301!
+/healthcare.html                 /healthcare            301!
+/home-services.html              /home-services         301!
+/hvac.html                       /hvac                  301!
+/index.html                      /                      301!
+/landscaping.html                /landscaping           301!
+/lead-generation-websites.html   /lead-generation-websites 301!
+/los-angeles.html                /los-angeles           301!
+/med-spa.html                    /med-spa               301!
+/mobile-first-web-design.html    /mobile-first-web-design 301!
+/new-york.html                   /new-york              301!
+/pay.html                        /pay                   301!
+/phoenix.html                    /phoenix               301!
+/plumbing.html                   /plumbing              301!
+/portfolio.html                  /portfolio             301!
+/pricing.html                    /pricing               301!
+/privacy.html                    /privacy               301!
+/real-estate.html                /real-estate           301!
+/scottsdale.html                 /scottsdale            301!
+/small-business.html             /small-business        301!
+/studio.html                     /studio                301!
+/success.html                    /success               301!
+/terms.html                      /terms                 301!
+/trevor.html                     /trevor                301!
+/weatherford.html                /weatherford           301!
+/web-design-for-car-wash-companies.html /web-design-for-car-wash-companies 301!
+/web-design-for-service-businesses.html /web-design-for-service-businesses 301!
+/web-design-fort-worth.html      /web-design-fort-worth 301!
+/website-redesign-services.html  /website-redesign-services 301!
+/websites-for-contractors.html   /websites-for-contractors 301!
+/websites-for-dental-practices.html /websites-for-dental-practices 301!
+/websites-for-hvac-plumbing.html /websites-for-hvac-plumbing 301!
+/websites-for-landscapers.html   /websites-for-landscapers 301!
+/websites-for-law-firms.html     /websites-for-law-firms 301!
+/websites-for-med-spas.html      /websites-for-med-spas 301!
 
 # Retired draft folder — keep old experimental studio page out of the index
-/new%20landing%20stuff/studio.html    /studio    301
-/new%20landing%20stuff/*              /studio    301
+/new%20landing%20stuff/studio.html    /studio    301!
+/new%20landing%20stuff/*              /studio    301!
 
 # Studio page — v2 canonical URL
 /about                  /studio   301
