@@ -91,14 +91,14 @@
     .mark-word{font-family:var(--serif);font-weight:400;font-size:1.15rem;letter-spacing:0.04em;color:var(--stone)}
 
     .nav-right{display:flex;align-items:center;gap:1rem}
-    .nav-meta{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--mono);font-size:0.66rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--stone-faint);font-weight:500}
+    .nav-meta{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--mono);font-size:0.66rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--stone-dim);font-weight:500}
     .nav-meta .dot{width:0.4rem;height:0.4rem;background:var(--gold);border-radius:50%;box-shadow:0 0 0 2px rgba(200,169,81,0.25);animation:pulse 2.4s var(--e) infinite}
     @keyframes pulse{0%,100%{box-shadow:0 0 0 2px rgba(200,169,81,0.25)}50%{box-shadow:0 0 0 6px rgba(200,169,81,0)}}
     @media(max-width:680px){.nav-meta{display:none}}
 
     .nav-back{
       display:inline-flex;align-items:center;gap:0.5rem;
-      font-family:var(--sans);font-size:0.72rem;letter-spacing:0.04em;color:var(--stone-faint);
+      font-family:var(--sans);font-size:0.72rem;letter-spacing:0.04em;color:var(--stone-dim);
       text-decoration:none;padding:0.5rem 0.85rem;border-radius:var(--r-sm);
       transition:color 200ms var(--e),background 200ms var(--e);
     }
@@ -201,7 +201,7 @@
     .card-foot{
       display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap;
       margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--stone-line);
-      font-family:var(--mono);font-size:0.68rem;letter-spacing:0.04em;color:var(--stone-faint);
+      font-family:var(--mono);font-size:0.68rem;letter-spacing:0.04em;color:var(--stone-dim);
     }
     .card-foot svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
     .card-foot .sep{color:var(--stone-hairline)}
@@ -264,8 +264,8 @@
       background:linear-gradient(90deg,transparent,var(--gold) 30%,var(--gold) 70%,transparent);
     }
     .portal-info{flex:1;min-width:240px}
-    .portal-info h4{font-family:var(--serif);font-weight:400;font-size:1.25rem;color:var(--stone);margin-bottom:0.3rem;letter-spacing:-0.015em}
-    .portal-info h4 em{font-style:italic;color:var(--gold)}
+    .portal-info h2{font-family:var(--serif);font-weight:400;font-size:1.25rem;color:var(--stone);margin-bottom:0.3rem;letter-spacing:-0.015em}
+    .portal-info h2 em{font-style:italic;color:var(--gold)}
     .portal-info p{font-family:var(--sans);font-size:0.9rem;color:var(--stone-dim);line-height:1.55;margin:0;max-width:42ch}
 
     .portal-btn{
@@ -367,7 +367,7 @@
     .foot-inner{
       max-width:1280px;margin:0 auto;
       display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;
-      font-family:var(--mono);font-size:0.68rem;letter-spacing:0.04em;color:var(--stone-faint);
+      font-family:var(--mono);font-size:0.68rem;letter-spacing:0.04em;color:var(--stone-dim);
     }
     .foot-l{display:inline-flex;align-items:center;gap:0.75rem}
     .foot-l img{height:26px;width:auto;opacity:0.7}
@@ -393,8 +393,8 @@
       box-shadow:0 0 20px rgba(200,169,81,0.4);
     }
     /* Hero headline per-word stagger */
-    .ph h1{overflow:hidden;display:inline-block}
-    .ph h1 .w{display:inline-block;overflow:hidden;line-height:0.98;padding-bottom:0.08em;margin-bottom:-0.02em}
+    .ph h1{overflow:visible;display:inline-block}
+    .ph h1 .w{display:inline-block;overflow:hidden;line-height:1.08;padding-bottom:0.14em;margin-bottom:-0.06em}
     .ph h1 .w > span{display:inline-block;transform:translateY(110%);animation:w-rise 900ms var(--e-quint) forwards}
     .ph h1 .w:nth-child(1) > span{animation-delay:120ms}
     .ph h1 .w:nth-child(2) > span{animation-delay:240ms}
@@ -446,6 +446,7 @@
       *,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}
       body::before,.orb{animation:none}
       .ph h1 .w > span{transform:none}
+      .ph h1 .w{overflow:visible}
       .inv-item{opacity:1;transform:none}
       .cursor-light{display:none}
     }
@@ -613,7 +614,7 @@
       <div class="state" id="state-results">
         <div class="portal-card" id="portal-card">
           <div class="portal-info">
-            <h4>Manage your <em>account.</em></h4>
+            <h2>Manage your <em>account.</em></h2>
             <p>Update payment method, view billing history, or change your subscription.</p>
           </div>
           <button class="portal-btn" id="portal-btn" type="button">

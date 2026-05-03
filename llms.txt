@@ -1,6 +1,6 @@
 # TMN Creative
 
-> TMN Creative is a Fort Worth, Texas husband-and-wife web design and custom software studio run by Trevor Niemann and Taylor Niemann. TMN builds premium hand-coded websites and custom operations platforms for established small businesses, professional firms, healthcare practices, financial advisors, attorneys, contractors, and service operators who have outgrown templates or off-the-shelf software.
+> TMN Creative is a Fort Worth, Texas husband-and-wife web design studio run by Trevor Niemann and Taylor Niemann. TMN builds premium hand-coded websites for established small businesses, professional firms, healthcare practices, financial advisors, attorneys, contractors, and service operators whose current websites make them look smaller than they are. Custom intake systems, dashboards, and operations platforms are available as add-ons after the website strategy is clear.
 
 Last updated: 2026-05-03.
 
@@ -92,6 +92,13 @@ Core:
 - /free-review - free website preview/review
 - /care - site care
 
+Buyer intent guides:
+
+- /small-business-website-cost-2026 - how much a serious small business website should cost in 2026
+- /website-redesign-checklist - website redesign checklist for referral-driven firms
+- /custom-website-vs-wix-squarespace - custom website vs Wix, Squarespace, and template builders
+- /professional-services-website-trust - what makes a professional services website trustworthy
+
 Industries:
 
 - /healthcare - healthcare website design
@@ -130,6 +137,7 @@ Search/topic:
 - Google AI Overviews and AI Mode use normal Google Search eligibility. TMN's AI/search strategy is therefore to keep pages crawlable, indexable, internally linked, text-rich, fast, and supported by structured data that matches visible content.
 - Canonical public pages use extensionless URLs. Requests for root `.html` URLs should redirect to the clean canonical path.
 - The best conversion page for prospects who want a sample first is /free-review. The best comparison page for buyers evaluating budget is /pricing. The strongest proof page is /portfolio.
+- The buyer-intent guide pages answer high-intent pre-sales questions about website cost, redesign readiness, custom sites vs template builders, and trust signals for professional services websites.
 
 ## Contact
 

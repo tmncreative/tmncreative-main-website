@@ -30,6 +30,7 @@
 /real-estate.html                /real-estate           301!
 /scottsdale.html                 /scottsdale            301!
 /small-business.html             /small-business        301!
+/small-business-website-cost-2026.html /small-business-website-cost-2026 301!
 /studio.html                     /studio                301!
 /success.html                    /success               301!
 /terms.html                      /terms                 301!
@@ -51,6 +52,9 @@
 /websites-for-landscapers.html   /websites-for-landscapers 301!
 /websites-for-law-firms.html     /websites-for-law-firms 301!
 /websites-for-med-spas.html      /websites-for-med-spas 301!
+/website-redesign-checklist.html /website-redesign-checklist 301!
+/custom-website-vs-wix-squarespace.html /custom-website-vs-wix-squarespace 301!
+/professional-services-website-trust.html /professional-services-website-trust 301!
 
 # Retired draft folder — keep old experimental studio page out of the index
 /new%20landing%20stuff/studio.html    /studio    301!
@@ -88,6 +92,13 @@
 /replace-squarespace /squarespace-website-redesign 301
 /wix-redesign        /wix-website-redesign 301
 /replace-wix         /wix-website-redesign 301
+/website-cost        /small-business-website-cost-2026 301
+/small-business-website-pricing /small-business-website-cost-2026 301
+/redesign-checklist  /website-redesign-checklist 301
+/custom-website-vs-wix /custom-website-vs-wix-squarespace 301
+/custom-website-vs-squarespace /custom-website-vs-wix-squarespace 301
+/trustworthy-professional-services-website /professional-services-website-trust 301
+/website-trust-signals /professional-services-website-trust 301
 
 # Common typos and alternate slugs
 /web-design   /    301

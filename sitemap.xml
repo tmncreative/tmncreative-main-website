@@ -56,6 +56,32 @@
     <priority>0.2</priority>
   </url>
 
+  <!-- Buyer intent guide pages -->
+  <url>
+    <loc>https://tmncreative.com/website-redesign-checklist</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://tmncreative.com/small-business-website-cost-2026</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tmncreative.com/custom-website-vs-wix-squarespace</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
+    <loc>https://tmncreative.com/professional-services-website-trust</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+  </url>
+
   <!-- Location pages -->
   <url>
     <loc>https://tmncreative.com/fort-worth</loc>

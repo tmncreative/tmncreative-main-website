@@ -52,10 +52,10 @@
     :root{
       --bg:oklch(99% 0.004 240);--bg-alt:oklch(97% 0.006 240);--bg-elev:oklch(100% 0 0);
       --ink:oklch(18% 0.037 262);--ink-2:oklch(26% 0.035 260);--ink-mid:oklch(42% 0.028 256);
-      --ink-soft:oklch(56% 0.022 250);--ink-faint:oklch(70% 0.016 245);
+      --ink-soft:oklch(48% 0.025 250);--ink-faint:oklch(70% 0.016 245);
       --line:oklch(91% 0.012 248);--line-soft:oklch(94% 0.008 248);
       --accent:oklch(70% 0.107 85);--accent-2:oklch(75% 0.118 87);
-      --accent-soft:oklch(95% 0.042 88);--accent-deep:oklch(60% 0.105 80);
+      --accent-soft:oklch(95% 0.042 88);--accent-deep:oklch(50% 0.105 80);
       --sans:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
       --mono:'Geist Mono',ui-monospace,Menlo,monospace;
       --serif:var(--serif);
@@ -77,8 +77,8 @@
     h3{font-size:1.3rem;font-weight:600;letter-spacing:-0.02em}
     h1 em,h2 em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--accent-deep);letter-spacing:-0.02em}
 
-    .eye{font-family:var(--mono);font-size:0.72rem;font-weight:500;color:var(--accent);display:inline-flex;align-items:center;gap:0.5rem}
-    .eye::before{content:'';width:0.4rem;height:0.4rem;background:var(--accent);border-radius:50%}
+    .eye{font-family:var(--mono);font-size:0.72rem;font-weight:600;color:var(--accent-deep);display:inline-flex;align-items:center;gap:0.5rem}
+    .eye::before{content:'';width:0.4rem;height:0.4rem;background:var(--accent-deep);border-radius:50%}
 
     .nav{position:fixed;top:0;left:0;right:0;z-index:80;height:var(--nav-h);display:flex;align-items:center;padding:0 var(--rail);background:oklch(99% 0.004 240 / 0.72);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid transparent;transition:background 300ms var(--e),border-color 300ms var(--e)}
     .nav.scrolled{background:oklch(99% 0.004 240 / 0.9);border-bottom-color:var(--line)}
@@ -177,7 +177,7 @@
     .std-card:hover::before{transform:scaleX(1)}
     .std-card:hover{transform:translateY(-3px);box-shadow:0 20px 40px oklch(18% 0.037 262 / 0.06)}
     .std-num{font-family:var(--mono);font-size:0.7rem;color:var(--ink-soft);font-weight:500;letter-spacing:0.02em}
-    .std-card h4{font-size:1rem;font-weight:600;letter-spacing:-0.015em}
+    .std-card h3{font-size:1rem;font-weight:600;letter-spacing:-0.015em}
     .std-card p{font-size:0.88rem;color:var(--ink-mid);line-height:1.55;margin:0}
     @media(max-width:900px){.standards-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:520px){.standards-grid{grid-template-columns:1fr}}
@@ -205,7 +205,7 @@
     .foot-col h3{font-family:var(--mono);font-size:0.7rem;color:oklch(60% 0.018 248);letter-spacing:0.02em;margin-bottom:0.85rem;font-weight:500;text-transform:uppercase}
     .foot-col a{display:block;font-size:0.88rem;color:oklch(72% 0.016 245);text-decoration:none;padding:0.2rem 0;transition:color 200ms var(--e)}
     .foot-col a:hover{color:var(--accent)}
-    .foot-bar{max-width:1240px;margin:0 auto;padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:0.72rem;color:oklch(56% 0.018 248)}
+    .foot-bar{max-width:1240px;margin:0 auto;padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:0.72rem;color:oklch(65% 0.018 248)}
     .foot-bar a{color:inherit;text-decoration:none}
     .foot-bar a:hover{color:var(--accent)}
     @media(max-width:640px){
@@ -213,7 +213,7 @@
       .foot-bar a{justify-content:center;display:inline-flex}
     }
     @media(max-width:960px){.foot-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:520px){.foot-grid{grid-template-columns:1fr}}
+    @media(max-width:520px){.foot-grid{grid-template-columns:1fr 1fr;gap:1.2rem}.foot-brand{grid-column:1/-1;max-width:none}.foot-col a{font-size:0.84rem;line-height:1.45}}
 
     [data-r]{opacity:0;transform:translateY(16px);transition:opacity 800ms var(--e),transform 800ms var(--e)}
     [data-r].in{opacity:1;transform:translateY(0)}
@@ -358,19 +358,19 @@
       </div>
       <div class="nav-actions">
         <a href="/pay" class="nav-ghost">Client Portal</a>
-        <a href="/#contact" class="nav-cta">Request a Free Preview <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="/free-review" class="nav-cta">Request a Free Preview <svg viewBox="0 0 12 8" fill="none"><path d="M1 4h10m0 0L7 1m4 3L7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span></button>
       </div>
     </div>
   </nav>
-  <div class="mob-menu" id="mobMenu">
+  <div class="mob-menu" id="mobMenu" role="navigation" aria-label="Mobile menu">
     <a href="/portfolio">Work</a>
     <a href="/#services">Services</a>
     <a href="/pricing">Pricing</a>
     <a href="/studio">Studio</a>
     <a href="/#faq">FAQ</a>
     <a href="/pay">Client Portal</a>
-    <a href="/#contact" class="mob-cta">Request a Free Preview</a>
+    <a href="/free-review" class="mob-cta">Request a Free Preview</a>
   </div>
 
   <main>
@@ -490,10 +490,10 @@
           <p>No matter the price tier or the timeline, these four things are non-negotiable.</p>
         </div>
         <div class="standards-grid">
-          <div class="std-card" data-r><div class="std-num">01</div><h4>Hand-coded</h4><p>Every line of HTML and CSS is written by us. No page builders. No bloat. Your site is built to stay fast on mobile.</p></div>
-          <div class="std-card" data-r><div class="std-num">02</div><h4>Conversion-first</h4><p>Every page is designed to answer a buyer's real question and move them toward a clear next step. Nothing decorative for decoration's sake.</p></div>
-          <div class="std-card" data-r><div class="std-num">03</div><h4>SEO ready</h4><p>Schema markup, semantic HTML, sitemap, meta tags, Open Graph images. Everything Google needs, configured on day one.</p></div>
-          <div class="std-card" data-r><div class="std-num">04</div><h4>You own it</h4><p>Code, copy, domain, hosting access. Everything transfers to you. No lock-in. No retainer required.</p></div>
+          <div class="std-card" data-r><div class="std-num">01</div><h3>Hand-coded</h3><p>Every line of HTML and CSS is written by us. No page builders. No bloat. Your site is built to stay fast on mobile.</p></div>
+          <div class="std-card" data-r><div class="std-num">02</div><h3>Conversion-first</h3><p>Every page is designed to answer a buyer's real question and move them toward a clear next step. Nothing decorative for decoration's sake.</p></div>
+          <div class="std-card" data-r><div class="std-num">03</div><h3>SEO ready</h3><p>Schema markup, semantic HTML, sitemap, meta tags, Open Graph images. Everything Google needs, configured on day one.</p></div>
+          <div class="std-card" data-r><div class="std-num">04</div><h3>You own it</h3><p>Code, copy, domain, hosting access. Everything transfers to you. No lock-in. No retainer required.</p></div>
         </div>
       </div>
     </section>
@@ -503,7 +503,7 @@
         <h2>Ready to see your site <em>in this lineup?</em></h2>
         <p>Get a free custom redesign so you can see the direction before committing.</p>
         <div class="bcta-btns">
-          <a href="/#contact" class="bcta-p">Request a Free Preview</a>
+          <a href="/free-review" class="bcta-p">Request a Free Preview</a>
           <a href="https://calendly.com/tmn-book/review" target="_blank" rel="noopener" class="bcta-s">Book a 15-Minute Call</a>
         </div>
       </div>
@@ -517,8 +517,8 @@
         <a href="/" class="foot-logo"><img src="images/logo-dark.png" alt="TMN Creative" class="logo-mark" width="70" height="40" /><span>Creative</span></a>
         <p>Premium websites, custom operations platforms, and site care. Husband-and-wife studio · Fort Worth, Texas.</p>
       </div>
-      <div class="foot-col"><h3>Services</h3><a href="/pricing">Pricing</a><a href="/portfolio">Portfolio</a><a href="/pricing#crm">Custom CRM</a><a href="/care">Site Care</a></div>
-      <div class="foot-col"><h3>Studio</h3><a href="/">Home</a><a href="/studio">About</a><a href="/pay">Client Portal</a><a href="/free-review">Free Review</a></div>
+      <div class="foot-col"><h3>Services</h3><a href="/pricing">Pricing</a><a href="/portfolio">Portfolio</a><a href="/pricing#crm">CRM Add-Ons</a><a href="/care">Site Care</a></div>
+      <div class="foot-col"><h3>Studio</h3><a href="/">Home</a><a href="/studio">About</a><a href="/pay">Client Portal</a><a href="/free-review">Free Preview</a></div>
       <div class="foot-col"><h3>Legal</h3><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
       <div class="foot-col"><h3>Contact</h3><a href="mailto:hello@tmncreative.com">hello@tmncreative.com</a><a href="tel:6822313202">(682) 231-3202</a></div>
     </div>
