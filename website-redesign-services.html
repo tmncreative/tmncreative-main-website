@@ -168,7 +168,7 @@
     .card:hover::before{transform:scaleX(1)}
     .card:hover{border-color:var(--ink-faint);transform:translateY(-3px);box-shadow:0 20px 40px oklch(18% 0.037 262 / 0.06)}
     .card-num{font-family:var(--mono);font-size:0.7rem;color:var(--ink-soft);font-weight:500;letter-spacing:0.02em}
-    .card h4{font-size:1.1rem;font-weight:600;letter-spacing:-0.015em}
+    .card h3,.card h4{font-size:1.1rem;font-weight:600;letter-spacing:-0.015em}
     .card p{font-size:0.92rem;color:var(--ink-mid);line-height:1.6;margin:0}
     @media(max-width:900px){.cards{grid-template-columns:1fr;max-width:540px}}
 
@@ -387,9 +387,9 @@
         <p>Every site is hand-coded, conversion-focused, and built around your actual business. No templates. No retainers. No lock-in.</p>
       </div>
       <div class="cards">
-        <div class="card" data-r><div class="card-num">01</div><h4>Hand-coded</h4><p>Every line of HTML and CSS is written by us. No page builders. No bloat. Lean mobile performance.</p></div>
-        <div class="card" data-r><div class="card-num">02</div><h4>Conversion-first</h4><p>Every page is designed to answer a buyer's real question and move them toward a clear next step.</p></div>
-        <div class="card" data-r><div class="card-num">03</div><h4>You own it</h4><p>Code, copy, domain, hosting access. Everything transfers to you. No retainer required.</p></div>
+        <div class="card" data-r><div class="card-num">01</div><h3>Hand-coded</h3><p>Every line of HTML and CSS is written by us. No page builders. No bloat. Lean mobile performance.</p></div>
+        <div class="card" data-r><div class="card-num">02</div><h3>Conversion-first</h3><p>Every page is designed to answer a buyer's real question and move them toward a clear next step.</p></div>
+        <div class="card" data-r><div class="card-num">03</div><h3>You own it</h3><p>Code, copy, domain, hosting access. Everything transfers to you. No retainer required.</p></div>
       </div>
     </section>
 
@@ -402,15 +402,15 @@
       <div class="work-preview">
         <div class="work-grid">
           <a href="https://truemarginnorth.com" target="_blank" rel="noopener" class="work-item" data-r>
-            <div class="work-img"><img src="images/tmn.jpg" alt="True Margin North" loading="lazy" /></div>
+            <div class="work-img"><img src="images/tmn.jpg" alt="True Margin North pricing consultancy website by TMN Creative" loading="lazy" /></div>
             <div class="work-meta"><div><div class="work-name">True Margin North</div><div class="work-cat">Pricing Consultancy</div></div><div class="work-arrow">View →</div></div>
           </a>
           <a href="https://walnutventuresre.com" target="_blank" rel="noopener" class="work-item" data-r>
-            <div class="work-img"><img src="images/walnut-ventures.jpg" alt="Walnut Ventures" loading="lazy" /></div>
+            <div class="work-img"><img src="images/walnut-ventures.jpg" alt="Walnut Ventures private capital firm website by TMN Creative" loading="lazy" /></div>
             <div class="work-meta"><div><div class="work-name">Walnut Ventures</div><div class="work-cat">Private Capital · SoCal</div></div><div class="work-arrow">View →</div></div>
           </a>
           <a href="https://sclmetalworks.com" target="_blank" rel="noopener" class="work-item" data-r>
-            <div class="work-img"><img src="images/scl-metalworks.jpg" alt="SCL Metal Works" loading="lazy" /></div>
+            <div class="work-img"><img src="images/scl-metalworks.jpg" alt="SCL Metal Works custom iron doors website by TMN Creative" loading="lazy" /></div>
             <div class="work-meta"><div><div class="work-name">SCL Metal Works</div><div class="work-cat">Custom iron doors</div></div><div class="work-arrow">View →</div></div>
           </a>
         </div>
@@ -425,15 +425,15 @@
         <p>Most agencies treat a redesign like a green-field project. We treat it like surgery — preserve what is working, fix what is broken, and never disrupt your traffic or SEO.</p>
       </div>
       <div class="cards" style="grid-template-columns:repeat(3,1fr);gap:1rem;max-width:1240px;margin:0 auto">
-        <div class="card" data-r><div class="card-num">01</div><h4>Site &amp; SEO audit</h4><p>We crawl your existing site, document every URL that ranks, identify Core Web Vitals failures, and map content blocks worth preserving versus rewriting from scratch.</p></div>
-        <div class="card" data-r><div class="card-num">02</div><h4>Strategy &amp; positioning</h4><p>What is your site supposed to do? What is the primary conversion? Who is the buyer? Most redesigns fail because the strategy was never updated, only the visuals.</p></div>
-        <div class="card" data-r><div class="card-num">03</div><h4>Brand refresh (optional)</h4><p>Many redesigns include a brand evolution: new color system, refined typography, updated photography direction, polished logo lockup. Done in parallel with the rebuild.</p></div>
-        <div class="card" data-r><div class="card-num">04</div><h4>Hand-coded rebuild</h4><p>We rebuild your site as clean hand-coded HTML/CSS. No WordPress, no Wix, no Webflow. Fast mobile load target, strong Lighthouse target, healthy Core Web Vitals.</p></div>
-        <div class="card" data-r><div class="card-num">05</div><h4>301 redirect mapping</h4><p>Every URL on your existing site maps to a new URL on the rebuilt site. 301 redirects fire at the server level. No ranking drops. No broken links. No SEO surprises.</p></div>
-        <div class="card" data-r><div class="card-num">06</div><h4>Schema &amp; metadata</h4><p>Every page gets fresh schema (LocalBusiness, Organization, Service, FAQPage, Article). Every meta title, description, and Open Graph tag rebuilt for AI search optimization.</p></div>
-        <div class="card" data-r><div class="card-num">07</div><h4>Content migration</h4><p>Blog posts, case studies, team bios, location pages — all migrated cleanly. Long content gets reformatted with proper headings, semantic HTML, and reading-friendly typography.</p></div>
-        <div class="card" data-r><div class="card-num">08</div><h4>Launch &amp; monitor</h4><p>DNS cutover, redirect verification, Search Console resubmission, sitemap regeneration. We monitor rankings and Core Web Vitals for 30 days post-launch.</p></div>
-        <div class="card" data-r><div class="card-num">09</div><h4>Ownership transfer</h4><p>Code, copy, design files, domain, hosting access — yours on day one. No proprietary CMS lock-in. If you ever leave, you take the site.</p></div>
+        <div class="card" data-r><div class="card-num">01</div><h3>Site &amp; SEO audit</h3><p>We crawl your existing site, document every URL that ranks, identify Core Web Vitals failures, and map content blocks worth preserving versus rewriting from scratch.</p></div>
+        <div class="card" data-r><div class="card-num">02</div><h3>Strategy &amp; positioning</h3><p>What is your site supposed to do? What is the primary conversion? Who is the buyer? Most redesigns fail because the strategy was never updated, only the visuals.</p></div>
+        <div class="card" data-r><div class="card-num">03</div><h3>Brand refresh (optional)</h3><p>Many redesigns include a brand evolution: new color system, refined typography, updated photography direction, polished logo lockup. Done in parallel with the rebuild.</p></div>
+        <div class="card" data-r><div class="card-num">04</div><h3>Hand-coded rebuild</h3><p>We rebuild your site as clean hand-coded HTML/CSS. No WordPress, no Wix, no Webflow. Fast mobile load target, strong Lighthouse target, healthy Core Web Vitals.</p></div>
+        <div class="card" data-r><div class="card-num">05</div><h3>301 redirect mapping</h3><p>Every URL on your existing site maps to a new URL on the rebuilt site. 301 redirects fire at the server level. No ranking drops. No broken links. No SEO surprises.</p></div>
+        <div class="card" data-r><div class="card-num">06</div><h3>Schema &amp; metadata</h3><p>Every page gets fresh schema (LocalBusiness, Organization, Service, FAQPage, Article). Every meta title, description, and Open Graph tag rebuilt for AI search optimization.</p></div>
+        <div class="card" data-r><div class="card-num">07</div><h3>Content migration</h3><p>Blog posts, case studies, team bios, location pages — all migrated cleanly. Long content gets reformatted with proper headings, semantic HTML, and reading-friendly typography.</p></div>
+        <div class="card" data-r><div class="card-num">08</div><h3>Launch &amp; monitor</h3><p>DNS cutover, redirect verification, Search Console resubmission, sitemap regeneration. We monitor rankings and Core Web Vitals for 30 days post-launch.</p></div>
+        <div class="card" data-r><div class="card-num">09</div><h3>Ownership transfer</h3><p>Code, copy, design files, domain, hosting access — yours on day one. No proprietary CMS lock-in. If you ever leave, you take the site.</p></div>
       </div>
     </section>
 
@@ -444,15 +444,15 @@
         <p>We replatform from every major builder. Same content, three to five times the speed, full code ownership, zero monthly subscription lock-in.</p>
       </div>
       <div class="cards" style="grid-template-columns:repeat(3,1fr);gap:1rem;max-width:1240px;margin:0 auto">
-        <div class="card" data-r><div class="card-num">01</div><h4>WordPress → Hand-coded</h4><p>Our most common replatform. Export via WP REST API or WPXML, rebuild as static HTML/CSS, preserve permalink structure, keep schema and SEO continuity intact.</p></div>
-        <div class="card" data-r><div class="card-num">02</div><h4>Wix → Hand-coded</h4><p>Wix has limited export. We scrape your existing content, restructure, and rebuild from scratch. 301 redirects from Wix URLs. Escape monthly Wix subscription entirely.</p></div>
-        <div class="card" data-r><div class="card-num">03</div><h4>Squarespace → Hand-coded</h4><p>Squarespace ships heavy JavaScript that drags down Core Web Vitals. We rebuild as lean hand-coded HTML/CSS. Typically 60 to 80 percent faster on mobile.</p></div>
-        <div class="card" data-r><div class="card-num">04</div><h4>Webflow → Hand-coded</h4><p>Webflow exports HTML/CSS but the export is bloated. We rebuild from scratch using your Webflow site as visual reference. Free yourself from Webflow hosting.</p></div>
-        <div class="card" data-r><div class="card-num">05</div><h4>GoDaddy / Weebly → Hand-coded</h4><p>GoDaddy and Weebly sites are templated and slow. We rebuild as hand-coded with proper SEO foundation, Core Web Vitals tuning, and full code ownership.</p></div>
-        <div class="card" data-r><div class="card-num">06</div><h4>Real Geeks / kvCORE → Hand-coded</h4><p>Real estate platforms with limited customization. We rebuild the marketing site hand-coded while keeping IDX, MLS feeds, and CRM connections intact.</p></div>
-        <div class="card" data-r><div class="card-num">07</div><h4>HubSpot CMS → Hand-coded</h4><p>HubSpot CMS is expensive and inflexible. We rebuild as hand-coded while keeping HubSpot CRM, forms, and marketing automation wired up.</p></div>
-        <div class="card" data-r><div class="card-num">08</div><h4>Old custom CMS → Hand-coded</h4><p>Legacy custom-built sites or proprietary CMS implementations. We document, scrape, and rebuild as modern hand-coded HTML/CSS with proper SEO and accessibility.</p></div>
-        <div class="card" data-r><div class="card-num">09</div><h4>Shopify (storefront only)</h4><p>Shopify is great for checkout but the marketing storefront often drags down speed and SEO. We can rebuild marketing pages hand-coded while keeping Shopify cart and checkout.</p></div>
+        <div class="card" data-r><div class="card-num">01</div><h3>WordPress → Hand-coded</h3><p>Our most common replatform. Export via WP REST API or WPXML, rebuild as static HTML/CSS, preserve permalink structure, keep schema and SEO continuity intact.</p></div>
+        <div class="card" data-r><div class="card-num">02</div><h3>Wix → Hand-coded</h3><p>Wix has limited export. We scrape your existing content, restructure, and rebuild from scratch. 301 redirects from Wix URLs. Escape monthly Wix subscription entirely.</p></div>
+        <div class="card" data-r><div class="card-num">03</div><h3>Squarespace → Hand-coded</h3><p>Squarespace ships heavy JavaScript that drags down Core Web Vitals. We rebuild as lean hand-coded HTML/CSS. Typically 60 to 80 percent faster on mobile.</p></div>
+        <div class="card" data-r><div class="card-num">04</div><h3>Webflow → Hand-coded</h3><p>Webflow exports HTML/CSS but the export is bloated. We rebuild from scratch using your Webflow site as visual reference. Free yourself from Webflow hosting.</p></div>
+        <div class="card" data-r><div class="card-num">05</div><h3>GoDaddy / Weebly → Hand-coded</h3><p>GoDaddy and Weebly sites are templated and slow. We rebuild as hand-coded with proper SEO foundation, Core Web Vitals tuning, and full code ownership.</p></div>
+        <div class="card" data-r><div class="card-num">06</div><h3>Real Geeks / kvCORE → Hand-coded</h3><p>Real estate platforms with limited customization. We rebuild the marketing site hand-coded while keeping IDX, MLS feeds, and CRM connections intact.</p></div>
+        <div class="card" data-r><div class="card-num">07</div><h3>HubSpot CMS → Hand-coded</h3><p>HubSpot CMS is expensive and inflexible. We rebuild as hand-coded while keeping HubSpot CRM, forms, and marketing automation wired up.</p></div>
+        <div class="card" data-r><div class="card-num">08</div><h3>Old custom CMS → Hand-coded</h3><p>Legacy custom-built sites or proprietary CMS implementations. We document, scrape, and rebuild as modern hand-coded HTML/CSS with proper SEO and accessibility.</p></div>
+        <div class="card" data-r><div class="card-num">09</div><h3>Shopify (storefront only)</h3><p>Shopify is great for checkout but the marketing storefront often drags down speed and SEO. We can rebuild marketing pages hand-coded while keeping Shopify cart and checkout.</p></div>
       </div>
     </section>
 
@@ -463,9 +463,9 @@
         <p>Three tiers. Every tier includes 301 redirect mapping, schema rebuild, SEO continuity, and full code ownership.</p>
       </div>
       <div class="cards" style="grid-template-columns:repeat(3,1fr);gap:1rem;max-width:1240px;margin:0 auto">
-        <div class="card" data-r><div class="card-num">$2,250</div><h4>Starter Refresh</h4><p>Single-page homepage redesign. Hero rework, hierarchy fix, mobile optimization, Core Web Vitals tuning. Live within a week. Best for businesses that need a quick lift.</p></div>
-        <div class="card" data-r><div class="card-num">$3,750</div><h4>Full Site Rebuild</h4><p>Multi-page redesign and replatforming with full content migration, 301 redirect mapping, schema rebuild, and SEO continuity. Best for established sites with traffic.</p></div>
-        <div class="card" data-r><div class="card-num">$5,000+</div><h4>Custom Studio Build</h4><p>Larger sites with complex content, e-commerce, multi-location, or membership functionality. Custom strategy, dedicated founder engagement.</p></div>
+        <div class="card" data-r><div class="card-num">$2,250</div><h3>Starter Refresh</h3><p>Single-page homepage redesign. Hero rework, hierarchy fix, mobile optimization, Core Web Vitals tuning. Live within a week. Best for businesses that need a quick lift.</p></div>
+        <div class="card" data-r><div class="card-num">$3,750</div><h3>Full Site Rebuild</h3><p>Multi-page redesign and replatforming with full content migration, 301 redirect mapping, schema rebuild, and SEO continuity. Best for established sites with traffic.</p></div>
+        <div class="card" data-r><div class="card-num">$5,000+</div><h3>Custom Studio Build</h3><p>Larger sites with complex content, e-commerce, multi-location, or membership functionality. Custom strategy, dedicated founder engagement.</p></div>
       </div>
       <div style="text-align:center;margin-top:2rem"><a href="/pricing" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.92rem;font-weight:500;color:var(--ink);text-decoration:none;padding:0.7rem 1.2rem;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--bg-elev);transition:all 250ms var(--e)">See full pricing &amp; site care plans <svg viewBox="0 0 14 10" fill="none" width="14" height="10"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </section>
