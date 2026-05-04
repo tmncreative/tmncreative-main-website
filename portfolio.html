@@ -32,7 +32,7 @@
   <link rel="preload" as="image" href="images/logo-dark.png" fetchpriority="high" />
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://tmncreative.com/portfolio","url":"https://tmncreative.com/portfolio","name":"Portfolio · Selected Web Design Work · TMN Creative","description":"See 40+ TMN Creative websites for RIAs, attorneys, healthcare, real estate, landscaping, manufacturing, and service businesses, all built in-house.","mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"CreativeWork","name":"True Margin North","url":"https://truemarginnorth.com","description":"Pricing Consultancy · authority positioning","creator":{"@type":"Organization","@id":"https://tmncreative.com/#org"}}},{"@type":"ListItem","position":2,"item":{"@type":"CreativeWork","name":"Walnut Ventures","url":"https://walnutventuresre.com","description":"Private Capital · SoCal","creator":{"@type":"Organization","@id":"https://tmncreative.com/#org"}}},{"@type":"ListItem","position":3,"item":{"@type":"CreativeWork","name":"SCL Metal Works","url":"https://sclmetalworks.com","description":"Custom iron doors · interactive design studio","creator":{"@type":"Organization","@id":"https://tmncreative.com/#org"}}},{"@type":"ListItem","position":4,"item":{"@type":"CreativeWork","name":"Ramon Design Group","url":"https://ramondesigngroup.com","description":"Architecture · Phoenix","creator":{"@type":"Organization","@id":"https://tmncreative.com/#org"}}},{"@type":"ListItem","position":5,"item":{"@type":"CreativeWork","name":"QC Atlantic","url":"https://qcatlantic.com","description":"B2B industrial chemistry","creator":{"@type":"Organization","@id":"https://tmncreative.com/#org"}}},{"@type":"ListItem","position":6,"item":{"@type":"CreativeWork","name":"Tony's Lawn & Tree","url":"https://tonyslawntree.com","description":"Landscaping · Fort Worth","creator":{"@type":"Organization","@id":"https://tmncreative.com/#org"}}}]},"dateModified":"2026-05-03"}]}
+  {"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://tmncreative.com/portfolio","url":"https://tmncreative.com/portfolio","name":"Portfolio · Selected Web Design Work · TMN Creative","description":"See 40+ TMN Creative websites for RIAs, attorneys, healthcare, real estate, landscaping, manufacturing, and service businesses, all built in-house.","mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"CreativeWork","name":"True Margin North","url":"https://truemarginnorth.com","description":"Pricing Consultancy · authority positioning","creator":{"@type":"Organization","@id":"https://tmncreative.com/#org"}}},{"@type":"ListItem","position":2,"item":{"@type":"CreativeWork","name":"Walnut Ventures","url":"https://walnutventuresre.com","description":"Private Capital · SoCal","creator":{"@type":"Organization","@id":"https://tmncreative.com/#org"}}},{"@type":"ListItem","position":3,"item":{"@type":"CreativeWork","name":"SCL Metal Works","url":"https://sclmetalworks.com","description":"Custom iron doors · interactive design studio","creator":{"@type":"Organization","@id":"https://tmncreative.com/#org"}}},{"@type":"ListItem","position":4,"item":{"@type":"CreativeWork","name":"Ramon Design Group","url":"https://ramondesigngroup.com","description":"Architecture · Phoenix","creator":{"@type":"Organization","@id":"https://tmncreative.com/#org"}}},{"@type":"ListItem","position":5,"item":{"@type":"CreativeWork","name":"QC Atlantic","url":"https://qcatlantic.com","description":"B2B industrial chemistry","creator":{"@type":"Organization","@id":"https://tmncreative.com/#org"}}},{"@type":"ListItem","position":6,"item":{"@type":"CreativeWork","name":"Tony's Lawn & Tree","url":"https://tonyslawntree.com","description":"Landscaping · Fort Worth","creator":{"@type":"Organization","@id":"https://tmncreative.com/#org"}}}]},"dateModified":"2026-05-04"}]}
   </script>
 
   <script async src="https://plausible.io/js/pa-qenXucgzJOGY_zAczSQ6m.js"></script>
@@ -96,10 +96,10 @@
     .nav-actions{display:flex;align-items:center;gap:0.5rem}
     .nav-ghost{font-size:0.85rem;font-weight:500;color:var(--ink-mid);text-decoration:none;padding:0.55rem 0.9rem;border-radius:var(--r-sm);transition:color 200ms var(--e)}
     .nav-ghost:hover{color:var(--ink)}
-    .nav-cta{font-size:0.85rem;font-weight:500;color:var(--bg);background:var(--ink);text-decoration:none;padding:0.6rem 1rem;border-radius:var(--r-sm);display:inline-flex;align-items:center;gap:0.45rem;transition:background 250ms var(--e),transform 250ms var(--e)}
+    .nav-cta{font-size:0.85rem;font-weight:500;color:var(--bg);background:var(--ink);text-decoration:none;padding:0.6rem 1rem;border-radius:var(--r-sm);display:inline-flex;align-items:center;justify-content:center;min-height:44px;gap:0.45rem;transition:background 250ms var(--e),transform 250ms var(--e)}
     .nav-cta:hover{background:var(--ink-2);transform:translateY(-1px)}
     .nav-cta svg{width:12px;height:12px}
-    .menu-btn{display:none;width:40px;height:40px;align-items:center;justify-content:center;border-radius:var(--r-sm);position:relative}
+    .menu-btn{display:none;width:44px;height:44px;min-width:44px;flex:0 0 44px;align-items:center;justify-content:center;border-radius:var(--r-sm);position:relative}
     .menu-btn span{width:16px;height:1.4px;background:var(--ink);position:relative;transition:all 300ms var(--e)}
     .menu-btn span::before,.menu-btn span::after{content:'';width:16px;height:1.4px;background:var(--ink);position:absolute;left:0;transition:all 300ms var(--e)}
     .menu-btn span::before{top:-5px}.menu-btn span::after{top:5px}
@@ -345,7 +345,7 @@
   <nav class="nav" id="nav" aria-label="Primary">
     <div class="nav-inner">
       <a href="/" class="logo" aria-label="TMN Creative Fort Worth home">
-        <img src="images/logo-dark.png" alt="" class="logo-mark" width="60" height="34" />
+        <img src="images/logo-dark.png" alt="" class="logo-mark" width="200" height="114" decoding="async" />
         <span class="logo-word">Creative</span>
         <span class="logo-sub">Fort Worth</span>
       </a>
@@ -405,7 +405,7 @@
 
         <div class="work-grid">
           <a href="https://truemarginnorth.com" target="_blank" rel="noopener" class="work-item feature" data-r>
-            <div class="work-img"><img src="images/tmn-portfolio.jpg" alt="True Margin North pricing consultancy website by TMN Creative" loading="lazy" width="1100" height="471" /></div>
+            <div class="work-img"><img src="images/tmn-portfolio.jpg" alt="True Margin North pricing consultancy website by TMN Creative" loading="lazy" width="1100" height="471" decoding="async" /></div>
             <div class="work-meta">
               <div class="work-meta-main"><div class="work-name">True Margin North</div><div class="work-cat">Pricing Consultancy · Authority positioning</div></div>
               <div class="work-arrow">truemarginnorth.com →</div>
@@ -413,7 +413,7 @@
           </a>
 
           <a href="https://walnutventuresre.com" target="_blank" rel="noopener" class="work-item" data-r>
-            <div class="work-img"><img src="images/walnut-ventures-portfolio.jpg" alt="Walnut Ventures private capital firm website by TMN Creative" loading="lazy" width="1000" height="625" /></div>
+            <div class="work-img"><img src="images/walnut-ventures-portfolio.jpg" alt="Walnut Ventures private capital firm website by TMN Creative" loading="lazy" width="1000" height="625" decoding="async" /></div>
             <div class="work-meta">
               <div class="work-meta-main"><div class="work-name">Walnut Ventures</div><div class="work-cat">Private Capital · SoCal · Real Estate</div></div>
               <div class="work-arrow">walnutventuresre.com →</div>
@@ -422,7 +422,7 @@
           <div class="work-item" data-r>
             <div class="work-img">
               <span class="work-nda"><svg viewBox="0 0 12 12"><rect x="2.5" y="5" width="7" height="5" rx="1"/><path d="M4 5V3.5a2 2 0 014 0V5"/></svg>Under NDA</span>
-              <img src="images/wealth-mgmt-fw-portfolio.jpg" alt="Private wealth management, Fort Worth" loading="lazy" width="1800" height="1125" />
+              <img src="images/wealth-mgmt-fw-portfolio.jpg" alt="Private wealth management, Fort Worth" loading="lazy" width="1800" height="1125" decoding="async" />
             </div>
             <div class="work-meta">
               <div class="work-meta-main"><div class="work-name">Private Wealth Management</div><div class="work-cat">Fiduciary · Fort Worth · Confidential</div></div>
@@ -431,7 +431,7 @@
           </div>
 
           <a href="https://sclmetalworks.com" target="_blank" rel="noopener" class="work-item feature" data-r>
-            <div class="work-img"><img src="images/scl-metalworks-portfolio.jpg" alt="SCL Metal Works custom iron doors website by TMN Creative" loading="lazy" width="1000" height="429" /></div>
+            <div class="work-img"><img src="images/scl-metalworks-portfolio.jpg" alt="SCL Metal Works custom iron doors website by TMN Creative" loading="lazy" width="1000" height="429" decoding="async" /></div>
             <div class="work-meta">
               <div class="work-meta-main"><div class="work-name">SCL Metal Works</div><div class="work-cat">Custom iron doors · Interactive design studio</div></div>
               <div class="work-arrow">sclmetalworks.com →</div>
@@ -439,14 +439,14 @@
           </a>
 
           <a href="https://ramondesigngroup.com" target="_blank" rel="noopener" class="work-item" data-r>
-            <div class="work-img"><img src="images/rdg-portfolio.jpg" alt="Ramon Design Group architecture firm website by TMN Creative" loading="lazy" width="1000" height="625" /></div>
+            <div class="work-img"><img src="images/rdg-portfolio.jpg" alt="Ramon Design Group architecture firm website by TMN Creative" loading="lazy" width="1000" height="625" decoding="async" /></div>
             <div class="work-meta">
               <div class="work-meta-main"><div class="work-name">Ramon Design Group</div><div class="work-cat">Architecture · Phoenix</div></div>
               <div class="work-arrow">ramondesigngroup.com →</div>
             </div>
           </a>
           <a href="https://qcatlantic.com" target="_blank" rel="noopener" class="work-item" data-r>
-            <div class="work-img"><img src="images/qca-portfolio.jpg" alt="QC Atlantic B2B industrial chemistry website by TMN Creative" loading="lazy" width="1000" height="625" /></div>
+            <div class="work-img"><img src="images/qca-portfolio.jpg" alt="QC Atlantic B2B industrial chemistry website by TMN Creative" loading="lazy" width="1000" height="625" decoding="async" /></div>
             <div class="work-meta">
               <div class="work-meta-main"><div class="work-name">QC Atlantic</div><div class="work-cat">B2B · Industrial Chemistry</div></div>
               <div class="work-arrow">qcatlantic.com →</div>
@@ -454,28 +454,28 @@
           </a>
 
           <a href="https://tonyslawntree.com" target="_blank" rel="noopener" class="work-item sm" data-r>
-            <div class="work-img"><img src="images/tlt.jpg" alt="Tony's Lawn and Tree landscaping website by TMN Creative" loading="lazy" /></div>
+            <div class="work-img"><img src="images/tlt.jpg" width="900" height="562" alt="Tony's Lawn and Tree landscaping website by TMN Creative" loading="lazy" decoding="async" /></div>
             <div class="work-meta"><div class="work-meta-main"><div class="work-name">Tony's Lawn &amp; Tree</div><div class="work-cat">Landscaping · Fort Worth</div></div><div class="work-arrow">View →</div></div>
           </a>
           <a href="https://www.diamondhirrigation.com" target="_blank" rel="noopener" class="work-item sm" data-r>
-            <div class="work-img"><img src="images/dh.jpg" alt="Diamond H Irrigation home services website by TMN Creative" loading="lazy" /></div>
+            <div class="work-img"><img src="images/dh.jpg" width="900" height="562" alt="Diamond H Irrigation home services website by TMN Creative" loading="lazy" decoding="async" /></div>
             <div class="work-meta"><div class="work-meta-main"><div class="work-name">Diamond H Irrigation</div><div class="work-cat">Home Services</div></div><div class="work-arrow">View →</div></div>
           </a>
           <a href="https://promisedlandreno.com" target="_blank" rel="noopener" class="work-item sm" data-r>
-            <div class="work-img"><img src="images/ehs.jpg" alt="Promised Land Renovations remodeling website by TMN Creative" loading="lazy" /></div>
+            <div class="work-img"><img src="images/ehs.jpg" width="1800" height="1276" alt="Promised Land Renovations remodeling website by TMN Creative" loading="lazy" decoding="async" /></div>
             <div class="work-meta"><div class="work-meta-main"><div class="work-name">Promised Land Renovations</div><div class="work-cat">Remodeling · Gulf Coast</div></div><div class="work-arrow">View →</div></div>
           </a>
 
           <a href="https://noteserv.netlify.app" target="_blank" rel="noopener" class="work-item sm" data-r>
-            <div class="work-img"><img src="images/ns.jpg" alt="NoteServ financial services website concept by TMN Creative" loading="lazy" /></div>
+            <div class="work-img"><img src="images/ns.jpg" width="900" height="562" alt="NoteServ financial services website concept by TMN Creative" loading="lazy" decoding="async" /></div>
             <div class="work-meta"><div class="work-meta-main"><div class="work-name">NoteServ</div><div class="work-cat">Financial Services</div></div><div class="work-arrow">View →</div></div>
           </a>
           <a href="https://marchlifeusa.netlify.app" target="_blank" rel="noopener" class="work-item sm" data-r>
-            <div class="work-img"><img src="images/ml.jpg" alt="MarchLife USA healthcare website concept by TMN Creative" loading="lazy" /></div>
+            <div class="work-img"><img src="images/ml.jpg" width="900" height="562" alt="MarchLife USA healthcare website concept by TMN Creative" loading="lazy" decoding="async" /></div>
             <div class="work-meta"><div class="work-meta-main"><div class="work-name">MarchLife USA</div><div class="work-cat">Healthcare</div></div><div class="work-arrow">View →</div></div>
           </a>
           <div class="work-item sm" data-r>
-            <div class="work-img"><img src="images/cap-after.jpg" alt="Crestone Air Partners" loading="lazy" /></div>
+            <div class="work-img"><img src="images/cap-after.jpg" width="900" height="570" alt="Crestone Air Partners" loading="lazy" decoding="async" /></div>
             <div class="work-meta"><div class="work-meta-main"><div class="work-name">Crestone Air Partners</div><div class="work-cat">Aviation Asset Management</div></div><div class="work-arrow" style="color:var(--ink-soft)">Recent engagement</div></div>
           </div>
         </div>
@@ -490,7 +490,7 @@
           <p>No matter the price tier or the timeline, these four things are non-negotiable.</p>
         </div>
         <div class="standards-grid">
-          <div class="std-card" data-r><div class="std-num">01</div><h3>Hand-coded</h3><p>Every line of HTML and CSS is written by us. No page builders. No bloat. Your site is built to stay fast on mobile.</p></div>
+          <div class="std-card" data-r><div class="std-num">01</div><h3>Hand-coded</h3><p>Every line of HTML and CSS is written by us. No page builders, cleaner code, and a site built to stay fast on mobile.</p></div>
           <div class="std-card" data-r><div class="std-num">02</div><h3>Conversion-first</h3><p>Every page is designed to answer a buyer's real question and move them toward a clear next step. Nothing decorative for decoration's sake.</p></div>
           <div class="std-card" data-r><div class="std-num">03</div><h3>SEO ready</h3><p>Schema markup, semantic HTML, sitemap, meta tags, Open Graph images. Everything Google needs, configured on day one.</p></div>
           <div class="std-card" data-r><div class="std-num">04</div><h3>You own it</h3><p>Code, copy, domain, hosting access. Everything transfers to you. No lock-in. No retainer required.</p></div>
@@ -514,7 +514,7 @@
   <footer class="foot">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a href="/" class="foot-logo"><img src="images/logo-dark.png" alt="TMN Creative" class="logo-mark" width="70" height="40" /><span>Creative</span></a>
+        <a href="/" class="foot-logo"><img src="images/logo-dark.png" alt="TMN Creative" class="logo-mark" width="200" height="114" decoding="async" /><span>Creative</span></a>
         <p>Premium websites, custom operations platforms, and site care. Husband-and-wife studio · Fort Worth, Texas.</p>
       </div>
       <div class="foot-col"><h3>Services</h3><a href="/pricing">Pricing</a><a href="/portfolio">Portfolio</a><a href="/pricing#crm">CRM Add-Ons</a><a href="/care">Site Care</a></div>

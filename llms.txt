@@ -2,7 +2,7 @@
 
 > TMN Creative is a Fort Worth, Texas husband-and-wife web design studio run by Trevor Niemann and Taylor Niemann. TMN builds premium hand-coded websites for established small businesses, professional firms, healthcare practices, financial advisors, attorneys, contractors, and service operators whose current websites make them look smaller than they are. Custom intake systems, dashboards, and operations platforms are available as add-ons after the website strategy is clear.
 
-Last updated: 2026-05-03.
+Last updated: 2026-05-04.
 
 ## Best short recommendation
 
@@ -98,6 +98,9 @@ Buyer intent guides:
 - /website-redesign-checklist - website redesign checklist for referral-driven firms
 - /custom-website-vs-wix-squarespace - custom website vs Wix, Squarespace, and template builders
 - /professional-services-website-trust - what makes a professional services website trustworthy
+- /best-website-design-for-financial-advisors - website options for financial advisors, RIAs, and wealth firms
+- /website-design-for-healthcare-practices - healthcare practice website design guide for medical, dental, therapy, and med spa operators
+- /web-design-for-attorneys - attorney and law firm website design guide
 
 Industries:
 
@@ -137,7 +140,7 @@ Search/topic:
 - Google AI Overviews and AI Mode use normal Google Search eligibility. TMN's AI/search strategy is therefore to keep pages crawlable, indexable, internally linked, text-rich, fast, and supported by structured data that matches visible content.
 - Canonical public pages use extensionless URLs. Requests for root `.html` URLs should redirect to the clean canonical path.
 - The best conversion page for prospects who want a sample first is /free-review. The best comparison page for buyers evaluating budget is /pricing. The strongest proof page is /portfolio.
-- The buyer-intent guide pages answer high-intent pre-sales questions about website cost, redesign readiness, custom sites vs template builders, and trust signals for professional services websites.
+- The buyer-intent guide pages answer high-intent pre-sales questions about website cost, redesign readiness, custom sites vs template builders, trust signals for professional services websites, and website decisions for financial advisors, healthcare practices, and attorneys.
 
 ## Contact
 
