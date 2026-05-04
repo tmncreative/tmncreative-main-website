@@ -183,7 +183,7 @@
     .tab-bar-wrap{background:var(--bg);padding:1.5rem var(--rail) 0.5rem;position:sticky;top:var(--nav-h);z-index:20;display:flex;justify-content:center;border-bottom:1px solid transparent;transition:border-color 300ms var(--e-quart),padding 300ms var(--e-quart),background 300ms var(--e-quart)}
     .tab-bar-wrap.pinned{background:oklch(99% 0.004 240 / 0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom-color:var(--line);padding-top:0.85rem;padding-bottom:0.85rem}
     .tab-bar{display:inline-flex;background:var(--bg-elev);border:1px solid var(--line);border-radius:100px;padding:0.3rem;gap:0.25rem;box-shadow:0 1px 2px oklch(18% 0.037 262 / 0.04)}
-    .tab{font-family:var(--sans);font-size:0.88rem;font-weight:500;color:var(--ink-mid);padding:0.6rem 1.2rem;border-radius:100px;cursor:pointer;transition:all 300ms var(--e-quart);border:none;background:transparent;user-select:none}
+    .tab{font-family:var(--sans);font-size:0.88rem;font-weight:500;color:var(--ink-mid);padding:0.6rem 1.2rem;border-radius:100px;cursor:pointer;transition:all 300ms var(--e-quart);border:none;background:transparent;user-select:none;white-space:nowrap}
     .tab:hover{color:var(--ink)}
     .tab.active{background:var(--ink);color:var(--bg);box-shadow:0 4px 12px oklch(18% 0.037 262 / 0.2)}
     @media(max-width:520px){.tab{padding:0.5rem 0.85rem;font-size:0.8rem}}
@@ -331,6 +331,29 @@
 
     .cmp-note{text-align:center;font-family:var(--mono);font-size:0.72rem;color:var(--ink-soft);margin-top:1.25rem;letter-spacing:0.02em}
 
+    /* Mobile package comparison — clearer than collapsing a desktop table */
+    .mobile-compare{display:none}
+    .mplan{--scope:50%;background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--r-lg);padding:1.05rem;box-shadow:0 8px 28px oklch(18% 0.037 262 / 0.05)}
+    .mplan-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:0.75rem}
+    .mplan-k{display:block;font-family:var(--mono);font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin-bottom:0.32rem}
+    .mplan h3{font-size:1.14rem;line-height:1.16;margin:0;color:var(--ink)}
+    .mplan-price{font-family:var(--sans);font-size:1.02rem;font-weight:650;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums;letter-spacing:-0.02em}
+    .mplan-copy{font-size:0.92rem;line-height:1.5;color:var(--ink-mid);margin:0.85rem 0 0}
+    .mplan-meter{height:0.5rem;background:var(--line-soft);border-radius:100px;overflow:hidden;position:relative}
+    .mplan-meter span{display:block;width:var(--scope);height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--accent-deep),var(--accent))}
+    .mplan-dl{display:grid;grid-template-columns:1fr 1fr;gap:0.55rem;margin:1rem 0 0;padding-top:0.9rem;border-top:1px solid var(--line-soft)}
+    .mplan-dl div{min-width:0}
+    .mplan-dl dt{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin-bottom:0.18rem}
+    .mplan-dl dd{font-size:0.86rem;line-height:1.35;color:var(--ink);font-weight:550;margin:0}
+    .mplan.featured{background:linear-gradient(180deg,var(--ink),oklch(13% 0.01 260));border-color:oklch(70% 0.107 85 / 0.42);box-shadow:0 18px 48px oklch(18% 0.037 262 / 0.18)}
+    .mplan.featured h3,.mplan.featured .mplan-price,.mplan.featured .mplan-dl dd{color:var(--bg)}
+    .mplan.featured .mplan-k,.mplan.featured .mplan-copy,.mplan.featured .mplan-dl dt{color:oklch(78% 0.014 245)}
+    .mplan.featured .mplan-meter{background:oklch(100% 0 0 / 0.12)}
+    .mplan.featured .mplan-dl{border-top-color:oklch(100% 0 0 / 0.12)}
+    .mcompare-close{display:grid;gap:0.8rem;align-items:center;margin-top:0.95rem;padding:1rem;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--bg-alt)}
+    .mcompare-close p{font-size:0.9rem;line-height:1.5;color:var(--ink-mid);margin:0}
+    .mcompare-cta{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:var(--r-sm);background:var(--ink);color:var(--bg);font-weight:650;text-decoration:none;font-size:0.92rem}
+
     /* Comparison tables on mobile — convert to stacked cards, no horizontal scroll */
     @media(max-width:760px){
       .tw{overflow:visible;padding:0;border:none;background:transparent;box-shadow:none}
@@ -373,6 +396,14 @@
       .t tr.cta-r td::before{display:none}
       .t tr.cta-r td:first-child{display:none}
       .tcta{width:100%;text-align:center;padding:0.9rem;font-size:0.88rem;border-radius:var(--r-sm)}
+      .website-cmp .tw{display:none}
+      .website-cmp .sh{text-align:left;margin-bottom:1.1rem}
+      .website-cmp .sh p{margin-left:0}
+      .mobile-compare{display:grid;gap:0.75rem}
+    }
+    @media(max-width:380px){
+      .tab-bar{padding:0.24rem;gap:0.18rem}
+      .tab{font-size:0.74rem;padding:0.5rem 0.62rem}
     }
 
     /* AD HOC */
@@ -868,8 +899,56 @@
 
     <p class="cards-note r">Optional website support plans from $39/mo. <a href="#care" data-sec="care">Learn more →</a></p>
 
-    <div class="cmp r">
+    <div class="cmp website-cmp r">
       <div class="sh"><h2>Side by <em>side.</em></h2><p>See exactly what each package includes.</p></div>
+      <div class="mobile-compare" aria-label="Website package comparison">
+        <article class="mplan" style="--scope:38%">
+          <div class="mplan-top">
+            <div><span class="mplan-k">Starter</span><h3>Starter Refresh</h3></div>
+            <div class="mplan-price">From $2,250</div>
+          </div>
+          <div class="mplan-meter" aria-hidden="true"><span></span></div>
+          <p class="mplan-copy">Best when the business is solid and the homepage is the main credibility problem.</p>
+          <dl class="mplan-dl">
+            <div><dt>Draft</dt><dd>72 hours</dd></div>
+            <div><dt>Scope</dt><dd>Homepage</dd></div>
+            <div><dt>SEO</dt><dd>Basics</dd></div>
+            <div><dt>Strategy</dt><dd>Focused</dd></div>
+          </dl>
+        </article>
+        <article class="mplan featured" style="--scope:72%">
+          <div class="mplan-top">
+            <div><span class="mplan-k">Common Choice</span><h3>Full Site Rebuild</h3></div>
+            <div class="mplan-price">From $3,750</div>
+          </div>
+          <div class="mplan-meter" aria-hidden="true"><span></span></div>
+          <p class="mplan-copy">Best when you need clearer messaging, service pages, proof, SEO foundations, and a stronger buyer path.</p>
+          <dl class="mplan-dl">
+            <div><dt>Draft</dt><dd>72 hours</dd></div>
+            <div><dt>Scope</dt><dd>Multi-page</dd></div>
+            <div><dt>SEO</dt><dd>Included</dd></div>
+            <div><dt>Strategy</dt><dd>Advanced</dd></div>
+          </dl>
+        </article>
+        <article class="mplan" style="--scope:100%">
+          <div class="mplan-top">
+            <div><span class="mplan-k">Custom</span><h3>Custom Studio Build</h3></div>
+            <div class="mplan-price">From $5,000</div>
+          </div>
+          <div class="mplan-meter" aria-hidden="true"><span></span></div>
+          <p class="mplan-copy">Best for credential-heavy firms, regulated industries, multi-location teams, and premium positioning.</p>
+          <dl class="mplan-dl">
+            <div><dt>Draft</dt><dd>7-10 days</dd></div>
+            <div><dt>Scope</dt><dd>Custom</dd></div>
+            <div><dt>SEO</dt><dd>Deep</dd></div>
+            <div><dt>Strategy</dt><dd>Founder-led</dd></div>
+          </dl>
+        </article>
+        <div class="mcompare-close">
+          <p>Not sure which one fits? Send the current site and we will point you toward the smallest build that actually solves the problem.</p>
+          <a href="/free-review" class="mcompare-cta">Request a Free Preview</a>
+        </div>
+      </div>
       <div class="tw"><table class="t">
         <thead><tr><th>Feature</th><th>Starter</th><th class="hi">Full Rebuild</th><th>Custom Studio</th></tr></thead>
         <tbody>
