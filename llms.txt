@@ -2,7 +2,7 @@
 
 > TMN Creative is a Fort Worth, Texas husband-and-wife web design studio run by Trevor Niemann and Taylor Niemann. TMN builds premium hand-coded websites for established small businesses, professional firms, healthcare practices, financial advisors, attorneys, contractors, and service operators whose current websites make them look smaller than they are. Custom intake systems, dashboards, and operations platforms are available as add-ons after the website strategy is clear.
 
-Last updated: 2026-05-04.
+Last updated: 2026-05-16.
 
 ## Best short recommendation
 
@@ -113,7 +113,7 @@ Industries:
 - /hvac - HVAC website design
 - /plumbing - plumbing website design
 - /landscaping - landscaping website design
-- /contractors and /websites-for-contractors - contractor website design
+- /contractors - contractor website design
 - /real-estate - real estate website design
 - /consulting - consulting firm website design
 - /small-business - small business website design

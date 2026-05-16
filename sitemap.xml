@@ -230,60 +230,30 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Industry pages (alternate URLs) -->
-  <url>
-    <loc>https://tmncreative.com/websites-for-contractors</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
+  <!-- Industry pages (alternate buyer-intent URLs that don't have a short canonical) -->
   <url>
     <loc>https://tmncreative.com/websites-for-roofing-companies</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.76</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tmncreative.com/websites-for-electricians</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.74</priority>
+    <priority>0.78</priority>
   </url>
   <url>
     <loc>https://tmncreative.com/websites-for-accounting-firms</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.76</priority>
-  </url>
-  <url>
-    <loc>https://tmncreative.com/websites-for-hvac-plumbing</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://tmncreative.com/websites-for-landscapers</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://tmncreative.com/websites-for-dental-practices</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tmncreative.com/websites-for-law-firms</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://tmncreative.com/websites-for-med-spas</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
   </url>
 
   <!-- Service / topic pages -->

@@ -43,15 +43,22 @@
 /wordpress-website-redesign.html /wordpress-website-redesign 301!
 /squarespace-website-redesign.html /squarespace-website-redesign 301!
 /wix-website-redesign.html       /wix-website-redesign 301!
-/websites-for-contractors.html   /websites-for-contractors 301!
 /websites-for-roofing-companies.html /websites-for-roofing-companies 301!
 /websites-for-electricians.html  /websites-for-electricians 301!
 /websites-for-accounting-firms.html /websites-for-accounting-firms 301!
-/websites-for-dental-practices.html /websites-for-dental-practices 301!
-/websites-for-hvac-plumbing.html /websites-for-hvac-plumbing 301!
-/websites-for-landscapers.html   /websites-for-landscapers 301!
 /websites-for-law-firms.html     /websites-for-law-firms 301!
-/websites-for-med-spas.html      /websites-for-med-spas 301!
+
+# Consolidated industry pages — long URLs redirect to short canonical URLs (kills cannibalization)
+/websites-for-contractors.html      /contractors    301!
+/websites-for-contractors           /contractors    301!
+/websites-for-hvac-plumbing.html    /hvac           301!
+/websites-for-hvac-plumbing         /hvac           301!
+/websites-for-dental-practices.html /dental         301!
+/websites-for-dental-practices      /dental         301!
+/websites-for-landscapers.html      /landscaping    301!
+/websites-for-landscapers           /landscaping    301!
+/websites-for-med-spas.html         /med-spa        301!
+/websites-for-med-spas              /med-spa        301!
 /website-redesign-checklist.html /website-redesign-checklist 301!
 /custom-website-vs-wix-squarespace.html /custom-website-vs-wix-squarespace 301!
 /professional-services-website-trust.html /professional-services-website-trust 301!
@@ -122,18 +129,18 @@
 /reviews      /#proof      301
 
 # Alternate industry slug patterns
-/hvac-plumbing            /websites-for-hvac-plumbing    301
-/contractor-websites      /websites-for-contractors       301
-/roofing-websites         /websites-for-roofing-companies 301
-/roofer-websites          /websites-for-roofing-companies 301
-/electrician-websites     /websites-for-electricians      301
+/hvac-plumbing            /hvac                            301
+/contractor-websites      /contractors                     301
+/roofing-websites         /websites-for-roofing-companies  301
+/roofer-websites          /websites-for-roofing-companies  301
+/electrician-websites     /websites-for-electricians       301
 /electrical-contractor-websites /websites-for-electricians 301
-/accounting-websites      /websites-for-accounting-firms  301
-/cpa-websites             /websites-for-accounting-firms  301
-/landscaper-websites      /websites-for-landscapers       301
-/dental-websites          /websites-for-dental-practices   301
+/accounting-websites      /websites-for-accounting-firms   301
+/cpa-websites             /websites-for-accounting-firms   301
+/landscaper-websites      /landscaping                     301
+/dental-websites          /dental                          301
 /law-firm-websites        /websites-for-law-firms          301
-/med-spa-websites         /websites-for-med-spas           301
+/med-spa-websites         /med-spa                         301
 
 # Alternate city slug patterns
 /fortworth       /fort-worth       301
