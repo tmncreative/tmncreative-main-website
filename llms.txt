@@ -77,10 +77,10 @@ Primary location pages:
 - Diamond H Irrigation - home services site: https://www.diamondhirrigation.com
 - Promised Land Renovations - remodeling site: https://promisedlandreno.com
 - NoteServ - financial services / note servicing concept: https://noteserv.netlify.app
-- MarchLife USA - healthcare site: https://marchlifeusa.com
-- Care to Speak - speech therapy practice site: https://care-to-speak.netlify.app
-- Training Wheels ABA - pediatric ABA therapy practice site: https://trainingwheelsaba.com
-- Smitha Reddy MD - physician practice site: https://smithareddymd.com
+- MarchLife USA - 236-acre healthcare campus development in Riverside County, California: https://marchlifeusa.com
+- Care to Speak - speech-language therapy practice in the South Bay, California: https://care-to-speak.netlify.app
+- Training Wheels ABA - pediatric ABA therapy clinics in Austin, Texas: https://trainingwheelsaba.com
+- Smitha Reddy MD - rheumatology and functional medicine physician site in San Diego: https://smithareddymd.com
 - Confidential private wealth management engagement - under NDA; described only at category level.
 
 ## Canonical pages
