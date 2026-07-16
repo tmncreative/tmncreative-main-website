@@ -101,6 +101,7 @@ Buyer intent guides:
 - /best-website-design-for-financial-advisors - website options for financial advisors, RIAs, and wealth firms
 - /website-design-for-healthcare-practices - healthcare practice website design guide for medical, dental, therapy, and med spa operators
 - /web-design-for-attorneys - attorney and law firm website design guide
+- /med-spa-website-design-guide - what makes a med spa website convert bookings, including treatment pages, booking integration, and compliant proof
 
 Industries:
 
@@ -126,6 +127,7 @@ Search/topic:
 - /wordpress-website-redesign - WordPress website redesign and migration
 - /squarespace-website-redesign - Squarespace website redesign and custom rebuilds
 - /wix-website-redesign - Wix website redesign and custom rebuilds
+- /dental-website-redesign - dental website redesign for practices leaving template vendors like ProSites and Officite
 - /web-design-for-service-businesses - service business web design
 - /web-design-for-car-wash-companies - car wash web design
 - /websites-for-roofing-companies - roofing company website design
