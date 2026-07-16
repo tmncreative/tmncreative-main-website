@@ -64,6 +64,14 @@ h1 em,h2 em{font-family:var(--serif);font-style:italic;font-weight:390;color:var
 .card p{color:var(--muted);line-height:1.58;font-size:.94rem;margin-bottom:0}
 .card.kicker p{color:oklch(82% 0.012 250)}
 .wide{grid-column:span 2}
+.cost-table-wrap{overflow-x:auto;background:var(--paper);border:1px solid var(--line);border-radius:8px}
+.cost-table{width:100%;border-collapse:collapse;font-size:.94rem;min-width:680px}
+.cost-table th{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-deep);font-weight:650;text-align:left;padding:.95rem 1.15rem;border-bottom:1px solid var(--line)}
+.cost-table td{padding:1rem 1.15rem;border-bottom:1px solid var(--line-2);color:var(--muted);line-height:1.5;vertical-align:top}
+.cost-table tr:last-child td{border-bottom:0}
+.cost-table td:first-child{color:var(--ink);font-weight:600}
+.cost-table .price{font-family:var(--mono);font-size:.85rem;color:var(--ink-2);white-space:nowrap}
+.cost-table .tmn-row td{background:oklch(97.5% 0.025 88)}
 .comparison{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
 .compare-col{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:1.2rem}
 .compare-col h3{font-size:1.2rem;letter-spacing:-.025em}
