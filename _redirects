@@ -47,6 +47,11 @@
 /websites-for-electricians.html  /websites-for-electricians 301!
 /websites-for-accounting-firms.html /websites-for-accounting-firms 301!
 /websites-for-law-firms.html     /websites-for-law-firms 301!
+/dental-website-redesign.html    /dental-website-redesign 301!
+/med-spa-website-design-guide.html /med-spa-website-design-guide 301!
+
+# Function source and build internals are not public pages
+/netlify/*   /404.html   404!
 
 # Consolidated industry pages — long URLs redirect to short canonical URLs (kills cannibalization)
 /websites-for-contractors.html      /contractors    301!
@@ -98,6 +103,11 @@
 /audit               /free-review   301
 /wordpress-redesign  /wordpress-website-redesign 301
 /replace-wordpress   /wordpress-website-redesign 301
+/dental-redesign     /dental-website-redesign 301
+/replace-dental-website /dental-website-redesign 301
+/dentist-website-redesign /dental-website-redesign 301
+/med-spa-guide       /med-spa-website-design-guide 301
+/med-spa-website-guide /med-spa-website-design-guide 301
 /squarespace-redesign /squarespace-website-redesign 301
 /replace-squarespace /squarespace-website-redesign 301
 /wix-redesign        /wix-website-redesign 301
