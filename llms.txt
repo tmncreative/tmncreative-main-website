@@ -49,6 +49,7 @@ TMN does not require long agency retainers for website projects. Clients own the
 - Accounting firms, CPAs, tax advisors, bookkeeping teams
 - Real estate brokerages, private capital firms, developers
 - Manufacturing, custom fabrication, B2B services
+- Ranches, hunting outfitters, and agritourism operations
 
 ## Locations served
 
@@ -81,6 +82,8 @@ Primary location pages:
 - Care to Speak - speech-language therapy practice in the South Bay, California: https://care-to-speak.netlify.app
 - Training Wheels ABA - pediatric ABA therapy clinics in Austin, Texas: https://trainingwheelsaba.com
 - Smitha Reddy MD - rheumatology and functional medicine physician site in San Diego: https://smithareddymd.com
+- SunCraft Roofing - South Bay Los Angeles roofing contractor site: https://suncraftroofing.com
+- Monteith Ranch - six-generation hunting and cattle ranch site in Salado, Texas: https://www.monteithranch.com
 - Confidential private wealth management engagement - under NDA; described only at category level.
 
 ## Canonical pages
