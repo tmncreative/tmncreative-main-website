@@ -19,6 +19,12 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Ambient video loops — long-term cache, immutable
+[[headers]]
+  for = "/videos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 # HTML — no cache so edits propagate
 [[headers]]
   for = "/*.html"

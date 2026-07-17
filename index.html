@@ -495,20 +495,110 @@
     /* Dark card variants — flip emphasis colors onto gold */
     .cards > .work h2 em,
     .cards > .work h2 .ac,
+    .cards > .craft h2 em,
+    .cards > .craft h2 .ac,
     .cards > .contact h2 em,
     .cards > .contact h2 .ac{color:var(--accent)}
     .cards > .work .eye::before,
+    .cards > .craft .eye::before,
     .cards > .contact .eye::before{
       border-color:oklch(70% 0.107 85 / 0.55);
       background:oklch(70% 0.107 85 / 0.12);
       color:var(--accent);
     }
     .cards > .work .eye:hover::before,
+    .cards > .craft .eye:hover::before,
     .cards > .contact .eye:hover::before{
       border-color:var(--accent);background:var(--accent);color:var(--ink);
     }
     .cards > .work .sec-head p,
     .cards > .contact .ct-lead{color:oklch(80% 0.015 250)}
+
+    /* =========== THE STANDARD — cinematic craft band ===========
+       Full-bleed ambient loop (Higgsfield gold-thread motif) behind a
+       right-set manifesto. Poster paints first; the video fades in over
+       it only once it is loaded, visible, and motion is allowed. */
+    .craft{
+      padding:var(--sec-y) var(--rail);
+      background:oklch(15% 0.03 262);color:oklch(96% 0.006 240);
+      position:relative;overflow:hidden;
+    }
+    .cards > .craft h2{color:oklch(98% 0.004 240)}
+    .cards > .craft .eye{color:oklch(80% 0.035 90)}
+    .craft-media{position:absolute;inset:0;z-index:0;pointer-events:none}
+    .craft-media img,
+    .craft-media video{
+      position:absolute;inset:0;width:100%;height:100%;
+      object-fit:cover;object-position:34% 50%;
+    }
+    .craft-media video{opacity:0;transition:opacity 1400ms var(--e-io)}
+    .craft-media video.on{opacity:1}
+    .craft-scrim{
+      position:absolute;inset:0;z-index:1;
+      background:
+        linear-gradient(180deg, oklch(15% 0.03 262 / 0.6) 0%, oklch(15% 0.03 262 / 0.1) 26%, oklch(15% 0.03 262 / 0.08) 60%, oklch(15% 0.03 262 / 0.68) 100%),
+        radial-gradient(ellipse 74% 100% at 76% 52%, oklch(15% 0.03 262 / 0.6) 0%, oklch(15% 0.03 262 / 0.26) 46%, transparent 74%);
+    }
+    .craft-inner{
+      position:relative;z-index:2;max-width:1240px;margin:0 auto;width:100%;
+      display:flex;justify-content:flex-end;
+    }
+    .craft-copy{max-width:600px}
+    .craft-lead{
+      font-size:clamp(1.08rem, 0.25vw + 1.02rem, 1.22rem);
+      line-height:1.6;letter-spacing:-0.005em;
+      color:oklch(86% 0.012 250);max-width:54ch;
+    }
+    .craft-lead em{font-style:italic;color:oklch(93% 0.03 90)}
+    .craft-tenets{
+      display:flex;flex-wrap:wrap;gap:clamp(1.5rem, 3vw, 2.75rem);
+      margin-top:clamp(1.9rem, 3vw, 2.6rem);padding-top:1.5rem;
+      border-top:1px solid oklch(100% 0 0 / 0.16);
+    }
+    .craft-tenet .t{
+      font-family:var(--serif);font-size:clamp(1.3rem, 0.4vw + 1.2rem, 1.6rem);
+      line-height:1.1;color:oklch(99% 0 0);letter-spacing:-0.012em;
+    }
+    .craft-tenet .t .unit{font-size:0.62em;margin-left:0.1em;color:var(--accent-2)}
+    .craft-tenet .d{font-size:0.82rem;color:oklch(74% 0.018 250);margin-top:0.3rem;letter-spacing:0.01em}
+    @media(min-width:821px) and (max-width:1240px){
+      /* Mid widths crop the loop tighter, so bright threads drift under
+         the copy — pull the frame left and deepen the scrim there */
+      .craft-media img,
+      .craft-media video{object-position:20% 50%}
+      .craft-scrim{
+        background:
+          linear-gradient(180deg, oklch(15% 0.03 262 / 0.62) 0%, oklch(15% 0.03 262 / 0.22) 28%, oklch(15% 0.03 262 / 0.24) 60%, oklch(15% 0.03 262 / 0.7) 100%),
+          radial-gradient(ellipse 88% 120% at 72% 46%, oklch(15% 0.03 262 / 0.74) 0%, oklch(15% 0.03 262 / 0.4) 48%, transparent 78%);
+      }
+    }
+    @media(max-width:820px){
+      .craft-inner{justify-content:flex-start}
+      .craft-copy{max-width:56ch}
+      .craft-scrim{
+        background:
+          linear-gradient(180deg, oklch(15% 0.03 262 / 0.66) 0%, oklch(15% 0.03 262 / 0.42) 34%, oklch(15% 0.03 262 / 0.5) 68%, oklch(15% 0.03 262 / 0.78) 100%),
+          radial-gradient(ellipse 130% 110% at 50% 62%, oklch(15% 0.03 262 / 0.5) 0%, transparent 78%);
+      }
+      .craft-media img,
+      .craft-media video{object-position:28% 50%}
+    }
+
+    /* Hero ambient glow — Higgsfield caustic light, masked + multiplied
+       so it reads as sunlight on paper behind the product stack. */
+    .hero-glow{
+      position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0.52;
+      -webkit-mask-image:radial-gradient(115% 95% at 76% 6%, #000 0%, transparent 60%);
+      mask-image:radial-gradient(115% 95% at 76% 6%, #000 0%, transparent 60%);
+    }
+    .hero-glow img,
+    .hero-glow video{
+      position:absolute;inset:0;width:100%;height:100%;
+      object-fit:cover;object-position:100% 72%;mix-blend-mode:multiply;
+    }
+    .hero-glow video{opacity:0;transition:opacity 1600ms var(--e-io)}
+    .hero-glow video.on{opacity:1}
+    @media(max-width:900px){.hero-glow{opacity:0.4}}
 
     .hero{padding:calc(var(--nav-h) + 3rem) var(--rail) clamp(3rem,6vw,6rem);position:relative;overflow:hidden;background:var(--bg)}
     .hero::before{
@@ -2875,6 +2965,13 @@
 
   <!-- =========== HERO =========== -->
   <section class="hero card">
+    <div class="hero-glow" aria-hidden="true">
+      <picture>
+        <source srcset="images/hero-caustic.webp" type="image/webp" />
+        <img src="images/hero-caustic.jpg" alt="" width="1600" height="893" fetchpriority="low" decoding="async" />
+      </picture>
+      <video class="hero-glow-video" muted loop playsinline preload="none" tabindex="-1"></video>
+    </div>
     <div class="hero-inner">
       <div class="hero-tags">
         <span class="hp hp-avail">
@@ -3289,6 +3386,32 @@
     </div>
   </section>
 
+  <!-- =========== THE STANDARD — CINEMATIC CRAFT BAND =========== -->
+  <section class="craft card" id="standard" aria-labelledby="craft-title">
+    <div class="craft-media" aria-hidden="true">
+      <picture>
+        <source srcset="images/craft-gold-thread-poster.webp" type="image/webp" />
+        <img src="images/craft-gold-thread-poster.jpg" alt="" width="1920" height="823" loading="lazy" decoding="async" />
+      </picture>
+      <video class="craft-video" muted loop playsinline preload="none" tabindex="-1">
+        <source data-src="videos/craft-gold-thread.mp4" type="video/mp4" />
+      </video>
+      <div class="craft-scrim"></div>
+    </div>
+    <div class="craft-inner">
+      <div class="craft-copy" data-r>
+        <div class="eye">The Standard</div>
+        <h2 id="craft-title">Built by hand.<br /><em>Believed on sight.</em></h2>
+        <p class="craft-lead">No templates, no page builders, no shortcuts. Every page is written by hand, then tuned until the first impression feels inevitable. Your clients will never know why the site feels expensive. <em>It just does.</em></p>
+        <div class="craft-tenets">
+          <div class="craft-tenet"><div class="t">Every line</div><div class="d">written by hand</div></div>
+          <div class="craft-tenet"><div class="t">Zero</div><div class="d">templates, ever</div></div>
+          <div class="craft-tenet"><div class="t">72<span class="unit">hrs</span></div><div class="d">to the first paid draft</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- =========== STUDIO =========== -->
   <section class="studio card">
     <div class="studio-inner" data-r>
@@ -3698,6 +3821,51 @@
   <script>
   (function(){
     var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var SAVEDATA = !!(navigator.connection && navigator.connection.saveData);
+
+    // Ambient loops (Higgsfield) — poster paints first; video streams in
+    // only when allowed, then fades over the poster. Pauses off-screen.
+    function ambientLoop(vid, srcFromData){
+      if(!vid || REDUCED || SAVEDATA || !('IntersectionObserver' in window)) return;
+      var loaded = false;
+      function load(){
+        if(loaded) return; loaded = true;
+        if(srcFromData){
+          var s = vid.querySelector('source[data-src]');
+          if(s){ s.src = s.getAttribute('data-src'); s.removeAttribute('data-src'); vid.load(); }
+        }
+      }
+      vid.addEventListener('playing', function(){ vid.classList.add('on'); });
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting){
+            load();
+            var p = vid.play();
+            if(p && p.catch) p.catch(function(){});
+          } else if(!vid.paused){
+            vid.pause();
+          }
+        });
+      }, {rootMargin:'260px 0px'});
+      io.observe(vid);
+    }
+    // Craft band loop — arms as soon as it nears the viewport
+    ambientLoop(document.querySelector('.craft-video'), true);
+    // Hero glow loop — desktop only, and only after the page has fully
+    // loaded plus a beat, so it never competes with the LCP image
+    (function(){
+      var v = document.querySelector('.hero-glow-video');
+      if(!v || REDUCED || SAVEDATA) return;
+      if(!window.matchMedia('(min-width: 900px)').matches) return;
+      function arm(){
+        setTimeout(function(){
+          v.src = 'videos/hero-caustic.mp4';
+          ambientLoop(v, false);
+        }, 1200);
+      }
+      if(document.readyState === 'complete') arm();
+      else window.addEventListener('load', arm, {once:true});
+    })();
 
     // Nav scroll + sticky mobile CTA + scroll progress bar
     var nav = document.getElementById('nav');
@@ -3820,7 +3988,7 @@
     // Section heading word stagger — wrap text nodes once, then reveal on intersect
     (function(){
       if(REDUCED) return;
-      document.querySelectorAll('h1, .sec-head h2, .feat-copy h2, .studio-inner h2, .ct-copy h2, .faq-head h2, .testi-head h2').forEach(function(h){
+      document.querySelectorAll('h1, .sec-head h2, .feat-copy h2, .studio-inner h2, .ct-copy h2, .faq-head h2, .testi-head h2, .craft-copy h2').forEach(function(h){
         if(h.dataset.staggered) return;
         h.dataset.staggered = '1';
         h.classList.add('stagger');
